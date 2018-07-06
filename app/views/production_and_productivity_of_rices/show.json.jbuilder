@@ -1,0 +1,1 @@
+json.partial! "production_and_productivity_of_rices/production_and_productivity_of_rice", production_and_productivity_of_rice: @production_and_productivity_of_rice

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  WinterRain_2016: 1.5
+  HotWeatherRain_2016: 1.5
+  SouthWestMonsoonRain_2016: 1.5
+  NorthWestMonsoonRain_2016: 1.5
+  TotalRainfall_2016: 1.5
+  WinterRain_2017: 1.5
+  HotWeatherRain_2017: 1.5
+  SouthWestMonsoonRain_2017: 1.5
+  Total_2017: 1.5
+
+two:
+  Districts: MyString
+  WinterRain_2016: 1.5
+  HotWeatherRain_2016: 1.5
+  SouthWestMonsoonRain_2016: 1.5
+  NorthWestMonsoonRain_2016: 1.5
+  TotalRainfall_2016: 1.5
+  WinterRain_2017: 1.5
+  HotWeatherRain_2017: 1.5
+  SouthWestMonsoonRain_2017: 1.5
+  Total_2017: 1.5

@@ -1,0 +1,22 @@
+
+<%= simple_form_for(@rainfall) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :Districts %>
+    <%= f.input :WinterRain_2016 %>
+    <%= f.input :HotWeatherRain_2016 %>
+    <%= f.input :SouthWestMonsoonRain_2016 %>
+    <%= f.input :NorthWestMonsoonRain_2016 %>
+    <%= f.input :TotalRainfall_2016 %>
+    <%= f.input :WinterRain_2017 %>
+    <%= f.input :HotWeatherRain_2017 %>
+    <%= f.input :SouthWestMonsoonRain_2017 %>
+    <%= f.input :Total_2017 %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

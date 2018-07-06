@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lands</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Geographical area</th>
+      <th>Forest</th>
+      <th>Barren and unculturable land</th>
+      <th>Non agriculture land area</th>
+      <th>Non agriculture perennial</th>
+      <th>Non agriculture temporary</th>
+      <th>Culturable waste land</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lands.each do |land| %>
+      <tr>
+        <td><%= land.Districts %></td>
+        <td><%= land.Geographical_Area %></td>
+        <td><%= land.Forest %></td>
+        <td><%= land.Barren_and_Unculturable_land %></td>
+        <td><%= land.Non_Agriculture_Land_Area %></td>
+        <td><%= land.Non_Agriculture_Perennial %></td>
+        <td><%= land.Non_Agriculture_Temporary %></td>
+        <td><%= land.Culturable_Waste_Land %></td>
+        <td><%= link_to 'Show', land %></td>
+        <td><%= link_to 'Edit', edit_land_path(land) %></td>
+        <td><%= link_to 'Destroy', land, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Land', new_land_path %>

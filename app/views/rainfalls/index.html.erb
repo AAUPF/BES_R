@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rainfalls</h1>
+
+<table class="">
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Winterrain 2016</th>
+      <th>Hotweatherrain 2016</th>
+      <th>Southwestmonsoonrain 2016</th>
+      <th>Northwestmonsoonrain 2016</th>
+      <th>Totalrainfall 2016</th>
+      <th>Winterrain 2017</th>
+      <th>Hotweatherrain 2017</th>
+      <th>Southwestmonsoonrain 2017</th>
+      <th>Total 2017</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rainfalls.each do |rainfall| %>
+      <tr>
+        <td><%= rainfall.Districts %></td>
+        <td><%= rainfall.WinterRain_2016 %></td>
+        <td><%= rainfall.HotWeatherRain_2016 %></td>
+        <td><%= rainfall.SouthWestMonsoonRain_2016 %></td>
+        <td><%= rainfall.NorthWestMonsoonRain_2016 %></td>
+        <td><%= rainfall.TotalRainfall_2016 %></td>
+        <td><%= rainfall.WinterRain_2017 %></td>
+        <td><%= rainfall.HotWeatherRain_2017 %></td>
+        <td><%= rainfall.SouthWestMonsoonRain_2017 %></td>
+        <td><%= rainfall.Total_2017 %></td>
+        <td><%= link_to 'Show', rainfall %></td>
+        <td><%= link_to 'Edit', edit_rainfall_path(rainfall) %></td>
+        <td><%= link_to 'Destroy', rainfall, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rainfall', new_rainfall_path %>

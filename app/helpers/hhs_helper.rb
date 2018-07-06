@@ -1,0 +1,2 @@
+module HhsHelper
+end

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Geographical_Area: 1.5
+  Forest: 1.5
+  Barren_and_Unculturable_land: 1.5
+  Non_Agriculture_Land_Area: 1.5
+  Non_Agriculture_Perennial: 1.5
+  Non_Agriculture_Temporary: 1.5
+  Culturable_Waste_Land: 1.5
+
+two:
+  Districts: MyString
+  Geographical_Area: 1.5
+  Forest: 1.5
+  Barren_and_Unculturable_land: 1.5
+  Non_Agriculture_Land_Area: 1.5
+  Non_Agriculture_Perennial: 1.5
+  Non_Agriculture_Temporary: 1.5
+  Culturable_Waste_Land: 1.5

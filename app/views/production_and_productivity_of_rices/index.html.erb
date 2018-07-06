@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Production And Productivity Of Rices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Area 2015</th>
+      <th>Production 2015</th>
+      <th>Productivity 2015</th>
+      <th>Area 2016</th>
+      <th>Production 2016</th>
+      <th>Productivity 2016</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @production_and_productivity_of_rices.each do |production_and_productivity_of_rice| %>
+      <tr>
+        <td><%= production_and_productivity_of_rice.Districts %></td>
+        <td><%= production_and_productivity_of_rice.Area_2015 %></td>
+        <td><%= production_and_productivity_of_rice.Production_2015 %></td>
+        <td><%= production_and_productivity_of_rice.Productivity_2015 %></td>
+        <td><%= production_and_productivity_of_rice.Area_2016 %></td>
+        <td><%= production_and_productivity_of_rice.Production_2016 %></td>
+        <td><%= production_and_productivity_of_rice.Productivity_2016 %></td>
+        <td><%= link_to 'Show', production_and_productivity_of_rice %></td>
+        <td><%= link_to 'Edit', edit_production_and_productivity_of_rice_path(production_and_productivity_of_rice) %></td>
+        <td><%= link_to 'Destroy', production_and_productivity_of_rice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Production And Productivity Of Rice', new_production_and_productivity_of_rice_path %>

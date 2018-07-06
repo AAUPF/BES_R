@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Districts:</strong>
+  <%= @land.Districts %>
+</p>
+
+<p>
+  <strong>Geographical area:</strong>
+  <%= @land.Geographical_Area %>
+</p>
+
+<p>
+  <strong>Forest:</strong>
+  <%= @land.Forest %>
+</p>
+
+<p>
+  <strong>Barren and unculturable land:</strong>
+  <%= @land.Barren_and_Unculturable_land %>
+</p>
+
+<p>
+  <strong>Non agriculture land area:</strong>
+  <%= @land.Non_Agriculture_Land_Area %>
+</p>
+
+<p>
+  <strong>Non agriculture perennial:</strong>
+  <%= @land.Non_Agriculture_Perennial %>
+</p>
+
+<p>
+  <strong>Non agriculture temporary:</strong>
+  <%= @land.Non_Agriculture_Temporary %>
+</p>
+
+<p>
+  <strong>Culturable waste land:</strong>
+  <%= @land.Culturable_Waste_Land %>
+</p>
+
+<%= link_to 'Edit', edit_land_path(@land) %> |
+<%= link_to 'Back', lands_path %>
