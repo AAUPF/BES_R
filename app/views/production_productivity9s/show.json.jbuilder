@@ -1,0 +1,1 @@
+json.partial! "production_productivity9s/production_productivity9", production_productivity9: @production_productivity9

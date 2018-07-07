@@ -1,0 +1,2 @@
+json.extract! production_productivity11, :id, :Districts, :Potato_Area_2015, :Potato_Production_2015, :Potato_Area_2016, :Potato_Production_2016, :Onion_Area_2015, :Onion_Production_2015, :Onion_Area_2016, :Onion_Production_2016, :Cauliflower_Area_2015, :Cauliflower_Production_2015, :Cauliflower_Area_2016, :Cauliflower_Production_2016, :Brinjal_Area_2015, :Brinjal_Production_2015, :Brinjal_Area_2016, :Brinjal_Production_2016, :created_at, :updated_at
+json.url production_productivity11_url(production_productivity11, format: :json)

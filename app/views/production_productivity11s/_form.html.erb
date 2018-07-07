@@ -1,0 +1,102 @@
+<%= form_with(model: production_productivity11, local: true) do |form| %>
+  <% if production_productivity11.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(production_productivity11.errors.count, "error") %> prohibited this production_productivity11 from being saved:</h2>
+
+      <ul>
+      <% production_productivity11.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Potato_Area_2015 %>
+    <%= form.text_field :Potato_Area_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Potato_Production_2015 %>
+    <%= form.text_field :Potato_Production_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Potato_Area_2016 %>
+    <%= form.text_field :Potato_Area_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Potato_Production_2016 %>
+    <%= form.text_field :Potato_Production_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Onion_Area_2015 %>
+    <%= form.text_field :Onion_Area_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Onion_Production_2015 %>
+    <%= form.text_field :Onion_Production_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Onion_Area_2016 %>
+    <%= form.text_field :Onion_Area_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Onion_Production_2016 %>
+    <%= form.text_field :Onion_Production_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cauliflower_Area_2015 %>
+    <%= form.text_field :Cauliflower_Area_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cauliflower_Production_2015 %>
+    <%= form.text_field :Cauliflower_Production_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cauliflower_Area_2016 %>
+    <%= form.text_field :Cauliflower_Area_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cauliflower_Production_2016 %>
+    <%= form.text_field :Cauliflower_Production_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Brinjal_Area_2015 %>
+    <%= form.text_field :Brinjal_Area_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Brinjal_Production_2015 %>
+    <%= form.text_field :Brinjal_Production_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Brinjal_Area_2016 %>
+    <%= form.text_field :Brinjal_Area_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Brinjal_Production_2016 %>
+    <%= form.text_field :Brinjal_Production_2016 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

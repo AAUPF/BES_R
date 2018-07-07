@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Potato_Area_2015: 1.5
+  Potato_Production_2015: 1.5
+  Potato_Area_2016: 1.5
+  Potato_Production_2016: 1.5
+  Onion_Area_2015: 1.5
+  Onion_Production_2015: 1.5
+  Onion_Area_2016: 1.5
+  Onion_Production_2016: 1.5
+  Cauliflower_Area_2015: 1.5
+  Cauliflower_Production_2015: 1.5
+  Cauliflower_Area_2016: 1.5
+  Cauliflower_Production_2016: 1.5
+  Brinjal_Area_2015: 1.5
+  Brinjal_Production_2015: 1.5
+  Brinjal_Area_2016: 1.5
+  Brinjal_Production_2016: 1.5
+
+two:
+  Districts: MyString
+  Potato_Area_2015: 1.5
+  Potato_Production_2015: 1.5
+  Potato_Area_2016: 1.5
+  Potato_Production_2016: 1.5
+  Onion_Area_2015: 1.5
+  Onion_Production_2015: 1.5
+  Onion_Area_2016: 1.5
+  Onion_Production_2016: 1.5
+  Cauliflower_Area_2015: 1.5
+  Cauliflower_Production_2015: 1.5
+  Cauliflower_Area_2016: 1.5
+  Cauliflower_Production_2016: 1.5
+  Brinjal_Area_2015: 1.5
+  Brinjal_Production_2015: 1.5
+  Brinjal_Area_2016: 1.5
+  Brinjal_Production_2016: 1.5

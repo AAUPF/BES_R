@@ -1,0 +1,102 @@
+<%= form_with(model: production_productivity10, local: true) do |form| %>
+  <% if production_productivity10.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(production_productivity10.errors.count, "error") %> prohibited this production_productivity10 from being saved:</h2>
+
+      <ul>
+      <% production_productivity10.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mango_Area_2015 %>
+    <%= form.text_field :Mango_Area_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mango_Production_2015 %>
+    <%= form.text_field :Mango_Production_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mango_Area_2016 %>
+    <%= form.text_field :Mango_Area_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mango_Production_2016 %>
+    <%= form.text_field :Mango_Production_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Guava_Area_2015 %>
+    <%= form.text_field :Guava_Area_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Guava_Production_2015 %>
+    <%= form.text_field :Guava_Production_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Guava_Area_2016 %>
+    <%= form.text_field :Guava_Area_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Guava_Production_2016 %>
+    <%= form.text_field :Guava_Production_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Litchi_Area_2015 %>
+    <%= form.text_field :Litchi_Area_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Litchi_Production_2015 %>
+    <%= form.text_field :Litchi_Production_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Litchi_Area_2016 %>
+    <%= form.text_field :Litchi_Area_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Litchi_Production_2016 %>
+    <%= form.text_field :Litchi_Production_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Banana_Area_2015 %>
+    <%= form.text_field :Banana_Area_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Banana_Production_2015 %>
+    <%= form.text_field :Banana_Production_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Banana_Area_2016 %>
+    <%= form.text_field :Banana_Area_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Banana_Production_2016 %>
+    <%= form.text_field :Banana_Production_2016 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

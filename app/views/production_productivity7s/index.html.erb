@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Production Productivity7s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Area 2015</th>
+      <th>Production 2015</th>
+      <th>Productivity 2015</th>
+      <th>Area 2016</th>
+      <th>Production 2016</th>
+      <th>Productivity 2016</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @production_productivity7s.each do |production_productivity7| %>
+      <tr>
+        <td><%= production_productivity7.Districts %></td>
+        <td><%= production_productivity7.Area_2015 %></td>
+        <td><%= production_productivity7.Production_2015 %></td>
+        <td><%= production_productivity7.Productivity_2015 %></td>
+        <td><%= production_productivity7.Area_2016 %></td>
+        <td><%= production_productivity7.Production_2016 %></td>
+        <td><%= production_productivity7.Productivity_2016 %></td>
+        <td><%= link_to 'Show', production_productivity7 %></td>
+        <td><%= link_to 'Edit', edit_production_productivity7_path(production_productivity7) %></td>
+        <td><%= link_to 'Destroy', production_productivity7, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Production Productivity7', new_production_productivity7_path %>

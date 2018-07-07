@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Production Productivity11s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Potato area 2015</th>
+      <th>Potato production 2015</th>
+      <th>Potato area 2016</th>
+      <th>Potato production 2016</th>
+      <th>Onion area 2015</th>
+      <th>Onion production 2015</th>
+      <th>Onion area 2016</th>
+      <th>Onion production 2016</th>
+      <th>Cauliflower area 2015</th>
+      <th>Cauliflower production 2015</th>
+      <th>Cauliflower area 2016</th>
+      <th>Cauliflower production 2016</th>
+      <th>Brinjal area 2015</th>
+      <th>Brinjal production 2015</th>
+      <th>Brinjal area 2016</th>
+      <th>Brinjal production 2016</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @production_productivity11s.each do |production_productivity11| %>
+      <tr>
+        <td><%= production_productivity11.Districts %></td>
+        <td><%= production_productivity11.Potato_Area_2015 %></td>
+        <td><%= production_productivity11.Potato_Production_2015 %></td>
+        <td><%= production_productivity11.Potato_Area_2016 %></td>
+        <td><%= production_productivity11.Potato_Production_2016 %></td>
+        <td><%= production_productivity11.Onion_Area_2015 %></td>
+        <td><%= production_productivity11.Onion_Production_2015 %></td>
+        <td><%= production_productivity11.Onion_Area_2016 %></td>
+        <td><%= production_productivity11.Onion_Production_2016 %></td>
+        <td><%= production_productivity11.Cauliflower_Area_2015 %></td>
+        <td><%= production_productivity11.Cauliflower_Production_2015 %></td>
+        <td><%= production_productivity11.Cauliflower_Area_2016 %></td>
+        <td><%= production_productivity11.Cauliflower_Production_2016 %></td>
+        <td><%= production_productivity11.Brinjal_Area_2015 %></td>
+        <td><%= production_productivity11.Brinjal_Production_2015 %></td>
+        <td><%= production_productivity11.Brinjal_Area_2016 %></td>
+        <td><%= production_productivity11.Brinjal_Production_2016 %></td>
+        <td><%= link_to 'Show', production_productivity11 %></td>
+        <td><%= link_to 'Edit', edit_production_productivity11_path(production_productivity11) %></td>
+        <td><%= link_to 'Destroy', production_productivity11, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Production Productivity11', new_production_productivity11_path %>
