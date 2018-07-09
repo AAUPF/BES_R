@@ -18,6 +18,7 @@ class ProductionProductivity8sController < ApplicationController
   end
 
   def test
+    ji = [:Area_2015, :Production_2015, :Productivity_2015, :Non_Agriculture_Land_Area,:Area_2016, :Production_2016,:Productivity_2016]
     rain_fall_type = params[:rain_fall_type]
      views  = params[:views]
      year  = ""
@@ -45,11 +46,11 @@ class ProductionProductivity8sController < ApplicationController
             else
               puts "no year"
             end  
-            b = ProductionProductivity8.map_search(j)
+            b = ProductionProductivity8.map_search(rain_fall_type)
             u = "Total"
             a = ProductionProductivity8.map(b,u,year)
            else
-            b = ProductionProductivity8.map_search(j)
+            b = ProductionProductivity8.map_search(rain_fall_type)
             a = ProductionProductivity8.map(b,rain_fall_type,year)
            end
         elsif views == "Table"  
@@ -58,7 +59,7 @@ class ProductionProductivity8sController < ApplicationController
           a = ProductionProductivity8.table(b,rain_fall_type,year)
         else
           @ProductionProductivity8s = ProductionProductivity8.search(params[:search],compare)
-          a = ProductionProductivity8.query(@ProductionProductivity8s,params[:year],rain_fall_type,views,compare)
+          a = ProductionProductivity8.query(@ProductionProductivity8s,params[:year],rain_fall_type,views,compare,ji)
         end
        
         respond_to do |format|

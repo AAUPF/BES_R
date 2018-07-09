@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Area_2015: 1.5
+  Production_2015: 1.5
+  Yield_2015: 1.5
+  Area_2016: 1.5
+  Production_2016: 1.5
+  Yield_2016: 1.5
+
+two:
+  Districts: MyString
+  Area_2015: 1.5
+  Production_2015: 1.5
+  Yield_2015: 1.5
+  Area_2016: 1.5
+  Production_2016: 1.5
+  Yield_2016: 1.5

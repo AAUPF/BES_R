@@ -1,0 +1,2 @@
+module AgriculturalInputs4sHelper
+end

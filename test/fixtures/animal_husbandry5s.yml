@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Fish_Production_2014: 1.5
+  Fish_Seeds_2014: 1.5
+  Fish_Production_2015: 1.5
+  Fish_Seeds_2015: 1.5
+  Fish_Production_2016: 1.5
+  Fish_Seeds_2016: 1.5
+
+two:
+  Districts: MyString
+  Fish_Production_2014: 1.5
+  Fish_Seeds_2014: 1.5
+  Fish_Production_2015: 1.5
+  Fish_Seeds_2015: 1.5
+  Fish_Production_2016: 1.5
+  Fish_Seeds_2016: 1.5

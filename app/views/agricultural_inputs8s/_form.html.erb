@@ -1,0 +1,57 @@
+<%= form_with(model: agricultural_inputs8, local: true) do |form| %>
+  <% if agricultural_inputs8.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(agricultural_inputs8.errors.count, "error") %> prohibited this agricultural_inputs8 from being saved:</h2>
+
+      <ul>
+      <% agricultural_inputs8.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Tractor %>
+    <%= form.text_field :Tractor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Combine_Harvestor %>
+    <%= form.text_field :Combine_Harvestor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Zero_Tillage %>
+    <%= form.text_field :Zero_Tillage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pumpset %>
+    <%= form.text_field :Pumpset %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Power_Tiller %>
+    <%= form.text_field :Power_Tiller %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Manually_Operated_Tools %>
+    <%= form.text_field :Manually_Operated_Tools %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Thresher %>
+    <%= form.text_field :Thresher %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

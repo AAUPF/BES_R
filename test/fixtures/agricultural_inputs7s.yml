@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Tractor: 1.5
+  Combine_Harvestor: 1.5
+  Zero_Tillage: 1.5
+  Pumpset: 1.5
+  Power_Tiller: 1.5
+  Manually_Operated_Tools: 1.5
+  Thresher: 1.5
+
+two:
+  Districts: MyString
+  Tractor: 1.5
+  Combine_Harvestor: 1.5
+  Zero_Tillage: 1.5
+  Pumpset: 1.5
+  Power_Tiller: 1.5
+  Manually_Operated_Tools: 1.5
+  Thresher: 1.5

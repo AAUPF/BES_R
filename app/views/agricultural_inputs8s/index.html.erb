@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agricultural Inputs8s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Tractor</th>
+      <th>Combine harvestor</th>
+      <th>Zero tillage</th>
+      <th>Pumpset</th>
+      <th>Power tiller</th>
+      <th>Manually operated tools</th>
+      <th>Thresher</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agricultural_inputs8s.each do |agricultural_inputs8| %>
+      <tr>
+        <td><%= agricultural_inputs8.Districts %></td>
+        <td><%= agricultural_inputs8.Tractor %></td>
+        <td><%= agricultural_inputs8.Combine_Harvestor %></td>
+        <td><%= agricultural_inputs8.Zero_Tillage %></td>
+        <td><%= agricultural_inputs8.Pumpset %></td>
+        <td><%= agricultural_inputs8.Power_Tiller %></td>
+        <td><%= agricultural_inputs8.Manually_Operated_Tools %></td>
+        <td><%= agricultural_inputs8.Thresher %></td>
+        <td><%= link_to 'Show', agricultural_inputs8 %></td>
+        <td><%= link_to 'Edit', edit_agricultural_inputs8_path(agricultural_inputs8) %></td>
+        <td><%= link_to 'Destroy', agricultural_inputs8, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agricultural Inputs8', new_agricultural_inputs8_path %>

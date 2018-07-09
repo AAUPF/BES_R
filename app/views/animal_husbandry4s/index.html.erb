@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Animal Husbandry4s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Cow</th>
+      <th>Buffalo</th>
+      <th>Pig</th>
+      <th>Sheep</th>
+      <th>Goat</th>
+      <th>Poultry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @animal_husbandry4s.each do |animal_husbandry4| %>
+      <tr>
+        <td><%= animal_husbandry4.Districts %></td>
+        <td><%= animal_husbandry4.Cow %></td>
+        <td><%= animal_husbandry4.Buffalo %></td>
+        <td><%= animal_husbandry4.Pig %></td>
+        <td><%= animal_husbandry4.Sheep %></td>
+        <td><%= animal_husbandry4.Goat %></td>
+        <td><%= animal_husbandry4.Poultry %></td>
+        <td><%= link_to 'Show', animal_husbandry4 %></td>
+        <td><%= link_to 'Edit', edit_animal_husbandry4_path(animal_husbandry4) %></td>
+        <td><%= link_to 'Destroy', animal_husbandry4, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Animal Husbandry4', new_animal_husbandry4_path %>

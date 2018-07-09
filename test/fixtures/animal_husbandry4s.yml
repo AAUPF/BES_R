@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Cow: 1.5
+  Buffalo: 1.5
+  Pig: 1.5
+  Sheep: 1.5
+  Goat: 1.5
+  Poultry: 1.5
+
+two:
+  Districts: MyString
+  Cow: 1.5
+  Buffalo: 1.5
+  Pig: 1.5
+  Sheep: 1.5
+  Goat: 1.5
+  Poultry: 1.5

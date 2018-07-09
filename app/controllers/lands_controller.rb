@@ -1,5 +1,6 @@
 class LandsController < ApplicationController
   before_action :set_land, only: [:show, :edit, :update, :destroy]
+  # include Concerns::MyAwesomeModule
 
   # GET /lands
   # GET /lands.json
@@ -11,39 +12,11 @@ class LandsController < ApplicationController
   end
 
 
-  # def test
-  #   rain_fall_type = params[:rain_fall_type]
-  #    views  = params[:views]
-  #    year  = params[:year]
-  #    compare = params[:compare]
-  #    search = params[:search]
-
-  #   if rain_fall_type || views
-
-      
-  #     b = Land.search1(search,compare)
-      
-
-  #     a = Land.query(b,year,rain_fall_type,views)
-
-  #       respond_to do |format|
-  #         format.html { render json:a }
-  #     end
-
-  #   else
-  #     respond_to do |format|
-  #       format.html { render json: "error"}
-  #   end
-  #   end
-
-  # end
-
-
-
   def test
+    ji = [:Geographical_Area, :Forest, :Barren_and_Unculturable_land, :Non_Agriculture_Land_Area,:Non_Agriculture_Perennial, :Non_Agriculture_Temporary,:Culturable_Waste_Land]
     rain_fall_type = params[:rain_fall_type]
      views  = params[:views]
-     year  = params[:year]
+     year  = ""
      compare = params[:compare]
 
     if rain_fall_type || views
@@ -68,11 +41,11 @@ class LandsController < ApplicationController
             else
               puts "no year"
             end  
-            b = Land.map_search(j)
+            b = Land.map_search(rain_fall_type)
             u = "Total"
             a = Land.map(b,u,year)
            else
-            b = Land.map_search(j)
+            b = Land.map_search(rain_fall_type)
             a = Land.map(b,rain_fall_type,year)
            end
         elsif views == "Table"  
@@ -81,7 +54,7 @@ class LandsController < ApplicationController
           a = Land.table(b,rain_fall_type,year)
         else
           @Lands = Land.search(params[:search],compare)
-          a = Land.query(@Lands,params[:year],rain_fall_type,views)
+          a = Land.query(@Lands,params[:year],rain_fall_type,views,compare,ji)
         end
        
         respond_to do |format|
@@ -95,9 +68,6 @@ class LandsController < ApplicationController
   end
 
 end
-
-
-
 
   # GET /lands/1
   # GET /lands/1.json

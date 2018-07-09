@@ -1,0 +1,52 @@
+<%= form_with(model: agricultural_credit2, local: true) do |form| %>
+  <% if agricultural_credit2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(agricultural_credit2.errors.count, "error") %> prohibited this agricultural_credit2 from being saved:</h2>
+
+      <ul>
+      <% agricultural_credit2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Target_2014 %>
+    <%= form.text_field :Target_2014 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Target_2015 %>
+    <%= form.text_field :Target_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Target_2016 %>
+    <%= form.text_field :Target_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Achievement_2014 %>
+    <%= form.text_field :Achievement_2014 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Achievement_2015 %>
+    <%= form.text_field :Achievement_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Achievement_2016 %>
+    <%= form.text_field :Achievement_2016 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agricultural Inputs5s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Urea</th>
+      <th>Dap</th>
+      <th>Ssp</th>
+      <th>Mop</th>
+      <th>Ammonium sulphate</th>
+      <th>Complex</th>
+      <th>Total</th>
+      <th>N</th>
+      <th>P</th>
+      <th>K</th>
+      <th>Total npk</th>
+      <th>Grand total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agricultural_inputs5s.each do |agricultural_inputs5| %>
+      <tr>
+        <td><%= agricultural_inputs5.Districts %></td>
+        <td><%= agricultural_inputs5.Urea %></td>
+        <td><%= agricultural_inputs5.DAP %></td>
+        <td><%= agricultural_inputs5.SSP %></td>
+        <td><%= agricultural_inputs5.MOP %></td>
+        <td><%= agricultural_inputs5.Ammonium_Sulphate %></td>
+        <td><%= agricultural_inputs5.Complex %></td>
+        <td><%= agricultural_inputs5.Total %></td>
+        <td><%= agricultural_inputs5.N %></td>
+        <td><%= agricultural_inputs5.P %></td>
+        <td><%= agricultural_inputs5.K %></td>
+        <td><%= agricultural_inputs5.Total_NPK %></td>
+        <td><%= agricultural_inputs5.Grand_Total %></td>
+        <td><%= link_to 'Show', agricultural_inputs5 %></td>
+        <td><%= link_to 'Edit', edit_agricultural_inputs5_path(agricultural_inputs5) %></td>
+        <td><%= link_to 'Destroy', agricultural_inputs5, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agricultural Inputs5', new_agricultural_inputs5_path %>

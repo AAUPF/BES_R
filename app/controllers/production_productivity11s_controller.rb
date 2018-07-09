@@ -1,5 +1,6 @@
 class ProductionProductivity11sController < ApplicationController
   before_action :set_production_productivity11, only: [:show, :edit, :update, :destroy]
+  # include Concerns::MyAwesomeModule
 
   # GET /production_productivity11s
   def index
@@ -17,6 +18,7 @@ class ProductionProductivity11sController < ApplicationController
 
 
   def test
+    ji = [:Potato_Area_2015,	:Potato_Production_2015,	:Potato_Area_2016,	:Potato_Production_2016,	:Onion_Area_2015,	:Onion_Production_2015,	:Onion_Area_2016,	:Onion_Production_2016,	:Cauliflower_Area_2015,	:Cauliflower_Production_2015,	:Cauliflower_Area_2016,	:Cauliflower_Production_2016,	:Brinjal_Area_2015,	:Brinjal_Production_2015,	:Brinjal_Area_2016,	:Brinjal_Production_2016,	]
     rain_fall_type = params[:rain_fall_type]
      views  = params[:views]
      year  = ""
@@ -44,11 +46,11 @@ class ProductionProductivity11sController < ApplicationController
             else
               puts "no year"
             end  
-            b = ProductionProductivity11.map_search(j)
+            b = ProductionProductivity11.map_search(rain_fall_type)
             u = "Total"
             a = ProductionProductivity11.map(b,u,year)
            else
-            b = ProductionProductivity11.map_search(j)
+            b = ProductionProductivity11.map_search(rain_fall_type)
             a = ProductionProductivity11.map(b,rain_fall_type,year)
            end
         elsif views == "Table"  
@@ -57,7 +59,7 @@ class ProductionProductivity11sController < ApplicationController
           a = ProductionProductivity11.table(b,rain_fall_type,year)
         else
           @ProductionProductivity11s = ProductionProductivity11.search(params[:search],compare)
-          a = ProductionProductivity11.query(@ProductionProductivity11s,params[:year],rain_fall_type,views,compare)
+          a = ProductionProductivity11.query(@ProductionProductivity11s,params[:year],rain_fall_type,views,compare,ji)
         end
        
         respond_to do |format|

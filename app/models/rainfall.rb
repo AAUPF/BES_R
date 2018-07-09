@@ -1,4 +1,7 @@
 class Rainfall < ApplicationRecord
+
+  # extend Code
+
   def self.import1(file)
     spreadsheet = Roo::Spreadsheet.open(file.path)
            header = spreadsheet.row(1)

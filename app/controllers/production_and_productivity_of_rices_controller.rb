@@ -2,6 +2,8 @@ class ProductionAndProductivityOfRicesController < ApplicationController
   before_action :set_production_and_productivity_of_rice, only: [:show, :edit, :update, :destroy]
   # GET /production_and_productivity_of_rices
   # GET /production_and_productivity_of_rices.json
+  # include Concerns::MyAwesomeModule
+
   def index
     @production_and_productivity_of_rices = ProductionAndProductivityOfRice.all
     respond_to do |format|
@@ -18,6 +20,7 @@ class ProductionAndProductivityOfRicesController < ApplicationController
     @production_and_productivity_of_rice = ProductionAndProductivityOfRice.new
   end
   def test
+    ji = [:Area_2015, :Production_2015, :Productivity_2015, :Non_Agriculture_Land_Area,:Area_2016, :Production_2016,:Productivity_2016]
     rain_fall_type = params[:rain_fall_type]
      views  = params[:views]
      year  = ""
@@ -45,11 +48,11 @@ class ProductionAndProductivityOfRicesController < ApplicationController
             else
               puts "no year"
             end  
-            b = ProductionAndProductivityOfRice.map_search(j)
+            b = ProductionAndProductivityOfRice.map_search(rain_fall_type)
             u = "Total"
             a = ProductionAndProductivityOfRice.map(b,u,year)
            else
-            b = ProductionAndProductivityOfRice.map_search(j)
+            b = ProductionAndProductivityOfRice.map_search(rain_fall_type)
             a = ProductionAndProductivityOfRice.map(b,rain_fall_type,year)
            end
         elsif views == "Table"  
@@ -58,7 +61,7 @@ class ProductionAndProductivityOfRicesController < ApplicationController
           a = ProductionAndProductivityOfRice.table(b,rain_fall_type,year)
         else
           @ProductionAndProductivityOfRices = ProductionAndProductivityOfRice.search(params[:search],compare)
-          a = ProductionAndProductivityOfRice.query(@ProductionAndProductivityOfRices,params[:year],rain_fall_type,views)
+          a = ProductionAndProductivityOfRice.query(@ProductionAndProductivityOfRices,params[:year],rain_fall_type,views,compare,ji)
         end
        
         respond_to do |format|

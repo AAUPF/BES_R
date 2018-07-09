@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Urea: 1.5
+  DAP: 1.5
+  SSP: 1.5
+  MOP: 1.5
+  Ammonium_Sulphate: 1.5
+  Complex: 1.5
+  Total: 1.5
+  'N': 1.5
+  P: 1.5
+  K: 1.5
+  Total_NPK: 1.5
+  Grand_Total: 1.5
+
+two:
+  Districts: MyString
+  Urea: 1.5
+  DAP: 1.5
+  SSP: 1.5
+  MOP: 1.5
+  Ammonium_Sulphate: 1.5
+  Complex: 1.5
+  Total: 1.5
+  'N': 1.5
+  P: 1.5
+  K: 1.5
+  Total_NPK: 1.5
+  Grand_Total: 1.5

@@ -1,13 +1,13 @@
 class ProductionProductivity7sController < ApplicationController
   before_action :set_production_productivity7, only: [:show, :edit, :update, :destroy]
+  # include Concerns::MyAwesomeModule
 
   # GET /production_productivity7s
   # GET /production_productivity7s.json
   def index
     @production_productivity7s = ProductionProductivity7.all
-    b = ProductionProductivity7.search()
     respond_to do |format|
-      format.html { render json:  b} 
+      format.html { render json:   @production_productivity7s} 
   end
   end
 
@@ -25,8 +25,8 @@ class ProductionProductivity7sController < ApplicationController
   def edit
   end
 
-
   def test
+    ji = [:Area_2015, :Production_2015, :Productivity_2015, :Non_Agriculture_Land_Area,:Area_2016, :Production_2016,:Productivity_2016]
     rain_fall_type = params[:rain_fall_type]
      views  = params[:views]
      year  = ""
@@ -54,11 +54,11 @@ class ProductionProductivity7sController < ApplicationController
             else
               puts "no year"
             end  
-            b = ProductionProductivity7.map_search(j)
+            b = ProductionProductivity7.map_search(rain_fall_type)
             u = "Total"
             a = ProductionProductivity7.map(b,u,year)
            else
-            b = ProductionProductivity7.map_search(j)
+            b = ProductionProductivity7.map_search(rain_fall_type)
             a = ProductionProductivity7.map(b,rain_fall_type,year)
            end
         elsif views == "Table"  
@@ -67,7 +67,7 @@ class ProductionProductivity7sController < ApplicationController
           a = ProductionProductivity7.table(b,rain_fall_type,year)
         else
           @ProductionProductivity7s = ProductionProductivity7.search(params[:search],compare)
-          a = ProductionProductivity7.query(@ProductionProductivity7s,params[:year],rain_fall_type,views,compare)
+          a = ProductionProductivity7.query(@ProductionProductivity7s,params[:year],rain_fall_type,views,compare,ji)
         end
        
         respond_to do |format|

@@ -42,7 +42,7 @@ module Code
     #   end  
     #   return array    
     #   end
-      def query(b,year,rain_fall_type,views,compare)
+      def query(b,year,rain_fall_type,views,compare,ji)
         #  return b
           l =  rain_fall_type.gsub(" ","")
            d = "Districts"
@@ -57,21 +57,32 @@ module Code
           #   puts "no year"
           # end     
           
-          ji = [:Area_2015, :Production_2015, :Productivity_2015, :Non_Agriculture_Land_Area,:Area_2016, :Production_2016,:Productivity_2016]
+          # ji = [:Area_2015, :Production_2015, :Productivity_2015, :Non_Agriculture_Land_Area,:Area_2016, :Production_2016,:Productivity_2016]
           if rain_fall_type == "All"
   
-            
             if views == "Trend Line"
               hash_data =  ji.map do |column_name|
                 { 
                   type:"line",
                   legendText: column_name,
                   showInLegend: true,
-                  dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el| 
+                  dataPoints: b.reject{|x| x["Districts"] == "Bihar"}.map do |el| 
                     { y: el[column_name], label: el[d] }
                   end
                 }
               end
+
+              elsif views == "Bubble"
+                hash_data =  ji.map do |column_name|
+                  { 
+                    type:"scatter",
+                    legendText: column_name,
+                    showInLegend: true,
+                    dataPoints: b.reject{|x| x["Districts"] == "Bihar"}.map do |el| 
+                      { y: el[column_name], label: el[d] }
+                    end
+                  }
+                end
             else
               hash_data =  ji.map do |column_name|
                 { 

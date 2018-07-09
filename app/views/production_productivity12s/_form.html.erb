@@ -1,0 +1,52 @@
+<%= form_with(model: production_productivity12, local: true) do |form| %>
+  <% if production_productivity12.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(production_productivity12.errors.count, "error") %> prohibited this production_productivity12 from being saved:</h2>
+
+      <ul>
+      <% production_productivity12.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Area_2015 %>
+    <%= form.text_field :Area_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Production_2015 %>
+    <%= form.text_field :Production_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Yield_2015 %>
+    <%= form.text_field :Yield_2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Area_2016 %>
+    <%= form.text_field :Area_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Production_2016 %>
+    <%= form.text_field :Production_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Yield_2016 %>
+    <%= form.text_field :Yield_2016 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

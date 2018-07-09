@@ -22,6 +22,8 @@ class <%= controller_class_name %>Controller < ApplicationController
 
 
   def test
+
+    ji = [<%= attributes_names.map { |name| ":#{name}" }.join(', ') %>]
     rain_fall_type = params[:rain_fall_type]
      views  = params[:views]
      year  = ""
@@ -49,11 +51,11 @@ class <%= controller_class_name %>Controller < ApplicationController
             else
               puts "no year"
             end  
-            b = <%= class_name %>.map_search(j)
+            b = <%= class_name %>.map_search(rain_fall_type)
             u = "Total"
             a = <%= class_name %>.map(b,u,year)
            else
-            b = <%= class_name %>.map_search(j)
+            b = <%= class_name %>.map_search(rain_fall_type)
             a = <%= class_name %>.map(b,rain_fall_type,year)
            end
         elsif views == "Table"  
@@ -62,7 +64,7 @@ class <%= controller_class_name %>Controller < ApplicationController
           a = <%= class_name %>.table(b,rain_fall_type,year)
         else
           @<%= class_name %>s = <%= class_name %>.search(params[:search],compare)
-          a = <%= class_name %>.query(@<%= class_name %>s,params[:year],rain_fall_type,views,compare)
+          a = <%= class_name %>.query(@<%= class_name %>s,params[:year],rain_fall_type,views,compare,ji)
         end
        
         respond_to do |format|

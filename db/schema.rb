@@ -10,7 +10,115 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_07_113804) do
+ActiveRecord::Schema.define(version: 2018_07_09_103457) do
+
+  create_table "agricultural_credit2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Districts"
+    t.float "Target_2014"
+    t.float "Target_2015"
+    t.float "Target_2016"
+    t.float "Achievement_2014"
+    t.float "Achievement_2015"
+    t.float "Achievement_2016"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "agricultural_inputs4s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Districts"
+    t.float "Urea"
+    t.float "DAP"
+    t.float "SSP"
+    t.float "MOP"
+    t.float "Ammonium_Sulphate"
+    t.float "Complex"
+    t.float "Total"
+    t.float "N"
+    t.float "P"
+    t.float "K"
+    t.float "Total_NPK"
+    t.float "Grand_Total"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "agricultural_inputs5s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Districts"
+    t.float "Urea"
+    t.float "DAP"
+    t.float "SSP"
+    t.float "MOP"
+    t.float "Ammonium_Sulphate"
+    t.float "Complex"
+    t.float "Total"
+    t.float "N"
+    t.float "P"
+    t.float "K"
+    t.float "Total_NPK"
+    t.float "Grand_Total"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "agricultural_inputs6s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Districts"
+    t.float "Target_Physical"
+    t.float "Target_Financial"
+    t.float "Achievement_Physical"
+    t.float "Achievement_Financial"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "agricultural_inputs7s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Districts"
+    t.float "Tractor"
+    t.float "Combine_Harvestor"
+    t.float "Zero_Tillage"
+    t.float "Pumpset"
+    t.float "Power_Tiller"
+    t.float "Manually_Operated_Tools"
+    t.float "Thresher"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "agricultural_inputs8s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Districts"
+    t.float "Tractor"
+    t.float "Combine_Harvestor"
+    t.float "Zero_Tillage"
+    t.float "Pumpset"
+    t.float "Power_Tiller"
+    t.float "Manually_Operated_Tools"
+    t.float "Thresher"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "animal_husbandry4s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Districts"
+    t.float "Cow"
+    t.float "Buffalo"
+    t.float "Pig"
+    t.float "Sheep"
+    t.float "Goat"
+    t.float "Poultry"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "animal_husbandry5s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Districts"
+    t.float "Fish_Production_2014"
+    t.float "Fish_Seeds_2014"
+    t.float "Fish_Production_2015"
+    t.float "Fish_Seeds_2015"
+    t.float "Fish_Production_2016"
+    t.float "Fish_Seeds_2016"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "hhs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -83,6 +191,18 @@ ActiveRecord::Schema.define(version: 2018_07_07_113804) do
     t.float "Brinjal_Production_2015"
     t.float "Brinjal_Area_2016"
     t.float "Brinjal_Production_2016"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "production_productivity12s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Districts"
+    t.float "Area_2015"
+    t.float "Production_2015"
+    t.float "Yield_2015"
+    t.float "Area_2016"
+    t.float "Production_2016"
+    t.float "Yield_2016"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

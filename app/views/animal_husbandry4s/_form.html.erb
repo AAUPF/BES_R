@@ -1,0 +1,52 @@
+<%= form_with(model: animal_husbandry4, local: true) do |form| %>
+  <% if animal_husbandry4.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(animal_husbandry4.errors.count, "error") %> prohibited this animal_husbandry4 from being saved:</h2>
+
+      <ul>
+      <% animal_husbandry4.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cow %>
+    <%= form.text_field :Cow %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Buffalo %>
+    <%= form.text_field :Buffalo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pig %>
+    <%= form.text_field :Pig %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Sheep %>
+    <%= form.text_field :Sheep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Goat %>
+    <%= form.text_field :Goat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Poultry %>
+    <%= form.text_field :Poultry %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
