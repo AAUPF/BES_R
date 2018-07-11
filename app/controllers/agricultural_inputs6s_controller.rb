@@ -15,61 +15,40 @@ class AgriculturalInputs6sController < ApplicationController
     @agricultural_inputs6 = AgriculturalInputs6.new
   end
 
+def test
+  ji = [:Target_Physical, :Target_Financial, :Achievement_Physical, :Achievement_Financial]
+  rain_fall_type = params[:rain_fall_type]
+   views  = params[:views]
+   year  = params[:year]
+   compare = params[:compare]
 
-  def test
+  if rain_fall_type || views
 
-    ji = [:Target_Physical, :Target_Financial, :Achievement_Physical, :Achievement_Financial]
-    rain_fall_type = params[:rain_fall_type]
-     views  = params[:views]
-     year  = ""
-     compare = params[:compare]
-
-    if rain_fall_type || views
-
-        if views == "Map View"
-          l =  rain_fall_type.gsub(" ","")
-          if year == "2016"
-            j = "#{l}_2016"
-          elsif year == "2017"
-            j = "#{l}_2017"
-          else
-            puts "no year"
-          end  
-           
-           if rain_fall_type  ==  "All"
-           
-
-            if year == "2016"
-              j = "Total_2016"
-            elsif year == "2017"
-              j = "Total_2017"
-            else
-              puts "no year"
-            end  
-            b = AgriculturalInputs6.map_search(rain_fall_type)
-            u = "Total"
-            a = AgriculturalInputs6.map(b,u,year)
-           else
-            b = AgriculturalInputs6.map_search(rain_fall_type)
-            a = AgriculturalInputs6.map(b,rain_fall_type,year)
-           end
-        elsif views == "Table"  
-          b = AgriculturalInputs6.search(params[:search],compare)
-
-          a = AgriculturalInputs6.table(b,rain_fall_type,year)
-        else
-          @AgriculturalInputs6s = AgriculturalInputs6.search(params[:search],compare)
-          a = AgriculturalInputs6.query(@AgriculturalInputs6s,params[:year],rain_fall_type,views,compare,ji)
-        end
-       
-        respond_to do |format|
-          format.html { render json:a }
+      if views == "Map View"
+        l =  rain_fall_type.gsub(" ","")           
+         if rain_fall_type  ==  "All"
+          b = AgriculturalInputs6.map_search("All",compare,year,rain_fall_type)
+          u = "Total"
+          a = AgriculturalInputs6.map(b,params[:year],rain_fall_type,views)
+         else
+          b = AgriculturalInputs6.map_search(params[:search],compare,year,rain_fall_type)
+          a = AgriculturalInputs6.map(b,rain_fall_type,year,ji)
+         end
+      elsif views == "Table"  
+        b = AgriculturalInputs6.search(params[:search],compare,year)
+        a = AgriculturalInputs6.table(b,rain_fall_type,year)
+      else
+        @AgriculturalInputs6s = AgriculturalInputs6.search(params[:search],compare,year,rain_fall_type)
+        a = AgriculturalInputs6.query(@AgriculturalInputs6s,params[:year],rain_fall_type,views,ji,compare)
       end
-
-    else
       respond_to do |format|
-        format.html { render json: "error"}
+        format.html { render json:a }
     end
+
+  else
+    respond_to do |format|
+      format.html { render json: "error"}
+  end
   end
 
 end
@@ -119,6 +98,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def agricultural_inputs6_params
-      params.require(:agricultural_inputs6).permit(:Districts, :Target_Physical, :Target_Financial, :Achievement_Physical, :Achievement_Financial)
+      params.require(:agricultural_inputs6).permit(:Districts, :Target_Physical, :Target_Financial, :Achievement_Physical, :Achievement_Financial, :Year)
     end
 end

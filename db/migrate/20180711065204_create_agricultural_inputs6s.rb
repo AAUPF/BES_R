@@ -6,6 +6,7 @@ class CreateAgriculturalInputs6s < ActiveRecord::Migration[5.2]
       t.float :Target_Financial
       t.float :Achievement_Physical
       t.float :Achievement_Financial
+      t.integer :Year
 
       t.timestamps
     end

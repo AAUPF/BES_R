@@ -19,6 +19,7 @@ class AgriculturalInputs6sTest < ApplicationSystemTestCase
     fill_in "Districts", with: @agricultural_inputs6.Districts
     fill_in "Target Financial", with: @agricultural_inputs6.Target_Financial
     fill_in "Target Physical", with: @agricultural_inputs6.Target_Physical
+    fill_in "Year", with: @agricultural_inputs6.Year
     click_on "Create Agricultural inputs6"
 
     assert_text "Agricultural inputs6 was successfully created"
@@ -34,6 +35,7 @@ class AgriculturalInputs6sTest < ApplicationSystemTestCase
     fill_in "Districts", with: @agricultural_inputs6.Districts
     fill_in "Target Financial", with: @agricultural_inputs6.Target_Financial
     fill_in "Target Physical", with: @agricultural_inputs6.Target_Physical
+    fill_in "Year", with: @agricultural_inputs6.Year
     click_on "Update Agricultural inputs6"
 
     assert_text "Agricultural inputs6 was successfully updated"

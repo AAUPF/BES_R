@@ -14,6 +14,7 @@ class CreateAgriculturalInputs4s < ActiveRecord::Migration[5.2]
       t.float :K
       t.float :Total_NPK
       t.float :Grand_Total
+      t.integer :Year
 
       t.timestamps
     end

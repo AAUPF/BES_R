@@ -1,4 +1,4 @@
 class AgriculturalInputs6 < ApplicationRecord
-  extend Code  
+  extend Code1  
 
       end

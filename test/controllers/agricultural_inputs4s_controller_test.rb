@@ -17,7 +17,7 @@ class AgriculturalInputs4sControllerTest < ActionDispatch::IntegrationTest
 
   test "should create agricultural_inputs4" do
     assert_difference('AgriculturalInputs4.count') do
-      post agricultural_inputs4s_url, params: { agricultural_inputs4: { Ammonium_Sulphate: @agricultural_inputs4.Ammonium_Sulphate, Complex: @agricultural_inputs4.Complex, DAP: @agricultural_inputs4.DAP, Districts: @agricultural_inputs4.Districts, Grand_Total: @agricultural_inputs4.Grand_Total, K: @agricultural_inputs4.K, MOP: @agricultural_inputs4.MOP, N: @agricultural_inputs4.N, P: @agricultural_inputs4.P, SSP: @agricultural_inputs4.SSP, Total: @agricultural_inputs4.Total, Total_NPK: @agricultural_inputs4.Total_NPK, Urea: @agricultural_inputs4.Urea } }
+      post agricultural_inputs4s_url, params: { agricultural_inputs4: { Ammonium_Sulphate: @agricultural_inputs4.Ammonium_Sulphate, Complex: @agricultural_inputs4.Complex, DAP: @agricultural_inputs4.DAP, Districts: @agricultural_inputs4.Districts, Grand_Total: @agricultural_inputs4.Grand_Total, K: @agricultural_inputs4.K, MOP: @agricultural_inputs4.MOP, N: @agricultural_inputs4.N, P: @agricultural_inputs4.P, SSP: @agricultural_inputs4.SSP, Total: @agricultural_inputs4.Total, Total_NPK: @agricultural_inputs4.Total_NPK, Urea: @agricultural_inputs4.Urea, Year: @agricultural_inputs4.Year } }
     end
 
     assert_redirected_to agricultural_inputs4_url(AgriculturalInputs4.last)
@@ -34,7 +34,7 @@ class AgriculturalInputs4sControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update agricultural_inputs4" do
-    patch agricultural_inputs4_url(@agricultural_inputs4), params: { agricultural_inputs4: { Ammonium_Sulphate: @agricultural_inputs4.Ammonium_Sulphate, Complex: @agricultural_inputs4.Complex, DAP: @agricultural_inputs4.DAP, Districts: @agricultural_inputs4.Districts, Grand_Total: @agricultural_inputs4.Grand_Total, K: @agricultural_inputs4.K, MOP: @agricultural_inputs4.MOP, N: @agricultural_inputs4.N, P: @agricultural_inputs4.P, SSP: @agricultural_inputs4.SSP, Total: @agricultural_inputs4.Total, Total_NPK: @agricultural_inputs4.Total_NPK, Urea: @agricultural_inputs4.Urea } }
+    patch agricultural_inputs4_url(@agricultural_inputs4), params: { agricultural_inputs4: { Ammonium_Sulphate: @agricultural_inputs4.Ammonium_Sulphate, Complex: @agricultural_inputs4.Complex, DAP: @agricultural_inputs4.DAP, Districts: @agricultural_inputs4.Districts, Grand_Total: @agricultural_inputs4.Grand_Total, K: @agricultural_inputs4.K, MOP: @agricultural_inputs4.MOP, N: @agricultural_inputs4.N, P: @agricultural_inputs4.P, SSP: @agricultural_inputs4.SSP, Total: @agricultural_inputs4.Total, Total_NPK: @agricultural_inputs4.Total_NPK, Urea: @agricultural_inputs4.Urea, Year: @agricultural_inputs4.Year } }
     assert_redirected_to agricultural_inputs4_url(@agricultural_inputs4)
   end
 

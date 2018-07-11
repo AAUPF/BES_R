@@ -14,6 +14,7 @@ one:
   K: 1.5
   Total_NPK: 1.5
   Grand_Total: 1.5
+  Year: 1
 
 two:
   Districts: MyString
@@ -29,3 +30,4 @@ two:
   K: 1.5
   Total_NPK: 1.5
   Grand_Total: 1.5
+  Year: 1

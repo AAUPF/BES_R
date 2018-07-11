@@ -17,7 +17,7 @@ class AgriculturalInputs6sControllerTest < ActionDispatch::IntegrationTest
 
   test "should create agricultural_inputs6" do
     assert_difference('AgriculturalInputs6.count') do
-      post agricultural_inputs6s_url, params: { agricultural_inputs6: { Achievement_Financial: @agricultural_inputs6.Achievement_Financial, Achievement_Physical: @agricultural_inputs6.Achievement_Physical, Districts: @agricultural_inputs6.Districts, Target_Financial: @agricultural_inputs6.Target_Financial, Target_Physical: @agricultural_inputs6.Target_Physical } }
+      post agricultural_inputs6s_url, params: { agricultural_inputs6: { Achievement_Financial: @agricultural_inputs6.Achievement_Financial, Achievement_Physical: @agricultural_inputs6.Achievement_Physical, Districts: @agricultural_inputs6.Districts, Target_Financial: @agricultural_inputs6.Target_Financial, Target_Physical: @agricultural_inputs6.Target_Physical, Year: @agricultural_inputs6.Year } }
     end
 
     assert_redirected_to agricultural_inputs6_url(AgriculturalInputs6.last)
@@ -34,7 +34,7 @@ class AgriculturalInputs6sControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update agricultural_inputs6" do
-    patch agricultural_inputs6_url(@agricultural_inputs6), params: { agricultural_inputs6: { Achievement_Financial: @agricultural_inputs6.Achievement_Financial, Achievement_Physical: @agricultural_inputs6.Achievement_Physical, Districts: @agricultural_inputs6.Districts, Target_Financial: @agricultural_inputs6.Target_Financial, Target_Physical: @agricultural_inputs6.Target_Physical } }
+    patch agricultural_inputs6_url(@agricultural_inputs6), params: { agricultural_inputs6: { Achievement_Financial: @agricultural_inputs6.Achievement_Financial, Achievement_Physical: @agricultural_inputs6.Achievement_Physical, Districts: @agricultural_inputs6.Districts, Target_Financial: @agricultural_inputs6.Target_Financial, Target_Physical: @agricultural_inputs6.Target_Physical, Year: @agricultural_inputs6.Year } }
     assert_redirected_to agricultural_inputs6_url(@agricultural_inputs6)
   end
 

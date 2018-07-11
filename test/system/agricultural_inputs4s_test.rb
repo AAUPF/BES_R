@@ -27,6 +27,7 @@ class AgriculturalInputs4sTest < ApplicationSystemTestCase
     fill_in "Total", with: @agricultural_inputs4.Total
     fill_in "Total Npk", with: @agricultural_inputs4.Total_NPK
     fill_in "Urea", with: @agricultural_inputs4.Urea
+    fill_in "Year", with: @agricultural_inputs4.Year
     click_on "Create Agricultural inputs4"
 
     assert_text "Agricultural inputs4 was successfully created"
@@ -50,6 +51,7 @@ class AgriculturalInputs4sTest < ApplicationSystemTestCase
     fill_in "Total", with: @agricultural_inputs4.Total
     fill_in "Total Npk", with: @agricultural_inputs4.Total_NPK
     fill_in "Urea", with: @agricultural_inputs4.Urea
+    fill_in "Year", with: @agricultural_inputs4.Year
     click_on "Update Agricultural inputs4"
 
     assert_text "Agricultural inputs4 was successfully updated"
