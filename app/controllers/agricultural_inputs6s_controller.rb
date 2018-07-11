@@ -1,4 +1,5 @@
 class AgriculturalInputs6sController < ApplicationController
+  
   before_action :set_agricultural_inputs6, only: [:show, :edit, :update, :destroy]
 
   # GET /agricultural_inputs6s
