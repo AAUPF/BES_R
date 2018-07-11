@@ -14,13 +14,11 @@ class ProductionProductivity12sTest < ApplicationSystemTestCase
     visit production_productivity12s_url
     click_on "New Production Productivity12"
 
-    fill_in "Area 2015", with: @production_productivity12.Area_2015
-    fill_in "Area 2016", with: @production_productivity12.Area_2016
+    fill_in "Area", with: @production_productivity12.Area
     fill_in "Districts", with: @production_productivity12.Districts
-    fill_in "Production 2015", with: @production_productivity12.Production_2015
-    fill_in "Production 2016", with: @production_productivity12.Production_2016
-    fill_in "Yield 2015", with: @production_productivity12.Yield_2015
-    fill_in "Yield 2016", with: @production_productivity12.Yield_2016
+    fill_in "Production", with: @production_productivity12.Production
+    fill_in "Year", with: @production_productivity12.Year
+    fill_in "Yield", with: @production_productivity12.Yield
     click_on "Create Production productivity12"
 
     assert_text "Production productivity12 was successfully created"
@@ -31,13 +29,11 @@ class ProductionProductivity12sTest < ApplicationSystemTestCase
     visit production_productivity12s_url
     click_on "Edit", match: :first
 
-    fill_in "Area 2015", with: @production_productivity12.Area_2015
-    fill_in "Area 2016", with: @production_productivity12.Area_2016
+    fill_in "Area", with: @production_productivity12.Area
     fill_in "Districts", with: @production_productivity12.Districts
-    fill_in "Production 2015", with: @production_productivity12.Production_2015
-    fill_in "Production 2016", with: @production_productivity12.Production_2016
-    fill_in "Yield 2015", with: @production_productivity12.Yield_2015
-    fill_in "Yield 2016", with: @production_productivity12.Yield_2016
+    fill_in "Production", with: @production_productivity12.Production
+    fill_in "Year", with: @production_productivity12.Year
+    fill_in "Yield", with: @production_productivity12.Yield
     click_on "Update Production productivity12"
 
     assert_text "Production productivity12 was successfully updated"

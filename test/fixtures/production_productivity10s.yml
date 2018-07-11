@@ -2,38 +2,14 @@
 
 one:
   Districts: MyString
-  Mango_Area_2015: 1.5
-  Mango_Production_2015: 1.5
-  Mango_Area_2016: 1.5
-  Mango_Production_2016: 1.5
-  Guava_Area_2015: 1.5
-  Guava_Production_2015: 1.5
-  Guava_Area_2016: 1.5
-  Guava_Production_2016: 1.5
-  Litchi_Area_2015: 1.5
-  Litchi_Production_2015: 1.5
-  Litchi_Area_2016: 1.5
-  Litchi_Production_2016: 1.5
-  Banana_Area_2015: 1.5
-  Banana_Production_2015: 1.5
-  Banana_Area_2016: 1.5
-  Banana_Production_2016: 1.5
+  Area: 1.5
+  Production: 1.5
+  Year: 1
+  Fruit: MyString
 
 two:
   Districts: MyString
-  Mango_Area_2015: 1.5
-  Mango_Production_2015: 1.5
-  Mango_Area_2016: 1.5
-  Mango_Production_2016: 1.5
-  Guava_Area_2015: 1.5
-  Guava_Production_2015: 1.5
-  Guava_Area_2016: 1.5
-  Guava_Production_2016: 1.5
-  Litchi_Area_2015: 1.5
-  Litchi_Production_2015: 1.5
-  Litchi_Area_2016: 1.5
-  Litchi_Production_2016: 1.5
-  Banana_Area_2015: 1.5
-  Banana_Production_2015: 1.5
-  Banana_Area_2016: 1.5
-  Banana_Production_2016: 1.5
+  Area: 1.5
+  Production: 1.5
+  Year: 1
+  Fruit: MyString

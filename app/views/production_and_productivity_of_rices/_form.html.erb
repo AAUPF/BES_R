@@ -1,19 +1,42 @@
+<%= form_with(model: production_and_productivity_of_rice, local: true) do |form| %>
+  <% if production_and_productivity_of_rice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(production_and_productivity_of_rice.errors.count, "error") %> prohibited this production_and_productivity_of_rice from being saved:</h2>
 
-<%= simple_form_for(@production_and_productivity_of_rice) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <ul>
+      <% production_and_productivity_of_rice.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-  <div class="form-inputs">
-    <%= f.input :Districts %>
-    <%= f.input :Area_2015 %>
-    <%= f.input :Production_2015 %>
-    <%= f.input :Productivity_2015 %>
-    <%= f.input :Area_2016 %>
-    <%= f.input :Production_2016 %>
-    <%= f.input :Productivity_2016 %>
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="field">
+    <%= form.label :Area %>
+    <%= form.text_field :Area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Production %>
+    <%= form.text_field :Production %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Productivity %>
+    <%= form.text_field :Productivity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
   </div>
 <% end %>

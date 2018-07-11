@@ -1,4 +1,29 @@
 Rails.application.routes.draw do
+  resources :production_productivity10s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :production_productivity9s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :production_productivity8s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :production_productivity7s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :production_and_productivity_of_rices do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :animal_husbandry5s do 
                       collection { post :import }
                       collection { get :dropdown }
@@ -49,33 +74,16 @@ Rails.application.routes.draw do
       collection { get :dropdown }
       collection { get :test }
     end 
-  resources :production_productivity10s do 
-    collection { post :import }
-    collection { get :dropdown }
-    collection { get :test }
-  end 
-  resources :production_productivity9s do
-    collection { post :import }
-    collection { get :dropdown }
-    collection { get :test }
-  end
-  
-  resources :production_productivity8s do
-    collection { post :import }
-    collection { get :dropdown }
-    collection { get :test }
-  end
+
+
+
   resources :production_productivity7s do
     collection { post :import }
     collection { get :dropdown }
     collection { get :test }
   end
   resources :hhs
-  resources :production_and_productivity_of_rices do
-    collection { post :import }
-    collection { get :dropdown }
-    collection { get :test }
-  end
+
   resources :lands do
     collection { post :import }
     collection { get :dropdown }

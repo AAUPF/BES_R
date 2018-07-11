@@ -6,22 +6,10 @@
   <thead>
     <tr>
       <th>Districts</th>
-      <th>Mango area 2015</th>
-      <th>Mango production 2015</th>
-      <th>Mango area 2016</th>
-      <th>Mango production 2016</th>
-      <th>Guava area 2015</th>
-      <th>Guava production 2015</th>
-      <th>Guava area 2016</th>
-      <th>Guava production 2016</th>
-      <th>Litchi area 2015</th>
-      <th>Litchi production 2015</th>
-      <th>Litchi area 2016</th>
-      <th>Litchi production 2016</th>
-      <th>Banana area 2015</th>
-      <th>Banana production 2015</th>
-      <th>Banana area 2016</th>
-      <th>Banana production 2016</th>
+      <th>Area</th>
+      <th>Production</th>
+      <th>Year</th>
+      <th>Fruit</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,22 +18,10 @@
     <% @production_productivity10s.each do |production_productivity10| %>
       <tr>
         <td><%= production_productivity10.Districts %></td>
-        <td><%= production_productivity10.Mango_Area_2015 %></td>
-        <td><%= production_productivity10.Mango_Production_2015 %></td>
-        <td><%= production_productivity10.Mango_Area_2016 %></td>
-        <td><%= production_productivity10.Mango_Production_2016 %></td>
-        <td><%= production_productivity10.Guava_Area_2015 %></td>
-        <td><%= production_productivity10.Guava_Production_2015 %></td>
-        <td><%= production_productivity10.Guava_Area_2016 %></td>
-        <td><%= production_productivity10.Guava_Production_2016 %></td>
-        <td><%= production_productivity10.Litchi_Area_2015 %></td>
-        <td><%= production_productivity10.Litchi_Production_2015 %></td>
-        <td><%= production_productivity10.Litchi_Area_2016 %></td>
-        <td><%= production_productivity10.Litchi_Production_2016 %></td>
-        <td><%= production_productivity10.Banana_Area_2015 %></td>
-        <td><%= production_productivity10.Banana_Production_2015 %></td>
-        <td><%= production_productivity10.Banana_Area_2016 %></td>
-        <td><%= production_productivity10.Banana_Production_2016 %></td>
+        <td><%= production_productivity10.Area %></td>
+        <td><%= production_productivity10.Production %></td>
+        <td><%= production_productivity10.Year %></td>
+        <td><%= production_productivity10.Fruit %></td>
         <td><%= link_to 'Show', production_productivity10 %></td>
         <td><%= link_to 'Edit', edit_production_productivity10_path(production_productivity10) %></td>
         <td><%= link_to 'Destroy', production_productivity10, method: :delete, data: { confirm: 'Are you sure?' } %></td>

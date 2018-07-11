@@ -20,61 +20,40 @@ class <%= controller_class_name %>Controller < ApplicationController
     @<%= singular_table_name %> = <%= orm_class.build(class_name) %>
   end
 
+def test
+  ji = [<%= attributes_names.map { |name| ":#{name}" }.join(', ') %>]
+  rain_fall_type = params[:rain_fall_type]
+   views  = params[:views]
+   year  = params[:year]
+   compare = params[:compare]
 
-  def test
+  if rain_fall_type || views
 
-    ji = [<%= attributes_names.map { |name| ":#{name}" }.join(', ') %>]
-    rain_fall_type = params[:rain_fall_type]
-     views  = params[:views]
-     year  = ""
-     compare = params[:compare]
-
-    if rain_fall_type || views
-
-        if views == "Map View"
-          l =  rain_fall_type.gsub(" ","")
-          if year == "2016"
-            j = "#{l}_2016"
-          elsif year == "2017"
-            j = "#{l}_2017"
-          else
-            puts "no year"
-          end  
-           
-           if rain_fall_type  ==  "All"
-           
-
-            if year == "2016"
-              j = "Total_2016"
-            elsif year == "2017"
-              j = "Total_2017"
-            else
-              puts "no year"
-            end  
-            b = <%= class_name %>.map_search(rain_fall_type)
-            u = "Total"
-            a = <%= class_name %>.map(b,u,year)
-           else
-            b = <%= class_name %>.map_search(rain_fall_type)
-            a = <%= class_name %>.map(b,rain_fall_type,year)
-           end
-        elsif views == "Table"  
-          b = <%= class_name %>.search(params[:search],compare)
-
-          a = <%= class_name %>.table(b,rain_fall_type,year)
-        else
-          @<%= class_name %>s = <%= class_name %>.search(params[:search],compare)
-          a = <%= class_name %>.query(@<%= class_name %>s,params[:year],rain_fall_type,views,compare,ji)
-        end
-       
-        respond_to do |format|
-          format.html { render json:a }
+      if views == "Map View"
+        l =  rain_fall_type.gsub(" ","")           
+         if rain_fall_type  ==  "All"
+          b = <%= class_name %>.map_search("All",compare,year,rain_fall_type)
+          u = "Total"
+          a = <%= class_name %>.map(b,params[:year],rain_fall_type,views)
+         else
+          b = <%= class_name %>.map_search(params[:search],compare,year,rain_fall_type)
+          a = <%= class_name %>.map(b,rain_fall_type,year,ji)
+         end
+      elsif views == "Table"  
+        b = <%= class_name %>.search(params[:search],compare,year)
+        a = <%= class_name %>.table(b,rain_fall_type,year)
+      else
+        @<%= class_name %>s = <%= class_name %>.search(params[:search],compare,year,rain_fall_type)
+        a = <%= class_name %>.query(@<%= class_name %>s,params[:year],rain_fall_type,views,ji,compare)
       end
-
-    else
       respond_to do |format|
-        format.html { render json: "error"}
+        format.html { render json:a }
     end
+
+  else
+    respond_to do |format|
+      format.html { render json: "error"}
+  end
   end
 
 end

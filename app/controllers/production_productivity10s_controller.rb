@@ -1,6 +1,5 @@
 class ProductionProductivity10sController < ApplicationController
   before_action :set_production_productivity10, only: [:show, :edit, :update, :destroy]
-  # include Concerns::MyAwesomeModule
 
   # GET /production_productivity10s
   def index
@@ -16,60 +15,42 @@ class ProductionProductivity10sController < ApplicationController
     @production_productivity10 = ProductionProductivity10.new
   end
 
+def test
+  ji = [:Area, :Production]
+  rain_fall_type = params[:rain_fall_type]
+   views  = params[:views]
+   year  = params[:year]
+   compare = params[:compare]
+   fruits = params[:fruits]
 
-  def test
-    ji = [:Mango_Area_2015,	:Mango_Production_2015,	:Mango_Area_2016,	:Mango_Production_2016,	:Guava_Area_2015,	:Guava_Production_2015,	:Guava_Area_2016,	:Guava_Production_2016,	:Litchi_Area_2015,	:Litchi_Production_2015,	:Litchi_Area_2016,	:Litchi_Production_2016,	:Banana_Area_2015,	:Banana_Production_2015,	:Banana_Area_2016,	:Banana_Production_2016]
-    rain_fall_type = params[:rain_fall_type]
-     views  = params[:views]
-     year  = ""
-     compare = params[:compare]
 
-    if rain_fall_type || views
+  if rain_fall_type || views
 
-        if views == "Map View"
-          l =  rain_fall_type.gsub(" ","")
-          if year == "2016"
-            j = "#{l}_2016"
-          elsif year == "2017"
-            j = "#{l}_2017"
-          else
-            puts "no year"
-          end  
-           
-           if rain_fall_type  ==  "All"
-           
-
-            if year == "2016"
-              j = "Total_2016"
-            elsif year == "2017"
-              j = "Total_2017"
-            else
-              puts "no year"
-            end  
-            b = ProductionProductivity10.map_search(rain_fall_type)
-            u = "Total"
-            a = ProductionProductivity10.map(b,u,year)
-           else
-            b = ProductionProductivity10.map_search(rain_fall_type)
-            a = ProductionProductivity10.map(b,rain_fall_type,year)
-           end
-        elsif views == "Table"  
-          b = ProductionProductivity10.search(params[:search],compare)
-
-          a = ProductionProductivity10.table(b,rain_fall_type,year)
-        else
-          @ProductionProductivity10s = ProductionProductivity10.search(params[:search],compare)
-          a = ProductionProductivity10.query(@ProductionProductivity10s,params[:year],rain_fall_type,views,compare,ji)
-        end
-       
-        respond_to do |format|
-          format.html { render json:a }
+      if views == "Map View"
+        l =  rain_fall_type.gsub(" ","")           
+         if rain_fall_type  ==  "All"
+          b = ProductionProductivity10.map_search("All",compare,year,rain_fall_type)
+          u = "Total"
+          a = ProductionProductivity10.map(b,params[:year],rain_fall_type,views)
+         else
+          b = ProductionProductivity10.map_search(params[:search],compare,year,rain_fall_type)
+          a = ProductionProductivity10.map(b,rain_fall_type,year,ji)
+         end
+      elsif views == "Table"  
+        b = ProductionProductivity10.search(params[:search],compare,year)
+        a = ProductionProductivity10.table(b,rain_fall_type,year)
+      else
+        @ProductionProductivity10s = ProductionProductivity10.search(params[:search],compare,year,rain_fall_type,fruits)
+        a = ProductionProductivity10.query(@ProductionProductivity10s,params[:year],rain_fall_type,views,ji,compare)
       end
-
-    else
       respond_to do |format|
-        format.html { render json: "error"}
+        format.html { render json:a }
     end
+
+  else
+    respond_to do |format|
+      format.html { render json: "error"}
+  end
   end
 
 end
@@ -119,6 +100,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def production_productivity10_params
-      params.require(:production_productivity10).permit(:Districts, :Mango_Area_2015, :Mango_Production_2015, :Mango_Area_2016, :Mango_Production_2016, :Guava_Area_2015, :Guava_Production_2015, :Guava_Area_2016, :Guava_Production_2016, :Litchi_Area_2015, :Litchi_Production_2015, :Litchi_Area_2016, :Litchi_Production_2016, :Banana_Area_2015, :Banana_Production_2015, :Banana_Area_2016, :Banana_Production_2016)
+      params.require(:production_productivity10).permit(:Districts, :Area, :Production, :Year, :Fruit)
     end
 end

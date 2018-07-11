@@ -17,7 +17,7 @@ class ProductionAndProductivityOfRicesControllerTest < ActionDispatch::Integrati
 
   test "should create production_and_productivity_of_rice" do
     assert_difference('ProductionAndProductivityOfRice.count') do
-      post production_and_productivity_of_rices_url, params: { production_and_productivity_of_rice: { Area_2015: @production_and_productivity_of_rice.Area_2015, Area_2016: @production_and_productivity_of_rice.Area_2016, Districts: @production_and_productivity_of_rice.Districts, Production_2015: @production_and_productivity_of_rice.Production_2015, Production_2016: @production_and_productivity_of_rice.Production_2016, Productivity_2015: @production_and_productivity_of_rice.Productivity_2015, Productivity_2016: @production_and_productivity_of_rice.Productivity_2016 } }
+      post production_and_productivity_of_rices_url, params: { production_and_productivity_of_rice: { Area: @production_and_productivity_of_rice.Area, Districts: @production_and_productivity_of_rice.Districts, Production: @production_and_productivity_of_rice.Production, Productivity: @production_and_productivity_of_rice.Productivity, Year: @production_and_productivity_of_rice.Year } }
     end
 
     assert_redirected_to production_and_productivity_of_rice_url(ProductionAndProductivityOfRice.last)
@@ -34,7 +34,7 @@ class ProductionAndProductivityOfRicesControllerTest < ActionDispatch::Integrati
   end
 
   test "should update production_and_productivity_of_rice" do
-    patch production_and_productivity_of_rice_url(@production_and_productivity_of_rice), params: { production_and_productivity_of_rice: { Area_2015: @production_and_productivity_of_rice.Area_2015, Area_2016: @production_and_productivity_of_rice.Area_2016, Districts: @production_and_productivity_of_rice.Districts, Production_2015: @production_and_productivity_of_rice.Production_2015, Production_2016: @production_and_productivity_of_rice.Production_2016, Productivity_2015: @production_and_productivity_of_rice.Productivity_2015, Productivity_2016: @production_and_productivity_of_rice.Productivity_2016 } }
+    patch production_and_productivity_of_rice_url(@production_and_productivity_of_rice), params: { production_and_productivity_of_rice: { Area: @production_and_productivity_of_rice.Area, Districts: @production_and_productivity_of_rice.Districts, Production: @production_and_productivity_of_rice.Production, Productivity: @production_and_productivity_of_rice.Productivity, Year: @production_and_productivity_of_rice.Year } }
     assert_redirected_to production_and_productivity_of_rice_url(@production_and_productivity_of_rice)
   end
 

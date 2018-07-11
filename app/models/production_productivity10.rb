@@ -1,4 +1,4 @@
 class ProductionProductivity10 < ApplicationRecord
-  extend Code  
+  extend Fruits  
 
       end

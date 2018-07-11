@@ -1,5 +1,6 @@
 module Code 
-   # include SpecialMethods
+  # extend Code
+  
   def import1(file)
     spreadsheet = Roo::Spreadsheet.open(file.path)
            header = spreadsheet.row(1)
@@ -9,128 +10,198 @@ module Code
              product = find_by(id: row["id"]) || new
              product.attributes = row.to_hash
              product.save!
-       end
+           end
   end
-  def search(search,compare)
+  
+  def search(search,compare,year,rain_fall_type)
     if search == "All"
-      all.order(:id)
+      # all.order(:WinterRain)
+      # abort(rain_fall_type)
+        
+        if rain_fall_type == "All"
+          where(Year: year).order('id Desc')
+        else
+          where(Year: year).order("#{rain_fall_type} Desc")
+        end
+        
+      # all
+      # where(Districts: search)
     elsif compare == "Bihar vs District"
-      where("Districts = ? OR Districts = ?", search, "Bihar")
+      where("Districts = ? OR Districts = ?", search, "Bihar").where("year = ?", year).order(:id)
     else
-      where(Districts: search)
+      if rain_fall_type == "All"
+        where("Districts = ? ", search).where("year = ?", year).order(:id)
+
+    else
+        where("Districts = ? ", search).where("year = ?", year).order(rain_fall_type)
+    end
     end
   end
-
-  def map_search(search)
+  
+  
+  def map_search(search,compare,year,rain_fall_type)
     if search == "All"
-      all.order(:id)
+  
+      
+      if rain_fall_type == "All"
+        where(Year: year).order(:id)
+      else
+        where(Year: year).order(rain_fall_type)
+      end
+      
+      
     else
       # where(Districts: search)
-      all.order(search)
+      where(Year: year).order(rain_fall_type)
     end
   end
-    # def query(b,year,rain_fall_type,views)
-    #   array = []  
-    #   d = "Districts"  
-    #   b.each do |element|
-    #     if element[d] == "Average "
-    #     elsif element[d] == "StD"
-    #     else
-    #       hash1 = {:y => element[rain_fall_type] ,:label => element[d]}
-    #       array.push(hash1)   
-    #     end 
-    #   end  
-    #   return array    
-    #   end
-      def query(b,year,rain_fall_type,views,compare,ji)
-        #  return b
-          l =  rain_fall_type.gsub(" ","")
-           d = "Districts"
-          # if year == "2016"
-          #   j = "#{l}_2016"
-          #   ji = [:WinterRain_2016, :HotWeatherRain_2016, :SouthWestMonsoonRain_2016, :NorthWestMonsoonRain_2016]
-          #   puts j
-          # elsif year == "2017"
-          #   j = "#{l}_2017"
-          #   ji = [:WinterRain_2017, :HotWeatherRain_2017, :SouthWestMonsoonRain_2017]
-          # else
-          #   puts "no year"
-          # end     
-          
-          # ji = [:Area_2015, :Production_2015, :Productivity_2015, :Non_Agriculture_Land_Area,:Area_2016, :Production_2016,:Productivity_2016]
-          if rain_fall_type == "All"
   
-            if views == "Trend Line"
-              hash_data =  ji.map do |column_name|
-                { 
-                  type:"line",
-                  legendText: column_name,
-                  showInLegend: true,
-                  dataPoints: b.reject{|x| x["Districts"] == "Bihar"}.map do |el| 
-                    { y: el[column_name], label: el[d] }
-                  end
-                }
-              end
+  # def table(b,rain_fall_type,year)
+  #   h =   [{c:[{v: 'Mike'} , {v: 20}]},
+  #         {c:[{v: 'Bob'}, {v: 20}]}
+  #   ]
+  #   g = b.map do |g|
+  #           [{
+  #           c: g["id"]
+  #           }]
+            
+  #         end
+  #       a = {
+  #         cols: [{id: 'task', label: 'Nilay Name', type: 'string'},
+  #               {id: 'nily', label: 'Start Date', type: 'number'}],
+  #         rows: h
+  #       }
+  #       return g
+  # end
 
-              elsif views == "Bubble"
-                hash_data =  ji.map do |column_name|
-                  { 
-                    type:"scatter",
-                    legendText: column_name,
-                    showInLegend: true,
-                    dataPoints: b.reject{|x| x["Districts"] == "Bihar"}.map do |el| 
-                      { y: el[column_name], label: el[d] }
-                    end
-                  }
+
+  def hash_data(ji,b)
+    hash_data =  ji.map do |column_name|
+      { 
+        type:"line",
+        legendText: column_name,
+        showInLegend: true,
+        dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el| 
+          { y: el[column_name], label: el[d] }
+        end 
+      }
+    end
+    return hash_data
+  end
+  
+    def query(b,year,rain_fall_type,views,ji,compare)
+      #  return b
+        # l =  rain_fall_type.gsub(" ","")
+        # abort(rain_fall_type)
+        d = "Districts"
+       
+        if rain_fall_type == "All"
+          if views == "Trend Line"
+            hash_data =  ji.map do |column_name|
+              if compare =="Bihar vs District"
+  
+              { 
+                type:"line",
+                legendText: column_name,
+                showInLegend: true,
+                dataPoints: b.map do |el| 
+                  { y: el[column_name],z:el[column_name], label: el[d] }
                 end
-            else
-              hash_data =  ji.map do |column_name|
-                { 
-                  type:"column",
-                  legendText: column_name,
-                  showInLegend: true,
-                  dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el| 
-                    { y: el[column_name], label: el[d] }
-                  end
-                }
+              }
+              else
+                 
+              { 
+                type:"line",
+                legendText: column_name,
+                showInLegend: true,
+                dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el| 
+                  { y: el[column_name],z:el[column_name], label: el[d] }
+                end
+              }
               end
-            end
-              return hash_data 
-          else 
-            array = []   
-            
-            b.each do |element|
-            if compare == "Bihar vs District"
-              hash1 = {:y => element[rain_fall_type] ,:label => element[d]}
-                  array.push(hash1)   
-            else
              
-                if element[d] == "Bihar"
-                  
-                else
-                  hash1 = {:y => element[rain_fall_type] ,:label => element[d]}
-                  array.push(hash1)    
-                end
-              end 
             end
-            
+          elsif views == "Bubble"
+            hash_data =  ji.map do |column_name|
+              if compare =="Bihar vs District"
+  
+              { 
+                type:"bubble",
+                legendText: column_name,
+                showInLegend: true,
+                dataPoints: b.map do |el| 
+                  { y: el[column_name],z:el[column_name], label: el[d] }
+                end
+              }
+              else
+                 
+              { 
+                type:"bubble",
+                legendText: column_name,
+                showInLegend: true,
+                dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el| 
+                  { y: el[column_name],z:el[column_name], label: el[d] }
+                end
+              }
+              end
+             
+            end
+          else
+            hash_data =  ji.map do |column_name|
+              if compare =="Bihar vs District"
+  
+              { 
+                type:"column",
+                legendText: column_name,
+                showInLegend: true,
+                dataPoints: b.map do |el| 
+                  { y: el[column_name],z:el[column_name], label: el[d] }
+                end
+              }
+              else
+                 
+              { 
+                type:"column",
+                legendText: column_name,
+                showInLegend: true,
+                dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el| 
+                  { y: el[column_name],z:el[column_name], label: el[d] }
+                end
+              }
+              end
+             
+            end
+          end
+            return hash_data 
+        else 
+          array = [] 
+          
+          if compare == "Bihar vs District"
+            b.each do |element|
+              hash1 = {:y => element[rain_fall_type] ,:label => element[d]}
+              array.push(hash1)     
+            end 
+          else
+            b.reject{|x| x["Districts"]== "Bihar"}.each do |element|
+              hash1 = {:y => element[rain_fall_type] ,:label => element[d]}
+              array.push(hash1)     
+            end  
+          end
+               
         
-            return array
-          end    
-        end
-  def map(b,j,year)
+          
+          return array   
+        end    
+      end
+  
+  
+      
+  def map(b,rain_fall_type,views,ji)
     array = []   
     # a = [] 
-    # l =  rain_fall_type.gsub(" ","")
-    # if year == "2016"
-    #   j = "#{l}_2016" 
-    #   elsif year == "2017"    
-    #     j = "#{l}_2017"  
-    # else
-
-    #   j = rain_fall_type
-    # end
+    l =  rain_fall_type.gsub(" ","")
     
+  #  abort(rain_fall_type)
     a = []
     below_min = [] 
     min = []
@@ -139,48 +210,44 @@ module Code
     above_max = []
     extreme = []
     above_extreme = []
+  
+  
     b.map.with_index do |el,i| 
-
-      if el["Districts"] == "W. Champaran"
-        dist = "WChamparan"
-      elsif el["Districts"] == "E. Champaran"
-        dist = "EChamparan"
-      else
+  
         dist = el["Districts"]
-      end
-
+  
       if (0..7) === i
-        hash1 = { y: el[j], label: dist, color: "Red" }
+        hash1 = { y: el[rain_fall_type], label: dist, color: "Red" }
         below_min.push(hash1)
       elsif (7..15) === i
-        hash1 = { y: el[j], label: dist, color: "Orange" }
-        # hash1 = { y: el[j], label: el["Districts"] }
+        hash1 = { y: el[rain_fall_type], label: dist, color: "Orange" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         min.push(hash1)
       elsif (15..21) === i
-        hash1 = { y: el[j], label: dist, color: "Dark_Yellow" }
-        # hash1 = { y: el[j], label: el["Districts"] }
+        hash1 = { y: el[rain_fall_type], label: dist, color: "Dark_Yellow" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         blow_max.push(hash1)
       elsif (21..26) === i
-        hash1 = { y: el[j], label: dist, color: "Yellow" }
-        # hash1 = { y: el[j], label: el["Districts"] }
+        hash1 = { y: el[rain_fall_type], label: dist, color: "Yellow" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         max.push(hash1)
-
+  
       elsif (26..32) === i
-        hash1 = { y: el[j], label: dist, color: "Light_Green" }
-        # hash1 = { y: el[j], label: el["Districts"] }
+        hash1 = { y: el[rain_fall_type], label: dist, color: "Light_Green" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         above_max.push(hash1)
-
+  
       elsif (32..37) === i
-        hash1 = { y: el[j], label: dist, color: "Green" }
-        # hash1 = { y: el[j], label: el["Districts"] }
+        hash1 = { y: el[rain_fall_type], label: dist, color: "Green" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         extreme.push(hash1)
-
+  
       elsif (36..40) === i
-        hash1 = { y: el[j], label: dist, color: "Dark_Green" }
-        # hash1 = { y: el[j], label: el["Districts"] }
+        hash1 = { y: el[rain_fall_type], label: dist, color: "Dark_Green" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         above_extreme.push(hash1)
       else
-
+  
         puts "Hello"
       end
       # array.push(a)
@@ -196,16 +263,5 @@ module Code
     # sleep 1
     return a
   end
-  def search1(search,compare)
-   puts search
-    # where(Districts: search)
-    if search == "All"
-      all.order(:Geographical_Area)
-    elsif compare == "Bihar vs District"
-      where("Districts = ? OR Districts = ?", search, "Bihar")
-    else
-      where(Districts: search)
-    end
+  
   end
-
-end

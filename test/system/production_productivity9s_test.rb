@@ -14,13 +14,11 @@ class ProductionProductivity9sTest < ApplicationSystemTestCase
     visit production_productivity9s_url
     click_on "New Production Productivity9"
 
-    fill_in "Area 2015", with: @production_productivity9.Area_2015
-    fill_in "Area 2016", with: @production_productivity9.Area_2016
+    fill_in "Area", with: @production_productivity9.Area
     fill_in "Districts", with: @production_productivity9.Districts
-    fill_in "Production 2015", with: @production_productivity9.Production_2015
-    fill_in "Production 2016", with: @production_productivity9.Production_2016
-    fill_in "Productivity 2015", with: @production_productivity9.Productivity_2015
-    fill_in "Productivity 2016", with: @production_productivity9.Productivity_2016
+    fill_in "Production", with: @production_productivity9.Production
+    fill_in "Productivity", with: @production_productivity9.Productivity
+    fill_in "Year", with: @production_productivity9.Year
     click_on "Create Production productivity9"
 
     assert_text "Production productivity9 was successfully created"
@@ -31,13 +29,11 @@ class ProductionProductivity9sTest < ApplicationSystemTestCase
     visit production_productivity9s_url
     click_on "Edit", match: :first
 
-    fill_in "Area 2015", with: @production_productivity9.Area_2015
-    fill_in "Area 2016", with: @production_productivity9.Area_2016
+    fill_in "Area", with: @production_productivity9.Area
     fill_in "Districts", with: @production_productivity9.Districts
-    fill_in "Production 2015", with: @production_productivity9.Production_2015
-    fill_in "Production 2016", with: @production_productivity9.Production_2016
-    fill_in "Productivity 2015", with: @production_productivity9.Productivity_2015
-    fill_in "Productivity 2016", with: @production_productivity9.Productivity_2016
+    fill_in "Production", with: @production_productivity9.Production
+    fill_in "Productivity", with: @production_productivity9.Productivity
+    fill_in "Year", with: @production_productivity9.Year
     click_on "Update Production productivity9"
 
     assert_text "Production productivity9 was successfully updated"

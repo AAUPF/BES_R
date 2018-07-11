@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_09_103457) do
+ActiveRecord::Schema.define(version: 2018_07_11_054916) do
 
   create_table "agricultural_credit2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
@@ -141,34 +141,20 @@ ActiveRecord::Schema.define(version: 2018_07_09_103457) do
 
   create_table "production_and_productivity_of_rices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
-    t.float "Area_2015"
-    t.float "Production_2015"
-    t.float "Productivity_2015"
-    t.float "Area_2016"
-    t.float "Production_2016"
-    t.float "Productivity_2016"
+    t.float "Area"
+    t.float "Production"
+    t.float "Productivity"
+    t.integer "Year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "production_productivity10s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
-    t.float "Mango_Area_2015"
-    t.float "Mango_Production_2015"
-    t.float "Mango_Area_2016"
-    t.float "Mango_Production_2016"
-    t.float "Guava_Area_2015"
-    t.float "Guava_Production_2015"
-    t.float "Guava_Area_2016"
-    t.float "Guava_Production_2016"
-    t.float "Litchi_Area_2015"
-    t.float "Litchi_Production_2015"
-    t.float "Litchi_Area_2016"
-    t.float "Litchi_Production_2016"
-    t.float "Banana_Area_2015"
-    t.float "Banana_Production_2015"
-    t.float "Banana_Area_2016"
-    t.float "Banana_Production_2016"
+    t.float "Area"
+    t.float "Production"
+    t.integer "Year"
+    t.string "Fruit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -197,63 +183,52 @@ ActiveRecord::Schema.define(version: 2018_07_09_103457) do
 
   create_table "production_productivity12s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
-    t.float "Area_2015"
-    t.float "Production_2015"
-    t.float "Yield_2015"
-    t.float "Area_2016"
-    t.float "Production_2016"
-    t.float "Yield_2016"
+    t.float "Area"
+    t.float "Production"
+    t.float "Yield"
+    t.integer "Year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "production_productivity7s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
-    t.float "Area_2015"
-    t.float "Production_2015"
-    t.float "Productivity_2015"
-    t.float "Area_2016"
-    t.float "Production_2016"
-    t.float "Productivity_2016"
+    t.float "Area"
+    t.float "Production"
+    t.float "Productivity"
+    t.integer "Year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "production_productivity8s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
-    t.float "Area_2015"
-    t.float "Production_2015"
-    t.float "Productivity_2015"
-    t.float "Area_2016"
-    t.float "Production_2016"
-    t.float "Productivity_2016"
+    t.float "Area"
+    t.float "Production"
+    t.float "Productivity"
+    t.integer "Year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "production_productivity9s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
-    t.float "Area_2015"
-    t.float "Production_2015"
-    t.float "Productivity_2015"
-    t.float "Area_2016"
-    t.float "Production_2016"
-    t.float "Productivity_2016"
+    t.float "Area"
+    t.float "Production"
+    t.float "Productivity"
+    t.integer "Year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "rainfalls", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
-    t.float "WinterRain_2016"
-    t.float "HotWeatherRain_2016"
-    t.float "SouthWestMonsoonRain_2016"
-    t.float "NorthWestMonsoonRain_2016"
-    t.float "Total_2016"
-    t.float "WinterRain_2017"
-    t.float "HotWeatherRain_2017"
-    t.float "SouthWestMonsoonRain_2017"
-    t.float "Total_2017"
+    t.float "WinterRain"
+    t.float "HotWeatherRain"
+    t.float "SouthWestMonsoonRain"
+    t.float "NorthWestMonsoonRain"
+    t.float "TotalRainfall"
+    t.integer "year", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

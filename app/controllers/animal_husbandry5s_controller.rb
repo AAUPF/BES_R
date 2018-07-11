@@ -5,19 +5,14 @@ class AnimalHusbandry5sController < ApplicationController
   def index
     @animal_husbandry5s = AnimalHusbandry5.all
   end
-
   # GET /animal_husbandry5s/1
   def show
   end
-
   # GET /animal_husbandry5s/new
   def new
     @animal_husbandry5 = AnimalHusbandry5.new
   end
-
-
   def test
-
     ji = [:Districts, :Fish_Production_2014, :Fish_Seeds_2014, :Fish_Production_2015, :Fish_Seeds_2015, :Fish_Production_2016, :Fish_Seeds_2016]
     rain_fall_type = params[:rain_fall_type]
      views  = params[:views]

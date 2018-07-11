@@ -10,6 +10,7 @@ class RainfallsController < ApplicationController
     end
   end 
   def test
+    ji = [:WinterRain, :HotWeatherRain, :SouthWestMonsoonRain, :NorthWestMonsoonRain]
     rain_fall_type = params[:rain_fall_type]
      views  = params[:views]
      year  = params[:year]
@@ -18,38 +19,21 @@ class RainfallsController < ApplicationController
     if rain_fall_type || views
 
         if views == "Map View"
-          l =  rain_fall_type.gsub(" ","")
-          if year == "2016"
-            j = "#{l}_2016"
-          elsif year == "2017"
-            j = "#{l}_2017"
-          else
-            puts "no year"
-          end  
-           
+          l =  rain_fall_type.gsub(" ","")           
            if rain_fall_type  ==  "All"
-           
-
-            if year == "2016"
-              j = "Total_2016"
-            elsif year == "2017"
-              j = "Total_2017"
-            else
-              puts "no year"
-            end  
-            b = Rainfall.map_search(j)
+            b = Rainfall.map_search("All",compare,year,rain_fall_type)
             u = "Total"
-            a = Rainfall.map(b,u,year)
+            a = Rainfall.map(b,params[:year],rain_fall_type,views)
            else
-            b = Rainfall.map_search(j)
-            a = Rainfall.map(b,rain_fall_type,year)
+            b = Rainfall.map_search(params[:search],compare,year,rain_fall_type)
+            a = Rainfall.map(b,rain_fall_type,year,ji)
            end
         elsif views == "Table"  
-          b = Rainfall.search(params[:search],compare)
+          b = Rainfall.search(params[:search],compare,year)
           a = Rainfall.table(b,rain_fall_type,year)
         else
-          @rainfalls = Rainfall.search(params[:search],compare)
-          a = Rainfall.query(@rainfalls,params[:year],rain_fall_type,views)
+          @rainfalls = Rainfall.search(params[:search],compare,year,rain_fall_type)
+          a = Rainfall.query(@rainfalls,params[:year],rain_fall_type,views,ji)
         end
         respond_to do |format|
           format.html { render json:a }

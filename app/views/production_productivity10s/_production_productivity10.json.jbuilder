@@ -1,2 +1,2 @@
-json.extract! production_productivity10, :id, :Districts, :Mango_Area_2015, :Mango_Production_2015, :Mango_Area_2016, :Mango_Production_2016, :Guava_Area_2015, :Guava_Production_2015, :Guava_Area_2016, :Guava_Production_2016, :Litchi_Area_2015, :Litchi_Production_2015, :Litchi_Area_2016, :Litchi_Production_2016, :Banana_Area_2015, :Banana_Production_2015, :Banana_Area_2016, :Banana_Production_2016, :created_at, :updated_at
+json.extract! production_productivity10, :id, :Districts, :Area, :Production, :Year, :Fruit, :created_at, :updated_at
 json.url production_productivity10_url(production_productivity10, format: :json)

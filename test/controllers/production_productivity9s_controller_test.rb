@@ -17,7 +17,7 @@ class ProductionProductivity9sControllerTest < ActionDispatch::IntegrationTest
 
   test "should create production_productivity9" do
     assert_difference('ProductionProductivity9.count') do
-      post production_productivity9s_url, params: { production_productivity9: { Area_2015: @production_productivity9.Area_2015, Area_2016: @production_productivity9.Area_2016, Districts: @production_productivity9.Districts, Production_2015: @production_productivity9.Production_2015, Production_2016: @production_productivity9.Production_2016, Productivity_2015: @production_productivity9.Productivity_2015, Productivity_2016: @production_productivity9.Productivity_2016 } }
+      post production_productivity9s_url, params: { production_productivity9: { Area: @production_productivity9.Area, Districts: @production_productivity9.Districts, Production: @production_productivity9.Production, Productivity: @production_productivity9.Productivity, Year: @production_productivity9.Year } }
     end
 
     assert_redirected_to production_productivity9_url(ProductionProductivity9.last)
@@ -34,7 +34,7 @@ class ProductionProductivity9sControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update production_productivity9" do
-    patch production_productivity9_url(@production_productivity9), params: { production_productivity9: { Area_2015: @production_productivity9.Area_2015, Area_2016: @production_productivity9.Area_2016, Districts: @production_productivity9.Districts, Production_2015: @production_productivity9.Production_2015, Production_2016: @production_productivity9.Production_2016, Productivity_2015: @production_productivity9.Productivity_2015, Productivity_2016: @production_productivity9.Productivity_2016 } }
+    patch production_productivity9_url(@production_productivity9), params: { production_productivity9: { Area: @production_productivity9.Area, Districts: @production_productivity9.Districts, Production: @production_productivity9.Production, Productivity: @production_productivity9.Productivity, Year: @production_productivity9.Year } }
     assert_redirected_to production_productivity9_url(@production_productivity9)
   end
 
