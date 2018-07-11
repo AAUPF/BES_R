@@ -1,6 +1,6 @@
 class AgriculturalCredit2sController < ApplicationController
   before_action :set_agricultural_credit2, only: [:show, :edit, :update, :destroy]
-
+#shakir
   # GET /agricultural_credit2s
   def index
     @agricultural_credit2s = AgriculturalCredit2.all
