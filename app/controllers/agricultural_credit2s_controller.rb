@@ -15,61 +15,40 @@ class AgriculturalCredit2sController < ApplicationController
     @agricultural_credit2 = AgriculturalCredit2.new
   end
 
+def test
+  ji = [:Districts, :Target, :Achievement, :Year]
+  rain_fall_type = params[:rain_fall_type]
+   views  = params[:views]
+   year  = params[:year]
+   compare = params[:compare]
 
-  def test
+  if rain_fall_type || views
 
-    ji = [:Target_2014, :Target_2015, :Target_2016, :Achievement_2014, :Achievement_2015, :Achievement_2016]
-    rain_fall_type = params[:rain_fall_type]
-     views  = params[:views]
-     year  = ""
-     compare = params[:compare]
-
-    if rain_fall_type || views
-
-        if views == "Map View"
-          l =  rain_fall_type.gsub(" ","")
-          if year == "2016"
-            j = "#{l}_2016"
-          elsif year == "2017"
-            j = "#{l}_2017"
-          else
-            puts "no year"
-          end  
-           
-           if rain_fall_type  ==  "All"
-           
-
-            if year == "2016"
-              j = "Total_2016"
-            elsif year == "2017"
-              j = "Total_2017"
-            else
-              puts "no year"
-            end  
-            b = AgriculturalCredit2.map_search(rain_fall_type)
-            u = "Total"
-            a = AgriculturalCredit2.map(b,u,year)
-           else
-            b = AgriculturalCredit2.map_search(rain_fall_type)
-            a = AgriculturalCredit2.map(b,rain_fall_type,year)
-           end
-        elsif views == "Table"  
-          b = AgriculturalCredit2.search(params[:search],compare)
-
-          a = AgriculturalCredit2.table(b,rain_fall_type,year)
-        else
-          @AgriculturalCredit2s = AgriculturalCredit2.search(params[:search],compare)
-          a = AgriculturalCredit2.query(@AgriculturalCredit2s,params[:year],rain_fall_type,views,compare,ji)
-        end
-       
-        respond_to do |format|
-          format.html { render json:a }
+      if views == "Map View"
+        l =  rain_fall_type.gsub(" ","")           
+         if rain_fall_type  ==  "All"
+          b = AgriculturalCredit2.map_search("All",compare,year,rain_fall_type)
+          u = "Total"
+          a = AgriculturalCredit2.map(b,params[:year],rain_fall_type,views)
+         else
+          b = AgriculturalCredit2.map_search(params[:search],compare,year,rain_fall_type)
+          a = AgriculturalCredit2.map(b,rain_fall_type,year,ji)
+         end
+      elsif views == "Table"  
+        b = AgriculturalCredit2.search(params[:search],compare,year)
+        a = AgriculturalCredit2.table(b,rain_fall_type,year)
+      else
+        @AgriculturalCredit2s = AgriculturalCredit2.search(params[:search],compare,year,rain_fall_type)
+        a = AgriculturalCredit2.query(@AgriculturalCredit2s,params[:year],rain_fall_type,views,ji,compare)
       end
-
-    else
       respond_to do |format|
-        format.html { render json: "error"}
+        format.html { render json:a }
     end
+
+  else
+    respond_to do |format|
+      format.html { render json: "error"}
+  end
   end
 
 end
@@ -119,6 +98,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def agricultural_credit2_params
-      params.require(:agricultural_credit2).permit(:Districts, :Target_2014, :Target_2015, :Target_2016, :Achievement_2014, :Achievement_2015, :Achievement_2016)
+      params.require(:agricultural_credit2).permit(:Districts, :Target, :Achievement, :Year)
     end
 end

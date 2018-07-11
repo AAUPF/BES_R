@@ -14,13 +14,10 @@ class AgriculturalCredit2sTest < ApplicationSystemTestCase
     visit agricultural_credit2s_url
     click_on "New Agricultural Credit2"
 
-    fill_in "Achievement 2014", with: @agricultural_credit2.Achievement_2014
-    fill_in "Achievement 2015", with: @agricultural_credit2.Achievement_2015
-    fill_in "Achievement 2016", with: @agricultural_credit2.Achievement_2016
+    fill_in "Achievement", with: @agricultural_credit2.Achievement
     fill_in "Districts", with: @agricultural_credit2.Districts
-    fill_in "Target 2014", with: @agricultural_credit2.Target_2014
-    fill_in "Target 2015", with: @agricultural_credit2.Target_2015
-    fill_in "Target 2016", with: @agricultural_credit2.Target_2016
+    fill_in "Target", with: @agricultural_credit2.Target
+    fill_in "Year", with: @agricultural_credit2.Year
     click_on "Create Agricultural credit2"
 
     assert_text "Agricultural credit2 was successfully created"
@@ -31,13 +28,10 @@ class AgriculturalCredit2sTest < ApplicationSystemTestCase
     visit agricultural_credit2s_url
     click_on "Edit", match: :first
 
-    fill_in "Achievement 2014", with: @agricultural_credit2.Achievement_2014
-    fill_in "Achievement 2015", with: @agricultural_credit2.Achievement_2015
-    fill_in "Achievement 2016", with: @agricultural_credit2.Achievement_2016
+    fill_in "Achievement", with: @agricultural_credit2.Achievement
     fill_in "Districts", with: @agricultural_credit2.Districts
-    fill_in "Target 2014", with: @agricultural_credit2.Target_2014
-    fill_in "Target 2015", with: @agricultural_credit2.Target_2015
-    fill_in "Target 2016", with: @agricultural_credit2.Target_2016
+    fill_in "Target", with: @agricultural_credit2.Target
+    fill_in "Year", with: @agricultural_credit2.Year
     click_on "Update Agricultural credit2"
 
     assert_text "Agricultural credit2 was successfully updated"

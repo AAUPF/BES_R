@@ -10,16 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_11_065204) do
+ActiveRecord::Schema.define(version: 2018_07_11_092323) do
 
   create_table "agricultural_credit2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
-    t.float "Target_2014"
-    t.float "Target_2015"
-    t.float "Target_2016"
-    t.float "Achievement_2014"
-    t.float "Achievement_2015"
-    t.float "Achievement_2016"
+    t.float "Target"
+    t.float "Achievement"
+    t.integer "Year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -74,6 +71,7 @@ ActiveRecord::Schema.define(version: 2018_07_11_065204) do
 
   create_table "agricultural_inputs7s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
+    t.float "Urea"
     t.float "Tractor"
     t.float "Combine_Harvestor"
     t.float "Zero_Tillage"
@@ -81,6 +79,7 @@ ActiveRecord::Schema.define(version: 2018_07_11_065204) do
     t.float "Power_Tiller"
     t.float "Manually_Operated_Tools"
     t.float "Thresher"
+    t.integer "Year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

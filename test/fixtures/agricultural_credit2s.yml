@@ -2,18 +2,12 @@
 
 one:
   Districts: MyString
-  Target_2014: 1.5
-  Target_2015: 1.5
-  Target_2016: 1.5
-  Achievement_2014: 1.5
-  Achievement_2015: 1.5
-  Achievement_2016: 1.5
+  Target: 1.5
+  Achievement: 1.5
+  Year: 1
 
 two:
   Districts: MyString
-  Target_2014: 1.5
-  Target_2015: 1.5
-  Target_2016: 1.5
-  Achievement_2014: 1.5
-  Achievement_2015: 1.5
-  Achievement_2016: 1.5
+  Target: 1.5
+  Achievement: 1.5
+  Year: 1

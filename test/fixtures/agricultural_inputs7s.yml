@@ -2,6 +2,7 @@
 
 one:
   Districts: MyString
+  Urea: 1.5
   Tractor: 1.5
   Combine_Harvestor: 1.5
   Zero_Tillage: 1.5
@@ -9,9 +10,11 @@ one:
   Power_Tiller: 1.5
   Manually_Operated_Tools: 1.5
   Thresher: 1.5
+  Year: 1
 
 two:
   Districts: MyString
+  Urea: 1.5
   Tractor: 1.5
   Combine_Harvestor: 1.5
   Zero_Tillage: 1.5
@@ -19,3 +22,4 @@ two:
   Power_Tiller: 1.5
   Manually_Operated_Tools: 1.5
   Thresher: 1.5
+  Year: 1

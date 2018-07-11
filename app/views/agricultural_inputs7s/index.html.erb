@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Districts</th>
+      <th>Urea</th>
       <th>Tractor</th>
       <th>Combine harvestor</th>
       <th>Zero tillage</th>
@@ -13,6 +14,7 @@
       <th>Power tiller</th>
       <th>Manually operated tools</th>
       <th>Thresher</th>
+      <th>Year</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,6 +23,7 @@
     <% @agricultural_inputs7s.each do |agricultural_inputs7| %>
       <tr>
         <td><%= agricultural_inputs7.Districts %></td>
+        <td><%= agricultural_inputs7.Urea %></td>
         <td><%= agricultural_inputs7.Tractor %></td>
         <td><%= agricultural_inputs7.Combine_Harvestor %></td>
         <td><%= agricultural_inputs7.Zero_Tillage %></td>
@@ -28,6 +31,7 @@
         <td><%= agricultural_inputs7.Power_Tiller %></td>
         <td><%= agricultural_inputs7.Manually_Operated_Tools %></td>
         <td><%= agricultural_inputs7.Thresher %></td>
+        <td><%= agricultural_inputs7.Year %></td>
         <td><%= link_to 'Show', agricultural_inputs7 %></td>
         <td><%= link_to 'Edit', edit_agricultural_inputs7_path(agricultural_inputs7) %></td>
         <td><%= link_to 'Destroy', agricultural_inputs7, method: :delete, data: { confirm: 'Are you sure?' } %></td>

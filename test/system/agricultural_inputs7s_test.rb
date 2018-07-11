@@ -21,6 +21,8 @@ class AgriculturalInputs7sTest < ApplicationSystemTestCase
     fill_in "Pumpset", with: @agricultural_inputs7.Pumpset
     fill_in "Thresher", with: @agricultural_inputs7.Thresher
     fill_in "Tractor", with: @agricultural_inputs7.Tractor
+    fill_in "Urea", with: @agricultural_inputs7.Urea
+    fill_in "Year", with: @agricultural_inputs7.Year
     fill_in "Zero Tillage", with: @agricultural_inputs7.Zero_Tillage
     click_on "Create Agricultural inputs7"
 
@@ -39,6 +41,8 @@ class AgriculturalInputs7sTest < ApplicationSystemTestCase
     fill_in "Pumpset", with: @agricultural_inputs7.Pumpset
     fill_in "Thresher", with: @agricultural_inputs7.Thresher
     fill_in "Tractor", with: @agricultural_inputs7.Tractor
+    fill_in "Urea", with: @agricultural_inputs7.Urea
+    fill_in "Year", with: @agricultural_inputs7.Year
     fill_in "Zero Tillage", with: @agricultural_inputs7.Zero_Tillage
     click_on "Update Agricultural inputs7"
 
