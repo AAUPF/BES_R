@@ -1,6 +1,6 @@
 class AgriculturalInputs6sController < ApplicationController
   before_action :set_agricultural_inputs6, only: [:show, :edit, :update, :destroy]
-
+  #Master
   # GET /agricultural_inputs6s
   def index
     @agricultural_inputs6s = AgriculturalInputs6.all
