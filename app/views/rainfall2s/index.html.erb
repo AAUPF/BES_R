@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rainfall2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Winter rain</th>
+      <th>Hot weather rain</th>
+      <th>South west monsoon</th>
+      <th>North west monsoon</th>
+      <th>Total</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rainfall2s.each do |rainfall2| %>
+      <tr>
+        <td><%= rainfall2.Districts %></td>
+        <td><%= rainfall2.Winter_Rain %></td>
+        <td><%= rainfall2.Hot_Weather_Rain %></td>
+        <td><%= rainfall2.South_West_Monsoon %></td>
+        <td><%= rainfall2.North_West_Monsoon %></td>
+        <td><%= rainfall2.Total %></td>
+        <td><%= rainfall2.Year %></td>
+        <td><%= link_to 'Show', rainfall2 %></td>
+        <td><%= link_to 'Edit', edit_rainfall2_path(rainfall2) %></td>
+        <td><%= link_to 'Destroy', rainfall2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rainfall2', new_rainfall2_path %>

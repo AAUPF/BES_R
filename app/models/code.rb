@@ -19,9 +19,9 @@ module Code
       # abort(rain_fall_type)
         
         if rain_fall_type == "All"
-          where(Year: year).order('id Desc')
+          where(Year: year).order('id ')
         else
-          where(Year: year).order("#{rain_fall_type} Desc")
+          where(Year: year).order("#{rain_fall_type} ")
         end
         
       # all

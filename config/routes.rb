@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :rainfall2s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :production_productivity10s do 
                       collection { post :import }
                       collection { get :dropdown }

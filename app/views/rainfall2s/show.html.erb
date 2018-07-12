@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Districts:</strong>
+  <%= @rainfall2.Districts %>
+</p>
+
+<p>
+  <strong>Winter rain:</strong>
+  <%= @rainfall2.Winter_Rain %>
+</p>
+
+<p>
+  <strong>Hot weather rain:</strong>
+  <%= @rainfall2.Hot_Weather_Rain %>
+</p>
+
+<p>
+  <strong>South west monsoon:</strong>
+  <%= @rainfall2.South_West_Monsoon %>
+</p>
+
+<p>
+  <strong>North west monsoon:</strong>
+  <%= @rainfall2.North_West_Monsoon %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @rainfall2.Total %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @rainfall2.Year %>
+</p>
+
+<%= link_to 'Edit', edit_rainfall2_path(@rainfall2) %> |
+<%= link_to 'Back', rainfall2s_path %>

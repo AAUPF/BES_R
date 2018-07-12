@@ -1,1 +1,1 @@
-rails g scaffold production_productivity10 Districts:string Mango_Area:float	Mango_Production:float	Guava_Area:float	Guava_Production:float	Litchi_Area:float	Litchi_Production:float	Banana_Area:float	Banana_Production:float Year:integer
+rails g scaffold rainfall2 Districts:string Winter_Rain:float	Hot_Weather_Rain:float	South_West_Monsoon:float	North_West_Monsoon:float	Total:float	Year:integer
