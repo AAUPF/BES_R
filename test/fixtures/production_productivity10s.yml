@@ -2,14 +2,24 @@
 
 one:
   Districts: MyString
-  Area: 1.5
-  Production: 1.5
+  Mango_Area: 1.5
+  Mango_Production: 1.5
+  Guava_Area: 1.5
+  Guava_Production: 1.5
+  Litchi_Area: 1.5
+  Litchi_Production: 1.5
+  Banana_Area: 1.5
+  Banana_Production: 1.5
   Year: 1
-  Fruit: MyString
 
 two:
   Districts: MyString
-  Area: 1.5
-  Production: 1.5
+  Mango_Area: 1.5
+  Mango_Production: 1.5
+  Guava_Area: 1.5
+  Guava_Production: 1.5
+  Litchi_Area: 1.5
+  Litchi_Production: 1.5
+  Banana_Area: 1.5
+  Banana_Production: 1.5
   Year: 1
-  Fruit: MyString

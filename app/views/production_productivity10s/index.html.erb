@@ -6,10 +6,15 @@
   <thead>
     <tr>
       <th>Districts</th>
-      <th>Area</th>
-      <th>Production</th>
+      <th>Mango area</th>
+      <th>Mango production</th>
+      <th>Guava area</th>
+      <th>Guava production</th>
+      <th>Litchi area</th>
+      <th>Litchi production</th>
+      <th>Banana area</th>
+      <th>Banana production</th>
       <th>Year</th>
-      <th>Fruit</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,10 +23,15 @@
     <% @production_productivity10s.each do |production_productivity10| %>
       <tr>
         <td><%= production_productivity10.Districts %></td>
-        <td><%= production_productivity10.Area %></td>
-        <td><%= production_productivity10.Production %></td>
+        <td><%= production_productivity10.Mango_Area %></td>
+        <td><%= production_productivity10.Mango_Production %></td>
+        <td><%= production_productivity10.Guava_Area %></td>
+        <td><%= production_productivity10.Guava_Production %></td>
+        <td><%= production_productivity10.Litchi_Area %></td>
+        <td><%= production_productivity10.Litchi_Production %></td>
+        <td><%= production_productivity10.Banana_Area %></td>
+        <td><%= production_productivity10.Banana_Production %></td>
         <td><%= production_productivity10.Year %></td>
-        <td><%= production_productivity10.Fruit %></td>
         <td><%= link_to 'Show', production_productivity10 %></td>
         <td><%= link_to 'Edit', edit_production_productivity10_path(production_productivity10) %></td>
         <td><%= link_to 'Destroy', production_productivity10, method: :delete, data: { confirm: 'Are you sure?' } %></td>

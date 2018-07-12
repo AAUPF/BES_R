@@ -16,13 +16,11 @@ class ProductionProductivity10sController < ApplicationController
   end
 
 def test
-  ji = [:Area, :Production]
+  ji = [ :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-   fruits = params[:fruits]
-
 
   if rain_fall_type || views
 
@@ -40,7 +38,7 @@ def test
         b = ProductionProductivity10.search(params[:search],compare,year)
         a = ProductionProductivity10.table(b,rain_fall_type,year)
       else
-        @ProductionProductivity10s = ProductionProductivity10.search(params[:search],compare,year,rain_fall_type,fruits)
+        @ProductionProductivity10s = ProductionProductivity10.search(params[:search],compare,year,rain_fall_type)
         a = ProductionProductivity10.query(@ProductionProductivity10s,params[:year],rain_fall_type,views,ji,compare)
       end
       respond_to do |format|
@@ -100,6 +98,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def production_productivity10_params
-      params.require(:production_productivity10).permit(:Districts, :Area, :Production, :Year, :Fruit)
+      params.require(:production_productivity10).permit(:Districts, :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production, :Year)
     end
 end

@@ -14,23 +14,16 @@ class ProductionProductivity11sTest < ApplicationSystemTestCase
     visit production_productivity11s_url
     click_on "New Production Productivity11"
 
-    fill_in "Brinjal Area 2015", with: @production_productivity11.Brinjal_Area_2015
-    fill_in "Brinjal Area 2016", with: @production_productivity11.Brinjal_Area_2016
-    fill_in "Brinjal Production 2015", with: @production_productivity11.Brinjal_Production_2015
-    fill_in "Brinjal Production 2016", with: @production_productivity11.Brinjal_Production_2016
-    fill_in "Cauliflower Area 2015", with: @production_productivity11.Cauliflower_Area_2015
-    fill_in "Cauliflower Area 2016", with: @production_productivity11.Cauliflower_Area_2016
-    fill_in "Cauliflower Production 2015", with: @production_productivity11.Cauliflower_Production_2015
-    fill_in "Cauliflower Production 2016", with: @production_productivity11.Cauliflower_Production_2016
+    fill_in "Brinjal Area", with: @production_productivity11.Brinjal_Area
+    fill_in "Brinjal Production", with: @production_productivity11.Brinjal_Production
+    fill_in "Cauliflower Area", with: @production_productivity11.Cauliflower_Area
+    fill_in "Cauliflower Production", with: @production_productivity11.Cauliflower_Production
     fill_in "Districts", with: @production_productivity11.Districts
-    fill_in "Onion Area 2015", with: @production_productivity11.Onion_Area_2015
-    fill_in "Onion Area 2016", with: @production_productivity11.Onion_Area_2016
-    fill_in "Onion Production 2015", with: @production_productivity11.Onion_Production_2015
-    fill_in "Onion Production 2016", with: @production_productivity11.Onion_Production_2016
-    fill_in "Potato Area 2015", with: @production_productivity11.Potato_Area_2015
-    fill_in "Potato Area 2016", with: @production_productivity11.Potato_Area_2016
-    fill_in "Potato Production 2015", with: @production_productivity11.Potato_Production_2015
-    fill_in "Potato Production 2016", with: @production_productivity11.Potato_Production_2016
+    fill_in "Onion Area", with: @production_productivity11.Onion_Area
+    fill_in "Onion Production", with: @production_productivity11.Onion_Production
+    fill_in "Potato Area", with: @production_productivity11.Potato_Area
+    fill_in "Potato Production", with: @production_productivity11.Potato_Production
+    fill_in "Year", with: @production_productivity11.Year
     click_on "Create Production productivity11"
 
     assert_text "Production productivity11 was successfully created"
@@ -41,23 +34,16 @@ class ProductionProductivity11sTest < ApplicationSystemTestCase
     visit production_productivity11s_url
     click_on "Edit", match: :first
 
-    fill_in "Brinjal Area 2015", with: @production_productivity11.Brinjal_Area_2015
-    fill_in "Brinjal Area 2016", with: @production_productivity11.Brinjal_Area_2016
-    fill_in "Brinjal Production 2015", with: @production_productivity11.Brinjal_Production_2015
-    fill_in "Brinjal Production 2016", with: @production_productivity11.Brinjal_Production_2016
-    fill_in "Cauliflower Area 2015", with: @production_productivity11.Cauliflower_Area_2015
-    fill_in "Cauliflower Area 2016", with: @production_productivity11.Cauliflower_Area_2016
-    fill_in "Cauliflower Production 2015", with: @production_productivity11.Cauliflower_Production_2015
-    fill_in "Cauliflower Production 2016", with: @production_productivity11.Cauliflower_Production_2016
+    fill_in "Brinjal Area", with: @production_productivity11.Brinjal_Area
+    fill_in "Brinjal Production", with: @production_productivity11.Brinjal_Production
+    fill_in "Cauliflower Area", with: @production_productivity11.Cauliflower_Area
+    fill_in "Cauliflower Production", with: @production_productivity11.Cauliflower_Production
     fill_in "Districts", with: @production_productivity11.Districts
-    fill_in "Onion Area 2015", with: @production_productivity11.Onion_Area_2015
-    fill_in "Onion Area 2016", with: @production_productivity11.Onion_Area_2016
-    fill_in "Onion Production 2015", with: @production_productivity11.Onion_Production_2015
-    fill_in "Onion Production 2016", with: @production_productivity11.Onion_Production_2016
-    fill_in "Potato Area 2015", with: @production_productivity11.Potato_Area_2015
-    fill_in "Potato Area 2016", with: @production_productivity11.Potato_Area_2016
-    fill_in "Potato Production 2015", with: @production_productivity11.Potato_Production_2015
-    fill_in "Potato Production 2016", with: @production_productivity11.Potato_Production_2016
+    fill_in "Onion Area", with: @production_productivity11.Onion_Area
+    fill_in "Onion Production", with: @production_productivity11.Onion_Production
+    fill_in "Potato Area", with: @production_productivity11.Potato_Area
+    fill_in "Potato Production", with: @production_productivity11.Potato_Production
+    fill_in "Year", with: @production_productivity11.Year
     click_on "Update Production productivity11"
 
     assert_text "Production productivity11 was successfully updated"

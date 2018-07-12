@@ -75,19 +75,19 @@ module Code
   # end
 
 
-  def hash_data(ji,b)
-    hash_data =  ji.map do |column_name|
-      { 
-        type:"line",
-        legendText: column_name,
-        showInLegend: true,
-        dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el| 
-          { y: el[column_name], label: el[d] }
-        end 
-      }
-    end
-    return hash_data
-  end
+  # def hash_data(ji,b)
+  #   hash_data =  ji.map do |column_name|
+  #     { 
+  #       type:"line",
+  #       legendText: column_name,
+  #       showInLegend: true,
+  #       dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el| 
+  #         { y: el[column_name], label: el[d] }
+  #       end 
+  #     }
+  #   end
+  #   return hash_data
+  # end
   
     def query(b,year,rain_fall_type,views,ji,compare)
       #  return b

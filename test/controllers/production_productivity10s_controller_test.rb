@@ -17,7 +17,7 @@ class ProductionProductivity10sControllerTest < ActionDispatch::IntegrationTest
 
   test "should create production_productivity10" do
     assert_difference('ProductionProductivity10.count') do
-      post production_productivity10s_url, params: { production_productivity10: { Area: @production_productivity10.Area, Districts: @production_productivity10.Districts, Fruit: @production_productivity10.Fruit, Production: @production_productivity10.Production, Year: @production_productivity10.Year } }
+      post production_productivity10s_url, params: { production_productivity10: { Banana_Area: @production_productivity10.Banana_Area, Banana_Production: @production_productivity10.Banana_Production, Districts: @production_productivity10.Districts, Guava_Area: @production_productivity10.Guava_Area, Guava_Production: @production_productivity10.Guava_Production, Litchi_Area: @production_productivity10.Litchi_Area, Litchi_Production: @production_productivity10.Litchi_Production, Mango_Area: @production_productivity10.Mango_Area, Mango_Production: @production_productivity10.Mango_Production, Year: @production_productivity10.Year } }
     end
 
     assert_redirected_to production_productivity10_url(ProductionProductivity10.last)
@@ -34,7 +34,7 @@ class ProductionProductivity10sControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update production_productivity10" do
-    patch production_productivity10_url(@production_productivity10), params: { production_productivity10: { Area: @production_productivity10.Area, Districts: @production_productivity10.Districts, Fruit: @production_productivity10.Fruit, Production: @production_productivity10.Production, Year: @production_productivity10.Year } }
+    patch production_productivity10_url(@production_productivity10), params: { production_productivity10: { Banana_Area: @production_productivity10.Banana_Area, Banana_Production: @production_productivity10.Banana_Production, Districts: @production_productivity10.Districts, Guava_Area: @production_productivity10.Guava_Area, Guava_Production: @production_productivity10.Guava_Production, Litchi_Area: @production_productivity10.Litchi_Area, Litchi_Production: @production_productivity10.Litchi_Production, Mango_Area: @production_productivity10.Mango_Area, Mango_Production: @production_productivity10.Mango_Production, Year: @production_productivity10.Year } }
     assert_redirected_to production_productivity10_url(@production_productivity10)
   end
 

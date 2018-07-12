@@ -4,6 +4,11 @@ Rails.application.routes.draw do
                       collection { get :dropdown }
                       collection { get :test }
                       end 
+  resources :production_productivity11s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :production_productivity9s do 
                       collection { post :import }
                       collection { get :dropdown }

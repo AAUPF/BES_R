@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_11_092323) do
+ActiveRecord::Schema.define(version: 2018_07_11_121052) do
 
   create_table "agricultural_credit2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
@@ -152,32 +152,30 @@ ActiveRecord::Schema.define(version: 2018_07_11_092323) do
 
   create_table "production_productivity10s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
-    t.float "Area"
-    t.float "Production"
+    t.float "Mango_Area"
+    t.float "Mango_Production"
+    t.float "Guava_Area"
+    t.float "Guava_Production"
+    t.float "Litchi_Area"
+    t.float "Litchi_Production"
+    t.float "Banana_Area"
+    t.float "Banana_Production"
     t.integer "Year"
-    t.string "Fruit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "production_productivity11s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
-    t.float "Potato_Area_2015"
-    t.float "Potato_Production_2015"
-    t.float "Potato_Area_2016"
-    t.float "Potato_Production_2016"
-    t.float "Onion_Area_2015"
-    t.float "Onion_Production_2015"
-    t.float "Onion_Area_2016"
-    t.float "Onion_Production_2016"
-    t.float "Cauliflower_Area_2015"
-    t.float "Cauliflower_Production_2015"
-    t.float "Cauliflower_Area_2016"
-    t.float "Cauliflower_Production_2016"
-    t.float "Brinjal_Area_2015"
-    t.float "Brinjal_Production_2015"
-    t.float "Brinjal_Area_2016"
-    t.float "Brinjal_Production_2016"
+    t.float "Potato_Area"
+    t.float "Potato_Production"
+    t.float "Onion_Area"
+    t.float "Onion_Production"
+    t.float "Cauliflower_Area"
+    t.float "Cauliflower_Production"
+    t.float "Brinjal_Area"
+    t.float "Brinjal_Production"
+    t.integer "Year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
