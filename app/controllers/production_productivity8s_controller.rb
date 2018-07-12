@@ -1,6 +1,6 @@
 class ProductionProductivity8sController < ApplicationController
   before_action :set_production_productivity8, only: [:show, :edit, :update, :destroy]
-
+#ubuntunilay
   # GET /production_productivity8s
   def index
     @production_productivity8s = ProductionProductivity8.all
