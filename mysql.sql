@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 12, 2018 at 08:55 AM
+-- Generation Time: Jul 13, 2018 at 02:20 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -557,6 +557,46 @@ CREATE TABLE `hhs` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `land1s`
+--
+
+DROP TABLE IF EXISTS `land1s`;
+CREATE TABLE `land1s` (
+  `id` bigint(20) NOT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `Geographical_Area` float DEFAULT NULL,
+  `Forests` float DEFAULT NULL,
+  `Barren_Unculturable_Land` float DEFAULT NULL,
+  `Land_put_to_Non_agricultural_use` float DEFAULT NULL,
+  `Land_Area` float DEFAULT NULL,
+  `Water_Area` float DEFAULT NULL,
+  `Culturable_Waste` float DEFAULT NULL,
+  `Permanent_Pastures` float DEFAULT NULL,
+  `Land_under_Tree_Crops` float DEFAULT NULL,
+  `Fallow_Land_excl_Current_Fallow` float DEFAULT NULL,
+  `Current_Fallow` float DEFAULT NULL,
+  `Total_Unculturable_Land` float DEFAULT NULL,
+  `Net_Sown_Area` float DEFAULT NULL,
+  `Gross_Sown_Area` float DEFAULT NULL,
+  `Cropping_Intensity` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `land1s`
+--
+
+INSERT INTO `land1s` (`id`, `Year`, `Geographical_Area`, `Forests`, `Barren_Unculturable_Land`, `Land_put_to_Non_agricultural_use`, `Land_Area`, `Water_Area`, `Culturable_Waste`, `Permanent_Pastures`, `Land_under_Tree_Crops`, `Fallow_Land_excl_Current_Fallow`, `Current_Fallow`, `Total_Unculturable_Land`, `Net_Sown_Area`, `Gross_Sown_Area`, `Cropping_Intensity`, `created_at`, `updated_at`) VALUES
+(1, 2010, 9359.57, 621.64, 431.72, 1699.74, 1342.69, 357.05, 45.34, 15.73, 244.56, 121.88, 920.27, 4100.87, 5258.7, 7194, 1.37, '2018-07-12 10:57:40', '2018-07-12 10:57:40'),
+(2, 2011, 9359.57, 621.64, 431.72, 1702.54, 1345.57, 356.97, 45.23, 15.7, 244.57, 121.17, 781.26, 3963.82, 5395.75, 7646.76, 1.42, '2018-07-12 10:57:40', '2018-07-12 10:57:40'),
+(3, 2012, 9359.57, 621.64, 431.72, 1708.38, 1352.89, 355.48, 45.02, 15.6, 246.34, 121.79, 766.7, 3957.17, 5402.39, 7777.52, 1.44, '2018-07-12 10:57:40', '2018-07-12 10:57:40'),
+(4, 2013, 9359.57, 621.64, 431.72, 1712.28, 1356.8, 355.49, 44.89, 15.47, 247.36, 120.49, 913.49, 4107.32, 5252.25, 7580.14, 1.44, '2018-07-12 10:57:40', '2018-07-12 10:57:40'),
+(5, 2014, 9359.57, 621.64, 431.72, 1712.1, 1359.77, 352.33, 44.67, 15.33, 247.81, 119.41, 888.59, 4081.25, 5278.32, 7672.95, 1.45, '2018-07-12 10:57:40', '2018-07-12 10:57:40');
 
 -- --------------------------------------------------------
 
@@ -1298,6 +1338,49 @@ INSERT INTO `production_productivity12s` (`id`, `Districts`, `Area`, `Production
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `rainfall1s`
+--
+
+DROP TABLE IF EXISTS `rainfall1s`;
+CREATE TABLE `rainfall1s` (
+  `id` bigint(20) NOT NULL,
+  `Winter_Rain` float DEFAULT NULL,
+  `Hot_Weather_Rain` float DEFAULT NULL,
+  `Southwest_Monsoon` float DEFAULT NULL,
+  `Northwest_Monsoon` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `rainfall1s`
+--
+
+INSERT INTO `rainfall1s` (`id`, `Winter_Rain`, `Hot_Weather_Rain`, `Southwest_Monsoon`, `Northwest_Monsoon`, `Total`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 20.9, 86.7, 908.2, 192.2, 1208, 2001, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(2, 48.9, 66.8, 896.9, 33.2, 1045.8, 2002, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(3, 19.2, 93, 767.6, 128.9, 1008.7, 2003, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(4, 23.7, 41.4, 906.1, 60.1, 1031.3, 2004, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(5, 0.1, 89.5, 777.6, 30.2, 897.4, 2005, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(6, 0.1, 90, 925.9, 27.8, 1043.7, 2006, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(7, 28.3, 76.4, 1360, 40.5, 1506.1, 2007, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(8, 30.6, 61.8, 1084, 19.3, 1196, 2008, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(9, 0.1, 98.2, 699.2, 71.1, 868.6, 2009, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(10, 0.7, 49.3, 584.4, 43.4, 677.9, 2010, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(11, 5.2, 79.4, 1028, 0.5, 1113.1, 2011, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(12, 11.2, 31.3, 704.2, 51.2, 797.9, 2012, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(13, 17.1, 73.8, 518.4, 164.3, 773.6, 2013, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(14, 33.3, 96.1, 788.3, 41.9, 959.6, 2014, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(15, 11.7, 89.3, 690.7, 4.3, 796, 2015, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(16, 7.5, 72.6, 937, 54.5, 1071.6, 2016, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(17, 0.4, 103.1, 843.2, 0, 946.8, 2017, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
+(18, 16.2, 74.7, 848.5, 60.2, 999.7, 20171, '2018-07-13 06:55:14', '2018-07-13 06:57:01');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `rainfall2s`
 --
 
@@ -1554,7 +1637,12 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180711112703'),
 ('20180711120543'),
 ('20180711121052'),
-('20180712083615');
+('20180712083615'),
+('20180712101337'),
+('20180712104830'),
+('20180712105700'),
+('20180713065205'),
+('20180713065426');
 
 -- --------------------------------------------------------
 
@@ -1651,6 +1739,12 @@ ALTER TABLE `hhs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `land1s`
+--
+ALTER TABLE `land1s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `lands`
 --
 ALTER TABLE `lands`
@@ -1696,6 +1790,12 @@ ALTER TABLE `production_productivity11s`
 -- Indexes for table `production_productivity12s`
 --
 ALTER TABLE `production_productivity12s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rainfall1s`
+--
+ALTER TABLE `rainfall1s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1787,6 +1887,12 @@ ALTER TABLE `hhs`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `land1s`
+--
+ALTER TABLE `land1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `lands`
 --
 ALTER TABLE `lands`
@@ -1833,6 +1939,12 @@ ALTER TABLE `production_productivity11s`
 --
 ALTER TABLE `production_productivity12s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+
+--
+-- AUTO_INCREMENT for table `rainfall1s`
+--
+ALTER TABLE `rainfall1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `rainfall2s`

@@ -1,1 +1,1 @@
-rails g scaffold rainfall2 Districts:string Winter_Rain:float	Hot_Weather_Rain:float	South_West_Monsoon:float	North_West_Monsoon:float	Total:float	Year:integer
+rails g scaffold land1 Year:integer Geographical_Area:float	Forests:float	Barren_Unculturable_Land:float	Land_put_to_Non_agricultural_use:float	Land_Area:float	Water_Area:float	Culturable_Waste:float	Permanent_Pastures:float	Land_under_Tree_Crops:float	Fallow_Land_excl_Current_Fallow:float	Current_Fallow:float	Total_Unculturable_Land:float	Net_Sown_Area:float	Gross_Sown_Area:float	Cropping_Intensity:float

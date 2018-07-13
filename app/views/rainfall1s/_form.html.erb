@@ -1,0 +1,47 @@
+<%= form_with(model: rainfall1, local: true) do |form| %>
+  <% if rainfall1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rainfall1.errors.count, "error") %> prohibited this rainfall1 from being saved:</h2>
+
+      <ul>
+      <% rainfall1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Winter_Rain %>
+    <%= form.text_field :Winter_Rain %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Hot_Weather_Rain %>
+    <%= form.text_field :Hot_Weather_Rain %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Southwest_Monsoon %>
+    <%= form.text_field :Southwest_Monsoon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Northwest_Monsoon %>
+    <%= form.text_field :Northwest_Monsoon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

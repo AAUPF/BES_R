@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: 1
+  Geographical_Area: 1.5
+  Forests: 1.5
+  Barren_Unculturable_Land: 1.5
+  Land_put_to_Non_agricultural_use: 1.5
+  Land_Area: 1.5
+  Water_Area: 1.5
+  Culturable_Waste: 1.5
+  Permanent_Pastures: 1.5
+  Land_under_Tree_Crops: 1.5
+  Fallow_Land_excl_Current_Fallow: 1.5
+  Current_Fallow: 1.5
+  Total_Unculturable_Land: 1.5
+  Net_Sown_Area: 1.5
+  Gross_Sown_Area: 1.5
+  Cropping_Intensity: 1.5
+
+two:
+  Year: 1
+  Geographical_Area: 1.5
+  Forests: 1.5
+  Barren_Unculturable_Land: 1.5
+  Land_put_to_Non_agricultural_use: 1.5
+  Land_Area: 1.5
+  Water_Area: 1.5
+  Culturable_Waste: 1.5
+  Permanent_Pastures: 1.5
+  Land_under_Tree_Crops: 1.5
+  Fallow_Land_excl_Current_Fallow: 1.5
+  Current_Fallow: 1.5
+  Total_Unculturable_Land: 1.5
+  Net_Sown_Area: 1.5
+  Gross_Sown_Area: 1.5
+  Cropping_Intensity: 1.5

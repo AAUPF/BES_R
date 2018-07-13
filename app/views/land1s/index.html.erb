@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Land1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Geographical area</th>
+      <th>Forests</th>
+      <th>Barren unculturable land</th>
+      <th>Land put to non agricultural use</th>
+      <th>Land area</th>
+      <th>Water area</th>
+      <th>Culturable waste</th>
+      <th>Permanent pastures</th>
+      <th>Land under tree crops</th>
+      <th>Fallow land excl current fallow</th>
+      <th>Current fallow</th>
+      <th>Total unculturable land</th>
+      <th>Net sown area</th>
+      <th>Gross sown area</th>
+      <th>Cropping intensity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @land1s.each do |land1| %>
+      <tr>
+        <td><%= land1.Year %></td>
+        <td><%= land1.Geographical_Area %></td>
+        <td><%= land1.Forests %></td>
+        <td><%= land1.Barren_Unculturable_Land %></td>
+        <td><%= land1.Land_put_to_Non_agricultural_use %></td>
+        <td><%= land1.Land_Area %></td>
+        <td><%= land1.Water_Area %></td>
+        <td><%= land1.Culturable_Waste %></td>
+        <td><%= land1.Permanent_Pastures %></td>
+        <td><%= land1.Land_under_Tree_Crops %></td>
+        <td><%= land1.Fallow_Land_excl_Current_Fallow %></td>
+        <td><%= land1.Current_Fallow %></td>
+        <td><%= land1.Total_Unculturable_Land %></td>
+        <td><%= land1.Net_Sown_Area %></td>
+        <td><%= land1.Gross_Sown_Area %></td>
+        <td><%= land1.Cropping_Intensity %></td>
+        <td><%= link_to 'Show', land1 %></td>
+        <td><%= link_to 'Edit', edit_land1_path(land1) %></td>
+        <td><%= link_to 'Destroy', land1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Land1', new_land1_path %>

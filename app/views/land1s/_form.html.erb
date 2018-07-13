@@ -1,0 +1,97 @@
+<%= form_with(model: land1, local: true) do |form| %>
+  <% if land1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(land1.errors.count, "error") %> prohibited this land1 from being saved:</h2>
+
+      <ul>
+      <% land1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Geographical_Area %>
+    <%= form.text_field :Geographical_Area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Forests %>
+    <%= form.text_field :Forests %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Barren_Unculturable_Land %>
+    <%= form.text_field :Barren_Unculturable_Land %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Land_put_to_Non_agricultural_use %>
+    <%= form.text_field :Land_put_to_Non_agricultural_use %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Land_Area %>
+    <%= form.text_field :Land_Area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Water_Area %>
+    <%= form.text_field :Water_Area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Culturable_Waste %>
+    <%= form.text_field :Culturable_Waste %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Permanent_Pastures %>
+    <%= form.text_field :Permanent_Pastures %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Land_under_Tree_Crops %>
+    <%= form.text_field :Land_under_Tree_Crops %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Fallow_Land_excl_Current_Fallow %>
+    <%= form.text_field :Fallow_Land_excl_Current_Fallow %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Current_Fallow %>
+    <%= form.text_field :Current_Fallow %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Unculturable_Land %>
+    <%= form.text_field :Total_Unculturable_Land %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Net_Sown_Area %>
+    <%= form.text_field :Net_Sown_Area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Gross_Sown_Area %>
+    <%= form.text_field :Gross_Sown_Area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cropping_Intensity %>
+    <%= form.text_field :Cropping_Intensity %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

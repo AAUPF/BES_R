@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Winter rain:</strong>
+  <%= @rainfall1.Winter_Rain %>
+</p>
+
+<p>
+  <strong>Hot weather rain:</strong>
+  <%= @rainfall1.Hot_Weather_Rain %>
+</p>
+
+<p>
+  <strong>Southwest monsoon:</strong>
+  <%= @rainfall1.Southwest_Monsoon %>
+</p>
+
+<p>
+  <strong>Northwest monsoon:</strong>
+  <%= @rainfall1.Northwest_Monsoon %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @rainfall1.Total %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @rainfall1.Year %>
+</p>
+
+<%= link_to 'Edit', edit_rainfall1_path(@rainfall1) %> |
+<%= link_to 'Back', rainfall1s_path %>

@@ -1,0 +1,2 @@
+json.extract! land1, :id, :Year, :Geographical_Area, :Forests, :Barren_Unculturable_Land, :Land_put_to_Non_agricultural_use, :Land_Area, :Water_Area, :Culturable_Waste, :Permanent_Pastures, :Land_under_Tree_Crops, :Fallow_Land_excl_Current_Fallow, :Current_Fallow, :Total_Unculturable_Land, :Net_Sown_Area, :Gross_Sown_Area, :Cropping_Intensity, :created_at, :updated_at
+json.url land1_url(land1, format: :json)

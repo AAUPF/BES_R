@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :rainfall1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :land1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :rainfall2s do 
                       collection { post :import }
                       collection { get :dropdown }

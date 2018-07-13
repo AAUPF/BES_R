@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_12_083615) do
+ActiveRecord::Schema.define(version: 2018_07_13_065426) do
 
   create_table "agricultural_credit2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
@@ -127,6 +127,27 @@ ActiveRecord::Schema.define(version: 2018_07_12_083615) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "land1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Geographical_Area"
+    t.float "Forests"
+    t.float "Barren_Unculturable_Land"
+    t.float "Land_put_to_Non_agricultural_use"
+    t.float "Land_Area"
+    t.float "Water_Area"
+    t.float "Culturable_Waste"
+    t.float "Permanent_Pastures"
+    t.float "Land_under_Tree_Crops"
+    t.float "Fallow_Land_excl_Current_Fallow"
+    t.float "Current_Fallow"
+    t.float "Total_Unculturable_Land"
+    t.float "Net_Sown_Area"
+    t.float "Gross_Sown_Area"
+    t.float "Cropping_Intensity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "lands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
     t.float "Geographical_Area"
@@ -215,6 +236,17 @@ ActiveRecord::Schema.define(version: 2018_07_12_083615) do
     t.float "Area"
     t.float "Production"
     t.float "Productivity"
+    t.integer "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rainfall1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.float "Winter_Rain"
+    t.float "Hot_Weather_Rain"
+    t.float "Southwest_Monsoon"
+    t.float "Northwest_Monsoon"
+    t.float "Total"
     t.integer "Year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
