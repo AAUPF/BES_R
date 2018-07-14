@@ -14,61 +14,77 @@ module Rfallseason
   end
   
   def search(search,compare,year,rain_fall_type)
-
       if year == "All" and rain_fall_type == "All" 
        all
-      
       elsif year == "All" and compare == "None"
         # all
-        
         if compare == "None"
           # abort("error")
-
-          
           if year == "All"
-             
             select(rain_fall_type,"Year")
-
           else
-           
             select(rain_fall_type). where("Year = ?", year)
-
           end
-          
         else
-          
-          
           select(rain_fall_type,"Year")
         end
-        
-        
       else
            if compare == "None"
             # abort(compare)
             # abort("errror")
-            
             if rain_fall_type == "All"
               where("Year = ?", year)
             else
-              select(rain_fall_type).where("Year = ?", year)
+              # abort(rain_fall_type)
+              select(rain_fall_type,"Year").where("Year = ?", year)
             end
-            
-             
            else
-            
             if year == "All"
               select(rain_fall_type,compare,"Year")
             else
               where("Year = ?", year) 
             end
-            
-             
            end
       end
 
   end
   
+  # Logic to generate table starts
+    def table (b,rain_fall_type,year,ji,compare)
+
+if rain_fall_type == "All"
+  hash_data = ji.map do |el|
+    
+    {title:el, field:el, sorter:"string", editor:true}
+      
+     end 
+else 
+
+if compare == "None"
+  hash_data = [{title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true},
+    {title:"Year", field:"Year", sorter:"string",  editor:true}
+]
+else
+  hash_data = [{title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true},
+  {title:compare, field:compare, sorter:"string", editor:true},
+    {title:"Year", field:"Year", sorter:"string", editor:true}
+]
+end
+
+
+
   
+end
+
+
+ data = {column: hash_data,data: b}
+  
+
+
+       return data
+    end
+    # Logic to generate table end
+
   def map_search(search,compare,year,rain_fall_type)
     if search == "All"
       if rain_fall_type == "All"
@@ -96,6 +112,7 @@ module Rfallseason
             { 
               type:views,
               legendText: column_name,
+              color: "red",
               showInLegend: true,
               dataPoints: b.map do |el| 
                 { y: el[column_name],z:el[rain_fall_type], label: rain_fall_type }
@@ -138,6 +155,7 @@ module Rfallseason
             hash_data = 
             [{ 
               type:views,
+              color: "#4f81bc",
               legendText: rain_fall_type,
               showInLegend: true,
               dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el| 

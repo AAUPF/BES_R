@@ -42,8 +42,8 @@ def test
           a = Rainfall1.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = Rainfall1.search(params[:search],compare,year)
-        a = Rainfall1.table(b,rain_fall_type,year)
+        b = Rainfall1.search(params[:search],compare,year,rain_fall_type)
+        a = Rainfall1.table(b,rain_fall_type,year,ji,compare)
       else
         @Rainfall1s = Rainfall1.search(params[:search],compare,year,rain_fall_type)
         a = Rainfall1.query(@Rainfall1s,params[:year],rain_fall_type,views,ji,compare)

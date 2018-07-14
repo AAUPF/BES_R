@@ -1,0 +1,2 @@
+module AgriculturalCredit1sHelper
+end

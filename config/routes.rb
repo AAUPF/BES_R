@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :agricultural_credit1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :rainfall1s do 
                       collection { post :import }
                       collection { get :dropdown }

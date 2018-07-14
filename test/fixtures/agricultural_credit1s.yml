@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: 1
+  Commercial_Bank_Target: 1.5
+  Commercial_Bank_Achievement: 1.5
+  RRBs_Target: 1.5
+  RRBs_Achievement: 1.5
+  CCBs_Target: 1.5
+  CCBs_Achievement: 1.5
+  Total_Target: 1.5
+  Total_Achievement: 1.5
+
+two:
+  Year: 1
+  Commercial_Bank_Target: 1.5
+  Commercial_Bank_Achievement: 1.5
+  RRBs_Target: 1.5
+  RRBs_Achievement: 1.5
+  CCBs_Target: 1.5
+  CCBs_Achievement: 1.5
+  Total_Target: 1.5
+  Total_Achievement: 1.5

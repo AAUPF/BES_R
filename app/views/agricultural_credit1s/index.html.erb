@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agricultural Credit1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Commercial bank target</th>
+      <th>Commercial bank achievement</th>
+      <th>Rrbs target</th>
+      <th>Rrbs achievement</th>
+      <th>Ccbs target</th>
+      <th>Ccbs achievement</th>
+      <th>Total target</th>
+      <th>Total achievement</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agricultural_credit1s.each do |agricultural_credit1| %>
+      <tr>
+        <td><%= agricultural_credit1.Year %></td>
+        <td><%= agricultural_credit1.Commercial_Bank_Target %></td>
+        <td><%= agricultural_credit1.Commercial_Bank_Achievement %></td>
+        <td><%= agricultural_credit1.RRBs_Target %></td>
+        <td><%= agricultural_credit1.RRBs_Achievement %></td>
+        <td><%= agricultural_credit1.CCBs_Target %></td>
+        <td><%= agricultural_credit1.CCBs_Achievement %></td>
+        <td><%= agricultural_credit1.Total_Target %></td>
+        <td><%= agricultural_credit1.Total_Achievement %></td>
+        <td><%= link_to 'Show', agricultural_credit1 %></td>
+        <td><%= link_to 'Edit', edit_agricultural_credit1_path(agricultural_credit1) %></td>
+        <td><%= link_to 'Destroy', agricultural_credit1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agricultural Credit1', new_agricultural_credit1_path %>

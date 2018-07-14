@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_13_065426) do
+ActiveRecord::Schema.define(version: 2018_07_13_152050) do
+
+  create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Commercial_Bank_Target"
+    t.float "Commercial_Bank_Achievement"
+    t.float "RRBs_Target"
+    t.float "RRBs_Achievement"
+    t.float "CCBs_Target"
+    t.float "CCBs_Achievement"
+    t.float "Total_Target"
+    t.float "Total_Achievement"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "agricultural_credit2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"

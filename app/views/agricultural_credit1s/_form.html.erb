@@ -1,0 +1,62 @@
+<%= form_with(model: agricultural_credit1, local: true) do |form| %>
+  <% if agricultural_credit1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(agricultural_credit1.errors.count, "error") %> prohibited this agricultural_credit1 from being saved:</h2>
+
+      <ul>
+      <% agricultural_credit1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Commercial_Bank_Target %>
+    <%= form.text_field :Commercial_Bank_Target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Commercial_Bank_Achievement %>
+    <%= form.text_field :Commercial_Bank_Achievement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :RRBs_Target %>
+    <%= form.text_field :RRBs_Target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :RRBs_Achievement %>
+    <%= form.text_field :RRBs_Achievement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CCBs_Target %>
+    <%= form.text_field :CCBs_Target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CCBs_Achievement %>
+    <%= form.text_field :CCBs_Achievement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Target %>
+    <%= form.text_field :Total_Target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Achievement %>
+    <%= form.text_field :Total_Achievement %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
