@@ -196,13 +196,43 @@ end
               return hash_data 
               
             else
-              b.each do |element|
-                hash1 = {:y => element[rain_fall_type] ,:label => rain_fall_type}
-                hash2 = {:y => element[compare] ,:label => compare}
-                array.push(hash1) 
-                array.push(hash2)      
-              end 
-              return array 
+              # b.each do |element|
+              #   hash1 = {:y => element[rain_fall_type] ,:label => rain_fall_type}
+              #   hash2 = {:y => element[compare] ,:label => compare}
+              #   array.push(hash1) 
+              #   array.push(hash2)      
+              # end 
+              # return array 
+                if compare == "None"
+                      ji1 = [rain_fall_type]
+                      hash_data =  ji1.map do |col|
+                        { 
+                          type:views,
+                          legendText: col,
+                          showInLegend: true,
+                          dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el| 
+                                { y: el[col], label: el["Year"] }
+                          end
+                        }
+                      end
+                else
+
+
+               ji1 = [rain_fall_type,compare]
+               hash_data =  ji1.map do |col|
+                 { 
+                   type:views,
+                   legendText: col,
+                   showInLegend: true,
+                   dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el| 
+                        { y: el[col], label: el["Year"] }
+                   end
+                 }
+               end
+                  
+                end
+
+              return hash_data 
             end
             
        
