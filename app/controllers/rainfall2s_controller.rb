@@ -22,8 +22,9 @@ def test
    year  = params[:year]
    compare = params[:compare]
 
+ 
+   ji1 = [:Winter_Rain, :Hot_Weather_Rain, :South_West_Monsoon, :North_West_Monsoon, :Total,:Year]
   if rain_fall_type || views
-
       if views == "Map View"
         l =  rain_fall_type.gsub(" ","")           
          if rain_fall_type  ==  "All"
@@ -34,9 +35,9 @@ def test
           b = Rainfall2.map_search(params[:search],compare,year,rain_fall_type)
           a = Rainfall2.map(b,rain_fall_type,year,ji)
          end
-      elsif views == "Table"  
-        b = Rainfall2.search(params[:search],compare,year)
-        a = Rainfall2.table(b,rain_fall_type,year)
+        elsif views == "Table"  
+          b = Rainfall2.search(params[:search],compare,year,rain_fall_type)
+          a = Rainfall2.table(b,rain_fall_type,year,ji1,compare)
       else
         @Rainfall2s = Rainfall2.search(params[:search],compare,year,rain_fall_type)
         a = Rainfall2.query(@Rainfall2s,params[:year],rain_fall_type,views,ji,compare)
@@ -44,13 +45,11 @@ def test
       respond_to do |format|
         format.html { render json:a }
     end
-
-  else
-    respond_to do |format|
-      format.html { render json: "error"}
+    else
+      respond_to do |format|
+        format.html { render json: "error"}
+    end
   end
-  end
-
 end
 
 

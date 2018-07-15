@@ -23,11 +23,17 @@ def test
 
 
     # abort(compare)
-   if compare == "Total"
+    if compare == "Total"
      ji = [:Winter_Rain, :Hot_Weather_Rain, :Southwest_Monsoon, :Northwest_Monsoon, :Total]
-   else
+     else
      ji = [:Winter_Rain, :Hot_Weather_Rain, :Southwest_Monsoon, :Northwest_Monsoon]
    end
+
+   if compare == "Total"
+    ji1 = [:Winter_Rain, :Hot_Weather_Rain, :Southwest_Monsoon, :Northwest_Monsoon, :Total,:Year]
+    else
+    ji1= [:Winter_Rain, :Hot_Weather_Rain, :Southwest_Monsoon, :Northwest_Monsoon,:Year]
+  end
 
   if rain_fall_type || views
 
@@ -43,7 +49,7 @@ def test
          end
       elsif views == "Table"  
         b = Rainfall1.search(params[:search],compare,year,rain_fall_type)
-        a = Rainfall1.table(b,rain_fall_type,year,ji,compare)
+        a = Rainfall1.table(b,rain_fall_type,year,ji1,compare)
       else
         @Rainfall1s = Rainfall1.search(params[:search],compare,year,rain_fall_type)
         a = Rainfall1.query(@Rainfall1s,params[:year],rain_fall_type,views,ji,compare)

@@ -105,6 +105,14 @@ end
         # l =  rain_fall_type.gsub(" ","")
         # abort(rain_fall_type)
         d = "Districts"
+
+        
+        if views == "pie"
+          color = "#4f81bc"
+        else
+        color = "#4f81bc"
+        end
+        
        
         if year == "All" && rain_fall_type == "All"
           hash_data =  ji.map do |column_name|
@@ -112,7 +120,7 @@ end
             { 
               type:views,
               legendText: column_name,
-              color: "red",
+              color: color,
               showInLegend: true,
               dataPoints: b.map do |el| 
                 { y: el[column_name],z:el[rain_fall_type], label: rain_fall_type }
@@ -155,7 +163,7 @@ end
             hash_data = 
             [{ 
               type:views,
-              color: "#4f81bc",
+              color: color,
               legendText: rain_fall_type,
               showInLegend: true,
               dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el| 

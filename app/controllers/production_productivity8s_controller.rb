@@ -35,8 +35,8 @@ def test
           a = ProductionProductivity8.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = ProductionProductivity8.search(params[:search],compare,year)
-        a = ProductionProductivity8.table(b,rain_fall_type,year)
+        b = ProductionProductivity8.search(params[:search],compare,year,rain_fall_type)
+        a = ProductionProductivity8.table(b,rain_fall_type,year,ji,compare)
       else
         @ProductionProductivity8s = ProductionProductivity8.search(params[:search],compare,year,rain_fall_type)
         a = ProductionProductivity8.query(@ProductionProductivity8s,params[:year],rain_fall_type,views,ji,compare)

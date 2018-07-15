@@ -43,8 +43,8 @@ def test
           a = AgriculturalCredit1.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = AgriculturalCredit1.search(params[:search],compare,year)
-        a = AgriculturalCredit1.table(b,rain_fall_type,year)
+        b = AgriculturalCredit1.search(params[:search],compare,year,rain_fall_type)
+        a = AgriculturalCredit1.table(b,rain_fall_type,year,ji,compare)
       else
         @AgriculturalCredit1s = AgriculturalCredit1.search(params[:search],compare,year,rain_fall_type)
         a = AgriculturalCredit1.query(@AgriculturalCredit1s,params[:year],rain_fall_type,views,ji,compare)
