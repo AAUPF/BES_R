@@ -61,13 +61,15 @@ if rain_fall_type == "All"
 else 
 
 if compare == "None"
-  hash_data = [{title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true},
-    {title:"Year", field:"Year", sorter:"string",  editor:true}
+  hash_data = [
+    {title:"Year", field:"Year", sorter:"string",  editor:true},
+    {title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true}
+    
 ]
 else
-  hash_data = [{title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true},
-  {title:compare, field:compare, sorter:"string", editor:true},
-    {title:"Year", field:"Year", sorter:"string", editor:true}
+  hash_data = [    {title:"Year", field:"Year", sorter:"string", editor:true},
+    {title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true},
+  {title:compare, field:compare, sorter:"string", editor:true}
 ]
 end
 
