@@ -1,4 +1,4 @@
 class Land1 < ApplicationRecord
-  extend WithoutDistrict  
+  extend Rfallseason  
 
       end

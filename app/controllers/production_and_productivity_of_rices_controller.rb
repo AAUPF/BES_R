@@ -83,6 +83,8 @@ def test
    year  = params[:year]
    compare = params[:compare]
 
+   ji1 = [:Year,:Area, :Production, :Productivity]
+
   if rain_fall_type || views
 
       if views == "Map View"
@@ -96,8 +98,8 @@ def test
           a = ProductionAndProductivityOfRice.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = ProductionAndProductivityOfRice.search(params[:search],compare,year)
-        a = ProductionAndProductivityOfRice.table(b,rain_fall_type,year)
+        b = ProductionAndProductivityOfRice.search(params[:search],compare,year,rain_fall_type)
+        a = ProductionAndProductivityOfRice.table(b,rain_fall_type,year,ji1,compare)
       else
         @ProductionAndProductivityOfRices = ProductionAndProductivityOfRice.search(params[:search],compare,year,rain_fall_type)
         a = ProductionAndProductivityOfRice.query(@ProductionAndProductivityOfRices,params[:year],rain_fall_type,views,ji,compare)

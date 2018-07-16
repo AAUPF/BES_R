@@ -23,32 +23,31 @@ def test
    compare = params[:compare]
 
   if rain_fall_type || views
-
-      if views == "Map View"
-        l =  rain_fall_type.gsub(" ","")           
-         if rain_fall_type  ==  "All"
-          b = AgriculturalCredit2.map_search("All",compare,year,rain_fall_type)
-          u = "Total"
-          a = AgriculturalCredit2.map(b,params[:year],rain_fall_type,views)
-         else
-          b = AgriculturalCredit2.map_search(params[:search],compare,year,rain_fall_type)
-          a = AgriculturalCredit2.map(b,rain_fall_type,year,ji)
-         end
-      elsif views == "Table"  
-        b = AgriculturalCredit2.search(params[:search],compare,year)
-        a = AgriculturalCredit2.table(b,rain_fall_type,year)
-      else
-        @AgriculturalCredit2s = AgriculturalCredit2.search(params[:search],compare,year,rain_fall_type)
-        a = AgriculturalCredit2.query(@AgriculturalCredit2s,params[:year],rain_fall_type,views,ji,compare)
+        if views == "Map View"
+          l =  rain_fall_type.gsub(" ","")           
+          if rain_fall_type  ==  "All"
+            b = AgriculturalCredit2.map_search("All",compare,year,rain_fall_type)
+            u = "Total"
+            a = AgriculturalCredit2.map(b,params[:year],rain_fall_type,views)
+          else
+            b = AgriculturalCredit2.map_search(params[:search],compare,year,rain_fall_type)
+            a = AgriculturalCredit2.map(b,rain_fall_type,year,ji)
+          end
+        elsif views == "Table"  
+          b = AgriculturalCredit2.search(params[:search],compare,year)
+          a = AgriculturalCredit2.table(b,rain_fall_type,year)
+        else
+          @AgriculturalCredit2s = AgriculturalCredit2.search(params[:search],compare,year,rain_fall_type)
+          a = AgriculturalCredit2.query(@AgriculturalCredit2s,params[:year],rain_fall_type,views,ji,compare)
+        end
+        respond_to do |format|
+          format.html { render json:a }
       end
-      respond_to do |format|
-        format.html { render json:a }
-    end
 
-  else
-    respond_to do |format|
-      format.html { render json: "error"}
-  end
+    else
+      respond_to do |format|
+        format.html { render json: "error"}
+    end
   end
 
 end

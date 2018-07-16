@@ -22,6 +22,9 @@ def test
    year  = params[:year]
    compare = params[:compare]
 
+   ji1 = [:Year,:Geographical_Area, :Forests, :Barren_Unculturable_Land, :Land_put_to_Non_agricultural_use, :Land_Area, :Water_Area, :Culturable_Waste, :Permanent_Pastures, :Land_under_Tree_Crops, :Fallow_Land_excl_Current_Fallow, :Current_Fallow, :Total_Unculturable_Land, :Net_Sown_Area, :Gross_Sown_Area, :Cropping_Intensity]
+
+
   if rain_fall_type || views
 
       if views == "Map View"
@@ -35,8 +38,8 @@ def test
           a = Land1.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = Land1.search(params[:search],compare,year)
-        a = Land1.table(b,rain_fall_type,year)
+        b = Land1.search(params[:search],compare,year,rain_fall_type)
+        a = Land1.table(b,rain_fall_type,year,ji1,compare)
       else
         @Land1s = Land1.search(params[:search],compare,year,rain_fall_type)
        
