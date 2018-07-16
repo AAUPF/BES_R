@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_13_152050) do
+ActiveRecord::Schema.define(version: 2018_07_16_113436) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -135,6 +135,19 @@ ActiveRecord::Schema.define(version: 2018_07_13_152050) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "cropping_patterns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Food_grains"
+    t.float "Cereals"
+    t.float "Pulses"
+    t.float "Oil_seeds"
+    t.float "Fibre_Crops"
+    t.float "Sugarcane"
+    t.float "Total_Area"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "hhs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -164,13 +177,21 @@ ActiveRecord::Schema.define(version: 2018_07_13_152050) do
 
   create_table "lands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
-    t.float "Geographical_Area"
+    t.float "Geographical_area"
     t.float "Forest"
-    t.float "Barren_and_Unculturable_land"
-    t.float "Non_Agriculture_Land_Area"
-    t.float "Non_Agriculture_Perennial"
-    t.float "Non_Agriculture_Temporary"
+    t.float "Barren_unculturable_land"
+    t.float "Non_Agriculture_Land_area"
+    t.float "Non_Agriculture_Perennial_Water_Area"
+    t.float "Non_Agriculture_Temporary_Water_Area"
     t.float "Culturable_Waste_Land"
+    t.float "Permanent_Pastures"
+    t.float "Tree_Crops"
+    t.float "Fallow_land"
+    t.float "Current_Fallow"
+    t.float "Total_Uncultivable_Land"
+    t.float "Net_Area_Sown"
+    t.float "Gross_Crop_Area"
+    t.float "Cropping_Intensity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -221,6 +242,104 @@ ActiveRecord::Schema.define(version: 2018_07_13_152050) do
     t.float "Production"
     t.float "Yield"
     t.integer "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "production_productivity1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Total_Cereals"
+    t.float "Total_Rice"
+    t.float "Autumn_Rice"
+    t.float "Aghani_Rice"
+    t.float "Summer_Rice"
+    t.float "Wheat"
+    t.float "Total_Maize"
+    t.float "Kharif_Maize"
+    t.float "Rabi_Maize"
+    t.float "Summer_Maize"
+    t.float "Total_Coarse_Cereals"
+    t.float "Barley"
+    t.float "Jowar"
+    t.float "Bajra"
+    t.float "Ragi"
+    t.float "Small_Millets"
+    t.float "Total_Pulses"
+    t.float "Total_Kharif_Pulses"
+    t.float "Urad"
+    t.float "Bhadai_Moong"
+    t.float "Kulthi"
+    t.float "Ghagra"
+    t.float "Other_Kharif_Pulses"
+    t.float "Total_Rabi_Pulses"
+    t.float "Arhar_Tur"
+    t.float "Gram"
+    t.float "Lentil"
+    t.float "Pea"
+    t.float "Khesari"
+    t.float "Summer_Moong"
+    t.float "Other_Rabi_Pulses"
+    t.float "Total_Oilseeds"
+    t.float "Castor_seed"
+    t.float "Safflower_Kusum"
+    t.float "Sesamum"
+    t.float "Sunflower"
+    t.float "Mustard"
+    t.float "Linseed"
+    t.float "Ground_Nut"
+    t.float "Total_Fibre_Crops"
+    t.float "Jute"
+    t.float "Mesta"
+    t.float "Sugarcane"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "production_productivity2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Total_Cereals"
+    t.float "Total_Rice"
+    t.float "Autumn_Rice"
+    t.float "Aghani_Rice"
+    t.float "Summer_Rice"
+    t.float "Wheat"
+    t.float "Total_Maize"
+    t.float "Kharif_Maize"
+    t.float "Rabi_Maize"
+    t.float "Summer_Maize"
+    t.float "Total_Coarse_Cereals"
+    t.float "Barley"
+    t.float "Jowar"
+    t.float "Bajra"
+    t.float "Ragi"
+    t.float "Small_Millets"
+    t.float "Total_Pulses"
+    t.float "Total_Kharif_Pulses"
+    t.float "Urad"
+    t.float "Bhadai_Moong"
+    t.float "Kulthi"
+    t.float "Ghagra"
+    t.float "Other_Kharif_Pulses"
+    t.float "Total_Rabi_Pulses"
+    t.float "Arhar_Tur"
+    t.float "Gram"
+    t.float "Lentil"
+    t.float "Pea"
+    t.float "Khesari"
+    t.float "Summer_Moong"
+    t.float "Other_Rabi_Pulses"
+    t.float "Total_Oilseeds"
+    t.float "Castor_seed"
+    t.float "Safflower_Kusum"
+    t.float "Sesamum"
+    t.float "Sunflower"
+    t.float "Mustard"
+    t.float "Linseed"
+    t.float "Ground_Nut"
+    t.float "Total_Fibre_Crops"
+    t.float "Jute"
+    t.float "Mesta"
+    t.float "Sugarcane"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

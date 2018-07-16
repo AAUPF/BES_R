@@ -1,4 +1,24 @@
 Rails.application.routes.draw do
+  resources :production_productivity2s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :production_productivity1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :cropping_patterns do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :lands do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :agricultural_credit1s do 
                       collection { post :import }
                       collection { get :dropdown }

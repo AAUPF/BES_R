@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cropping Patterns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Food grains</th>
+      <th>Cereals</th>
+      <th>Pulses</th>
+      <th>Oil seeds</th>
+      <th>Fibre crops</th>
+      <th>Sugarcane</th>
+      <th>Total area</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cropping_patterns.each do |cropping_pattern| %>
+      <tr>
+        <td><%= cropping_pattern.Year %></td>
+        <td><%= cropping_pattern.Food_grains %></td>
+        <td><%= cropping_pattern.Cereals %></td>
+        <td><%= cropping_pattern.Pulses %></td>
+        <td><%= cropping_pattern.Oil_seeds %></td>
+        <td><%= cropping_pattern.Fibre_Crops %></td>
+        <td><%= cropping_pattern.Sugarcane %></td>
+        <td><%= cropping_pattern.Total_Area %></td>
+        <td><%= link_to 'Show', cropping_pattern %></td>
+        <td><%= link_to 'Edit', edit_cropping_pattern_path(cropping_pattern) %></td>
+        <td><%= link_to 'Destroy', cropping_pattern, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cropping Pattern', new_cropping_pattern_path %>

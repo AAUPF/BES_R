@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @cropping_pattern.Year %>
+</p>
+
+<p>
+  <strong>Food grains:</strong>
+  <%= @cropping_pattern.Food_grains %>
+</p>
+
+<p>
+  <strong>Cereals:</strong>
+  <%= @cropping_pattern.Cereals %>
+</p>
+
+<p>
+  <strong>Pulses:</strong>
+  <%= @cropping_pattern.Pulses %>
+</p>
+
+<p>
+  <strong>Oil seeds:</strong>
+  <%= @cropping_pattern.Oil_seeds %>
+</p>
+
+<p>
+  <strong>Fibre crops:</strong>
+  <%= @cropping_pattern.Fibre_Crops %>
+</p>
+
+<p>
+  <strong>Sugarcane:</strong>
+  <%= @cropping_pattern.Sugarcane %>
+</p>
+
+<p>
+  <strong>Total area:</strong>
+  <%= @cropping_pattern.Total_Area %>
+</p>
+
+<%= link_to 'Edit', edit_cropping_pattern_path(@cropping_pattern) %> |
+<%= link_to 'Back', cropping_patterns_path %>

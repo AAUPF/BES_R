@@ -17,7 +17,7 @@ class LandsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create land" do
     assert_difference('Land.count') do
-      post lands_url, params: { land: { Barren_and_Unculturable_land: @land.Barren_and_Unculturable_land, Culturable_Waste_Land: @land.Culturable_Waste_Land, Districts: @land.Districts, Forest: @land.Forest, Geographical_Area: @land.Geographical_Area, Non_Agriculture_Land_Area: @land.Non_Agriculture_Land_Area, Non_Agriculture_Perennial: @land.Non_Agriculture_Perennial, Non_Agriculture_Temporary: @land.Non_Agriculture_Temporary } }
+      post lands_url, params: { land: { Barren_unculturable_land: @land.Barren_unculturable_land, Cropping_Intensity: @land.Cropping_Intensity, Culturable_Waste_Land: @land.Culturable_Waste_Land, Current_Fallow: @land.Current_Fallow, Districts: @land.Districts, Fallow_land: @land.Fallow_land, Forest: @land.Forest, Geographical_area: @land.Geographical_area, Gross_Crop_Area: @land.Gross_Crop_Area, Net_Area_Sown: @land.Net_Area_Sown, Non_Agriculture_Land_area: @land.Non_Agriculture_Land_area, Non_Agriculture_Perennial_Water_Area: @land.Non_Agriculture_Perennial_Water_Area, Non_Agriculture_Temporary_Water_Area: @land.Non_Agriculture_Temporary_Water_Area, Permanent_Pastures: @land.Permanent_Pastures, Total_Uncultivable_Land: @land.Total_Uncultivable_Land, Tree_Crops: @land.Tree_Crops } }
     end
 
     assert_redirected_to land_url(Land.last)
@@ -34,7 +34,7 @@ class LandsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update land" do
-    patch land_url(@land), params: { land: { Barren_and_Unculturable_land: @land.Barren_and_Unculturable_land, Culturable_Waste_Land: @land.Culturable_Waste_Land, Districts: @land.Districts, Forest: @land.Forest, Geographical_Area: @land.Geographical_Area, Non_Agriculture_Land_Area: @land.Non_Agriculture_Land_Area, Non_Agriculture_Perennial: @land.Non_Agriculture_Perennial, Non_Agriculture_Temporary: @land.Non_Agriculture_Temporary } }
+    patch land_url(@land), params: { land: { Barren_unculturable_land: @land.Barren_unculturable_land, Cropping_Intensity: @land.Cropping_Intensity, Culturable_Waste_Land: @land.Culturable_Waste_Land, Current_Fallow: @land.Current_Fallow, Districts: @land.Districts, Fallow_land: @land.Fallow_land, Forest: @land.Forest, Geographical_area: @land.Geographical_area, Gross_Crop_Area: @land.Gross_Crop_Area, Net_Area_Sown: @land.Net_Area_Sown, Non_Agriculture_Land_area: @land.Non_Agriculture_Land_area, Non_Agriculture_Perennial_Water_Area: @land.Non_Agriculture_Perennial_Water_Area, Non_Agriculture_Temporary_Water_Area: @land.Non_Agriculture_Temporary_Water_Area, Permanent_Pastures: @land.Permanent_Pastures, Total_Uncultivable_Land: @land.Total_Uncultivable_Land, Tree_Crops: @land.Tree_Crops } }
     assert_redirected_to land_url(@land)
   end
 

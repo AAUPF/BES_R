@@ -1,0 +1,237 @@
+<%= form_with(model: production_productivity1, local: true) do |form| %>
+  <% if production_productivity1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(production_productivity1.errors.count, "error") %> prohibited this production_productivity1 from being saved:</h2>
+
+      <ul>
+      <% production_productivity1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Cereals %>
+    <%= form.text_field :Total_Cereals %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Rice %>
+    <%= form.text_field :Total_Rice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Autumn_Rice %>
+    <%= form.text_field :Autumn_Rice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Aghani_Rice %>
+    <%= form.text_field :Aghani_Rice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Summer_Rice %>
+    <%= form.text_field :Summer_Rice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Wheat %>
+    <%= form.text_field :Wheat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Maize %>
+    <%= form.text_field :Total_Maize %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Kharif_Maize %>
+    <%= form.text_field :Kharif_Maize %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Rabi_Maize %>
+    <%= form.text_field :Rabi_Maize %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Summer_Maize %>
+    <%= form.text_field :Summer_Maize %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Coarse_Cereals %>
+    <%= form.text_field :Total_Coarse_Cereals %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Barley %>
+    <%= form.text_field :Barley %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Jowar %>
+    <%= form.text_field :Jowar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Bajra %>
+    <%= form.text_field :Bajra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Ragi %>
+    <%= form.text_field :Ragi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Small_Millets %>
+    <%= form.text_field :Small_Millets %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Pulses %>
+    <%= form.text_field :Total_Pulses %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Kharif_Pulses %>
+    <%= form.text_field :Total_Kharif_Pulses %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Urad %>
+    <%= form.text_field :Urad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Bhadai_Moong %>
+    <%= form.text_field :Bhadai_Moong %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Kulthi %>
+    <%= form.text_field :Kulthi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Ghagra %>
+    <%= form.text_field :Ghagra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Other_Kharif_Pulses %>
+    <%= form.text_field :Other_Kharif_Pulses %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Rabi_Pulses %>
+    <%= form.text_field :Total_Rabi_Pulses %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Arhar_Tur %>
+    <%= form.text_field :Arhar_Tur %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Gram %>
+    <%= form.text_field :Gram %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Lentil %>
+    <%= form.text_field :Lentil %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pea %>
+    <%= form.text_field :Pea %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Khesari %>
+    <%= form.text_field :Khesari %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Summer_Moong %>
+    <%= form.text_field :Summer_Moong %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Other_Rabi_Pulses %>
+    <%= form.text_field :Other_Rabi_Pulses %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Oilseeds %>
+    <%= form.text_field :Total_Oilseeds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Castor_seed %>
+    <%= form.text_field :Castor_seed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Safflower_Kusum %>
+    <%= form.text_field :Safflower_Kusum %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Sesamum %>
+    <%= form.text_field :Sesamum %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Sunflower %>
+    <%= form.text_field :Sunflower %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mustard %>
+    <%= form.text_field :Mustard %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Linseed %>
+    <%= form.text_field :Linseed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Ground_Nut %>
+    <%= form.text_field :Ground_Nut %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Fibre_Crops %>
+    <%= form.text_field :Total_Fibre_Crops %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Jute %>
+    <%= form.text_field :Jute %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mesta %>
+    <%= form.text_field :Mesta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Sugarcane %>
+    <%= form.text_field :Sugarcane %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module CroppingPatternsHelper
+end

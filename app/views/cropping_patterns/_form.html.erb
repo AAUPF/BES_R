@@ -1,0 +1,57 @@
+<%= form_with(model: cropping_pattern, local: true) do |form| %>
+  <% if cropping_pattern.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cropping_pattern.errors.count, "error") %> prohibited this cropping_pattern from being saved:</h2>
+
+      <ul>
+      <% cropping_pattern.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Food_grains %>
+    <%= form.text_field :Food_grains %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cereals %>
+    <%= form.text_field :Cereals %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pulses %>
+    <%= form.text_field :Pulses %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Oil_seeds %>
+    <%= form.text_field :Oil_seeds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Fibre_Crops %>
+    <%= form.text_field :Fibre_Crops %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Sugarcane %>
+    <%= form.text_field :Sugarcane %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Area %>
+    <%= form.text_field :Total_Area %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

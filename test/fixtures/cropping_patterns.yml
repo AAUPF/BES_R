@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: 1
+  Food_grains: 1.5
+  Cereals: 1.5
+  Pulses: 1.5
+  Oil_seeds: 1.5
+  Fibre_Crops: 1.5
+  Sugarcane: 1.5
+  Total_Area: 1.5
+
+two:
+  Year: 1
+  Food_grains: 1.5
+  Cereals: 1.5
+  Pulses: 1.5
+  Oil_seeds: 1.5
+  Fibre_Crops: 1.5
+  Sugarcane: 1.5
+  Total_Area: 1.5

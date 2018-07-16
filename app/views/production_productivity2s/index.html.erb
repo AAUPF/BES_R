@@ -1,0 +1,113 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Production Productivity2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Total cereals</th>
+      <th>Total rice</th>
+      <th>Autumn rice</th>
+      <th>Aghani rice</th>
+      <th>Summer rice</th>
+      <th>Wheat</th>
+      <th>Total maize</th>
+      <th>Kharif maize</th>
+      <th>Rabi maize</th>
+      <th>Summer maize</th>
+      <th>Total coarse cereals</th>
+      <th>Barley</th>
+      <th>Jowar</th>
+      <th>Bajra</th>
+      <th>Ragi</th>
+      <th>Small millets</th>
+      <th>Total pulses</th>
+      <th>Total kharif pulses</th>
+      <th>Urad</th>
+      <th>Bhadai moong</th>
+      <th>Kulthi</th>
+      <th>Ghagra</th>
+      <th>Other kharif pulses</th>
+      <th>Total rabi pulses</th>
+      <th>Arhar tur</th>
+      <th>Gram</th>
+      <th>Lentil</th>
+      <th>Pea</th>
+      <th>Khesari</th>
+      <th>Summer moong</th>
+      <th>Other rabi pulses</th>
+      <th>Total oilseeds</th>
+      <th>Castor seed</th>
+      <th>Safflower kusum</th>
+      <th>Sesamum</th>
+      <th>Sunflower</th>
+      <th>Mustard</th>
+      <th>Linseed</th>
+      <th>Ground nut</th>
+      <th>Total fibre crops</th>
+      <th>Jute</th>
+      <th>Mesta</th>
+      <th>Sugarcane</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @production_productivity2s.each do |production_productivity2| %>
+      <tr>
+        <td><%= production_productivity2.Year %></td>
+        <td><%= production_productivity2.Total_Cereals %></td>
+        <td><%= production_productivity2.Total_Rice %></td>
+        <td><%= production_productivity2.Autumn_Rice %></td>
+        <td><%= production_productivity2.Aghani_Rice %></td>
+        <td><%= production_productivity2.Summer_Rice %></td>
+        <td><%= production_productivity2.Wheat %></td>
+        <td><%= production_productivity2.Total_Maize %></td>
+        <td><%= production_productivity2.Kharif_Maize %></td>
+        <td><%= production_productivity2.Rabi_Maize %></td>
+        <td><%= production_productivity2.Summer_Maize %></td>
+        <td><%= production_productivity2.Total_Coarse_Cereals %></td>
+        <td><%= production_productivity2.Barley %></td>
+        <td><%= production_productivity2.Jowar %></td>
+        <td><%= production_productivity2.Bajra %></td>
+        <td><%= production_productivity2.Ragi %></td>
+        <td><%= production_productivity2.Small_Millets %></td>
+        <td><%= production_productivity2.Total_Pulses %></td>
+        <td><%= production_productivity2.Total_Kharif_Pulses %></td>
+        <td><%= production_productivity2.Urad %></td>
+        <td><%= production_productivity2.Bhadai_Moong %></td>
+        <td><%= production_productivity2.Kulthi %></td>
+        <td><%= production_productivity2.Ghagra %></td>
+        <td><%= production_productivity2.Other_Kharif_Pulses %></td>
+        <td><%= production_productivity2.Total_Rabi_Pulses %></td>
+        <td><%= production_productivity2.Arhar_Tur %></td>
+        <td><%= production_productivity2.Gram %></td>
+        <td><%= production_productivity2.Lentil %></td>
+        <td><%= production_productivity2.Pea %></td>
+        <td><%= production_productivity2.Khesari %></td>
+        <td><%= production_productivity2.Summer_Moong %></td>
+        <td><%= production_productivity2.Other_Rabi_Pulses %></td>
+        <td><%= production_productivity2.Total_Oilseeds %></td>
+        <td><%= production_productivity2.Castor_seed %></td>
+        <td><%= production_productivity2.Safflower_Kusum %></td>
+        <td><%= production_productivity2.Sesamum %></td>
+        <td><%= production_productivity2.Sunflower %></td>
+        <td><%= production_productivity2.Mustard %></td>
+        <td><%= production_productivity2.Linseed %></td>
+        <td><%= production_productivity2.Ground_Nut %></td>
+        <td><%= production_productivity2.Total_Fibre_Crops %></td>
+        <td><%= production_productivity2.Jute %></td>
+        <td><%= production_productivity2.Mesta %></td>
+        <td><%= production_productivity2.Sugarcane %></td>
+        <td><%= link_to 'Show', production_productivity2 %></td>
+        <td><%= link_to 'Edit', edit_production_productivity2_path(production_productivity2) %></td>
+        <td><%= link_to 'Destroy', production_productivity2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Production Productivity2', new_production_productivity2_path %>
