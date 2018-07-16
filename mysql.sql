@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 13, 2018 at 02:20 PM
+-- Generation Time: Jul 16, 2018 at 12:25 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -13,6 +13,39 @@ SET time_zone = "+00:00";
 --
 -- Database: `newdata`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `agricultural_credit1s`
+--
+
+DROP TABLE IF EXISTS `agricultural_credit1s`;
+CREATE TABLE `agricultural_credit1s` (
+  `id` bigint(20) NOT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `Commercial_Bank_Target` float DEFAULT NULL,
+  `Commercial_Bank_Achievement` float DEFAULT NULL,
+  `RRBs_Target` float DEFAULT NULL,
+  `RRBs_Achievement` float DEFAULT NULL,
+  `CCBs_Target` float DEFAULT NULL,
+  `CCBs_Achievement` float DEFAULT NULL,
+  `Total_Target` float DEFAULT NULL,
+  `Total_Achievement` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `agricultural_credit1s`
+--
+
+INSERT INTO `agricultural_credit1s` (`id`, `Year`, `Commercial_Bank_Target`, `Commercial_Bank_Achievement`, `RRBs_Target`, `RRBs_Achievement`, `CCBs_Target`, `CCBs_Achievement`, `Total_Target`, `Total_Achievement`, `created_at`, `updated_at`) VALUES
+(1, 2012, 14674, 13203, 8407, 8035, 2319, 328, 25401, 21566, '2018-07-13 15:21:44', '2018-07-13 15:21:44'),
+(2, 2013, 18709, 17786, 10777, 10676, 800, 307, 30286, 28770, '2018-07-13 15:21:44', '2018-07-13 15:21:44'),
+(3, 2014, 22191, 21260, 12809, 13058, 1000, 362, 36000, 34680, '2018-07-13 15:21:44', '2018-07-13 15:21:44'),
+(4, 2015, 26554, 24957, 14946, 15135, 1000, 1258, 42500, 41350, '2018-07-13 15:21:44', '2018-07-13 15:21:44'),
+(5, 2016, 28317, 25004, 18682, 14247, 1000, 1825, 48000, 41076, '2018-07-13 15:21:44', '2018-07-13 15:21:44');
 
 -- --------------------------------------------------------
 
@@ -547,6 +580,38 @@ INSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cropping_patterns`
+--
+
+DROP TABLE IF EXISTS `cropping_patterns`;
+CREATE TABLE `cropping_patterns` (
+  `id` bigint(20) NOT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `Food_grains` float DEFAULT NULL,
+  `Cereals` float DEFAULT NULL,
+  `Pulses` float DEFAULT NULL,
+  `Oil_seeds` float DEFAULT NULL,
+  `Fibre_Crops` float DEFAULT NULL,
+  `Sugarcane` float DEFAULT NULL,
+  `Total_Area` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `cropping_patterns`
+--
+
+INSERT INTO `cropping_patterns` (`id`, `Year`, `Food_grains`, `Cereals`, `Pulses`, `Oil_seeds`, `Fibre_Crops`, `Sugarcane`, `Total_Area`, `created_at`, `updated_at`) VALUES
+(1, 2012, 93.02, 85.9, 7.11, 1.59, 1.94, 3.46, 100, '2018-07-16 09:08:48', '2018-07-16 09:08:48'),
+(2, 2013, 92.89, 85.8, 7.08, 1.74, 1.71, 3.66, 100, '2018-07-16 09:08:48', '2018-07-16 09:08:48'),
+(3, 2014, 93.25, 86.14, 7.09, 1.63, 1.58, 3.56, 100, '2018-07-16 09:08:48', '2018-07-16 09:08:48'),
+(4, 2015, 93.27, 86.18, 7.07, 1.69, 1.58, 3.46, 100, '2018-07-16 09:08:48', '2018-07-16 09:08:48'),
+(5, 2016, 93.47, 86.57, 6.9, 1.52, 1.66, 3.35, 100, '2018-07-16 09:08:48', '2018-07-16 09:08:48');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `hhs`
 --
 
@@ -608,16 +673,69 @@ DROP TABLE IF EXISTS `lands`;
 CREATE TABLE `lands` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
-  `Geographical_Area` float DEFAULT NULL,
+  `Geographical_area` float DEFAULT NULL,
   `Forest` float DEFAULT NULL,
-  `Barren_and_Unculturable_land` float DEFAULT NULL,
-  `Non_Agriculture_Land_Area` float DEFAULT NULL,
-  `Non_Agriculture_Perennial` float DEFAULT NULL,
-  `Non_Agriculture_Temporary` float DEFAULT NULL,
+  `Barren_unculturable_land` float DEFAULT NULL,
+  `Non_Agriculture_Land_area` float DEFAULT NULL,
+  `Non_Agriculture_Perennial_Water_Area` float DEFAULT NULL,
+  `Non_Agriculture_Temporary_Water_Area` float DEFAULT NULL,
   `Culturable_Waste_Land` float DEFAULT NULL,
+  `Permanent_Pastures` float DEFAULT NULL,
+  `Tree_Crops` float DEFAULT NULL,
+  `Fallow_land` float DEFAULT NULL,
+  `Current_Fallow` float DEFAULT NULL,
+  `Total_Uncultivable_Land` float DEFAULT NULL,
+  `Net_Area_Sown` float DEFAULT NULL,
+  `Gross_Crop_Area` float DEFAULT NULL,
+  `Cropping_Intensity` float DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `lands`
+--
+
+INSERT INTO `lands` (`id`, `Districts`, `Geographical_area`, `Forest`, `Barren_unculturable_land`, `Non_Agriculture_Land_area`, `Non_Agriculture_Perennial_Water_Area`, `Non_Agriculture_Temporary_Water_Area`, `Culturable_Waste_Land`, `Permanent_Pastures`, `Tree_Crops`, `Fallow_land`, `Current_Fallow`, `Total_Uncultivable_Land`, `Net_Area_Sown`, `Gross_Crop_Area`, `Cropping_Intensity`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 317.2, 0.1, 12.4, 67.8, 10.3, 2.1, 0.7, 0.1, 1.03, 1.54, 63, 158.9, 158.2, 202.7, 1.28, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(2, 'Nalanda', 232.7, 4.6, 1.2, 35.9, 2.5, 7.1, 0.2, 0.03, 1.31, 0.17, 0.5, 53.46, 179.3, 225, 1.25, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(3, 'Bhojpur', 237.3, 0, 6.7, 30.3, 2.8, 1.5, 0.6, 0.06, 2.07, 2.36, 14, 60.43, 176.9, 214.2, 1.21, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(4, 'Buxar', 167, 0, 2.2, 13.2, 3.2, 1.1, 0.6, 0.02, 0.78, 0.56, 0.58, 22.28, 144.7, 200.5, 1.39, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(5, 'Rohtas', 390.7, 66.7, 16.8, 39.4, 9, 0.6, 1.1, 0.09, 2.92, 0.7, 6.05, 143.3, 247.3, 362.5, 1.47, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(6, 'Kaimur', 342.4, 113, 19.3, 31.1, 2.5, 1.6, 1.9, 0.13, 0.76, 0.1, 26.39, 196.6, 145.7, 207.7, 1.42, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(7, 'Gaya', 493.7, 77.8, 27.5, 63.3, 3.8, 6.1, 3.2, 2.07, 3.92, 11.25, 110, 309, 184.6, 228.3, 1.24, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(8, 'Jehanabad', 94, 0.6, 3.2, 13.9, 0.8, 0.5, 0.1, 0.08, 0.74, 0.21, 31.77, 52.09, 41.97, 78.23, 1.86, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(9, 'Arwal', 62.6, 0, 2.2, 9.2, 0.6, 0.8, 0.1, 0.14, 0.93, 1.56, 6, 21.46, 41.18, 46.64, 1.13, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(10, 'Nawada', 248.7, 63.2, 11.2, 25.8, 3, 7, 1.1, 0.86, 0.71, 2.63, 15.15, 131.2, 117.4, 141.4, 1.2, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(11, 'Aurangabad', 330, 18.8, 16.4, 56.5, 1.7, 1.7, 1.8, 0.54, 0.65, 1.13, 26.92, 125.7, 204.2, 289.8, 1.42, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(12, 'Saran', 264.8, 0, 17.9, 28.8, 3.5, 0.2, 0.2, 0.15, 8.62, 3.62, 36.77, 99.62, 165.2, 209.8, 1.27, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(13, 'Siwan', 224.4, 0, 8.7, 29.8, 2, 1.6, 0.7, 0.15, 8.95, 1.42, 7.45, 60.66, 163.7, 226.9, 1.39, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(14, 'Gopalganj', 203.7, 0, 5.5, 31.3, 2.1, 0.5, 1.4, 0.19, 7.48, 2.33, 7.88, 58.62, 145.1, 214.9, 1.48, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(15, 'WestChamparan', 484.3, 91.8, 2.9, 71.1, 15.2, 8.7, 1.3, 1.13, 6.5, 2.2, 22.41, 223.2, 261.1, 423, 1.62, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(16, 'EastChamparan', 431.7, 0.1, 8.1, 51.6, 10.1, 15.2, 0.3, 0.42, 27.17, 2.93, 14.05, 129.8, 301.8, 448.7, 1.49, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(17, 'Muzaffarpur', 315.3, 0, 5.3, 51.5, 7.8, 4, 0.3, 0.03, 17.49, 1.34, 0.4, 88.16, 227.2, 334.2, 1.47, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(18, 'Sitamarhi', 221.8, 0, 1.8, 45.2, 2.5, 16, 0.1, 1.36, 13.95, 0.48, 12.19, 93.51, 128.3, 233.8, 1.82, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(19, 'Sheohar', 43.5, 0, 0.4, 10, 1.3, 0.2, 0, 0, 3.66, 0.82, 0.71, 17.03, 26.46, 48.92, 1.84, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(20, 'Vaishali', 201.4, 0, 24.1, 30.5, 5.8, 2, 0.1, 0.32, 9.79, 0.27, 0.23, 73.14, 128.3, 185.1, 1.84, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(21, 'Darbhanga', 254, 0, 1.3, 44.3, 9.4, 7.4, 0.1, 0.14, 12.45, 2.13, 24.89, 102, 152, 179.3, 1.18, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(22, 'Madhubani', 353.5, 0, 2.2, 71.3, 13.4, 2.2, 0.5, 1.27, 23.94, 2.9, 0.41, 118.3, 235.3, 343.6, 1.46, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(23, 'Samastipur', 262.3, 0, 3.8, 54.7, 8.2, 0.8, 0, 0.06, 8.3, 0.89, 26.53, 103.3, 159, 287.2, 1.81, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(24, 'Begusarai', 187.8, 0, 18, 30.2, 7.7, 4, 0, 0.01, 3.8, 0.81, 25, 89.5, 98.32, 154, 1.57, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(25, 'Munger', 139.7, 28.5, 11.4, 20.9, 5.8, 5.3, 0.9, 0.19, 0.61, 1.87, 24.48, 100, 39.79, 46.09, 1.16, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(26, 'Sheikhpura', 62.1, 0, 1, 7.8, 0.9, 2, 0.2, 0, 0.32, 1.62, 0.4, 14.22, 47.88, 61.71, 1.29, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(27, 'Lakhisarai', 128.6, 13.5, 7, 9.3, 1.2, 4.8, 0.7, 0.05, 0.44, 6.26, 43.79, 86.98, 41.63, 66.83, 1.61, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(28, 'Jamui', 305.2, 92.9, 28.6, 39.6, 2.2, 2.8, 10.3, 1.65, 2.13, 15.99, 61.91, 257.9, 47.32, 69, 1.46, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(29, 'Khagaria', 149.3, 0, 13.6, 19.3, 7.7, 4.1, 0.6, 0.21, 3.11, 2.16, 4.25, 55.12, 94.24, 135, 1.43, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(30, 'Bhagalpur', 254.3, 0.1, 22.4, 54.8, 6.6, 9.6, 2.3, 0.61, 6.74, 4.88, 14.01, 121.9, 132.3, 163.5, 1.24, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(31, 'Banka', 305.6, 46.3, 43, 36.9, 2.9, 3.1, 7.9, 1.06, 7.45, 11.14, 32.35, 192, 113.5, 150.8, 1.33, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(32, 'Saharsa', 164.5, 0, 10.8, 22.2, 4.8, 2.4, 0.4, 1.12, 4.41, 3.72, 16.35, 66.15, 98.4, 195.7, 1.99, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(33, 'Supaul', 238.6, 0, 20.2, 39.2, 9.8, 3.1, 1.4, 0.24, 3.12, 9.42, 0.21, 86.72, 151.8, 259, 1.71, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(34, 'Madhepura', 179.5, 0, 3.9, 26.8, 3.9, 1.2, 0, 0.05, 7.16, 1, 13.48, 57.45, 122.1, 193.8, 1.59, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(35, 'Purnia', 313.8, 0.1, 12.3, 38, 6.9, 1.6, 1.1, 0.05, 8.91, 4.65, 80.84, 154.5, 159.3, 209.3, 1.31, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(36, 'Kishanganj', 189, 0.4, 11.2, 25.9, 7.3, 2.7, 1.2, 0.41, 5.22, 3, 36.21, 93.41, 95.66, 137.1, 1.43, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(37, 'Araria', 271.7, 0.8, 5, 40.9, 6.4, 5.5, 0.5, 0.22, 19.15, 3.46, 68.11, 150.1, 121.5, 245.3, 2.02, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(38, 'Katihar', 291.3, 1.8, 22.1, 42.2, 12.1, 4.2, 0.6, 0.12, 11.12, 5.89, 12.88, 112.9, 178.3, 252.4, 1.42, '2018-07-16 08:04:24', '2018-07-16 08:04:24'),
+(39, 'Bihar', 9359, 621.6, 431.7, 1359.7, 207.4, 144.9, 44.7, 15.33, 247.8, 119.4, 888.5, 4081.2, 5278.3, 7672.9, 1.45, '2018-07-16 08:04:24', '2018-07-16 08:04:24');
 
 -- --------------------------------------------------------
 
@@ -720,6 +838,144 @@ INSERT INTO `production_and_productivity_of_rices` (`id`, `Districts`, `Area`, `
 (76, 'Araria', 115.83, 227.56, 1965, 2016, '2018-07-10 10:49:06', '2018-07-10 10:49:06'),
 (77, 'Katihar', 109.9, 242.53, 2207, 2016, '2018-07-10 10:49:06', '2018-07-10 10:49:06'),
 (78, 'Bihar', 3339.78, 8238.77, 2467, 2016, '2018-07-10 10:49:06', '2018-07-10 10:49:06');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `production_productivity1s`
+--
+
+DROP TABLE IF EXISTS `production_productivity1s`;
+CREATE TABLE `production_productivity1s` (
+  `id` bigint(20) NOT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `Total_Cereals` float DEFAULT NULL,
+  `Total_Rice` float DEFAULT NULL,
+  `Autumn_Rice` float DEFAULT NULL,
+  `Aghani_Rice` float DEFAULT NULL,
+  `Summer_Rice` float DEFAULT NULL,
+  `Wheat` float DEFAULT NULL,
+  `Total_Maize` float DEFAULT NULL,
+  `Kharif_Maize` float DEFAULT NULL,
+  `Rabi_Maize` float DEFAULT NULL,
+  `Summer_Maize` float DEFAULT NULL,
+  `Total_Coarse_Cereals` float DEFAULT NULL,
+  `Barley` float DEFAULT NULL,
+  `Jowar` float DEFAULT NULL,
+  `Bajra` float DEFAULT NULL,
+  `Ragi` float DEFAULT NULL,
+  `Small_Millets` float DEFAULT NULL,
+  `Total_Pulses` float DEFAULT NULL,
+  `Total_Kharif_Pulses` float DEFAULT NULL,
+  `Urad` float DEFAULT NULL,
+  `Bhadai_Moong` float DEFAULT NULL,
+  `Kulthi` float DEFAULT NULL,
+  `Ghagra` float DEFAULT NULL,
+  `Other_Kharif_Pulses` float DEFAULT NULL,
+  `Total_Rabi_Pulses` float DEFAULT NULL,
+  `Arhar_Tur` float DEFAULT NULL,
+  `Gram` float DEFAULT NULL,
+  `Lentil` float DEFAULT NULL,
+  `Pea` float DEFAULT NULL,
+  `Khesari` float DEFAULT NULL,
+  `Summer_Moong` float DEFAULT NULL,
+  `Other_Rabi_Pulses` float DEFAULT NULL,
+  `Total_Oilseeds` float DEFAULT NULL,
+  `Castor_seed` float DEFAULT NULL,
+  `Safflower_Kusum` float DEFAULT NULL,
+  `Sesamum` float DEFAULT NULL,
+  `Sunflower` float DEFAULT NULL,
+  `Mustard` float DEFAULT NULL,
+  `Linseed` float DEFAULT NULL,
+  `Ground_Nut` float DEFAULT NULL,
+  `Total_Fibre_Crops` float DEFAULT NULL,
+  `Jute` float DEFAULT NULL,
+  `Mesta` float DEFAULT NULL,
+  `Sugarcane` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `production_productivity1s`
+--
+
+INSERT INTO `production_productivity1s` (`id`, `Year`, `Total_Cereals`, `Total_Rice`, `Autumn_Rice`, `Aghani_Rice`, `Summer_Rice`, `Wheat`, `Total_Maize`, `Kharif_Maize`, `Rabi_Maize`, `Summer_Maize`, `Total_Coarse_Cereals`, `Barley`, `Jowar`, `Bajra`, `Ragi`, `Small_Millets`, `Total_Pulses`, `Total_Kharif_Pulses`, `Urad`, `Bhadai_Moong`, `Kulthi`, `Ghagra`, `Other_Kharif_Pulses`, `Total_Rabi_Pulses`, `Arhar_Tur`, `Gram`, `Lentil`, `Pea`, `Khesari`, `Summer_Moong`, `Other_Rabi_Pulses`, `Total_Oilseeds`, `Castor_seed`, `Safflower_Kusum`, `Sesamum`, `Sunflower`, `Mustard`, `Linseed`, `Ground_Nut`, `Total_Fibre_Crops`, `Jute`, `Mesta`, `Sugarcane`, `created_at`, `updated_at`) VALUES
+(1, 2011, 17363.7, 8237.98, 914.23, 7141.12, 182.63, 6530.96, 2557.06, 622.42, 1098.17, 836.47, 2594.71, 16.69, 2.15, 5.01, 9.39, 4.41, 521.62, 27.81, 11.87, 4.7, 8.23, 0.57, 2.45, 493.81, 42.06, 76.82, 171.61, 19.23, 92.07, 90.1, 1.93, 174.47, 0.1, 0.23, 2.25, 22.87, 127.93, 20.27, 0.83, 1738.81, 1490.7, 248.11, 17746.5, '2018-07-16 10:51:18', '2018-07-16 10:51:18'),
+(2, 2012, 17286.7, 8322.01, 960.01, 7076.17, 285.83, 6174.26, 2755.95, 926.32, 791, 1038.63, 2790.42, 15.23, 2.82, 4.84, 9.37, 2.21, 542.74, 29.5, 12.15, 7.18, 7.75, 0.78, 1.64, 513.25, 47.12, 86.19, 183.24, 19.25, 83.8, 92.13, 1.53, 182.73, 0.1, 0.08, 1.95, 22.24, 138.52, 19.05, 0.78, 1717.73, 1490.52, 227.49, 22219.7, '2018-07-16 10:51:18', '2018-07-16 10:51:18'),
+(3, 2013, 15716.3, 6649.59, 798.68, 5634.96, 215.95, 6134.68, 2904.24, 778.21, 1199.39, 926.64, 2932.03, 14.25, 1.31, 3, 7.14, 2.09, 522.02, 30.96, 14.14, 7.36, 7.83, 0.34, 1.29, 491.06, 36.46, 70.34, 196.06, 18.35, 70.55, 98.01, 1.3, 157.18, 0.15, 1.32, 1.99, 19.79, 117.14, 15.87, 0.91, 1745.08, 1498.04, 247, 17938.7, '2018-07-16 10:51:18', '2018-07-16 10:51:18'),
+(4, 2014, 14321.1, 8241.62, 1010.34, 7049.73, 181.56, 3570.21, 2478.75, 825.15, 913.78, 739.82, 2509.28, 13.43, 1.55, 3.73, 9.84, 1.98, 428.93, 33.69, 14.36, 9.23, 7.96, 0.43, 1.71, 395.24, 28.54, 57.49, 140.06, 17.31, 60.06, 90.73, 1.05, 127.01, 0.09, 0.08, 2.56, 16.64, 92.89, 14.16, 0.59, 1637.12, 1418.71, 218.41, 21117.4, '2018-07-16 10:51:18', '2018-07-16 10:51:18'),
+(5, 2015, 14087.2, 6802.22, 725.21, 5876.03, 200.98, 4736.45, 2517.1, 692.7, 1105.14, 719.26, 2548.58, 13.9, 1.71, 4.64, 9.89, 1.34, 420.78, 28.98, 12.05, 8.34, 7.21, 0.49, 0.89, 391.8, 37.13, 58.55, 140.44, 17.94, 50.99, 86.02, 0.73, 126.52, 0.04, 0.09, 2.39, 16.2, 94.39, 12.91, 0.5, 1630.6, 1308.64, 322, 18175.6, '2018-07-16 10:51:18', '2018-07-16 10:51:18'),
+(6, 2016, 18099.1, 8238.77, 949.37, 7065.07, 224.33, 5985.84, 3845.7, 624.3, 2131.51, 1089.89, 3874.5, 16.29, 1.91, 4.05, 3.46, 3.1, 461.67, 29.3, 11.49, 8.33, 7.63, 0.43, 1.43, 332.69, 33.17, 66.5, 146.88, 16.74, 55.18, 111.55, 2.35, 125.86, 0.07, 0.09, 1.78, 14.69, 97.68, 10.56, 0.99, 1571, 1356, 215, 18239.9, '2018-07-16 10:51:18', '2018-07-16 10:51:18');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `production_productivity2s`
+--
+
+DROP TABLE IF EXISTS `production_productivity2s`;
+CREATE TABLE `production_productivity2s` (
+  `id` bigint(20) NOT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `Total_Cereals` float DEFAULT NULL,
+  `Total_Rice` float DEFAULT NULL,
+  `Autumn_Rice` float DEFAULT NULL,
+  `Aghani_Rice` float DEFAULT NULL,
+  `Summer_Rice` float DEFAULT NULL,
+  `Wheat` float DEFAULT NULL,
+  `Total_Maize` float DEFAULT NULL,
+  `Kharif_Maize` float DEFAULT NULL,
+  `Rabi_Maize` float DEFAULT NULL,
+  `Summer_Maize` float DEFAULT NULL,
+  `Total_Coarse_Cereals` float DEFAULT NULL,
+  `Barley` float DEFAULT NULL,
+  `Jowar` float DEFAULT NULL,
+  `Bajra` float DEFAULT NULL,
+  `Ragi` float DEFAULT NULL,
+  `Small_Millets` float DEFAULT NULL,
+  `Total_Pulses` float DEFAULT NULL,
+  `Total_Kharif_Pulses` float DEFAULT NULL,
+  `Urad` float DEFAULT NULL,
+  `Bhadai_Moong` float DEFAULT NULL,
+  `Kulthi` float DEFAULT NULL,
+  `Ghagra` float DEFAULT NULL,
+  `Other_Kharif_Pulses` float DEFAULT NULL,
+  `Total_Rabi_Pulses` float DEFAULT NULL,
+  `Arhar_Tur` float DEFAULT NULL,
+  `Gram` float DEFAULT NULL,
+  `Lentil` float DEFAULT NULL,
+  `Pea` float DEFAULT NULL,
+  `Khesari` float DEFAULT NULL,
+  `Summer_Moong` float DEFAULT NULL,
+  `Other_Rabi_Pulses` float DEFAULT NULL,
+  `Total_Oilseeds` float DEFAULT NULL,
+  `Castor_seed` float DEFAULT NULL,
+  `Safflower_Kusum` float DEFAULT NULL,
+  `Sesamum` float DEFAULT NULL,
+  `Sunflower` float DEFAULT NULL,
+  `Mustard` float DEFAULT NULL,
+  `Linseed` float DEFAULT NULL,
+  `Ground_Nut` float DEFAULT NULL,
+  `Total_Fibre_Crops` float DEFAULT NULL,
+  `Jute` float DEFAULT NULL,
+  `Mesta` float DEFAULT NULL,
+  `Sugarcane` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `production_productivity2s`
+--
+
+INSERT INTO `production_productivity2s` (`id`, `Year`, `Total_Cereals`, `Total_Rice`, `Autumn_Rice`, `Aghani_Rice`, `Summer_Rice`, `Wheat`, `Total_Maize`, `Kharif_Maize`, `Rabi_Maize`, `Summer_Maize`, `Total_Coarse_Cereals`, `Barley`, `Jowar`, `Bajra`, `Ragi`, `Small_Millets`, `Total_Pulses`, `Total_Kharif_Pulses`, `Urad`, `Bhadai_Moong`, `Kulthi`, `Ghagra`, `Other_Kharif_Pulses`, `Total_Rabi_Pulses`, `Arhar_Tur`, `Gram`, `Lentil`, `Pea`, `Khesari`, `Summer_Moong`, `Other_Rabi_Pulses`, `Total_Oilseeds`, `Castor_seed`, `Safflower_Kusum`, `Sesamum`, `Sunflower`, `Mustard`, `Linseed`, `Ground_Nut`, `Total_Fibre_Crops`, `Jute`, `Mesta`, `Sugarcane`, `created_at`, `updated_at`) VALUES
+(1, 2011, 17363.7, 8237.98, 914.23, 7141.12, 182.63, 6530.96, 2557.06, 622.42, 1098.17, 836.47, 2594.71, 16.69, 2.15, 5.01, 9.39, 4.41, 521.62, 27.81, 11.87, 4.7, 8.23, 0.57, 2.45, 493.81, 42.06, 76.82, 171.61, 19.23, 92.07, 90.1, 1.93, 174.47, 0.1, 0.23, 2.25, 22.87, 127.93, 20.27, 0.83, 1738.81, 1490.7, 248.11, 17746.5, '2018-07-16 11:35:25', '2018-07-16 11:35:25'),
+(2, 2012, 17286.7, 8322.01, 960.01, 7076.17, 285.83, 6174.26, 2755.95, 926.32, 791, 1038.63, 2790.42, 15.23, 2.82, 4.84, 9.37, 2.21, 542.74, 29.5, 12.15, 7.18, 7.75, 0.78, 1.64, 513.25, 47.12, 86.19, 183.24, 19.25, 83.8, 92.13, 1.53, 182.73, 0.1, 0.08, 1.95, 22.24, 138.52, 19.05, 0.78, 1717.73, 1490.52, 227.49, 22219.7, '2018-07-16 11:35:25', '2018-07-16 11:35:25'),
+(3, 2013, 15716.3, 6649.59, 798.68, 5634.96, 215.95, 6134.68, 2904.24, 778.21, 1199.39, 926.64, 2932.03, 14.25, 1.31, 3, 7.14, 2.09, 522.02, 30.96, 14.14, 7.36, 7.83, 0.34, 1.29, 491.06, 36.46, 70.34, 196.06, 18.35, 70.55, 98.01, 1.3, 157.18, 0.15, 1.32, 1.99, 19.79, 117.14, 15.87, 0.91, 1745.08, 1498.04, 247, 17938.7, '2018-07-16 11:35:25', '2018-07-16 11:35:25'),
+(4, 2014, 14321.1, 8241.62, 1010.34, 7049.73, 181.56, 3570.21, 2478.75, 825.15, 913.78, 739.82, 2509.28, 13.43, 1.55, 3.73, 9.84, 1.98, 428.93, 33.69, 14.36, 9.23, 7.96, 0.43, 1.71, 395.24, 28.54, 57.49, 140.06, 17.31, 60.06, 90.73, 1.05, 127.01, 0.09, 0.08, 2.56, 16.64, 92.89, 14.16, 0.59, 1637.12, 1418.71, 218.41, 21117.4, '2018-07-16 11:35:25', '2018-07-16 11:35:25'),
+(5, 2015, 14087.2, 6802.22, 725.21, 5876.03, 200.98, 4736.45, 2517.1, 692.7, 1105.14, 719.26, 2548.58, 13.9, 1.71, 4.64, 9.89, 1.34, 420.78, 28.98, 12.05, 8.34, 7.21, 0.49, 0.89, 391.8, 37.13, 58.55, 140.44, 17.94, 50.99, 86.02, 0.73, 126.52, 0.04, 0.09, 2.39, 16.2, 94.39, 12.91, 0.5, 1630.6, 1308.64, 322, 18175.6, '2018-07-16 11:35:25', '2018-07-16 11:35:25'),
+(6, 2016, 18099.1, 8238.77, 949.37, 7065.07, 224.33, 5985.84, 3845.7, 624.3, 2131.51, 1089.89, 3874.5, 16.29, 1.91, 4.05, 3.46, 3.1, 461.67, 29.3, 11.49, 8.33, 7.63, 0.43, 1.43, 332.69, 33.17, 66.5, 146.88, 16.74, 55.18, 111.55, 2.35, 125.86, 0.07, 0.09, 1.78, 14.69, 97.68, 10.56, 0.99, 1571, 1356, 215, 18239.9, '2018-07-16 11:35:25', '2018-07-16 11:35:25');
 
 -- --------------------------------------------------------
 
@@ -1375,8 +1631,7 @@ INSERT INTO `rainfall1s` (`id`, `Winter_Rain`, `Hot_Weather_Rain`, `Southwest_Mo
 (14, 33.3, 96.1, 788.3, 41.9, 959.6, 2014, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
 (15, 11.7, 89.3, 690.7, 4.3, 796, 2015, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
 (16, 7.5, 72.6, 937, 54.5, 1071.6, 2016, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
-(17, 0.4, 103.1, 843.2, 0, 946.8, 2017, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
-(18, 16.2, 74.7, 848.5, 60.2, 999.7, 20171, '2018-07-13 06:55:14', '2018-07-13 06:57:01');
+(17, 0.4, 103.1, 843.2, 0, 946.8, 2017, '2018-07-13 06:55:14', '2018-07-13 06:55:14');
 
 -- --------------------------------------------------------
 
@@ -1446,7 +1701,7 @@ INSERT INTO `rainfall2s` (`id`, `Districts`, `Winter_Rain`, `Hot_Weather_Rain`, 
 (41, 'Nalanda', 0, 26.2, 653.9, 0, 680.1, 2017, '2018-07-12 08:37:04', '2018-07-12 08:37:04'),
 (42, 'Bhojpur', 0, 39, 727.4, 0, 766.4, 2017, '2018-07-12 08:37:04', '2018-07-12 08:37:04'),
 (43, 'Buxar', 0, 28.4, 655.5, 0, 683.9, 2017, '2018-07-12 08:37:04', '2018-07-12 08:37:04'),
-(44, 'Rohats', 0, 11, 739, 0, 750, 2017, '2018-07-12 08:37:04', '2018-07-12 08:37:04'),
+(44, 'Rohtas', 0, 11, 739, 0, 750, 2017, '2018-07-12 08:37:04', '2018-07-12 08:37:04'),
 (45, 'Kaimur', 0, 2.8, 818.3, 0, 821.1, 2017, '2018-07-12 08:37:04', '2018-07-12 08:37:04'),
 (46, 'Gaya', 0, 7.9, 790.4, 0, 798.3, 2017, '2018-07-12 08:37:04', '2018-07-12 08:37:04'),
 (47, 'Jehanabad', 0, 11.3, 617.6, 0, 628.9, 2017, '2018-07-12 08:37:04', '2018-07-12 08:37:04'),
@@ -1642,7 +1897,14 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180712104830'),
 ('20180712105700'),
 ('20180713065205'),
-('20180713065426');
+('20180713065426'),
+('20180713151755'),
+('20180713152050'),
+('20180716080201'),
+('20180716090710'),
+('20180716104647'),
+('20180716111815'),
+('20180716113436');
 
 -- --------------------------------------------------------
 
@@ -1677,6 +1939,12 @@ CREATE TABLE `tests` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `agricultural_credit1s`
+--
+ALTER TABLE `agricultural_credit1s`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `agricultural_credit2s`
@@ -1733,6 +2001,12 @@ ALTER TABLE `ar_internal_metadata`
   ADD PRIMARY KEY (`key`);
 
 --
+-- Indexes for table `cropping_patterns`
+--
+ALTER TABLE `cropping_patterns`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `hhs`
 --
 ALTER TABLE `hhs`
@@ -1754,6 +2028,18 @@ ALTER TABLE `lands`
 -- Indexes for table `production_and_productivity_of_rices`
 --
 ALTER TABLE `production_and_productivity_of_rices`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `production_productivity1s`
+--
+ALTER TABLE `production_productivity1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `production_productivity2s`
+--
+ALTER TABLE `production_productivity2s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1833,6 +2119,12 @@ ALTER TABLE `tests`
 --
 
 --
+-- AUTO_INCREMENT for table `agricultural_credit1s`
+--
+ALTER TABLE `agricultural_credit1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `agricultural_credit2s`
 --
 ALTER TABLE `agricultural_credit2s`
@@ -1881,6 +2173,12 @@ ALTER TABLE `animal_husbandry5s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `cropping_patterns`
+--
+ALTER TABLE `cropping_patterns`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `hhs`
 --
 ALTER TABLE `hhs`
@@ -1896,13 +2194,25 @@ ALTER TABLE `land1s`
 -- AUTO_INCREMENT for table `lands`
 --
 ALTER TABLE `lands`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `production_and_productivity_of_rices`
 --
 ALTER TABLE `production_and_productivity_of_rices`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
+--
+-- AUTO_INCREMENT for table `production_productivity1s`
+--
+ALTER TABLE `production_productivity1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `production_productivity2s`
+--
+ALTER TABLE `production_productivity2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `production_productivity7s`
@@ -1944,7 +2254,7 @@ ALTER TABLE `production_productivity12s`
 -- AUTO_INCREMENT for table `rainfall1s`
 --
 ALTER TABLE `rainfall1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `rainfall2s`
