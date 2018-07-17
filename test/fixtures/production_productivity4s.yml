@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Fruits: MyString
+  Area: 1.5
+  Production: 1.5
+  Year: 1
+
+two:
+  Fruits: MyString
+  Area: 1.5
+  Production: 1.5
+  Year: 1

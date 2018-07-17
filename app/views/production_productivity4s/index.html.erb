@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Production Productivity4s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fruits</th>
+      <th>Area</th>
+      <th>Production</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @production_productivity4s.each do |production_productivity4| %>
+      <tr>
+        <td><%= production_productivity4.Fruits %></td>
+        <td><%= production_productivity4.Area %></td>
+        <td><%= production_productivity4.Production %></td>
+        <td><%= production_productivity4.Year %></td>
+        <td><%= link_to 'Show', production_productivity4 %></td>
+        <td><%= link_to 'Edit', edit_production_productivity4_path(production_productivity4) %></td>
+        <td><%= link_to 'Destroy', production_productivity4, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Production Productivity4', new_production_productivity4_path %>

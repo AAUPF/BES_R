@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_17_112504) do
+ActiveRecord::Schema.define(version: 2018_07_17_142120) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -423,6 +423,15 @@ ActiveRecord::Schema.define(version: 2018_07_17_112504) do
     t.float "Jute"
     t.float "Mesta"
     t.float "Sugarcane"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "production_productivity4s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Fruits"
+    t.float "Area"
+    t.float "Production"
+    t.integer "Year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

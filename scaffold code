@@ -1,1 +1,1 @@
-rails g scaffold animal_husbandry6 Districts:string Crossbred_Cow:float	Local_Cow:float	Total_Cow:float	Buffalo:float	Total_Cow_Buffalo:float	Goat:float	Total_Production:float	Year:integer
+rails g scaffold production_productivity4 Fruits:string	Area:float	Production:float	Year:integer 
