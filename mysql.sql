@@ -1,17 +1,23 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.6.6deb5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 17, 2018 at 12:20 PM
--- Server version: 5.6.38
--- PHP Version: 7.2.1
+-- Host: localhost:3306
+-- Generation Time: Jul 17, 2018 at 08:16 PM
+-- Server version: 5.7.22-0ubuntu18.04.1
+-- PHP Version: 7.2.7-0ubuntu0.18.04.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
--- Database: `newdata`
+-- Database: `meal_plan_development1`
 --
 
 -- --------------------------------------------------------
@@ -1455,6 +1461,84 @@ INSERT INTO `production_productivity2s` (`id`, `Year`, `Total_Cereals`, `Total_R
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `production_productivity4s`
+--
+
+DROP TABLE IF EXISTS `production_productivity4s`;
+CREATE TABLE `production_productivity4s` (
+  `id` bigint(20) NOT NULL,
+  `Fruits` varchar(255) DEFAULT NULL,
+  `Area` float DEFAULT NULL,
+  `Production` float DEFAULT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `production_productivity4s`
+--
+
+INSERT INTO `production_productivity4s` (`id`, `Fruits`, `Area`, `Production`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Mango', 135.9, 1343.3, 2012, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(2, 'Guava', 29.7, 238.1, 2012, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(3, 'Litchi', 31.1, 233.9, 2012, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(4, 'Banana', 33.6, 1414, 2012, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(5, 'Pineapple', 4.2, 113.9, 2012, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(6, 'Papaya', 1.9, 48.5, 2012, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(7, 'Amla', 1.6, 14.8, 2012, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(8, 'Watermelon', 1.4, 30.7, 2012, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(9, 'Muskmelon', 1.1, 14.2, 2012, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(10, 'Others', 32.1, 297.1, 2012, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(11, 'Total', 272.6, 3748.5, 2012, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(12, 'Mango', 148.8, 1477.4, 2013, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(13, 'Guava', 30, 373.7, 2013, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(14, 'Litchi', 32.2, 258.7, 2013, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(15, 'Banana', 35.3, 1723.9, 2013, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(16, 'Pineapple', 4.2, 113.9, 2013, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(17, 'Papaya', 1.8, 62, 2013, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(18, 'Amla', 1.7, 16, 2013, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(19, 'Watermelon', 1.4, 30.7, 2013, '2018-07-17 14:22:19', '2018-07-17 14:22:19'),
+(20, 'Muskmelon', 1.1, 14.2, 2013, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(21, 'Others', 32.1, 323.6, 2013, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(22, 'Total', 288.4, 4374.3, 2013, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(23, 'Mango', 148.4, 1271.6, 2014, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(24, 'Guava', 29.4, 370, 2014, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(25, 'Litchi', 32.2, 197.7, 2014, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(26, 'Banana', 34.6, 1526.5, 2014, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(27, 'Pineapple', 4.2, 116.4, 2014, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(28, 'Papaya', 1.9, 65.3, 2014, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(29, 'Amla', 1.7, 15.5, 2014, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(30, 'Watermelon', 2, 29.9, 2014, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(31, 'Muskmelon', 1.5, 12.8, 2014, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(32, 'Others', 32.1, 310.6, 2014, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(33, 'Total', 288, 3916.3, 2014, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(34, 'Mango', 149.1, 1464.9, 2015, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(35, 'Guava', 29.3, 370, 2015, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(36, 'Litchi', 32.1, 198, 2015, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(37, 'Banana', 34.8, 1535.3, 2015, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(38, 'Pineapple', 4.3, 116.3, 2015, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(39, 'Papaya', 1.6, 53.4, 2015, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(40, 'Amla', 1.5, 13.5, 2015, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(41, 'Watermelon', 1.4, 29.7, 2015, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(42, 'Muskmelon', 1.7, 12.9, 2015, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(43, 'Others', 32.4, 310.9, 2015, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(44, 'Total', 288.3, 4105, 2015, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(45, 'Mango', 150, 1472.4, 2016, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(46, 'Guava', 29.4, 370.4, 2016, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(47, 'Litchi', 32.2, 198.6, 2016, '2018-07-17 14:22:20', '2018-07-17 14:22:20'),
+(48, 'Banana', 35.1, 1527.8, 2016, '2018-07-17 14:22:21', '2018-07-17 14:22:21'),
+(49, 'Pineapple', 4.3, 116.6, 2016, '2018-07-17 14:22:21', '2018-07-17 14:22:21'),
+(50, 'Papaya', 1.6, 43.9, 2016, '2018-07-17 14:22:21', '2018-07-17 14:22:21'),
+(51, 'Amla', 0.9, 14.2, 2016, '2018-07-17 14:22:21', '2018-07-17 14:22:21'),
+(52, 'Watermelon', 1.4, 29.7, 2016, '2018-07-17 14:22:21', '2018-07-17 14:22:21'),
+(53, 'Muskmelon', 1.7, 12.9, 2016, '2018-07-17 14:22:21', '2018-07-17 14:22:21'),
+(54, 'Others', 32.4, 311, 2016, '2018-07-17 14:22:21', '2018-07-17 14:22:21'),
+(55, 'Total', 288.9, 4097.5, 2016, '2018-07-17 14:22:21', '2018-07-17 14:22:21');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `production_productivity7s`
 --
 
@@ -2390,7 +2474,8 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180717103019'),
 ('20180717103322'),
 ('20180717110138'),
-('20180717112504');
+('20180717112504'),
+('20180717142120');
 
 -- --------------------------------------------------------
 
@@ -2565,6 +2650,12 @@ ALTER TABLE `production_productivity2s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `production_productivity4s`
+--
+ALTER TABLE `production_productivity4s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `production_productivity7s`
 --
 ALTER TABLE `production_productivity7s`
@@ -2645,195 +2736,171 @@ ALTER TABLE `tests`
 --
 ALTER TABLE `agricultural_credit1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT for table `agricultural_credit2s`
 --
 ALTER TABLE `agricultural_credit2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
-
 --
 -- AUTO_INCREMENT for table `agricultural_inputs2s`
 --
 ALTER TABLE `agricultural_inputs2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
 --
 -- AUTO_INCREMENT for table `agricultural_inputs3s`
 --
 ALTER TABLE `agricultural_inputs3s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `agricultural_inputs4s`
 --
 ALTER TABLE `agricultural_inputs4s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
 --
 -- AUTO_INCREMENT for table `agricultural_inputs5s`
 --
 ALTER TABLE `agricultural_inputs5s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `agricultural_inputs6s`
 --
 ALTER TABLE `agricultural_inputs6s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
 --
 -- AUTO_INCREMENT for table `agricultural_inputs7s`
 --
 ALTER TABLE `agricultural_inputs7s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
 --
 -- AUTO_INCREMENT for table `agricultural_inputs8s`
 --
 ALTER TABLE `agricultural_inputs8s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `animal_husbandry1s`
 --
 ALTER TABLE `animal_husbandry1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `animal_husbandry2s`
 --
 ALTER TABLE `animal_husbandry2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT for table `animal_husbandry3s`
 --
 ALTER TABLE `animal_husbandry3s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT for table `animal_husbandry4s`
 --
 ALTER TABLE `animal_husbandry4s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
 --
 -- AUTO_INCREMENT for table `animal_husbandry5s`
 --
 ALTER TABLE `animal_husbandry5s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
-
 --
 -- AUTO_INCREMENT for table `animal_husbandry6s`
 --
 ALTER TABLE `animal_husbandry6s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
-
 --
 -- AUTO_INCREMENT for table `cropping_patterns`
 --
 ALTER TABLE `cropping_patterns`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT for table `hhs`
 --
 ALTER TABLE `hhs`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `land1s`
 --
 ALTER TABLE `land1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT for table `lands`
 --
 ALTER TABLE `lands`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
 --
 -- AUTO_INCREMENT for table `production_and_productivity_of_rices`
 --
 ALTER TABLE `production_and_productivity_of_rices`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
 --
 -- AUTO_INCREMENT for table `production_productivity1s`
 --
 ALTER TABLE `production_productivity1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `production_productivity2s`
 --
 ALTER TABLE `production_productivity2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
+--
+-- AUTO_INCREMENT for table `production_productivity4s`
+--
+ALTER TABLE `production_productivity4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 --
 -- AUTO_INCREMENT for table `production_productivity7s`
 --
 ALTER TABLE `production_productivity7s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
 --
 -- AUTO_INCREMENT for table `production_productivity8s`
 --
 ALTER TABLE `production_productivity8s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
 --
 -- AUTO_INCREMENT for table `production_productivity9s`
 --
 ALTER TABLE `production_productivity9s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
 --
 -- AUTO_INCREMENT for table `production_productivity10s`
 --
 ALTER TABLE `production_productivity10s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
 --
 -- AUTO_INCREMENT for table `production_productivity11s`
 --
 ALTER TABLE `production_productivity11s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
 --
 -- AUTO_INCREMENT for table `production_productivity12s`
 --
 ALTER TABLE `production_productivity12s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
-
 --
 -- AUTO_INCREMENT for table `rainfall1s`
 --
 ALTER TABLE `rainfall1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
 --
 -- AUTO_INCREMENT for table `rainfall2s`
 --
 ALTER TABLE `rainfall2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
 --
 -- AUTO_INCREMENT for table `rainfalls`
 --
 ALTER TABLE `rainfalls`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
 --
 -- AUTO_INCREMENT for table `test1s`
 --
 ALTER TABLE `test1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `tests`
 --
 ALTER TABLE `tests`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
