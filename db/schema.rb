@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_17_081022) do
+ActiveRecord::Schema.define(version: 2018_07_17_112504) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -176,9 +176,9 @@ ActiveRecord::Schema.define(version: 2018_07_17_081022) do
 
   create_table "animal_husbandry3s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
-    t.string "Animals_Treated_in_Lakh"
-    t.string "Immunization_in_Lakh"
-    t.string "Artificial_Insemination_in_Lakh"
+    t.float "Animals_Treated_in_Lakh"
+    t.float "Immunization_in_Lakh"
+    t.float "Artificial_Insemination_in_Lakh"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -197,12 +197,23 @@ ActiveRecord::Schema.define(version: 2018_07_17_081022) do
 
   create_table "animal_husbandry5s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
-    t.float "Fish_Production_2014"
-    t.float "Fish_Seeds_2014"
-    t.float "Fish_Production_2015"
-    t.float "Fish_Seeds_2015"
-    t.float "Fish_Production_2016"
-    t.float "Fish_Seeds_2016"
+    t.float "Fish_Production"
+    t.float "Fish_Seeds"
+    t.integer "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "animal_husbandry6s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Districts"
+    t.float "Crossbred_Cow"
+    t.float "Local_Cow"
+    t.float "Total_Cow"
+    t.float "Buffalo"
+    t.float "Total_Cow_Buffalo"
+    t.float "Goat"
+    t.float "Total_Production"
+    t.integer "Year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -35,8 +35,8 @@ def test
           a = AgriculturalInputs6.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = AgriculturalInputs6.search(params[:search],compare,year)
-        a = AgriculturalInputs6.table(b,rain_fall_type,year)
+        b = AgriculturalInputs6.search(params[:search],compare,year,rain_fall_type)
+        a = AgriculturalInputs6.table(b,rain_fall_type,year,ji,compare)
       else
         @AgriculturalInputs6s = AgriculturalInputs6.search(params[:search],compare,year,rain_fall_type)
         a = AgriculturalInputs6.query(@AgriculturalInputs6s,params[:year],rain_fall_type,views,ji,compare)

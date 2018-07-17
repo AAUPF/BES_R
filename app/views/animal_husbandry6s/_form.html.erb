@@ -1,0 +1,62 @@
+<%= form_with(model: animal_husbandry6, local: true) do |form| %>
+  <% if animal_husbandry6.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(animal_husbandry6.errors.count, "error") %> prohibited this animal_husbandry6 from being saved:</h2>
+
+      <ul>
+      <% animal_husbandry6.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Crossbred_Cow %>
+    <%= form.text_field :Crossbred_Cow %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Local_Cow %>
+    <%= form.text_field :Local_Cow %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Cow %>
+    <%= form.text_field :Total_Cow %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Buffalo %>
+    <%= form.text_field :Buffalo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Cow_Buffalo %>
+    <%= form.text_field :Total_Cow_Buffalo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Goat %>
+    <%= form.text_field :Goat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Production %>
+    <%= form.text_field :Total_Production %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

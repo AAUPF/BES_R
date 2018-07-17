@@ -15,12 +15,9 @@ class AnimalHusbandry5sTest < ApplicationSystemTestCase
     click_on "New Animal Husbandry5"
 
     fill_in "Districts", with: @animal_husbandry5.Districts
-    fill_in "Fish Production 2014", with: @animal_husbandry5.Fish_Production_2014
-    fill_in "Fish Production 2015", with: @animal_husbandry5.Fish_Production_2015
-    fill_in "Fish Production 2016", with: @animal_husbandry5.Fish_Production_2016
-    fill_in "Fish Seeds 2014", with: @animal_husbandry5.Fish_Seeds_2014
-    fill_in "Fish Seeds 2015", with: @animal_husbandry5.Fish_Seeds_2015
-    fill_in "Fish Seeds 2016", with: @animal_husbandry5.Fish_Seeds_2016
+    fill_in "Fish Production", with: @animal_husbandry5.Fish_Production
+    fill_in "Fish Seeds", with: @animal_husbandry5.Fish_Seeds
+    fill_in "Year", with: @animal_husbandry5.Year
     click_on "Create Animal husbandry5"
 
     assert_text "Animal husbandry5 was successfully created"
@@ -32,12 +29,9 @@ class AnimalHusbandry5sTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Districts", with: @animal_husbandry5.Districts
-    fill_in "Fish Production 2014", with: @animal_husbandry5.Fish_Production_2014
-    fill_in "Fish Production 2015", with: @animal_husbandry5.Fish_Production_2015
-    fill_in "Fish Production 2016", with: @animal_husbandry5.Fish_Production_2016
-    fill_in "Fish Seeds 2014", with: @animal_husbandry5.Fish_Seeds_2014
-    fill_in "Fish Seeds 2015", with: @animal_husbandry5.Fish_Seeds_2015
-    fill_in "Fish Seeds 2016", with: @animal_husbandry5.Fish_Seeds_2016
+    fill_in "Fish Production", with: @animal_husbandry5.Fish_Production
+    fill_in "Fish Seeds", with: @animal_husbandry5.Fish_Seeds
+    fill_in "Year", with: @animal_husbandry5.Year
     click_on "Update Animal husbandry5"
 
     assert_text "Animal husbandry5 was successfully updated"

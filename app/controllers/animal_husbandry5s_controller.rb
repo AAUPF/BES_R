@@ -5,66 +5,50 @@ class AnimalHusbandry5sController < ApplicationController
   def index
     @animal_husbandry5s = AnimalHusbandry5.all
   end
+
   # GET /animal_husbandry5s/1
   def show
   end
+
   # GET /animal_husbandry5s/new
   def new
     @animal_husbandry5 = AnimalHusbandry5.new
   end
-  def test
-    ji = [:Districts, :Fish_Production_2014, :Fish_Seeds_2014, :Fish_Production_2015, :Fish_Seeds_2015, :Fish_Production_2016, :Fish_Seeds_2016]
-    rain_fall_type = params[:rain_fall_type]
-     views  = params[:views]
-     year  = ""
-     compare = params[:compare]
 
-    if rain_fall_type || views
+def test
+  ji = [:Districts, :Fish_Production, :Fish_Seeds, :Year]
+  rain_fall_type = params[:rain_fall_type]
+   views  = params[:views]
+   year  = params[:year]
+   compare = params[:compare]
 
-        if views == "Map View"
-          l =  rain_fall_type.gsub(" ","")
-          if year == "2016"
-            j = "#{l}_2016"
-          elsif year == "2017"
-            j = "#{l}_2017"
-          else
-            puts "no year"
-          end  
-           
-           if rain_fall_type  ==  "All"
-           
+  if rain_fall_type || views
 
-            if year == "2016"
-              j = "Total_2016"
-            elsif year == "2017"
-              j = "Total_2017"
-            else
-              puts "no year"
-            end  
-            b = AnimalHusbandry5.map_search(rain_fall_type)
-            u = "Total"
-            a = AnimalHusbandry5.map(b,u,year)
-           else
-            b = AnimalHusbandry5.map_search(rain_fall_type)
-            a = AnimalHusbandry5.map(b,rain_fall_type,year)
-           end
-        elsif views == "Table"  
-          b = AnimalHusbandry5.search(params[:search],compare)
-
-          a = AnimalHusbandry5.table(b,rain_fall_type,year)
-        else
-          @AnimalHusbandry5s = AnimalHusbandry5.search(params[:search],compare)
-          a = AnimalHusbandry5.query(@AnimalHusbandry5s,params[:year],rain_fall_type,views,compare,ji)
-        end
-       
-        respond_to do |format|
-          format.html { render json:a }
+      if views == "Map View"
+        l =  rain_fall_type.gsub(" ","")           
+         if rain_fall_type  ==  "All"
+          b = AnimalHusbandry5.map_search("All",compare,year,rain_fall_type)
+          u = "Total"
+          a = AnimalHusbandry5.map(b,params[:year],rain_fall_type,views)
+         else
+          b = AnimalHusbandry5.map_search(params[:search],compare,year,rain_fall_type)
+          a = AnimalHusbandry5.map(b,rain_fall_type,year,ji)
+         end
+      elsif views == "Table"  
+        b = AnimalHusbandry5.search(params[:search],compare,year,rain_fall_type)
+        a = AnimalHusbandry5.table(b,rain_fall_type,year,ji,compare)
+      else
+        @AnimalHusbandry5s = AnimalHusbandry5.search(params[:search],compare,year,rain_fall_type)
+        a = AnimalHusbandry5.query(@AnimalHusbandry5s,params[:year],rain_fall_type,views,ji,compare)
       end
-
-    else
       respond_to do |format|
-        format.html { render json: "error"}
+        format.html { render json:a }
     end
+
+  else
+    respond_to do |format|
+      format.html { render json: "error"}
+  end
   end
 
 end
@@ -114,6 +98,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def animal_husbandry5_params
-      params.require(:animal_husbandry5).permit(:Districts, :Fish_Production_2014, :Fish_Seeds_2014, :Fish_Production_2015, :Fish_Seeds_2015, :Fish_Production_2016, :Fish_Seeds_2016)
+      params.require(:animal_husbandry5).permit(:Districts, :Fish_Production, :Fish_Seeds, :Year)
     end
 end

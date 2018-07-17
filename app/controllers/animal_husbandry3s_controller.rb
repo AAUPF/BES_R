@@ -21,9 +21,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-
    ji1 = [:Year, :Animals_Treated_in_Lakh, :Immunization_in_Lakh, :Artificial_Insemination_in_Lakh]
-
   if rain_fall_type || views
 
       if views == "Map View"

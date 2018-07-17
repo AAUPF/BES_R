@@ -2,12 +2,12 @@
 
 one:
   Year: 1
-  Animals_Treated_in_Lakh: MyString
-  Immunization_in_Lakh: MyString
-  Artificial_Insemination_in_Lakh: MyString
+  Animals_Treated_in_Lakh: 1.5
+  Immunization_in_Lakh: 1.5
+  Artificial_Insemination_in_Lakh: 1.5
 
 two:
   Year: 1
-  Animals_Treated_in_Lakh: MyString
-  Immunization_in_Lakh: MyString
-  Artificial_Insemination_in_Lakh: MyString
+  Animals_Treated_in_Lakh: 1.5
+  Immunization_in_Lakh: 1.5
+  Artificial_Insemination_in_Lakh: 1.5

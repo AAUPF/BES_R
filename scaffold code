@@ -1,1 +1,1 @@
-rails g scaffold animal_husbandry3 Year:integer Animals_Treated_in_Lakh	Immunization_in_Lakh	Artificial_Insemination_in_Lakh
+rails g scaffold animal_husbandry6 Districts:string Crossbred_Cow:float	Local_Cow:float	Total_Cow:float	Buffalo:float	Total_Cow_Buffalo:float	Goat:float	Total_Production:float	Year:integer

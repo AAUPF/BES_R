@@ -75,6 +75,36 @@ module Code1
   # end
 
 
+    # Logic to generate table starts
+    def table (b,rain_fall_type,year,ji,compare)
+
+
+      if rain_fall_type == "All"
+        hash_data = ji.map do |el|
+          {title:el, field:el, sorter:"string", editor:true}
+           end
+
+      else
+      if compare == "None"
+        hash_data = [
+         
+          {title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true},
+          {title:"Districts", field:"Districts", sorter:"string", editor:true}
+      ]
+      else
+        hash_data = [
+        # {title:compare, field:compare, sorter:"string", editor:true},
+          {title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true},
+          {title:"Districts", field:"Districts", sorter:"string", editor:true}
+      ]
+      end
+      end
+
+
+       data = {column: hash_data,data: b}
+             return data
+          end
+          # Logic to generate table end
   def hash_data(ji,b)
     hash_data =  ji.map do |column_name|
       { 

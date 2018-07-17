@@ -1,4 +1,4 @@
 class AnimalHusbandry4 < ApplicationRecord
-  extend Code  
+  extend Code1  
 
-      end
+end

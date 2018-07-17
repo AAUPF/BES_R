@@ -15,61 +15,42 @@ class AnimalHusbandry4sController < ApplicationController
     @animal_husbandry4 = AnimalHusbandry4.new
   end
 
+def test
+  ji = [ :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry]
+  rain_fall_type = params[:rain_fall_type]
+   views  = params[:views]
+   year  = params[:year]
+   compare = params[:compare]
 
-  def test
+   ji1 = [:Districts, :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry]
 
-    ji = [:Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry]
-    rain_fall_type = params[:rain_fall_type]
-     views  = params[:views]
-     year  = ""
-     compare = params[:compare]
+  if rain_fall_type || views
 
-    if rain_fall_type || views
-
-        if views == "Map View"
-          l =  rain_fall_type.gsub(" ","")
-          if year == "2016"
-            j = "#{l}_2016"
-          elsif year == "2017"
-            j = "#{l}_2017"
-          else
-            puts "no year"
-          end  
-           
-           if rain_fall_type  ==  "All"
-           
-
-            if year == "2016"
-              j = "Total_2016"
-            elsif year == "2017"
-              j = "Total_2017"
-            else
-              puts "no year"
-            end  
-            b = AnimalHusbandry4.map_search(rain_fall_type)
-            u = "Total"
-            a = AnimalHusbandry4.map(b,u,year)
-           else
-            b = AnimalHusbandry4.map_search(rain_fall_type)
-            a = AnimalHusbandry4.map(b,rain_fall_type,year)
-           end
-        elsif views == "Table"  
-          b = AnimalHusbandry4.search(params[:search],compare)
-
-          a = AnimalHusbandry4.table(b,rain_fall_type,year)
-        else
-          @AnimalHusbandry4s = AnimalHusbandry4.search(params[:search],compare)
-          a = AnimalHusbandry4.query(@AnimalHusbandry4s,params[:year],rain_fall_type,views,compare,ji)
-        end
-       
-        respond_to do |format|
-          format.html { render json:a }
+      if views == "Map View"
+        l =  rain_fall_type.gsub(" ","")           
+         if rain_fall_type  ==  "All"
+          b = AnimalHusbandry4.map_search("All",compare,year,rain_fall_type)
+          u = "Total"
+          a = AnimalHusbandry4.map(b,params[:year],rain_fall_type,views)
+         else
+          b = AnimalHusbandry4.map_search(params[:search],compare,year,rain_fall_type)
+          a = AnimalHusbandry4.map(b,rain_fall_type,year,ji)
+         end
+      elsif views == "Table"  
+        b = AnimalHusbandry4.search(params[:search],compare,year,rain_fall_type)
+        a = AnimalHusbandry4.table(b,rain_fall_type,year,ji1,compare)
+      else
+        @AnimalHusbandry4s = AnimalHusbandry4.search(params[:search],compare,year,rain_fall_type)
+        a = AnimalHusbandry4.query(@AnimalHusbandry4s,params[:year],rain_fall_type,views,ji,compare)
       end
-
-    else
       respond_to do |format|
-        format.html { render json: "error"}
+        format.html { render json:a }
     end
+
+  else
+    respond_to do |format|
+      format.html { render json: "error"}
+  end
   end
 
 end

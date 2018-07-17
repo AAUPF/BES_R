@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :animal_husbandry6s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :animal_husbandry4s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :animal_husbandry3s do 
                       collection { post :import }
                       collection { get :dropdown }
@@ -95,11 +105,6 @@ Rails.application.routes.draw do
                       collection { get :test }
                       end 
   resources :animal_husbandry5s do 
-                      collection { post :import }
-                      collection { get :dropdown }
-                      collection { get :test }
-                      end 
-  resources :animal_husbandry4s do 
                       collection { post :import }
                       collection { get :dropdown }
                       collection { get :test }

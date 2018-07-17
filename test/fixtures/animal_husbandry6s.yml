@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Crossbred_Cow: 1.5
+  Local_Cow: 1.5
+  Total_Cow: 1.5
+  Buffalo: 1.5
+  Total_Cow_Buffalo: 1.5
+  Goat: 1.5
+  Total_Production: 1.5
+  Year: 1
+
+two:
+  Districts: MyString
+  Crossbred_Cow: 1.5
+  Local_Cow: 1.5
+  Total_Cow: 1.5
+  Buffalo: 1.5
+  Total_Cow_Buffalo: 1.5
+  Goat: 1.5
+  Total_Production: 1.5
+  Year: 1

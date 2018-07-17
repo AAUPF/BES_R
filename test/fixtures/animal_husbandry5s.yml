@@ -2,18 +2,12 @@
 
 one:
   Districts: MyString
-  Fish_Production_2014: 1.5
-  Fish_Seeds_2014: 1.5
-  Fish_Production_2015: 1.5
-  Fish_Seeds_2015: 1.5
-  Fish_Production_2016: 1.5
-  Fish_Seeds_2016: 1.5
+  Fish_Production: 1.5
+  Fish_Seeds: 1.5
+  Year: 1
 
 two:
   Districts: MyString
-  Fish_Production_2014: 1.5
-  Fish_Seeds_2014: 1.5
-  Fish_Production_2015: 1.5
-  Fish_Seeds_2015: 1.5
-  Fish_Production_2016: 1.5
-  Fish_Seeds_2016: 1.5
+  Fish_Production: 1.5
+  Fish_Seeds: 1.5
+  Year: 1
