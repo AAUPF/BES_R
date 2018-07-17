@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Animal Husbandry1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Cattle</th>
+      <th>Males over 3 years</th>
+      <th>Females over 3 years</th>
+      <th>Young stock</th>
+      <th>Buffalo</th>
+      <th>Males over 3 years</th>
+      <th>Females over 3 years</th>
+      <th>Young stock</th>
+      <th>Sheep</th>
+      <th>Goats</th>
+      <th>Pigs</th>
+      <th>Horses ponies</th>
+      <th>Others</th>
+      <th>Total livestock</th>
+      <th>Total poultry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @animal_husbandry1s.each do |animal_husbandry1| %>
+      <tr>
+        <td><%= animal_husbandry1.Year %></td>
+        <td><%= animal_husbandry1.Cattle %></td>
+        <td><%= animal_husbandry1.Males_over_3_years %></td>
+        <td><%= animal_husbandry1.Females_over_3_years %></td>
+        <td><%= animal_husbandry1.Young_stock %></td>
+        <td><%= animal_husbandry1.Buffalo %></td>
+        <td><%= animal_husbandry1.Males_over_3_years %></td>
+        <td><%= animal_husbandry1.Females_over_3_years %></td>
+        <td><%= animal_husbandry1.Young_stock %></td>
+        <td><%= animal_husbandry1.Sheep %></td>
+        <td><%= animal_husbandry1.Goats %></td>
+        <td><%= animal_husbandry1.Pigs %></td>
+        <td><%= animal_husbandry1.Horses_Ponies %></td>
+        <td><%= animal_husbandry1.Others %></td>
+        <td><%= animal_husbandry1.Total_Livestock %></td>
+        <td><%= animal_husbandry1.Total_Poultry %></td>
+        <td><%= link_to 'Show', animal_husbandry1 %></td>
+        <td><%= link_to 'Edit', edit_animal_husbandry1_path(animal_husbandry1) %></td>
+        <td><%= link_to 'Destroy', animal_husbandry1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Animal Husbandry1', new_animal_husbandry1_path %>

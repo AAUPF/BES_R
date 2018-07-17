@@ -1,0 +1,62 @@
+<%= form_with(model: agricultural_inputs3, local: true) do |form| %>
+  <% if agricultural_inputs3.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(agricultural_inputs3.errors.count, "error") %> prohibited this agricultural_inputs3 from being saved:</h2>
+
+      <ul>
+      <% agricultural_inputs3.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Tractor %>
+    <%= form.text_field :Tractor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Combine_Harvestors %>
+    <%= form.text_field :Combine_Harvestors %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Zero_Tillage %>
+    <%= form.text_field :Zero_Tillage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pumpsets %>
+    <%= form.text_field :Pumpsets %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Power_Tiller %>
+    <%= form.text_field :Power_Tiller %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Manually_operated_tools_implements %>
+    <%= form.text_field :Manually_operated_tools_implements %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Threshers %>
+    <%= form.text_field :Threshers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

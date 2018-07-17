@@ -1,0 +1,2 @@
+module AnimalHusbandry2sHelper
+end

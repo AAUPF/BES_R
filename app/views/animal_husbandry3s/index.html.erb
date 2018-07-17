@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Animal Husbandry3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Animals treated in lakh</th>
+      <th>Immunization in lakh</th>
+      <th>Artificial insemination in lakh</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @animal_husbandry3s.each do |animal_husbandry3| %>
+      <tr>
+        <td><%= animal_husbandry3.Year %></td>
+        <td><%= animal_husbandry3.Animals_Treated_in_Lakh %></td>
+        <td><%= animal_husbandry3.Immunization_in_Lakh %></td>
+        <td><%= animal_husbandry3.Artificial_Insemination_in_Lakh %></td>
+        <td><%= link_to 'Show', animal_husbandry3 %></td>
+        <td><%= link_to 'Edit', edit_animal_husbandry3_path(animal_husbandry3) %></td>
+        <td><%= link_to 'Destroy', animal_husbandry3, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Animal Husbandry3', new_animal_husbandry3_path %>

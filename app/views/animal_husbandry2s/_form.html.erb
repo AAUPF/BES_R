@@ -1,0 +1,47 @@
+<%= form_with(model: animal_husbandry2, local: true) do |form| %>
+  <% if animal_husbandry2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(animal_husbandry2.errors.count, "error") %> prohibited this animal_husbandry2 from being saved:</h2>
+
+      <ul>
+      <% animal_husbandry2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Milk_lakh_tonnes %>
+    <%= form.text_field :Milk_lakh_tonnes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Egg_crore %>
+    <%= form.text_field :Egg_crore %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Wool_lakh_kgs %>
+    <%= form.text_field :Wool_lakh_kgs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Meat_lakh_tonnes %>
+    <%= form.text_field :Meat_lakh_tonnes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Fish_lakh_tonnes %>
+    <%= form.text_field :Fish_lakh_tonnes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

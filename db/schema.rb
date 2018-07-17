@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_16_113436) do
+ActiveRecord::Schema.define(version: 2018_07_17_081022) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -31,6 +31,40 @@ ActiveRecord::Schema.define(version: 2018_07_16_113436) do
     t.float "Target"
     t.float "Achievement"
     t.integer "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "agricultural_inputs2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Type_of_Fertilizer"
+    t.float "Urea"
+    t.float "DAP"
+    t.float "SSP"
+    t.float "MOP"
+    t.float "Ammonium_Sulphate"
+    t.float "Complex"
+    t.float "Sub_Total"
+    t.float "N"
+    t.float "P"
+    t.float "K"
+    t.float "Total_NPK"
+    t.float "Grand_Total"
+    t.float "Consumption_of_Fertilizer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "agricultural_inputs3s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Tractor"
+    t.float "Combine_Harvestors"
+    t.float "Zero_Tillage"
+    t.float "Pumpsets"
+    t.float "Power_Tiller"
+    t.float "Manually_operated_tools_implements"
+    t.float "Threshers"
+    t.float "Total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -107,6 +141,44 @@ ActiveRecord::Schema.define(version: 2018_07_16_113436) do
     t.float "Power_Tiller"
     t.float "Manually_Operated_Tools"
     t.float "Thresher"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "animal_husbandry1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Cattle"
+    t.float "Males_over_3_years"
+    t.float "Females_over_3_years"
+    t.float "Young_stock"
+    t.float "Buffalo"
+    t.float "Sheep"
+    t.float "Goats"
+    t.float "Pigs"
+    t.float "Horses_Ponies"
+    t.float "Others"
+    t.float "Total_Livestock"
+    t.float "Total_Poultry"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "animal_husbandry2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Milk_lakh_tonnes"
+    t.float "Egg_crore"
+    t.float "Wool_lakh_kgs"
+    t.float "Meat_lakh_tonnes"
+    t.float "Fish_lakh_tonnes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "animal_husbandry3s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.string "Animals_Treated_in_Lakh"
+    t.string "Immunization_in_Lakh"
+    t.string "Artificial_Insemination_in_Lakh"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

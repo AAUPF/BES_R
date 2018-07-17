@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: 1
+  Cattle: 1.5
+  Males_over_3_years: 1.5
+  Females_over_3_years: 1.5
+  Young_stock: 1.5
+  Buffalo: 1.5
+  Males_over_3_years: 1.5
+  Females_over_3_years: 1.5
+  Young_stock: 1.5
+  Sheep: 1.5
+  Goats: 1.5
+  Pigs: 1.5
+  Horses_Ponies: 1.5
+  Others: 1.5
+  Total_Livestock: 1.5
+  Total_Poultry: 1.5
+
+two:
+  Year: 1
+  Cattle: 1.5
+  Males_over_3_years: 1.5
+  Females_over_3_years: 1.5
+  Young_stock: 1.5
+  Buffalo: 1.5
+  Males_over_3_years: 1.5
+  Females_over_3_years: 1.5
+  Young_stock: 1.5
+  Sheep: 1.5
+  Goats: 1.5
+  Pigs: 1.5
+  Horses_Ponies: 1.5
+  Others: 1.5
+  Total_Livestock: 1.5
+  Total_Poultry: 1.5

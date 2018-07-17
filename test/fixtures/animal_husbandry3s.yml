@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: 1
+  Animals_Treated_in_Lakh: MyString
+  Immunization_in_Lakh: MyString
+  Artificial_Insemination_in_Lakh: MyString
+
+two:
+  Year: 1
+  Animals_Treated_in_Lakh: MyString
+  Immunization_in_Lakh: MyString
+  Artificial_Insemination_in_Lakh: MyString

@@ -1,0 +1,37 @@
+<%= form_with(model: animal_husbandry3, local: true) do |form| %>
+  <% if animal_husbandry3.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(animal_husbandry3.errors.count, "error") %> prohibited this animal_husbandry3 from being saved:</h2>
+
+      <ul>
+      <% animal_husbandry3.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Animals_Treated_in_Lakh %>
+    <%= form.text_field :Animals_Treated_in_Lakh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Immunization_in_Lakh %>
+    <%= form.text_field :Immunization_in_Lakh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Artificial_Insemination_in_Lakh %>
+    <%= form.text_field :Artificial_Insemination_in_Lakh %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

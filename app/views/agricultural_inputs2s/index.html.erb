@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agricultural Inputs2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Type of fertilizer</th>
+      <th>Urea</th>
+      <th>Dap</th>
+      <th>Ssp</th>
+      <th>Mop</th>
+      <th>Ammonium sulphate</th>
+      <th>Complex</th>
+      <th>Sub total</th>
+      <th>N</th>
+      <th>P</th>
+      <th>K</th>
+      <th>Total npk</th>
+      <th>Grand total</th>
+      <th>Consumption of fertilizer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agricultural_inputs2s.each do |agricultural_inputs2| %>
+      <tr>
+        <td><%= agricultural_inputs2.Year %></td>
+        <td><%= agricultural_inputs2.Type_of_Fertilizer %></td>
+        <td><%= agricultural_inputs2.Urea %></td>
+        <td><%= agricultural_inputs2.DAP %></td>
+        <td><%= agricultural_inputs2.SSP %></td>
+        <td><%= agricultural_inputs2.MOP %></td>
+        <td><%= agricultural_inputs2.Ammonium_Sulphate %></td>
+        <td><%= agricultural_inputs2.Complex %></td>
+        <td><%= agricultural_inputs2.Sub_Total %></td>
+        <td><%= agricultural_inputs2.N %></td>
+        <td><%= agricultural_inputs2.P %></td>
+        <td><%= agricultural_inputs2.K %></td>
+        <td><%= agricultural_inputs2.Total_NPK %></td>
+        <td><%= agricultural_inputs2.Grand_Total %></td>
+        <td><%= agricultural_inputs2.Consumption_of_Fertilizer %></td>
+        <td><%= link_to 'Show', agricultural_inputs2 %></td>
+        <td><%= link_to 'Edit', edit_agricultural_inputs2_path(agricultural_inputs2) %></td>
+        <td><%= link_to 'Destroy', agricultural_inputs2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agricultural Inputs2', new_agricultural_inputs2_path %>
