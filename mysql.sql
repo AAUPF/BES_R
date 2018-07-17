@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 16, 2018 at 12:25 PM
+-- Generation Time: Jul 17, 2018 at 08:46 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -186,6 +186,79 @@ INSERT INTO `agricultural_credit2s` (`id`, `Districts`, `Target`, `Achievement`,
 (115, 'Araria', 2926, 274.62, 2016, '2018-07-11 09:31:25', '2018-07-11 09:31:25'),
 (116, 'Katihar', 3192, 60.38, 2016, '2018-07-11 09:31:25', '2018-07-11 09:31:25'),
 (117, 'Bihar', 100000, 36150, 2016, '2018-07-11 09:31:25', '2018-07-11 09:31:25');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `agricultural_inputs2s`
+--
+
+DROP TABLE IF EXISTS `agricultural_inputs2s`;
+CREATE TABLE `agricultural_inputs2s` (
+  `id` bigint(20) NOT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `Type_of_Fertilizer` float DEFAULT NULL,
+  `Urea` float DEFAULT NULL,
+  `DAP` float DEFAULT NULL,
+  `SSP` float DEFAULT NULL,
+  `MOP` float DEFAULT NULL,
+  `Ammonium_Sulphate` float DEFAULT NULL,
+  `Complex` float DEFAULT NULL,
+  `Sub_Total` float DEFAULT NULL,
+  `N` float DEFAULT NULL,
+  `P` float DEFAULT NULL,
+  `K` float DEFAULT NULL,
+  `Total_NPK` float DEFAULT NULL,
+  `Grand_Total` float DEFAULT NULL,
+  `Consumption_of_Fertilizer` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `agricultural_inputs2s`
+--
+
+INSERT INTO `agricultural_inputs2s` (`id`, `Year`, `Type_of_Fertilizer`, `Urea`, `DAP`, `SSP`, `MOP`, `Ammonium_Sulphate`, `Complex`, `Sub_Total`, `N`, `P`, `K`, `Total_NPK`, `Grand_Total`, `Consumption_of_Fertilizer`, `created_at`, `updated_at`) VALUES
+(1, 2014, 0, 864.3, 128.6, 26.1, 54.6, 1.3, 76, 1150.8, 433.1, 82.4, 39.4, 554.8, 1705.7, 138.1, '2018-07-17 04:26:12', '2018-07-17 04:26:12'),
+(2, 2014, 0, 1076.1, 224.1, 30.7, 99.1, 2.4, 186, 1618.5, 567.3, 152.8, 71.8, 791.8, 2410.3, 181.8, '2018-07-17 04:26:12', '2018-07-17 04:26:12'),
+(3, 2014, 0, 1940.4, 352.7, 56.8, 153.7, 3.7, 262, 2769.4, 1000.4, 235.1, 111.2, 1346.7, 4116, 160.8, '2018-07-17 04:26:12', '2018-07-17 04:26:12'),
+(4, 2015, 0, 954.2, 186.4, 47.6, 48.3, 2.6, 150.3, 1389.2, 499.8, 128.1, 35.4, 663.4, 2052.6, 160.4, '2018-07-17 04:26:12', '2018-07-17 04:26:12'),
+(5, 2015, 0, 1403.9, 356.4, 26.2, 105.5, 15.8, 201.6, 2109.3, 749.9, 212.8, 70.7, 1033.4, 3142.7, 240.2, '2018-07-17 04:26:12', '2018-07-17 04:26:12'),
+(6, 2015, 0, 2358.1, 542.8, 73.7, 153.7, 18.4, 351.8, 3498.5, 1249.8, 340.9, 106.2, 1696.8, 5195.3, 201.1, '2018-07-17 04:26:12', '2018-07-17 04:26:12'),
+(7, 2016, 0, 882.7, 148.7, 33.3, 50.6, 6, 53.4, 1174.7, 444, 85.2, 31.8, 561, 1735.8, 137, '2018-07-17 04:26:12', '2018-07-17 04:26:12'),
+(8, 2016, 0, 1094.8, 383.1, 33.1, 179.2, 21.4, 187.2, 1898.7, 610.8, 223.6, 115, 949.4, 2848.1, 205.29, '2018-07-17 04:26:12', '2018-07-17 04:26:12'),
+(9, 2016, 0, 1977.5, 531.7, 66.5, 229.8, 27.4, 240.6, 3073.5, 1054.8, 308.8, 146.7, 1510.4, 4583.9, 173.18, '2018-07-17 04:26:12', '2018-07-17 04:26:12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `agricultural_inputs3s`
+--
+
+DROP TABLE IF EXISTS `agricultural_inputs3s`;
+CREATE TABLE `agricultural_inputs3s` (
+  `id` bigint(20) NOT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `Tractor` float DEFAULT NULL,
+  `Combine_Harvestors` float DEFAULT NULL,
+  `Zero_Tillage` float DEFAULT NULL,
+  `Pumpsets` float DEFAULT NULL,
+  `Power_Tiller` float DEFAULT NULL,
+  `Manually_operated_tools_implements` float DEFAULT NULL,
+  `Threshers` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `agricultural_inputs3s`
+--
+
+INSERT INTO `agricultural_inputs3s` (`id`, `Year`, `Tractor`, `Combine_Harvestors`, `Zero_Tillage`, `Pumpsets`, `Power_Tiller`, `Manually_operated_tools_implements`, `Threshers`, `Total`, `created_at`, `updated_at`) VALUES
+(1, 2015, 4617, 177, 1537, 5788, 1637, 46590, 2314, 62660, '2018-07-17 06:16:28', '2018-07-17 06:16:28'),
+(2, 2016, 0, 158, 833, 5080, 1225, 16583, 2654, 26533, '2018-07-17 06:16:28', '2018-07-17 06:16:28');
 
 -- --------------------------------------------------------
 
@@ -515,6 +588,99 @@ CREATE TABLE `agricultural_inputs8s` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `animal_husbandry1s`
+--
+
+DROP TABLE IF EXISTS `animal_husbandry1s`;
+CREATE TABLE `animal_husbandry1s` (
+  `id` bigint(20) NOT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `Cattle` float DEFAULT NULL,
+  `Males_over_3_years` float DEFAULT NULL,
+  `Females_over_3_years` float DEFAULT NULL,
+  `Young_stock` float DEFAULT NULL,
+  `Buffalo` float DEFAULT NULL,
+  `Sheep` float DEFAULT NULL,
+  `Goats` float DEFAULT NULL,
+  `Pigs` float DEFAULT NULL,
+  `Horses_Ponies` float DEFAULT NULL,
+  `Others` float DEFAULT NULL,
+  `Total_Livestock` float DEFAULT NULL,
+  `Total_Poultry` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `animal_husbandry1s`
+--
+
+INSERT INTO `animal_husbandry1s` (`id`, `Year`, `Cattle`, `Males_over_3_years`, `Females_over_3_years`, `Young_stock`, `Buffalo`, `Sheep`, `Goats`, `Pigs`, `Horses_Ponies`, `Others`, `Total_Livestock`, `Total_Poultry`, `created_at`, `updated_at`) VALUES
+(1, 2003, 10470, 274, 2901, 2590, 5766, 346, 9606, 627, 115, 0, 26957, 13968, '2018-07-17 06:58:11', '2018-07-17 06:58:11'),
+(2, 2007, 12408, 329, 3546, 2815, 6690, 218, 10167, 632, 51, 0, 30167, 11420, '2018-07-17 06:58:11', '2018-07-17 06:58:11'),
+(3, 2012, 12232, 300, 4017, 3250, 7567, 232, 12154, 650, 49, 55, 32939, 12748, '2018-07-17 06:58:11', '2018-07-17 06:58:11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `animal_husbandry2s`
+--
+
+DROP TABLE IF EXISTS `animal_husbandry2s`;
+CREATE TABLE `animal_husbandry2s` (
+  `id` bigint(20) NOT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `Milk_lakh_tonnes` float DEFAULT NULL,
+  `Egg_crore` float DEFAULT NULL,
+  `Wool_lakh_kgs` float DEFAULT NULL,
+  `Meat_lakh_tonnes` float DEFAULT NULL,
+  `Fish_lakh_tonnes` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `animal_husbandry2s`
+--
+
+INSERT INTO `animal_husbandry2s` (`id`, `Year`, `Milk_lakh_tonnes`, `Egg_crore`, `Wool_lakh_kgs`, `Meat_lakh_tonnes`, `Fish_lakh_tonnes`, `created_at`, `updated_at`) VALUES
+(1, 2012, 68.45, 83.72, 2.67, 2.28, 4, '2018-07-17 08:00:08', '2018-07-17 08:00:08'),
+(2, 2013, 71.97, 93.08, 2.71, 2.92, 4.32, '2018-07-17 08:00:08', '2018-07-17 08:00:08'),
+(3, 2014, 77.75, 98.45, 2.78, 2.94, 4.79, '2018-07-17 08:00:08', '2018-07-17 08:00:08'),
+(4, 2015, 82.88, 100.21, 2.4, 3.02, 5.07, '2018-07-17 08:00:08', '2018-07-17 08:00:08'),
+(5, 2016, 87.1, 111.17, 2.81, 3.26, 5.09, '2018-07-17 08:00:08', '2018-07-17 08:00:08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `animal_husbandry3s`
+--
+
+DROP TABLE IF EXISTS `animal_husbandry3s`;
+CREATE TABLE `animal_husbandry3s` (
+  `id` bigint(20) NOT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `Animals_Treated_in_Lakh` varchar(255) DEFAULT NULL,
+  `Immunization_in_Lakh` varchar(255) DEFAULT NULL,
+  `Artificial_Insemination_in_Lakh` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `animal_husbandry3s`
+--
+
+INSERT INTO `animal_husbandry3s` (`id`, `Year`, `Animals_Treated_in_Lakh`, `Immunization_in_Lakh`, `Artificial_Insemination_in_Lakh`, `created_at`, `updated_at`) VALUES
+(1, 2012, '28.24', '198.78', '24.63', '2018-07-17 08:11:11', '2018-07-17 08:11:11'),
+(2, 2013, '25.12', '147.57', '24.14', '2018-07-17 08:11:11', '2018-07-17 08:11:11'),
+(3, 2014, '32.99', '10.87', '3.0', '2018-07-17 08:11:11', '2018-07-17 08:11:11'),
+(4, 2015, '38.26', '163.31', '26.31', '2018-07-17 08:11:11', '2018-07-17 08:11:11'),
+(5, 2016, '41.03', '296.45', '26.2', '2018-07-17 08:11:11', '2018-07-17 08:11:11');
 
 -- --------------------------------------------------------
 
@@ -1904,7 +2070,13 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180716090710'),
 ('20180716104647'),
 ('20180716111815'),
-('20180716113436');
+('20180716113436'),
+('20180717042230'),
+('20180717061522'),
+('20180717065132'),
+('20180717065712'),
+('20180717075911'),
+('20180717081022');
 
 -- --------------------------------------------------------
 
@@ -1953,6 +2125,18 @@ ALTER TABLE `agricultural_credit2s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `agricultural_inputs2s`
+--
+ALTER TABLE `agricultural_inputs2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agricultural_inputs3s`
+--
+ALTER TABLE `agricultural_inputs3s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `agricultural_inputs4s`
 --
 ALTER TABLE `agricultural_inputs4s`
@@ -1980,6 +2164,24 @@ ALTER TABLE `agricultural_inputs7s`
 -- Indexes for table `agricultural_inputs8s`
 --
 ALTER TABLE `agricultural_inputs8s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `animal_husbandry1s`
+--
+ALTER TABLE `animal_husbandry1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `animal_husbandry2s`
+--
+ALTER TABLE `animal_husbandry2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `animal_husbandry3s`
+--
+ALTER TABLE `animal_husbandry3s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -2131,6 +2333,18 @@ ALTER TABLE `agricultural_credit2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
 
 --
+-- AUTO_INCREMENT for table `agricultural_inputs2s`
+--
+ALTER TABLE `agricultural_inputs2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `agricultural_inputs3s`
+--
+ALTER TABLE `agricultural_inputs3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `agricultural_inputs4s`
 --
 ALTER TABLE `agricultural_inputs4s`
@@ -2159,6 +2373,24 @@ ALTER TABLE `agricultural_inputs7s`
 --
 ALTER TABLE `agricultural_inputs8s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `animal_husbandry1s`
+--
+ALTER TABLE `animal_husbandry1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `animal_husbandry2s`
+--
+ALTER TABLE `animal_husbandry2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `animal_husbandry3s`
+--
+ALTER TABLE `animal_husbandry3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `animal_husbandry4s`
