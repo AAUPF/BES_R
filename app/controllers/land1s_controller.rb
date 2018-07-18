@@ -16,7 +16,7 @@ class Land1sController < ApplicationController
   end
 
 def test
-  ji = [:Year, :Geographical_Area, :Forests, :Barren_Unculturable_Land, :Land_put_to_Non_agricultural_use, :Land_Area, :Water_Area, :Culturable_Waste, :Permanent_Pastures, :Land_under_Tree_Crops, :Fallow_Land_excl_Current_Fallow, :Current_Fallow, :Total_Unculturable_Land, :Net_Sown_Area, :Gross_Sown_Area, :Cropping_Intensity]
+  ji = [:Geographical_Area, :Forests, :Barren_Unculturable_Land, :Land_put_to_Non_agricultural_use, :Land_Area, :Water_Area, :Culturable_Waste, :Permanent_Pastures, :Land_under_Tree_Crops, :Fallow_Land_excl_Current_Fallow, :Current_Fallow, :Total_Unculturable_Land, :Net_Sown_Area, :Gross_Sown_Area, :Cropping_Intensity]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]

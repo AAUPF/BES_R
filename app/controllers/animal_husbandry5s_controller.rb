@@ -16,7 +16,7 @@ class AnimalHusbandry5sController < ApplicationController
   end
 
 def test
-  ji = [:Fish_Production, :Fish_Seeds, :Year]
+  ji = [:Fish_Production, :Fish_Seeds]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]

@@ -16,11 +16,13 @@ class LandsController < ApplicationController
   end
 
 def test
-  ji = [:Districts, :Geographical_area, :Forest, :Barren_unculturable_land, :Non_Agriculture_Land_area, :Non_Agriculture_Perennial_Water_Area, :Non_Agriculture_Temporary_Water_Area, :Culturable_Waste_Land, :Permanent_Pastures, :Tree_Crops, :Fallow_land, :Current_Fallow, :Total_Uncultivable_Land, :Net_Area_Sown, :Gross_Crop_Area, :Cropping_Intensity]
+  ji = [ :Geographical_area, :Forest, :Barren_unculturable_land, :Non_Agriculture_Land_area, :Non_Agriculture_Perennial_Water_Area, :Non_Agriculture_Temporary_Water_Area, :Culturable_Waste_Land, :Permanent_Pastures, :Tree_Crops, :Fallow_land, :Current_Fallow, :Total_Uncultivable_Land, :Net_Area_Sown, :Gross_Crop_Area, :Cropping_Intensity]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+
+   ji1 = [:Districts, :Geographical_area, :Forest, :Barren_unculturable_land, :Non_Agriculture_Land_area, :Non_Agriculture_Perennial_Water_Area, :Non_Agriculture_Temporary_Water_Area, :Culturable_Waste_Land, :Permanent_Pastures, :Tree_Crops, :Fallow_land, :Current_Fallow, :Total_Uncultivable_Land, :Net_Area_Sown, :Gross_Crop_Area, :Cropping_Intensity]
 
   if rain_fall_type || views
 
@@ -36,7 +38,7 @@ def test
          end
       elsif views == "Table"  
         b = Land.search(params[:search],compare,year,rain_fall_type)
-        a = Land.table(b,rain_fall_type,year,ji,compare)
+        a = Land.table(b,rain_fall_type,year,ji1,compare)
       else
         @Lands = Land.search(params[:search],compare,year,rain_fall_type)
         a = Land.query(@Lands,params[:year],rain_fall_type,views,ji,compare)
