@@ -1,0 +1,47 @@
+<%= form_with(model: irrigation6, local: true) do |form| %>
+  <% if irrigation6.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(irrigation6.errors.count, "error") %> prohibited this irrigation6 from being saved:</h2>
+
+      <ul>
+      <% irrigation6.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Surface_Canal %>
+    <%= form.text_field :Surface_Canal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Tanks_including_Ahars_Pynes %>
+    <%= form.text_field :Tanks_including_Ahars_Pynes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Tubewells_Private_and_State %>
+    <%= form.text_field :Tubewells_Private_and_State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Other_Sources_Lift_Irrigation_and_Barge_Lift_Irrigation %>
+    <%= form.text_field :Other_Sources_Lift_Irrigation_and_Barge_Lift_Irrigation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

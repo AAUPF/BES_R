@@ -16,11 +16,14 @@ class ProductionProductivity4sController < ApplicationController
   end
 
 def test
-  ji = [:Fruits, :Area, :Production, :Year]
+  ji = [:Area, :Production]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+
+   ji1 = [:Fruits, :Area, :Production, :Year]
+
 
   if rain_fall_type || views
 
@@ -36,7 +39,7 @@ def test
          end
       elsif views == "Table"  
         b = ProductionProductivity4.search(params[:search],compare,year,rain_fall_type)
-        a = ProductionProductivity4.table(b,rain_fall_type,year,ji,compare)
+        a = ProductionProductivity4.table(b,rain_fall_type,year,ji1,compare)
       else
         @ProductionProductivity4s = ProductionProductivity4.search(params[:search],compare,year,rain_fall_type)
         a = ProductionProductivity4.query(@ProductionProductivity4s,params[:year],rain_fall_type,views,ji,compare)

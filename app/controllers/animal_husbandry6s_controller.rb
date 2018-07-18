@@ -16,12 +16,13 @@ class AnimalHusbandry6sController < ApplicationController
   end
 
 def test
-  ji = [:Districts, :Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production, :Year]
+  ji = [:Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
+   ji1 = [:Districts, :Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production, :Year]
   if rain_fall_type || views
 
       if views == "Map View"
@@ -36,7 +37,7 @@ def test
          end
       elsif views == "Table"  
         b = AnimalHusbandry6.search(params[:search],compare,year,rain_fall_type)
-        a = AnimalHusbandry6.table(b,rain_fall_type,year,ji,compare)
+        a = AnimalHusbandry6.table(b,rain_fall_type,year,ji1,compare)
       else
         @AnimalHusbandry6s = AnimalHusbandry6.search(params[:search],compare,year,rain_fall_type)
         a = AnimalHusbandry6.query(@AnimalHusbandry6s,params[:year],rain_fall_type,views,ji,compare)

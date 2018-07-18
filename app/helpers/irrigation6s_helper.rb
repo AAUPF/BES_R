@@ -1,0 +1,2 @@
+module Irrigation6sHelper
+end

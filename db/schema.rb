@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_17_142120) do
+ActiveRecord::Schema.define(version: 2018_07_18_062211) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -237,6 +237,32 @@ ActiveRecord::Schema.define(version: 2018_07_17_142120) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "irrigation3s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Created_Irrigation_Potential"
+    t.float "Kharif_Target"
+    t.float "Kharif_Irrigation"
+    t.float "Rabi_Target"
+    t.float "Rabi_Irrigation"
+    t.float "Hot_Weather_Target"
+    t.float "Hot_Weather_Irrigation"
+    t.float "Total_Utilised_Irrigation_Potential"
+    t.float "Utilisation_Efficiency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "irrigation6s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Surface_Canal"
+    t.float "Tanks_including_Ahars_Pynes"
+    t.float "Tubewells_Private_and_State"
+    t.float "Other_Sources_Lift_Irrigation_and_Barge_Lift_Irrigation"
+    t.float "Total"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "land1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
     t.float "Geographical_Area"
@@ -429,6 +455,15 @@ ActiveRecord::Schema.define(version: 2018_07_17_142120) do
 
   create_table "production_productivity4s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Fruits"
+    t.float "Area"
+    t.float "Production"
+    t.integer "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "production_productivity5s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Vegetables"
     t.float "Area"
     t.float "Production"
     t.integer "Year"

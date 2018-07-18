@@ -1,1 +1,1 @@
-rails g scaffold production_productivity4 Fruits:string	Area:float	Production:float	Year:integer 
+rails g scaffold production_productivity5 Vegetables:string Area:float Production:float 

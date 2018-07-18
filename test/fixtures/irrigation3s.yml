@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: 1
+  Created_Irrigation_Potential: 1.5
+  Kharif_Target: 1.5
+  Kharif_Irrigation: 1.5
+  Rabi_Target: 1.5
+  Rabi_Irrigation: 1.5
+  Hot_Weather_Target: 1.5
+  Hot_Weather_Irrigation: 1.5
+  Total_Utilised_Irrigation_Potential: 1.5
+  Utilisation_Efficiency: 1.5
+
+two:
+  Year: 1
+  Created_Irrigation_Potential: 1.5
+  Kharif_Target: 1.5
+  Kharif_Irrigation: 1.5
+  Rabi_Target: 1.5
+  Rabi_Irrigation: 1.5
+  Hot_Weather_Target: 1.5
+  Hot_Weather_Irrigation: 1.5
+  Total_Utilised_Irrigation_Potential: 1.5
+  Utilisation_Efficiency: 1.5

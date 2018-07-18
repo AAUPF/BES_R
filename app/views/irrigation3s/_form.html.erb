@@ -1,0 +1,67 @@
+<%= form_with(model: irrigation3, local: true) do |form| %>
+  <% if irrigation3.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(irrigation3.errors.count, "error") %> prohibited this irrigation3 from being saved:</h2>
+
+      <ul>
+      <% irrigation3.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Created_Irrigation_Potential %>
+    <%= form.text_field :Created_Irrigation_Potential %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Kharif_Target %>
+    <%= form.text_field :Kharif_Target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Kharif_Irrigation %>
+    <%= form.text_field :Kharif_Irrigation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Rabi_Target %>
+    <%= form.text_field :Rabi_Target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Rabi_Irrigation %>
+    <%= form.text_field :Rabi_Irrigation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Hot_Weather_Target %>
+    <%= form.text_field :Hot_Weather_Target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Hot_Weather_Irrigation %>
+    <%= form.text_field :Hot_Weather_Irrigation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Utilised_Irrigation_Potential %>
+    <%= form.text_field :Total_Utilised_Irrigation_Potential %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Utilisation_Efficiency %>
+    <%= form.text_field :Utilisation_Efficiency %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

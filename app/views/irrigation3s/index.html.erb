@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Irrigation3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Created irrigation potential</th>
+      <th>Kharif target</th>
+      <th>Kharif irrigation</th>
+      <th>Rabi target</th>
+      <th>Rabi irrigation</th>
+      <th>Hot weather target</th>
+      <th>Hot weather irrigation</th>
+      <th>Total utilised irrigation potential</th>
+      <th>Utilisation efficiency</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @irrigation3s.each do |irrigation3| %>
+      <tr>
+        <td><%= irrigation3.Year %></td>
+        <td><%= irrigation3.Created_Irrigation_Potential %></td>
+        <td><%= irrigation3.Kharif_Target %></td>
+        <td><%= irrigation3.Kharif_Irrigation %></td>
+        <td><%= irrigation3.Rabi_Target %></td>
+        <td><%= irrigation3.Rabi_Irrigation %></td>
+        <td><%= irrigation3.Hot_Weather_Target %></td>
+        <td><%= irrigation3.Hot_Weather_Irrigation %></td>
+        <td><%= irrigation3.Total_Utilised_Irrigation_Potential %></td>
+        <td><%= irrigation3.Utilisation_Efficiency %></td>
+        <td><%= link_to 'Show', irrigation3 %></td>
+        <td><%= link_to 'Edit', edit_irrigation3_path(irrigation3) %></td>
+        <td><%= link_to 'Destroy', irrigation3, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Irrigation3', new_irrigation3_path %>

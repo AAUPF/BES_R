@@ -16,7 +16,7 @@ class ProductionProductivity1sController < ApplicationController
   end
 
 def test
-  ji = [:Year, :Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi, :Ghagra, :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar_Tur, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower_Kusum, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Total_Fibre_Crops, :Jute, :Mesta, :Sugarcane]
+  ji = [:Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi, :Ghagra, :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar_Tur, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower_Kusum, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Total_Fibre_Crops, :Jute, :Mesta, :Sugarcane]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]

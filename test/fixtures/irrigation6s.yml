@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: 1
+  Surface_Canal: 1.5
+  Tanks_including_Ahars_Pynes: 1.5
+  Tubewells_Private_and_State: 1.5
+  Other_Sources_Lift_Irrigation_and_Barge_Lift_Irrigation: 1.5
+  Total: 1.5
+
+two:
+  Year: 1
+  Surface_Canal: 1.5
+  Tanks_including_Ahars_Pynes: 1.5
+  Tubewells_Private_and_State: 1.5
+  Other_Sources_Lift_Irrigation_and_Barge_Lift_Irrigation: 1.5
+  Total: 1.5

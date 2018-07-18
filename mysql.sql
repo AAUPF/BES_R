@@ -1,23 +1,17 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jul 17, 2018 at 08:16 PM
--- Server version: 5.7.22-0ubuntu18.04.1
--- PHP Version: 7.2.7-0ubuntu0.18.04.2
+-- Host: localhost
+-- Generation Time: Jul 18, 2018 at 06:47 AM
+-- Server version: 5.6.38
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
--- Database: `meal_plan_development1`
+-- Database: `newdata`
 --
 
 -- --------------------------------------------------------
@@ -1107,6 +1101,70 @@ CREATE TABLE `hhs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `irrigation3s`
+--
+
+DROP TABLE IF EXISTS `irrigation3s`;
+CREATE TABLE `irrigation3s` (
+  `id` bigint(20) NOT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `Created_Irrigation_Potential` float DEFAULT NULL,
+  `Kharif_Target` float DEFAULT NULL,
+  `Kharif_Irrigation` float DEFAULT NULL,
+  `Rabi_Target` float DEFAULT NULL,
+  `Rabi_Irrigation` float DEFAULT NULL,
+  `Hot_Weather_Target` float DEFAULT NULL,
+  `Hot_Weather_Irrigation` float DEFAULT NULL,
+  `Total_Utilised_Irrigation_Potential` float DEFAULT NULL,
+  `Utilisation_Efficiency` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `irrigation3s`
+--
+
+INSERT INTO `irrigation3s` (`id`, `Year`, `Created_Irrigation_Potential`, `Kharif_Target`, `Kharif_Irrigation`, `Rabi_Target`, `Rabi_Irrigation`, `Hot_Weather_Target`, `Hot_Weather_Irrigation`, `Total_Utilised_Irrigation_Potential`, `Utilisation_Efficiency`, `created_at`, `updated_at`) VALUES
+(1, 2012, 2913, 1491, 1394, 439, 366, 0, 0, 1760, 60.4, '2018-07-18 04:33:13', '2018-07-18 04:33:13'),
+(2, 2013, 2921, 1865, 1614, 567, 491, 15, 15, 2120, 72.6, '2018-07-18 04:33:13', '2018-07-18 04:33:13'),
+(3, 2014, 2925, 1865, 1628, 373, 314, 0, 0, 1942, 66.4, '2018-07-18 04:33:13', '2018-07-18 04:33:13'),
+(4, 2015, 2946, 1918, 1718, 485, 382, 28, 26, 2125, 72.1, '2018-07-18 04:33:13', '2018-07-18 04:33:13'),
+(5, 2016, 2969, 1982, 1931, 802, 714, 29, 28, 2672, 90, '2018-07-18 04:33:13', '2018-07-18 04:33:13');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `irrigation6s`
+--
+
+DROP TABLE IF EXISTS `irrigation6s`;
+CREATE TABLE `irrigation6s` (
+  `id` bigint(20) NOT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `Surface_Canal` float DEFAULT NULL,
+  `Tanks_including_Ahars_Pynes` float DEFAULT NULL,
+  `Tubewells_Private_and_State` float DEFAULT NULL,
+  `Other_Sources_Lift_Irrigation_and_Barge_Lift_Irrigation` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `irrigation6s`
+--
+
+INSERT INTO `irrigation6s` (`id`, `Year`, `Surface_Canal`, `Tanks_including_Ahars_Pynes`, `Tubewells_Private_and_State`, `Other_Sources_Lift_Irrigation_and_Barge_Lift_Irrigation`, `Total`, `created_at`, `updated_at`) VALUES
+(1, 2012, 36315, 59407, 161962, 24220, 281904, '2018-07-18 05:58:17', '2018-07-18 05:58:17'),
+(2, 2013, 26086, 41591, 64251, 9627, 141555, '2018-07-18 05:58:17', '2018-07-18 05:58:17'),
+(3, 2014, 9310, 10934, 15610, 2564, 38418, '2018-07-18 05:58:17', '2018-07-18 05:58:17'),
+(4, 2015, 0, 28631, 38440, 5055, 72126, '2018-07-18 05:58:17', '2018-07-18 05:58:17'),
+(5, 2016, 2600, 20500, 86200, 18000, 127300, '2018-07-18 05:58:17', '2018-07-18 05:58:17');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `land1s`
 --
 
@@ -1535,6 +1593,83 @@ INSERT INTO `production_productivity4s` (`id`, `Fruits`, `Area`, `Production`, `
 (53, 'Muskmelon', 1.7, 12.9, 2016, '2018-07-17 14:22:21', '2018-07-17 14:22:21'),
 (54, 'Others', 32.4, 311, 2016, '2018-07-17 14:22:21', '2018-07-17 14:22:21'),
 (55, 'Total', 288.9, 4097.5, 2016, '2018-07-17 14:22:21', '2018-07-17 14:22:21');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `production_productivity5s`
+--
+
+DROP TABLE IF EXISTS `production_productivity5s`;
+CREATE TABLE `production_productivity5s` (
+  `id` bigint(20) NOT NULL,
+  `Vegetables` varchar(255) DEFAULT NULL,
+  `Area` float DEFAULT NULL,
+  `Production` float DEFAULT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `production_productivity5s`
+--
+
+INSERT INTO `production_productivity5s` (`id`, `Vegetables`, `Area`, `Production`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Potato', 318.99, 6345.55, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(2, 'Onion', 54.3, 1247.31, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(3, 'Tomato', 47.73, 1046.44, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(4, 'Cauliflower', 65.7, 1003.55, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(5, 'Cabbage', 39, 695.33, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(6, 'Brinjal', 57.6, 1141.57, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(7, 'Okra', 57.71, 762.9, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(8, 'Chilli', 44.82, 418.33, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(9, 'Bottlegourd', 40.27, 631.54, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(10, 'Cucumber', 4.02, 67.04, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(11, 'Pointedgourd', 6.59, 69.72, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(12, 'Bittergourd', 9.71, 67.25, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(13, 'Pea', 10.24, 65.85, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(14, 'Radish', 24.1, 246.55, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(15, 'Carrot', 9.27, 53.45, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(16, 'Sweet_Potato', 1.03, 8.34, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(17, 'Others', 92.81, 1099.43, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(18, 'Total', 883.88, 14970.2, 2014, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(19, 'Potato', 319.13, 6345.52, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(20, 'Onion', 54.03, 1247.34, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(21, 'Tomato', 45.81, 1001.01, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(22, 'Cauliflower', 65.71, 1003.9, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(23, 'Cabbage', 40.52, 719.81, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(24, 'Brinjal', 57.62, 1138.05, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(25, 'Okra', 57.9, 763, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(26, 'Chilli', 44.8, 418.3, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(27, 'Bottlegourd', 40.3, 631.6, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(28, 'Cucumber', 3.6, 67, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(29, 'Pointedgourd', 6.6, 69.6, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(30, 'Bittergourd', 9.7, 67.3, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(31, 'Pea', 10.4, 65.7, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(32, 'Radish', 24.3, 246.5, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(33, 'Carrot', 9.1, 53.4, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(34, 'Sweet_Potato', 0.9, 8.4, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(35, 'Others', 29, 395.4, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(36, 'Total', 819.41, 14241.8, 2015, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(37, 'Potato', 320.48, 6377.71, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(38, 'Onion', 54.06, 1248.96, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(39, 'Tomato', 46.21, 1009.6, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(40, 'Cauliflower', 66.11, 1003.74, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(41, 'Cabbage', 41.18, 725.9, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(42, 'Brinjal', 57.88, 1141.2, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(43, 'Okra', 58, 765.95, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(44, 'Chilli', 45.24, 476.84, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(45, 'Bottlegourd', 40.35, 634.73, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(46, 'Cucumber', 3.6, 67, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(47, 'Pointedgourd', 6.83, 72.13, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(48, 'Bittergourd', 9.71, 67.32, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(49, 'Pea', 10.54, 64.24, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(50, 'Radish', 24.35, 246.99, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(51, 'Carrot', 9.15, 53.73, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(52, 'Sweet_Potato', 0.9, 8.4, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(53, 'Others', 29.18, 397.79, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
+(54, 'Total', 823.75, 14362.2, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11');
 
 -- --------------------------------------------------------
 
@@ -2475,7 +2610,11 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180717103322'),
 ('20180717110138'),
 ('20180717112504'),
-('20180717142120');
+('20180717142120'),
+('20180718042916'),
+('20180718055651'),
+('20180718061839'),
+('20180718062211');
 
 -- --------------------------------------------------------
 
@@ -2620,6 +2759,18 @@ ALTER TABLE `hhs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `irrigation3s`
+--
+ALTER TABLE `irrigation3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `irrigation6s`
+--
+ALTER TABLE `irrigation6s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `land1s`
 --
 ALTER TABLE `land1s`
@@ -2653,6 +2804,12 @@ ALTER TABLE `production_productivity2s`
 -- Indexes for table `production_productivity4s`
 --
 ALTER TABLE `production_productivity4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `production_productivity5s`
+--
+ALTER TABLE `production_productivity5s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -2736,171 +2893,219 @@ ALTER TABLE `tests`
 --
 ALTER TABLE `agricultural_credit1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `agricultural_credit2s`
 --
 ALTER TABLE `agricultural_credit2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+
 --
 -- AUTO_INCREMENT for table `agricultural_inputs2s`
 --
 ALTER TABLE `agricultural_inputs2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
 -- AUTO_INCREMENT for table `agricultural_inputs3s`
 --
 ALTER TABLE `agricultural_inputs3s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `agricultural_inputs4s`
 --
 ALTER TABLE `agricultural_inputs4s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
 --
 -- AUTO_INCREMENT for table `agricultural_inputs5s`
 --
 ALTER TABLE `agricultural_inputs5s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `agricultural_inputs6s`
 --
 ALTER TABLE `agricultural_inputs6s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
 --
 -- AUTO_INCREMENT for table `agricultural_inputs7s`
 --
 ALTER TABLE `agricultural_inputs7s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
 --
 -- AUTO_INCREMENT for table `agricultural_inputs8s`
 --
 ALTER TABLE `agricultural_inputs8s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `animal_husbandry1s`
 --
 ALTER TABLE `animal_husbandry1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `animal_husbandry2s`
 --
 ALTER TABLE `animal_husbandry2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `animal_husbandry3s`
 --
 ALTER TABLE `animal_husbandry3s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `animal_husbandry4s`
 --
 ALTER TABLE `animal_husbandry4s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
 --
 -- AUTO_INCREMENT for table `animal_husbandry5s`
 --
 ALTER TABLE `animal_husbandry5s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+
 --
 -- AUTO_INCREMENT for table `animal_husbandry6s`
 --
 ALTER TABLE `animal_husbandry6s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
+
 --
 -- AUTO_INCREMENT for table `cropping_patterns`
 --
 ALTER TABLE `cropping_patterns`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `hhs`
 --
 ALTER TABLE `hhs`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `irrigation3s`
+--
+ALTER TABLE `irrigation3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `irrigation6s`
+--
+ALTER TABLE `irrigation6s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `land1s`
 --
 ALTER TABLE `land1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `lands`
 --
 ALTER TABLE `lands`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
 --
 -- AUTO_INCREMENT for table `production_and_productivity_of_rices`
 --
 ALTER TABLE `production_and_productivity_of_rices`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
 --
 -- AUTO_INCREMENT for table `production_productivity1s`
 --
 ALTER TABLE `production_productivity1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `production_productivity2s`
 --
 ALTER TABLE `production_productivity2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `production_productivity4s`
 --
 ALTER TABLE `production_productivity4s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+
+--
+-- AUTO_INCREMENT for table `production_productivity5s`
+--
+ALTER TABLE `production_productivity5s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+
 --
 -- AUTO_INCREMENT for table `production_productivity7s`
 --
 ALTER TABLE `production_productivity7s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
 --
 -- AUTO_INCREMENT for table `production_productivity8s`
 --
 ALTER TABLE `production_productivity8s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
 --
 -- AUTO_INCREMENT for table `production_productivity9s`
 --
 ALTER TABLE `production_productivity9s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
 --
 -- AUTO_INCREMENT for table `production_productivity10s`
 --
 ALTER TABLE `production_productivity10s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
 --
 -- AUTO_INCREMENT for table `production_productivity11s`
 --
 ALTER TABLE `production_productivity11s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
 --
 -- AUTO_INCREMENT for table `production_productivity12s`
 --
 ALTER TABLE `production_productivity12s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+
 --
 -- AUTO_INCREMENT for table `rainfall1s`
 --
 ALTER TABLE `rainfall1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
 --
 -- AUTO_INCREMENT for table `rainfall2s`
 --
 ALTER TABLE `rainfall2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
 --
 -- AUTO_INCREMENT for table `rainfalls`
 --
 ALTER TABLE `rainfalls`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
 --
 -- AUTO_INCREMENT for table `test1s`
 --
 ALTER TABLE `test1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `tests`
 --
 ALTER TABLE `tests`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
