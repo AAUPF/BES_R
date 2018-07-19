@@ -15,7 +15,7 @@ class AnimalHusbandry1sController < ApplicationController
     @animal_husbandry1 = AnimalHusbandry1.new
   end
 
-def test
+def test 
   ji = [:Cattle, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Buffalo, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Sheep, :Goats, :Pigs, :Horses_Ponies, :Others, :Total_Livestock, :Total_Poultry]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]

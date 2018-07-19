@@ -22,7 +22,7 @@ def test
    year  = params[:year]
    compare = params[:compare]
 
-   ji1 = [:Districts, :Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production, :Year]
+   ji1 = [:Districts, :Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production]
   if rain_fall_type || views
 
       if views == "Map View"

@@ -1,4 +1,4 @@
 class AnimalHusbandry6 < ApplicationRecord
-  extend Withoutyear  
+  extend Newdistrict  
 
       end

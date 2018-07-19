@@ -50,22 +50,27 @@ module Rfallseason
 
   # Logic to generate table starts
   def table (b,rain_fall_type,year,ji,compare)
+    dataset = rain_fall_type.gsub("_"," ")
     if rain_fall_type == "All"
       hash_data = ji.map do |el|
-        {title:el, field:el, sorter:"string", editor:true}
+          if el.to_s == "Year"
+            {title:"Year", field:el,headerFilter:true}
+          else
+            {title:el.to_s.gsub("_"," "), field:el}
+          end
         end
     else
 
     if compare == "None"
       hash_data = [
-        {title:"Year", field:"Year", sorter:"string",  editor:true},
-        {title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true}
+        {title:"Year", field:"Year",headerFilter:true},
+        {title:dataset, field:rain_fall_type}
 
     ]
     else
-      hash_data = [    {title:"Year", field:"Year", sorter:"string", editor:true},
-        {title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true},
-      {title:compare, field:compare, sorter:"string", editor:true}
+      hash_data = [    {title:"Year", field:"Year",headerFilter:true},
+        {title:dataset, field:rain_fall_type},
+      {title:compare, field:compare}
     ]
     end
 end
@@ -75,6 +80,9 @@ end
        return data
     end
     # Logic to generate table end
+
+
+
 
   def map_search(search,compare,year,rain_fall_type)
     if search == "All"
