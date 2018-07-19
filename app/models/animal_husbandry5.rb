@@ -1,4 +1,4 @@
 class AnimalHusbandry5 < ApplicationRecord
-  extend Code  
+  extend Newdistrict  
 
 end
