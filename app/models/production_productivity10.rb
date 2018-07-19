@@ -1,3 +1,3 @@
 class ProductionProductivity10 < ApplicationRecord
-  extend Code  
+  extend Newdistrict  
 end
