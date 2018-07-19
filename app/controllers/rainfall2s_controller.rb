@@ -33,7 +33,7 @@ def test
           a = Rainfall2.map(b,params[:year],rain_fall_type,views)
          else
           b = Rainfall2.map_search(params[:search],compare,year,rain_fall_type)
-          a = Rainfall2.map(b,rain_fall_type,year,ji)
+          a = Rainfall2.map(b,params[:year],rain_fall_type,views)
          end
         elsif views == "Table"  
           b = Rainfall2.search(params[:search],compare,year,rain_fall_type)
