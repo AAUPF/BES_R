@@ -1,4 +1,4 @@
 class Rainfall2 < ApplicationRecord
-  extend Code  
+  extend Newdistrict  
 
       end
