@@ -1,5 +1,5 @@
 class ProductionAndProductivityOfRice < ApplicationRecord
-   extend Code  
+    extend Newdistrict  
 
 #  # include SpecialMethods
 #  def import1(file)
