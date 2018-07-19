@@ -39,29 +39,27 @@ module Code
 
       if rain_fall_type == "All"
         hash_data = ji.map do |el|
-          puts el
-          
-            {title:el, field:el, sorter:"string",headerFilter:true}
-          
-
-          
-          
-        
+         puts el.class 
+          if el.to_s == "Districts"
+            {title:"District", field:el, sorter:"string", editor:true}
+          else
+            {title:el, field:el, sorter:"string", editor:true}
+          end
+         
            end
-
       else
       if compare == "None"
         hash_data = [
-          {title:"Year", field:"Year", sorter:"string"},
-          {title:rain_fall_type, field:rain_fall_type, sorter:"string"},
-          {title:"Districts", field:"Districts", sorter:"string"}
+          {title:"Year", field:"Year", sorter:"string",  editor:true},
+          {title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true},
+          {title:"District", field:"Districts", sorter:"string", editor:true}
       ]
       else
         hash_data = [
         # {title:compare, field:compare, sorter:"string", editor:true},
-          {title:"Year", field:"Year", sorter:"string"},
-          {title:rain_fall_type, field:rain_fall_type, sorter:"string"},
-          {title:"Districts", field:"Districts", sorter:"string"}
+          {title:"Year", field:"Year", sorter:"string", editor:true},
+          {title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true},
+          {title:"District", field:"Districts", sorter:"string", editor:true}
       ]
       end
       end
