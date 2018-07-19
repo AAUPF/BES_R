@@ -49,35 +49,29 @@ module Rfallseason
   end
 
   # Logic to generate table starts
-    def table (b,rain_fall_type,year,ji,compare)
+  def table (b,rain_fall_type,year,ji,compare)
+    if rain_fall_type == "All"
+      hash_data = ji.map do |el|
+        {title:el, field:el, sorter:"string", editor:true}
+        end
+    else
 
-if rain_fall_type == "All"
-  hash_data = ji.map do |el|
+    if compare == "None"
+      hash_data = [
+        {title:"Year", field:"Year", sorter:"string",  editor:true},
+        {title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true}
 
-    {title:el, field:el, sorter:"string", editor:true}
-
-     end
-else
-
-if compare == "None"
-  hash_data = [
-    {title:"Year", field:"Year", sorter:"string",  editor:true},
-    {title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true}
-
-]
-else
-  hash_data = [    {title:"Year", field:"Year", sorter:"string", editor:true},
-    {title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true},
-  {title:compare, field:compare, sorter:"string", editor:true}
-]
-end
+    ]
+    else
+      hash_data = [    {title:"Year", field:"Year", sorter:"string", editor:true},
+        {title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true},
+      {title:compare, field:compare, sorter:"string", editor:true}
+    ]
+    end
 end
 
 
  data = {column: hash_data,data: b}
-
-
-
        return data
     end
     # Logic to generate table end
@@ -114,10 +108,12 @@ end
 
         if year == "All" && rain_fall_type == "All"
           hash_data =  ji.map do |column_name|
+
+            dataset = column_name.to_s.gsub("_"," ")
             if compare == "none"
             {
               type:views,
-              legendText: column_name,
+              legendText: dataset,
               color: color,
               showInLegend: true,
               dataPoints: b.map do |el|
@@ -128,7 +124,7 @@ end
 
             {
               type:views,
-              legendText: column_name,
+              legendText: dataset,
               showInLegend: true,
               dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
                    { y: el[column_name],z:el[column_name], label: el["Year"] }
@@ -146,9 +142,12 @@ end
 
           ji1 = [rain_fall_type,compare]
             hash_data = ji1.map do |col|
+
+              dataset = col.to_s.gsub("_"," ")
+
               {
                 type:views,
-                legendText: col,
+                legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
                      { y: el[col], label: el["Year"] }
@@ -158,11 +157,13 @@ end
 
           else
 
+            dataset = rain_fall_type.gsub("_"," ")
+
             hash_data =
             [{
               type:views,
               color: color,
-              legendText: rain_fall_type,
+              legendText: dataset,
               showInLegend: true,
               dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
                    { y: el[rain_fall_type], label: el["Year"] }
@@ -217,6 +218,7 @@ end
 
 
                ji1 = [rain_fall_type,compare]
+
                hash_data =  ji1.map do |col|
                  {
                    type:views,
@@ -235,6 +237,7 @@ end
 
 
           else
+
             b.each do |element|
               hash1 = {:y => element[rain_fall_type] ,:label => element["Year"]}
               array.push(hash1)

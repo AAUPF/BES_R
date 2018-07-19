@@ -122,105 +122,339 @@ module Withoutyear
   #   return hash_data
   # end
 
-    def query(b,year,rain_fall_type,views,ji,compare)
 
-        # abort(rain_fall_type)
-        d = "Districts"
-        if rain_fall_type == "All"
-          if views == "Trend Line"
-            hash_data =  ji.map do |column_name|
-              if compare =="Bihar vs District"
 
-              {
-                type:"line",
-                legendText: column_name,
-                showInLegend: true,
-                dataPoints: b.map do |el|
-                  { y: el[column_name],z:el[column_name], label: el[d] }
-                end
-              }
-              else
-
-              {
-                type:"line",
-                legendText: column_name,
-                showInLegend: true,
-                dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
-                  { y: el[column_name],z:el[column_name], label: el[d] }
-                end
-              }
-              end
-
+  def query(b,year,rain_fall_type,views,ji,compare)
+    d = "Districts"
+    if rain_fall_type == "All"
+      if views 
+        hash_data =  ji.map do |column_name|
+          if compare =="Bihar vs District"
+              dataset = column_name.to_s.gsub("_"," ")
+          {
+            type:views,
+            legendText: dataset,
+            showInLegend: true,
+            dataPoints: b.map do |el|
+              { y: el[column_name],z:el[column_name], label: el[d] }
             end
-          elsif views == "Bubble"
-            hash_data =  ji.map do |column_name|
-              if compare =="Bihar vs District"
-
-              {
-                type:"bubble",
-                legendText: column_name,
-                showInLegend: true,
-                dataPoints: b.map do |el|
-                  { y: el[column_name],z:el[column_name], label: el[d] }
-                end
-              }
-              else
-
-              {
-                type:"bubble",
-                legendText: column_name,
-                showInLegend: true,
-                dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
-                  { y: el[column_name],z:el[column_name], label: el[d] }
-                end
-              }
-              end
-
-            end
+          }
           else
-            hash_data =  ji.map do |column_name|
-              if compare =="Bihar vs District"
-
-              {
-                type:"column",
-                legendText: column_name,
-                showInLegend: true,
-                dataPoints: b.map do |el|
-                  { y: el[column_name],z:el[column_name], label: el[d] }
-                end
-              }
-              else
-
-              {
-                type:"column",
-                legendText: column_name,
-                showInLegend: true,
-                dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
-                  { y: el[column_name],z:el[column_name], label: el[d] }
-                end
-              }
-              end
-
+            dataset = column_name.to_s.gsub("_"," ")
+          {
+            type:views,
+            legendText: dataset,
+            showInLegend: true,
+            dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+              { y: el[column_name],z:el[column_name], label: el[d] }
             end
+          }
           end
-            return hash_data
-        else
-          array = []
 
-          if compare == "Bihar vs District"
-            b.each do |element|
-              hash1 = {:y => element[rain_fall_type] ,:label => element[d]}
-              array.push(hash1)
-            end
-          else
-            b.reject{|x| x["Districts"]== "Bihar"}.each do |element|
-              hash1 = {:y => element[rain_fall_type] ,:label => element[d]}
-              array.push(hash1)
-            end
-          end
-          return array
         end
+      end
+        return hash_data
+    else
+      if compare == "Bihar vs District"
+          dataset = rain_fall_type.gsub("_"," ")
+
+        hash_data =
+        [{
+          type:views,
+         
+          legendText: dataset,
+          showInLegend: true,
+          dataPoints: b.map do |el|
+               { y: el[rain_fall_type], label: el["Districts"] }
+          end
+        }]
+      else
+          dataset = rain_fall_type.gsub("_"," ")
+        hash_data =
+        [{
+          type:views,
+         
+          legendText: dataset,
+          showInLegend: true,
+          dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+               { y: el[rain_fall_type], label: el["Districts"] }
+          end
+        }]
+      end
+      return hash_data
     end
+end
+
+
+
+
+#   def query(b,year,rain_fall_type,views,ji,compare)
+#     #  return b
+#       # l =  rain_fall_type.gsub(" ","")
+#       # abort(rain_fall_type)
+#       d = "Districts"
+
+
+#       if views == "pie"
+        
+#         color = "none"
+#       else
+#         color = "#4f81bc"
+#       end
+
+
+#       if year == "All" && rain_fall_type == "All"
+
+#         hash_data =  ji.map do |column_name|
+#           dataset = column_name.to_s.gsub("_"," ")
+#           if compare == "none"
+#           {
+#             type:views,
+#             legendText: dataset,
+#             color: color,
+#             showInLegend: true,
+#             dataPoints: b.map do |el|
+#               { y: el[column_name],z:el[rain_fall_type], label: rain_fall_type }
+#             end
+#           }
+#           else
+
+#           {
+#             type:views,
+#             legendText: dataset,
+#             showInLegend: true,
+#             dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+#                  { y: el[column_name],z:el[column_name], label: el["Districts"] }
+#             end
+#           }
+#           end
+#         end
+
+
+#       elsif year == "All"
+
+
+
+#         if compare != "None"
+
+#         ji1 = [rain_fall_type,compare]
+#           hash_data = ji1.map do |col|
+
+#             dataset = col.to_s.gsub("_"," ")
+
+#             {
+#               type:views,
+#               legendText: dataset,
+#               showInLegend: true,
+#               dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+#                    { y: el[col], label: el["Districts"] }
+#               end
+#             }
+#           end
+
+#         else
+
+#           dataset = rain_fall_type.gsub("_"," ")
+
+#           hash_data =
+#           [{
+#             type:views,
+#             color: color,
+#             legendText: dataset,
+#             showInLegend: true,
+#             dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+#                  { y: el[rain_fall_type], label: el["Districts"] }
+#             end
+#           }]
+#         end
+
+
+
+#         return hash_data
+#       else
+#         array = []
+       
+
+#         if compare
+
+#           if rain_fall_type == "All"
+#             # ji = [rain_fall_type,compare]
+#             hash_data =  ji.map do |col|
+#               {
+#                 type:views,
+#                 legendText: col,
+#                 showInLegend: true,
+#                 dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+#                      { y: el[col], label: el["Districts"] }
+#                 end
+#               }
+#             end
+
+#             return hash_data
+
+#           else
+#             # b.each do |element|
+#             #   hash1 = {:y => element[rain_fall_type] ,:label => rain_fall_type}
+#             #   hash2 = {:y => element[compare] ,:label => compare}
+#             #   array.push(hash1)
+#             #   array.push(hash2)
+#             # end
+#             # return array
+#               if compare == "None"
+#                     ji1 = [rain_fall_type]
+#                     hash_data =  ji1.map do |col|
+#                       {
+#                         type:views,
+#                         legendText: col,
+#                         showInLegend: true,
+#                         dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+#                               { y: el[col], label: el["Districts"] }
+#                         end
+#                       }
+#                     end
+#               else
+
+#              ji1 = [rain_fall_type]
+#              hash_data =  ji1.map do |col|
+#                {
+#                  type:views,
+#                  legendText: col,
+#                  showInLegend: true,
+#                  dataPoints: b.map do |el|
+#                       { y: el[col], label: el["Districts"] }
+#                  end
+#                }
+#              end
+
+#               end
+
+#             return hash_data
+#           end
+
+
+#         else
+#         #   b.each do |element|
+#         #     hash1 = {:y => element[rain_fall_type] ,:label => element["Districts"]}
+#         #     array.push(hash1)
+#         #   end
+#         ji1 = [rain_fall_type]
+#         hash_data =  ji1.map do |col|
+#             {
+#               type:views,
+#               legendText: col,
+#               showInLegend: true,
+#               dataPoints: b.map do |el|
+#                    { y: el[col], label: el["Districts"] }
+#               end
+#             }
+#           end
+#           return hash_data
+#         end
+
+#       end
+#     end
+
+
+
+    # def query(b,year,rain_fall_type,views,ji,compare)
+
+    #     # abort(rain_fall_type)
+    #     d = "Districts"
+    #     if rain_fall_type == "All"
+    #       if views == "Trend Line"
+    #         hash_data =  ji.map do |column_name|
+    #           if compare =="Bihar vs District"
+
+    #           {
+    #             type:"line",
+    #             legendText: column_name,
+    #             showInLegend: true,
+    #             dataPoints: b.map do |el|
+    #               { y: el[column_name],z:el[column_name], label: el[d] }
+    #             end
+    #           }
+    #           else
+
+    #           {
+    #             type:"line",
+    #             legendText: column_name,
+    #             showInLegend: true,
+    #             dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+    #               { y: el[column_name],z:el[column_name], label: el[d] }
+    #             end
+    #           }
+    #           end
+
+    #         end
+    #       elsif views == "Bubble"
+    #         hash_data =  ji.map do |column_name|
+    #           if compare =="Bihar vs District"
+
+    #           {
+    #             type:"bubble",
+    #             legendText: column_name,
+    #             showInLegend: true,
+    #             dataPoints: b.map do |el|
+    #               { y: el[column_name],z:el[column_name], label: el[d] }
+    #             end
+    #           }
+    #           else
+
+    #           {
+    #             type:"bubble",
+    #             legendText: column_name,
+    #             showInLegend: true,
+    #             dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+    #               { y: el[column_name],z:el[column_name], label: el[d] }
+    #             end
+    #           }
+    #           end
+
+    #         end
+    #       else
+    #         hash_data =  ji.map do |column_name|
+    #           if compare =="Bihar vs District"
+
+    #           {
+    #             type:"column",
+    #             legendText: column_name,
+    #             showInLegend: true,
+    #             dataPoints: b.map do |el|
+    #               { y: el[column_name],z:el[column_name], label: el[d] }
+    #             end
+    #           }
+    #           else
+
+    #           {
+    #             type:"column",
+    #             legendText: column_name,
+    #             showInLegend: true,
+    #             dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+    #               { y: el[column_name],z:el[column_name], label: el[d] }
+    #             end
+    #           }
+    #           end
+
+    #         end
+    #       end
+    #         return hash_data
+    #     else
+    #       array = []
+
+    #       if compare == "Bihar vs District"
+    #         b.each do |element|
+    #           hash1 = {:y => element[rain_fall_type] ,:label => element[d]}
+    #           array.push(hash1)
+    #         end
+    #       else
+    #         b.reject{|x| x["Districts"]== "Bihar"}.each do |element|
+    #           hash1 = {:y => element[rain_fall_type] ,:label => element[d]}
+    #           array.push(hash1)
+    #         end
+    #       end
+    #       return array
+    #     end
+    # end
 
 
 
