@@ -22,7 +22,7 @@ def test
    year  = params[:year]
    compare = params[:compare]
 
-   ji1 = [:Districts, :Fish_Production, :Fish_Seeds, :Year]
+   ji1 = [:Districts, :Fish_Production, :Fish_Seeds]
 
 
   if rain_fall_type || views
@@ -39,7 +39,7 @@ def test
          end
       elsif views == "Table"  
         b = AnimalHusbandry5.search(params[:search],compare,year,rain_fall_type)
-        a = AnimalHusbandry5.table(b,rain_fall_type,year,ji,compare)
+        a = AnimalHusbandry5.table(b,rain_fall_type,year,ji1,compare)
       else
         @AnimalHusbandry5s = AnimalHusbandry5.search(params[:search],compare,year,rain_fall_type)
         a = AnimalHusbandry5.query(@AnimalHusbandry5s,params[:year],rain_fall_type,views,ji,compare)
