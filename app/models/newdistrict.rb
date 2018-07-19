@@ -35,30 +35,31 @@ module Newdistrict
   
       # Logic to generate table starts
       def table (b,rain_fall_type,year,ji,compare)
-  
+        dataset = rain_fall_type.gsub("_"," ")
   
         if rain_fall_type == "All"
+          
           hash_data = ji.map do |el|
             if el.to_s == "Districts"
-              {title:"District", field:el, sorter:"string",headerFilter:true}
+              {title:"District", field:el,headerFilter:true}
             else
-              {title:el, field:el, sorter:"string"}
+              {title:el.to_s.gsub("_"," "), field:el}
             end
            
              end
         else
         if compare == "None"
           hash_data = [
-            {title:"Year", field:"Year", sorter:"string"},
-            {title:rain_fall_type, field:rain_fall_type, sorter:"string", },
-            {title:"District", field:"Districts", sorter:"string", }
+            {title:"Year", field:"Year"},
+            {title:dataset, field:rain_fall_type },
+            {title:"District", field:"Districts" }
         ]
         else
           hash_data = [
           # {title:compare, field:compare, sorter:"string", },
-            {title:"Year", field:"Year", sorter:"string", },
-            {title:rain_fall_type, field:rain_fall_type, sorter:"string", },
-            {title:"District", field:"Districts", sorter:"string", }
+            {title:"Year", field:"Year"},
+            {title:dataset, field:rain_fall_type},
+            {title:"District", field:"Districts"}
         ]
         end
         end
