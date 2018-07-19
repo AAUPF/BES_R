@@ -39,27 +39,26 @@ module Code
 
       if rain_fall_type == "All"
         hash_data = ji.map do |el|
-         puts el.class 
           if el.to_s == "Districts"
-            {title:"District", field:el, sorter:"string", editor:true}
+            {title:"District", field:el, sorter:"string",headerFilter:true}
           else
-            {title:el, field:el, sorter:"string", editor:true}
+            {title:el, field:el, sorter:"string"}
           end
          
            end
       else
       if compare == "None"
         hash_data = [
-          {title:"Year", field:"Year", sorter:"string",  editor:true},
-          {title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true},
-          {title:"District", field:"Districts", sorter:"string", editor:true}
+          {title:"Year", field:"Year", sorter:"string"},
+          {title:rain_fall_type, field:rain_fall_type, sorter:"string", },
+          {title:"District", field:"Districts", sorter:"string", }
       ]
       else
         hash_data = [
-        # {title:compare, field:compare, sorter:"string", editor:true},
-          {title:"Year", field:"Year", sorter:"string", editor:true},
-          {title:rain_fall_type, field:rain_fall_type, sorter:"string", editor:true},
-          {title:"District", field:"Districts", sorter:"string", editor:true}
+        # {title:compare, field:compare, sorter:"string", },
+          {title:"Year", field:"Year", sorter:"string", },
+          {title:rain_fall_type, field:rain_fall_type, sorter:"string", },
+          {title:"District", field:"Districts", sorter:"string", }
       ]
       end
       end
@@ -191,10 +190,10 @@ module Code
                 end
               }
               else
-
+                dataset = column_name.to_s.gsub("_"," ")
               {
                 type:"column",
-                legendText: column_name,
+                legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
                   { y: el[column_name],z:el[column_name], label: el[d] }

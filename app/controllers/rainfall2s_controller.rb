@@ -26,7 +26,7 @@ def test
    ji1 = [:Districts,:Winter_Rain, :Hot_Weather_Rain, :South_West_Monsoon, :North_West_Monsoon, :Total]
   if rain_fall_type || views
       if views == "Map View"
-        l =  rain_fall_type.gsub(" ","")           
+       
          if rain_fall_type  ==  "All"
           b = Rainfall2.map_search("All",compare,year,rain_fall_type)
           u = "Total"
