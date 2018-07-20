@@ -22,6 +22,8 @@ def test
    year  = params[:year]
    compare = params[:compare]
 
+   ji1 = [:Year, :Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi, :Ghagra, :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar_Tur, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower_Kusum, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Total_Fibre_Crops, :Jute, :Mesta, :Sugarcane]
+
   if rain_fall_type || views
 
       if views == "Map View"
@@ -36,7 +38,7 @@ def test
          end
       elsif views == "Table"  
         b = ProductionProductivity1.search(params[:search],compare,year,rain_fall_type)
-        a = ProductionProductivity1.table(b,rain_fall_type,year,ji,compare)
+        a = ProductionProductivity1.table(b,rain_fall_type,year,ji1,compare)
       else
         @ProductionProductivity1s = ProductionProductivity1.search(params[:search],compare,year,rain_fall_type)
         a = ProductionProductivity1.query(@ProductionProductivity1s,params[:year],rain_fall_type,views,ji,compare)
