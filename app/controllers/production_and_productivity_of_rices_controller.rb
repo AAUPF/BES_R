@@ -83,7 +83,7 @@ def test
    year  = params[:year]
    compare = params[:compare]
 
-   ji1 = [:Districts, :Area, :Production, :Productivity]
+   ji1 = [:Districts,:Area, :Production, :Productivity]
 
   if rain_fall_type || views
 
