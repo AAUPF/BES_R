@@ -50,16 +50,15 @@ module Rainfallnewmap
       else
       if compare == "None"
         hash_data = [
-          {title:"Year", field:"Year"},
+          {title:"District", field:"Districts" },
           {title:dataset, field:rain_fall_type },
-          {title:"District", field:"Districts" }
       ]
       else
         hash_data = [
         # {title:compare, field:compare, sorter:"string", },
-          {title:"Year", field:"Year"},
+        {title:"District", field:"Districts"},
           {title:dataset, field:rain_fall_type},
-          {title:"District", field:"Districts"}
+          
       ]
       end
       end
