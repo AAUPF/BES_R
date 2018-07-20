@@ -21,7 +21,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-
+   ji1 = [:Districts, :Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :Total, :N, :P, :K, :Total_NPK, :Grand_Total]
   if rain_fall_type || views
 
       if views == "Map View"
@@ -35,8 +35,9 @@ def test
           a = AgriculturalInputs4.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = AgriculturalInputs4.search(params[:search],compare,year)
-        a = AgriculturalInputs4.table(b,rain_fall_type,year)
+        
+        b = AgriculturalInputs4.search(params[:search],compare,year,rain_fall_type)
+        a = AgriculturalInputs4.table(b,rain_fall_type,year,ji1,compare)
       else
         @AgriculturalInputs4s = AgriculturalInputs4.search(params[:search],compare,year,rain_fall_type)
         a = AgriculturalInputs4.query(@AgriculturalInputs4s,params[:year],rain_fall_type,views,ji,compare)

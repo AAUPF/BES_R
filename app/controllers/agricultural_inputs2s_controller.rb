@@ -39,7 +39,7 @@ def test
          end
       elsif views == "Table"  
         b = AgriculturalInputs2.search(params[:search],compare,year,rain_fall_type)
-        a = AgriculturalInputs2.table(b,rain_fall_type,year,ji,compare)
+        a = AgriculturalInputs2.table(b,rain_fall_type,year,ji1,compare)
       else
         @AgriculturalInputs2s = AgriculturalInputs2.search(params[:search],compare,year,rain_fall_type)
         a = AgriculturalInputs2.query(@AgriculturalInputs2s,params[:year],rain_fall_type,views,ji,compare)

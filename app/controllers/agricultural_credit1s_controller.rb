@@ -30,6 +30,14 @@ def test
     ji = [ :Commercial_Bank_Target, :Commercial_Bank_Achievement, :RRBs_Target, :RRBs_Achievement, :CCBs_Target, :CCBs_Achievement, :Total_Target, :Total_Achievement]
   end
 
+
+  if compare == "Total"
+    ji1 = [:Year,:Commercial_Bank_Target, :Commercial_Bank_Achievement, :RRBs_Target, :RRBs_Achievement, :CCBs_Target, :CCBs_Achievement, :Total_Target, :Total_Achievement]
+    rain_fall_type = params[:rain_fall_type]
+  else
+    ji1 = [ :Year,:Commercial_Bank_Target, :Commercial_Bank_Achievement, :RRBs_Target, :RRBs_Achievement, :CCBs_Target, :CCBs_Achievement, :Total_Target, :Total_Achievement]
+  end
+
   if rain_fall_type || views
 
       if views == "Map View"
@@ -44,7 +52,7 @@ def test
          end
       elsif views == "Table"  
         b = AgriculturalCredit1.search(params[:search],compare,year,rain_fall_type)
-        a = AgriculturalCredit1.table(b,rain_fall_type,year,ji,compare)
+        a = AgriculturalCredit1.table(b,rain_fall_type,year,ji1,compare)
       else
         @AgriculturalCredit1s = AgriculturalCredit1.search(params[:search],compare,year,rain_fall_type)
         a = AgriculturalCredit1.query(@AgriculturalCredit1s,params[:year],rain_fall_type,views,ji,compare)

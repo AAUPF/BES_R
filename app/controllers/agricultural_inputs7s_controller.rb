@@ -16,13 +16,13 @@ class AgriculturalInputs7sController < ApplicationController
   end
 
 def test
-  ji = [ :Urea, :Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher]
+  ji = [ :Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
-   ji1 = [:Districts, :Urea, :Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher, :Year]
+   ji1 = [:Districts, :Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher, :Year]
 
   if rain_fall_type || views
 
@@ -37,8 +37,8 @@ def test
           a = AgriculturalInputs7.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = AgriculturalInputs7.search(params[:search],compare,year)
-        a = AgriculturalInputs7.table(b,rain_fall_type,year)
+        b = AgriculturalInputs7.search(params[:search],compare,year,rain_fall_type)
+        a = AgriculturalInputs7.table(b,rain_fall_type,year,ji1,compare)
       else
         @AgriculturalInputs7s = AgriculturalInputs7.search(params[:search],compare,year,rain_fall_type)
         a = AgriculturalInputs7.query(@AgriculturalInputs7s,params[:year],rain_fall_type,views,ji,compare)
