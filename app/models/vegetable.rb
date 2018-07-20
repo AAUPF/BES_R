@@ -36,33 +36,31 @@ module Vegetable
   
       # Logic to generate table starts
       def table (b,rain_fall_type,year,ji,compare)
-  
+        dataset = rain_fall_type.gsub("_"," ")
   
         if rain_fall_type == "All"
           hash_data = ji.map do |el|
-            puts el
-            
-              {title:el, field:el, sorter:"string",headerFilter:true}
-            
-  
-            
-            
-          
-             end
+            #{title:el, field:el,headerFilter:true}
+            if el.to_s == "Vegetables"
+              {title:"Vegetables", field:el,headerFilter:true}
+            else
+              {title:el.to_s.gsub("_"," "), field:el}
+            end
+          end
   
         else
         if compare == "None"
           hash_data = [
-            {title:"Year", field:"Year", sorter:"string"},
-            {title:rain_fall_type, field:rain_fall_type, sorter:"string"},
-            {title:"Vegetables", field:"Vegetables", sorter:"string"}
+            {title:"Year", field:"Year"},
+            {title:dataset, field:rain_fall_type},
+            {title:"Vegetables", field:"Vegetables"}
         ]
         else
           hash_data = [
           # {title:compare, field:compare, sorter:"string", editor:true},
-            {title:"Year", field:"Year", sorter:"string"},
-            {title:rain_fall_type, field:rain_fall_type, sorter:"string"},
-            {title:"Vegetables", field:"Vegetables", sorter:"string"}
+            {title:"Year", field:"Year"},
+            {title:dataset, field:rain_fall_type},
+            {title:"Vegetables", field:"Vegetables"}
         ]
         end
         end
@@ -72,10 +70,8 @@ module Vegetable
                return data
             end
             # Logic to generate table end
-  
-  
-  
-  
+
+
   
   
     def map_search(search,compare,year,rain_fall_type)
