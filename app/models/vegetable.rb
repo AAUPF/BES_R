@@ -51,16 +51,16 @@ module Vegetable
         else
         if compare == "None"
           hash_data = [
-            {title:"Year", field:"Year"},
+            {title:"Vegetables", field:"Vegetables",headerFilter:true},
             {title:dataset, field:rain_fall_type},
-            {title:"Vegetables", field:"Vegetables"}
+            
         ]
         else
           hash_data = [
           # {title:compare, field:compare, sorter:"string", editor:true},
-            {title:"Year", field:"Year"},
+          {title:"Vegetables", field:"Vegetables",headerFilter:true},
             {title:dataset, field:rain_fall_type},
-            {title:"Vegetables", field:"Vegetables"}
+            
         ]
         end
         end
