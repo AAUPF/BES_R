@@ -50,16 +50,15 @@ module Newdistrict
         else
         if compare == "None"
           hash_data = [
-            {title:"Year", field:"Year"},
-            {title:dataset, field:rain_fall_type },
-            {title:"District", field:"Districts" }
+            {title:"District", field:"Districts",headerFilter:true },
+            {title:dataset, field:rain_fall_type }
         ]
         else
           hash_data = [
           # {title:compare, field:compare, sorter:"string", },
-            {title:"Year", field:"Year"},
-            {title:dataset, field:rain_fall_type},
-            {title:"District", field:"Districts"}
+          {title:"District", field:"Districts",headerFilter:true},
+
+            {title:dataset, field:rain_fall_type}
         ]
         end
         end
