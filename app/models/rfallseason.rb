@@ -50,7 +50,8 @@ module Rfallseason
 
   # Logic to generate table starts
   def table (b,rain_fall_type,year,ji,compare)
-    dataset = rain_fall_type.gsub("_"," ")
+    dataset = rain_fall_type.gsub("_"," ");
+    dataset_compare = compare.gsub("_"," ");
     if rain_fall_type == "All"
       hash_data = ji.map do |el|
           if el.to_s == "Year"
@@ -68,9 +69,9 @@ module Rfallseason
 
     ]
     else
-      hash_data = [    {title:"Year", field:"Year",headerFilter:true},
+      hash_data = [{title:"Year", field:"Year",headerFilter:true},
         {title:dataset, field:rain_fall_type},
-      {title:compare, field:compare}
+      {title:dataset_compare, field:compare}
     ]
     end
 end
