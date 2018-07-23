@@ -84,6 +84,40 @@ end
 
 
 
+    def table_trim (b,rain_fall_type,year,ji,compare)
+      dataset = rain_fall_type.gsub("_"," ");
+      dataset_compare = compare.gsub("_"," ");
+      if rain_fall_type == "All"
+        hash_data = ji.map do |el|
+            if el.to_s == "Year"
+              {title:"Year", field:el,headerFilter:true}
+            else
+              {title:el.to_s.gsub("_"," ").split.first, field:el}
+            end
+          end
+      else
+  
+      if compare == "None"
+        hash_data = [
+          {title:"Year", field:"Year",headerFilter:true},
+          {title:dataset.to_s.gsub("_"," ").split.first, field:rain_fall_type}
+  
+      ]
+      else
+        hash_data = [{title:"Year", field:"Year",headerFilter:true},
+          {title:dataset.to_s.gsub("_"," ").split.first, field:rain_fall_type},
+        {title:dataset_compare.to_s.gsub("_"," ").split.first, field:compare}
+      ]
+      end
+  end
+  
+  
+   data = {column: hash_data,data: b}
+         return data
+      end
+
+
+
 
   def map_search(search,compare,year,rain_fall_type)
     if search == "All"

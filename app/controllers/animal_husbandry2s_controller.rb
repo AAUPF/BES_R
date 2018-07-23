@@ -21,9 +21,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-
-
-   ji1 = [:Year, :Milk_lakh_tonnes, :Egg_crore, :Wool_lakh_kgs, :Meat_lakh_tonnes, :Fish_lakh_tonnes]
+  ji1 = [:Year, :Milk_lakh_tonnes, :Egg_crore, :Wool_lakh_kgs, :Meat_lakh_tonnes, :Fish_lakh_tonnes]
   if rain_fall_type || views
 
       if views == "Map View"
@@ -38,7 +36,7 @@ def test
          end
       elsif views == "Table"  
         b = AnimalHusbandry2.search(params[:search],compare,year,rain_fall_type)
-        a = AnimalHusbandry2.table(b,rain_fall_type,year,ji1,compare)
+        a = AnimalHusbandry2.table_trim(b,rain_fall_type,year,ji1,compare)
       else
         @AnimalHusbandry2s = AnimalHusbandry2.search(params[:search],compare,year,rain_fall_type)
         a = AnimalHusbandry2.query(@AnimalHusbandry2s,params[:year],rain_fall_type,views,ji,compare)
