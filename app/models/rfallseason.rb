@@ -150,6 +150,7 @@ end
 
 
         if year == "All" && rain_fall_type == "All"
+
           hash_data =  ji.map do |column_name|
 
             dataset = column_name.to_s.gsub("_"," ")
@@ -175,20 +176,30 @@ end
             }
             end
           end
+              title = {
+                animationEnabled: true,
+                exportEnabled: true,
+                title:{
+                  text: name
+                      },
+                data: hash_data
+            }
 
+         return title
 
         elsif year == "All"
 
 
 
-          if compare != "None"
 
+          if compare != "None"
           ji1 = [rain_fall_type,compare]
             hash_data = ji1.map do |col|
 
               dataset = col.to_s.gsub("_"," ")
 
               {
+          
                 type:views,
                 legendText: dataset,
                 showInLegend: true,
@@ -213,29 +224,55 @@ end
               end
             }]
           end
+         
 
 
+       # logic of if starts here
+          if compare == "None"
+              name =  "#{rain_fall_type.to_s.gsub("_"," ")}"
+          else
+              name =  "#{rain_fall_type.to_s.gsub("_"," ")} Vs #{compare.to_s.gsub("_"," ")}"
+          end
 
-          return hash_data
+       # logic of if end here
+
+          title = {
+                      animationEnabled: true,
+                      exportEnabled: true,
+                      title:{
+                        text: name
+                            },
+                      data: hash_data
+                  }
+
+          return title
         else
-          array = []
-
+        
           if compare
 
             if rain_fall_type == "All"
               # ji = [rain_fall_type,compare]
+
               hash_data =  ji.map do |col|
                 {
                   type:views,
-                  legendText: col,
+                  legendText: col.to_s.gsub("_"," "),
                   showInLegend: true,
                   dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
                        { y: el[col], label: el["Year"] }
                   end
                 }
               end
+              title = {
+                animationEnabled: true,
+                exportEnabled: true,
+                title:{
+                         text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                      },
+                data: hash_data
+            }
 
-              return hash_data
+              return title
 
             else
               # b.each do |element|
@@ -245,18 +282,29 @@ end
               #   array.push(hash2)
               # end
               # return array
+
                 if compare == "None"
                       ji1 = [rain_fall_type]
                       hash_data =  ji1.map do |col|
                         {
                           type:views,
-                          legendText: col,
+                          legendText: col.to_s.gsub("_"," "),
                           showInLegend: true,
                           dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
                                 { y: el[col], label: el["Year"] }
                           end
                         }
                       end
+                      title = {
+                        animationEnabled: true,
+                        exportEnabled: true,
+                        title:{
+                          text: name
+                              },
+                        data: hash_data
+                    }
+
+            return title
                 else
 
 
@@ -265,17 +313,25 @@ end
                hash_data =  ji1.map do |col|
                  {
                    type:views,
-                   legendText: col,
+                   legendText: col.to_s.gsub("_"," "),
                    showInLegend: true,
                    dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
                         { y: el[col], label: el["Year"] }
                    end
                  }
                end
+               title = {
+                animationEnabled: true,
+                exportEnabled: true,
+                title:{
+                         text: "#{rain_fall_type.to_s.gsub("_"," ")} Vs #{compare.to_s.gsub("_"," ")}"
+                      },
+                data: hash_data
+            }
 
                 end
 
-              return hash_data
+              return title
             end
 
 
@@ -285,6 +341,7 @@ end
               hash1 = {:y => element[rain_fall_type] ,:label => element["Year"]}
               array.push(hash1)
             end
+
             return array
           end
 
