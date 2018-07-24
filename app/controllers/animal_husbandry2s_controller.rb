@@ -39,7 +39,7 @@ def test
         a = AnimalHusbandry2.table_trim(b,rain_fall_type,year,ji1,compare)
       else
         @AnimalHusbandry2s = AnimalHusbandry2.search(params[:search],compare,year,rain_fall_type)
-        a = AnimalHusbandry2.query(@AnimalHusbandry2s,params[:year],rain_fall_type,views,ji,compare)
+        a = AnimalHusbandry2.query1(@AnimalHusbandry2s,params[:year],rain_fall_type,views,ji,compare)
       end
       respond_to do |format|
         format.html { render json:a }
