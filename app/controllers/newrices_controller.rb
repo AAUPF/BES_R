@@ -23,7 +23,17 @@ def test
    compare = params[:compare]
 
    ji1 = [:Area, :Production, :Productivity, :Year]
+   units = [{Area: "000 Hectare" },{Production: "000 tonnes" },{Productivity: "Kg/Hac" }]
 
+
+   if rain_fall_type == "Area"
+        unit1 =  units[0][:Area]
+      elsif rain_fall_type == "Production"
+        unit1 =  units[1][:Production]
+      elsif rain_fall_type == "Productivity"
+        unit1 =  units[2][:Productivity]
+      else
+   end
 
   if rain_fall_type || views
 
@@ -32,10 +42,10 @@ def test
          if rain_fall_type  ==  "All"
           b = Newrice.map_search("All",compare,year,rain_fall_type)
           u = "Total"
-          a = Newrice.map(b,params[:year],rain_fall_type,views)
+          a = Newrice.map(b,params[:year],rain_fall_type,views,unit1)
          else
           b = Newrice.map_search(params[:search],compare,year,rain_fall_type)
-          a = Newrice.map(b,rain_fall_type,year,ji)
+          a = Newrice.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
         b = Newrice.search(params[:search],compare,year,rain_fall_type)
