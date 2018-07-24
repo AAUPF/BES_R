@@ -1,1 +1,1 @@
-rails g scaffold production_productivity5 Vegetables:string Area:float Production:float 
+rails g scaffold agricultural_inputs2 Year:integer Type_of_Fertilizer:string Urea:float 	DAP:float	SSP:float	MOP:float	Ammonium_Sulphate:float	Complex:float	Sub_Total:float	N:float	P:float	K:float	Total_NPK:float	Grand_Total:float	Consumption_of_Fertilizer:float

@@ -2,7 +2,7 @@
 
 one:
   Year: 1
-  Type_of_Fertilizer: 1.5
+  Type_of_Fertilizer: MyString
   Urea: 1.5
   DAP: 1.5
   SSP: 1.5
@@ -19,7 +19,7 @@ one:
 
 two:
   Year: 1
-  Type_of_Fertilizer: 1.5
+  Type_of_Fertilizer: MyString
   Urea: 1.5
   DAP: 1.5
   SSP: 1.5

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :agricultural_inputs2s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :newrices do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :production_productivity5s do 
                       collection { post :import }
                       collection { get :dropdown }
@@ -45,11 +55,6 @@ Rails.application.routes.draw do
                       collection { get :test }
                       end 
   resources :agricultural_inputs3s do 
-                      collection { post :import }
-                      collection { get :dropdown }
-                      collection { get :test }
-                      end 
-  resources :agricultural_inputs2s do 
                       collection { post :import }
                       collection { get :dropdown }
                       collection { get :test }

@@ -16,15 +16,14 @@ class AgriculturalInputs2sController < ApplicationController
   end
 
 def test
-  ji = [:Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :Sub_Total, :N, :P, :K, :Total_NPK, :Grand_Total, :Consumption_of_Fertilizer]
+  ji = [:Year, :Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :Sub_Total, :N, :P, :K, :Total_NPK, :Grand_Total, :Consumption_of_Fertilizer]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
-   ji1 = [:Year, :Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :Sub_Total, :N, :P, :K, :Total_NPK, :Grand_Total, :Consumption_of_Fertilizer]
 
-
+     ji1 = [:Year, :Type_of_Fertilizer, :Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :Sub_Total, :N, :P, :K, :Total_NPK, :Grand_Total, :Consumption_of_Fertilizer]
   if rain_fall_type || views
 
       if views == "Map View"

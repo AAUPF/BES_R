@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_18_062211) do
+ActiveRecord::Schema.define(version: 2018_07_24_065643) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2018_07_18_062211) do
 
   create_table "agricultural_inputs2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
-    t.float "Type_of_Fertilizer"
+    t.string "Type_of_Fertilizer"
     t.float "Urea"
     t.float "DAP"
     t.float "SSP"
@@ -301,6 +301,19 @@ ActiveRecord::Schema.define(version: 2018_07_18_062211) do
     t.float "Net_Area_Sown"
     t.float "Gross_Crop_Area"
     t.float "Cropping_Intensity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "newrices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Districts"
+    t.float "Area"
+    t.float "Production"
+    t.float "Productivity"
+    t.integer "Year"
+    t.string "Area_Colour"
+    t.string "Production_Colour"
+    t.string "Productivity_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

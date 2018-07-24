@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Districts:</strong>
+  <%= @newrice.Districts %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @newrice.Area %>
+</p>
+
+<p>
+  <strong>Production:</strong>
+  <%= @newrice.Production %>
+</p>
+
+<p>
+  <strong>Productivity:</strong>
+  <%= @newrice.Productivity %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @newrice.Year %>
+</p>
+
+<p>
+  <strong>Area colour:</strong>
+  <%= @newrice.Area_Colour %>
+</p>
+
+<p>
+  <strong>Production colour:</strong>
+  <%= @newrice.Production_Colour %>
+</p>
+
+<p>
+  <strong>Productivity colour:</strong>
+  <%= @newrice.Productivity_Colour %>
+</p>
+
+<%= link_to 'Edit', edit_newrice_path(@newrice) %> |
+<%= link_to 'Back', newrices_path %>

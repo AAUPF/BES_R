@@ -70,10 +70,6 @@ module Rainfallnewmap
           # Logic to generate table end
 
 
-
-
-
-
   def map_search(search,compare,year,rain_fall_type)
     if search == "All"
       if rain_fall_type == "All"
@@ -81,8 +77,6 @@ module Rainfallnewmap
       else
         where(Year: year).order(rain_fall_type)
       end
-
-
     else
       # where(Districts: search)
       where(Year: year).order(rain_fall_type)
@@ -187,19 +181,11 @@ module Rainfallnewmap
 
       elsif rain_fall_type == "South_West_Monsoon"
         hu = {below_min: {min: 500, max: 600},min: {min: 600, max: 700}, blow_max:{min: 700, max: 900}, max:{min: 900, max: 1100},above_max:{min: 1100, max: 1400},extreme:{min: 1400, max: 1800},above_extreme:{max: 1800}}
-
-
       elsif rain_fall_type == "North_West_Monsoon"
         hu = {below_min: {min: 0, max: 10},min: {min: 10, max: 20}, blow_max:{min: 20, max: 40}, max:{min: 40, max: 60},above_max:{min: 60, max: 80},extreme:{min: 80, max: 120},above_extreme:{max: 120}}
-      else
-      
-
-        
+      else        
       end
-      
     elsif year == "2017"
-
-
       if rain_fall_type == "All"
         hu = {below_min: {min: 400, max: 600},min: {min: 600, max: 800}, blow_max:{min: 800, max: 1100}, max:{min: 1100, max: 1300},above_max:{min: 1300, max: 1600},extreme:{min: 1600, max: 2000},above_extreme:{max: 2000}}
       elsif rain_fall_type == "Winter_Rain"
@@ -217,19 +203,10 @@ module Rainfallnewmap
       end
       
     else
-      
     end
 
     b.map.with_index do |el,i|
-
         dist = el["Districts"]
-
-
-
-
-
-
-
       if el[u] >=  hu[:below_min][:min].to_i and el[u] <= hu[:below_min][:max].to_i
       puts el[u]
       hash1 = { y: el[u], label: dist, color: "Red" }
@@ -239,7 +216,6 @@ module Rainfallnewmap
        hash1 = { y: el[u], label: dist, color: "Orange" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         min.push(hash1)
-
 
     elsif el[u] > hu[:blow_max][:min].to_i and el[u] <= hu[:blow_max][:max]
       puts el[u]
@@ -262,23 +238,15 @@ module Rainfallnewmap
 
     elsif el[u] > hu[:extreme][:min].to_i and el[u] <= hu[:extreme][:max].to_i
       puts el[u]
-
          hash1 = { y: el[u], label: dist, color: "Green" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         extreme.push(hash1)
-
-
     elsif el[u] > hu[:above_extreme][:min].to_i
       puts el[u]
-
          hash1 = { y: el[u], label: dist, color: "Dark_Green" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         above_extreme.push(hash1)
-     
       end
-
-
-
 
       # array.push(a)
     end
@@ -293,17 +261,6 @@ module Rainfallnewmap
     # sleep 1
     
     a.push({"data": hu})
-
-
-
-    # if test
-      
-    # else
-      
-    # end
-
-    # hu = {below_min: {min: 500, max: 800},min: {min: 800, max: 1000}, blow_max:{min: 1000, max: 1200}, max:{min: 1200, max: 1300},above_max:{min: 1300, max: 1600},extreme:{min: 1600, max: 2000},above_extreme:{max: 2000}}
-      # puts hu[:below_min][:min].class
     return a
   end
 

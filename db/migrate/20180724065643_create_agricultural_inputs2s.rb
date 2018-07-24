@@ -2,7 +2,7 @@ class CreateAgriculturalInputs2s < ActiveRecord::Migration[5.2]
   def change
     create_table :agricultural_inputs2s do |t|
       t.integer :Year
-      t.float :Type_of_Fertilizer
+      t.string :Type_of_Fertilizer
       t.float :Urea
       t.float :DAP
       t.float :SSP
