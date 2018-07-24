@@ -119,7 +119,15 @@ module Newdistrict
   
               end
             end
-              return hash_data
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                       text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                    },
+              data: hash_data
+          }
+              return title
           else
             if compare == "Bihar vs District"
                 dataset = rain_fall_type.gsub("_"," ")
@@ -147,7 +155,15 @@ module Newdistrict
                 end
               }]
             end
-            return hash_data
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                       text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                    },
+              data: hash_data
+          }
+            return title
           end
       end
   

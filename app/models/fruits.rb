@@ -148,8 +148,16 @@ module Fruits
                 end
               }
               end
-
             end
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                       text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                    },
+              data: hash_data
+          }
+              return title
           elsif views == "Bubble"
             hash_data =  ji.map do |column_name|
               if compare =="Bihar vs District"
@@ -201,7 +209,15 @@ module Fruits
 
             end
           end
-            return hash_data
+          title = {
+            animationEnabled: true,
+            exportEnabled: true,
+            title:{
+                     text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                  },
+            data: hash_data
+        }
+            return title
         else
           array = []
 

@@ -173,7 +173,15 @@ module Kharif
               }
               end
             end
-  
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                       text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                    },
+              data: hash_data
+          }
+            return title
   
           elsif year == "All"
   
@@ -211,10 +219,21 @@ module Kharif
                 end
               }]
             end
+            if compare == "None"
+              name =  "#{rain_fall_type.to_s.gsub("_"," ")}"
+          else
+              name =  "#{rain_fall_type.to_s.gsub("_"," ")} Vs #{compare.to_s.gsub("_"," ")}"
+          end
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                       text: name
+                    },
+              data: hash_data
+          }
   
-  
-  
-            return hash_data
+            return title
           else
             array = []
   
@@ -232,8 +251,15 @@ module Kharif
                     end
                   }
                 end
-  
-                return hash_data
+                title = {
+                  animationEnabled: true,
+                  exportEnabled: true,
+                  title:{
+                           text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                        },
+                  data: hash_data
+              }
+                return title
   
               else
                 # b.each do |element|
@@ -272,8 +298,15 @@ module Kharif
                  end
   
                   end
-  
-                return hash_data
+                  title = {
+                    animationEnabled: true,
+                    exportEnabled: true,
+                    title:{
+                             text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                          },
+                    data: hash_data
+                }
+                return title
               end
   
   
