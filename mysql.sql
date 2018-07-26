@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 26, 2018 at 05:20 AM
+-- Generation Time: Jul 26, 2018 at 05:24 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -20,6 +20,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `agricultural_credit2s`
 --
 
+DROP TABLE IF EXISTS `agricultural_credit2s`;
 CREATE TABLE `agricultural_credit2s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -84,6 +85,7 @@ INSERT INTO `agricultural_credit2s` (`id`, `Districts`, `Target_2014`, `Target_2
 -- Table structure for table `agricultural_inputs4s`
 --
 
+DROP TABLE IF EXISTS `agricultural_inputs4s`;
 CREATE TABLE `agricultural_inputs4s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -154,6 +156,7 @@ INSERT INTO `agricultural_inputs4s` (`id`, `Districts`, `Urea`, `DAP`, `SSP`, `M
 -- Table structure for table `agricultural_inputs5s`
 --
 
+DROP TABLE IF EXISTS `agricultural_inputs5s`;
 CREATE TABLE `agricultural_inputs5s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -224,6 +227,7 @@ INSERT INTO `agricultural_inputs5s` (`id`, `Districts`, `Urea`, `DAP`, `SSP`, `M
 -- Table structure for table `agricultural_inputs6s`
 --
 
+DROP TABLE IF EXISTS `agricultural_inputs6s`;
 CREATE TABLE `agricultural_inputs6s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -286,6 +290,7 @@ INSERT INTO `agricultural_inputs6s` (`id`, `Districts`, `Target_Physical`, `Targ
 -- Table structure for table `agricultural_inputs7s`
 --
 
+DROP TABLE IF EXISTS `agricultural_inputs7s`;
 CREATE TABLE `agricultural_inputs7s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -351,6 +356,7 @@ INSERT INTO `agricultural_inputs7s` (`id`, `Districts`, `Tractor`, `Combine_Harv
 -- Table structure for table `agricultural_inputs8s`
 --
 
+DROP TABLE IF EXISTS `agricultural_inputs8s`;
 CREATE TABLE `agricultural_inputs8s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -416,6 +422,7 @@ INSERT INTO `agricultural_inputs8s` (`id`, `Districts`, `Tractor`, `Combine_Harv
 -- Table structure for table `animal_husbandry4s`
 --
 
+DROP TABLE IF EXISTS `animal_husbandry4s`;
 CREATE TABLE `animal_husbandry4s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -480,6 +487,7 @@ INSERT INTO `animal_husbandry4s` (`id`, `Districts`, `Cow`, `Buffalo`, `Pig`, `S
 -- Table structure for table `animal_husbandry5s`
 --
 
+DROP TABLE IF EXISTS `animal_husbandry5s`;
 CREATE TABLE `animal_husbandry5s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -544,6 +552,7 @@ INSERT INTO `animal_husbandry5s` (`id`, `Districts`, `Fish_Production_2014`, `Fi
 -- Table structure for table `ar_internal_metadata`
 --
 
+DROP TABLE IF EXISTS `ar_internal_metadata`;
 CREATE TABLE `ar_internal_metadata` (
   `key` varchar(255) NOT NULL,
   `value` varchar(255) DEFAULT NULL,
@@ -564,6 +573,7 @@ INSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) 
 -- Table structure for table `hhs`
 --
 
+DROP TABLE IF EXISTS `hhs`;
 CREATE TABLE `hhs` (
   `id` bigint(20) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
@@ -577,6 +587,7 @@ CREATE TABLE `hhs` (
 -- Table structure for table `lands`
 --
 
+DROP TABLE IF EXISTS `lands`;
 CREATE TABLE `lands` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -644,6 +655,7 @@ INSERT INTO `lands` (`id`, `Districts`, `Geographical_Area`, `Forest`, `Barren_a
 -- Table structure for table `production_and_productivity_of_rices`
 --
 
+DROP TABLE IF EXISTS `production_and_productivity_of_rices`;
 CREATE TABLE `production_and_productivity_of_rices` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -708,6 +720,7 @@ INSERT INTO `production_and_productivity_of_rices` (`id`, `Districts`, `Area_201
 -- Table structure for table `production_productivity7s`
 --
 
+DROP TABLE IF EXISTS `production_productivity7s`;
 CREATE TABLE `production_productivity7s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -772,6 +785,7 @@ INSERT INTO `production_productivity7s` (`id`, `Districts`, `Area_2015`, `Produc
 -- Table structure for table `production_productivity8s`
 --
 
+DROP TABLE IF EXISTS `production_productivity8s`;
 CREATE TABLE `production_productivity8s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -836,6 +850,7 @@ INSERT INTO `production_productivity8s` (`id`, `Districts`, `Area_2015`, `Produc
 -- Table structure for table `production_productivity9s`
 --
 
+DROP TABLE IF EXISTS `production_productivity9s`;
 CREATE TABLE `production_productivity9s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -900,6 +915,7 @@ INSERT INTO `production_productivity9s` (`id`, `Districts`, `Area_2015`, `Produc
 -- Table structure for table `production_productivity10s`
 --
 
+DROP TABLE IF EXISTS `production_productivity10s`;
 CREATE TABLE `production_productivity10s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -974,6 +990,7 @@ INSERT INTO `production_productivity10s` (`id`, `Districts`, `Mango_Area_2015`, 
 -- Table structure for table `production_productivity11s`
 --
 
+DROP TABLE IF EXISTS `production_productivity11s`;
 CREATE TABLE `production_productivity11s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -1048,6 +1065,7 @@ INSERT INTO `production_productivity11s` (`id`, `Districts`, `Potato_Area_2015`,
 -- Table structure for table `production_productivity12s`
 --
 
+DROP TABLE IF EXISTS `production_productivity12s`;
 CREATE TABLE `production_productivity12s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -1112,6 +1130,7 @@ INSERT INTO `production_productivity12s` (`id`, `Districts`, `Area_2015`, `Produ
 -- Table structure for table `schema_migrations`
 --
 
+DROP TABLE IF EXISTS `schema_migrations`;
 CREATE TABLE `schema_migrations` (
   `version` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -1151,6 +1170,7 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 -- Table structure for table `test1s`
 --
 
+DROP TABLE IF EXISTS `test1s`;
 CREATE TABLE `test1s` (
   `id` bigint(20) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
@@ -1165,6 +1185,7 @@ CREATE TABLE `test1s` (
 -- Table structure for table `tests`
 --
 
+DROP TABLE IF EXISTS `tests`;
 CREATE TABLE `tests` (
   `id` bigint(20) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
