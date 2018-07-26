@@ -231,7 +231,7 @@ end
           if compare == "None"
               name =  "#{rain_fall_type.to_s.gsub("_"," ")}"
           else
-              name =  "#{rain_fall_type.to_s.gsub("_"," ")} Vs #{compare.to_s.gsub("_"," ")}"
+              name =  "#{rain_fall_type.to_s.gsub("_"," ")} vs. #{compare.to_s.gsub("_"," ")}"
           end
 
        # logic of if end here
@@ -324,7 +324,7 @@ end
                 animationEnabled: true,
                 exportEnabled: true,
                 title:{
-                         text: "#{rain_fall_type.to_s.gsub("_"," ")} Vs #{compare.to_s.gsub("_"," ")}"
+                         text: "#{rain_fall_type.to_s.gsub("_"," ")} vs. #{compare.to_s.gsub("_"," ")}"
                       },
                 data: hash_data
             }
