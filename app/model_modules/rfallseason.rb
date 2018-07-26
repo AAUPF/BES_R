@@ -159,6 +159,7 @@ end
               type:views,
               legendText: dataset,
               color: color,
+              #name:dataset,
               showInLegend: true,
               dataPoints: b.map do |el|
                 { y: el[column_name],z:el[rain_fall_type], label: rain_fall_type }
@@ -169,6 +170,7 @@ end
             {
               type:views,
               legendText: dataset,
+              #name:dataset,
               showInLegend: true,
               dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
                    { y: el[column_name],z:el[column_name], label: el["Year"] }
@@ -177,6 +179,9 @@ end
             end
           end
               title = {
+                # toolTip: {
+                #   shared: true
+                # },
                 animationEnabled: true,
                 exportEnabled: true,
                 title:{
@@ -391,7 +396,15 @@ def query1(b,year,rain_fall_type,views,ji,compare)
             }
             end
           end
-
+          title = {
+            animationEnabled: true,
+            exportEnabled: true,
+            title:{
+              text: "All"
+                  },
+            data: hash_data
+        }
+        return title
 
         elsif year == "All"
 
@@ -430,9 +443,26 @@ def query1(b,year,rain_fall_type,views,ji,compare)
             }]
           end
 
+          # logic of if starts here
+          if compare == "None"
+              name =  "#{rain_fall_type.to_s.gsub("_"," ").split.first}"
+            else
+              name =  "#{rain_fall_type.to_s.gsub("_"," ").split.first} vs. #{compare.to_s.gsub("_"," ").split.first}"
+          end
+          # logic of if end here
 
+        title = {
+                    animationEnabled: true,
+                    exportEnabled: true,
+                    title:{
+                      text: name
+                          },
+                    data: hash_data
+                }
 
-          return hash_data
+        return title
+
+          
         else
           array = []
 
@@ -450,17 +480,19 @@ def query1(b,year,rain_fall_type,views,ji,compare)
                   end
                 }
               end
+              title = {
+                animationEnabled: true,
+                exportEnabled: true,
+                title:{
+                         text: "#{rain_fall_type.to_s.gsub("_"," ").split.first}"
+                      },
+                data: hash_data
+            }
 
-              return hash_data
+              return title
 
             else
-              # b.each do |element|
-              #   hash1 = {:y => element[rain_fall_type] ,:label => rain_fall_type}
-              #   hash2 = {:y => element[compare] ,:label => compare}
-              #   array.push(hash1)
-              #   array.push(hash2)
-              # end
-              # return array
+              
                 if compare == "None"
                       ji1 = [rain_fall_type]
                       hash_data =  ji1.map do |col|
@@ -473,6 +505,15 @@ def query1(b,year,rain_fall_type,views,ji,compare)
                           end
                         }
                       end
+                      title = {
+                        animationEnabled: true,
+                        exportEnabled: true,
+                        title:{
+                          text: name
+                              },
+                        data: hash_data
+                    }
+                    return title
                 else
 
 
@@ -488,10 +529,18 @@ def query1(b,year,rain_fall_type,views,ji,compare)
                    end
                  }
                end
+               title = {
+                animationEnabled: true,
+                exportEnabled: true,
+                title:{
+                         text: "#{rain_fall_type.to_s.gsub("_"," ").split.first} vs. #{compare.to_s.gsub("_"," ").split.first}"
+                      },
+                data: hash_data
+            }
 
                 end
 
-              return hash_data
+              return title
             end
 
 

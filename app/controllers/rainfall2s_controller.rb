@@ -16,14 +16,14 @@ class Rainfall2sController < ApplicationController
   end
 
 def test
-  ji = [:Winter_Rain, :Hot_Weather_Rain, :South_West_Monsoon, :North_West_Monsoon, :Total]
+  ji = [:Winter_Rain, :Hot_Weather_Rain, :South_West_Monsoon, :North_West_Monsoon]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
  
-   ji1 = [:Districts,:Winter_Rain, :Hot_Weather_Rain, :South_West_Monsoon, :North_West_Monsoon, :Total]
+   ji1 = [:Districts,:Winter_Rain, :Hot_Weather_Rain, :South_West_Monsoon, :North_West_Monsoon]
   if rain_fall_type || views
       if views == "Map View"
        
