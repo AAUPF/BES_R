@@ -17,13 +17,25 @@ class AgriculturalInputs2sController < ApplicationController
   end
 
   def test
-    ji = %i[Year Urea DAP SSP MOP Ammonium_Sulphate Complex Sub_Total N P K Total_NPK Grand_Total Consumption_of_Fertilizer]
     rain_fall_type = params[:rain_fall_type]
+    if rain_fall_type == "All"
+      ji = %i[Urea DAP SSP MOP Ammonium_Sulphate Complex N P K Total_NPK Grand_Total]
+    else
+      ji = %i[Urea DAP SSP MOP Ammonium_Sulphate Complex N P K Total_NPK Grand_Total Consumption_of_Fertilizer]
+    end
+    
+    
     views = params[:views]
     year = params[:year]
     compare = params[:compare]
 
-    ji1 = %i[Year Type_of_Fertilizer Urea DAP SSP MOP Ammonium_Sulphate Complex Sub_Total N P K Total_NPK Grand_Total Consumption_of_Fertilizer]
+   
+    if rain_fall_type == "All"
+      ji1 = %i[Year Type_of_Fertilizer Urea DAP SSP MOP Ammonium_Sulphate Complex N P K Total_NPK Grand_Total]
+    else
+      ji1 = %i[Year Type_of_Fertilizer Urea DAP SSP MOP Ammonium_Sulphate Complex N P K Total_NPK Grand_Total Consumption_of_Fertilizer]
+    end
+
     if rain_fall_type || views
 
       if views == 'Map View'

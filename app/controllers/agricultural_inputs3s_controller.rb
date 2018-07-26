@@ -16,14 +16,14 @@ class AgriculturalInputs3sController < ApplicationController
   end
 
 def test
-  ji = [:Tractor, :Combine_Harvestors, :Zero_Tillage, :Pumpsets, :Power_Tiller, :Manually_operated_tools_implements, :Threshers, :Total]
+  ji = [:Tractor, :Combine_Harvestors, :Zero_Tillage, :Pumpsets, :Power_Tiller, :Manually_operated_tools_implements, :Threshers]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
 
-   ji1 = [:Year, :Tractor, :Combine_Harvestors, :Zero_Tillage, :Pumpsets, :Power_Tiller, :Manually_operated_tools_implements, :Threshers, :Total]
+   ji1 = [:Year, :Tractor, :Combine_Harvestors, :Zero_Tillage, :Pumpsets, :Power_Tiller, :Manually_operated_tools_implements, :Threshers]
 
   if rain_fall_type || views
 

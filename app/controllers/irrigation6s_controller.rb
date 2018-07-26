@@ -16,13 +16,13 @@ class Irrigation6sController < ApplicationController
   end
 
 def test
-  ji = [:Surface_Canal, :Tanks_including_Ahars_Pynes, :Tubewells_Private_and_State, :Other_Sources_Lift_Irrigation_and_Barge_Lift_Irrigation, :Total]
+  ji = [:Surface_Canal, :Tanks_including_Ahars_Pynes, :Tubewells_Private_and_State, :Other_Sources_Lift_Irrigation_and_Barge_Lift_Irrigation]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
-   ji1 = [:Year,:Surface_Canal, :Tanks_including_Ahars_Pynes, :Tubewells_Private_and_State, :Other_Sources_Lift_Irrigation_and_Barge_Lift_Irrigation, :Total]
+   ji1 = [:Year,:Surface_Canal, :Tanks_including_Ahars_Pynes, :Tubewells_Private_and_State, :Other_Sources_Lift_Irrigation_and_Barge_Lift_Irrigation]
 
   if rain_fall_type || views
 
