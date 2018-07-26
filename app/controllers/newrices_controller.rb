@@ -22,7 +22,7 @@ def test
    year  = params[:year]
    compare = params[:compare]
 
-   ji1 = [:Area, :Production, :Productivity, :Year]
+   ji1 = [:Districts, :Area, :Production, :Productivity, :Year]
    units = [{Area: "000 Hectare" },{Production: "000 tonnes" },{Productivity: "Kg/Hac" }]
 
 
