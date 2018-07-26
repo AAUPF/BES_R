@@ -15,45 +15,45 @@ class ProductionProductivity1sController < ApplicationController
     @production_productivity1 = ProductionProductivity1.new
   end
 
-def test
-  ji = [:Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi, :Ghagra, :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar_Tur, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower_Kusum, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Total_Fibre_Crops, :Jute, :Mesta, :Sugarcane]
-  rain_fall_type = params[:rain_fall_type]
-   views  = params[:views]
-   year  = params[:year]
-   compare = params[:compare]
+  def test
+    ji = [:Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi, :Ghagra, :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar_Tur, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower_Kusum, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Total_Fibre_Crops, :Jute, :Mesta, :Sugarcane]
+    rain_fall_type = params[:rain_fall_type]
+    views = params[:views]
+    year = params[:year]
+    compare = params[:compare]
 
-   ji1 = [:Year, :Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi, :Ghagra, :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar_Tur, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower_Kusum, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Total_Fibre_Crops, :Jute, :Mesta, :Sugarcane]
+    ji1 = [:Year, :Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi, :Ghagra, :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar_Tur, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower_Kusum, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Total_Fibre_Crops, :Jute, :Mesta, :Sugarcane]
 
-  if rain_fall_type || views
+    if rain_fall_type || views
 
       if views == "Map View"
-        l =  rain_fall_type.gsub(" ","")           
-         if rain_fall_type  ==  "All"
-          b = ProductionProductivity1.map_search("All",compare,year,rain_fall_type)
-          u = "Total"
-          a = ProductionProductivity1.map(b,params[:year],rain_fall_type,views)
-         else
-          b = ProductionProductivity1.map_search(params[:search],compare,year,rain_fall_type)
-          a = ProductionProductivity1.map(b,rain_fall_type,year,ji)
-         end
-      elsif views == "Table"  
-        b = ProductionProductivity1.search(params[:search],compare,year,rain_fall_type)
-        a = ProductionProductivity1.table(b,rain_fall_type,year,ji1,compare)
+        l = rain_fall_type.gsub(" ", "")
+        if rain_fall_type == "All"
+          b = ProductionProductivity1.map_search("All", compare, year, rain_fall_type)
+
+          a = ProductionProductivity1.map(b, params[:year], rain_fall_type, views)
+        else
+          b = ProductionProductivity1.map_search(params[:search], compare, year, rain_fall_type)
+          a = ProductionProductivity1.map(b, rain_fall_type, year, ji)
+        end
+      elsif views == "Table"
+        b = ProductionProductivity1.search(params[:search], compare, year, rain_fall_type)
+        a = ProductionProductivity1.table(b, rain_fall_type, year, ji1, compare)
       else
-        @ProductionProductivity1s = ProductionProductivity1.search(params[:search],compare,year,rain_fall_type)
-        a = ProductionProductivity1.query(@ProductionProductivity1s,params[:year],rain_fall_type,views,ji,compare)
+        @ProductionProductivity1s = ProductionProductivity1.search(params[:search], compare, year, rain_fall_type)
+        a = ProductionProductivity1.query(@ProductionProductivity1s, params[:year], rain_fall_type, views, ji, compare)
       end
       respond_to do |format|
-        format.html { render json:a }
+        format.html {render json: a}
+      end
+
+    else
+      respond_to do |format|
+        format.html {render json: "error"}
+      end
     end
 
-  else
-    respond_to do |format|
-      format.html { render json: "error"}
   end
-  end
-
-end
 
 
   def import
@@ -93,13 +93,14 @@ end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_production_productivity1
-      @production_productivity1 = ProductionProductivity1.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def production_productivity1_params
-      params.require(:production_productivity1).permit(:Year, :Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi, :Ghagra, :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar_Tur, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower_Kusum, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Total_Fibre_Crops, :Jute, :Mesta, :Sugarcane)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_production_productivity1
+    @production_productivity1 = ProductionProductivity1.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def production_productivity1_params
+    params.require(:production_productivity1).permit(:Year, :Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi, :Ghagra, :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar_Tur, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower_Kusum, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Total_Fibre_Crops, :Jute, :Mesta, :Sugarcane)
+  end
 end

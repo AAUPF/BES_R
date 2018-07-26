@@ -32,6 +32,7 @@ def test
         unit1 =  units[1][:Production]
       elsif rain_fall_type == "Productivity"
         unit1 =  units[2][:Productivity]
+        
       else
    end
 
