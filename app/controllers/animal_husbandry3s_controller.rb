@@ -16,12 +16,12 @@ class AnimalHusbandry3sController < ApplicationController
   end
 
 def test
-  ji = [:Animals_Treated_in_Lakh, :Immunization_in_Lakh, :Artificial_Insemination_in_Lakh]
+  ji = [:Animals_Treated, :Immunization, :Artificial_Insemination]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-   ji1 = [:Year, :Animals_Treated_in_Lakh, :Immunization_in_Lakh, :Artificial_Insemination_in_Lakh]
+   ji1 = [:Year, :Animals_Treated, :Immunization, :Artificial_Insemination]
   if rain_fall_type || views
 
       if views == "Map View"
@@ -98,6 +98,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def animal_husbandry3_params
-      params.require(:animal_husbandry3).permit(:Year, :Animals_Treated_in_Lakh, :Immunization_in_Lakh, :Artificial_Insemination_in_Lakh)
+      params.require(:animal_husbandry3).permit(:Year, :Animals_Treated, :Immunization, :Artificial_Insemination)
     end
 end
