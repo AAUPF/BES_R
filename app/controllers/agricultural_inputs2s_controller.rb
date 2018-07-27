@@ -19,7 +19,7 @@ class AgriculturalInputs2sController < ApplicationController
   def test
     rain_fall_type = params[:rain_fall_type]
     if rain_fall_type == "All"
-      ji = %i[Urea DAP SSP MOP Ammonium_Sulphate Complex N P K Total_NPK]
+      ji = %i[Urea DAP SSP MOP Ammonium_Sulphate Complex N P K]
     else
       ji = %i[Urea DAP SSP MOP Ammonium_Sulphate Complex N P K Total_NPK Grand_Total Consumption_of_Fertilizer]
     end

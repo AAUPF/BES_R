@@ -16,8 +16,15 @@ class AnimalHusbandry1sController < ApplicationController
   end
 
 def test 
-  ji = [:Cattle, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Buffalo, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Sheep, :Goats, :Pigs, :Horses_Ponies, :Others, :Total_Livestock, :Total_Poultry]
   rain_fall_type = params[:rain_fall_type]
+  #ji = [:Cattle, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Buffalo, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Sheep, :Goats, :Pigs, :Horses_Ponies, :Others, :Total_Livestock, :Total_Poultry]
+  if rain_fall_type == "All"
+    ji = [:Cattle, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Buffalo, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Sheep, :Goats, :Pigs, :Horses_Ponies, :Others]
+
+  else
+    ji = [:Cattle, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Buffalo, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Sheep, :Goats, :Pigs, :Horses_Ponies, :Others, :Total_Livestock, :Total_Poultry]
+
+  end
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]

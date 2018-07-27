@@ -18,25 +18,18 @@ class AgriculturalCredit1sController < ApplicationController
 def test
   # ji = [:Year, :Commercial_Bank_Target, :Commercial_Bank_Achievement, :RRBs_Target, :RRBs_Achievement, :CCBs_Target, :CCBs_Achievement, :Total_Target, :Total_Achievement]
   rain_fall_type = params[:rain_fall_type]
-   views  = params[:views]
+  if rain_fall_type == "All"
+    ji = [:Commercial_Bank_Target, :Commercial_Bank_Achievement, :RRBs_Target, :RRBs_Achievement, :CCBs_Target, :CCBs_Achievement]
+  else
+    ji = [:Commercial_Bank_Target, :Commercial_Bank_Achievement, :RRBs_Target, :RRBs_Achievement, :CCBs_Target, :CCBs_Achievement, :Total_Target, :Total_Achievement]
+  end
+  ji1 = [:Commercial_Bank_Target, :Commercial_Bank_Achievement, :RRBs_Target, :RRBs_Achievement, :CCBs_Target, :CCBs_Achievement, :Total_Target, :Total_Achievement]
+  views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
 
-   if compare == "Total"
-    ji = [:Commercial_Bank_Target, :Commercial_Bank_Achievement, :RRBs_Target, :RRBs_Achievement, :CCBs_Target, :CCBs_Achievement, :Total_Target, :Total_Achievement]
-    rain_fall_type = params[:rain_fall_type]
-  else
-    ji = [ :Commercial_Bank_Target, :Commercial_Bank_Achievement, :RRBs_Target, :RRBs_Achievement, :CCBs_Target, :CCBs_Achievement, :Total_Target, :Total_Achievement]
-  end
-
-
-  if compare == "Total"
-    ji1 = [:Year,:Commercial_Bank_Target, :Commercial_Bank_Achievement, :RRBs_Target, :RRBs_Achievement, :CCBs_Target, :CCBs_Achievement, :Total_Target, :Total_Achievement]
-    rain_fall_type = params[:rain_fall_type]
-  else
-    ji1 = [ :Year,:Commercial_Bank_Target, :Commercial_Bank_Achievement, :RRBs_Target, :RRBs_Achievement, :CCBs_Target, :CCBs_Achievement, :Total_Target, :Total_Achievement]
-  end
+   
 
   if rain_fall_type || views
 

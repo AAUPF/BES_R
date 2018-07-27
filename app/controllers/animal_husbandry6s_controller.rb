@@ -16,8 +16,15 @@ class AnimalHusbandry6sController < ApplicationController
   end
 
 def test
-  ji = [:Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production]
+  #ji = [:Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production]
   rain_fall_type = params[:rain_fall_type]
+  if rain_fall_type == "All"
+      ji = [:Crossbred_Cow, :Local_Cow, :Buffalo, :Goat]
+
+  else
+      ji = [:Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production]
+
+  end
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
