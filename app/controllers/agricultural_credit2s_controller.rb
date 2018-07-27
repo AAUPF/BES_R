@@ -21,33 +21,45 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-   ji1 = [:Districts, :Target, :Achievement]
-  if rain_fall_type || views
-        if views == "Map View"
-          l =  rain_fall_type.gsub(" ","")           
-          if rain_fall_type  ==  "All"
-            b = AgriculturalCredit2.map_search("All",compare,year,rain_fall_type)
-            u = "Total"
-            a = AgriculturalCredit2.map(b,params[:year],rain_fall_type,views)
-          else
-            b = AgriculturalCredit2.map_search(params[:search],compare,year,rain_fall_type)
-            a = AgriculturalCredit2.map(b,rain_fall_type,year,ji)
-          end
-        elsif views == "Table"  
-          b = AgriculturalCredit2.search(params[:search],compare,year,rain_fall_type)
-          a = AgriculturalCredit2.table(b,rain_fall_type,year,ji1,compare)
-        else
-          @AgriculturalCredit2s = AgriculturalCredit2.search(params[:search],compare,year,rain_fall_type)
-          a = AgriculturalCredit2.query(@AgriculturalCredit2s,params[:year],rain_fall_type,views,ji,compare)
-        end
-        respond_to do |format|
-          format.html { render json:a }
-      end
 
-    else
+   units = [{Area: "Lakh" },{Production: "Lakh" },{Productivity: "Lakh" }]
+
+   ji1 = [:Districts,:Target, :Achievement]
+
+   if rain_fall_type == "Target"
+        unit1 =  units[0][:Area]
+      elsif rain_fall_type == "Achievement"
+        unit1 =  units[1][:Production]
+      else
+   end
+
+  if rain_fall_type || views
+
+      if views == "Map View"
+        l =  rain_fall_type.gsub(" ","")           
+         if rain_fall_type  ==  "All"
+          b = AgriculturalCredit2.map_search("All",compare,year,rain_fall_type)
+          u = "Total"
+          a = AgriculturalCredit2.map(b,params[:year],rain_fall_type,views)
+         else
+          b = AgriculturalCredit2.map_search(params[:search],compare,year,rain_fall_type)
+          a = AgriculturalCredit2.map(b,rain_fall_type,year,ji,unit1)
+         end
+      elsif views == "Table"  
+        b = AgriculturalCredit2.search(params[:search],compare,year,rain_fall_type)
+        a = AgriculturalCredit2.table(b,rain_fall_type,year,ji1,compare)
+      else
+        @AgriculturalCredit2s = AgriculturalCredit2.search(params[:search],compare,year,rain_fall_type)
+        a = AgriculturalCredit2.query(@AgriculturalCredit2s,params[:year],rain_fall_type,views,ji,compare)
+      end
       respond_to do |format|
-        format.html { render json: "error"}
+        format.html { render json:a }
     end
+
+  else
+    respond_to do |format|
+      format.html { render json: "error"}
+  end
   end
 
 end
@@ -97,6 +109,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def agricultural_credit2_params
-      params.require(:agricultural_credit2).permit(:Districts, :Target, :Achievement, :Year)
+      params.require(:agricultural_credit2).permit(:Districts, :Target, :Achievement, :Year, :Target_Colour, :Achievement_Colour)
     end
 end

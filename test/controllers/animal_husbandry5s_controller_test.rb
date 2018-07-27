@@ -17,7 +17,7 @@ class AnimalHusbandry5sControllerTest < ActionDispatch::IntegrationTest
 
   test "should create animal_husbandry5" do
     assert_difference('AnimalHusbandry5.count') do
-      post animal_husbandry5s_url, params: { animal_husbandry5: { Districts: @animal_husbandry5.Districts, Fish_Production: @animal_husbandry5.Fish_Production, Fish_Seeds: @animal_husbandry5.Fish_Seeds, Year: @animal_husbandry5.Year } }
+      post animal_husbandry5s_url, params: { animal_husbandry5: { Districts: @animal_husbandry5.Districts, Fish_Production: @animal_husbandry5.Fish_Production, Fish_Production_Colour: @animal_husbandry5.Fish_Production_Colour, Fish_Seeds: @animal_husbandry5.Fish_Seeds, Fish_Seeds_Colour: @animal_husbandry5.Fish_Seeds_Colour, Year: @animal_husbandry5.Year } }
     end
 
     assert_redirected_to animal_husbandry5_url(AnimalHusbandry5.last)
@@ -34,7 +34,7 @@ class AnimalHusbandry5sControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update animal_husbandry5" do
-    patch animal_husbandry5_url(@animal_husbandry5), params: { animal_husbandry5: { Districts: @animal_husbandry5.Districts, Fish_Production: @animal_husbandry5.Fish_Production, Fish_Seeds: @animal_husbandry5.Fish_Seeds, Year: @animal_husbandry5.Year } }
+    patch animal_husbandry5_url(@animal_husbandry5), params: { animal_husbandry5: { Districts: @animal_husbandry5.Districts, Fish_Production: @animal_husbandry5.Fish_Production, Fish_Production_Colour: @animal_husbandry5.Fish_Production_Colour, Fish_Seeds: @animal_husbandry5.Fish_Seeds, Fish_Seeds_Colour: @animal_husbandry5.Fish_Seeds_Colour, Year: @animal_husbandry5.Year } }
     assert_redirected_to animal_husbandry5_url(@animal_husbandry5)
   end
 

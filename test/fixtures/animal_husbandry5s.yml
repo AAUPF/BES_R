@@ -5,9 +5,13 @@ one:
   Fish_Production: 1.5
   Fish_Seeds: 1.5
   Year: 1
+  Fish_Production_Colour: MyString
+  Fish_Seeds_Colour: MyString
 
 two:
   Districts: MyString
   Fish_Production: 1.5
   Fish_Seeds: 1.5
   Year: 1
+  Fish_Production_Colour: MyString
+  Fish_Seeds_Colour: MyString

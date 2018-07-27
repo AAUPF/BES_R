@@ -21,8 +21,12 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-   ji1 = [:Districts, :Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :Total, :N, :P, :K, :Total_NPK, :Grand_Total]
-  if rain_fall_type || views
+
+   ji1 = [:Districts, :Year, :Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :Total, :N, :P, :K, :Total_NPK, :Grand_Total]
+
+   unit1 =  "000 Tonnes"
+
+   if rain_fall_type || views
 
       if views == "Map View"
         l =  rain_fall_type.gsub(" ","")           
@@ -32,10 +36,9 @@ def test
           a = AgriculturalInputs4.map(b,params[:year],rain_fall_type,views)
          else
           b = AgriculturalInputs4.map_search(params[:search],compare,year,rain_fall_type)
-          a = AgriculturalInputs4.map(b,rain_fall_type,year,ji)
+          a = AgriculturalInputs4.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
-        
         b = AgriculturalInputs4.search(params[:search],compare,year,rain_fall_type)
         a = AgriculturalInputs4.table(b,rain_fall_type,year,ji1,compare)
       else
@@ -99,6 +102,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def agricultural_inputs4_params
-      params.require(:agricultural_inputs4).permit(:Districts, :Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :Total, :N, :P, :K, :Total_NPK, :Grand_Total, :Year)
+      params.require(:agricultural_inputs4).permit(:Districts, :Year, :Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :Total, :N, :P, :K, :Total_NPK, :Grand_Total, :Urea_Colour, :DAP_Colour, :SSP_Colour, :MOP_Colour, :Ammonium_Sulphate_Colour, :Complex_Colour, :Total_Colour, :N_Colour, :P_Colour, :K_Colour, :Total_NPK_Colour, :Grand_Total_Colour)
     end
 end

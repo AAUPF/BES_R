@@ -2,7 +2,6 @@
 
 one:
   Districts: MyString
-  Urea: 1.5
   Tractor: 1.5
   Combine_Harvestor: 1.5
   Zero_Tillage: 1.5
@@ -11,10 +10,16 @@ one:
   Manually_Operated_Tools: 1.5
   Thresher: 1.5
   Year: 1
+  Tractor_Colour: MyString
+  Combine_Harvestor_Colour: MyString
+  Zero_Tillage_Colour: MyString
+  Pumpset_Colour: MyString
+  Power_Tiller_Colour: MyString
+  Manually_Operated_Tools_Colour: MyString
+  Thresher_Colour: MyString
 
 two:
   Districts: MyString
-  Urea: 1.5
   Tractor: 1.5
   Combine_Harvestor: 1.5
   Zero_Tillage: 1.5
@@ -23,3 +28,10 @@ two:
   Manually_Operated_Tools: 1.5
   Thresher: 1.5
   Year: 1
+  Tractor_Colour: MyString
+  Combine_Harvestor_Colour: MyString
+  Zero_Tillage_Colour: MyString
+  Pumpset_Colour: MyString
+  Power_Tiller_Colour: MyString
+  Manually_Operated_Tools_Colour: MyString
+  Thresher_Colour: MyString

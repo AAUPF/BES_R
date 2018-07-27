@@ -22,18 +22,22 @@ def test
    year  = params[:year]
    compare = params[:compare]
 
-   ji1 = [:Districts, :Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production]
+   ji1 = [:Districts, :Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production, :Year]
+
+
+   unit1 =  "000 Tonnes"
+
+
   if rain_fall_type || views
 
       if views == "Map View"
         l =  rain_fall_type.gsub(" ","")           
          if rain_fall_type  ==  "All"
           b = AnimalHusbandry6.map_search("All",compare,year,rain_fall_type)
-          u = "Total"
-          a = AnimalHusbandry6.map(b,params[:year],rain_fall_type,views)
+          a = AnimalHusbandry6.map(b,params[:year],rain_fall_type,views,unit1)
          else
           b = AnimalHusbandry6.map_search(params[:search],compare,year,rain_fall_type)
-          a = AnimalHusbandry6.map(b,rain_fall_type,year,ji)
+          a = AnimalHusbandry6.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
         b = AnimalHusbandry6.search(params[:search],compare,year,rain_fall_type)
@@ -99,6 +103,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def animal_husbandry6_params
-      params.require(:animal_husbandry6).permit(:Districts, :Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production, :Year)
+      params.require(:animal_husbandry6).permit(:Districts, :Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production, :Year, :Crossbred_Cow_Colour, :Local_Cow_Colour, :Total_Cow_Colour, :Buffalo_Colour, :Total_Cow_Buffalo_Colour, :Goat_Colour, :Total_Production_Colour)
     end
 end

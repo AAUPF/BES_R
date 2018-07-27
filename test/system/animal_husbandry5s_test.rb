@@ -16,7 +16,9 @@ class AnimalHusbandry5sTest < ApplicationSystemTestCase
 
     fill_in "Districts", with: @animal_husbandry5.Districts
     fill_in "Fish Production", with: @animal_husbandry5.Fish_Production
+    fill_in "Fish Production Colour", with: @animal_husbandry5.Fish_Production_Colour
     fill_in "Fish Seeds", with: @animal_husbandry5.Fish_Seeds
+    fill_in "Fish Seeds Colour", with: @animal_husbandry5.Fish_Seeds_Colour
     fill_in "Year", with: @animal_husbandry5.Year
     click_on "Create Animal husbandry5"
 
@@ -30,7 +32,9 @@ class AnimalHusbandry5sTest < ApplicationSystemTestCase
 
     fill_in "Districts", with: @animal_husbandry5.Districts
     fill_in "Fish Production", with: @animal_husbandry5.Fish_Production
+    fill_in "Fish Production Colour", with: @animal_husbandry5.Fish_Production_Colour
     fill_in "Fish Seeds", with: @animal_husbandry5.Fish_Seeds
+    fill_in "Fish Seeds Colour", with: @animal_husbandry5.Fish_Seeds_Colour
     fill_in "Year", with: @animal_husbandry5.Year
     click_on "Update Animal husbandry5"
 

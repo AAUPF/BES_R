@@ -17,12 +17,15 @@ class AgriculturalInputs7sController < ApplicationController
 
 def test
   ji = [ :Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher]
+
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
-   ji1 = [:Districts, :Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher, :Year]
+   ji1 = [:Districts, :Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher]
+
+   unit1 =  "000"
 
   if rain_fall_type || views
 
@@ -34,7 +37,7 @@ def test
           a = AgriculturalInputs7.map(b,params[:year],rain_fall_type,views)
          else
           b = AgriculturalInputs7.map_search(params[:search],compare,year,rain_fall_type)
-          a = AgriculturalInputs7.map(b,rain_fall_type,year,ji)
+          a = AgriculturalInputs7.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
         b = AgriculturalInputs7.search(params[:search],compare,year,rain_fall_type)
@@ -100,6 +103,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def agricultural_inputs7_params
-      params.require(:agricultural_inputs7).permit(:Districts, :Urea, :Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher, :Year)
+      params.require(:agricultural_inputs7).permit(:Districts, :Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher, :Year, :Tractor_Colour, :Combine_Harvestor_Colour, :Zero_Tillage_Colour, :Pumpset_Colour, :Power_Tiller_Colour, :Manually_Operated_Tools_Colour, :Thresher_Colour)
     end
 end

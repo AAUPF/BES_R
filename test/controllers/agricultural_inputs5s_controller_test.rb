@@ -17,7 +17,7 @@ class AgriculturalInputs5sControllerTest < ActionDispatch::IntegrationTest
 
   test "should create agricultural_inputs5" do
     assert_difference('AgriculturalInputs5.count') do
-      post agricultural_inputs5s_url, params: { agricultural_inputs5: { Ammonium_Sulphate: @agricultural_inputs5.Ammonium_Sulphate, Complex: @agricultural_inputs5.Complex, DAP: @agricultural_inputs5.DAP, Districts: @agricultural_inputs5.Districts, Grand_Total: @agricultural_inputs5.Grand_Total, K: @agricultural_inputs5.K, MOP: @agricultural_inputs5.MOP, N: @agricultural_inputs5.N, P: @agricultural_inputs5.P, SSP: @agricultural_inputs5.SSP, Total: @agricultural_inputs5.Total, Total_NPK: @agricultural_inputs5.Total_NPK, Urea: @agricultural_inputs5.Urea } }
+      post agricultural_inputs5s_url, params: { agricultural_inputs5: { Achievement_Financial: @agricultural_inputs5.Achievement_Financial, Achievement_Financial_Colour: @agricultural_inputs5.Achievement_Financial_Colour, Achievement_Physical: @agricultural_inputs5.Achievement_Physical, Achievement_Physical_Colour: @agricultural_inputs5.Achievement_Physical_Colour, Districts: @agricultural_inputs5.Districts, Target_Financial: @agricultural_inputs5.Target_Financial, Target_Financial_Colour: @agricultural_inputs5.Target_Financial_Colour, Target_Physical: @agricultural_inputs5.Target_Physical, Target_Physical_Colour: @agricultural_inputs5.Target_Physical_Colour } }
     end
 
     assert_redirected_to agricultural_inputs5_url(AgriculturalInputs5.last)
@@ -34,7 +34,7 @@ class AgriculturalInputs5sControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update agricultural_inputs5" do
-    patch agricultural_inputs5_url(@agricultural_inputs5), params: { agricultural_inputs5: { Ammonium_Sulphate: @agricultural_inputs5.Ammonium_Sulphate, Complex: @agricultural_inputs5.Complex, DAP: @agricultural_inputs5.DAP, Districts: @agricultural_inputs5.Districts, Grand_Total: @agricultural_inputs5.Grand_Total, K: @agricultural_inputs5.K, MOP: @agricultural_inputs5.MOP, N: @agricultural_inputs5.N, P: @agricultural_inputs5.P, SSP: @agricultural_inputs5.SSP, Total: @agricultural_inputs5.Total, Total_NPK: @agricultural_inputs5.Total_NPK, Urea: @agricultural_inputs5.Urea } }
+    patch agricultural_inputs5_url(@agricultural_inputs5), params: { agricultural_inputs5: { Achievement_Financial: @agricultural_inputs5.Achievement_Financial, Achievement_Financial_Colour: @agricultural_inputs5.Achievement_Financial_Colour, Achievement_Physical: @agricultural_inputs5.Achievement_Physical, Achievement_Physical_Colour: @agricultural_inputs5.Achievement_Physical_Colour, Districts: @agricultural_inputs5.Districts, Target_Financial: @agricultural_inputs5.Target_Financial, Target_Financial_Colour: @agricultural_inputs5.Target_Financial_Colour, Target_Physical: @agricultural_inputs5.Target_Physical, Target_Physical_Colour: @agricultural_inputs5.Target_Physical_Colour } }
     assert_redirected_to agricultural_inputs5_url(@agricultural_inputs5)
   end
 

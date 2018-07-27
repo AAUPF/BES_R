@@ -8,6 +8,12 @@ one:
   Sheep: 1.5
   Goat: 1.5
   Poultry: 1.5
+  Cow_Colour: MyString
+  Buffalo_Colour: MyString
+  Pig_Colour: MyString
+  Sheep_Colour: MyString
+  Goat_Colour: MyString
+  Poultry_Colour: MyString
 
 two:
   Districts: MyString
@@ -17,3 +23,9 @@ two:
   Sheep: 1.5
   Goat: 1.5
   Poultry: 1.5
+  Cow_Colour: MyString
+  Buffalo_Colour: MyString
+  Pig_Colour: MyString
+  Sheep_Colour: MyString
+  Goat_Colour: MyString
+  Poultry_Colour: MyString

@@ -1,4 +1,3 @@
 class AnimalHusbandry6 < ApplicationRecord
-  extend Newdistrict  
-
-      end
+  extend Test  
+ end

@@ -1,5 +1,5 @@
-module Test
- 
+
+module Newdistrictwithoutyear
   def import1(file)
     spreadsheet = Roo::Spreadsheet.open(file.path)
     header = spreadsheet.row(1)
@@ -12,20 +12,20 @@ module Test
     end
   end
 
-  def search(search, compare, year, rain_fall_type)
+  def search(search, compare, _year, rain_fall_type)
     if search == 'All'
       if rain_fall_type == 'All'
-        where(Year: year).order('id ')
+        order('id ')
       else
-        where(Year: year).order("#{rain_fall_type} ")
+        order("#{rain_fall_type} ")
       end
     elsif compare == 'Bihar vs District'
-      where('Districts = ? OR Districts = ?', search, 'Bihar').where('year = ?', year).order(:id)
+      where('Districts = ? OR Districts = ?', search, 'Bihar').order(:id)
     else
       if rain_fall_type == 'All'
-        where('Districts = ? ', search).where('year = ?', year).order(:id)
+        where('Districts = ? ', search).order(:id)
       else
-        where('Districts = ? ', search).where('year = ?', year).order(rain_fall_type)
+        where('Districts = ? ', search).order(rain_fall_type)
       end
     end
   end
@@ -65,17 +65,17 @@ module Test
 
   # Logic to generate table end
 
-  def map_search(search, _compare, year, rain_fall_type)
+  def map_search(search, _compare, _year, rain_fall_type)
     if search == 'All'
       if rain_fall_type == 'All'
-        where(Year: year).order(:id)
+        order(:id)
       else
-        where(Year: year).order(rain_fall_type)
+        order(rain_fall_type)
       end
 
     else
       # where(Districts: search)
-      where(Year: year).order(rain_fall_type)
+      order(rain_fall_type)
     end
   end
 
@@ -154,6 +154,7 @@ module Test
       return title
     end
   end
+
   def map(b, rain_fall_type, _views, _ji, unit1)
     array = []
     # a = []
@@ -279,4 +280,4 @@ module Test
 
    return a
   end
-end
+  end

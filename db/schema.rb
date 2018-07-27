@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_24_065643) do
+ActiveRecord::Schema.define(version: 2018_07_27_051521) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2018_07_24_065643) do
     t.float "Target"
     t.float "Achievement"
     t.integer "Year"
+    t.string "Target_Colour"
+    t.string "Achievement_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -71,6 +73,7 @@ ActiveRecord::Schema.define(version: 2018_07_24_065643) do
 
   create_table "agricultural_inputs4s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
+    t.integer "Year"
     t.float "Urea"
     t.float "DAP"
     t.float "SSP"
@@ -83,25 +86,32 @@ ActiveRecord::Schema.define(version: 2018_07_24_065643) do
     t.float "K"
     t.float "Total_NPK"
     t.float "Grand_Total"
-    t.integer "Year"
+    t.string "Urea_Colour"
+    t.string "DAP_Colour"
+    t.string "SSP_Colour"
+    t.string "MOP_Colour"
+    t.string "Ammonium_Sulphate_Colour"
+    t.string "Complex_Colour"
+    t.string "Total_Colour"
+    t.string "N_Colour"
+    t.string "P_Colour"
+    t.string "K_Colour"
+    t.string "Total_NPK_Colour"
+    t.string "Grand_Total_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "agricultural_inputs5s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
-    t.float "Urea"
-    t.float "DAP"
-    t.float "SSP"
-    t.float "MOP"
-    t.float "Ammonium_Sulphate"
-    t.float "Complex"
-    t.float "Total"
-    t.float "N"
-    t.float "P"
-    t.float "K"
-    t.float "Total_NPK"
-    t.float "Grand_Total"
+    t.float "Target_Physical"
+    t.float "Target_Financial"
+    t.float "Achievement_Physical"
+    t.float "Achievement_Financial"
+    t.string "Target_Physical_Colour"
+    t.string "Target_Financial_Colour"
+    t.string "Achievement_Physical_Colour"
+    t.string "Achievement_Financial_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -112,14 +122,16 @@ ActiveRecord::Schema.define(version: 2018_07_24_065643) do
     t.float "Target_Financial"
     t.float "Achievement_Physical"
     t.float "Achievement_Financial"
-    t.integer "Year"
+    t.string "Target_Physical_Colour"
+    t.string "Target_Financial_Colour"
+    t.string "Achievement_Physical_Colour"
+    t.string "Achievement_Financial_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "agricultural_inputs7s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
-    t.float "Urea"
     t.float "Tractor"
     t.float "Combine_Harvestor"
     t.float "Zero_Tillage"
@@ -128,6 +140,13 @@ ActiveRecord::Schema.define(version: 2018_07_24_065643) do
     t.float "Manually_Operated_Tools"
     t.float "Thresher"
     t.integer "Year"
+    t.string "Tractor_Colour"
+    t.string "Combine_Harvestor_Colour"
+    t.string "Zero_Tillage_Colour"
+    t.string "Pumpset_Colour"
+    t.string "Power_Tiller_Colour"
+    t.string "Manually_Operated_Tools_Colour"
+    t.string "Thresher_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -191,6 +210,12 @@ ActiveRecord::Schema.define(version: 2018_07_24_065643) do
     t.float "Sheep"
     t.float "Goat"
     t.float "Poultry"
+    t.string "Cow_Colour"
+    t.string "Buffalo_Colour"
+    t.string "Pig_Colour"
+    t.string "Sheep_Colour"
+    t.string "Goat_Colour"
+    t.string "Poultry_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -200,6 +225,8 @@ ActiveRecord::Schema.define(version: 2018_07_24_065643) do
     t.float "Fish_Production"
     t.float "Fish_Seeds"
     t.integer "Year"
+    t.string "Fish_Production_Colour"
+    t.string "Fish_Seeds_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -214,6 +241,13 @@ ActiveRecord::Schema.define(version: 2018_07_24_065643) do
     t.float "Goat"
     t.float "Total_Production"
     t.integer "Year"
+    t.string "Crossbred_Cow_Colour"
+    t.string "Local_Cow_Colour"
+    t.string "Total_Cow_Colour"
+    t.string "Buffalo_Colour"
+    t.string "Total_Cow_Buffalo_Colour"
+    t.string "Goat_Colour"
+    t.string "Total_Production_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -287,20 +321,21 @@ ActiveRecord::Schema.define(version: 2018_07_24_065643) do
   create_table "lands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
     t.float "Geographical_area"
-    t.float "Forest"
-    t.float "Barren_unculturable_land"
-    t.float "Non_Agriculture_Land_area"
-    t.float "Non_Agriculture_Perennial_Water_Area"
-    t.float "Non_Agriculture_Temporary_Water_Area"
-    t.float "Culturable_Waste_Land"
-    t.float "Permanent_Pastures"
-    t.float "Tree_Crops"
-    t.float "Fallow_land"
-    t.float "Current_Fallow"
-    t.float "Total_Uncultivable_Land"
-    t.float "Net_Area_Sown"
-    t.float "Gross_Crop_Area"
-    t.float "Cropping_Intensity"
+    t.string "Forest"
+    t.string "Barren_unculturable_land"
+    t.string "Non_Agriculture_Land_area"
+    t.string "Non_Agriculture_Perennial_Water_Area"
+    t.string "Non_Agriculture_Temporary_Water_Area"
+    t.string "Culturable_Waste_Land"
+    t.string "Permanent_Pastures"
+    t.string "Tree_Crops"
+    t.string "Fallow_land"
+    t.string "Current_Fallow"
+    t.string "Total_Uncultivable_Land"
+    t.string "Net_Area_Sown"
+    t.string "Gross_Crop_Area"
+    t.string "Cropping_Intensity"
+    t.string "Geographical_area_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -544,6 +579,7 @@ ActiveRecord::Schema.define(version: 2018_07_24_065643) do
     t.float "SouthWestMonsoonRain"
     t.float "NorthWestMonsoonRain"
     t.float "TotalRainfall"
+    t.integer "year", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

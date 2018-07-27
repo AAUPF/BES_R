@@ -22,6 +22,7 @@ class LandsTest < ApplicationSystemTestCase
     fill_in "Fallow Land", with: @land.Fallow_land
     fill_in "Forest", with: @land.Forest
     fill_in "Geographical Area", with: @land.Geographical_area
+    fill_in "Geographical Area Colour", with: @land.Geographical_area_Colour
     fill_in "Gross Crop Area", with: @land.Gross_Crop_Area
     fill_in "Net Area Sown", with: @land.Net_Area_Sown
     fill_in "Non Agriculture Land Area", with: @land.Non_Agriculture_Land_area
@@ -48,6 +49,7 @@ class LandsTest < ApplicationSystemTestCase
     fill_in "Fallow Land", with: @land.Fallow_land
     fill_in "Forest", with: @land.Forest
     fill_in "Geographical Area", with: @land.Geographical_area
+    fill_in "Geographical Area Colour", with: @land.Geographical_area_Colour
     fill_in "Gross Crop Area", with: @land.Gross_Crop_Area
     fill_in "Net Area Sown", with: @land.Net_Area_Sown
     fill_in "Non Agriculture Land Area", with: @land.Non_Agriculture_Land_area

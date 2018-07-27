@@ -1,4 +1,44 @@
 Rails.application.routes.draw do
+  resources :lands do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :animal_husbandry6s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :animal_husbandry5s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :animal_husbandry4s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :agricultural_inputs7s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :agricultural_inputs5s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :agricultural_inputs4s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :agricultural_credit2s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :agricultural_inputs2s do 
                       collection { post :import }
                       collection { get :dropdown }
@@ -25,16 +65,6 @@ Rails.application.routes.draw do
                       collection { get :test }
                       end 
   resources :production_productivity4s do 
-                      collection { post :import }
-                      collection { get :dropdown }
-                      collection { get :test }
-                      end 
-  resources :animal_husbandry6s do 
-                      collection { post :import }
-                      collection { get :dropdown }
-                      collection { get :test }
-                      end 
-  resources :animal_husbandry4s do 
                       collection { post :import }
                       collection { get :dropdown }
                       collection { get :test }
@@ -70,11 +100,6 @@ Rails.application.routes.draw do
                       collection { get :test }
                       end 
   resources :cropping_patterns do 
-                      collection { post :import }
-                      collection { get :dropdown }
-                      collection { get :test }
-                      end 
-  resources :lands do 
                       collection { post :import }
                       collection { get :dropdown }
                       collection { get :test }
@@ -129,37 +154,7 @@ Rails.application.routes.draw do
                       collection { get :dropdown }
                       collection { get :test }
                       end 
-  resources :animal_husbandry5s do 
-                      collection { post :import }
-                      collection { get :dropdown }
-                      collection { get :test }
-                      end 
-  resources :agricultural_credit2s do 
-                      collection { post :import }
-                      collection { get :dropdown }
-                      collection { get :test }
-                      end 
   resources :agricultural_inputs8s do 
-                      collection { post :import }
-                      collection { get :dropdown }
-                      collection { get :test }
-                      end 
-  resources :agricultural_inputs7s do 
-                      collection { post :import }
-                      collection { get :dropdown }
-                      collection { get :test }
-                      end 
-  resources :agricultural_inputs6s do 
-                      collection { post :import }
-                      collection { get :dropdown }
-                      collection { get :test }
-                      end 
-  resources :agricultural_inputs5s do 
-                      collection { post :import }
-                      collection { get :dropdown }
-                      collection { get :test }
-                      end 
-  resources :agricultural_inputs4s do 
                       collection { post :import }
                       collection { get :dropdown }
                       collection { get :test }

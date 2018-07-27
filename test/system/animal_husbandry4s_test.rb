@@ -15,12 +15,18 @@ class AnimalHusbandry4sTest < ApplicationSystemTestCase
     click_on "New Animal Husbandry4"
 
     fill_in "Buffalo", with: @animal_husbandry4.Buffalo
+    fill_in "Buffalo Colour", with: @animal_husbandry4.Buffalo_Colour
     fill_in "Cow", with: @animal_husbandry4.Cow
+    fill_in "Cow Colour", with: @animal_husbandry4.Cow_Colour
     fill_in "Districts", with: @animal_husbandry4.Districts
     fill_in "Goat", with: @animal_husbandry4.Goat
+    fill_in "Goat Colour", with: @animal_husbandry4.Goat_Colour
     fill_in "Pig", with: @animal_husbandry4.Pig
+    fill_in "Pig Colour", with: @animal_husbandry4.Pig_Colour
     fill_in "Poultry", with: @animal_husbandry4.Poultry
+    fill_in "Poultry Colour", with: @animal_husbandry4.Poultry_Colour
     fill_in "Sheep", with: @animal_husbandry4.Sheep
+    fill_in "Sheep Colour", with: @animal_husbandry4.Sheep_Colour
     click_on "Create Animal husbandry4"
 
     assert_text "Animal husbandry4 was successfully created"
@@ -32,12 +38,18 @@ class AnimalHusbandry4sTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Buffalo", with: @animal_husbandry4.Buffalo
+    fill_in "Buffalo Colour", with: @animal_husbandry4.Buffalo_Colour
     fill_in "Cow", with: @animal_husbandry4.Cow
+    fill_in "Cow Colour", with: @animal_husbandry4.Cow_Colour
     fill_in "Districts", with: @animal_husbandry4.Districts
     fill_in "Goat", with: @animal_husbandry4.Goat
+    fill_in "Goat Colour", with: @animal_husbandry4.Goat_Colour
     fill_in "Pig", with: @animal_husbandry4.Pig
+    fill_in "Pig Colour", with: @animal_husbandry4.Pig_Colour
     fill_in "Poultry", with: @animal_husbandry4.Poultry
+    fill_in "Poultry Colour", with: @animal_husbandry4.Poultry_Colour
     fill_in "Sheep", with: @animal_husbandry4.Sheep
+    fill_in "Sheep Colour", with: @animal_husbandry4.Sheep_Colour
     click_on "Update Animal husbandry4"
 
     assert_text "Animal husbandry4 was successfully updated"

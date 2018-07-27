@@ -2,30 +2,22 @@
 
 one:
   Districts: MyString
-  Urea: 1.5
-  DAP: 1.5
-  SSP: 1.5
-  MOP: 1.5
-  Ammonium_Sulphate: 1.5
-  Complex: 1.5
-  Total: 1.5
-  'N': 1.5
-  P: 1.5
-  K: 1.5
-  Total_NPK: 1.5
-  Grand_Total: 1.5
+  Target_Physical: 1.5
+  Target_Financial: 1.5
+  Achievement_Physical: 1.5
+  Achievement_Financial: 1.5
+  Target_Physical_Colour: MyString
+  Target_Financial_Colour: MyString
+  Achievement_Physical_Colour: MyString
+  Achievement_Financial_Colour: MyString
 
 two:
   Districts: MyString
-  Urea: 1.5
-  DAP: 1.5
-  SSP: 1.5
-  MOP: 1.5
-  Ammonium_Sulphate: 1.5
-  Complex: 1.5
-  Total: 1.5
-  'N': 1.5
-  P: 1.5
-  K: 1.5
-  Total_NPK: 1.5
-  Grand_Total: 1.5
+  Target_Physical: 1.5
+  Target_Financial: 1.5
+  Achievement_Physical: 1.5
+  Achievement_Financial: 1.5
+  Target_Physical_Colour: MyString
+  Target_Financial_Colour: MyString
+  Achievement_Physical_Colour: MyString
+  Achievement_Financial_Colour: MyString

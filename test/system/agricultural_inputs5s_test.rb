@@ -14,19 +14,15 @@ class AgriculturalInputs5sTest < ApplicationSystemTestCase
     visit agricultural_inputs5s_url
     click_on "New Agricultural Inputs5"
 
-    fill_in "Ammonium Sulphate", with: @agricultural_inputs5.Ammonium_Sulphate
-    fill_in "Complex", with: @agricultural_inputs5.Complex
-    fill_in "Dap", with: @agricultural_inputs5.DAP
+    fill_in "Achievement Financial", with: @agricultural_inputs5.Achievement_Financial
+    fill_in "Achievement Financial Colour", with: @agricultural_inputs5.Achievement_Financial_Colour
+    fill_in "Achievement Physical", with: @agricultural_inputs5.Achievement_Physical
+    fill_in "Achievement Physical Colour", with: @agricultural_inputs5.Achievement_Physical_Colour
     fill_in "Districts", with: @agricultural_inputs5.Districts
-    fill_in "Grand Total", with: @agricultural_inputs5.Grand_Total
-    fill_in "K", with: @agricultural_inputs5.K
-    fill_in "Mop", with: @agricultural_inputs5.MOP
-    fill_in "N", with: @agricultural_inputs5.N
-    fill_in "P", with: @agricultural_inputs5.P
-    fill_in "Ssp", with: @agricultural_inputs5.SSP
-    fill_in "Total", with: @agricultural_inputs5.Total
-    fill_in "Total Npk", with: @agricultural_inputs5.Total_NPK
-    fill_in "Urea", with: @agricultural_inputs5.Urea
+    fill_in "Target Financial", with: @agricultural_inputs5.Target_Financial
+    fill_in "Target Financial Colour", with: @agricultural_inputs5.Target_Financial_Colour
+    fill_in "Target Physical", with: @agricultural_inputs5.Target_Physical
+    fill_in "Target Physical Colour", with: @agricultural_inputs5.Target_Physical_Colour
     click_on "Create Agricultural inputs5"
 
     assert_text "Agricultural inputs5 was successfully created"
@@ -37,19 +33,15 @@ class AgriculturalInputs5sTest < ApplicationSystemTestCase
     visit agricultural_inputs5s_url
     click_on "Edit", match: :first
 
-    fill_in "Ammonium Sulphate", with: @agricultural_inputs5.Ammonium_Sulphate
-    fill_in "Complex", with: @agricultural_inputs5.Complex
-    fill_in "Dap", with: @agricultural_inputs5.DAP
+    fill_in "Achievement Financial", with: @agricultural_inputs5.Achievement_Financial
+    fill_in "Achievement Financial Colour", with: @agricultural_inputs5.Achievement_Financial_Colour
+    fill_in "Achievement Physical", with: @agricultural_inputs5.Achievement_Physical
+    fill_in "Achievement Physical Colour", with: @agricultural_inputs5.Achievement_Physical_Colour
     fill_in "Districts", with: @agricultural_inputs5.Districts
-    fill_in "Grand Total", with: @agricultural_inputs5.Grand_Total
-    fill_in "K", with: @agricultural_inputs5.K
-    fill_in "Mop", with: @agricultural_inputs5.MOP
-    fill_in "N", with: @agricultural_inputs5.N
-    fill_in "P", with: @agricultural_inputs5.P
-    fill_in "Ssp", with: @agricultural_inputs5.SSP
-    fill_in "Total", with: @agricultural_inputs5.Total
-    fill_in "Total Npk", with: @agricultural_inputs5.Total_NPK
-    fill_in "Urea", with: @agricultural_inputs5.Urea
+    fill_in "Target Financial", with: @agricultural_inputs5.Target_Financial
+    fill_in "Target Financial Colour", with: @agricultural_inputs5.Target_Financial_Colour
+    fill_in "Target Physical", with: @agricultural_inputs5.Target_Physical
+    fill_in "Target Physical Colour", with: @agricultural_inputs5.Target_Physical_Colour
     click_on "Update Agricultural inputs5"
 
     assert_text "Agricultural inputs5 was successfully updated"

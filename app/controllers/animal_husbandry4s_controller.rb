@@ -16,13 +16,16 @@ class AnimalHusbandry4sController < ApplicationController
   end
 
 def test
-  ji = [ :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry]
+  ji = [:Districts, :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
+
    ji1 = [:Districts, :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry]
+   rain_fall_type = params[:rain_fall_type]
+   unit1 =  "000"
 
   if rain_fall_type || views
 
@@ -34,7 +37,7 @@ def test
           a = AnimalHusbandry4.map(b,params[:year],rain_fall_type,views)
          else
           b = AnimalHusbandry4.map_search(params[:search],compare,year,rain_fall_type)
-          a = AnimalHusbandry4.map(b,rain_fall_type,year,ji)
+          a = AnimalHusbandry4.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
         b = AnimalHusbandry4.search(params[:search],compare,year,rain_fall_type)
@@ -100,6 +103,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def animal_husbandry4_params
-      params.require(:animal_husbandry4).permit(:Districts, :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry)
+      params.require(:animal_husbandry4).permit(:Districts, :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry, :Cow_Colour, :Buffalo_Colour, :Pig_Colour, :Sheep_Colour, :Goat_Colour, :Poultry_Colour)
     end
 end

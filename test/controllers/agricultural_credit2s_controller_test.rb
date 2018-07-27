@@ -17,7 +17,7 @@ class AgriculturalCredit2sControllerTest < ActionDispatch::IntegrationTest
 
   test "should create agricultural_credit2" do
     assert_difference('AgriculturalCredit2.count') do
-      post agricultural_credit2s_url, params: { agricultural_credit2: { Achievement: @agricultural_credit2.Achievement, Districts: @agricultural_credit2.Districts, Target: @agricultural_credit2.Target, Year: @agricultural_credit2.Year } }
+      post agricultural_credit2s_url, params: { agricultural_credit2: { Achievement: @agricultural_credit2.Achievement, Achievement_Colour: @agricultural_credit2.Achievement_Colour, Districts: @agricultural_credit2.Districts, Target: @agricultural_credit2.Target, Target_Colour: @agricultural_credit2.Target_Colour, Year: @agricultural_credit2.Year } }
     end
 
     assert_redirected_to agricultural_credit2_url(AgriculturalCredit2.last)
@@ -34,7 +34,7 @@ class AgriculturalCredit2sControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update agricultural_credit2" do
-    patch agricultural_credit2_url(@agricultural_credit2), params: { agricultural_credit2: { Achievement: @agricultural_credit2.Achievement, Districts: @agricultural_credit2.Districts, Target: @agricultural_credit2.Target, Year: @agricultural_credit2.Year } }
+    patch agricultural_credit2_url(@agricultural_credit2), params: { agricultural_credit2: { Achievement: @agricultural_credit2.Achievement, Achievement_Colour: @agricultural_credit2.Achievement_Colour, Districts: @agricultural_credit2.Districts, Target: @agricultural_credit2.Target, Target_Colour: @agricultural_credit2.Target_Colour, Year: @agricultural_credit2.Year } }
     assert_redirected_to agricultural_credit2_url(@agricultural_credit2)
   end
 

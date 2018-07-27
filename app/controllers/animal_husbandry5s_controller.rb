@@ -16,14 +16,15 @@ class AnimalHusbandry5sController < ApplicationController
   end
 
 def test
-  ji = [:Fish_Production, :Fish_Seeds]
+  ji = [:Districts, :Fish_Production, :Fish_Seeds]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
-   ji1 = [:Districts, :Fish_Production, :Fish_Seeds]
+   unit1 =  "000"
 
+   ji1 = [:Fish_Production, :Fish_Seeds, :Year]
 
   if rain_fall_type || views
 
@@ -35,7 +36,7 @@ def test
           a = AnimalHusbandry5.map(b,params[:year],rain_fall_type,views)
          else
           b = AnimalHusbandry5.map_search(params[:search],compare,year,rain_fall_type)
-          a = AnimalHusbandry5.map(b,rain_fall_type,year,ji1)
+          a = AnimalHusbandry5.map(b,rain_fall_type,year,ji1,unit1)
          end
       elsif views == "Table"  
         b = AnimalHusbandry5.search(params[:search],compare,year,rain_fall_type)
@@ -101,6 +102,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def animal_husbandry5_params
-      params.require(:animal_husbandry5).permit(:Districts, :Fish_Production, :Fish_Seeds, :Year)
+      params.require(:animal_husbandry5).permit(:Districts, :Fish_Production, :Fish_Seeds, :Year, :Fish_Production_Colour, :Fish_Seeds_Colour)
     end
 end

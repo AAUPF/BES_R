@@ -1,2 +1,0 @@
-module AgriculturalInputs6sHelper
-end

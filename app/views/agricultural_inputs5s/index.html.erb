@@ -6,18 +6,14 @@
   <thead>
     <tr>
       <th>Districts</th>
-      <th>Urea</th>
-      <th>Dap</th>
-      <th>Ssp</th>
-      <th>Mop</th>
-      <th>Ammonium sulphate</th>
-      <th>Complex</th>
-      <th>Total</th>
-      <th>N</th>
-      <th>P</th>
-      <th>K</th>
-      <th>Total npk</th>
-      <th>Grand total</th>
+      <th>Target physical</th>
+      <th>Target financial</th>
+      <th>Achievement physical</th>
+      <th>Achievement financial</th>
+      <th>Target physical colour</th>
+      <th>Target financial colour</th>
+      <th>Achievement physical colour</th>
+      <th>Achievement financial colour</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,18 +22,14 @@
     <% @agricultural_inputs5s.each do |agricultural_inputs5| %>
       <tr>
         <td><%= agricultural_inputs5.Districts %></td>
-        <td><%= agricultural_inputs5.Urea %></td>
-        <td><%= agricultural_inputs5.DAP %></td>
-        <td><%= agricultural_inputs5.SSP %></td>
-        <td><%= agricultural_inputs5.MOP %></td>
-        <td><%= agricultural_inputs5.Ammonium_Sulphate %></td>
-        <td><%= agricultural_inputs5.Complex %></td>
-        <td><%= agricultural_inputs5.Total %></td>
-        <td><%= agricultural_inputs5.N %></td>
-        <td><%= agricultural_inputs5.P %></td>
-        <td><%= agricultural_inputs5.K %></td>
-        <td><%= agricultural_inputs5.Total_NPK %></td>
-        <td><%= agricultural_inputs5.Grand_Total %></td>
+        <td><%= agricultural_inputs5.Target_Physical %></td>
+        <td><%= agricultural_inputs5.Target_Financial %></td>
+        <td><%= agricultural_inputs5.Achievement_Physical %></td>
+        <td><%= agricultural_inputs5.Achievement_Financial %></td>
+        <td><%= agricultural_inputs5.Target_Physical_Colour %></td>
+        <td><%= agricultural_inputs5.Target_Financial_Colour %></td>
+        <td><%= agricultural_inputs5.Achievement_Physical_Colour %></td>
+        <td><%= agricultural_inputs5.Achievement_Financial_Colour %></td>
         <td><%= link_to 'Show', agricultural_inputs5 %></td>
         <td><%= link_to 'Edit', edit_agricultural_inputs5_path(agricultural_inputs5) %></td>
         <td><%= link_to 'Destroy', agricultural_inputs5, method: :delete, data: { confirm: 'Are you sure?' } %></td>

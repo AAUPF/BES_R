@@ -1,4 +1,4 @@
 class AgriculturalInputs4 < ApplicationRecord
-  extend Newdistrict  
+  extend Test  
 
       end
