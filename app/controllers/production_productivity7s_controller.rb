@@ -16,12 +16,26 @@ class ProductionProductivity7sController < ApplicationController
   end
 
 def test
-  ji = [:Area, :Production, :Productivity]
+  ji = [:Area, :Production, :Productivity, :Area_Colour, :Production_Colour, :Productivity_Colour]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-   ji1 = [:Districts, :Area, :Production, :Productivity]
+
+   ji1 = [:Districts, :Area, :Production, :Productivity, :Year, :Area_Colour, :Production_Colour, :Productivity_Colour]
+   units = [{Area: "000 Hectare" },{Production: "000 tonnes" },{Productivity: "Kg/Hac" }]
+
+
+   if rain_fall_type == "Area"
+        unit1 =  units[0][:Area]
+      elsif rain_fall_type == "Production"
+        unit1 =  units[1][:Production]
+      elsif rain_fall_type == "Productivity"
+        unit1 =  units[2][:Productivity]
+        
+      else
+   end
+
   if rain_fall_type || views
 
       if views == "Map View"
@@ -32,7 +46,7 @@ def test
           a = ProductionProductivity7.map(b,params[:year],rain_fall_type,views)
          else
           b = ProductionProductivity7.map_search(params[:search],compare,year,rain_fall_type)
-          a = ProductionProductivity7.map(b,rain_fall_type,year,ji)
+          a = ProductionProductivity7.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
         b = ProductionProductivity7.search(params[:search],compare,year,rain_fall_type)
@@ -98,6 +112,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def production_productivity7_params
-      params.require(:production_productivity7).permit(:Districts, :Area, :Production, :Productivity, :Year)
+      params.require(:production_productivity7).permit(:Districts, :Area, :Production, :Productivity, :Year, :Area_Colour, :Production_Colour, :Productivity_Colour)
     end
 end

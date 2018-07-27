@@ -6,6 +6,9 @@ one:
   Production: 1.5
   Productivity: 1.5
   Year: 1
+  Area_Colour: MyString
+  Production_Colour: MyString
+  Productivity_Colour: MyString
 
 two:
   Districts: MyString
@@ -13,3 +16,6 @@ two:
   Production: 1.5
   Productivity: 1.5
   Year: 1
+  Area_Colour: MyString
+  Production_Colour: MyString
+  Productivity_Colour: MyString

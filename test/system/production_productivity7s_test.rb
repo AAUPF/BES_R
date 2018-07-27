@@ -15,9 +15,12 @@ class ProductionProductivity7sTest < ApplicationSystemTestCase
     click_on "New Production Productivity7"
 
     fill_in "Area", with: @production_productivity7.Area
+    fill_in "Area Colour", with: @production_productivity7.Area_Colour
     fill_in "Districts", with: @production_productivity7.Districts
     fill_in "Production", with: @production_productivity7.Production
+    fill_in "Production Colour", with: @production_productivity7.Production_Colour
     fill_in "Productivity", with: @production_productivity7.Productivity
+    fill_in "Productivity Colour", with: @production_productivity7.Productivity_Colour
     fill_in "Year", with: @production_productivity7.Year
     click_on "Create Production productivity7"
 
@@ -30,9 +33,12 @@ class ProductionProductivity7sTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Area", with: @production_productivity7.Area
+    fill_in "Area Colour", with: @production_productivity7.Area_Colour
     fill_in "Districts", with: @production_productivity7.Districts
     fill_in "Production", with: @production_productivity7.Production
+    fill_in "Production Colour", with: @production_productivity7.Production_Colour
     fill_in "Productivity", with: @production_productivity7.Productivity
+    fill_in "Productivity Colour", with: @production_productivity7.Productivity_Colour
     fill_in "Year", with: @production_productivity7.Year
     click_on "Update Production productivity7"
 

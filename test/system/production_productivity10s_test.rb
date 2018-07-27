@@ -15,14 +15,22 @@ class ProductionProductivity10sTest < ApplicationSystemTestCase
     click_on "New Production Productivity10"
 
     fill_in "Banana Area", with: @production_productivity10.Banana_Area
+    fill_in "Banana Area Colour", with: @production_productivity10.Banana_Area_Colour
     fill_in "Banana Production", with: @production_productivity10.Banana_Production
+    fill_in "Banana Production Colour", with: @production_productivity10.Banana_Production_Colour
     fill_in "Districts", with: @production_productivity10.Districts
     fill_in "Guava Area", with: @production_productivity10.Guava_Area
+    fill_in "Guava Area Colour", with: @production_productivity10.Guava_Area_Colour
     fill_in "Guava Production", with: @production_productivity10.Guava_Production
+    fill_in "Guava Production Colour", with: @production_productivity10.Guava_Production_Colour
     fill_in "Litchi Area", with: @production_productivity10.Litchi_Area
+    fill_in "Litchi Area Colour", with: @production_productivity10.Litchi_Area_Colour
     fill_in "Litchi Production", with: @production_productivity10.Litchi_Production
+    fill_in "Litchi Production Colour", with: @production_productivity10.Litchi_Production_Colour
     fill_in "Mango Area", with: @production_productivity10.Mango_Area
+    fill_in "Mango Area Colour", with: @production_productivity10.Mango_Area_Colour
     fill_in "Mango Production", with: @production_productivity10.Mango_Production
+    fill_in "Mango Production Colour", with: @production_productivity10.Mango_Production_Colour
     fill_in "Year", with: @production_productivity10.Year
     click_on "Create Production productivity10"
 
@@ -35,14 +43,22 @@ class ProductionProductivity10sTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Banana Area", with: @production_productivity10.Banana_Area
+    fill_in "Banana Area Colour", with: @production_productivity10.Banana_Area_Colour
     fill_in "Banana Production", with: @production_productivity10.Banana_Production
+    fill_in "Banana Production Colour", with: @production_productivity10.Banana_Production_Colour
     fill_in "Districts", with: @production_productivity10.Districts
     fill_in "Guava Area", with: @production_productivity10.Guava_Area
+    fill_in "Guava Area Colour", with: @production_productivity10.Guava_Area_Colour
     fill_in "Guava Production", with: @production_productivity10.Guava_Production
+    fill_in "Guava Production Colour", with: @production_productivity10.Guava_Production_Colour
     fill_in "Litchi Area", with: @production_productivity10.Litchi_Area
+    fill_in "Litchi Area Colour", with: @production_productivity10.Litchi_Area_Colour
     fill_in "Litchi Production", with: @production_productivity10.Litchi_Production
+    fill_in "Litchi Production Colour", with: @production_productivity10.Litchi_Production_Colour
     fill_in "Mango Area", with: @production_productivity10.Mango_Area
+    fill_in "Mango Area Colour", with: @production_productivity10.Mango_Area_Colour
     fill_in "Mango Production", with: @production_productivity10.Mango_Production
+    fill_in "Mango Production Colour", with: @production_productivity10.Mango_Production_Colour
     fill_in "Year", with: @production_productivity10.Year
     click_on "Update Production productivity10"
 

@@ -11,6 +11,14 @@ one:
   Brinjal_Area: 1.5
   Brinjal_Production: 1.5
   Year: 1
+  Potato_Area_Colour: MyString
+  Potato_Production_Colour: MyString
+  Onion_Area_Colour: MyString
+  Onion_Production_Colour: MyString
+  Cauliflower_Area_Colour: MyString
+  Cauliflower_Production_Colour: MyString
+  Brinjal_Area_Colour: MyString
+  Brinjal_Production_Colour: MyString
 
 two:
   Districts: MyString
@@ -23,3 +31,11 @@ two:
   Brinjal_Area: 1.5
   Brinjal_Production: 1.5
   Year: 1
+  Potato_Area_Colour: MyString
+  Potato_Production_Colour: MyString
+  Onion_Area_Colour: MyString
+  Onion_Production_Colour: MyString
+  Cauliflower_Area_Colour: MyString
+  Cauliflower_Production_Colour: MyString
+  Brinjal_Area_Colour: MyString
+  Brinjal_Production_Colour: MyString

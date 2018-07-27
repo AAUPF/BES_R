@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Target_Physical: 1.5
+  Target_Financial: 1.5
+  Achievement_Physical: 1.5
+  Achievement_Financial: 1.5
+  Target_Physical_Colour: MyString
+  Target_Financial_Colour: MyString
+  Achievement_Physical_Colour: MyString
+  Achievement_Financial_Colour: MyString
+
+two:
+  Districts: MyString
+  Target_Physical: 1.5
+  Target_Financial: 1.5
+  Achievement_Physical: 1.5
+  Achievement_Financial: 1.5
+  Target_Physical_Colour: MyString
+  Target_Financial_Colour: MyString
+  Achievement_Physical_Colour: MyString
+  Achievement_Financial_Colour: MyString

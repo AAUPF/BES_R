@@ -18,20 +18,20 @@ class CreateLands < ActiveRecord::Migration[5.2]
       t.float :Gross_Crop_Area
       t.float :Cropping_Intensity
       t.string :Geographical_area_Colour
-      t.string :Forest
-      t.string :Barren_unculturable_land
-      t.string :Non_Agriculture_Land_area
-      t.string :Non_Agriculture_Perennial_Water_Area
-      t.string :Non_Agriculture_Temporary_Water_Area
-      t.string :Culturable_Waste_Land
-      t.string :Permanent_Pastures
-      t.string :Tree_Crops
-      t.string :Fallow_land
-      t.string :Current_Fallow
-      t.string :Total_Uncultivable_Land
-      t.string :Net_Area_Sown
-      t.string :Gross_Crop_Area
-      t.string :Cropping_Intensity
+      t.string :Forest_Colour
+      t.string :Barren_unculturable_land_Colour
+      t.string :Non_Agriculture_Land_area_Colour
+      t.string :Non_Agriculture_Perennial_Water_Area_Colour
+      t.string :Non_Agriculture_Temporary_Water_Area_Colour
+      t.string :Culturable_Waste_Land_Colour
+      t.string :Permanent_Pastures_Colour
+      t.string :Tree_Crops_Colour
+      t.string :_ColourFallow_land
+      t.string :Current_Fallow_Colour
+      t.string :Total_Uncultivable_Land_Colour
+      t.string :Net_Area_Sown_Colour
+      t.string :Gross_Crop_Area_Colour
+      t.string :Cropping_Intensity_Colour
 
       t.timestamps
     end

@@ -17,7 +17,7 @@ class ProductionProductivity8sControllerTest < ActionDispatch::IntegrationTest
 
   test "should create production_productivity8" do
     assert_difference('ProductionProductivity8.count') do
-      post production_productivity8s_url, params: { production_productivity8: { Area: @production_productivity8.Area, Districts: @production_productivity8.Districts, Production: @production_productivity8.Production, Productivity: @production_productivity8.Productivity, Year: @production_productivity8.Year } }
+      post production_productivity8s_url, params: { production_productivity8: { Area: @production_productivity8.Area, Area_Colour: @production_productivity8.Area_Colour, Districts: @production_productivity8.Districts, Production: @production_productivity8.Production, Production_Colour: @production_productivity8.Production_Colour, Productivity: @production_productivity8.Productivity, Productivity_Colour: @production_productivity8.Productivity_Colour, Year: @production_productivity8.Year } }
     end
 
     assert_redirected_to production_productivity8_url(ProductionProductivity8.last)
@@ -34,7 +34,7 @@ class ProductionProductivity8sControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update production_productivity8" do
-    patch production_productivity8_url(@production_productivity8), params: { production_productivity8: { Area: @production_productivity8.Area, Districts: @production_productivity8.Districts, Production: @production_productivity8.Production, Productivity: @production_productivity8.Productivity, Year: @production_productivity8.Year } }
+    patch production_productivity8_url(@production_productivity8), params: { production_productivity8: { Area: @production_productivity8.Area, Area_Colour: @production_productivity8.Area_Colour, Districts: @production_productivity8.Districts, Production: @production_productivity8.Production, Production_Colour: @production_productivity8.Production_Colour, Productivity: @production_productivity8.Productivity, Productivity_Colour: @production_productivity8.Productivity_Colour, Year: @production_productivity8.Year } }
     assert_redirected_to production_productivity8_url(@production_productivity8)
   end
 

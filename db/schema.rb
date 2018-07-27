@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_27_051521) do
+ActiveRecord::Schema.define(version: 2018_07_27_082359) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -321,21 +321,35 @@ ActiveRecord::Schema.define(version: 2018_07_27_051521) do
   create_table "lands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Districts"
     t.float "Geographical_area"
-    t.string "Forest"
-    t.string "Barren_unculturable_land"
-    t.string "Non_Agriculture_Land_area"
-    t.string "Non_Agriculture_Perennial_Water_Area"
-    t.string "Non_Agriculture_Temporary_Water_Area"
-    t.string "Culturable_Waste_Land"
-    t.string "Permanent_Pastures"
-    t.string "Tree_Crops"
-    t.string "Fallow_land"
-    t.string "Current_Fallow"
-    t.string "Total_Uncultivable_Land"
-    t.string "Net_Area_Sown"
-    t.string "Gross_Crop_Area"
-    t.string "Cropping_Intensity"
+    t.float "Forest"
+    t.float "Barren_unculturable_land"
+    t.float "Non_Agriculture_Land_area"
+    t.float "Non_Agriculture_Perennial_Water_Area"
+    t.float "Non_Agriculture_Temporary_Water_Area"
+    t.float "Culturable_Waste_Land"
+    t.float "Permanent_Pastures"
+    t.float "Tree_Crops"
+    t.float "Fallow_land"
+    t.float "Current_Fallow"
+    t.float "Total_Uncultivable_Land"
+    t.float "Net_Area_Sown"
+    t.float "Gross_Crop_Area"
+    t.float "Cropping_Intensity"
     t.string "Geographical_area_Colour"
+    t.string "Forest_Colour"
+    t.string "Barren_unculturable_land_Colour"
+    t.string "Non_Agriculture_Land_area_Colour"
+    t.string "Non_Agriculture_Perennial_Water_Area_Colour"
+    t.string "Non_Agriculture_Temporary_Water_Area_Colour"
+    t.string "Culturable_Waste_Land_Colour"
+    t.string "Permanent_Pastures_Colour"
+    t.string "Tree_Crops_Colour"
+    t.string "_ColourFallow_land"
+    t.string "Current_Fallow_Colour"
+    t.string "Total_Uncultivable_Land_Colour"
+    t.string "Net_Area_Sown_Colour"
+    t.string "Gross_Crop_Area_Colour"
+    t.string "Cropping_Intensity_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -374,6 +388,14 @@ ActiveRecord::Schema.define(version: 2018_07_27_051521) do
     t.float "Banana_Area"
     t.float "Banana_Production"
     t.integer "Year"
+    t.string "Mango_Area_Colour"
+    t.string "Mango_Production_Colour"
+    t.string "Guava_Area_Colour"
+    t.string "Guava_Production_Colour"
+    t.string "Litchi_Area_Colour"
+    t.string "Litchi_Production_Colour"
+    t.string "Banana_Area_Colour"
+    t.string "Banana_Production_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -389,6 +411,14 @@ ActiveRecord::Schema.define(version: 2018_07_27_051521) do
     t.float "Brinjal_Area"
     t.float "Brinjal_Production"
     t.integer "Year"
+    t.string "Potato_Area_Colour"
+    t.string "Potato_Production_Colour"
+    t.string "Onion_Area_Colour"
+    t.string "Onion_Production_Colour"
+    t.string "Cauliflower_Area_Colour"
+    t.string "Cauliflower_Production_Colour"
+    t.string "Brinjal_Area_Colour"
+    t.string "Brinjal_Production_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -399,6 +429,9 @@ ActiveRecord::Schema.define(version: 2018_07_27_051521) do
     t.float "Production"
     t.float "Yield"
     t.integer "Year"
+    t.string "Area_Colour"
+    t.string "Production_Colour"
+    t.string "Yield_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -525,6 +558,9 @@ ActiveRecord::Schema.define(version: 2018_07_27_051521) do
     t.float "Production"
     t.float "Productivity"
     t.integer "Year"
+    t.string "Area_Colour"
+    t.string "Production_Colour"
+    t.string "Productivity_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -535,6 +571,9 @@ ActiveRecord::Schema.define(version: 2018_07_27_051521) do
     t.float "Production"
     t.float "Productivity"
     t.integer "Year"
+    t.string "Area_Colour"
+    t.string "Production_Colour"
+    t.string "Productivity_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -545,6 +584,9 @@ ActiveRecord::Schema.define(version: 2018_07_27_051521) do
     t.float "Production"
     t.float "Productivity"
     t.integer "Year"
+    t.string "Area_Colour"
+    t.string "Production_Colour"
+    t.string "Productivity_Colour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

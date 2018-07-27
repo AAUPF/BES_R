@@ -18,20 +18,20 @@ one:
   Gross_Crop_Area: 1.5
   Cropping_Intensity: 1.5
   Geographical_area_Colour: MyString
-  Forest: MyString
-  Barren_unculturable_land: MyString
-  Non_Agriculture_Land_area: MyString
-  Non_Agriculture_Perennial_Water_Area: MyString
-  Non_Agriculture_Temporary_Water_Area: MyString
-  Culturable_Waste_Land: MyString
-  Permanent_Pastures: MyString
-  Tree_Crops: MyString
-  Fallow_land: MyString
-  Current_Fallow: MyString
-  Total_Uncultivable_Land: MyString
-  Net_Area_Sown: MyString
-  Gross_Crop_Area: MyString
-  Cropping_Intensity: MyString
+  Forest_Colour: MyString
+  Barren_unculturable_land_Colour: MyString
+  Non_Agriculture_Land_area_Colour: MyString
+  Non_Agriculture_Perennial_Water_Area_Colour: MyString
+  Non_Agriculture_Temporary_Water_Area_Colour: MyString
+  Culturable_Waste_Land_Colour: MyString
+  Permanent_Pastures_Colour: MyString
+  Tree_Crops_Colour: MyString
+  _ColourFallow_land: MyString
+  Current_Fallow_Colour: MyString
+  Total_Uncultivable_Land_Colour: MyString
+  Net_Area_Sown_Colour: MyString
+  Gross_Crop_Area_Colour: MyString
+  Cropping_Intensity_Colour: MyString
 
 two:
   Districts: MyString
@@ -51,17 +51,17 @@ two:
   Gross_Crop_Area: 1.5
   Cropping_Intensity: 1.5
   Geographical_area_Colour: MyString
-  Forest: MyString
-  Barren_unculturable_land: MyString
-  Non_Agriculture_Land_area: MyString
-  Non_Agriculture_Perennial_Water_Area: MyString
-  Non_Agriculture_Temporary_Water_Area: MyString
-  Culturable_Waste_Land: MyString
-  Permanent_Pastures: MyString
-  Tree_Crops: MyString
-  Fallow_land: MyString
-  Current_Fallow: MyString
-  Total_Uncultivable_Land: MyString
-  Net_Area_Sown: MyString
-  Gross_Crop_Area: MyString
-  Cropping_Intensity: MyString
+  Forest_Colour: MyString
+  Barren_unculturable_land_Colour: MyString
+  Non_Agriculture_Land_area_Colour: MyString
+  Non_Agriculture_Perennial_Water_Area_Colour: MyString
+  Non_Agriculture_Temporary_Water_Area_Colour: MyString
+  Culturable_Waste_Land_Colour: MyString
+  Permanent_Pastures_Colour: MyString
+  Tree_Crops_Colour: MyString
+  _ColourFallow_land: MyString
+  Current_Fallow_Colour: MyString
+  Total_Uncultivable_Land_Colour: MyString
+  Net_Area_Sown_Colour: MyString
+  Gross_Crop_Area_Colour: MyString
+  Cropping_Intensity_Colour: MyString

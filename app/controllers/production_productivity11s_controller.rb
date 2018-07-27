@@ -16,12 +16,16 @@ class ProductionProductivity11sController < ApplicationController
   end
 
 def test
-  ji = [ :Potato_Area, :Potato_Production, :Onion_Area, :Onion_Production, :Cauliflower_Area, :Cauliflower_Production, :Brinjal_Area, :Brinjal_Production]
+  ji = [:Potato_Area, :Potato_Production, :Onion_Area, :Onion_Production, :Cauliflower_Area, :Cauliflower_Production, :Brinjal_Area, :Brinjal_Production]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+
    ji1 = [:Districts, :Potato_Area, :Potato_Production, :Onion_Area, :Onion_Production, :Cauliflower_Area, :Cauliflower_Production, :Brinjal_Area, :Brinjal_Production, :Year]
+
+   unit1 = "000 hectare"
+
 
   if rain_fall_type || views
 
@@ -33,7 +37,7 @@ def test
           a = ProductionProductivity11.map(b,params[:year],rain_fall_type,views)
          else
           b = ProductionProductivity11.map_search(params[:search],compare,year,rain_fall_type)
-          a = ProductionProductivity11.map(b,rain_fall_type,year,ji)
+          a = ProductionProductivity11.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
         b = ProductionProductivity11.search(params[:search],compare,year,rain_fall_type)
@@ -99,6 +103,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def production_productivity11_params
-      params.require(:production_productivity11).permit(:Districts, :Potato_Area, :Potato_Production, :Onion_Area, :Onion_Production, :Cauliflower_Area, :Cauliflower_Production, :Brinjal_Area, :Brinjal_Production, :Year)
+      params.require(:production_productivity11).permit(:Districts, :Potato_Area, :Potato_Production, :Onion_Area, :Onion_Production, :Cauliflower_Area, :Cauliflower_Production, :Brinjal_Area, :Brinjal_Production, :Year, :Potato_Area_Colour, :Potato_Production_Colour, :Onion_Area_Colour, :Onion_Production_Colour, :Cauliflower_Area_Colour, :Cauliflower_Production_Colour, :Brinjal_Area_Colour, :Brinjal_Production_Colour)
     end
 end

@@ -1,2 +1,2 @@
-json.extract! production_productivity11, :id, :Districts, :Potato_Area, :Potato_Production, :Onion_Area, :Onion_Production, :Cauliflower_Area, :Cauliflower_Production, :Brinjal_Area, :Brinjal_Production, :Year, :created_at, :updated_at
+json.extract! production_productivity11, :id, :Districts, :Potato_Area, :Potato_Production, :Onion_Area, :Onion_Production, :Cauliflower_Area, :Cauliflower_Production, :Brinjal_Area, :Brinjal_Production, :Year, :Potato_Area_Colour, :Potato_Production_Colour, :Onion_Area_Colour, :Onion_Production_Colour, :Cauliflower_Area_Colour, :Cauliflower_Production_Colour, :Brinjal_Area_Colour, :Brinjal_Production_Colour, :created_at, :updated_at
 json.url production_productivity11_url(production_productivity11, format: :json)

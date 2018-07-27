@@ -16,12 +16,15 @@ class ProductionProductivity10sController < ApplicationController
   end
 
 def test
-  ji = [ :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production]
+  ji = [:Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-   ji1 = [ :Districts, :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production]
+
+   ji1 = [:Districts, :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production, :Year]
+
+   unit1 = "'000 tonnes"
 
   if rain_fall_type || views
 
@@ -33,7 +36,7 @@ def test
           a = ProductionProductivity10.map(b,params[:year],rain_fall_type,views)
          else
           b = ProductionProductivity10.map_search(params[:search],compare,year,rain_fall_type)
-          a = ProductionProductivity10.map(b,rain_fall_type,year,ji)
+          a = ProductionProductivity10.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
         b = ProductionProductivity10.search(params[:search],compare,year,rain_fall_type)
@@ -99,6 +102,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def production_productivity10_params
-      params.require(:production_productivity10).permit(:Districts, :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production, :Year)
+      params.require(:production_productivity10).permit(:Districts, :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production, :Year, :Mango_Area_Colour, :Mango_Production_Colour, :Guava_Area_Colour, :Guava_Production_Colour, :Litchi_Area_Colour, :Litchi_Production_Colour, :Banana_Area_Colour, :Banana_Production_Colour)
     end
 end

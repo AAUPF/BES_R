@@ -11,6 +11,14 @@ class CreateProductionProductivity10s < ActiveRecord::Migration[5.2]
       t.float :Banana_Area
       t.float :Banana_Production
       t.integer :Year
+      t.string :Mango_Area_Colour
+      t.string :Mango_Production_Colour
+      t.string :Guava_Area_Colour
+      t.string :Guava_Production_Colour
+      t.string :Litchi_Area_Colour
+      t.string :Litchi_Production_Colour
+      t.string :Banana_Area_Colour
+      t.string :Banana_Production_Colour
 
       t.timestamps
     end

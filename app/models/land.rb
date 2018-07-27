@@ -1,5 +1,4 @@
 class Land < ApplicationRecord
-  
-  extend   Newdistrictwithoutyear
+  extend Newdistrictwithoutyear  
 
-end
+      end

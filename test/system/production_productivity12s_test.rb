@@ -15,10 +15,13 @@ class ProductionProductivity12sTest < ApplicationSystemTestCase
     click_on "New Production Productivity12"
 
     fill_in "Area", with: @production_productivity12.Area
+    fill_in "Area Colour", with: @production_productivity12.Area_Colour
     fill_in "Districts", with: @production_productivity12.Districts
     fill_in "Production", with: @production_productivity12.Production
+    fill_in "Production Colour", with: @production_productivity12.Production_Colour
     fill_in "Year", with: @production_productivity12.Year
     fill_in "Yield", with: @production_productivity12.Yield
+    fill_in "Yield Colour", with: @production_productivity12.Yield_Colour
     click_on "Create Production productivity12"
 
     assert_text "Production productivity12 was successfully created"
@@ -30,10 +33,13 @@ class ProductionProductivity12sTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Area", with: @production_productivity12.Area
+    fill_in "Area Colour", with: @production_productivity12.Area_Colour
     fill_in "Districts", with: @production_productivity12.Districts
     fill_in "Production", with: @production_productivity12.Production
+    fill_in "Production Colour", with: @production_productivity12.Production_Colour
     fill_in "Year", with: @production_productivity12.Year
     fill_in "Yield", with: @production_productivity12.Yield
+    fill_in "Yield Colour", with: @production_productivity12.Yield_Colour
     click_on "Update Production productivity12"
 
     assert_text "Production productivity12 was successfully updated"

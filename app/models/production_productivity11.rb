@@ -1,4 +1,3 @@
 class ProductionProductivity11 < ApplicationRecord
-  extend Newdistrict  
-
-      end
+  extend Test  
+  end
