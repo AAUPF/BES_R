@@ -185,7 +185,7 @@ end
                 animationEnabled: true,
                 exportEnabled: true,
                 title:{
-                  text: name
+                  text: rain_fall_type.gsub("_"," ")
                       },
                 data: hash_data
             }
