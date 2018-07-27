@@ -24,7 +24,29 @@ def test
 
    ji1 = [:Districts, :Potato_Area, :Potato_Production, :Onion_Area, :Onion_Production, :Cauliflower_Area, :Cauliflower_Production, :Brinjal_Area, :Brinjal_Production, :Year]
 
-   unit1 = "000 hectare"
+   units = [{Potato_Area: "000 Hectare" },{Onion_Area: "000 Hectare" },{Cauliflower_Area: "000 Hectare" },{Brinjal_Area:  "000 Hectare" },{Potato_Production: "'000 tonnes" },{Onion_Production: "'000 tonnes" },{Cauliflower_Production: "'000 tonnes" },{Brinjal_Production: "'000 tonnes" }]
+
+
+   if rain_fall_type == "Potato_Area"
+        unit1 =  units[0][:Potato_Area]
+      elsif rain_fall_type == "Onion_Area"
+        unit1 =  units[1][:Onion_Area]
+      elsif rain_fall_type == "Cauliflower_Area"
+        unit1 =  units[2][:Cauliflower_Area]
+      elsif rain_fall_type == "Brinjal_Area"
+        unit1 =  units[3][:Brinjal_Area]
+
+      elsif rain_fall_type == "Potato_Production"
+        unit1 =  units[4][:Potato_Production]
+      elsif rain_fall_type == "Onion_Production"
+        unit1 =  units[5][:Onion_Production]
+      elsif rain_fall_type == "Cauliflower_Production"
+        unit1 =  units[6][:Cauliflower_Production]
+      elsif rain_fall_type == "Brinjal_Production"
+        unit1 =  units[7][:Brinjal_Production]
+        
+      else
+   end
 
 
   if rain_fall_type || views

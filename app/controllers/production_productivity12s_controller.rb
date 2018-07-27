@@ -22,7 +22,18 @@ def test
    year  = params[:year]
    compare = params[:compare]
 
-   unit1 = "000 Hectare"
+   units = [{Area: "000 Hectare" },{Production: "000 tonnes" },{Yield: "Ton/Hac" }]
+
+
+   if rain_fall_type == "Area"
+        unit1 =  units[0][:Area]
+      elsif rain_fall_type == "Production"
+        unit1 =  units[1][:Production]
+      elsif rain_fall_type == "Yield"
+        unit1 =  units[2][:Yield]
+        
+      else
+   end
 
   if rain_fall_type || views
 

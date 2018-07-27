@@ -16,13 +16,13 @@ class ProductionProductivity7sController < ApplicationController
   end
 
 def test
-  ji = [:Area, :Production, :Productivity, :Area_Colour, :Production_Colour, :Productivity_Colour]
+  ji = [:Area, :Production, :Productivity]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
-   ji1 = [:Districts, :Area, :Production, :Productivity, :Year, :Area_Colour, :Production_Colour, :Productivity_Colour]
+   ji1 = [:Districts, :Area, :Production, :Productivity, :Year]
    units = [{Area: "000 Hectare" },{Production: "000 tonnes" },{Productivity: "Kg/Hac" }]
 
 

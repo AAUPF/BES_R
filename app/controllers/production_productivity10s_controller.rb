@@ -26,6 +26,31 @@ def test
 
    unit1 = "'000 tonnes"
 
+
+   units = [{Mango_Area: "000 Hectare" },{Guava_Area: "000 Hectare" },{Banana_Area: "000 Hectare" },{Litchi_Area:  "000 Hectare" },{Mango_Production: "'000 tonnes" },{Guava_Production: "'000 tonnes" },{Litchi_Production: "'000 tonnes" },{Banana_Production: "'000 tonnes" }]
+
+
+   if rain_fall_type == "Mango_Area"
+        unit1 =  units[0][:Mango_Area]
+      elsif rain_fall_type == "Guava_Area"
+        unit1 =  units[1][:Guava_Area]
+      elsif rain_fall_type == "Banana_Area"
+        unit1 =  units[2][:Banana_Area]
+      elsif rain_fall_type == "Litchi_Area"
+        unit1 =  units[3][:Litchi_Area]
+
+      elsif rain_fall_type == "Mango_Production"
+        unit1 =  units[4][:Mango_Production]
+      elsif rain_fall_type == "Guava_Production"
+        unit1 =  units[5][:Guava_Production]
+      elsif rain_fall_type == "Litchi_Production"
+        unit1 =  units[6][:Litchi_Production]
+      elsif rain_fall_type == "Banana_Production"
+        unit1 =  units[7][:Banana_Production]
+        
+      else
+   end
+
   if rain_fall_type || views
 
       if views == "Map View"
