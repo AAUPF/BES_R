@@ -18,8 +18,8 @@ module Vegetable
       else
         where(Year: year).order("#{rain_fall_type} ")
       end
-    elsif compare == "Bihar vs District"
-      where("Vegetables = ? OR Vegetables = ?", search, "Bihar").where("year = ?", year).order(:id)
+    elsif compare != "None"
+      where("Vegetables = ? OR Vegetables = ?", search, compare).where("year = ?", year).order(:id)
     else
       if rain_fall_type == "All"
         where("Vegetables = ? ", search).where("year = ?", year).order(:id)
@@ -27,6 +27,16 @@ module Vegetable
       else
         where("Vegetables = ? ", search).where("year = ?", year).order(rain_fall_type)
       end
+
+      if year == "All"
+        where("Vegetables = ? ", search)
+      else
+        where("Vegetables = ? ", search).where("year = ?", year)
+      end
+
+
+
+
     end
   end
 
@@ -86,150 +96,12 @@ module Vegetable
   end
 
 
-  # def table(b,rain_fall_type,year)
-  #   h =   [{c:[{v: 'Mike'} , {v: 20}]},
-  #         {c:[{v: 'Bob'}, {v: 20}]}
-  #   ]
-  #   g = b.map do |g|
-  #           [{
-  #           c: g["id"]
-  #           }]
 
-  #         end
-  #       a = {
-  #         cols: [{id: 'task', label: 'Nilay Name', type: 'string'},
-  #               {id: 'nily', label: 'Start Date', type: 'number'}],
-  #         rows: h
-  #       }
-  #       return g
-  # end
-
-
-  # def hash_data(ji,b)
-  #   hash_data =  ji.map do |column_name|
-  #     {
-  #       type:"line",
-  #       legendText: column_name,
-  #       showInLegend: true,
-  #       dataPoints: b.reject{|x| x["Vegetables"]== "Bihar"}.map do |el|
-  #         { y: el[column_name], label: el[d] }
-  #       end
-  #     }
-  #   end
-  #   return hash_data
-  # end
-
-  # def query(b, year, rain_fall_type, views, ji, compare)
-  #   d = "Vegetables"
-  #   if rain_fall_type == "All"
-  #     if views == "Trend Line"
-  #       hash_data = ji.map do |column_name|
-  #         if compare == "Bihar vs District"
-
-  #           {
-  #               type: "line",
-  #               legendText: column_name,
-  #               showInLegend: true,
-  #               dataPoints: b.map do |el|
-  #                 {y: el[column_name], z: el[column_name], label: el[d]}
-  #               end
-  #           }
-  #         else
-
-  #           {
-  #               type: "line",
-  #               legendText: column_name,
-  #               showInLegend: true,
-  #               dataPoints: b.reject {|x| x["Vegetables"] == "Bihar"}.map do |el|
-  #                 {y: el[column_name], z: el[column_name], label: el[d]}
-  #               end
-  #           }
-  #         end
-
-  #       end
-  #     elsif views == "Bubble"
-  #       hash_data = ji.map do |column_name|
-  #         if compare == "Bihar vs District"
-
-  #           {
-  #               type: "bubble",
-  #               legendText: column_name,
-  #               showInLegend: true,
-  #               dataPoints: b.map do |el|
-  #                 {y: el[column_name], z: el[column_name], label: el[d]}
-  #               end
-  #           }
-  #         else
-
-  #           {
-  #               type: "bubble",
-  #               legendText: column_name,
-  #               showInLegend: true,
-  #               dataPoints: b.reject {|x| x["Vegetables"] == "Bihar"}.map do |el|
-  #                 {y: el[column_name], z: el[column_name], label: el[d]}
-  #               end
-  #           }
-  #         end
-
-  #       end
-  #     else
-  #       hash_data = ji.map do |column_name|
-  #         if compare == "Bihar vs District"
-
-  #           {
-  #               type: "column",
-  #               legendText: column_name,
-  #               showInLegend: true,
-  #               dataPoints: b.map do |el|
-  #                 {y: el[column_name], z: el[column_name], label: el[d]}
-  #               end
-  #           }
-  #         else
-
-  #           {
-  #               type: "column",
-  #               legendText: column_name,
-  #               showInLegend: true,
-  #               dataPoints: b.reject {|x| x["Vegetables"] == "Bihar"}.map do |el|
-  #                 {y: el[column_name], z: el[column_name], label: el[d]}
-  #               end
-  #           }
-  #         end
-          
-  #       end
-
-  #     end
-  #     title = {
-  #       animationEnabled: true,
-  #       exportEnabled: true,
-  #       title: {
-  #           text: "#{rain_fall_type.to_s.gsub("_", " ")}"
-  #       },
-  #       data: hash_data
-  #   }
-  #   return title
-  #   else
-  #     array = []
-
-  #     if compare == "Bihar vs District"
-  #       b.each do |element|
-  #         hash1 = {:y => element[rain_fall_type], :label => element[d]}
-  #         array.push(hash1)
-  #       end
-  #     else
-  #       b.reject {|x| x["Vegetables"] == "Bihar"}.each do |element|
-  #         hash1 = {:y => element[rain_fall_type], :label => element[d]}
-  #         array.push(hash1)
-  #       end
-  #     end
-  #     return array
-  #   end
-  # end
-
-
-  def query(b, year, rain_fall_type, views, ji, compare)
+  def query(b, year, rain_fall_type, views, ji, compare,district)
     d = "Vegetables"
+    
     if rain_fall_type == "All"
+      
       if views
         hash_data = ji.map do |column_name|
           if compare == "Bihar vs District"
@@ -238,7 +110,7 @@ module Vegetable
                 type: views,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.map do |el|
+                dataPoints: b.reject {|x| x["Vegetables"] == "Total"}.map do |el|
                   {y: el[column_name], z: el[column_name], label: el[d]}
                 end
             }
@@ -248,17 +120,59 @@ module Vegetable
                 type: views,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.reject {|x| x["Vegetables"] == "Bihar"}.map do |el|
+                dataPoints: b.reject {|x| x["Vegetables"] == "Total"}.map do |el|
                   {y: el[column_name], z: el[column_name], label: el[d]}
                 end
             }
           end
+          if year == "All"
+            dataset = column_name.to_s.gsub("_", " ")
+            {
+                type: views,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: b.reject {|x| x["Vegetables"] == "Total"}.map do |el|
+                  {y: el[column_name], z: el[column_name], label: el["Year"]}
+                end
+            }
+          else
+                  if district == "All"
+                        dataset = column_name.to_s.gsub("_", " ")
+                      {
+                          type: views,
+                          legendText: dataset,
+                          showInLegend: true,
+                          dataPoints: b.reject {|x| x["Vegetables"] == "Total"}.map do |el|
+                            {y: el[column_name], z: el[column_name], label: el["Vegetables"]}
+                          end
+                      }
+                  else
+                          dataset = column_name.to_s.gsub("_", " ")
+                        {
+                            type: views,
+                            legendText: dataset,
+                            showInLegend: true,
+                            dataPoints: b.reject {|x| x["Vegetables"] == "Total"}.map do |el|
+                              {y: el[column_name], z: el[column_name], label: el["Year"]}
+                            end
+                        }
+                  end
+            
+          end
 
         end
+      end
+      if district != "All"
+        content = "#{district}: {y}"
+      else
+        content = ""
       end
       title = {
           animationEnabled: true,
           exportEnabled: true,
+          toolTip:{   
+            content: content   
+          },
           title: {
               text: "#{rain_fall_type.to_s.gsub("_", " ")}"
           },
@@ -266,35 +180,73 @@ module Vegetable
       }
       return title
     else
-      if compare == "Bihar vs District"
+      
+      if compare != "None"
+      
         dataset = rain_fall_type.gsub("_", " ")
 
         hash_data =
             [{
                  type: views,
-
                  legendText: dataset,
                  showInLegend: true,
-                 dataPoints: b.map do |el|
+                 dataPoints: b.reject {|x| x["Vegetables"] == "Total"}.map do |el|
                    {y: el[rain_fall_type], label: el["Vegetables"]}
                  end
              }]
       else
         dataset = rain_fall_type.gsub("_", " ")
-        hash_data =
-            [{
-                 type: views,
+        if year == "All"
+          
+          hash_data =
+          [{
+               type: views,
+               legendText: dataset,
+               showInLegend: true,
+               dataPoints: b.reject {|x| x["Vegetables"] == "Total"}.map do |el|
+                 {y: el[rain_fall_type], label: el["Year"]}
+               end
+           }]
+        else
+          
+          if district == "All"
+            hash_data =
+          [{
+               type: views,
+               legendText: dataset,
+               showInLegend: true,
+               dataPoints: b.reject {|x| x["Vegetables"] == "Total"}.map do |el|
+                 {y: el[rain_fall_type], label: el["Vegetables"]}
+               end
+           }]
+          else
+            
+            hash_data =
+          [{
+               type: views,
+               legendText: dataset,
+               showInLegend: true,
+               dataPoints: b.reject {|x| x["Vegetables"] == "Total"}.map do |el|
+                 {y: el[rain_fall_type], label: el["Year"]}
+               end
+           }]
+          end
 
-                 legendText: dataset,
-                 showInLegend: true,
-                 dataPoints: b.reject {|x| x["Vegetables"] == "Bihar"}.map do |el|
-                   {y: el[rain_fall_type], label: el["Vegetables"]}
-                 end
-             }]
+          
+          
+        end
+      end
+      if district != "All"
+        content = "#{district}: {y}"
+      else
+        content = ""
       end
       title = {
           animationEnabled: true,
           exportEnabled: true,
+          toolTip:{   
+            content: content   
+          },
           title: {
               text: "#{rain_fall_type.to_s.gsub("_", " ")}"
           },

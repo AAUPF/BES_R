@@ -21,7 +21,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-
+   district = params[:search]
    ji1 = [:Vegetables, :Area, :Production, :Year]
 
 
@@ -42,7 +42,7 @@ def test
         a = ProductionProductivity5.table(b,rain_fall_type,year,ji1,compare)
       else
         @ProductionProductivity5s = ProductionProductivity5.search(params[:search],compare,year,rain_fall_type)
-        a = ProductionProductivity5.query(@ProductionProductivity5s,params[:year],rain_fall_type,views,ji,compare)
+         a = ProductionProductivity5.query(@ProductionProductivity5s,params[:year],rain_fall_type,views,ji,compare,district)
       end
       respond_to do |format|
         format.html { render json:a }
