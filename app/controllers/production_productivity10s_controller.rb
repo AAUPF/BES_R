@@ -32,20 +32,29 @@ def test
 
    if rain_fall_type == "Mango_Area"
         unit1 =  units[0][:Mango_Area]
+        ranges = NewricesHelper.ranges1(13,10,9,5,3,2,0)
       elsif rain_fall_type == "Guava_Area"
+        ranges = NewricesHelper.ranges1(3,1.5,1,0.5,0.3,0.2,0)
         unit1 =  units[1][:Guava_Area]
+        ranges = NewricesHelper.ranges1(45,29,20,15,10,5,0)
       elsif rain_fall_type == "Banana_Area"
+        ranges = NewricesHelper.ranges1(5,3,2,1,0.5,0.3,0)
         unit1 =  units[2][:Banana_Area]
       elsif rain_fall_type == "Litchi_Area"
+        ranges = NewricesHelper.ranges1(7,3,2,1,0.5,0.2,0)
         unit1 =  units[3][:Litchi_Area]
 
       elsif rain_fall_type == "Mango_Production"
+        ranges = NewricesHelper.ranges1(140,90,70,50,30,20,0)
         unit1 =  units[4][:Mango_Production]
       elsif rain_fall_type == "Guava_Production"
+        ranges = NewricesHelper.ranges1(145,25,14,10,6,3,0)
         unit1 =  units[5][:Guava_Production]
       elsif rain_fall_type == "Litchi_Production"
+        ranges = NewricesHelper.ranges1(40,21,15,10,5,2,0)
         unit1 =  units[6][:Litchi_Production]
       elsif rain_fall_type == "Banana_Production"
+        ranges = NewricesHelper.ranges1(272,142,100,70,50,30,0)
         unit1 =  units[7][:Banana_Production]
         
       else
@@ -61,7 +70,7 @@ def test
           a = ProductionProductivity10.map(b,params[:year],rain_fall_type,views)
          else
           b = ProductionProductivity10.map_search(params[:search],compare,year,rain_fall_type)
-          a = ProductionProductivity10.map(b,rain_fall_type,year,ji,unit1)
+          a = ProductionProductivity10.map(b,rain_fall_type,year,ji,unit1,ranges)
          end
       elsif views == "Table"  
         b = ProductionProductivity10.search(params[:search],compare,year,rain_fall_type)

@@ -36,6 +36,15 @@ def test
       else
    end
 
+
+   if rain_fall_type == 'Area'
+    ranges = NewricesHelper.ranges1(130,120,90,70,50,30,0)
+  elsif rain_fall_type == 'Production'
+    ranges =  NewricesHelper.ranges1(280,200,150,100,50,30,0)
+  elsif rain_fall_type == 'Productivity'
+    ranges =  NewricesHelper.ranges1(3400,3200,2700,2400,2000,1600,1000)
+  end
+
   if rain_fall_type || views
 
       if views == "Map View"
@@ -46,7 +55,7 @@ def test
           a = ProductionProductivity7.map(b,params[:year],rain_fall_type,views)
          else
           b = ProductionProductivity7.map_search(params[:search],compare,year,rain_fall_type)
-          a = ProductionProductivity7.map(b,rain_fall_type,year,ji,unit1)
+          a = ProductionProductivity7.map(b,rain_fall_type,year,ji,unit1,ranges)
          end
       elsif views == "Table"  
         b = ProductionProductivity7.search(params[:search],compare,year,rain_fall_type)
