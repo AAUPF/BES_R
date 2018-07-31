@@ -37,12 +37,29 @@ def test
    end
 
 
-   if rain_fall_type == 'Area'
-    ranges = NewricesHelper.ranges1(130,120,90,70,50,30,0)
-  elsif rain_fall_type == 'Production'
-    ranges =  NewricesHelper.ranges1(280,200,150,100,50,30,0)
-  elsif rain_fall_type == 'Productivity'
-    ranges =  NewricesHelper.ranges1(3400,3200,2700,2400,2000,1600,1000)
+
+
+
+
+  
+  if year == '2015'
+
+    if rain_fall_type == 'Area'
+      ranges = NewricesHelper.ranges1(130,120,90,70,50,30,0)
+    elsif rain_fall_type == 'Production'
+      ranges =  NewricesHelper.ranges1(280,200,150,100,50,30,0)
+    elsif rain_fall_type == 'Productivity'
+      ranges =  NewricesHelper.ranges1(3400,3200,2700,2400,2000,1600,1000)
+    end
+
+  elsif year == '2016'
+    if rain_fall_type == 'Area'
+      ranges = NewricesHelper.ranges1(130,120,90,70,50,30,0)
+    elsif rain_fall_type == 'Production'
+      ranges =  NewricesHelper.ranges1(280,200,150,100,50,30,0)
+    elsif rain_fall_type == 'Productivity'
+      ranges =  NewricesHelper.ranges1(3400,3200,2700,2400,2000,1600,1000)
+    end
   end
 
   if rain_fall_type || views

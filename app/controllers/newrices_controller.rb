@@ -34,14 +34,34 @@ class NewricesController < ApplicationController
       unit1 =  units[2][:Productivity]
     end
 
+    if year == '2015'
 
-    if rain_fall_type == 'Area'
-      ranges = NewricesHelper.ranges(0, 50, 70, 100, 150, 190, 200)
-    elsif rain_fall_type == 'Production'
-      ranges =  NewricesHelper.ranges(0, 50, 100, 200, 300, 500, 750)
-    elsif rain_fall_type == 'Productivity'
-      ranges =  NewricesHelper.ranges(400, 1000, 2000, 300, 3500, 3800, 4200)
+      if rain_fall_type == 'Area'
+        ranges = NewricesHelper.ranges(0, 50, 70, 100, 150, 190, 200)
+      elsif rain_fall_type == 'Production'
+        ranges =  NewricesHelper.ranges(0, 50, 100, 200, 300, 500, 750)
+      elsif rain_fall_type == 'Productivity'
+        ranges =  NewricesHelper.ranges(400, 1000, 2000, 300, 3500, 3800, 4200)
+      end
+
+    elsif year == '2016'
+      if rain_fall_type == 'Area'
+        ranges = NewricesHelper.ranges1(200,190,150,100,70,50,0)
+      elsif rain_fall_type == 'Production'
+        ranges =  NewricesHelper.ranges1(640,600,300,200,100,50,0)
+      elsif rain_fall_type == 'Productivity'
+        ranges =  NewricesHelper.ranges1(3750,3500,3000,2500,2000,1500,1000)
+      end
+
     end
+
+    # if rain_fall_type == 'Area'
+    #   ranges = NewricesHelper.ranges(0, 50, 70, 100, 150, 190, 200)
+    # elsif rain_fall_type == 'Production'
+    #   ranges =  NewricesHelper.ranges(0, 50, 100, 200, 300, 500, 750)
+    # elsif rain_fall_type == 'Productivity'
+    #   ranges =  NewricesHelper.ranges(400, 1000, 2000, 300, 3500, 3800, 4200)
+    # end
 
     if rain_fall_type || views
 
