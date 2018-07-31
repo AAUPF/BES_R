@@ -155,7 +155,7 @@ module Newdistrictwithoutyear
     end
   end
 
-  def map(b, rain_fall_type, _views, _ji, unit1)
+  def map(b, rain_fall_type, _views, _ji, unit1,ranges)
     array = []
     # a = []
     l = rain_fall_type.delete(' ')
@@ -216,59 +216,59 @@ module Newdistrictwithoutyear
     array3 = [below_min, min, blow_max, max, above_max, extreme, above_extreme]
 
     if below_min.any?
-      b = { min: below_min.first[:y].round(-below_min.first[:y].round.to_s.length + 1), max: "#{below_min.last[:y].round(-below_min.last[:y].round.to_s.length + 1)}, #{unit1}" }
-    else
-      b = {}
-    end
-
-    if min.any?
-      c = { min: min.first[:y].round(-min.first[:y].round.to_s.length + 1), max: "#{min.last[:y].round(-min.last[:y].round.to_s.length + 1)}, #{unit1}" }
-    else
-      c = {}
-    end
-
-    if blow_max.any?
-      d = { min: blow_max.first[:y].round(-blow_max.first[:y].round.to_s.length + 1), max: "#{blow_max.last[:y].round(-blow_max.last[:y].round.to_s.length + 1)}, #{unit1}" }
-    else
-      d = {}
-    end
-
-    if max.any?
-      e = { min: max.first[:y].round(-max.first[:y].round.to_s.length + 1), max: "#{max.last[:y].round(-max.last[:y].round.to_s.length + 1)}, #{unit1}" }
-    else
-      e = {}
-    end
-
-    if above_max.any?
-
-      f = { min: above_max.first[:y].round(-above_max.first[:y].round.to_s.length + 1), max: "#{above_max.last[:y].round(-above_max.last[:y].round.to_s.length + 1)} ,#{unit1}" }
-
-    else
-      f = {}
-
-    end
-
-    if extreme.any?
-      g = { min: extreme.first[:y].round(-extreme.first[:y].round.to_s.length + 1), max: "#{extreme.last[:y].round(-extreme.last[:y].round.to_s.length + 1)}, #{unit1}" }
-
-    else
-      g = {}
-    end
-
-    if above_extreme.any?
-      h = { max: "#{above_extreme.last[:y].round(-above_extreme.last[:y].round.to_s.length + 1)}, #{unit1}" }
-    else
-      h = {}
-    end
-    hu = {
-      below_min: b,
-      min: c,
-      blow_max: d,
-      max: e,
-      above_max: f,
-      extreme: g,
-      above_extreme: h
-    }
+        b = { min: ranges[0][:below_min][:min], max: "#{ranges[0][:below_min][:max]}, #{unit1}" }
+      else
+        b = {}
+      end
+  
+      if min.any?
+        c = { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}, #{unit1}" }
+      else
+        c = {}
+      end
+  
+      if blow_max.any?
+        d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}, #{unit1}" }
+      else
+        d = {}
+      end
+  
+      if max.any?
+        e = { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}, #{unit1}" } 
+      else
+        e = {}
+      end
+  
+      if above_max.any?
+  
+        f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}, #{unit1}" } 
+  
+      else
+        f = {}
+  
+      end
+  
+      if extreme.any?
+        g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}, #{unit1}" } 
+  
+      else
+        g = {}
+      end
+  
+      if above_extreme.any?
+        h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}, #{unit1}" }
+      else
+        h = {}
+      end
+      hu = {
+        below_min: b,
+        min: c,
+        blow_max: d,
+        max: e,
+        above_max: f,
+        extreme: g,
+        above_extreme: h
+      }
 
     a.push("data": hu)
     #   ys = below_min.map { |e| e[:y] }

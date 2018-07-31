@@ -30,6 +30,47 @@ def test
    ji1 = [:Districts, :Year, :Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :Total, :N, :P, :K, :Total_NPK, :Grand_Total]
 
    unit1 =  "000 Tonnes"
+  #  ranges = NewricesHelper.ranges1(11000,7000,4000,3000,2000,800,0)
+
+   if rain_fall_type == "Urea"
+    ranges = NewricesHelper.ranges1(110,90,70,50,30,20,0)
+       
+      elsif rain_fall_type == "DAP"
+        ranges = NewricesHelper.ranges1(45,25,20,15,10,5,0)
+       
+      elsif rain_fall_type == "SSP"
+        ranges = NewricesHelper.ranges1(13,10,5,3,2,1,0)
+        
+      elsif rain_fall_type == "MOP"
+        ranges = NewricesHelper.ranges1(19,10,7,5,3,1,0)
+       
+      elsif rain_fall_type == "Ammonium_Sulphate"
+        ranges = NewricesHelper.ranges1(3,2,1,0.7,0.2,0.1,0)
+       
+      elsif rain_fall_type == "Complex"
+        ranges = NewricesHelper.ranges1(25,18,12,10,7,3,0)
+        
+      elsif rain_fall_type == "Total"
+        ranges = NewricesHelper.ranges1(200,160,130,100,80,50,10)
+       
+      elsif rain_fall_type == "N"
+        ranges = NewricesHelper.ranges1(60,50,40,30,20,10,0)
+       
+      elsif rain_fall_type == "P"
+        ranges = NewricesHelper.ranges1(26,15,12,10,5,2.5,0)
+       
+      elsif rain_fall_type == "K"
+        ranges = NewricesHelper.ranges1(11,7,5,4,2,1,0)
+     
+      elsif rain_fall_type == "Total_NPK"
+        ranges = NewricesHelper.ranges1(100,80,65,50,35,20,0)
+       
+      elsif rain_fall_type == "Grand_Total"
+        ranges = NewricesHelper.ranges1(300,250,200,150,100,50,0)
+       
+      else
+   end
+
 
    if rain_fall_type || views
 
@@ -41,7 +82,7 @@ def test
           a = AgriculturalInputs4.map(b,params[:year],rain_fall_type,views)
          else
           b = AgriculturalInputs4.map_search(params[:search],compare,year,rain_fall_type)
-          a = AgriculturalInputs4.map(b,rain_fall_type,year,ji,unit1)
+          a = AgriculturalInputs4.map(b,rain_fall_type,year,ji,unit1,ranges)
          end
       elsif views == "Table"  
         b = AgriculturalInputs4.search(params[:search],compare,year,rain_fall_type)

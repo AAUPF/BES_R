@@ -154,7 +154,7 @@ module Test
       return title
     end
   end
-  def map(b, rain_fall_type, _views, _ji, unit1)
+  def map(b, rain_fall_type, _views, _ji, unit1,ranges)
     array = []
     # a = []
     l = rain_fall_type.delete(' ')
@@ -212,35 +212,35 @@ module Test
     a.push("above_extreme": above_extreme)
     # array = [{name: "array"}]
     # sleep 1
-    array3 = [below_min, min, blow_max, max, above_max, extreme, above_extreme]
+    # ranges = [{below_min: {min: 0, max: 50},min: {min: 50, max: 70},blow_max: {min: 70, max: 100},max: {min: 100, max: 150},above_max: {min: 150, max: 190},extreme: {min: 190, max: 200},above_extreme: {min: 2, max: 200}}]
 
     if below_min.any?
-      b = { min: below_min.first[:y].round(-below_min.first[:y].round.to_s.length + 1), max: "#{below_min.last[:y].round(-below_min.last[:y].round.to_s.length + 1)}, #{unit1}" }
+      b = { min: ranges[0][:below_min][:min], max: "#{ranges[0][:below_min][:max]}, #{unit1}" }
     else
       b = {}
     end
 
     if min.any?
-      c = { min: min.first[:y].round(-min.first[:y].round.to_s.length + 1), max: "#{min.last[:y].round(-min.last[:y].round.to_s.length + 1)}, #{unit1}" }
+      c = { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}, #{unit1}" }
     else
       c = {}
     end
 
     if blow_max.any?
-      d = { min: blow_max.first[:y].round(-blow_max.first[:y].round.to_s.length + 1), max: "#{blow_max.last[:y].round(-blow_max.last[:y].round.to_s.length + 1)}, #{unit1}" }
+      d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}, #{unit1}" }
     else
       d = {}
     end
 
     if max.any?
-      e = { min: max.first[:y].round(-max.first[:y].round.to_s.length + 1), max: "#{max.last[:y].round(-max.last[:y].round.to_s.length + 1)}, #{unit1}" }
+      e = { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}, #{unit1}" } 
     else
       e = {}
     end
 
     if above_max.any?
 
-      f = { min: above_max.first[:y].round(-above_max.first[:y].round.to_s.length + 1), max: "#{above_max.last[:y].round(-above_max.last[:y].round.to_s.length + 1)} ,#{unit1}" }
+      f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}, #{unit1}" } 
 
     else
       f = {}
@@ -248,14 +248,14 @@ module Test
     end
 
     if extreme.any?
-      g = { min: extreme.first[:y].round(-extreme.first[:y].round.to_s.length + 1), max: "#{extreme.last[:y].round(-extreme.last[:y].round.to_s.length + 1)}, #{unit1}" }
+      g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}, #{unit1}" } 
 
     else
       g = {}
     end
 
     if above_extreme.any?
-      h = { max: "#{above_extreme.last[:y].round(-above_extreme.last[:y].round.to_s.length + 1)}, #{unit1}" }
+      h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}, #{unit1}" }
     else
       h = {}
     end

@@ -27,8 +27,10 @@ def test
    ji1 = [:Districts,:Target, :Achievement]
 
    if rain_fall_type == "Target"
+    ranges = NewricesHelper.ranges1(11000,7000,4000,3000,2000,800,0)
         unit1 =  units[0][:Area]
       elsif rain_fall_type == "Achievement"
+        ranges = NewricesHelper.ranges1(8300,4000,3000,1800,900,300,0)
         unit1 =  units[1][:Production]
       else
    end
@@ -43,7 +45,7 @@ def test
           a = AgriculturalCredit2.map(b,params[:year],rain_fall_type,views)
          else
           b = AgriculturalCredit2.map_search(params[:search],compare,year,rain_fall_type)
-          a = AgriculturalCredit2.map(b,rain_fall_type,year,ji,unit1)
+          a = AgriculturalCredit2.map(b,rain_fall_type,year,ji,unit1,ranges)
          end
       elsif views == "Table"  
         b = AgriculturalCredit2.search(params[:search],compare,year,rain_fall_type)
