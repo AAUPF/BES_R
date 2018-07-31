@@ -19,7 +19,12 @@ module Vegetable
         where(Year: year).order("#{rain_fall_type} ")
       end
     elsif compare != "None"
-      where("Vegetables = ? OR Vegetables = ?", search, compare).where("year = ?", year).order(:id)
+      
+        if year == "All"
+          where("Vegetables = ? OR Vegetables = ?", search, compare).order(:id)
+        else
+          where("Vegetables = ? OR Vegetables = ?", search, compare).where("year = ?", year).order(:id)
+        end
     else
       if rain_fall_type == "All"
         where("Vegetables = ? ", search).where("year = ?", year).order(:id)
@@ -33,10 +38,6 @@ module Vegetable
       else
         where("Vegetables = ? ", search).where("year = ?", year)
       end
-
-
-
-
     end
   end
 
@@ -101,7 +102,7 @@ module Vegetable
     d = "Vegetables"
     
     if rain_fall_type == "All"
-      
+       
       if views
         hash_data = ji.map do |column_name|
           if compare == "Bihar vs District"
@@ -182,22 +183,26 @@ module Vegetable
     else
       
       if compare != "None"
-      
+        
         dataset = rain_fall_type.gsub("_", " ")
+        if year == "All"
 
-        hash_data =
-            [{
-                 type: views,
-                 legendText: dataset,
-                 showInLegend: true,
-                 dataPoints: b.reject {|x| x["Vegetables"] == "Total"}.map do |el|
-                   {y: el[rain_fall_type], label: el["Vegetables"]}
-                 end
-             }]
+        end
+        # hash_data =
+        #     [{
+        #          type: views,
+        #          legendText: dataset,
+        #          showInLegend: true,
+        #          dataPoints: b.reject {|x| x["Vegetables"] == "Total"}.map do |el|
+        #            {y: el[rain_fall_type], label: el["Vegetables"]}
+        #          end
+        #      }]
       else
         dataset = rain_fall_type.gsub("_", " ")
         if year == "All"
           
+
+          array = [district,compare]
           hash_data =
           [{
                type: views,
@@ -236,11 +241,14 @@ module Vegetable
           
         end
       end
-      if district != "All"
+      if district != "All" && compare == "None"
         content = "#{district}: {y}"
+        title  = "#{district.to_s.gsub("_", " ")}"
       else
         content = ""
+        title = "#{district.to_s.gsub("_", " ")} vs. #{compare.to_s.gsub("_", " ")}"
       end
+      
       title = {
           animationEnabled: true,
           exportEnabled: true,
@@ -248,7 +256,7 @@ module Vegetable
             content: content   
           },
           title: {
-              text: "#{rain_fall_type.to_s.gsub("_", " ")}"
+              text: title
           },
           data: hash_data
       }
