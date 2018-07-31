@@ -54,11 +54,11 @@ def test
 
   elsif year == '2016'
     if rain_fall_type == 'Area'
-      ranges = NewricesHelper.ranges1(130,120,90,70,50,30,0)
+      ranges = NewricesHelper.ranges1(130,118,90,70,50,30,0)
     elsif rain_fall_type == 'Production'
-      ranges =  NewricesHelper.ranges1(280,200,150,100,50,30,0)
+      ranges =  NewricesHelper.ranges1(460,300,250,175,129,80,0)
     elsif rain_fall_type == 'Productivity'
-      ranges =  NewricesHelper.ranges1(3400,3200,2700,2400,2000,1600,1000)
+      ranges =  NewricesHelper.ranges1(3700,3400,3000,2700,2400,2200,1900)
     end
   end
 

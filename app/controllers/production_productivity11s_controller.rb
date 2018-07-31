@@ -27,32 +27,70 @@ def test
    units = [{Potato_Area: "000 Hectare" },{Onion_Area: "000 Hectare" },{Cauliflower_Area: "000 Hectare" },{Brinjal_Area:  "000 Hectare" },{Potato_Production: "'000 tonnes" },{Onion_Production: "'000 tonnes" },{Cauliflower_Production: "'000 tonnes" },{Brinjal_Production: "'000 tonnes" }]
 
 
-   if rain_fall_type == "Potato_Area"
-        unit1 =  units[0][:Potato_Area]
-        ranges = NewricesHelper.ranges1(85,20,10,7,5,3,0)
-      elsif rain_fall_type == "Onion_Area"
-        unit1 =  units[1][:Onion_Area]
-        ranges = NewricesHelper.ranges1(6,3,2,1.5,1,0.5,0)
-      elsif rain_fall_type == "Cauliflower_Area"
-        unit1 =  units[2][:Cauliflower_Area]
-        ranges = NewricesHelper.ranges1(6,3,2,1.5,1,0.5,0)
-      elsif rain_fall_type == "Brinjal_Area"
-        unit1 =  units[3][:Brinjal_Area]
-        ranges = NewricesHelper.ranges1(7,3,2,1.5,1,0.5,0)
-      elsif rain_fall_type == "Potato_Production"
-        unit1 =  units[4][:Potato_Production]
-        ranges = NewricesHelper.ranges1(600,350,250,200,150,100,0)
-      elsif rain_fall_type == "Onion_Production"
-        unit1 =  units[5][:Onion_Production]
-        ranges = NewricesHelper.ranges1(160,83,60,40,20,10,0)
-      elsif rain_fall_type == "Cauliflower_Production"
-        unit1 =  units[6][:Cauliflower_Production]
-        ranges = NewricesHelper.ranges1(100,60,50,40,30,20,0)
-      elsif rain_fall_type == "Brinjal_Production"
-        unit1 =  units[7][:Brinjal_Production]
-        ranges = NewricesHelper.ranges1(145,60,50,40,30,20,0)
-      else
-   end
+   
+
+
+   if year == '2015'
+
+    if rain_fall_type == "Potato_Area"
+      unit1 =  units[0][:Potato_Area]
+      ranges = NewricesHelper.ranges1(85,20,10,7,5,3,0)
+    elsif rain_fall_type == "Onion_Area"
+      unit1 =  units[1][:Onion_Area]
+      ranges = NewricesHelper.ranges1(6,3,2,1.5,1,0.5,0)
+    elsif rain_fall_type == "Cauliflower_Area"
+      unit1 =  units[2][:Cauliflower_Area]
+      ranges = NewricesHelper.ranges1(6,3,2,1.5,1,0.5,0)
+    elsif rain_fall_type == "Brinjal_Area"
+      unit1 =  units[3][:Brinjal_Area]
+      ranges = NewricesHelper.ranges1(7,3,2,1.5,1,0.5,0)
+
+
+    elsif rain_fall_type == "Potato_Production"
+      unit1 =  units[4][:Potato_Production]
+      ranges = NewricesHelper.ranges1(600,350,250,200,150,100,0)
+    elsif rain_fall_type == "Onion_Production"
+      unit1 =  units[5][:Onion_Production]
+      ranges = NewricesHelper.ranges1(160,83,60,40,20,10,0)
+    elsif rain_fall_type == "Cauliflower_Production"
+      unit1 =  units[6][:Cauliflower_Production]
+      ranges = NewricesHelper.ranges1(100,60,50,40,30,20,0)
+    elsif rain_fall_type == "Brinjal_Production"
+      unit1 =  units[7][:Brinjal_Production]
+      ranges = NewricesHelper.ranges1(145,60,50,40,30,20,0)
+    else
+ end
+
+  elsif year == '2016'
+    if rain_fall_type == "Potato_Area"
+      unit1 =  units[0][:Potato_Area]
+      ranges = NewricesHelper.ranges1(85,20,10,7,5,3,0)
+    elsif rain_fall_type == "Onion_Area"
+      unit1 =  units[1][:Onion_Area]
+      ranges = NewricesHelper.ranges1(6,3,2,1.5,1,0.5,0)
+    elsif rain_fall_type == "Cauliflower_Area"
+      unit1 =  units[2][:Cauliflower_Area]
+      ranges = NewricesHelper.ranges1(6,3,2,1.5,1,0.5,0)
+    elsif rain_fall_type == "Brinjal_Area"
+      unit1 =  units[3][:Brinjal_Area]
+      ranges = NewricesHelper.ranges1(7,3,2,1.5,1,0.5,0)
+
+
+    elsif rain_fall_type == "Potato_Production"
+      unit1 =  units[4][:Potato_Production]
+      ranges = NewricesHelper.ranges1(600,350,250,200,150,100,0)
+    elsif rain_fall_type == "Onion_Production"
+      unit1 =  units[5][:Onion_Production]
+      ranges = NewricesHelper.ranges1(145,83,60,40,20,10,0)
+    elsif rain_fall_type == "Cauliflower_Production"
+      unit1 =  units[6][:Cauliflower_Production]
+      ranges = NewricesHelper.ranges1(99,60,50,40,30,20,0)
+    elsif rain_fall_type == "Brinjal_Production"
+      unit1 =  units[7][:Brinjal_Production]
+      ranges = NewricesHelper.ranges1(145,60,50,40,30,20,0)
+    else
+ end
+  end
 
 
   if rain_fall_type || views

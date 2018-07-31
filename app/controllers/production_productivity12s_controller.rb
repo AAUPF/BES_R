@@ -25,17 +25,38 @@ def test
    units = [{Area: "000 Hectare" },{Production: "000 tonnes" },{Yield: "Ton/Hac" }]
 
 
-   if rain_fall_type == "Area"
-        unit1 =  units[0][:Area]
-        ranges = NewricesHelper.ranges1(122,40,20,14,5,2,0)
-      elsif rain_fall_type == "Production"
-        unit1 =  units[1][:Production]
-        ranges = NewricesHelper.ranges1(8500,3000,1500,500,200,100,0)
-      elsif rain_fall_type == "Yield"
-        unit1 =  units[2][:Yield]
-        ranges = NewricesHelper.ranges1(90,80,70,60,50,40,0)
-      else
-   end
+   
+
+
+   if year == '2015'
+
+    if rain_fall_type == "Area"
+      unit1 =  units[0][:Area]
+      ranges = NewricesHelper.ranges1(122,40,20,14,5,2,0)
+    elsif rain_fall_type == "Production"
+      unit1 =  units[1][:Production]
+      ranges = NewricesHelper.ranges1(8500,3000,1500,500,200,100,0)
+    elsif rain_fall_type == "Yield"
+      unit1 =  units[2][:Yield]
+      ranges = NewricesHelper.ranges1(90,80,70,60,50,40,0)
+    else
+ end
+
+  elsif year == '2016'
+    if rain_fall_type == "Area"
+      unit1 =  units[0][:Area]
+      ranges = NewricesHelper.ranges1(122,40,20,10,5,2,0)
+    elsif rain_fall_type == "Production"
+      unit1 =  units[1][:Production]
+      ranges = NewricesHelper.ranges1(8500,3000,1500,500,200,75,0)
+    elsif rain_fall_type == "Yield"
+      unit1 =  units[2][:Yield]
+      ranges = NewricesHelper.ranges1(90,75,65,60,55,50,0)
+    else
+ end
+  end
+
+
 
   if rain_fall_type || views
 

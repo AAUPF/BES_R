@@ -30,35 +30,73 @@ def test
    units = [{Mango_Area: "000 Hectare" },{Guava_Area: "000 Hectare" },{Banana_Area: "000 Hectare" },{Litchi_Area:  "000 Hectare" },{Mango_Production: "'000 tonnes" },{Guava_Production: "'000 tonnes" },{Litchi_Production: "'000 tonnes" },{Banana_Production: "'000 tonnes" }]
 
 
-   if rain_fall_type == "Mango_Area"
-        unit1 =  units[0][:Mango_Area]
-        ranges = NewricesHelper.ranges1(13,10,9,5,3,2,0)
-      elsif rain_fall_type == "Guava_Area"
-        ranges = NewricesHelper.ranges1(3,1.5,1,0.5,0.3,0.2,0)
-        unit1 =  units[1][:Guava_Area]
-        ranges = NewricesHelper.ranges1(45,29,20,15,10,5,0)
-      elsif rain_fall_type == "Banana_Area"
-        ranges = NewricesHelper.ranges1(5,3,2,1,0.5,0.3,0)
-        unit1 =  units[2][:Banana_Area]
-      elsif rain_fall_type == "Litchi_Area"
-        ranges = NewricesHelper.ranges1(7,3,2,1,0.5,0.2,0)
-        unit1 =  units[3][:Litchi_Area]
+   
 
-      elsif rain_fall_type == "Mango_Production"
-        ranges = NewricesHelper.ranges1(140,90,70,50,30,20,0)
-        unit1 =  units[4][:Mango_Production]
-      elsif rain_fall_type == "Guava_Production"
-        ranges = NewricesHelper.ranges1(145,25,14,10,6,3,0)
-        unit1 =  units[5][:Guava_Production]
-      elsif rain_fall_type == "Litchi_Production"
-        ranges = NewricesHelper.ranges1(40,21,15,10,5,2,0)
-        unit1 =  units[6][:Litchi_Production]
-      elsif rain_fall_type == "Banana_Production"
-        ranges = NewricesHelper.ranges1(272,142,100,70,50,30,0)
-        unit1 =  units[7][:Banana_Production]
-        
-      else
-   end
+
+
+   if year == '2015'
+
+    if rain_fall_type == "Mango_Area"
+      unit1 =  units[0][:Mango_Area]
+      ranges = NewricesHelper.ranges1(13,10,9,5,3,2,0)
+    elsif rain_fall_type == "Guava_Area"
+      ranges = NewricesHelper.ranges1(3,1.5,1,0.5,0.3,0.2,0)
+      unit1 =  units[1][:Guava_Area]
+      ranges = NewricesHelper.ranges1(45,29,20,15,10,5,0)
+    elsif rain_fall_type == "Banana_Area"
+      ranges = NewricesHelper.ranges1(5,3,2,1,0.5,0.3,0)
+      unit1 =  units[2][:Banana_Area]
+    elsif rain_fall_type == "Litchi_Area"
+      ranges = NewricesHelper.ranges1(7,3,2,1,0.5,0.2,0)
+      unit1 =  units[3][:Litchi_Area]
+
+    elsif rain_fall_type == "Mango_Production"
+      ranges = NewricesHelper.ranges1(140,90,70,50,30,20,0)
+      unit1 =  units[4][:Mango_Production]
+    elsif rain_fall_type == "Guava_Production"
+      ranges = NewricesHelper.ranges1(145,25,14,10,6,3,0)
+      unit1 =  units[5][:Guava_Production]
+    elsif rain_fall_type == "Litchi_Production"
+      ranges = NewricesHelper.ranges1(40,21,15,10,5,2,0)
+      unit1 =  units[6][:Litchi_Production]
+    elsif rain_fall_type == "Banana_Production"
+      ranges = NewricesHelper.ranges1(272,142,100,70,50,30,0)
+      unit1 =  units[7][:Banana_Production]
+      
+    else
+ end
+
+  elsif year == '2016'
+    if rain_fall_type == "Mango_Area"
+      unit1 =  units[0][:Mango_Area]
+      ranges = NewricesHelper.ranges1(13,10,9,5,3,2,0)
+    elsif rain_fall_type == "Guava_Area"
+      ranges = NewricesHelper.ranges1(3,1.5,1,0.5,0.3,0.2,0)
+      unit1 =  units[1][:Guava_Area]
+      ranges = NewricesHelper.ranges1(45,29,20,15,10,5,0)
+    elsif rain_fall_type == "Banana_Area"
+      ranges = NewricesHelper.ranges1(5,3,2,1,0.5,0.3,0)
+      unit1 =  units[2][:Banana_Area]
+    elsif rain_fall_type == "Litchi_Area"
+      ranges = NewricesHelper.ranges1(7,3,2,1,0.5,0.2,0)
+      unit1 =  units[3][:Litchi_Area]
+
+    elsif rain_fall_type == "Mango_Production"
+      ranges = NewricesHelper.ranges1(140,90,70,50,30,20,0)
+      unit1 =  units[4][:Mango_Production]
+    elsif rain_fall_type == "Guava_Production"
+      ranges = NewricesHelper.ranges1(145,25,14,10,6,3,0)
+      unit1 =  units[5][:Guava_Production]
+    elsif rain_fall_type == "Litchi_Production"
+      ranges = NewricesHelper.ranges1(40,21,15,10,5,2,0)
+      unit1 =  units[6][:Litchi_Production]
+    elsif rain_fall_type == "Banana_Production"
+      ranges = NewricesHelper.ranges1(271,142,100,70,50,30,0)
+      unit1 =  units[7][:Banana_Production]
+      
+    else
+ end
+  end
 
   if rain_fall_type || views
 
