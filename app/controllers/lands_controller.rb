@@ -57,6 +57,7 @@ class LandsController < ApplicationController
       ranges =  NewricesHelper.ranges1(400,300,200,150,100,50,0)
     elsif rain_fall_type == 'Cropping_Intensity'
       ranges =  NewricesHelper.ranges1(2,1.8,1.7,1.5,1.3,1.2,0)
+    else
    end
 
     if rain_fall_type || views

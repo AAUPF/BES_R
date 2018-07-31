@@ -27,6 +27,22 @@ def test
    rain_fall_type = params[:rain_fall_type]
    unit1 =  "000"
 
+   if rain_fall_type == 'Cow'
+    ranges = NewricesHelper.ranges1(650,600,500,450,300,200,0)
+  elsif rain_fall_type == 'Buffalo'
+    ranges =  NewricesHelper.ranges1(820,350,300,250,200,100,0)
+  elsif rain_fall_type == 'Pig'
+    ranges =  NewricesHelper.ranges1(130,80,30,20,10,5,0)
+  elsif rain_fall_type == 'Sheep'
+    ranges =  NewricesHelper.ranges1(43,25,15,10,5,2.5,0)
+  elsif rain_fall_type == 'Goat'
+    ranges =  NewricesHelper.ranges1(950,720,500,400,300,200,0)
+  elsif rain_fall_type == 'Poultry'
+    ranges =  NewricesHelper.ranges1(850,750,500,400,200,100,0)
+  else
+ end
+
+
   if rain_fall_type || views
 
       if views == "Map View"
@@ -37,7 +53,7 @@ def test
           a = AnimalHusbandry4.map(b,params[:year],rain_fall_type,views)
          else
           b = AnimalHusbandry4.map_search(params[:search],compare,year,rain_fall_type)
-          a = AnimalHusbandry4.map(b,rain_fall_type,year,ji,unit1)
+          a = AnimalHusbandry4.map(b,rain_fall_type,year,ji,unit1,ranges)
          end
       elsif views == "Table"  
         b = AnimalHusbandry4.search(params[:search],compare,year,rain_fall_type)
