@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 module Vegetable
   def import1(file)
@@ -253,6 +252,10 @@ module Vegetable
       if district != 'All' && compare == 'None'
         content = "#{district}: {y}"
         title = district.to_s.tr('_', ' ').to_s
+      elsif district == 'All'
+        content = ''
+        title = "#{district.to_s.tr('_', ' ')}"
+        
       else
         content = ''
         title = "#{district.to_s.tr('_', ' ')} vs. #{compare.to_s.tr('_', ' ')}"
