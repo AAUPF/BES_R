@@ -180,18 +180,18 @@ module Vegetable
         dataset = rain_fall_type.tr('_', ' ')
         if year == 'All'
 
-          ji1 = [district, compare]
-          hash_data = ji1.map do |col|
-            dataset = col.to_s.tr('_', ' ')
-            {
-              type: views,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.map do |el|
-                el
-              end
-            }
-          end
+          grouped_data = b.group_by{ |data| data[:Vegetables]}
+          hash_data  = grouped_data.map{ |vegetable, values| 
+              dataset = vegetable.to_s.gsub("_"," ")
+              {
+                type: views,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: values.map { |value|
+                  { y: value[rain_fall_type], label: value[:Year] }
+                }
+              }
+           }
 
           # hash_data = [
 

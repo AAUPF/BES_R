@@ -28,7 +28,6 @@ class AgriculturalCredit1sController < ApplicationController
     year = params[:year]
     compare = params[:compare]
 
-
     if rain_fall_type || views
 
       if views == "Map View"
