@@ -18,19 +18,16 @@ class AgriculturalInputs2sController < ApplicationController
 
   def test
     rain_fall_type = params[:rain_fall_type]
-    if rain_fall_type == "All"
+    if rain_fall_type == 'All'
       ji = %i[Urea DAP SSP MOP Ammonium_Sulphate Complex N P K]
     else
       ji = %i[Urea DAP SSP MOP Ammonium_Sulphate Complex N P K Total_NPK Grand_Total Consumption_of_Fertilizer]
     end
-    
-    
     views = params[:views]
     year = params[:year]
     compare = params[:compare]
 
-   
-    if rain_fall_type == "All"
+    if rain_fall_type == 'All'
       ji1 = %i[Year Type_of_Fertilizer Urea DAP SSP MOP Ammonium_Sulphate Complex N P K Total_NPK]
     else
       ji1 = %i[Year Type_of_Fertilizer Urea DAP SSP MOP Ammonium_Sulphate Complex N P K Total_NPK Grand_Total Consumption_of_Fertilizer]
@@ -39,21 +36,20 @@ class AgriculturalInputs2sController < ApplicationController
     if rain_fall_type || views
 
       if views == 'Map View'
-        l = rain_fall_type.delete(' ')
         if rain_fall_type == 'All'
           b = AgriculturalInputs2.map_search('All', compare, year, rain_fall_type)
-          u = 'Total'
           a = AgriculturalInputs2.map(b, params[:year], rain_fall_type, views)
         else
           b = AgriculturalInputs2.map_search(params[:search], compare, year, rain_fall_type)
           a = AgriculturalInputs2.map(b, rain_fall_type, year, ji)
-         end
+        end
       elsif views == 'Table'
         b = AgriculturalInputs2.search(params[:search], compare, year, rain_fall_type)
         a = AgriculturalInputs2.table(b, rain_fall_type, year, ji1, compare)
       else
         @AgriculturalInputs2s = AgriculturalInputs2.search(params[:search], compare, year, rain_fall_type)
-        a = AgriculturalInputs2.query(@AgriculturalInputs2s, params[:year], rain_fall_type, views, ji, compare)
+        a = AgriculturalInputs2.query(@AgriculturalInputs2s, params[:year],
+                                      rain_fall_type, views, ji, compare)
       end
       respond_to do |format|
         format.html { render json: a }
@@ -64,7 +60,7 @@ class AgriculturalInputs2sController < ApplicationController
         format.html { render json: 'error' }
       end
     end
-      end
+  end
 
   def import
     # Module1.import(params[:file])
@@ -110,6 +106,8 @@ class AgriculturalInputs2sController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def agricultural_inputs2_params
-    params.require(:agricultural_inputs2).permit(:Year, :Type_of_Fertilizer, :Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :Sub_Total, :N, :P, :K, :Total_NPK, :Grand_Total, :Consumption_of_Fertilizer)
+    params.require(:agricultural_inputs2).permit(:Year, :Type_of_Fertilizer, :Urea, :DAP, :SSP, :MOP,
+                                                 :Ammonium_Sulphate, :Complex, :Sub_Total, :N, :P, :K,
+                                                 :Total_NPK, :Grand_Total, :Consumption_of_Fertilizer)
   end
 end

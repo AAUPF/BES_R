@@ -211,8 +211,6 @@ module Rainfallnewmap
 
       elsif rain_fall_type == "South_West_Monsoon"
         hu = {below_min: {min: 500, max: 600},min: {min: 600, max: 700}, blow_max:{min: 700, max: 900}, max:{min: 900, max: 1100},above_max:{min: 1100, max: 1400},extreme:{min: 1400, max: 1800},above_extreme:{max: 1800}}
-
-
       elsif rain_fall_type == "North_West_Monsoon"
         hu = {below_min: {min: 0, max: 10},min: {min: 10, max: 20}, blow_max:{min: 20, max: 40}, max:{min: 40, max: 60},above_max:{min: 60, max: 80},extreme:{min: 80, max: 120},above_extreme:{max: 120}}
       else

@@ -1,3 +1,3 @@
 class ProductionProductivity9 < ApplicationRecord
-  extend Test  
-  end
+  extend Test
+end

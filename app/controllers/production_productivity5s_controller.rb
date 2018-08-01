@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class ProductionProductivity5sController < ApplicationController
-  before_action :set_production_productivity5, only: [:show, :edit, :update, :destroy]
+  before_action :set_production_productivity5, only: %i[show edit update destroy]
 
   # GET /production_productivity5s
   def index
@@ -7,65 +9,58 @@ class ProductionProductivity5sController < ApplicationController
   end
 
   # GET /production_productivity5s/1
-  def show
-  end
+  def show; end
 
   # GET /production_productivity5s/new
   def new
     @production_productivity5 = ProductionProductivity5.new
   end
+  
+  def test
+    ji = %i[Area Production]
+    rain_fall_type = params[:rain_fall_type]
+    views = params[:views]
+    year = params[:year]
+    compare = params[:compare]
+    district = params[:search]
+    ji1 = %i[Vegetables Area Production Year]
 
-def test
-  ji = [ :Area, :Production]
-  rain_fall_type = params[:rain_fall_type]
-   views  = params[:views]
-   year  = params[:year]
-   compare = params[:compare]
-   district = params[:search]
-   ji1 = [:Vegetables, :Area, :Production, :Year]
+    if rain_fall_type || views
 
-
-  if rain_fall_type || views
-
-      if views == "Map View"
-        l =  rain_fall_type.gsub(" ","")           
-         if rain_fall_type  ==  "All"
-          b = ProductionProductivity5.map_search("All",compare,year,rain_fall_type)
-          u = "Total"
-          a = ProductionProductivity5.map(b,params[:year],rain_fall_type,views)
-         else
-          b = ProductionProductivity5.map_search(params[:search],compare,year,rain_fall_type)
-          a = ProductionProductivity5.map(b,rain_fall_type,year,ji)
-         end
-      elsif views == "Table"  
-        b = ProductionProductivity5.search(params[:search],compare,year,rain_fall_type)
-        a = ProductionProductivity5.table(b,rain_fall_type,year,ji1,compare)
+      if views == 'Map View'
+        if rain_fall_type == 'All'
+          b = ProductionProductivity5.map_search('All', compare, year, rain_fall_type)
+          a = ProductionProductivity5.map(b, params[:year], rain_fall_type, views)
+        else
+          b = ProductionProductivity5.map_search(params[:search], compare, year, rain_fall_type)
+          a = ProductionProductivity5.map(b, rain_fall_type, year, ji)
+        end
+      elsif views == 'Table'
+        b = ProductionProductivity5.search(params[:search], compare, year, rain_fall_type)
+        a = ProductionProductivity5.table(b, rain_fall_type, year, ji1, compare)
       else
-        @ProductionProductivity5s = ProductionProductivity5.search(params[:search],compare,year,rain_fall_type)
-         a = ProductionProductivity5.query(@ProductionProductivity5s,params[:year],rain_fall_type,views,ji,compare,district)
+        @ProductionProductivity5s = ProductionProductivity5.search(params[:search], compare, year, rain_fall_type)
+        a = ProductionProductivity5.query(@ProductionProductivity5s, params[:year], rain_fall_type, views, ji, compare, district)
       end
       respond_to do |format|
-        format.html { render json:a }
+        format.html { render json: a }
+      end
+
+    else
+      respond_to do |format|
+        format.html { render json: 'error' }
+      end
     end
-
-  else
-    respond_to do |format|
-      format.html { render json: "error"}
   end
-  end
-
-end
-
 
   def import
     # Module1.import(params[:file])
     ProductionProductivity5.import1(params[:file])
-    redirect_to tests_path, notice: "Products imported."
+    redirect_to tests_path, notice: 'Products imported.'
   end
 
   # GET /production_productivity5s/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /production_productivity5s
   def create
@@ -94,13 +89,14 @@ end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_production_productivity5
-      @production_productivity5 = ProductionProductivity5.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def production_productivity5_params
-      params.require(:production_productivity5).permit(:Vegetables, :Area, :Production, :Year)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_production_productivity5
+    @production_productivity5 = ProductionProductivity5.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def production_productivity5_params
+    params.require(:production_productivity5).permit(:Vegetables, :Area, :Production, :Year)
+  end
 end
