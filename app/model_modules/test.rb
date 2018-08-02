@@ -217,25 +217,25 @@ module Test
     if below_min.any?
       b = { min: ranges[0][:below_min][:min], max: "#{ranges[0][:below_min][:max]}, #{unit1}" }
     else
-      b = {}
+      b = { min: ranges[0][:below_min][:min], max: "#{ranges[0][:below_min][:max]}, #{unit1}" }
     end
 
     if min.any?
       c = { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}, #{unit1}" }
     else
-      c = {}
+      c = { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}, #{unit1}" }
     end
 
     if blow_max.any?
       d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}, #{unit1}" }
     else
-      d = {}
+      d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}, #{unit1}" }
     end
 
     if max.any?
       e = { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}, #{unit1}" } 
     else
-      e = {}
+      e = { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}, #{unit1}" } 
     end
 
     if above_max.any?
@@ -243,7 +243,7 @@ module Test
       f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}, #{unit1}" } 
 
     else
-      f = {}
+      f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}, #{unit1}" } 
 
     end
 
@@ -251,13 +251,13 @@ module Test
       g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}, #{unit1}" } 
 
     else
-      g = {}
+      g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}, #{unit1}" } 
     end
 
     if above_extreme.any?
       h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}, #{unit1}" }
     else
-      h = {}
+      h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}, #{unit1}" }
     end
     hu = {
       below_min: b,
@@ -268,15 +268,10 @@ module Test
       extreme: g,
       above_extreme: h
     }
-
     a.push("data": hu)
     #   ys = below_min.map { |e| e[:y] }
     # j =  Range.new *[ys.min, ys.max].map { |e| e.round(-e.round.to_s.length+1) }
-
     # u = max.first[:y].floor(-max.first[:y].round.to_s.length + 1)
-
-    
-
    return a
   end
 end

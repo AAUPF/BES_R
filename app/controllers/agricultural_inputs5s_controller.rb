@@ -24,6 +24,46 @@ class AgriculturalInputs5sController < ApplicationController
     year = params[:year]
     compare = params[:compare]
 
+    units = [{Target_Physical: "Hectare" },{Target_Financial: "Lakh" },{Achievement_Physical: "Hectare" },{Achievement_Financial: "Lakh" }]
+
+
+    if rain_fall_type == "Target_Physical"
+      unit1 =  units[0][:Target_Physical]
+    elsif rain_fall_type == "Target_Financial"
+      unit1 =  units[1][:Target_Financial]
+    elsif rain_fall_type == "Achievement_Physical"
+      unit1 =  units[2][:Achievement_Physical]
+    elsif rain_fall_type == "Achievement_Financial"
+      unit1 =  units[3][:Achievement_Financial]
+    else
+  end
+
+
+    if year == '2015'
+
+      if rain_fall_type == 'Target_Physical'
+        ranges = NewricesHelper.ranges1(45,29,20,15,10,5,0)
+      elsif rain_fall_type == 'Target_Financial'
+        ranges =  NewricesHelper.ranges1(45,25,20,15,10,5,0)
+      elsif rain_fall_type == 'Achievement_Physical'
+        ranges =  NewricesHelper.ranges1(1400,1200,1100,900,700,500,300)
+      elsif rain_fall_type == 'Achievement_Financial'
+        ranges =  NewricesHelper.ranges1(1400,1200,1100,900,700,500,300)
+      end
+  
+    elsif year == '2016'
+      if rain_fall_type == 'Target_Physical'
+        ranges = NewricesHelper.ranges1(45,29,20,15,10,5,0)
+      elsif rain_fall_type == 'Target_Financial'
+        ranges =  NewricesHelper.ranges1(45,25,20,15,10,5,0)
+      elsif rain_fall_type == 'Achievement_Physical'
+        ranges =  NewricesHelper.ranges1(1400,1200,1100,900,700,500,300)
+      elsif rain_fall_type == 'Achievement_Financial'
+        ranges =  NewricesHelper.ranges1(1400,1200,1100,900,700,500,300)
+      end
+  
+    end
+
     if rain_fall_type || views
 
       if views == 'Map View'
@@ -32,7 +72,7 @@ class AgriculturalInputs5sController < ApplicationController
           a = AgriculturalInputs5.map(b, params[:year], rain_fall_type, views)
         else
           b = AgriculturalInputs5.map_search(params[:search], compare, year, rain_fall_type)
-          a = AgriculturalInputs5.map(b, rain_fall_type, year, ji)
+          a = AgriculturalInputs5.map(b, rain_fall_type, year, ji,unit1,ranges)
         end
       elsif views == 'Table'
         b = AgriculturalInputs5.search(params[:search], compare, year)

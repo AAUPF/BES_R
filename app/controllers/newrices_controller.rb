@@ -41,7 +41,7 @@ class NewricesController < ApplicationController
       elsif rain_fall_type == 'Production'
         ranges =  NewricesHelper.ranges(0, 50, 100, 200, 300, 500, 750)
       elsif rain_fall_type == 'Productivity'
-        ranges =  NewricesHelper.ranges(400, 1000, 2000, 300, 3500, 3800, 4200)
+        ranges =  NewricesHelper.ranges(400, 1000, 2000, 3000, 3500, 3800, 4200)
       end
 
     elsif year == '2016'

@@ -38,6 +38,20 @@ def test
   else
 end
 
+
+
+  if rain_fall_type == 'Target_Physical'
+    ranges = NewricesHelper.ranges1(45,29,20,15,10,5,0)
+  elsif rain_fall_type == 'Target_Financial'
+    ranges =  NewricesHelper.ranges1(45,25,20,15,10,5,0)
+  elsif rain_fall_type == 'Achievement_Physical'
+    ranges =  NewricesHelper.ranges1(1400,1200,1100,900,700,500,300)
+  elsif rain_fall_type == 'Achievement_Financial'
+    ranges =  NewricesHelper.ranges1(1400,1200,1100,900,700,500,300)
+  end
+
+
+
   if rain_fall_type || views
 
       if views == "Map View"
@@ -48,7 +62,7 @@ end
           a = AgriculturalInputs6.map(b,params[:year],rain_fall_type,views)
          else
           b = AgriculturalInputs6.map_search(params[:search],compare,year,rain_fall_type)
-          a = AgriculturalInputs6.map(b,rain_fall_type,year,ji,unit1)
+          a = AgriculturalInputs6.map(b,rain_fall_type,year,ji,unit1,ranges)
          end
       elsif views == "Table"  
         b = AgriculturalInputs6.search(params[:search],compare,year,rain_fall_type)

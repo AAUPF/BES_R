@@ -32,44 +32,93 @@ def test
    unit1 =  "000 Tonnes"
   #  ranges = NewricesHelper.ranges1(11000,7000,4000,3000,2000,800,0)
 
-   if rain_fall_type == "Urea"
-    ranges = NewricesHelper.ranges1(110,90,70,50,30,20,0)
+
+  if year == '2015'
+
+    if rain_fall_type == "Urea"
+      ranges = NewricesHelper.ranges1(110,90,70,50,30,20,0)
+         
+        elsif rain_fall_type == "DAP"
+          ranges = NewricesHelper.ranges1(45,25,20,15,10,5,0)
+         
+        elsif rain_fall_type == "SSP"
+          ranges = NewricesHelper.ranges1(13,10,5,3,2,1,0)
+          
+        elsif rain_fall_type == "MOP"
+          ranges = NewricesHelper.ranges1(19,10,7,5,3,1,0)
+         
+        elsif rain_fall_type == "Ammonium_Sulphate"
+          ranges = NewricesHelper.ranges1(3,2,1,0.7,0.2,0.1,0)
+         
+        elsif rain_fall_type == "Complex"
+          ranges = NewricesHelper.ranges1(25,18,12,10,7,3,0)
+          
+        elsif rain_fall_type == "Total"
+          ranges = NewricesHelper.ranges1(200,160,130,100,80,50,10)
+         
+        elsif rain_fall_type == "N"
+          ranges = NewricesHelper.ranges1(60,50,40,30,20,10,0)
+         
+        elsif rain_fall_type == "P"
+          ranges = NewricesHelper.ranges1(26,15,12,10,5,2.5,0)
+         
+        elsif rain_fall_type == "K"
+          ranges = NewricesHelper.ranges1(11,7,5,4,2,1,0)
        
-      elsif rain_fall_type == "DAP"
-        ranges = NewricesHelper.ranges1(45,25,20,15,10,5,0)
+        elsif rain_fall_type == "Total_NPK"
+          ranges = NewricesHelper.ranges1(100,80,65,50,35,20,0)
+         
+        elsif rain_fall_type == "Grand_Total"
+          ranges = NewricesHelper.ranges1(300,250,200,150,100,50,0)
+         
+        else
+     end
+
+  elsif year == '2016'
+
+    if rain_fall_type == "Urea"
+      ranges = NewricesHelper.ranges1(100,90,70,50,30,20,0)
+         
+        elsif rain_fall_type == "DAP"
+          ranges = NewricesHelper.ranges1(45,25,20,15,10,5,0)
+         
+        elsif rain_fall_type == "SSP"
+          ranges = NewricesHelper.ranges1(8,6,5,3,2,1,0)
+          
+        elsif rain_fall_type == "MOP"
+          ranges = NewricesHelper.ranges1(24,21,10,7,4,2,0)
+         
+        elsif rain_fall_type == "Ammonium_Sulphate"
+          ranges = NewricesHelper.ranges1(4.5,2,1,0.7,0.2,0.1,0)
+         
+        elsif rain_fall_type == "Complex"
+          ranges = NewricesHelper.ranges1(24,16,12,10,7,3,0)
+          
+        elsif rain_fall_type == "Total"
+          ranges = NewricesHelper.ranges1(190,150,130,100,80,50,10)
+         
+        elsif rain_fall_type == "N"
+          ranges = NewricesHelper.ranges1(58,50,40,30,20,10,0)
+          
+        elsif rain_fall_type == "P"
+          ranges = NewricesHelper.ranges1(22,17,13,10,5,2.5,0)
+         
+        elsif rain_fall_type == "K"
+          ranges = NewricesHelper.ranges1(14,11,9,6,3,1,0)
        
-      elsif rain_fall_type == "SSP"
-        ranges = NewricesHelper.ranges1(13,10,5,3,2,1,0)
-        
-      elsif rain_fall_type == "MOP"
-        ranges = NewricesHelper.ranges1(19,10,7,5,3,1,0)
-       
-      elsif rain_fall_type == "Ammonium_Sulphate"
-        ranges = NewricesHelper.ranges1(3,2,1,0.7,0.2,0.1,0)
-       
-      elsif rain_fall_type == "Complex"
-        ranges = NewricesHelper.ranges1(25,18,12,10,7,3,0)
-        
-      elsif rain_fall_type == "Total"
-        ranges = NewricesHelper.ranges1(200,160,130,100,80,50,10)
-       
-      elsif rain_fall_type == "N"
-        ranges = NewricesHelper.ranges1(60,50,40,30,20,10,0)
-       
-      elsif rain_fall_type == "P"
-        ranges = NewricesHelper.ranges1(26,15,12,10,5,2.5,0)
-       
-      elsif rain_fall_type == "K"
-        ranges = NewricesHelper.ranges1(11,7,5,4,2,1,0)
-     
-      elsif rain_fall_type == "Total_NPK"
-        ranges = NewricesHelper.ranges1(100,80,65,50,35,20,0)
-       
-      elsif rain_fall_type == "Grand_Total"
-        ranges = NewricesHelper.ranges1(300,250,200,150,100,50,0)
-       
-      else
-   end
+        elsif rain_fall_type == "Total_NPK"
+          ranges = NewricesHelper.ranges1(95,75,65,50,35,20,0)
+         
+        elsif rain_fall_type == "Grand_Total"
+          ranges = NewricesHelper.ranges1(287,230,200,150,100,50,0)
+         
+        else
+     end
+   
+
+  end
+
+
 
 
    if rain_fall_type || views

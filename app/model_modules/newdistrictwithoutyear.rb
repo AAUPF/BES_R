@@ -216,50 +216,50 @@ module Newdistrictwithoutyear
     array3 = [below_min, min, blow_max, max, above_max, extreme, above_extreme]
 
     if below_min.any?
-        b = { min: ranges[0][:below_min][:min], max: "#{ranges[0][:below_min][:max]}, #{unit1}" }
-      else
-        b = {}
-      end
-  
-      if min.any?
-        c = { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}, #{unit1}" }
-      else
-        c = {}
-      end
-  
-      if blow_max.any?
-        d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}, #{unit1}" }
-      else
-        d = {}
-      end
-  
-      if max.any?
-        e = { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}, #{unit1}" } 
-      else
-        e = {}
-      end
-  
-      if above_max.any?
-  
-        f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}, #{unit1}" } 
-  
-      else
-        f = {}
-  
-      end
-  
-      if extreme.any?
-        g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}, #{unit1}" } 
-  
-      else
-        g = {}
-      end
-  
-      if above_extreme.any?
-        h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}, #{unit1}" }
-      else
-        h = {}
-      end
+      b = { min: ranges[0][:below_min][:min], max: "#{ranges[0][:below_min][:max]}, #{unit1}" }
+    else
+      b = { min: ranges[0][:below_min][:min], max: "#{ranges[0][:below_min][:max]}, #{unit1}" }
+    end
+
+    if min.any?
+      c = { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}, #{unit1}" }
+    else
+      c = { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}, #{unit1}" }
+    end
+
+    if blow_max.any?
+      d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}, #{unit1}" }
+    else
+      d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}, #{unit1}" }
+    end
+
+    if max.any?
+      e = { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}, #{unit1}" } 
+    else
+      e = { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}, #{unit1}" } 
+    end
+
+    if above_max.any?
+
+      f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}, #{unit1}" } 
+
+    else
+      f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}, #{unit1}" } 
+
+    end
+
+    if extreme.any?
+      g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}, #{unit1}" } 
+
+    else
+      g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}, #{unit1}" } 
+    end
+
+    if above_extreme.any?
+      h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}, #{unit1}" }
+    else
+      h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}, #{unit1}" }
+    end
       hu = {
         below_min: b,
         min: c,
