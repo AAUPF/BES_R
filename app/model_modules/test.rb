@@ -1,5 +1,4 @@
 module Test
- 
   def import1(file)
     spreadsheet = Roo::Spreadsheet.open(file.path)
     header = spreadsheet.row(1)
@@ -59,7 +58,18 @@ module Test
       end
     end
 
-    data = { column: hash_data, data: b }
+    # j = []
+    # b.map do |k|
+    #   if k.Productivity
+    #     u = k.Productivity/100
+    #     j.push({id: k.id, Productivity: u ,Districts: k.Districts, Area: k.Area, Production: k.Production, Year: k.Year })
+    #   else
+    #     j.push(k)
+    #   end
+    # end
+
+   j = b.each { |item| item[:Productivity] = item[:Productivity]/100}
+    data = { column: hash_data, data: j }
     data
   end
 
@@ -91,7 +101,12 @@ module Test
               legendText: dataset,
               showInLegend: true,
               dataPoints: b.map do |el|
-                            { y: el[column_name], z: el[column_name], label: el[d] }
+                            if dataset == 'Productivity'
+                              du = el[column_name] / 100
+                              { y: du, z: du, label: el[d] }
+                            else
+                              { y: el[column_name], z: el[column_name], label: el[d] }
+                            end
                           end
             }
           else
@@ -101,7 +116,12 @@ module Test
               legendText: dataset,
               showInLegend: true,
               dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
-                            { y: el[column_name], z: el[column_name], label: el[d] }
+                            if dataset == 'Productivity'
+                              du = el[column_name] / 100
+                              { y: du, z: du, label: el[d] }
+                            else
+                              { y: el[column_name], z: el[column_name], label: el[d] }
+                             end
                           end
             }
           end
@@ -119,7 +139,6 @@ module Test
     else
       if compare == 'Bihar vs District'
         dataset = rain_fall_type.tr('_', ' ')
-
         hash_data =
           [{
             type: views,
@@ -139,7 +158,14 @@ module Test
             legendText: dataset,
             showInLegend: true,
             dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
-                          { y: el[rain_fall_type], label: el['Districts'] }
+                          if rain_fall_type == 'Productivity'
+                            du = el[rain_fall_type] / 100
+
+                            { y: du, label: el['Districts'] }
+
+                          else
+                            { y: el[rain_fall_type], label: el['Districts'] }
+                          end
                         end
           }]
       end
@@ -154,7 +180,8 @@ module Test
       return title
     end
   end
-  def map(b, rain_fall_type, _views, _ji, unit1,ranges)
+
+  def map(b, rain_fall_type, _views, _ji, unit1, ranges)
     array = []
     # a = []
     l = rain_fall_type.delete(' ')
@@ -220,11 +247,11 @@ module Test
       b = { min: ranges[0][:below_min][:min], max: "#{ranges[0][:below_min][:max]}, #{unit1}" }
     end
 
-    if min.any?
-      c = { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}, #{unit1}" }
-    else
-      c = { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}, #{unit1}" }
-    end
+    c = if min.any?
+          { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}, #{unit1}" }
+        else
+          { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}, #{unit1}" }
+        end
 
     if blow_max.any?
       d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}, #{unit1}" }
@@ -232,26 +259,26 @@ module Test
       d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}, #{unit1}" }
     end
 
-    if max.any?
-      e = { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}, #{unit1}" } 
-    else
-      e = { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}, #{unit1}" } 
-    end
+    e = if max.any?
+          { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}, #{unit1}" }
+        else
+          { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}, #{unit1}" }
+        end
 
     if above_max.any?
 
-      f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}, #{unit1}" } 
+      f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}, #{unit1}" }
 
     else
-      f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}, #{unit1}" } 
+      f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}, #{unit1}" }
 
     end
 
     if extreme.any?
-      g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}, #{unit1}" } 
+      g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}, #{unit1}" }
 
     else
-      g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}, #{unit1}" } 
+      g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}, #{unit1}" }
     end
 
     if above_extreme.any?
@@ -272,6 +299,6 @@ module Test
     #   ys = below_min.map { |e| e[:y] }
     # j =  Range.new *[ys.min, ys.max].map { |e| e.round(-e.round.to_s.length+1) }
     # u = max.first[:y].floor(-max.first[:y].round.to_s.length + 1)
-   return a
+    a
   end
 end
