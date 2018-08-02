@@ -24,7 +24,7 @@ class NewricesController < ApplicationController
     compare = params[:compare]
 
     ji1 = %i[Districts Area Production Productivity Year]
-    units = [{ Area: '000 Hectare' }, { Production: '000 tonnes' }, { Productivity: 'Kg/Hac' }]
+    units = [{ Area: '000 Hectare' }, { Production: '000 tonnes' }, { Productivity: 'Quintal/Hac' }]
 
     if rain_fall_type == 'Area'
       unit1 =  units[0][:Area]

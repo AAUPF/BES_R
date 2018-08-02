@@ -23,7 +23,7 @@ def test
    compare = params[:compare]
 
    ji1 = [:Districts, :Area, :Production, :Productivity, :Year]
-   units = [{Area: "000 Hectare" },{Production: "000 tonnes" },{Productivity: "Kg/Hac" }]
+   units = [{Area: "000 Hectare" },{Production: "000 tonnes" },{Productivity: "Quintal/Hac" }]
 
 
    if rain_fall_type == "Area"
