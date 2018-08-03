@@ -27,7 +27,7 @@ module Rainfallnewmap
             where("Districts = ? ", search).where("year = ?", year).order(:id)
          else
             where("Districts = ? ", search).where("year = ?", year).order(rain_fall_type)
-        end
+          end
     end
   end
 
@@ -188,12 +188,14 @@ module Rainfallnewmap
     above_extreme = []
     if year == "2016"
 
+     unit =  "mm"
+
       if rain_fall_type == "All"
-        hu = {below_min: {min: 500, max: 800},min: {min: 800, max: 1000}, blow_max:{min: 1000, max: 1200}, max:{min: 1200, max: 1300},above_max:{min: 1300, max: 1600},extreme:{min: 1600, max: 2000},above_extreme:{max: 2000}}
+        hu = {below_min: {min:  "500 #{unit1}", max: 800},min: {min: 800, max: 1000}, blow_max:{min: 1000, max: 1200}, max:{min: 1200, max: 1300},above_max:{min: 1300, max: 1600},extreme:{min: 1600, max: 2000},above_extreme:{max: 2000}}
       elsif rain_fall_type == "Winter_Rain"
         hu = {below_min: {min: 0, max: 2.5},min: {min: 2.5, max: 5}, blow_max:{min: 5, max: 10}, max:{min: 10, max: 15},above_max:{min: 15, max: 20},extreme:{min: 20, max: 39},above_extreme:{max: 39}}
       elsif rain_fall_type == "Hot_Weather_Rain"
-        hu = {below_min: {min: 0, max: 25},min: {min: 25, max: 50}, blow_max:{min: 50, max: 80}, max:{min: 80, max: 110},above_max:{min: 110, max: 160},extreme:{min: 160, max: 250},above_extreme:{max: 250}}
+        hu = {below_min: {min: 0, max: "25 #{unit}"},min: {min: 25, max: 50}, blow_max:{min: 50, max: 80}, max:{min: 80, max: 110},above_max:{min: 110, max: 160},extreme:{min: 160, max: 250},above_extreme:{max: 250}}
 
       elsif rain_fall_type == "South_West_Monsoon"
         hu = {below_min: {min: 500, max: 600},min: {min: 600, max: 700}, blow_max:{min: 700, max: 900}, max:{min: 900, max: 1100},above_max:{min: 1100, max: 1400},extreme:{min: 1400, max: 1800},above_extreme:{max: 1800}}
@@ -201,6 +203,7 @@ module Rainfallnewmap
         hu = {below_min: {min: 0, max: 10},min: {min: 10, max: 20}, blow_max:{min: 20, max: 40}, max:{min: 40, max: 60},above_max:{min: 60, max: 80},extreme:{min: 80, max: 120},above_extreme:{max: 120}}
       else        
       end
+
     elsif year == "2017"
       if rain_fall_type == "All"
         hu = {below_min: {min: 400, max: 600},min: {min: 600, max: 800}, blow_max:{min: 800, max: 1100}, max:{min: 1100, max: 1300},above_max:{min: 1300, max: 1600},extreme:{min: 1600, max: 2000},above_extreme:{max: 2000}}
@@ -222,41 +225,41 @@ module Rainfallnewmap
     b.map.with_index do |el,i|
         dist = el["Districts"]
       if el[u] >=  hu[:below_min][:min].to_i and el[u] <= hu[:below_min][:max].to_i
-      puts el[u]
+     
       hash1 = { y: el[u], label: dist, color: "Red" }
       below_min.push(hash1)
      elsif el[u] > hu[:min][:min].to_i and el[u] <= hu[:min][:max].to_i
-       puts el[u]
+      
        hash1 = { y: el[u], label: dist, color: "Orange" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         min.push(hash1)
 
     elsif el[u] > hu[:blow_max][:min].to_i and el[u] <= hu[:blow_max][:max]
-      puts el[u]
+     
          hash1 = { y: el[u], label: dist, color: "Dark_Yellow" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         blow_max.push(hash1)
 
     elsif el[u] > hu[:max][:min].to_i and el[u] <= hu[:max][:max].to_i
-      puts el[u]
+     
          hash1 = { y: el[u], label: dist, color: "Yellow" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         max.push(hash1)
 
     elsif el[u] > hu[:above_max][:min].to_i and el[u] <= hu[:above_max][:max].to_i
-      puts el[u]
+     
 
          hash1 = { y: el[u], label: dist, color: "Light_Green" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         above_max.push(hash1)
 
     elsif el[u] > hu[:extreme][:min].to_i and el[u] <= hu[:extreme][:max].to_i
-      puts el[u]
+     
          hash1 = { y: el[u], label: dist, color: "Green" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         extreme.push(hash1)
     elsif el[u] > hu[:above_extreme][:min].to_i
-      puts el[u]
+     
          hash1 = { y: el[u], label: dist, color: "Dark_Green" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         above_extreme.push(hash1)

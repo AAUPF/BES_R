@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :irrigation5s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :irrigation1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :production_productivity12s do 
                       collection { post :import }
                       collection { get :dropdown }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_27_082359) do
+ActiveRecord::Schema.define(version: 2018_08_03_072359) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -195,9 +195,9 @@ ActiveRecord::Schema.define(version: 2018_07_27_082359) do
 
   create_table "animal_husbandry3s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
-    t.float "Animals_Treated_in_Lakh"
-    t.float "Immunization_in_Lakh"
-    t.float "Artificial_Insemination_in_Lakh"
+    t.float "Animals_Treated"
+    t.float "Immunization"
+    t.float "Artificial_Insemination"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -271,6 +271,15 @@ ActiveRecord::Schema.define(version: 2018_07_27_082359) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "irrigation1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "TypeofIrrigationPotential"
+    t.float "Ultimat_Potential"
+    t.float "Created_Potential"
+    t.float "Utilised_Potential"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "irrigation3s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
     t.float "Created_Irrigation_Potential"
@@ -282,6 +291,15 @@ ActiveRecord::Schema.define(version: 2018_07_27_082359) do
     t.float "Hot_Weather_Irrigation"
     t.float "Total_Utilised_Irrigation_Potential"
     t.float "Utilisation_Efficiency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "irrigation5s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Irrigation_Sources"
+    t.float "Ultimate_Potential"
+    t.float "Created_Potential"
+    t.float "Utilized_Potential"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

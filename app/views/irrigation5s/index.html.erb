@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Irrigation5s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Irrigation sources</th>
+      <th>Ultimate potential</th>
+      <th>Created potential</th>
+      <th>Utilized potential</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @irrigation5s.each do |irrigation5| %>
+      <tr>
+        <td><%= irrigation5.Irrigation_Sources %></td>
+        <td><%= irrigation5.Ultimate_Potential %></td>
+        <td><%= irrigation5.Created_Potential %></td>
+        <td><%= irrigation5.Utilized_Potential %></td>
+        <td><%= link_to 'Show', irrigation5 %></td>
+        <td><%= link_to 'Edit', edit_irrigation5_path(irrigation5) %></td>
+        <td><%= link_to 'Destroy', irrigation5, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Irrigation5', new_irrigation5_path %>

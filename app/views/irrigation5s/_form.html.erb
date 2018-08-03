@@ -1,0 +1,37 @@
+<%= form_with(model: irrigation5, local: true) do |form| %>
+  <% if irrigation5.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(irrigation5.errors.count, "error") %> prohibited this irrigation5 from being saved:</h2>
+
+      <ul>
+      <% irrigation5.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Irrigation_Sources %>
+    <%= form.text_field :Irrigation_Sources %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Ultimate_Potential %>
+    <%= form.text_field :Ultimate_Potential %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Created_Potential %>
+    <%= form.text_field :Created_Potential %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Utilized_Potential %>
+    <%= form.text_field :Utilized_Potential %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

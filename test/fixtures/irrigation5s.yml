@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Irrigation_Sources: MyString
+  Ultimate_Potential: 1.5
+  Created_Potential: 1.5
+  Utilized_Potential: 1.5
+
+two:
+  Irrigation_Sources: MyString
+  Ultimate_Potential: 1.5
+  Created_Potential: 1.5
+  Utilized_Potential: 1.5
