@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_03_075630) do
+ActiveRecord::Schema.define(version: 2018_08_03_103123) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -33,6 +33,34 @@ ActiveRecord::Schema.define(version: 2018_08_03_075630) do
     t.integer "Year"
     t.string "Target_Colour"
     t.string "Achievement_Colour"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "agricultural_inputs1_part1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.string "Crops"
+    t.string "Type_Crops"
+    t.float "Paddy"
+    t.float "Maize"
+    t.float "Urad"
+    t.float "Arhar"
+    t.float "Moong"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "agricultural_inputs1_part2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.string "Crops"
+    t.string "Type_Crops"
+    t.float "Wheat"
+    t.float "Maize"
+    t.float "Arhar"
+    t.float "Gram"
+    t.float "Pea"
+    t.float "Masoor"
+    t.float "Rapeseed_Mustard"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

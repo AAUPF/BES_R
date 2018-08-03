@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: 1
+  Crops: MyString
+  Type_Crops: MyString
+  Wheat: 1.5
+  Maize: 1.5
+  Arhar: 1.5
+  Gram: 1.5
+  Pea: 1.5
+  Masoor: 1.5
+  Rapeseed_Mustard: 1.5
+
+two:
+  Year: 1
+  Crops: MyString
+  Type_Crops: MyString
+  Wheat: 1.5
+  Maize: 1.5
+  Arhar: 1.5
+  Gram: 1.5
+  Pea: 1.5
+  Masoor: 1.5
+  Rapeseed_Mustard: 1.5

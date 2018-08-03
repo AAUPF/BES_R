@@ -1,0 +1,1 @@
+json.partial! "agricultural_inputs1_part1s/agricultural_inputs1_part1", agricultural_inputs1_part1: @agricultural_inputs1_part1

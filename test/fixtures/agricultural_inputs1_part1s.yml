@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: 1
+  Crops: MyString
+  Type_Crops: MyString
+  Paddy: 1.5
+  Maize: 1.5
+  Urad: 1.5
+  Arhar: 1.5
+  Moong: 1.5
+
+two:
+  Year: 1
+  Crops: MyString
+  Type_Crops: MyString
+  Paddy: 1.5
+  Maize: 1.5
+  Urad: 1.5
+  Arhar: 1.5
+  Moong: 1.5

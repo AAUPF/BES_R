@@ -1,0 +1,67 @@
+<%= form_with(model: agricultural_inputs1_part2, local: true) do |form| %>
+  <% if agricultural_inputs1_part2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(agricultural_inputs1_part2.errors.count, "error") %> prohibited this agricultural_inputs1_part2 from being saved:</h2>
+
+      <ul>
+      <% agricultural_inputs1_part2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Crops %>
+    <%= form.text_field :Crops %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Type_Crops %>
+    <%= form.text_field :Type_Crops %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Wheat %>
+    <%= form.text_field :Wheat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Maize %>
+    <%= form.text_field :Maize %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Arhar %>
+    <%= form.text_field :Arhar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Gram %>
+    <%= form.text_field :Gram %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pea %>
+    <%= form.text_field :Pea %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Masoor %>
+    <%= form.text_field :Masoor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Rapeseed_Mustard %>
+    <%= form.text_field :Rapeseed_Mustard %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agricultural Inputs1 Part2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Crops</th>
+      <th>Type crops</th>
+      <th>Wheat</th>
+      <th>Maize</th>
+      <th>Arhar</th>
+      <th>Gram</th>
+      <th>Pea</th>
+      <th>Masoor</th>
+      <th>Rapeseed mustard</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agricultural_inputs1_part2s.each do |agricultural_inputs1_part2| %>
+      <tr>
+        <td><%= agricultural_inputs1_part2.Year %></td>
+        <td><%= agricultural_inputs1_part2.Crops %></td>
+        <td><%= agricultural_inputs1_part2.Type_Crops %></td>
+        <td><%= agricultural_inputs1_part2.Wheat %></td>
+        <td><%= agricultural_inputs1_part2.Maize %></td>
+        <td><%= agricultural_inputs1_part2.Arhar %></td>
+        <td><%= agricultural_inputs1_part2.Gram %></td>
+        <td><%= agricultural_inputs1_part2.Pea %></td>
+        <td><%= agricultural_inputs1_part2.Masoor %></td>
+        <td><%= agricultural_inputs1_part2.Rapeseed_Mustard %></td>
+        <td><%= link_to 'Show', agricultural_inputs1_part2 %></td>
+        <td><%= link_to 'Edit', edit_agricultural_inputs1_part2_path(agricultural_inputs1_part2) %></td>
+        <td><%= link_to 'Destroy', agricultural_inputs1_part2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agricultural Inputs1 Part2', new_agricultural_inputs1_part2_path %>
