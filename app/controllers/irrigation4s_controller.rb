@@ -16,11 +16,13 @@ class Irrigation4sController < ApplicationController
   end
 
 def test
-  ji = [:Status, :Management_of_irrigation_System_Transferred, :Societies_ready_for_transfer_of_system, :Applied_for_Registration, :Under_the_process_of_motivation, :Total]
+  ji = [:Management_of_irrigation_System_Transferred, :Societies_ready_for_transfer_of_system, :Applied_for_Registration, :Under_the_process_of_motivation, :Total]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   ji1 = [:Status, :Management_of_irrigation_System_Transferred, :Societies_ready_for_transfer_of_system, :Applied_for_Registration, :Under_the_process_of_motivation, :Total]
+
 
   if rain_fall_type || views
 
