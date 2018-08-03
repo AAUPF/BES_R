@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 02, 2018 at 07:54 AM
+-- Generation Time: Aug 03, 2018 at 08:14 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -1058,6 +1058,64 @@ CREATE TABLE `hhs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `irrigation1s`
+--
+
+DROP TABLE IF EXISTS `irrigation1s`;
+CREATE TABLE `irrigation1s` (
+  `id` bigint(20) NOT NULL,
+  `TypeofIrrigationPotential` varchar(255) DEFAULT NULL,
+  `Ultimat_Potential` float DEFAULT NULL,
+  `Created_Potential` float DEFAULT NULL,
+  `Utilised_Potential` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `irrigation1s`
+--
+
+INSERT INTO `irrigation1s` (`id`, `TypeofIrrigationPotential`, `Ultimat_Potential`, `Created_Potential`, `Utilised_Potential`, `created_at`, `updated_at`) VALUES
+(1, 'MajorandMediumIrrigation', 53.53, 29.69, 26.72, '2018-08-03 05:36:08', '2018-08-03 05:36:08'),
+(2, 'MinorIrrigation', 64.01, 40.79, 36.7, '2018-08-03 05:36:08', '2018-08-03 05:36:08'),
+(3, 'SurfaceIrrigation', 15.44, 8.14, 7.32, '2018-08-03 05:36:08', '2018-08-03 05:36:08'),
+(4, 'GroundWater', 48.57, 32.65, 29.38, '2018-08-03 05:36:08', '2018-08-03 05:36:08'),
+(5, 'Total', 117.54, 70.48, 63.42, '2018-08-03 05:36:08', '2018-08-03 05:36:08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `irrigation2s`
+--
+
+DROP TABLE IF EXISTS `irrigation2s`;
+CREATE TABLE `irrigation2s` (
+  `id` bigint(20) NOT NULL,
+  `Name_of_Scheme` varchar(255) DEFAULT NULL,
+  `Created_Irrigation_Potential` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `irrigation2s`
+--
+
+INSERT INTO `irrigation2s` (`id`, `Name_of_Scheme`, `Created_Irrigation_Potential`, `created_at`, `updated_at`) VALUES
+(1, 'Western Kosi Canal System', 2000, '2018-08-03 07:41:29', '2018-08-03 07:41:29'),
+(2, 'Durgawati Reservoir Scheme', 1000, '2018-08-03 07:41:29', '2018-08-03 07:41:29'),
+(3, 'Lavaich Rampur Barrage', 6550, '2018-08-03 07:41:29', '2018-08-03 07:41:29'),
+(4, 'Uderasthan Barrage Scheme', 2250, '2018-08-03 07:41:29', '2018-08-03 07:41:29'),
+(5, 'Solhanda Weir Scheme', 20, '2018-08-03 07:41:29', '2018-08-03 07:41:29'),
+(6, 'Nusratpur weir Scheme', 4000, '2018-08-03 07:41:29', '2018-08-03 07:41:29'),
+(7, 'Siwan weir Scheme', 2000, '2018-08-03 07:41:29', '2018-08-03 07:41:29'),
+(8, 'Eastern Gandak Canal Phase II', 4920, '2018-08-03 07:41:29', '2018-08-03 07:41:29'),
+(9, 'Total', 22740, '2018-08-03 07:41:29', '2018-08-03 07:41:29');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `irrigation3s`
 --
 
@@ -1088,6 +1146,63 @@ INSERT INTO `irrigation3s` (`id`, `Year`, `Created_Irrigation_Potential`, `Khari
 (3, 2014, 2925, 1865, 1628, 373, 314, 0, 0, 1942, 66.4, '2018-07-18 04:33:13', '2018-07-18 04:33:13'),
 (4, 2015, 2946, 1918, 1718, 485, 382, 28, 26, 2125, 72.1, '2018-07-18 04:33:13', '2018-07-18 04:33:13'),
 (5, 2016, 2969, 1982, 1931, 802, 714, 29, 28, 2672, 90, '2018-07-18 04:33:13', '2018-07-18 04:33:13');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `irrigation4s`
+--
+
+DROP TABLE IF EXISTS `irrigation4s`;
+CREATE TABLE `irrigation4s` (
+  `id` bigint(20) NOT NULL,
+  `Status` varchar(255) DEFAULT NULL,
+  `Management_of_irrigation_System_Transferred` float DEFAULT NULL,
+  `Societies_ready_for_transfer_of_system` float DEFAULT NULL,
+  `Applied_for_Registration` float DEFAULT NULL,
+  `Under_the_process_of_motivation` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `irrigation4s`
+--
+
+INSERT INTO `irrigation4s` (`id`, `Status`, `Management_of_irrigation_System_Transferred`, `Societies_ready_for_transfer_of_system`, `Applied_for_Registration`, `Under_the_process_of_motivation`, `Total`, `created_at`, `updated_at`) VALUES
+(1, 'Number', 54, 27, 30, 511, 622, '2018-08-03 07:59:58', '2018-08-03 07:59:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `irrigation5s`
+--
+
+DROP TABLE IF EXISTS `irrigation5s`;
+CREATE TABLE `irrigation5s` (
+  `id` bigint(20) NOT NULL,
+  `Irrigation_Sources` varchar(255) DEFAULT NULL,
+  `Ultimate_Potential` float DEFAULT NULL,
+  `Created_Potential` float DEFAULT NULL,
+  `Utilized_Potential` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `irrigation5s`
+--
+
+INSERT INTO `irrigation5s` (`id`, `Irrigation_Sources`, `Ultimate_Potential`, `Created_Potential`, `Utilized_Potential`, `created_at`, `updated_at`) VALUES
+(1, 'Surface Irrigation', 15.44, 8.14, 7.32, '2018-08-03 07:28:57', '2018-08-03 07:28:57'),
+(2, 'Ahar / Pynes/ Irrigation Tanks', 0, 3.47, 3.12, '2018-08-03 07:28:57', '2018-08-03 07:28:57'),
+(3, 'Lift Irrigation', 0, 2.64, 2.37, '2018-08-03 07:28:57', '2018-08-03 07:28:57'),
+(4, 'Surface minor Irrigation Bear/ Slice Gates', 0, 2.03, 1.83, '2018-08-03 07:28:57', '2018-08-03 07:28:57'),
+(5, 'Ground Water Irrigation', 48.57, 32.65, 29.38, '2018-08-03 07:28:57', '2018-08-03 07:28:57'),
+(6, ' State Tubewells', 0, 8.37, 7.54, '2018-08-03 07:28:57', '2018-08-03 07:28:57'),
+(7, ' Private Tubewells', 0, 24.28, 21.84, '2018-08-03 07:28:57', '2018-08-03 07:28:57'),
+(8, 'Total', 64.01, 40.79, 36.7, '2018-08-03 07:28:57', '2018-08-03 07:28:57');
 
 -- --------------------------------------------------------
 
@@ -2750,7 +2865,11 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180727075741'),
 ('20180727080611'),
 ('20180727081533'),
-('20180727082359');
+('20180727082359'),
+('20180803053246'),
+('20180803072359'),
+('20180803073914'),
+('20180803075630');
 
 -- --------------------------------------------------------
 
@@ -2895,9 +3014,33 @@ ALTER TABLE `hhs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `irrigation1s`
+--
+ALTER TABLE `irrigation1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `irrigation2s`
+--
+ALTER TABLE `irrigation2s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `irrigation3s`
 --
 ALTER TABLE `irrigation3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `irrigation4s`
+--
+ALTER TABLE `irrigation4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `irrigation5s`
+--
+ALTER TABLE `irrigation5s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -3133,10 +3276,34 @@ ALTER TABLE `hhs`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `irrigation1s`
+--
+ALTER TABLE `irrigation1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `irrigation2s`
+--
+ALTER TABLE `irrigation2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT for table `irrigation3s`
 --
 ALTER TABLE `irrigation3s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `irrigation4s`
+--
+ALTER TABLE `irrigation4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `irrigation5s`
+--
+ALTER TABLE `irrigation5s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `irrigation6s`

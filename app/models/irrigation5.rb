@@ -1,4 +1,4 @@
 class Irrigation5 < ApplicationRecord
-  extend Code  
+  extend Irrigation5data  
 
-      end
+end
