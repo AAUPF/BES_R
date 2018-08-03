@@ -22,8 +22,8 @@ module Irrigation2data
           else
             all.order(rain_fall_type)
           end
-    elsif compare == "Bihar vs District"
-        where("Name_of_Scheme = ? OR Name_of_Scheme = ?", search, "Bihar").order(:id)
+    elsif compare != "None"
+        where("Name_of_Scheme = ? OR Name_of_Scheme = ?", search, compare).order(:id)
     else
           if rain_fall_type == "All"
             where("Name_of_Scheme = ? ", search).order(:id)
