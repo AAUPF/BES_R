@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_03_072359) do
+ActiveRecord::Schema.define(version: 2018_08_03_075630) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -280,6 +280,13 @@ ActiveRecord::Schema.define(version: 2018_08_03_072359) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "irrigation2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Name_of_Scheme"
+    t.float "Created_Irrigation_Potential"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "irrigation3s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
     t.float "Created_Irrigation_Potential"
@@ -291,6 +298,17 @@ ActiveRecord::Schema.define(version: 2018_08_03_072359) do
     t.float "Hot_Weather_Irrigation"
     t.float "Total_Utilised_Irrigation_Potential"
     t.float "Utilisation_Efficiency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "irrigation4s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Status"
+    t.float "Management_of_irrigation_System_Transferred"
+    t.float "Societies_ready_for_transfer_of_system"
+    t.float "Applied_for_Registration"
+    t.float "Under_the_process_of_motivation"
+    t.float "Total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

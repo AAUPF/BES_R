@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Status: MyString
+  Management_of_irrigation_System_Transferred: 1.5
+  Societies_ready_for_transfer_of_system: 1.5
+  Applied_for_Registration: 1.5
+  Under_the_process_of_motivation: 1.5
+  Total: 1.5
+
+two:
+  Status: MyString
+  Management_of_irrigation_System_Transferred: 1.5
+  Societies_ready_for_transfer_of_system: 1.5
+  Applied_for_Registration: 1.5
+  Under_the_process_of_motivation: 1.5
+  Total: 1.5

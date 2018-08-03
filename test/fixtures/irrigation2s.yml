@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name_of_Scheme: MyString
+  Created_Irrigation_Potential: 1.5
+
+two:
+  Name_of_Scheme: MyString
+  Created_Irrigation_Potential: 1.5

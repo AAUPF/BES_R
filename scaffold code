@@ -1,1 +1,1 @@
-rails g scaffold production_productivity12 Districts:string Area:float	Production:float	Yield:float	Year:integer	Area_Colour:string	Production_Colour:string	Yield_Colour:string
+rails g scaffold 
