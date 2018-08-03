@@ -42,7 +42,7 @@ module Irrigation2data
       if rain_fall_type == "All"
         hash_data = ji.map do |el|
           if el.to_s == "Name_of_Scheme"
-            {title:"Name_of_Scheme", field:el,headerFilter:true}
+            {title:"Name of Scheme", field:el,headerFilter:true}
           else
             {title:el.to_s.gsub("_"," "), field:el}
           end
@@ -52,15 +52,12 @@ module Irrigation2data
       else
       if compare == "None"
         hash_data = [
-        #   {title:"Year", field:"Year", sorter:"string",  editor:true},
-        {title:"Name_of_Scheme", field:"Name_of_Scheme"},
+        {title:"Name of Scheme", field:"Name_of_Scheme",headerFilter:true},
         {title:dataset, field:rain_fall_type}
       ]
       else
         hash_data = [
-        # {title:compare, field:compare, sorter:"string", editor:true},
-        #   {title:"Year", field:"Year", sorter:"string", editor:true},
-        {title:"Name_of_Scheme", field:"Name_of_Scheme"},
+        {title:"Name of Scheme", field:"Name_of_Scheme",headerFilter:true},
         {title:dataset, field:rain_fall_type}
       ]
       end
@@ -154,7 +151,7 @@ module Irrigation2data
             type:views,
             legendText: dataset,
             showInLegend: true,
-            dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+            dataPoints: b.reject{|x| x["Name_of_Scheme"]== "Total"}.map do |el|
               { y: el[column_name],z:el[column_name], label: el["Name_of_Scheme"] }
             end
           }
@@ -195,7 +192,7 @@ module Irrigation2data
          
           legendText: dataset,
           showInLegend: true,
-          dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+          dataPoints: b.reject{|x| x["Name_of_Scheme"]== "Total"}.map do |el|
                { y: el[rain_fall_type], label: el["Name_of_Scheme"] }
           end
         }]

@@ -16,12 +16,12 @@ class Irrigation2sController < ApplicationController
   end
 
 def test
-  ji = [:Name_of_Scheme, :Created_Irrigation_Potential]
+  ji = [:Created_Irrigation_Potential]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-
+   ji1 = [:Name_of_Scheme, :Created_Irrigation_Potential]
   if rain_fall_type || views
 
       if views == "Map View"
