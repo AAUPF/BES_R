@@ -191,7 +191,7 @@ module Rainfallnewmap
      unit =  "mm"
 
       if rain_fall_type == "All"
-        hu = {below_min: {min:  "500 #{unit1}", max: 800},min: {min: 800, max: 1000}, blow_max:{min: 1000, max: 1200}, max:{min: 1200, max: 1300},above_max:{min: 1300, max: 1600},extreme:{min: 1600, max: 2000},above_extreme:{max: 2000}}
+        hu = {below_min: {min:  "500 #{unit}", max: "800 #{unit}"},min: {min: 800, max: 1000}, blow_max:{min: 1000, max: 1200}, max:{min: 1200, max: 1300},above_max:{min: 1300, max: 1600},extreme:{min: 1600, max: 2000},above_extreme:{max: 2000}}
       elsif rain_fall_type == "Winter_Rain"
         hu = {below_min: {min: 0, max: 2.5},min: {min: 2.5, max: 5}, blow_max:{min: 5, max: 10}, max:{min: 10, max: 15},above_max:{min: 15, max: 20},extreme:{min: 20, max: 39},above_extreme:{max: 39}}
       elsif rain_fall_type == "Hot_Weather_Rain"

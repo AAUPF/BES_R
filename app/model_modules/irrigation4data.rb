@@ -42,7 +42,7 @@ module Irrigation4data
       if rain_fall_type == "All"
         hash_data = ji.map do |el|
           if el.to_s == "Status"
-            {title:"Irrigation Sources", field:el,headerFilter:true}
+            {title:"Status", field:el,headerFilter:true}
           else
             {title:el.to_s.gsub("_"," "), field:el}
           end
@@ -53,14 +53,14 @@ module Irrigation4data
       if compare == "None"
         hash_data = [
         #   {title:"Year", field:"Year", sorter:"string",  editor:true},
-        {title:"Irrigation Sources", field:"Status"},
+        {title:"Status", field:"Status"},
         {title:dataset, field:rain_fall_type}
       ]
       else
         hash_data = [
         # {title:compare, field:compare, sorter:"string", editor:true},
         #   {title:"Year", field:"Year", sorter:"string", editor:true},
-        {title:"Irrigation Sources", field:"Status"},
+        {title:"Status", field:"Status"},
         {title:dataset, field:rain_fall_type}
       ]
       end

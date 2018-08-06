@@ -22,8 +22,8 @@ module Newwithoutyear
           else
             all.order(rain_fall_type)
           end
-    elsif compare == "Bihar vs District"
-        where("Typeofirrigationpotential = ? OR Typeofirrigationpotential = ?", search, "Bihar").order(:id)
+    elsif compare != "None"
+        where("Typeofirrigationpotential = ? OR Typeofirrigationpotential = ?", search, compare).order(:id)
     else
           if rain_fall_type == "All"
             where("Typeofirrigationpotential = ? ", search).order(:id)
@@ -154,7 +154,7 @@ module Newwithoutyear
             type:views,
             legendText: dataset,
             showInLegend: true,
-            dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+            dataPoints: b.reject{|x| x["TypeofIrrigationPotential"]== "Total"}.map do |el|
               { y: el[column_name],z:el[column_name], label: el["TypeofIrrigationPotential"] }
             end
           }
@@ -195,7 +195,7 @@ module Newwithoutyear
          
           legendText: dataset,
           showInLegend: true,
-          dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+          dataPoints: b.reject{|x| x["TypeofIrrigationPotential"]== "Total"}.map do |el|
                { y: el[rain_fall_type], label: el["TypeofIrrigationPotential"] }
           end
         }]

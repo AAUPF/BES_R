@@ -16,14 +16,14 @@ class Irrigation1sController < ApplicationController
   end
 
 def test
-  ji = [:Ultimat_Potential, :Created_Potential, :Utilised_Potential]
+  ji = [:Ultimate_Potential, :Created_Potential, :Utilised_Potential]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
 
-   ji1 = [:TypeofIrrigationPotential, :Ultimat_Potential, :Created_Potential, :Utilised_Potential]
+   ji1 = [:TypeofIrrigationPotential, :Ultimate_Potential, :Created_Potential, :Utilised_Potential]
 
   if rain_fall_type || views
 

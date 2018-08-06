@@ -22,8 +22,8 @@ module Irrigation5data
           else
             all.order(rain_fall_type)
           end
-    elsif compare == "Bihar vs District"
-        where("Irrigation_Sources = ? OR Irrigation_Sources = ?", search, "Bihar").order(:id)
+    elsif compare != "None"
+        where("Irrigation_Sources = ? OR Irrigation_Sources = ?", search, compare).order(:id)
     else
           if rain_fall_type == "All"
             where("Irrigation_Sources = ? ", search).order(:id)
@@ -154,7 +154,7 @@ module Irrigation5data
             type:views,
             legendText: dataset,
             showInLegend: true,
-            dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+            dataPoints: b.reject{|x| x["Irrigation_Sources"]== "Total"}.map do |el|
               { y: el[column_name],z:el[column_name], label: el["Irrigation_Sources"] }
             end
           }
@@ -195,7 +195,7 @@ module Irrigation5data
          
           legendText: dataset,
           showInLegend: true,
-          dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+          dataPoints: b.reject{|x| x["Irrigation_Sources"]== "Total"}.map do |el|
                { y: el[rain_fall_type], label: el["Irrigation_Sources"] }
           end
         }]
