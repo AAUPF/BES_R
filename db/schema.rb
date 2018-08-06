@@ -301,7 +301,7 @@ ActiveRecord::Schema.define(version: 2018_08_03_103123) do
 
   create_table "irrigation1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "TypeofIrrigationPotential"
-    t.float "Ultimat_Potential"
+    t.float "Ultimate_Potential"
     t.float "Created_Potential"
     t.float "Utilised_Potential"
     t.datetime "created_at", null: false

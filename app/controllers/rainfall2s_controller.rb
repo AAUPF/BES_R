@@ -23,7 +23,7 @@ def test
    compare = params[:compare]
 
  
-   ji1 = [:Districts,:Winter_Rain, :Hot_Weather_Rain, :South_West_Monsoon, :North_West_Monsoon]
+   ji1 = [:Districts,:Winter_Rain, :Hot_Weather_Rain, :South_West_Monsoon, :North_West_Monsoon,:Total]
   if rain_fall_type || views
       if views == "Map View"
        
