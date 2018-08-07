@@ -3,7 +3,12 @@ Rails.application.routes.draw do
             collection { post :import }
             collection { get :dropdown }
             collection { get :test }
-         end 
+         end
+  resources :health6s do 
+          collection { post :import }
+          collection { get :dropdown }
+          collection { get :test }
+          end
 
   resources :health5s do 
                       collection { post :import }

@@ -340,6 +340,15 @@ ActiveRecord::Schema.define(version: 2018_08_06_121547) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "health6s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "District"
+    t.float "Average_number_of_Outpatient_visits_per_day"
+    t.float "Inpatient_Bed_Occupancy_Rate"
+    t.integer "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "hhs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false

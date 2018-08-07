@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>District:</strong>
+  <%= @health6.District %>
+</p>
+
+<p>
+  <strong>Average number of outpatient visits per day:</strong>
+  <%= @health6.Average_number_of_Outpatient_visits_per_day %>
+</p>
+
+<p>
+  <strong>Inpatient bed occupancy rate:</strong>
+  <%= @health6.Inpatient_Bed_Occupancy_Rate %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @health6.Year %>
+</p>
+
+<%= link_to 'Edit', edit_health6_path(@health6) %> |
+<%= link_to 'Back', health6s_path %>

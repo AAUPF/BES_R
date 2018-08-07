@@ -1,0 +1,37 @@
+<%= form_with(model: health6, local: true) do |form| %>
+  <% if health6.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health6.errors.count, "error") %> prohibited this health6 from being saved:</h2>
+
+      <ul>
+      <% health6.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :District %>
+    <%= form.text_field :District %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Average_number_of_Outpatient_visits_per_day %>
+    <%= form.text_field :Average_number_of_Outpatient_visits_per_day %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Inpatient_Bed_Occupancy_Rate %>
+    <%= form.text_field :Inpatient_Bed_Occupancy_Rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

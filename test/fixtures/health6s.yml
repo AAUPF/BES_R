@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  District: MyString
+  Average_number_of_Outpatient_visits_per_day: 1.5
+  Inpatient_Bed_Occupancy_Rate: 1.5
+  Year: 1
+
+two:
+  District: MyString
+  Average_number_of_Outpatient_visits_per_day: 1.5
+  Inpatient_Bed_Occupancy_Rate: 1.5
+  Year: 1

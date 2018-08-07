@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Health6s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>District</th>
+      <th>Average number of outpatient visits per day</th>
+      <th>Inpatient bed occupancy rate</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @health6s.each do |health6| %>
+      <tr>
+        <td><%= health6.District %></td>
+        <td><%= health6.Average_number_of_Outpatient_visits_per_day %></td>
+        <td><%= health6.Inpatient_Bed_Occupancy_Rate %></td>
+        <td><%= health6.Year %></td>
+        <td><%= link_to 'Show', health6 %></td>
+        <td><%= link_to 'Edit', edit_health6_path(health6) %></td>
+        <td><%= link_to 'Destroy', health6, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Health6', new_health6_path %>
