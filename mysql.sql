@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 07, 2018 at 07:39 AM
+-- Generation Time: Aug 07, 2018 at 08:07 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -20,6 +20,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `agricultural_credit1s`
 --
 
+DROP TABLE IF EXISTS `agricultural_credit1s`;
 CREATE TABLE `agricultural_credit1s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -52,6 +53,7 @@ INSERT INTO `agricultural_credit1s` (`id`, `Year`, `Commercial_Bank_Target`, `Co
 -- Table structure for table `agricultural_credit2s`
 --
 
+DROP TABLE IF EXISTS `agricultural_credit2s`;
 CREATE TABLE `agricultural_credit2s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -193,6 +195,7 @@ INSERT INTO `agricultural_credit2s` (`id`, `Districts`, `Target`, `Achievement`,
 -- Table structure for table `agricultural_inputs1_part1s`
 --
 
+DROP TABLE IF EXISTS `agricultural_inputs1_part1s`;
 CREATE TABLE `agricultural_inputs1_part1s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -228,6 +231,7 @@ INSERT INTO `agricultural_inputs1_part1s` (`id`, `Year`, `Crops`, `Type_Crops`, 
 -- Table structure for table `agricultural_inputs1_part2s`
 --
 
+DROP TABLE IF EXISTS `agricultural_inputs1_part2s`;
 CREATE TABLE `agricultural_inputs1_part2s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -265,6 +269,7 @@ INSERT INTO `agricultural_inputs1_part2s` (`id`, `Year`, `Crops`, `Type_Crops`, 
 -- Table structure for table `agricultural_inputs2s`
 --
 
+DROP TABLE IF EXISTS `agricultural_inputs2s`;
 CREATE TABLE `agricultural_inputs2s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -307,6 +312,7 @@ INSERT INTO `agricultural_inputs2s` (`id`, `Year`, `Type_of_Fertilizer`, `Urea`,
 -- Table structure for table `agricultural_inputs3s`
 --
 
+DROP TABLE IF EXISTS `agricultural_inputs3s`;
 CREATE TABLE `agricultural_inputs3s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -336,6 +342,7 @@ INSERT INTO `agricultural_inputs3s` (`id`, `Year`, `Tractor`, `Combine_Harvestor
 -- Table structure for table `agricultural_inputs4s`
 --
 
+DROP TABLE IF EXISTS `agricultural_inputs4s`;
 CREATE TABLE `agricultural_inputs4s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -458,6 +465,7 @@ INSERT INTO `agricultural_inputs4s` (`id`, `Districts`, `Year`, `Urea`, `DAP`, `
 -- Table structure for table `agricultural_inputs5s`
 --
 
+DROP TABLE IF EXISTS `agricultural_inputs5s`;
 CREATE TABLE `agricultural_inputs5s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -479,6 +487,7 @@ CREATE TABLE `agricultural_inputs5s` (
 -- Table structure for table `agricultural_inputs6s`
 --
 
+DROP TABLE IF EXISTS `agricultural_inputs6s`;
 CREATE TABLE `agricultural_inputs6s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -545,6 +554,7 @@ INSERT INTO `agricultural_inputs6s` (`id`, `Districts`, `Target_Physical`, `Targ
 -- Table structure for table `agricultural_inputs7s`
 --
 
+DROP TABLE IF EXISTS `agricultural_inputs7s`;
 CREATE TABLE `agricultural_inputs7s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -657,6 +667,7 @@ INSERT INTO `agricultural_inputs7s` (`id`, `Districts`, `Tractor`, `Combine_Harv
 -- Table structure for table `agricultural_inputs8s`
 --
 
+DROP TABLE IF EXISTS `agricultural_inputs8s`;
 CREATE TABLE `agricultural_inputs8s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -677,6 +688,7 @@ CREATE TABLE `agricultural_inputs8s` (
 -- Table structure for table `animal_husbandry1s`
 --
 
+DROP TABLE IF EXISTS `animal_husbandry1s`;
 CREATE TABLE `animal_husbandry1s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -711,6 +723,7 @@ INSERT INTO `animal_husbandry1s` (`id`, `Year`, `Cattle`, `Males_over_3_years`, 
 -- Table structure for table `animal_husbandry2s`
 --
 
+DROP TABLE IF EXISTS `animal_husbandry2s`;
 CREATE TABLE `animal_husbandry2s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -740,6 +753,7 @@ INSERT INTO `animal_husbandry2s` (`id`, `Year`, `Milk_lakh_tonnes`, `Egg_crore`,
 -- Table structure for table `animal_husbandry3s`
 --
 
+DROP TABLE IF EXISTS `animal_husbandry3s`;
 CREATE TABLE `animal_husbandry3s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -767,6 +781,7 @@ INSERT INTO `animal_husbandry3s` (`id`, `Year`, `Animals_Treated`, `Immunization
 -- Table structure for table `animal_husbandry4s`
 --
 
+DROP TABLE IF EXISTS `animal_husbandry4s`;
 CREATE TABLE `animal_husbandry4s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -837,6 +852,7 @@ INSERT INTO `animal_husbandry4s` (`id`, `Districts`, `Cow`, `Buffalo`, `Pig`, `S
 -- Table structure for table `animal_husbandry5s`
 --
 
+DROP TABLE IF EXISTS `animal_husbandry5s`;
 CREATE TABLE `animal_husbandry5s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -978,6 +994,7 @@ INSERT INTO `animal_husbandry5s` (`id`, `Districts`, `Fish_Production`, `Fish_Se
 -- Table structure for table `animal_husbandry6s`
 --
 
+DROP TABLE IF EXISTS `animal_husbandry6s`;
 CREATE TABLE `animal_husbandry6s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -1051,6 +1068,7 @@ INSERT INTO `animal_husbandry6s` (`id`, `Districts`, `Crossbred_Cow`, `Local_Cow
 -- Table structure for table `annual_rainfalls`
 --
 
+DROP TABLE IF EXISTS `annual_rainfalls`;
 CREATE TABLE `annual_rainfalls` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -1551,6 +1569,7 @@ INSERT INTO `annual_rainfalls` (`id`, `Districts`, `January`, `February`, `March
 -- Table structure for table `ar_internal_metadata`
 --
 
+DROP TABLE IF EXISTS `ar_internal_metadata`;
 CREATE TABLE `ar_internal_metadata` (
   `key` varchar(255) NOT NULL,
   `value` varchar(255) DEFAULT NULL,
@@ -1571,6 +1590,7 @@ INSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) 
 -- Table structure for table `cropping_patterns`
 --
 
+DROP TABLE IF EXISTS `cropping_patterns`;
 CREATE TABLE `cropping_patterns` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -1602,6 +1622,7 @@ INSERT INTO `cropping_patterns` (`id`, `Year`, `Food_grains`, `Cereals`, `Pulses
 -- Table structure for table `health1s`
 --
 
+DROP TABLE IF EXISTS `health1s`;
 CREATE TABLE `health1s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -1635,6 +1656,7 @@ INSERT INTO `health1s` (`id`, `Year`, `Total_Expense_on_Social_Services_India`, 
 -- Table structure for table `health5s`
 --
 
+DROP TABLE IF EXISTS `health5s`;
 CREATE TABLE `health5s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -1666,9 +1688,27 @@ INSERT INTO `health5s` (`id`, `Year`, `District_Hospital`, `Referral_Hospital`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `health6s`
+--
+
+DROP TABLE IF EXISTS `health6s`;
+CREATE TABLE `health6s` (
+  `id` bigint(20) NOT NULL,
+  `District` varchar(255) DEFAULT NULL,
+  `Average_number_of_Outpatient_visits_per_day` float DEFAULT NULL,
+  `Inpatient_Bed_Occupancy_Rate` float DEFAULT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `hhs`
 --
 
+DROP TABLE IF EXISTS `hhs`;
 CREATE TABLE `hhs` (
   `id` bigint(20) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
@@ -1682,6 +1722,7 @@ CREATE TABLE `hhs` (
 -- Table structure for table `irrigation1s`
 --
 
+DROP TABLE IF EXISTS `irrigation1s`;
 CREATE TABLE `irrigation1s` (
   `id` bigint(20) NOT NULL,
   `TypeofIrrigationPotential` varchar(255) DEFAULT NULL,
@@ -1709,6 +1750,7 @@ INSERT INTO `irrigation1s` (`id`, `TypeofIrrigationPotential`, `Ultimat_Potentia
 -- Table structure for table `irrigation2s`
 --
 
+DROP TABLE IF EXISTS `irrigation2s`;
 CREATE TABLE `irrigation2s` (
   `id` bigint(20) NOT NULL,
   `Name_of_Scheme` varchar(255) DEFAULT NULL,
@@ -1738,6 +1780,7 @@ INSERT INTO `irrigation2s` (`id`, `Name_of_Scheme`, `Created_Irrigation_Potentia
 -- Table structure for table `irrigation3s`
 --
 
+DROP TABLE IF EXISTS `irrigation3s`;
 CREATE TABLE `irrigation3s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -1771,6 +1814,7 @@ INSERT INTO `irrigation3s` (`id`, `Year`, `Created_Irrigation_Potential`, `Khari
 -- Table structure for table `irrigation4s`
 --
 
+DROP TABLE IF EXISTS `irrigation4s`;
 CREATE TABLE `irrigation4s` (
   `id` bigint(20) NOT NULL,
   `Status` varchar(255) DEFAULT NULL,
@@ -1796,6 +1840,7 @@ INSERT INTO `irrigation4s` (`id`, `Status`, `Management_of_irrigation_System_Tra
 -- Table structure for table `irrigation5s`
 --
 
+DROP TABLE IF EXISTS `irrigation5s`;
 CREATE TABLE `irrigation5s` (
   `id` bigint(20) NOT NULL,
   `Irrigation_Sources` varchar(255) DEFAULT NULL,
@@ -1826,6 +1871,7 @@ INSERT INTO `irrigation5s` (`id`, `Irrigation_Sources`, `Ultimate_Potential`, `C
 -- Table structure for table `irrigation6s`
 --
 
+DROP TABLE IF EXISTS `irrigation6s`;
 CREATE TABLE `irrigation6s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -1855,6 +1901,7 @@ INSERT INTO `irrigation6s` (`id`, `Year`, `Surface_Canal`, `Tanks_including_Ahar
 -- Table structure for table `land1s`
 --
 
+DROP TABLE IF EXISTS `land1s`;
 CREATE TABLE `land1s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -1894,6 +1941,7 @@ INSERT INTO `land1s` (`id`, `Year`, `Geographical_Area`, `Forests`, `Barren_Uncu
 -- Table structure for table `lands`
 --
 
+DROP TABLE IF EXISTS `lands`;
 CREATE TABLE `lands` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -1982,6 +2030,7 @@ INSERT INTO `lands` (`id`, `Districts`, `Geographical_area`, `Forest`, `Barren_u
 -- Table structure for table `newrices`
 --
 
+DROP TABLE IF EXISTS `newrices`;
 CREATE TABLE `newrices` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -2086,6 +2135,7 @@ INSERT INTO `newrices` (`id`, `Districts`, `Area`, `Production`, `Productivity`,
 -- Table structure for table `production_and_productivity_of_rices`
 --
 
+DROP TABLE IF EXISTS `production_and_productivity_of_rices`;
 CREATE TABLE `production_and_productivity_of_rices` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -2187,6 +2237,7 @@ INSERT INTO `production_and_productivity_of_rices` (`id`, `Districts`, `Area`, `
 -- Table structure for table `production_productivity1s`
 --
 
+DROP TABLE IF EXISTS `production_productivity1s`;
 CREATE TABLE `production_productivity1s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -2255,6 +2306,7 @@ INSERT INTO `production_productivity1s` (`id`, `Year`, `Total_Cereals`, `Total_R
 -- Table structure for table `production_productivity2s`
 --
 
+DROP TABLE IF EXISTS `production_productivity2s`;
 CREATE TABLE `production_productivity2s` (
   `id` bigint(20) NOT NULL,
   `Year` int(11) DEFAULT NULL,
@@ -2323,6 +2375,7 @@ INSERT INTO `production_productivity2s` (`id`, `Year`, `Total_Cereals`, `Total_R
 -- Table structure for table `production_productivity4s`
 --
 
+DROP TABLE IF EXISTS `production_productivity4s`;
 CREATE TABLE `production_productivity4s` (
   `id` bigint(20) NOT NULL,
   `Fruits` varchar(255) DEFAULT NULL,
@@ -2400,6 +2453,7 @@ INSERT INTO `production_productivity4s` (`id`, `Fruits`, `Area`, `Production`, `
 -- Table structure for table `production_productivity5s`
 --
 
+DROP TABLE IF EXISTS `production_productivity5s`;
 CREATE TABLE `production_productivity5s` (
   `id` bigint(20) NOT NULL,
   `Vegetables` varchar(255) DEFAULT NULL,
@@ -2476,6 +2530,7 @@ INSERT INTO `production_productivity5s` (`id`, `Vegetables`, `Area`, `Production
 -- Table structure for table `production_productivity7s`
 --
 
+DROP TABLE IF EXISTS `production_productivity7s`;
 CREATE TABLE `production_productivity7s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -2580,6 +2635,7 @@ INSERT INTO `production_productivity7s` (`id`, `Districts`, `Area`, `Production`
 -- Table structure for table `production_productivity8s`
 --
 
+DROP TABLE IF EXISTS `production_productivity8s`;
 CREATE TABLE `production_productivity8s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -2684,6 +2740,7 @@ INSERT INTO `production_productivity8s` (`id`, `Districts`, `Area`, `Production`
 -- Table structure for table `production_productivity9s`
 --
 
+DROP TABLE IF EXISTS `production_productivity9s`;
 CREATE TABLE `production_productivity9s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -2788,6 +2845,7 @@ INSERT INTO `production_productivity9s` (`id`, `Districts`, `Area`, `Production`
 -- Table structure for table `production_productivity10s`
 --
 
+DROP TABLE IF EXISTS `production_productivity10s`;
 CREATE TABLE `production_productivity10s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -2902,6 +2960,7 @@ INSERT INTO `production_productivity10s` (`id`, `Districts`, `Mango_Area`, `Mang
 -- Table structure for table `production_productivity11s`
 --
 
+DROP TABLE IF EXISTS `production_productivity11s`;
 CREATE TABLE `production_productivity11s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -3016,6 +3075,7 @@ INSERT INTO `production_productivity11s` (`id`, `Districts`, `Potato_Area`, `Pot
 -- Table structure for table `production_productivity12s`
 --
 
+DROP TABLE IF EXISTS `production_productivity12s`;
 CREATE TABLE `production_productivity12s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -3120,6 +3180,7 @@ INSERT INTO `production_productivity12s` (`id`, `Districts`, `Area`, `Production
 -- Table structure for table `rainfall1s`
 --
 
+DROP TABLE IF EXISTS `rainfall1s`;
 CREATE TABLE `rainfall1s` (
   `id` bigint(20) NOT NULL,
   `Winter_Rain` float DEFAULT NULL,
@@ -3161,6 +3222,7 @@ INSERT INTO `rainfall1s` (`id`, `Winter_Rain`, `Hot_Weather_Rain`, `Southwest_Mo
 -- Table structure for table `rainfall2s`
 --
 
+DROP TABLE IF EXISTS `rainfall2s`;
 CREATE TABLE `rainfall2s` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -3264,6 +3326,7 @@ INSERT INTO `rainfall2s` (`id`, `Districts`, `Winter_Rain`, `Hot_Weather_Rain`, 
 -- Table structure for table `rainfalls`
 --
 
+DROP TABLE IF EXISTS `rainfalls`;
 CREATE TABLE `rainfalls` (
   `id` bigint(20) NOT NULL,
   `Districts` varchar(255) DEFAULT NULL,
@@ -3367,6 +3430,7 @@ INSERT INTO `rainfalls` (`id`, `Districts`, `WinterRain`, `HotWeatherRain`, `Sou
 -- Table structure for table `schema_migrations`
 --
 
+DROP TABLE IF EXISTS `schema_migrations`;
 CREATE TABLE `schema_migrations` (
   `version` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -3471,7 +3535,8 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180803103123'),
 ('20180806084101'),
 ('20180806103432'),
-('20180806121547');
+('20180806121547'),
+('20180807074129');
 
 -- --------------------------------------------------------
 
@@ -3479,6 +3544,7 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 -- Table structure for table `test1s`
 --
 
+DROP TABLE IF EXISTS `test1s`;
 CREATE TABLE `test1s` (
   `id` bigint(20) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
@@ -3493,6 +3559,7 @@ CREATE TABLE `test1s` (
 -- Table structure for table `tests`
 --
 
+DROP TABLE IF EXISTS `tests`;
 CREATE TABLE `tests` (
   `id` bigint(20) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
@@ -3635,6 +3702,12 @@ ALTER TABLE `health1s`
 -- Indexes for table `health5s`
 --
 ALTER TABLE `health5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health6s`
+--
+ALTER TABLE `health6s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -3928,6 +4001,12 @@ ALTER TABLE `health1s`
 --
 ALTER TABLE `health5s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `health6s`
+--
+ALTER TABLE `health6s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `hhs`
