@@ -68,7 +68,13 @@ module Test
     #   end
     # end
 
-   j = b.each { |item| item[:Productivity] = item[:Productivity]/100}
+
+   if rain_fall_type == "Productivity"
+    j = b.each { |item| item[:Productivity] = item[:Productivity]/100}
+
+   else
+     j = b
+   end
     data = { column: hash_data, data: j }
     data
   end

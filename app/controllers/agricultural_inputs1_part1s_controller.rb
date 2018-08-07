@@ -16,12 +16,16 @@ class AgriculturalInputs1Part1sController < ApplicationController
   end
 
 def test
-  ji = [:Year, :Crops, :Type_Crops, :Paddy, :Maize, :Urad, :Arhar, :Moong]
+  ji = [:Crops, :Type_Crops, :Paddy, :Maize, :Urad, :Arhar, :Moong]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
+
+
+   ji1 = [:Year, :Crops, :Type_Crops, :Paddy, :Maize, :Urad, :Arhar, :Moong]
+
 
 
   if rain_fall_type || views
@@ -37,8 +41,17 @@ def test
           a = AgriculturalInputs1Part1.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
-        b = AgriculturalInputs1Part1.search(params[:search],compare,year,rain_fall_type)
-        a = AgriculturalInputs1Part1.table(b,rain_fall_type,year,ji1,compare)
+      
+
+        if search == "Kharif"
+          b = AgriculturalInputs1Part1.search(params[:search],compare,year,rain_fall_type)
+          a = AgriculturalInputs1Part1.table(b,rain_fall_type,year,ji1,compare)
+          
+        else
+          b = AgriculturalInputs1Part2.search(params[:search],compare,year,rain_fall_type)
+          a = AgriculturalInputs1Part2.table(b,rain_fall_type,year,ji1,compare)
+          
+        end
       else
 
         if search == "Kharif"

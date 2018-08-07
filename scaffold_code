@@ -1,0 +1,1 @@
+rails g scaffold Annual_Rainfall Districts:string January:float	February:float	March:float	April:float	May:float	June:float	July:float	August:float	September:float	October:float	November:float	December:float	Year:integer

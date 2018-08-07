@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Annual Rainfalls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>January</th>
+      <th>February</th>
+      <th>March</th>
+      <th>April</th>
+      <th>May</th>
+      <th>June</th>
+      <th>July</th>
+      <th>August</th>
+      <th>September</th>
+      <th>October</th>
+      <th>November</th>
+      <th>December</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @annual_rainfalls.each do |annual_rainfall| %>
+      <tr>
+        <td><%= annual_rainfall.Districts %></td>
+        <td><%= annual_rainfall.January %></td>
+        <td><%= annual_rainfall.February %></td>
+        <td><%= annual_rainfall.March %></td>
+        <td><%= annual_rainfall.April %></td>
+        <td><%= annual_rainfall.May %></td>
+        <td><%= annual_rainfall.June %></td>
+        <td><%= annual_rainfall.July %></td>
+        <td><%= annual_rainfall.August %></td>
+        <td><%= annual_rainfall.September %></td>
+        <td><%= annual_rainfall.October %></td>
+        <td><%= annual_rainfall.November %></td>
+        <td><%= annual_rainfall.December %></td>
+        <td><%= annual_rainfall.Year %></td>
+        <td><%= link_to 'Show', annual_rainfall %></td>
+        <td><%= link_to 'Edit', edit_annual_rainfall_path(annual_rainfall) %></td>
+        <td><%= link_to 'Destroy', annual_rainfall, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Annual Rainfall', new_annual_rainfall_path %>

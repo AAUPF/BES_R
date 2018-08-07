@@ -1,0 +1,2 @@
+module AnnualRainfallsHelper
+end

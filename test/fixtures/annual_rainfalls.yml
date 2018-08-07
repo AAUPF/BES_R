@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  January: 1.5
+  February: 1.5
+  March: 1.5
+  April: 1.5
+  May: 1.5
+  June: 1.5
+  July: 1.5
+  August: 1.5
+  September: 1.5
+  October: 1.5
+  November: 1.5
+  December: 1.5
+  Year: 1
+
+two:
+  Districts: MyString
+  January: 1.5
+  February: 1.5
+  March: 1.5
+  April: 1.5
+  May: 1.5
+  June: 1.5
+  July: 1.5
+  August: 1.5
+  September: 1.5
+  October: 1.5
+  November: 1.5
+  December: 1.5
+  Year: 1

@@ -280,6 +280,25 @@ ActiveRecord::Schema.define(version: 2018_08_06_121547) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "annual_rainfalls", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Districts"
+    t.float "January"
+    t.float "February"
+    t.float "March"
+    t.float "April"
+    t.float "May"
+    t.float "June"
+    t.float "July"
+    t.float "August"
+    t.float "September"
+    t.float "October"
+    t.float "November"
+    t.float "December"
+    t.integer "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "cropping_patterns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
     t.float "Food_grains"
@@ -329,7 +348,7 @@ ActiveRecord::Schema.define(version: 2018_08_06_121547) do
 
   create_table "irrigation1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "TypeofIrrigationPotential"
-    t.float "Ultimate_Potential"
+    t.float "Ultimat_Potential"
     t.float "Created_Potential"
     t.float "Utilised_Potential"
     t.datetime "created_at", null: false

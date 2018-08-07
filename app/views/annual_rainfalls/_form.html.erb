@@ -1,0 +1,87 @@
+<%= form_with(model: annual_rainfall, local: true) do |form| %>
+  <% if annual_rainfall.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(annual_rainfall.errors.count, "error") %> prohibited this annual_rainfall from being saved:</h2>
+
+      <ul>
+      <% annual_rainfall.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :January %>
+    <%= form.text_field :January %>
+  </div>
+
+  <div class="field">
+    <%= form.label :February %>
+    <%= form.text_field :February %>
+  </div>
+
+  <div class="field">
+    <%= form.label :March %>
+    <%= form.text_field :March %>
+  </div>
+
+  <div class="field">
+    <%= form.label :April %>
+    <%= form.text_field :April %>
+  </div>
+
+  <div class="field">
+    <%= form.label :May %>
+    <%= form.text_field :May %>
+  </div>
+
+  <div class="field">
+    <%= form.label :June %>
+    <%= form.text_field :June %>
+  </div>
+
+  <div class="field">
+    <%= form.label :July %>
+    <%= form.text_field :July %>
+  </div>
+
+  <div class="field">
+    <%= form.label :August %>
+    <%= form.text_field :August %>
+  </div>
+
+  <div class="field">
+    <%= form.label :September %>
+    <%= form.text_field :September %>
+  </div>
+
+  <div class="field">
+    <%= form.label :October %>
+    <%= form.text_field :October %>
+  </div>
+
+  <div class="field">
+    <%= form.label :November %>
+    <%= form.text_field :November %>
+  </div>
+
+  <div class="field">
+    <%= form.label :December %>
+    <%= form.text_field :December %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

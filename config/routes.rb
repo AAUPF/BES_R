@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :annual_rainfalls do 
+            collection { post :import }
+            collection { get :dropdown }
+            collection { get :test }
+         end 
+
   resources :health5s do 
                       collection { post :import }
                       collection { get :dropdown }
