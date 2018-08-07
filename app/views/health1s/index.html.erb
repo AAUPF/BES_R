@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Health1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Total expense on social services india</th>
+      <th>Total expense on social services bihar</th>
+      <th>Total expense india</th>
+      <th>Total expense bihar</th>
+      <th>Percentage share of social services in total expenditure india</th>
+      <th>Percentage share of social services in total expenditure bihar</th>
+      <th>Per capita expenditure on social services india</th>
+      <th>Per capita expenditure on social services bihar</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @health1s.each do |health1| %>
+      <tr>
+        <td><%= health1.Year %></td>
+        <td><%= health1.Total_Expense_on_Social_Services_India %></td>
+        <td><%= health1.Total_Expense_on_Social_Services_Bihar %></td>
+        <td><%= health1.Total_Expense_India %></td>
+        <td><%= health1.Total_Expense_Bihar %></td>
+        <td><%= health1.Percentage_share_of_Social_Services_in_Total_Expenditure_India %></td>
+        <td><%= health1.Percentage_share_of_Social_Services_in_Total_Expenditure_Bihar %></td>
+        <td><%= health1.Per_Capita_Expenditure_on_Social_Services_India %></td>
+        <td><%= health1.Per_Capita_Expenditure_on_Social_Services_Bihar %></td>
+        <td><%= link_to 'Show', health1 %></td>
+        <td><%= link_to 'Edit', edit_health1_path(health1) %></td>
+        <td><%= link_to 'Destroy', health1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Health1', new_health1_path %>

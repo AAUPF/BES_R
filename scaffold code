@@ -1,1 +1,1 @@
-rails g scaffold 
+rails g scaffold health5 Year:integer District_Hospital:float Referral_Hospital:float Sub_Divisional_Hospital:float PHC:float Sub_Centre:float APHC:float Total_Health_Centre:float Health_centres_per_lakh_of_population:float

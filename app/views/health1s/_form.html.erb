@@ -1,0 +1,62 @@
+<%= form_with(model: health1, local: true) do |form| %>
+  <% if health1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health1.errors.count, "error") %> prohibited this health1 from being saved:</h2>
+
+      <ul>
+      <% health1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Expense_on_Social_Services_India %>
+    <%= form.text_field :Total_Expense_on_Social_Services_India %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Expense_on_Social_Services_Bihar %>
+    <%= form.text_field :Total_Expense_on_Social_Services_Bihar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Expense_India %>
+    <%= form.text_field :Total_Expense_India %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Expense_Bihar %>
+    <%= form.text_field :Total_Expense_Bihar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_share_of_Social_Services_in_Total_Expenditure_India %>
+    <%= form.text_field :Percentage_share_of_Social_Services_in_Total_Expenditure_India %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_share_of_Social_Services_in_Total_Expenditure_Bihar %>
+    <%= form.text_field :Percentage_share_of_Social_Services_in_Total_Expenditure_Bihar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Per_Capita_Expenditure_on_Social_Services_India %>
+    <%= form.text_field :Per_Capita_Expenditure_on_Social_Services_India %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Per_Capita_Expenditure_on_Social_Services_Bihar %>
+    <%= form.text_field :Per_Capita_Expenditure_on_Social_Services_Bihar %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

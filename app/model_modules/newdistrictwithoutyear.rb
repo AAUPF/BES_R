@@ -107,14 +107,31 @@ module Newdistrictwithoutyear
           end
         end
       end
-      title = {
-        animationEnabled: true,
-        exportEnabled: true,
-        title: {
-          text: rain_fall_type.to_s.tr('_', ' ').to_s
+      if views == "stackedBar" || views == "stackedBar100"
+        title = {
+          animationEnabled: true,
+          exportEnabled: true,
+          title: {
+            text: rain_fall_type.to_s.tr('_', ' ').to_s
+          },
+          data: hash_data
+        }
+      else
+        title = {
+          animationEnabled: true,
+          exportEnabled: true,
+          title: {
+            text: rain_fall_type.to_s.tr('_', ' ').to_s
+          },
+          axisX: {
+            interval:1,
+            labelMaxWidth: 180,
+            labelAngle: 90,
+            labelFontFamily:"verdana0"
         },
-        data: hash_data
-      }
+          data: hash_data
+        }
+      end
       return title
     else
       if compare == 'Bihar vs District'
@@ -143,14 +160,31 @@ module Newdistrictwithoutyear
                         end
           }]
       end
-      title = {
-        animationEnabled: true,
-        exportEnabled: true,
-        title: {
-          text: rain_fall_type.to_s.tr('_', ' ').to_s
+      if views == "stackedBar" || views == "stackedBar100"
+        title = {
+          animationEnabled: true,
+          exportEnabled: true,
+          title: {
+            text: rain_fall_type.to_s.tr('_', ' ').to_s
+          },
+          data: hash_data
+        }
+      else
+        title = {
+          animationEnabled: true,
+          exportEnabled: true,
+          title: {
+            text: rain_fall_type.to_s.tr('_', ' ').to_s
+          },
+          axisX: {
+            interval:1,
+            labelMaxWidth: 180,
+            labelAngle: 90,
+            labelFontFamily:"verdana0"
         },
-        data: hash_data
-      }
+          data: hash_data
+        }
+      end
       return title
     end
   end

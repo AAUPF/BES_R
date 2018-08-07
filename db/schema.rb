@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_03_103123) do
+ActiveRecord::Schema.define(version: 2018_08_06_121547) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -289,6 +289,34 @@ ActiveRecord::Schema.define(version: 2018_08_03_103123) do
     t.float "Fibre_Crops"
     t.float "Sugarcane"
     t.float "Total_Area"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Total_Expense_on_Social_Services_India"
+    t.float "Total_Expense_on_Social_Services_Bihar"
+    t.float "Total_Expense_India"
+    t.float "Total_Expense_Bihar"
+    t.float "Percentage_share_of_Social_Services_in_Total_Expenditure_India"
+    t.float "Percentage_share_of_Social_Services_in_Total_Expenditure_Bihar"
+    t.float "Per_Capita_Expenditure_on_Social_Services_India"
+    t.float "Per_Capita_Expenditure_on_Social_Services_Bihar"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health5s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "District_Hospital"
+    t.float "Referral_Hospital"
+    t.float "Sub_Divisional_Hospital"
+    t.float "PHC"
+    t.float "Sub_Centre"
+    t.float "APHC"
+    t.float "Total_Health_Centre"
+    t.float "Health_centres_per_lakh_of_population"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

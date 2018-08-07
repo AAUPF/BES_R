@@ -1,0 +1,2 @@
+json.extract! health1, :id, :Year, :Total_Expense_on_Social_Services_India, :Total_Expense_on_Social_Services_Bihar, :Total_Expense_India, :Total_Expense_Bihar, :Percentage_share_of_Social_Services_in_Total_Expenditure_India, :Percentage_share_of_Social_Services_in_Total_Expenditure_Bihar, :Per_Capita_Expenditure_on_Social_Services_India, :Per_Capita_Expenditure_on_Social_Services_Bihar, :created_at, :updated_at
+json.url health1_url(health1, format: :json)

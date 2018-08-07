@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: 1
+  District_Hospital: 1.5
+  Referral_Hospital: 1.5
+  Sub_Divisional_Hospital: 1.5
+  PHC: 1.5
+  Sub_Centre: 1.5
+  APHC: 1.5
+  Total_Health_Centre: 1.5
+  Health_centres_per_lakh_of_population: 1.5
+
+two:
+  Year: 1
+  District_Hospital: 1.5
+  Referral_Hospital: 1.5
+  Sub_Divisional_Hospital: 1.5
+  PHC: 1.5
+  Sub_Centre: 1.5
+  APHC: 1.5
+  Total_Health_Centre: 1.5
+  Health_centres_per_lakh_of_population: 1.5

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Health5s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>District hospital</th>
+      <th>Referral hospital</th>
+      <th>Sub divisional hospital</th>
+      <th>Phc</th>
+      <th>Sub centre</th>
+      <th>Aphc</th>
+      <th>Total health centre</th>
+      <th>Health centres per lakh of population</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @health5s.each do |health5| %>
+      <tr>
+        <td><%= health5.Year %></td>
+        <td><%= health5.District_Hospital %></td>
+        <td><%= health5.Referral_Hospital %></td>
+        <td><%= health5.Sub_Divisional_Hospital %></td>
+        <td><%= health5.PHC %></td>
+        <td><%= health5.Sub_Centre %></td>
+        <td><%= health5.APHC %></td>
+        <td><%= health5.Total_Health_Centre %></td>
+        <td><%= health5.Health_centres_per_lakh_of_population %></td>
+        <td><%= link_to 'Show', health5 %></td>
+        <td><%= link_to 'Edit', edit_health5_path(health5) %></td>
+        <td><%= link_to 'Destroy', health5, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Health5', new_health5_path %>

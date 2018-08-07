@@ -1,0 +1,62 @@
+<%= form_with(model: health5, local: true) do |form| %>
+  <% if health5.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health5.errors.count, "error") %> prohibited this health5 from being saved:</h2>
+
+      <ul>
+      <% health5.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :District_Hospital %>
+    <%= form.text_field :District_Hospital %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Referral_Hospital %>
+    <%= form.text_field :Referral_Hospital %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Sub_Divisional_Hospital %>
+    <%= form.text_field :Sub_Divisional_Hospital %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PHC %>
+    <%= form.text_field :PHC %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Sub_Centre %>
+    <%= form.text_field :Sub_Centre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :APHC %>
+    <%= form.text_field :APHC %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Health_Centre %>
+    <%= form.text_field :Total_Health_Centre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Health_centres_per_lakh_of_population %>
+    <%= form.text_field :Health_centres_per_lakh_of_population %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

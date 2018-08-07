@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :health5s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :health1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :agricultural_inputs1_part2s do 
                       collection { post :import }
                       collection { get :dropdown }
