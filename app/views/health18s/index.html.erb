@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Health18s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Regular post sanctioned</th>
+      <th>Contractual post sanctioned</th>
+      <th>Regular anm employed</th>
+      <th>Contractual anm employed</th>
+      <th>Number of anm per lakh population</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @health18s.each do |health18| %>
+      <tr>
+        <td><%= health18.Districts %></td>
+        <td><%= health18.Regular_Post_sanctioned %></td>
+        <td><%= health18.Contractual_Post_sanctioned %></td>
+        <td><%= health18.Regular_ANM_Employed %></td>
+        <td><%= health18.Contractual_ANM_Employed %></td>
+        <td><%= health18.Number_of_ANM_per_lakh_population %></td>
+        <td><%= health18.Year %></td>
+        <td><%= link_to 'Show', health18 %></td>
+        <td><%= link_to 'Edit', edit_health18_path(health18) %></td>
+        <td><%= link_to 'Destroy', health18, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Health18', new_health18_path %>

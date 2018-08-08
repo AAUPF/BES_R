@@ -17,7 +17,7 @@ class Health16sController < ApplicationController
 
 def test
   unit1 = "000";
-  ji = [:Regular_Post_sanctioned, :Contractual_Post_sanctioned, :Regular_Doctor_Employed, :Contractual_Doctor_Employed, :Year, :Number_of_doctors_per_lakh_population]
+  ji = [:Regular_Post_sanctioned, :Contractual_Post_sanctioned, :Regular_Doctor_Employed, :Contractual_Doctor_Employed, :Number_of_doctors_per_lakh_population]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]

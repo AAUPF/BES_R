@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Health19s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Target</th>
+      <th>Selection</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @health19s.each do |health19| %>
+      <tr>
+        <td><%= health19.Districts %></td>
+        <td><%= health19.Target %></td>
+        <td><%= health19.Selection %></td>
+        <td><%= health19.Year %></td>
+        <td><%= link_to 'Show', health19 %></td>
+        <td><%= link_to 'Edit', edit_health19_path(health19) %></td>
+        <td><%= link_to 'Destroy', health19, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Health19', new_health19_path %>

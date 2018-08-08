@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Acute_Diarrheal_Disease: 1.5
+  Bacillary_Dysentery: 1.5
+  Viral_Hepatitis: 1.5
+  Enteric_Fever: 1.5
+  Malaria: 1.5
+  PUO: 1.5
+  Acute_Respiratory_Infection: 1.5
+  Pneumonia: 1.5
+  Dogbite: 1.5
+  Other_State_Specific_Disease: 1.5
+  Unusual_Syndromes_Not_Captured: 1.5
+
+two:
+  Districts: MyString
+  Acute_Diarrheal_Disease: 1.5
+  Bacillary_Dysentery: 1.5
+  Viral_Hepatitis: 1.5
+  Enteric_Fever: 1.5
+  Malaria: 1.5
+  PUO: 1.5
+  Acute_Respiratory_Infection: 1.5
+  Pneumonia: 1.5
+  Dogbite: 1.5
+  Other_State_Specific_Disease: 1.5
+  Unusual_Syndromes_Not_Captured: 1.5

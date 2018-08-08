@@ -1,1 +1,1 @@
-rails g scaffold health16 Districts:string Regular_Post_sanctioned:float Contractual_Post_sanctioned:float Regular_Doctor_Employed:float Contractual_Doctor_Employed:float Year:integer Number_of_doctors_per_lakh_population:float
+rails g scaffold health22 Districts:string NRHM_Total:float Year:integer

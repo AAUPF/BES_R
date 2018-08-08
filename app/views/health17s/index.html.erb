@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Health17s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Regular post sanctioned</th>
+      <th>Contractual post sanctioned</th>
+      <th>Regular grade a nurses employed</th>
+      <th>Contractual grade a nurses employed</th>
+      <th>Number of grade a nurses per lakh population</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @health17s.each do |health17| %>
+      <tr>
+        <td><%= health17.Districts %></td>
+        <td><%= health17.Regular_Post_sanctioned %></td>
+        <td><%= health17.Contractual_Post_sanctioned %></td>
+        <td><%= health17.Regular_Grade_A_Nurses_Employed %></td>
+        <td><%= health17.Contractual_Grade_A_Nurses_Employed %></td>
+        <td><%= health17.Number_of_Grade_A_Nurses_per_lakh_population %></td>
+        <td><%= health17.Year %></td>
+        <td><%= link_to 'Show', health17 %></td>
+        <td><%= link_to 'Edit', edit_health17_path(health17) %></td>
+        <td><%= link_to 'Destroy', health17, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Health17', new_health17_path %>

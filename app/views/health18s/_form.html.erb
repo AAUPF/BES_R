@@ -1,0 +1,52 @@
+<%= form_with(model: health18, local: true) do |form| %>
+  <% if health18.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health18.errors.count, "error") %> prohibited this health18 from being saved:</h2>
+
+      <ul>
+      <% health18.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Regular_Post_sanctioned %>
+    <%= form.text_field :Regular_Post_sanctioned %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Contractual_Post_sanctioned %>
+    <%= form.text_field :Contractual_Post_sanctioned %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Regular_ANM_Employed %>
+    <%= form.text_field :Regular_ANM_Employed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Contractual_ANM_Employed %>
+    <%= form.text_field :Contractual_ANM_Employed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_ANM_per_lakh_population %>
+    <%= form.text_field :Number_of_ANM_per_lakh_population %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

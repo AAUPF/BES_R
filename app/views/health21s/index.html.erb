@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Health21s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Acute diarrheal disease</th>
+      <th>Bacillary dysentery</th>
+      <th>Viral hepatitis</th>
+      <th>Enteric fever</th>
+      <th>Malaria</th>
+      <th>Puo</th>
+      <th>Acute respiratory infection</th>
+      <th>Pneumonia</th>
+      <th>Dogbite</th>
+      <th>Other state specific disease</th>
+      <th>Unusual syndromes not captured</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @health21s.each do |health21| %>
+      <tr>
+        <td><%= health21.Districts %></td>
+        <td><%= health21.Acute_Diarrheal_Disease %></td>
+        <td><%= health21.Bacillary_Dysentery %></td>
+        <td><%= health21.Viral_Hepatitis %></td>
+        <td><%= health21.Enteric_Fever %></td>
+        <td><%= health21.Malaria %></td>
+        <td><%= health21.PUO %></td>
+        <td><%= health21.Acute_Respiratory_Infection %></td>
+        <td><%= health21.Pneumonia %></td>
+        <td><%= health21.Dogbite %></td>
+        <td><%= health21.Other_State_Specific_Disease %></td>
+        <td><%= health21.Unusual_Syndromes_Not_Captured %></td>
+        <td><%= link_to 'Show', health21 %></td>
+        <td><%= link_to 'Edit', edit_health21_path(health21) %></td>
+        <td><%= link_to 'Destroy', health21, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Health21', new_health21_path %>

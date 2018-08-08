@@ -1,0 +1,77 @@
+<%= form_with(model: health21, local: true) do |form| %>
+  <% if health21.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health21.errors.count, "error") %> prohibited this health21 from being saved:</h2>
+
+      <ul>
+      <% health21.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Acute_Diarrheal_Disease %>
+    <%= form.text_field :Acute_Diarrheal_Disease %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Bacillary_Dysentery %>
+    <%= form.text_field :Bacillary_Dysentery %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Viral_Hepatitis %>
+    <%= form.text_field :Viral_Hepatitis %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Enteric_Fever %>
+    <%= form.text_field :Enteric_Fever %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Malaria %>
+    <%= form.text_field :Malaria %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PUO %>
+    <%= form.text_field :PUO %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Acute_Respiratory_Infection %>
+    <%= form.text_field :Acute_Respiratory_Infection %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pneumonia %>
+    <%= form.text_field :Pneumonia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Dogbite %>
+    <%= form.text_field :Dogbite %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Other_State_Specific_Disease %>
+    <%= form.text_field :Other_State_Specific_Disease %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Unusual_Syndromes_Not_Captured %>
+    <%= form.text_field :Unusual_Syndromes_Not_Captured %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Regular_Post_sanctioned: 1.5
+  Contractual_Post_sanctioned: 1.5
+  Regular_ANM_Employed: 1.5
+  Contractual_ANM_Employed: 1.5
+  Number_of_ANM_per_lakh_population: 1.5
+  Year: 1
+
+two:
+  Districts: MyString
+  Regular_Post_sanctioned: 1.5
+  Contractual_Post_sanctioned: 1.5
+  Regular_ANM_Employed: 1.5
+  Contractual_ANM_Employed: 1.5
+  Number_of_ANM_per_lakh_population: 1.5
+  Year: 1
