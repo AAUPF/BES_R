@@ -35,12 +35,12 @@ def test
           u = "Total"
           a = AnnualRainfall.map(b,params[:year],rain_fall_type,views)
          else
-          b = AnnualRainfall.map_search(params[:search],compare,year,rain_fall_type)
-          a = AnnualRainfall.map(b,rain_fall_type,year,ji,unit1)
+          b = AnnualRainfall.map_search(params[:search],compare,year,rain_fall_type,month)
+          a = AnnualRainfall.map(b,rain_fall_type,year,ji,month)
          end
       elsif views == "Table"  
         b = AnnualRainfall.search(params[:search],compare,year,rain_fall_type,month)
-        a = AnnualRainfall.table(b,rain_fall_type,year,ji,compare)
+        a = AnnualRainfall.table(b,rain_fall_type,year,ji,compare,search,month)
       else
         @AnnualRainfalls = AnnualRainfall.search(params[:search],compare,year,rain_fall_type,month)
         a = AnnualRainfall.query(@AnnualRainfalls,params[:year],rain_fall_type,views,ji,compare,month,search)

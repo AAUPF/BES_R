@@ -223,9 +223,9 @@ ActiveRecord::Schema.define(version: 2018_08_08_103908) do
 
   create_table "animal_husbandry3s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
-    t.float "Animals_Treated"
-    t.float "Immunization"
-    t.float "Artificial_Insemination"
+    t.float "Animals_Treated_in_Lakh"
+    t.float "Immunization_in_Lakh"
+    t.float "Artificial_Insemination_in_Lakh"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -841,7 +841,6 @@ ActiveRecord::Schema.define(version: 2018_08_08_103908) do
     t.float "SouthWestMonsoonRain"
     t.float "NorthWestMonsoonRain"
     t.float "TotalRainfall"
-    t.integer "year", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
