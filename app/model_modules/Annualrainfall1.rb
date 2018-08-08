@@ -18,7 +18,7 @@ module Annualrainfall1
    if search == "All" 
 
     where(Year: year).order(:id)
-
+ 
    elsif search
 
     if month
@@ -26,11 +26,17 @@ module Annualrainfall1
 
         where('Districts = ? OR Districts = ?', search, compare).where(Year: year).order(:id)
       else
-        where('Districts = ? OR Districts = ?', search, compare).where(Year: year).order(:id)
+         if year == "All"
+          where('Districts = ? OR Districts = ?', search, compare).order(:id)
+         else
+          where('Districts = ? OR Districts = ?', search, compare).where(Year: year).order(:id)
+         end
+       
 
       end
       # where(Year: year).where(Districts: search)
     else
+
       where(Districts: search).where(Year: year)
     end
    
@@ -38,32 +44,57 @@ module Annualrainfall1
    end
   end
     # Logic to generate table starts
-    def table (b,rain_fall_type,year,ji,compare)
+    def table (b,rain_fall_type,year,ji1,compare,search,month)
       dataset = rain_fall_type.gsub("_"," ")
 
       if rain_fall_type == "All"
-        hash_data = ji.map do |el|
+        hash_data = ji1.map do |el|
             if el.to_s == "Irrigation_Sources"
               {title:"Irrigation Sources", field:el,headerFilter:true}
             else
-              {title:el.to_s.gsub("_"," "), field:el}
+              {title:el.to_s.gsub("_"," "), field:el ,headerFilter:true}
             end
            end
       else
-      if compare == "None"
-        hash_data = [
-        #   {title:"Year", field:"Year", sorter:"string",  editor:true},
-        {title:"Irrigation Sources", field:"Irrigation_Sources"},
-        {title:dataset, field:rain_fall_type}
-      ]
-      else
-        hash_data = [
-        # {title:compare, field:compare, sorter:"string", editor:true},
-        #   {title:"Year", field:"Year", sorter:"string", editor:true},
-        {title:"Irrigation Sources", field:"Irrigation_Sources"},
-        {title:dataset, field:rain_fall_type}
-      ]
-      end
+        if rain_fall_type == "Winter_Rain"
+          ji = [:Districts,:January, :February]
+          hash_data = ji.map do |col|
+            {title:col.to_s.gsub("_"," "), field:col ,headerFilter:true}
+          end      
+        elsif rain_fall_type == "Hot_Weather_Rain"
+    
+          ji = [:Districts,:March, :April, :May]
+          hash_data = ji.map do |col|
+            {title:col.to_s.gsub("_"," "), field:col ,headerFilter:true}
+          end      
+    
+    
+        elsif rain_fall_type == "South_West_Monsoon"
+    
+          ji = [:Districts,:June, :July, :August, :September]
+          hash_data = ji.map do |col|
+            {title:col.to_s.gsub("_"," "), field:col ,headerFilter:true}
+          end   
+        elsif rain_fall_type == "North_West_Monsoon"
+    
+          ji = [:Districts,:October, :November, :December]
+          hash_data = ji.map do |col|
+            {title:col.to_s.gsub("_"," "), field:col ,headerFilter:true}
+          end 
+        elsif rain_fall_type == "All"
+    
+          ji = [:January, :February,:March, :April, :May,:June, :July, :August, :September,:October, :November, :December]
+          hash_data = ji.map do |col|
+            {title:col.to_s.gsub("_"," "), field:col ,headerFilter:true}
+          end 
+ 
+        else
+         hash_data = [{title:"Districts", field:"Districts" ,headerFilter:true},
+          {title:month.to_s.gsub("_"," "), field:month }
+        
+        ]
+    
+        end
       end
        data = {column: hash_data,data: b}
      return data
@@ -71,28 +102,22 @@ module Annualrainfall1
           # Logic to generate table end
 
 
-  def map_search(search,compare,year,rain_fall_type)
+  def map_search(search,compare,year,rain_fall_type,month)
     if search == "All"
       if rain_fall_type == "All"
-        all.order(:id)
+        where(Year: year).order(:id)
       else
-        all.order(rain_fall_type)
+        where(Year: year).order(month)
       end
     else
       # where(Districts: search)
-      all.order(rain_fall_type)
+      where(Year: year).order(month)
     end
   end
 
 
   def query(b,year,rain_fall_type,views,ji,compare,month,search)
     d = "Irrigation_Sources"
-
-    # if search == "All"
-      
-    # else
-      
-    # end
     if rain_fall_type == "Winter_Rain"
       ji = [:January, :February]
       hash_data = ji.map do |col|
@@ -166,47 +191,88 @@ module Annualrainfall1
       end  
 
     elsif rain_fall_type == "None"  && month == "All"
+          if year == "All"
+            ji = [:January, :February,:March, :April, :May,:June, :July, :August, :September,:October, :November, :December]
+            hash_data = ji.map do |col|
+              {
+                type:views,
+               
+                legendText: col,
+                showInLegend: true,
+                dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+                     { y: el[col], label: el["Year"] }
+                end
+              }
+      
+            end  
+          else
+            ji = [:January, :February,:March, :April, :May,:June, :July, :August, :September,:October, :November, :December]
+            hash_data = ji.map do |col|
+              {
+                type:views,
+               
+                legendText: col,
+                showInLegend: true,
+                dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+                     { y: el[col], label: el["Districts"] }
+                end
+              }
+      
+            end  
+          end
+   
+    else
 
-      ji = [:January, :February,:March, :April, :May,:June, :July, :August, :September,:October, :November, :December]
-      hash_data = ji.map do |col|
-        {
+      if year == "All"
+        hash_data =
+        [{
           type:views,
-         
-          legendText: col,
+          legendText: month,
+          showInLegend: true,
+          dataPoints: b.reject{|x| x["Year"]== 1947}.map do |el|
+               { y: el[month], label: el["Year"] }
+          end
+        }]
+      else
+        hash_data =
+        [{
+          type:views,
+          legendText: month,
           showInLegend: true,
           dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
-               { y: el[col], label: el["Districts"] }
+               { y: el[month], label: el["Districts"] }
           end
-        }
-
-      end  
-    else
-          # month == "January"
-    hash_data =
-    [{
-      type:views,
-      legendText: month,
-      showInLegend: true,
-      dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
-           { y: el[month], label: el["Districts"] }
+        }]
       end
-    }]
 
     end
-      title = {
-        animationEnabled: true,
-        exportEnabled: true,
-        title:{
-          text: "#{search.to_s.gsub("_"," ")}"
+  if views == "stackedBar100" or views == "stackedBar"
+    title = {
+      animationEnabled: true,
+      exportEnabled: true,
+      title:{
+        text: "#{search.to_s.gsub("_"," ")}"
+            },
+      data: hash_data
+  }
+ 
+  else
+    title = {
+      animationEnabled: true,
+      exportEnabled: true,
+      title:{
+        text: "#{search.to_s.gsub("_"," ")}"
+            },
+            axisX: {
+              interval:1,
+              labelMaxWidth: 180,
+              labelAngle: 90,
+              labelFontFamily:"verdana0"
               },
-              axisX: {
-                interval:1,
-                labelMaxWidth: 180,
-                labelAngle: 90,
-                labelFontFamily:"verdana0"
-                },
-        data: hash_data
-    }
+      data: hash_data
+  }
+    
+  end
       return title
 end
 
@@ -483,7 +549,7 @@ end
 
 
 
-  def map(b,rain_fall_type,views,ji)
+  def map(b,rain_fall_type,views,ji,month)
     array = []
     # a = []
     l =  rain_fall_type.gsub(" ","")
@@ -503,39 +569,37 @@ end
 
         dist = el["Districts"]
 
-      if (0..7) === i
-        hash1 = { y: el[rain_fall_type], label: dist, color: "Red" }
+      if (0..6) === i
+        hash1 = { y: el[month], label: dist, color: "Red" }
         below_min.push(hash1)
-      elsif (7..15) === i
-        hash1 = { y: el[rain_fall_type], label: dist, color: "Orange" }
+      elsif (6..12) === i
+        hash1 = { y: el[month], label: dist, color: "Orange" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         min.push(hash1)
-      elsif (15..21) === i
-        hash1 = { y: el[rain_fall_type], label: dist, color: "Dark_Yellow" }
+      elsif (12..18) === i
+        hash1 = { y: el[month], label: dist, color: "Dark_Yellow" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         blow_max.push(hash1)
-      elsif (21..26) === i
-        hash1 = { y: el[rain_fall_type], label: dist, color: "Yellow" }
+      elsif (18..24) === i
+        hash1 = { y: el[month], label: dist, color: "Yellow" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         max.push(hash1)
 
-      elsif (26..32) === i
-        hash1 = { y: el[rain_fall_type], label: dist, color: "Light_Green" }
+      elsif (24..30) === i
+        hash1 = { y: el[month], label: dist, color: "Light_Green" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         above_max.push(hash1)
 
-      elsif (32..37) === i
-        hash1 = { y: el[rain_fall_type], label: dist, color: "Green" }
+      elsif (30..36) === i
+        hash1 = { y: el[month], label: dist, color: "Green" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         extreme.push(hash1)
 
       elsif (36..40) === i
-        hash1 = { y: el[rain_fall_type], label: dist, color: "Dark_Green" }
+        hash1 = { y: el[month], label: dist, color: "Dark_Green" }
         # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
         above_extreme.push(hash1)
       else
-
-        puts "Hello"
       end
       # array.push(a)
     end
@@ -548,7 +612,66 @@ end
     a.push({"above_extreme": above_extreme})
     # array = [{name: "array"}]
     # sleep 1
+
+    unit1 = "mm"
+
+    if below_min.any?
+      b = { min: below_min.first[:y], max: "#{below_min.last[:y]}, #{unit1}" }
+    else
+      b = { min: below_min.first[:y], max: "#{below_min.last[:y]}, #{unit1}" }
+    end
+
+    if min.any?
+      c = { min: min.first[:y], max: "#{min.last[:y]}, #{unit1}" }
+    else
+      c = { min: min.first[:y], max: "#{min.last[:y]}, #{unit1}" }
+    end
+
+    if blow_max.any?
+      d = { min: blow_max.first[:y], max: "#{blow_max.last[:y]}, #{unit1}" }
+    else
+      d = { min: blow_max.first[:y], max: "#{blow_max.last[:y]}, #{unit1}" }
+    end
+
+    if max.any?
+      e = { min: max.first[:y], max: "#{max.last[:y]}, #{unit1}" }
+    else
+      e = { min: max.first[:y], max: "#{max.last[:y]}, #{unit1}" }
+    end
+
+    if above_max.any?
+
+      f = { min: above_max.first[:y], max: "#{above_max.last[:y]}, #{unit1}" }
+
+    else
+      f = { min: above_max.first[:y], max: "#{above_max.last[:y]}, #{unit1}" } 
+
+    end
+
+    if extreme.any?
+      g =  { min: extreme.first[:y], max: "#{extreme.last[:y]}, #{unit1}" } 
+
+    else
+      g = { min: extreme.first[:y], max: "#{extreme.last[:y]}, #{unit1}" } 
+    end
+
+    if above_extreme.any?
+      h = { min: above_extreme.first[:y], max: "#{above_extreme.last[:y]}, #{unit1}" }
+    else
+      h = {  }
+    end
+      hu = {
+        below_min: b,
+        min: c,
+        blow_max: d,
+        max: e,
+        above_max: f,
+        extreme: g,
+        above_extreme: h
+      }
+
+    a.push("data": hu)
     return a
   end
-    
+  
 end

@@ -155,14 +155,32 @@ module Diseasedata
             end
           }]
         end
-        title = {
-          animationEnabled: true,
-          exportEnabled: true,
-          title:{
-                   text: "#{rain_fall_type.to_s.gsub("_"," ")}"
-                },
-          data: hash_data
-      }
+        if views == "stackedBar100" or views == "stackedBar"
+          title = {
+            animationEnabled: true,
+            exportEnabled: true,
+            title:{
+              text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                  },
+            data: hash_data
+        }
+       
+        else
+          title = {
+            animationEnabled: true,
+            exportEnabled: true,
+            title:{
+              text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                  },
+                  axisX: {
+                    interval:1,
+                    labelMaxWidth: 180,
+                    labelAngle: 90,
+                    labelFontFamily:"verdana0"
+                    },
+            data: hash_data
+        }
+        end
         return title
       end
   end
