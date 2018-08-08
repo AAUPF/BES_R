@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name_of_the_Post: MyString
+  Regular_Total_Sanctioned_Posts: 1.5
+  Regular_Working: 1.5
+  Contractual_Sanctioned_Posts: 1.5
+  Contractual_Working: 1.5
+  Year: 1
+
+two:
+  Name_of_the_Post: MyString
+  Regular_Total_Sanctioned_Posts: 1.5
+  Regular_Working: 1.5
+  Contractual_Sanctioned_Posts: 1.5
+  Contractual_Working: 1.5
+  Year: 1

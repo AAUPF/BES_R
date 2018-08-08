@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Health13s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Posts</th>
+      <th>No of sanctioned posts</th>
+      <th>Working</th>
+      <th>Percentage of vacant post</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @health13s.each do |health13| %>
+      <tr>
+        <td><%= health13.Posts %></td>
+        <td><%= health13.No_of_Sanctioned_Posts %></td>
+        <td><%= health13.Working %></td>
+        <td><%= health13.Percentage_of_Vacant_Post %></td>
+        <td><%= health13.Year %></td>
+        <td><%= link_to 'Show', health13 %></td>
+        <td><%= link_to 'Edit', edit_health13_path(health13) %></td>
+        <td><%= link_to 'Destroy', health13, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Health13', new_health13_path %>

@@ -16,12 +16,13 @@ class Health6sController < ApplicationController
   end
 
 def test
-  ji = [:District, :Average_number_of_Outpatient_visits_per_day, :Inpatient_Bed_Occupancy_Rate, :Year]
+  # unit1 =  "000"
+  ji = [:Average_number_of_Outpatient_visits_per_day, :Inpatient_Bed_Occupancy_Rate]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-
+ji1 = [:Districts, :Average_number_of_Outpatient_visits_per_day, :Inpatient_Bed_Occupancy_Rate, :Year]
   if rain_fall_type || views
 
       if views == "Map View"
@@ -32,7 +33,7 @@ def test
           a = Health6.map(b,params[:year],rain_fall_type,views)
          else
           b = Health6.map_search(params[:search],compare,year,rain_fall_type)
-          a = Health6.map(b,rain_fall_type,year,ji,unit1)
+          a = Health6.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
         b = Health6.search(params[:search],compare,year,rain_fall_type)
@@ -98,6 +99,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def health6_params
-      params.require(:health6).permit(:District, :Average_number_of_Outpatient_visits_per_day, :Inpatient_Bed_Occupancy_Rate, :Year)
+      params.require(:health6).permit(:Districts, :Average_number_of_Outpatient_visits_per_day, :Inpatient_Bed_Occupancy_Rate, :Year)
     end
 end

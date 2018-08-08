@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Health15s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>District hospital</th>
+      <th>Referral hospital</th>
+      <th>Sdh</th>
+      <th>Phc</th>
+      <th>Health subcentre</th>
+      <th>Aphc</th>
+      <th>Dh rh sdh phc hsc aphc</th>
+      <th>Population health institution</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @health15s.each do |health15| %>
+      <tr>
+        <td><%= health15.Districts %></td>
+        <td><%= health15.District_Hospital %></td>
+        <td><%= health15.Referral_Hospital %></td>
+        <td><%= health15.SDH %></td>
+        <td><%= health15.PHC %></td>
+        <td><%= health15.Health_SubCentre %></td>
+        <td><%= health15.APHC %></td>
+        <td><%= health15.DH_RH_SDH_PHC_HSC_APHC %></td>
+        <td><%= health15.Population_Health_Institution %></td>
+        <td><%= link_to 'Show', health15 %></td>
+        <td><%= link_to 'Edit', edit_health15_path(health15) %></td>
+        <td><%= link_to 'Destroy', health15, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Health15', new_health15_path %>

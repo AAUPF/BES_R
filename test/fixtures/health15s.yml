@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  District_Hospital: 1.5
+  Referral_Hospital: 1.5
+  SDH: 1.5
+  PHC: 1.5
+  Health_SubCentre: 1.5
+  APHC: 1.5
+  DH_RH_SDH_PHC_HSC_APHC: 1.5
+  Population_Health_Institution: 1.5
+
+two:
+  Districts: MyString
+  District_Hospital: 1.5
+  Referral_Hospital: 1.5
+  SDH: 1.5
+  PHC: 1.5
+  Health_SubCentre: 1.5
+  APHC: 1.5
+  DH_RH_SDH_PHC_HSC_APHC: 1.5
+  Population_Health_Institution: 1.5

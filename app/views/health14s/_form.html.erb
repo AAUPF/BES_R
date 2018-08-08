@@ -1,0 +1,47 @@
+<%= form_with(model: health14, local: true) do |form| %>
+  <% if health14.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health14.errors.count, "error") %> prohibited this health14 from being saved:</h2>
+
+      <ul>
+      <% health14.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Budget_for_ICDS_Bihar %>
+    <%= form.text_field :Budget_for_ICDS_Bihar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Funds_Released_by_GOI %>
+    <%= form.text_field :Funds_Released_by_GOI %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Expenditure %>
+    <%= form.text_field :Expenditure %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Fund_Released_as_Percentage_of_Budget %>
+    <%= form.text_field :Fund_Released_as_Percentage_of_Budget %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Expenditure_as_Percentage_of_Fund_Released %>
+    <%= form.text_field :Expenditure_as_Percentage_of_Fund_Released %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

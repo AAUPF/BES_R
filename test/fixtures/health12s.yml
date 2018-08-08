@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  NRHM: MyString
+  Fund_Disbursed: 1.5
+  Year: 1
+
+two:
+  NRHM: MyString
+  Fund_Disbursed: 1.5
+  Year: 1

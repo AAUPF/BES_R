@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_07_074129) do
+ActiveRecord::Schema.define(version: 2018_08_08_103908) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -312,6 +312,78 @@ ActiveRecord::Schema.define(version: 2018_08_07_074129) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "health10s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Antigenname"
+    t.float "Target"
+    t.float "Achievement"
+    t.integer "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health11s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Diseases"
+    t.float "Number_of_Patients"
+    t.integer "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health12s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "NRHM"
+    t.float "Fund_Disbursed"
+    t.integer "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health13s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Posts"
+    t.float "No_of_Sanctioned_Posts"
+    t.float "Working"
+    t.float "Percentage_of_Vacant_Post"
+    t.integer "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health14s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Budget_for_ICDS_Bihar"
+    t.float "Funds_Released_by_GOI"
+    t.float "Expenditure"
+    t.float "Fund_Released_as_Percentage_of_Budget"
+    t.float "Expenditure_as_Percentage_of_Fund_Released"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health15s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Districts"
+    t.float "District_Hospital"
+    t.float "Referral_Hospital"
+    t.float "SDH"
+    t.float "PHC"
+    t.float "Health_SubCentre"
+    t.float "APHC"
+    t.float "DH_RH_SDH_PHC_HSC_APHC"
+    t.float "Population_Health_Institution"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health16s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Districts"
+    t.float "Regular_Post_sanctioned"
+    t.float "Contractual_Post_sanctioned"
+    t.float "Regular_Doctor_Employed"
+    t.float "Contractual_Doctor_Employed"
+    t.integer "Year"
+    t.float "Number_of_doctors_per_lakh_population"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "health1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
     t.float "Total_Expense_on_Social_Services_India"
@@ -341,10 +413,38 @@ ActiveRecord::Schema.define(version: 2018_08_07_074129) do
   end
 
   create_table "health6s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "District"
+    t.string "Districts"
     t.float "Average_number_of_Outpatient_visits_per_day"
     t.float "Inpatient_Bed_Occupancy_Rate"
     t.integer "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health7s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Name_of_the_Post"
+    t.float "Regular_Total_Sanctioned_Posts"
+    t.float "Regular_Working"
+    t.float "Contractual_Sanctioned_Posts"
+    t.float "Contractual_Working"
+    t.integer "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health8s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Institutional_Delivery"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health9s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "State"
+    t.float "Percentage_of_children_fully_immunized_NFHS_3_2005_06"
+    t.float "Percentage_of_children_fully_immunized_NFHS_4_2015_16"
+    t.float "Percentage_Point_Increase"
+    t.float "Rank_by_percentage_increase"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

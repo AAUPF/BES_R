@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Districts:</strong>
+  <%= @health16.Districts %>
+</p>
+
+<p>
+  <strong>Regular post sanctioned:</strong>
+  <%= @health16.Regular_Post_sanctioned %>
+</p>
+
+<p>
+  <strong>Contractual post sanctioned:</strong>
+  <%= @health16.Contractual_Post_sanctioned %>
+</p>
+
+<p>
+  <strong>Regular doctor employed:</strong>
+  <%= @health16.Regular_Doctor_Employed %>
+</p>
+
+<p>
+  <strong>Contractual doctor employed:</strong>
+  <%= @health16.Contractual_Doctor_Employed %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @health16.Year %>
+</p>
+
+<p>
+  <strong>Number of doctors per lakh population:</strong>
+  <%= @health16.Number_of_doctors_per_lakh_population %>
+</p>
+
+<%= link_to 'Edit', edit_health16_path(@health16) %> |
+<%= link_to 'Back', health16s_path %>

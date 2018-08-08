@@ -15,7 +15,7 @@ class Health6sTest < ApplicationSystemTestCase
     click_on "New Health6"
 
     fill_in "Average Number Of Outpatient Visits Per Day", with: @health6.Average_number_of_Outpatient_visits_per_day
-    fill_in "District", with: @health6.District
+    fill_in "Districts", with: @health6.Districts
     fill_in "Inpatient Bed Occupancy Rate", with: @health6.Inpatient_Bed_Occupancy_Rate
     fill_in "Year", with: @health6.Year
     click_on "Create Health6"
@@ -29,7 +29,7 @@ class Health6sTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Average Number Of Outpatient Visits Per Day", with: @health6.Average_number_of_Outpatient_visits_per_day
-    fill_in "District", with: @health6.District
+    fill_in "Districts", with: @health6.Districts
     fill_in "Inpatient Bed Occupancy Rate", with: @health6.Inpatient_Bed_Occupancy_Rate
     fill_in "Year", with: @health6.Year
     click_on "Update Health6"

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  Percentage_of_children_fully_immunized_NFHS_3_2005_06: 1.5
+  Percentage_of_children_fully_immunized_NFHS_4_2015_16: 1.5
+  Percentage_Point_Increase: 1.5
+  Rank_by_percentage_increase: 1.5
+
+two:
+  State: MyString
+  Percentage_of_children_fully_immunized_NFHS_3_2005_06: 1.5
+  Percentage_of_children_fully_immunized_NFHS_4_2015_16: 1.5
+  Percentage_Point_Increase: 1.5
+  Rank_by_percentage_increase: 1.5

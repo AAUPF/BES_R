@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Antigenname: MyString
+  Target: 1.5
+  Achievement: 1.5
+  Year: 1
+
+two:
+  Antigenname: MyString
+  Target: 1.5
+  Achievement: 1.5
+  Year: 1

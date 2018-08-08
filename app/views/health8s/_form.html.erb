@@ -1,0 +1,27 @@
+<%= form_with(model: health8, local: true) do |form| %>
+  <% if health8.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health8.errors.count, "error") %> prohibited this health8 from being saved:</h2>
+
+      <ul>
+      <% health8.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Institutional_Delivery %>
+    <%= form.text_field :Institutional_Delivery %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

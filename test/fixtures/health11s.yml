@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Diseases: MyString
+  Number_of_Patients: 1.5
+  Year: 1
+
+two:
+  Diseases: MyString
+  Number_of_Patients: 1.5
+  Year: 1

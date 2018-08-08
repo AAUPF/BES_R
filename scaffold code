@@ -1,1 +1,1 @@
-rails g scaffold health5 Year:integer District_Hospital:float Referral_Hospital:float Sub_Divisional_Hospital:float PHC:float Sub_Centre:float APHC:float Total_Health_Centre:float Health_centres_per_lakh_of_population:float
+rails g scaffold health16 Districts:string Regular_Post_sanctioned:float Contractual_Post_sanctioned:float Regular_Doctor_Employed:float Contractual_Doctor_Employed:float Year:integer Number_of_doctors_per_lakh_population:float

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Posts: MyString
+  No_of_Sanctioned_Posts: 1.5
+  Working: 1.5
+  Percentage_of_Vacant_Post: 1.5
+  Year: 1
+
+two:
+  Posts: MyString
+  No_of_Sanctioned_Posts: 1.5
+  Working: 1.5
+  Percentage_of_Vacant_Post: 1.5
+  Year: 1

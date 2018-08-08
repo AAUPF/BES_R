@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Antigenname:</strong>
+  <%= @health10.Antigenname %>
+</p>
+
+<p>
+  <strong>Target:</strong>
+  <%= @health10.Target %>
+</p>
+
+<p>
+  <strong>Achievement:</strong>
+  <%= @health10.Achievement %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @health10.Year %>
+</p>
+
+<%= link_to 'Edit', edit_health10_path(@health10) %> |
+<%= link_to 'Back', health10s_path %>

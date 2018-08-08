@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Regular_Post_sanctioned: 1.5
+  Contractual_Post_sanctioned: 1.5
+  Regular_Doctor_Employed: 1.5
+  Contractual_Doctor_Employed: 1.5
+  Year: 1
+  Number_of_doctors_per_lakh_population: 1.5
+
+two:
+  Districts: MyString
+  Regular_Post_sanctioned: 1.5
+  Contractual_Post_sanctioned: 1.5
+  Regular_Doctor_Employed: 1.5
+  Contractual_Doctor_Employed: 1.5
+  Year: 1
+  Number_of_doctors_per_lakh_population: 1.5

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Health14s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Budget for icds bihar</th>
+      <th>Funds released by goi</th>
+      <th>Expenditure</th>
+      <th>Fund released as percentage of budget</th>
+      <th>Expenditure as percentage of fund released</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @health14s.each do |health14| %>
+      <tr>
+        <td><%= health14.Year %></td>
+        <td><%= health14.Budget_for_ICDS_Bihar %></td>
+        <td><%= health14.Funds_Released_by_GOI %></td>
+        <td><%= health14.Expenditure %></td>
+        <td><%= health14.Fund_Released_as_Percentage_of_Budget %></td>
+        <td><%= health14.Expenditure_as_Percentage_of_Fund_Released %></td>
+        <td><%= link_to 'Show', health14 %></td>
+        <td><%= link_to 'Edit', edit_health14_path(health14) %></td>
+        <td><%= link_to 'Destroy', health14, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Health14', new_health14_path %>

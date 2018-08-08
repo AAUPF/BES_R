@@ -1,0 +1,42 @@
+<%= form_with(model: health9, local: true) do |form| %>
+  <% if health9.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health9.errors.count, "error") %> prohibited this health9 from being saved:</h2>
+
+      <ul>
+      <% health9.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :State %>
+    <%= form.text_field :State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_of_children_fully_immunized_NFHS_3_2005_06 %>
+    <%= form.text_field :Percentage_of_children_fully_immunized_NFHS_3_2005_06 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_of_children_fully_immunized_NFHS_4_2015_16 %>
+    <%= form.text_field :Percentage_of_children_fully_immunized_NFHS_4_2015_16 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_Point_Increase %>
+    <%= form.text_field :Percentage_Point_Increase %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Rank_by_percentage_increase %>
+    <%= form.text_field :Rank_by_percentage_increase %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

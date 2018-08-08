@@ -1,0 +1,37 @@
+<%= form_with(model: health10, local: true) do |form| %>
+  <% if health10.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health10.errors.count, "error") %> prohibited this health10 from being saved:</h2>
+
+      <ul>
+      <% health10.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Antigenname %>
+    <%= form.text_field :Antigenname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Target %>
+    <%= form.text_field :Target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Achievement %>
+    <%= form.text_field :Achievement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

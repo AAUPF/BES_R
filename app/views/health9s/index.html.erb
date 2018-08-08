@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Health9s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Percentage of children fully immunized nfhs 3 2005 06</th>
+      <th>Percentage of children fully immunized nfhs 4 2015 16</th>
+      <th>Percentage point increase</th>
+      <th>Rank by percentage increase</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @health9s.each do |health9| %>
+      <tr>
+        <td><%= health9.State %></td>
+        <td><%= health9.Percentage_of_children_fully_immunized_NFHS_3_2005_06 %></td>
+        <td><%= health9.Percentage_of_children_fully_immunized_NFHS_4_2015_16 %></td>
+        <td><%= health9.Percentage_Point_Increase %></td>
+        <td><%= health9.Rank_by_percentage_increase %></td>
+        <td><%= link_to 'Show', health9 %></td>
+        <td><%= link_to 'Edit', edit_health9_path(health9) %></td>
+        <td><%= link_to 'Destroy', health9, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Health9', new_health9_path %>

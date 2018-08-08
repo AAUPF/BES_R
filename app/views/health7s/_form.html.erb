@@ -1,0 +1,47 @@
+<%= form_with(model: health7, local: true) do |form| %>
+  <% if health7.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health7.errors.count, "error") %> prohibited this health7 from being saved:</h2>
+
+      <ul>
+      <% health7.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Name_of_the_Post %>
+    <%= form.text_field :Name_of_the_Post %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Regular_Total_Sanctioned_Posts %>
+    <%= form.text_field :Regular_Total_Sanctioned_Posts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Regular_Working %>
+    <%= form.text_field :Regular_Working %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Contractual_Sanctioned_Posts %>
+    <%= form.text_field :Contractual_Sanctioned_Posts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Contractual_Working %>
+    <%= form.text_field :Contractual_Working %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

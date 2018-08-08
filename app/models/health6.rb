@@ -1,4 +1,4 @@
 class Health6 < ApplicationRecord
-  extend Code  
+  extend Newdistrict  
 
       end

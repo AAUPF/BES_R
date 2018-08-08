@@ -17,7 +17,7 @@ class Health6sControllerTest < ActionDispatch::IntegrationTest
 
   test "should create health6" do
     assert_difference('Health6.count') do
-      post health6s_url, params: { health6: { Average_number_of_Outpatient_visits_per_day: @health6.Average_number_of_Outpatient_visits_per_day, District: @health6.District, Inpatient_Bed_Occupancy_Rate: @health6.Inpatient_Bed_Occupancy_Rate, Year: @health6.Year } }
+      post health6s_url, params: { health6: { Average_number_of_Outpatient_visits_per_day: @health6.Average_number_of_Outpatient_visits_per_day, Districts: @health6.Districts, Inpatient_Bed_Occupancy_Rate: @health6.Inpatient_Bed_Occupancy_Rate, Year: @health6.Year } }
     end
 
     assert_redirected_to health6_url(Health6.last)
@@ -34,7 +34,7 @@ class Health6sControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update health6" do
-    patch health6_url(@health6), params: { health6: { Average_number_of_Outpatient_visits_per_day: @health6.Average_number_of_Outpatient_visits_per_day, District: @health6.District, Inpatient_Bed_Occupancy_Rate: @health6.Inpatient_Bed_Occupancy_Rate, Year: @health6.Year } }
+    patch health6_url(@health6), params: { health6: { Average_number_of_Outpatient_visits_per_day: @health6.Average_number_of_Outpatient_visits_per_day, Districts: @health6.Districts, Inpatient_Bed_Occupancy_Rate: @health6.Inpatient_Bed_Occupancy_Rate, Year: @health6.Year } }
     assert_redirected_to health6_url(@health6)
   end
 
