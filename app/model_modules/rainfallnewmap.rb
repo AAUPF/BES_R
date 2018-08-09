@@ -212,7 +212,7 @@ module Rainfallnewmap
         u = "Total"
     else
         u = rain_fall_type
-      #   abort(rain_fall_type)
+          # abort(u)
     end
 
   #  abort(rain_fall_type)
@@ -229,7 +229,7 @@ module Rainfallnewmap
      unit =  "mm"
 
       if rain_fall_type == "All"
-        hu = {below_min: {min:  "500 #{unit1}", max: 800},min: {min: 800, max: 1000}, blow_max:{min: 1000, max: 1200}, max:{min: 1200, max: 1300},above_max:{min: 1300, max: 1600},extreme:{min: 1600, max: 2000},above_extreme:{max: 2000}}
+        hu = {below_min: {min:  "500 #{unit}", max: 800},min: {min: 800, max: 1000}, blow_max:{min: 1000, max: 1200}, max:{min: 1200, max: 1300},above_max:{min: 1300, max: 1600},extreme:{min: 1600, max: 2000},above_extreme:{max: 2000}}
       elsif rain_fall_type == "Winter_Rain"
         hu = {below_min: {min: 0, max: 2.5},min: {min: 2.5, max: 5}, blow_max:{min: 5, max: 10}, max:{min: 10, max: 15},above_max:{min: 15, max: 20},extreme:{min: 20, max: 39},above_extreme:{max: 39}}
       elsif rain_fall_type == "Hot_Weather_Rain"
@@ -262,6 +262,7 @@ module Rainfallnewmap
 
     b.map.with_index do |el,i|
         dist = el["Districts"]
+
       if el[u] >=  hu[:below_min][:min].to_i and el[u] <= hu[:below_min][:max].to_i
      
       hash1 = { y: el[u], label: dist, color: "Red" }
