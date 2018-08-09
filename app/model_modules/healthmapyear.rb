@@ -1,4 +1,4 @@
-module Mapwithyear
+module Healthmapyear
     def import1(file)
       spreadsheet = Roo::Spreadsheet.open(file.path)
       header = spreadsheet.row(1)
@@ -25,7 +25,12 @@ module Mapwithyear
           where(Year: year).order("#{rain_fall_type} ")
         end
       elsif compare == 'Bihar vs District'
-        where('Districts = ? OR Districts = ?', search, 'Bihar').where('year = ?', year).order(:id)
+        if year == "All"
+            where('Districts = ? OR Districts = ?', search, 'Bihar').order(:id)
+        else
+            where('Districts = ? OR Districts = ?', search, 'Bihar').where('year = ?', year).order(:id)
+        end
+        
         
 
 
@@ -117,39 +122,60 @@ module Mapwithyear
   
     def query(b, _year, rain_fall_type, views, ji, compare)
       d = 'Districts'
+      
       if rain_fall_type == 'All'
         if views
-          hash_data = ji.map do |column_name|
+            
+            
+            hash_data = ji.map do |column_name|
             if compare == 'Bihar vs District'
-              dataset = column_name.to_s.tr('_', ' ')
+                if _year == "All"
+                     dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
-                              if dataset == 'Productivity'
-                                du = el[column_name] / 100
-                                { y: du, z: du, label: el[d] }
-                              else
-                                { y: el[column_name], z: el[column_name], label: el[d] }
-                              end
+                    { y: el[column_name], z: el[column_name], label: el["Year"] }
                             end
               }
-            else
-              dataset = column_name.to_s.tr('_', ' ')
+                    
+                else
+                    
+                    dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
-                              if dataset == 'Productivity'
-                                du = el[column_name] / 100
-                                { y: du, z: du, label: el[d] }
-                              else
-                                { y: el[column_name], z: el[column_name], label: el[d] }
-                               end
+                dataPoints: b.map do |el|
+                    { y: el[column_name], z: el[column_name], label: el[d] }
                             end
               }
+                end
+              
+            else
+               if _year == "All"
+                dataset = column_name.to_s.tr('_', ' ')
+                {
+                  type: views,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
+                      { y: el[column_name], z: el[column_name], label: el["Year"] }
+                              end
+                }
+               else
+                dataset = column_name.to_s.tr('_', ' ')
+                {
+                  type: views,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
+                      { y: el[column_name], z: el[column_name], label: el[d] }
+                              end
+                }
+               end
+              
             end
           end
         end
@@ -194,24 +220,31 @@ module Mapwithyear
                           end
             }]
         else
-          dataset = rain_fall_type.tr('_', ' ')
-          hash_data =
-            [{
-              type: views,
-  
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
-                            if rain_fall_type == 'Productivity'
-                              du = el[rain_fall_type] / 100
-  
-                              { y: du, label: el['Districts'] }
-  
-                            else
-                              { y: el[rain_fall_type], label: el['Districts'] }
-                            end
-                          end
-            }]
+            dataset = rain_fall_type.tr('_', ' ')
+            if _year == "All"
+                hash_data =
+                    [{
+                    type: views,
+        
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
+                        { y: el[rain_fall_type], label: el['Year'] }
+                                end
+                    }]
+            else
+                hash_data =
+                    [{
+                    type: views,
+        
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
+                        { y: el[rain_fall_type], label: el['Districts'] }
+                                end
+                    }]
+            end
+          
         end
         if views == "stackedBar100" or views == "stackedBar"
           title = {

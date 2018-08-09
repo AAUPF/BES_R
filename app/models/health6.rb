@@ -1,4 +1,4 @@
 class Health6 < ApplicationRecord
-  extend Mapwithyear  
+  extend Healthmapyear
 
       end
