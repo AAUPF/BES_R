@@ -16,6 +16,8 @@ class Health20sController < ApplicationController
   end
 
 def test
+
+  unit1 = "'000"
   ji = [:Institutional_Deliveries]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
