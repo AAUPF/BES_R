@@ -24,19 +24,19 @@ module Health3data
     if month
       if compare != "None"
 
-        where('Region = ? OR Region = ?', search, compare).where(Year: year).order(:id)
+        where('Region = ? ', search).where(Year: year).order(:id)
       else
          if year == "All"
-          where('Region = ? OR Region = ?', search, compare).order(:id)
+
+          where(Region: search).where(Area: month).order(:id)
          else
-          where('Region = ? OR Region = ?', search, compare).where(Year: year).order(:id)
+          where(Region: search).where(Area: month).order(:id)
          end
        
 
       end
       # where(Year: year).where(Region: search)
     else
-
       where(Region: search).where(Year: year)
     end
    
@@ -116,7 +116,7 @@ module Health3data
   end
 
 
-  def query(b,year,rain_fall_type,views,ji,compare,month,search)
+  def query(b,year,rain_fall_type,views,ji1,compare,month,search)
     d = "Irrigation_Sources"
     if rain_fall_type == "Winter_Rain"
       ji = [:January, :February]
@@ -177,7 +177,7 @@ module Health3data
     elsif rain_fall_type == "All"
 
       ji = [:January, :February,:March, :April, :May,:June, :July, :August, :September,:October, :November, :December]
-      hash_data = ji.map do |col|
+      hash_data = ji1.map do |col|
         {
           type:views,
          
@@ -230,7 +230,7 @@ module Health3data
           legendText: month,
           showInLegend: true,
           dataPoints: b.reject{|x| x["Year"]== 1947}.map do |el|
-               { y: el[month], label: el["Year"] }
+               { y: el[rain_fall_type], label: el["Year"] }
           end
         }]
       else
@@ -240,7 +240,7 @@ module Health3data
           legendText: month,
           showInLegend: true,
           dataPoints: b.map do |el|
-               { y: el[month], label: el["Region"] }
+               { y: el[rain_fall_type], label: el["Region"] }
           end
         }]
       end

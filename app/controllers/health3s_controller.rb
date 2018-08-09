@@ -44,7 +44,7 @@ ji1 = [:Year, :Area, :Crude_Birth_Rate, :Infant_Mortality_Rate, :Child_Mortality
         a = Health3.query(@Health3s,params[:year],rain_fall_type,views,ji,compare,month,search)
       end
       respond_to do |format|
-        format.html { render json:a }
+        format.html { render json: a }
     end
 
   else
