@@ -304,7 +304,6 @@ module Agriculturalinputs1data
           end
           return title
         end
-
       else
 
         b.each do |element|

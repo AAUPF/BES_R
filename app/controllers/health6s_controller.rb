@@ -16,7 +16,7 @@ class Health6sController < ApplicationController
   end
 
 def test
-  # unit1 =  "000"
+   unit1 =  "000"
   ji = [:Average_number_of_Outpatient_visits_per_day, :Inpatient_Bed_Occupancy_Rate]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
@@ -33,7 +33,7 @@ ji1 = [:Districts, :Average_number_of_Outpatient_visits_per_day, :Inpatient_Bed_
           a = Health6.map(b,params[:year],rain_fall_type,views)
          else
           b = Health6.map_search(params[:search],compare,year,rain_fall_type)
-          a = Health6.map(b,rain_fall_type,year,ji)
+          a = Health6.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
         b = Health6.search(params[:search],compare,year,rain_fall_type)

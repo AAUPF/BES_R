@@ -247,30 +247,64 @@ module Annualrainfall1
 
     end
   if views == "stackedBar100" or views == "stackedBar"
+    if compare != "None" && compare != "undefined"
+     
+
     title = {
       animationEnabled: true,
       exportEnabled: true,
       title:{
-        text: "#{search.to_s.gsub("_"," ")}"
+        text: "#{search.to_s.gsub("_"," ")} vs. #{compare.to_s.gsub("_"," ")}"
             },
       data: hash_data
   }
- 
-  else
-    title = {
-      animationEnabled: true,
-      exportEnabled: true,
-      title:{
-        text: "#{search.to_s.gsub("_"," ")}"
-            },
-            axisX: {
-              interval:1,
-              labelMaxWidth: 180,
-              labelAngle: 90,
-              labelFontFamily:"verdana0"
+    else
+      title = {
+        animationEnabled: true,
+        exportEnabled: true,
+        title:{
+          text: "#{search.to_s.gsub("_"," ")}"
               },
-      data: hash_data
-  }
+        data: hash_data
+    }
+
+    end
+  else
+    if compare != "None" && compare != "undefined"
+
+      title = {
+        animationEnabled: true,
+        exportEnabled: true,
+        title:{
+          text: "#{search.to_s.gsub("_"," ")} vs. #{compare.to_s.gsub("_"," ")}"
+              },
+              axisX: {
+                interval:1,
+                labelMaxWidth: 180,
+                labelAngle: 90,
+                labelFontFamily:"verdana0"
+                },
+        data: hash_data
+    }
+      else
+
+        title = {
+          animationEnabled: true,
+          exportEnabled: true,
+          title:{
+            text: "#{search.to_s.gsub("_"," ")}"
+                },
+                axisX: {
+                  interval:1,
+                  labelMaxWidth: 180,
+                  labelAngle: 90,
+                  labelFontFamily:"verdana0"
+                  },
+          data: hash_data
+      }
+  
+        
+      end
     
   end
       return title
