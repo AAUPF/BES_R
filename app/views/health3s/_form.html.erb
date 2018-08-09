@@ -1,0 +1,67 @@
+<%= form_with(model: health3, local: true) do |form| %>
+  <% if health3.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health3.errors.count, "error") %> prohibited this health3 from being saved:</h2>
+
+      <ul>
+      <% health3.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Area %>
+    <%= form.text_field :Area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Crude_Birth_Rate %>
+    <%= form.text_field :Crude_Birth_Rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Infant_Mortality_Rate %>
+    <%= form.text_field :Infant_Mortality_Rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Child_Mortality_Rate %>
+    <%= form.text_field :Child_Mortality_Rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Under_Five_Mortality_Rate %>
+    <%= form.text_field :Under_Five_Mortality_Rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Neo_Natal_Mortality_Rate %>
+    <%= form.text_field :Neo_Natal_Mortality_Rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Fertility_Rate %>
+    <%= form.text_field :Total_Fertility_Rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Marital_Fertility_Rate %>
+    <%= form.text_field :Total_Marital_Fertility_Rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Region %>
+    <%= form.text_field :Region %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

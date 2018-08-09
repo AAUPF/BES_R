@@ -1,0 +1,32 @@
+<%= form_with(model: health4, local: true) do |form| %>
+  <% if health4.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health4.errors.count, "error") %> prohibited this health4 from being saved:</h2>
+
+      <ul>
+      <% health4.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_patients_visiting_government_hospitals_per_month %>
+    <%= form.text_field :Number_of_patients_visiting_government_hospitals_per_month %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_growth %>
+    <%= form.text_field :Percentage_growth %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

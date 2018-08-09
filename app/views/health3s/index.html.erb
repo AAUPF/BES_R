@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Health3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Area</th>
+      <th>Crude birth rate</th>
+      <th>Infant mortality rate</th>
+      <th>Child mortality rate</th>
+      <th>Under five mortality rate</th>
+      <th>Neo natal mortality rate</th>
+      <th>Total fertility rate</th>
+      <th>Total marital fertility rate</th>
+      <th>Region</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @health3s.each do |health3| %>
+      <tr>
+        <td><%= health3.Year %></td>
+        <td><%= health3.Area %></td>
+        <td><%= health3.Crude_Birth_Rate %></td>
+        <td><%= health3.Infant_Mortality_Rate %></td>
+        <td><%= health3.Child_Mortality_Rate %></td>
+        <td><%= health3.Under_Five_Mortality_Rate %></td>
+        <td><%= health3.Neo_Natal_Mortality_Rate %></td>
+        <td><%= health3.Total_Fertility_Rate %></td>
+        <td><%= health3.Total_Marital_Fertility_Rate %></td>
+        <td><%= health3.Region %></td>
+        <td><%= link_to 'Show', health3 %></td>
+        <td><%= link_to 'Edit', edit_health3_path(health3) %></td>
+        <td><%= link_to 'Destroy', health3, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Health3', new_health3_path %>

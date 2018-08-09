@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Health4s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Number of patients visiting government hospitals per month</th>
+      <th>Percentage growth</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @health4s.each do |health4| %>
+      <tr>
+        <td><%= health4.Year %></td>
+        <td><%= health4.Number_of_patients_visiting_government_hospitals_per_month %></td>
+        <td><%= health4.Percentage_growth %></td>
+        <td><%= link_to 'Show', health4 %></td>
+        <td><%= link_to 'Edit', edit_health4_path(health4) %></td>
+        <td><%= link_to 'Destroy', health4, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Health4', new_health4_path %>

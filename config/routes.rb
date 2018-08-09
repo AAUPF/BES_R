@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+  resources :health3s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :health2s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :health4s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :health22s do 
                       collection { post :import }
                       collection { get :dropdown }

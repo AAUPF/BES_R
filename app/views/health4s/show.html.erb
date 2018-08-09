@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @health4.Year %>
+</p>
+
+<p>
+  <strong>Number of patients visiting government hospitals per month:</strong>
+  <%= @health4.Number_of_patients_visiting_government_hospitals_per_month %>
+</p>
+
+<p>
+  <strong>Percentage growth:</strong>
+  <%= @health4.Percentage_growth %>
+</p>
+
+<%= link_to 'Edit', edit_health4_path(@health4) %> |
+<%= link_to 'Back', health4s_path %>

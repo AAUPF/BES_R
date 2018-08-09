@@ -1,1 +1,1 @@
-rails g scaffold health22 Districts:string NRHM_Total:float Year:integer
+rails g scaffold health3 Year:integer Area:string Crude_Birth_Rate:float Infant_Mortality_Rate:float Child_Mortality_Rate:float Under_Five_Mortality_Rate:float Neo_Natal_Mortality_Rate:float Total_Fertility_Rate:float Total_Marital_Fertility_Rate:float Region:string

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_08_131745) do
+ActiveRecord::Schema.define(version: 2018_08_09_070514) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -223,9 +223,9 @@ ActiveRecord::Schema.define(version: 2018_08_08_131745) do
 
   create_table "animal_husbandry3s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
-    t.float "Animals_Treated_in_Lakh"
-    t.float "Immunization_in_Lakh"
-    t.float "Artificial_Insemination_in_Lakh"
+    t.float "Animals_Treated"
+    t.float "Immunization"
+    t.float "Artificial_Insemination"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -460,6 +460,39 @@ ActiveRecord::Schema.define(version: 2018_08_08_131745) do
     t.string "Districts"
     t.float "NRHM_Total"
     t.integer "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "Region"
+    t.float "Male"
+    t.float "Female"
+    t.float "Total"
+    t.string "Year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health3s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.string "Area"
+    t.float "Crude_Birth_Rate"
+    t.float "Infant_Mortality_Rate"
+    t.float "Child_Mortality_Rate"
+    t.float "Under_Five_Mortality_Rate"
+    t.float "Neo_Natal_Mortality_Rate"
+    t.float "Total_Fertility_Rate"
+    t.float "Total_Marital_Fertility_Rate"
+    t.string "Region"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health4s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "Year"
+    t.float "Number_of_patients_visiting_government_hospitals_per_month"
+    t.float "Percentage_growth"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -907,6 +940,7 @@ ActiveRecord::Schema.define(version: 2018_08_08_131745) do
     t.float "SouthWestMonsoonRain"
     t.float "NorthWestMonsoonRain"
     t.float "TotalRainfall"
+    t.integer "year", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

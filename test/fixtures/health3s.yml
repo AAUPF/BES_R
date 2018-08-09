@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: 1
+  Area: MyString
+  Crude_Birth_Rate: 1.5
+  Infant_Mortality_Rate: 1.5
+  Child_Mortality_Rate: 1.5
+  Under_Five_Mortality_Rate: 1.5
+  Neo_Natal_Mortality_Rate: 1.5
+  Total_Fertility_Rate: 1.5
+  Total_Marital_Fertility_Rate: 1.5
+  Region: MyString
+
+two:
+  Year: 1
+  Area: MyString
+  Crude_Birth_Rate: 1.5
+  Infant_Mortality_Rate: 1.5
+  Child_Mortality_Rate: 1.5
+  Under_Five_Mortality_Rate: 1.5
+  Neo_Natal_Mortality_Rate: 1.5
+  Total_Fertility_Rate: 1.5
+  Total_Marital_Fertility_Rate: 1.5
+  Region: MyString
