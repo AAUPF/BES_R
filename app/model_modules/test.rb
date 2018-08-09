@@ -158,7 +158,6 @@ module Test
                   },
           data: hash_data
       }
-        
       end
       return title
     else

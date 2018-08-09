@@ -287,7 +287,7 @@ module Mapwithyear
         # array = [{name: "array"}]
         # sleep 1
     
-        unit1 = "mm"
+        # unit1 = "mm"
     
         if below_min.any?
           b = { min: below_min.first[:y], max: "#{below_min.last[:y]}, #{unit1}" }
