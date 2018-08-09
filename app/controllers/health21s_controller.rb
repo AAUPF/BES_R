@@ -16,6 +16,8 @@ class Health21sController < ApplicationController
   end
 
 def test
+  unit1 = "Number"
+
   ji = [:Acute_Diarrheal_Disease, :Bacillary_Dysentery, :Viral_Hepatitis, :Enteric_Fever, :Malaria, :PUO, :Acute_Respiratory_Infection, :Pneumonia, :Dogbite, :Other_State_Specific_Disease, :Unusual_Syndromes_Not_Captured]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]

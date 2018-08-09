@@ -16,6 +16,8 @@ class Health22sController < ApplicationController
   end
 
 def test
+  unit1 = "Lakh"
+
   ji = [:NRHM_Total]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]

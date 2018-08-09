@@ -16,7 +16,6 @@ class Health16sController < ApplicationController
   end
 
 def test
-  unit1 = "000";
   ji = [:Regular_Post_sanctioned, :Contractual_Post_sanctioned, :Regular_Doctor_Employed, :Contractual_Doctor_Employed, :Number_of_doctors_per_lakh_population]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
@@ -25,6 +24,9 @@ def test
 ji1 = [:Districts, :Regular_Post_sanctioned, :Contractual_Post_sanctioned, :Regular_Doctor_Employed, :Contractual_Doctor_Employed, :Year, :Number_of_doctors_per_lakh_population]
   if rain_fall_type || views
 
+
+
+    unit1 = "000";
       if views == "Map View"
         l =  rain_fall_type.gsub(" ","")           
          if rain_fall_type  ==  "All"
