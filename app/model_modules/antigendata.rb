@@ -41,7 +41,7 @@ module Antigendata
   
           hash_data = ji.map do |el|
             if el.to_s == "Antigenname"
-              {title:"District", field:el,headerFilter:true}
+              {title:"Antigenname", field:el,headerFilter:true}
             else
               {title:el.to_s.gsub("_"," "), field:el}
             end
@@ -50,13 +50,13 @@ module Antigendata
         else
         if compare == "None"
           hash_data = [
-            {title:"District", field:"Antigenname",headerFilter:true },
+            {title:"Antigenname", field:"Antigenname",headerFilter:true },
             {title:dataset, field:rain_fall_type }
         ]
         else
           hash_data = [
           # {title:compare, field:compare, sorter:"string", },
-          {title:"District", field:"Antigenname",headerFilter:true},
+          {title:"Antigenname", field:"Antigenname",headerFilter:true},
   
             {title:dataset, field:rain_fall_type}
         ]

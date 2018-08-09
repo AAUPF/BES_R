@@ -175,7 +175,21 @@ module Annualrainfall1
 
       end  
     elsif rain_fall_type == "All"
+     if year == "All"
+      ji = [:January, :February,:March, :April, :May,:June, :July, :August, :September,:October, :November, :December]
+      hash_data = ji.map do |col|
+        {
+          type:views,
+         
+          legendText: col,
+          showInLegend: true,
+          dataPoints: b.reject{|x| x["Year"]== 1947}.map do |el|
+               { y: el[col], label: el["Year"] }
+          end
+        }
 
+      end  
+     else
       ji = [:January, :February,:March, :April, :May,:June, :July, :August, :September,:October, :November, :December]
       hash_data = ji.map do |col|
         {
@@ -189,6 +203,9 @@ module Annualrainfall1
         }
 
       end  
+       
+     end
+  
 
     elsif rain_fall_type == "None"  && month == "All"
           if year == "All"
