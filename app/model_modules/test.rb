@@ -243,7 +243,6 @@ module Test
       dist = el['Districts']
 
       colour = "#{rain_fall_type}_Colour"
-
       if el[colour] == 'Red'
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Red' }
         below_min.push(hash1)
@@ -339,7 +338,7 @@ module Test
       above_extreme: h
     }
     a.push("data": hu)
-    #   ys = below_min.map { |e| e[:y] }
+    # ys = below_min.map { |e| e[:y] }
     # j =  Range.new *[ys.min, ys.max].map { |e| e.round(-e.round.to_s.length+1) }
     # u = max.first[:y].floor(-max.first[:y].round.to_s.length + 1)
     a

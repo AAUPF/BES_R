@@ -1,10 +1,10 @@
-<%= form_with(model: test, local: true) do |form| %>
-  <% if test.errors.any? %>
+<%= form_with(model: testy, local: true) do |form| %>
+  <% if testy.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(test.errors.count, "error") %> prohibited this test from being saved:</h2>
+      <h2><%= pluralize(testy.errors.count, "error") %> prohibited this testy from being saved:</h2>
 
       <ul>
-      <% test.errors.full_messages.each do |message| %>
+      <% testy.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -17,8 +17,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :number %>
+    <%= form.text_field :number %>
   </div>
 
   <div class="actions">

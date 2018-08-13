@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @testy.name %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @testy.number %>
+</p>
+
+<%= link_to 'Edit', edit_testy_path(@testy) %> |
+<%= link_to 'Back', testies_path %>

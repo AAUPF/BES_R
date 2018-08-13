@@ -115,7 +115,7 @@ module Agriculturalinputs1data
   def query(b, year, rain_fall_type, views, ji, compare)
     #  return b
     # l =  rain_fall_type.gsub(" ","")
-    # abort(rain_fall_type)
+
     d = 'Districts'
     color = if views == 'pie'
 
@@ -130,6 +130,7 @@ module Agriculturalinputs1data
         hash_data = grouped_data.map{ |vegetable, values| 
             dataset = vegetable.to_s.gsub("_"," ")
             {
+              type: views,
               legendText: dataset,
               showInLegend: true,
               dataPoints: values.map { |value|
@@ -148,6 +149,7 @@ module Agriculturalinputs1data
       return title
 
     elsif year == 'All'
+
 
       if compare != 'None'
 

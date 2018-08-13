@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  title: MyString
+  number: 1.5
 
 two:
   name: MyString
-  title: MyString
+  number: 1.5

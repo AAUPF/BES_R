@@ -128,6 +128,7 @@ def import1(file)
         hash_data = grouped_data.map{ |vegetable, values| 
             dataset = vegetable.to_s.gsub("_"," ")
             {
+              type: views,
               legendText: dataset,
               showInLegend: true,
               dataPoints: values.map { |value|

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :testies do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :health3s do 
                       collection { post :import }
                       collection { get :dropdown }
