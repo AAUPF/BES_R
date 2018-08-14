@@ -189,7 +189,7 @@ module Newdistrictwithoutyear
     end
   end
 
-  def map(b, rain_fall_type, _views, _ji, unit1,ranges)
+  def map1(b, rain_fall_type, _views, _ji, unit1,ranges)
     array = []
     # a = []
     l = rain_fall_type.delete(' ')
@@ -314,4 +314,127 @@ module Newdistrictwithoutyear
 
    return a
   end
+
+
+
+
+  def map(b, rain_fall_type, _views, _ji, unit1, ranges)
+    #  abort(rain_fall_type)
+    a = []
+    below_min = []
+    min = []
+    blow_max = []
+    max = []
+    above_max = []
+    extreme = []
+    above_extreme = []
+
+
+    b.map.with_index do |el,i|
+
+        dist = el["Districts"]
+
+      if (0..6) === i
+        hash1 = { y: el[rain_fall_type], label: dist, color: "Red" }
+        below_min.push(hash1)
+      elsif (6..12) === i
+        hash1 = { y: el[rain_fall_type], label: dist, color: "Orange" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
+        min.push(hash1)
+      elsif (12..18) === i
+        hash1 = { y: el[rain_fall_type], label: dist, color: "Dark_Yellow" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
+        blow_max.push(hash1)
+      elsif (18..24) === i
+        hash1 = { y: el[rain_fall_type], label: dist, color: "Yellow" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
+        max.push(hash1)
+
+      elsif (24..30) === i
+        hash1 = { y: el[rain_fall_type], label: dist, color: "Light_Green" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
+        above_max.push(hash1)
+
+      elsif (30..36) === i
+        hash1 = { y: el[rain_fall_type], label: dist, color: "Green" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
+        extreme.push(hash1)
+
+      elsif (36..40) === i
+        hash1 = { y: el[rain_fall_type], label: dist, color: "Dark_Green" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
+        above_extreme.push(hash1)
+      else
+      end
+      # array.push(a)
+    end
+    a.push({"below_min": below_min})
+    a.push({"min": min})
+    a.push({"blow_max": blow_max})
+    a.push({"max": max})
+    a.push({"above_max": above_max})
+    a.push({"extreme": extreme})
+    a.push({"above_extreme": above_extreme})
+    # array = [{name: "array"}]
+    # sleep 1
+
+    unit1 = ""
+
+    if below_min.any?
+      b = { min: below_min.first[:y], max: "#{below_min.last[:y]}" }
+    else
+      b = { min: below_min.first[:y], max: "#{below_min.last[:y]}" }
+    end
+
+    if min.any?
+      c = { min: min.first[:y], max: "#{min.last[:y]}" }
+    else
+      c = { min: min.first[:y], max: "#{min.last[:y]}" }
+    end
+
+    if blow_max.any?
+      d = { min: blow_max.first[:y], max: "#{blow_max.last[:y]}" }
+    else
+      d = { min: blow_max.first[:y], max: "#{blow_max.last[:y]}" }
+    end
+
+    if max.any?
+      e = { min: max.first[:y], max: "#{max.last[:y]}" }
+    else
+      e = { min: max.first[:y], max: "#{max.last[:y]}" }
+    end
+
+    if above_max.any?
+
+      f = { min: above_max.first[:y], max: "#{above_max.last[:y]}" }
+
+    else
+      f = { min: above_max.first[:y], max: "#{above_max.last[:y]}" } 
+
+    end
+
+    if extreme.any?
+      g =  { min: extreme.first[:y], max: "#{extreme.last[:y]}" } 
+
+    else
+      g = { min: extreme.first[:y], max: "#{extreme.last[:y]}" } 
+    end
+
+    if above_extreme.any?
+      h = { min: above_extreme.first[:y], max: "#{above_extreme.last[:y]}" }
+    else
+      h = {  }
+    end
+      hu = {
+        below_min: b,
+        min: c,
+        blow_max: d,
+        max: e,
+        above_max: f,
+        extreme: g,
+        above_extreme: h
+      }
+    a.push("data": hu)
+    return a
+end
   end

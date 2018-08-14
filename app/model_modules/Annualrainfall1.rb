@@ -598,8 +598,6 @@ end
     #     end
     # end
 
-
-
   def map(b,rain_fall_type,views,ji,month)
     array = []
     # a = []
@@ -664,7 +662,7 @@ end
     # array = [{name: "array"}]
     # sleep 1
 
-    unit1 = "mm"
+    unit1 = ""
 
     if below_min.any?
       b = { min: below_min.first[:y], max: "#{below_min.last[:y]}, #{unit1}" }
@@ -720,7 +718,6 @@ end
         extreme: g,
         above_extreme: h
       }
-
     a.push("data": hu)
     return a
   end

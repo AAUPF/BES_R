@@ -576,7 +576,6 @@ end
 # query starts end
 
 
-
   def map(b,rain_fall_type,views,ji)
     array = []
     # a = []
