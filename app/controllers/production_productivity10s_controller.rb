@@ -16,7 +16,7 @@ class ProductionProductivity10sController < ApplicationController
   end
 
 def test
-  ji = [ :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production, :Percentage_Mango_Area, :Percentage_Mango_Production, :Percentage_Guava_Area, :Percentage_Guava_Production, :Percentage_Litchi_Area, :Percentage_Litchi_Production, :Percentage_Banana_Area, :Percentage_Banana_Production]
+  ji = [ :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]

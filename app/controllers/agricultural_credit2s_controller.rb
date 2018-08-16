@@ -16,7 +16,7 @@ class AgriculturalCredit2sController < ApplicationController
   end
 
 def test
-  ji = [:Target, :Achievement,  :Percentage_Target, :Percentage_Achievement]
+  ji = [:Target, :Achievement]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]

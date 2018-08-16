@@ -43,8 +43,8 @@ module Irrigation4data
       # select(rain_fall_type,compare,"Status")
       # where("Status = ?", search)
       
-       select(rain_fall_type,compare,"Status")
-        # where("Status = ? OR Status = ?", search,compare ).order(:id)
+      #  select(rain_fall_type,compare,"Status")
+         where("Status = ? OR Status = ?", search,compare ).order(:id)
         
     else
           if rain_fall_type == "All"
@@ -84,7 +84,8 @@ module Irrigation4data
         # {title:compare, field:compare, sorter:"string", editor:true},
         #   {title:"Year", field:"Year", sorter:"string", editor:true},
         {title:"Status", field:"Status"},
-        {title:dataset, field:rain_fall_type}
+        {title:dataset, field:rain_fall_type},
+        {title:compare.gsub("_"," "),  field:compare}
       ]
       end
       end
@@ -196,8 +197,9 @@ module Irrigation4data
 
         return title
     else
+      dataset = rain_fall_type.gsub("_"," ")
       if compare
-          dataset = rain_fall_type.gsub("_"," ")
+      if compare == "None"
 
         hash_data =
         [{
@@ -209,6 +211,23 @@ module Irrigation4data
                { y: el[rain_fall_type], label: el["Status"] }
           end
         }]
+        
+      else
+       
+        ji1 = [rain_fall_type,compare]
+
+        hash_data =  ji1.map do |col|
+          {
+            type:views,
+            legendText: col.to_s.gsub("_"," ").split.first,
+            showInLegend: true,
+            dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+                 { y: el[col], label: col.gsub("_"," ") }
+            end
+          }
+        end
+      end
+
       else
         
           dataset = rain_fall_type.gsub("_"," ")
@@ -223,14 +242,38 @@ module Irrigation4data
           end
         }]
       end
-      title = {
-        animationEnabled: true,
-        exportEnabled: true,
-        title:{
-          text: "#{rain_fall_type.to_s.gsub("_"," ")}"
-              },
-        data: hash_data
-    }
+
+      if compare
+        if compare == "None"
+          title = {
+            animationEnabled: true,
+            exportEnabled: true,
+            title:{
+              text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                  },
+            data: hash_data
+        }
+        else
+          title = {
+            animationEnabled: true,
+            exportEnabled: true,
+            title:{
+              text: "#{rain_fall_type.to_s.gsub("_"," ")}  vs . #{compare.to_s.gsub("_"," ")}"
+                  },
+            data: hash_data
+        }
+        end
+      else
+        title = {
+          animationEnabled: true,
+          exportEnabled: true,
+          title:{
+            text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                },
+          data: hash_data
+      }
+      end
+
       return title
     end
 end

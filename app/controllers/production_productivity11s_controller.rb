@@ -16,7 +16,7 @@ class ProductionProductivity11sController < ApplicationController
   end
 
 def test
-  ji = [:Potato_Area, :Potato_Production, :Onion_Area, :Onion_Production, :Cauliflower_Area, :Cauliflower_Production, :Brinjal_Area, :Brinjal_Production,  :Percentage_Potato_Area, :Percentage_Potato_Production, :Percentage_Onion_Area, :Percentage_Onion_Production, :Percentage_Cauliflower_Area, :Percentage_Cauliflower_Production, :Percentage_Brinjal_Area, :Percentage_Brinjal_Production]
+  ji = [:Potato_Area, :Potato_Production, :Onion_Area, :Onion_Production, :Cauliflower_Area, :Cauliflower_Production, :Brinjal_Area, :Brinjal_Production]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]

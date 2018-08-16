@@ -16,7 +16,7 @@ class ProductionProductivity9sController < ApplicationController
   end
 
 def test
-  ji = [ :Area, :Production, :Productivity,  :Percentage_Area, :Percentage_Production]
+  ji = [ :Area, :Production, :Productivity]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
