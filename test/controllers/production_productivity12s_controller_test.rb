@@ -17,7 +17,7 @@ class ProductionProductivity12sControllerTest < ActionDispatch::IntegrationTest
 
   test "should create production_productivity12" do
     assert_difference('ProductionProductivity12.count') do
-      post production_productivity12s_url, params: { production_productivity12: { Area: @production_productivity12.Area, Area_Colour: @production_productivity12.Area_Colour, Districts: @production_productivity12.Districts, Production: @production_productivity12.Production, Production_Colour: @production_productivity12.Production_Colour, Year: @production_productivity12.Year, Yield: @production_productivity12.Yield, Yield_Colour: @production_productivity12.Yield_Colour } }
+      post production_productivity12s_url, params: { production_productivity12: { Area: @production_productivity12.Area, Districts: @production_productivity12.Districts, Percentage_Sugarcane_Area: @production_productivity12.Percentage_Sugarcane_Area, Percentage_Sugarcane_Production: @production_productivity12.Percentage_Sugarcane_Production, Production: @production_productivity12.Production, Year: @production_productivity12.Year, Yield: @production_productivity12.Yield } }
     end
 
     assert_redirected_to production_productivity12_url(ProductionProductivity12.last)
@@ -34,7 +34,7 @@ class ProductionProductivity12sControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update production_productivity12" do
-    patch production_productivity12_url(@production_productivity12), params: { production_productivity12: { Area: @production_productivity12.Area, Area_Colour: @production_productivity12.Area_Colour, Districts: @production_productivity12.Districts, Production: @production_productivity12.Production, Production_Colour: @production_productivity12.Production_Colour, Year: @production_productivity12.Year, Yield: @production_productivity12.Yield, Yield_Colour: @production_productivity12.Yield_Colour } }
+    patch production_productivity12_url(@production_productivity12), params: { production_productivity12: { Area: @production_productivity12.Area, Districts: @production_productivity12.Districts, Percentage_Sugarcane_Area: @production_productivity12.Percentage_Sugarcane_Area, Percentage_Sugarcane_Production: @production_productivity12.Percentage_Sugarcane_Production, Production: @production_productivity12.Production, Year: @production_productivity12.Year, Yield: @production_productivity12.Yield } }
     assert_redirected_to production_productivity12_url(@production_productivity12)
   end
 

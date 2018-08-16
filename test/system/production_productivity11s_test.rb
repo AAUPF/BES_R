@@ -15,22 +15,22 @@ class ProductionProductivity11sTest < ApplicationSystemTestCase
     click_on "New Production Productivity11"
 
     fill_in "Brinjal Area", with: @production_productivity11.Brinjal_Area
-    fill_in "Brinjal Area Colour", with: @production_productivity11.Brinjal_Area_Colour
     fill_in "Brinjal Production", with: @production_productivity11.Brinjal_Production
-    fill_in "Brinjal Production Colour", with: @production_productivity11.Brinjal_Production_Colour
     fill_in "Cauliflower Area", with: @production_productivity11.Cauliflower_Area
-    fill_in "Cauliflower Area Colour", with: @production_productivity11.Cauliflower_Area_Colour
     fill_in "Cauliflower Production", with: @production_productivity11.Cauliflower_Production
-    fill_in "Cauliflower Production Colour", with: @production_productivity11.Cauliflower_Production_Colour
     fill_in "Districts", with: @production_productivity11.Districts
     fill_in "Onion Area", with: @production_productivity11.Onion_Area
-    fill_in "Onion Area Colour", with: @production_productivity11.Onion_Area_Colour
     fill_in "Onion Production", with: @production_productivity11.Onion_Production
-    fill_in "Onion Production Colour", with: @production_productivity11.Onion_Production_Colour
+    fill_in "Percentage Brinjal Area", with: @production_productivity11.Percentage_Brinjal_Area
+    fill_in "Percentage Brinjal Production", with: @production_productivity11.Percentage_Brinjal_Production
+    fill_in "Percentage Cauliflower Area", with: @production_productivity11.Percentage_Cauliflower_Area
+    fill_in "Percentage Cauliflower Production", with: @production_productivity11.Percentage_Cauliflower_Production
+    fill_in "Percentage Onion Area", with: @production_productivity11.Percentage_Onion_Area
+    fill_in "Percentage Onion Production", with: @production_productivity11.Percentage_Onion_Production
+    fill_in "Percentage Potato Area", with: @production_productivity11.Percentage_Potato_Area
+    fill_in "Percentage Potato Production", with: @production_productivity11.Percentage_Potato_Production
     fill_in "Potato Area", with: @production_productivity11.Potato_Area
-    fill_in "Potato Area Colour", with: @production_productivity11.Potato_Area_Colour
     fill_in "Potato Production", with: @production_productivity11.Potato_Production
-    fill_in "Potato Production Colour", with: @production_productivity11.Potato_Production_Colour
     fill_in "Year", with: @production_productivity11.Year
     click_on "Create Production productivity11"
 
@@ -43,22 +43,22 @@ class ProductionProductivity11sTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Brinjal Area", with: @production_productivity11.Brinjal_Area
-    fill_in "Brinjal Area Colour", with: @production_productivity11.Brinjal_Area_Colour
     fill_in "Brinjal Production", with: @production_productivity11.Brinjal_Production
-    fill_in "Brinjal Production Colour", with: @production_productivity11.Brinjal_Production_Colour
     fill_in "Cauliflower Area", with: @production_productivity11.Cauliflower_Area
-    fill_in "Cauliflower Area Colour", with: @production_productivity11.Cauliflower_Area_Colour
     fill_in "Cauliflower Production", with: @production_productivity11.Cauliflower_Production
-    fill_in "Cauliflower Production Colour", with: @production_productivity11.Cauliflower_Production_Colour
     fill_in "Districts", with: @production_productivity11.Districts
     fill_in "Onion Area", with: @production_productivity11.Onion_Area
-    fill_in "Onion Area Colour", with: @production_productivity11.Onion_Area_Colour
     fill_in "Onion Production", with: @production_productivity11.Onion_Production
-    fill_in "Onion Production Colour", with: @production_productivity11.Onion_Production_Colour
+    fill_in "Percentage Brinjal Area", with: @production_productivity11.Percentage_Brinjal_Area
+    fill_in "Percentage Brinjal Production", with: @production_productivity11.Percentage_Brinjal_Production
+    fill_in "Percentage Cauliflower Area", with: @production_productivity11.Percentage_Cauliflower_Area
+    fill_in "Percentage Cauliflower Production", with: @production_productivity11.Percentage_Cauliflower_Production
+    fill_in "Percentage Onion Area", with: @production_productivity11.Percentage_Onion_Area
+    fill_in "Percentage Onion Production", with: @production_productivity11.Percentage_Onion_Production
+    fill_in "Percentage Potato Area", with: @production_productivity11.Percentage_Potato_Area
+    fill_in "Percentage Potato Production", with: @production_productivity11.Percentage_Potato_Production
     fill_in "Potato Area", with: @production_productivity11.Potato_Area
-    fill_in "Potato Area Colour", with: @production_productivity11.Potato_Area_Colour
     fill_in "Potato Production", with: @production_productivity11.Potato_Production
-    fill_in "Potato Production Colour", with: @production_productivity11.Potato_Production_Colour
     fill_in "Year", with: @production_productivity11.Year
     click_on "Update Production productivity11"
 

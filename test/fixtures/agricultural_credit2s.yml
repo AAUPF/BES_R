@@ -5,13 +5,13 @@ one:
   Target: 1.5
   Achievement: 1.5
   Year: 1
-  Target_Colour: MyString
-  Achievement_Colour: MyString
+  Percentage_Target: 1.5
+  Percentage_Achievement: 1.5
 
 two:
   Districts: MyString
   Target: 1.5
   Achievement: 1.5
   Year: 1
-  Target_Colour: MyString
-  Achievement_Colour: MyString
+  Percentage_Target: 1.5
+  Percentage_Achievement: 1.5

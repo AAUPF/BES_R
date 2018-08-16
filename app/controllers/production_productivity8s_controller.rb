@@ -16,48 +16,14 @@ class ProductionProductivity8sController < ApplicationController
   end
 
 def test
-  ji = [ :Area, :Production, :Productivity]
+  ji = [ :Area, :Production, :Productivity,:Percentage_Area, :Percentage_Production]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
+   ji1 = [:Districts, :Area, :Production, :Productivity, :Year, :Percentage_Area, :Percentage_Production]
 
-   ji1 = [:Districts, :Area, :Production, :Productivity, :Year]
-   units = [{Area: "000 Hectare" },{Production: "000 tonnes" },{Productivity: "Quintal/Hac" }]
-
-
-   if rain_fall_type == "Area"
-        unit1 =  units[0][:Area]
-      elsif rain_fall_type == "Production"
-        unit1 =  units[1][:Production]
-      elsif rain_fall_type == "Productivity"
-        unit1 =  units[2][:Productivity]
-        
-      else
-   end
-
-
-
-  if year == '2015'
-
-    if rain_fall_type == 'Area'
-      ranges = NewricesHelper.ranges1(60,55,45,35,25,10,0)
-    elsif rain_fall_type == 'Production'
-      ranges =  NewricesHelper.ranges1(360,230,150,100,50,25,0)
-    elsif rain_fall_type == 'Productivity'
-      ranges =  NewricesHelper.ranges1(8000,5000,4500,3500,2500,2000,1000)
-    end
-
-  elsif year == '2016'
-    if rain_fall_type == 'Area'
-      ranges = NewricesHelper.ranges1(89,60,45,35,25,10,0)
-    elsif rain_fall_type == 'Production'
-      ranges =  NewricesHelper.ranges1(89,60,45,35,25,10,0)
-    elsif rain_fall_type == 'Productivity'
-      ranges =  NewricesHelper.ranges1(8000,5000,4500,3500,2500,2000,400)
-    end
-  end
 
   if rain_fall_type || views
 
@@ -69,7 +35,7 @@ def test
           a = ProductionProductivity8.map(b,params[:year],rain_fall_type,views)
          else
           b = ProductionProductivity8.map_search(params[:search],compare,year,rain_fall_type)
-          a = ProductionProductivity8.map(b,rain_fall_type,year,ji,unit1,ranges)
+          a = ProductionProductivity8.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
         b = ProductionProductivity8.search(params[:search],compare,year,rain_fall_type)
@@ -135,6 +101,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def production_productivity8_params
-      params.require(:production_productivity8).permit(:Districts, :Area, :Production, :Productivity, :Year, :Area_Colour, :Production_Colour, :Productivity_Colour)
+      params.require(:production_productivity8).permit(:Districts, :Area, :Production, :Productivity, :Year, :Percentage_Area, :Percentage_Production)
     end
 end

@@ -16,47 +16,12 @@ class ProductionProductivity12sController < ApplicationController
   end
 
 def test
-  ji = [:Districts, :Area, :Production, :Yield]
+  ji = [ :Area, :Production, :Yield, :Percentage_Sugarcane_Area, :Percentage_Sugarcane_Production]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-   ji1 = [:Districts, :Area, :Production, :Yield, :Year]
-   units = [{Area: "000 Hectare" },{Production: "000 tonnes" },{Yield: "Ton/Hac" }]
-
-
-   
-
-
-   if year == '2015'
-
-    if rain_fall_type == "Area"
-      unit1 =  units[0][:Area]
-      ranges = NewricesHelper.ranges1(122,40,20,14,5,2,0)
-    elsif rain_fall_type == "Production"
-      unit1 =  units[1][:Production]
-      ranges = NewricesHelper.ranges1(8500,3000,1500,500,200,100,0)
-    elsif rain_fall_type == "Yield"
-      unit1 =  units[2][:Yield]
-      ranges = NewricesHelper.ranges1(90,80,70,60,50,40,0)
-    else
- end
-
-  elsif year == '2016'
-    if rain_fall_type == "Area"
-      unit1 =  units[0][:Area]
-      ranges = NewricesHelper.ranges1(122,40,20,10,5,2,0)
-    elsif rain_fall_type == "Production"
-      unit1 =  units[1][:Production]
-      ranges = NewricesHelper.ranges1(8500,3000,1500,500,200,75,0)
-    elsif rain_fall_type == "Yield"
-      unit1 =  units[2][:Yield]
-      ranges = NewricesHelper.ranges1(90,75,65,60,55,50,0)
-    else
- end
-  end
-
-
+   ji1 = [:Districts, :Area, :Production, :Yield,  :Percentage_Sugarcane_Area, :Percentage_Sugarcane_Production,:Year]
 
   if rain_fall_type || views
 
@@ -68,7 +33,7 @@ def test
           a = ProductionProductivity12.map(b,params[:year],rain_fall_type,views)
          else
           b = ProductionProductivity12.map_search(params[:search],compare,year,rain_fall_type)
-          a = ProductionProductivity12.map(b,rain_fall_type,year,ji,unit1,ranges)
+          a = ProductionProductivity12.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
         b = ProductionProductivity12.search(params[:search],compare,year,rain_fall_type)
@@ -134,6 +99,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def production_productivity12_params
-      params.require(:production_productivity12).permit(:Districts, :Area, :Production, :Yield, :Year, :Area_Colour, :Production_Colour, :Yield_Colour)
+      params.require(:production_productivity12).permit(:Districts, :Area, :Production, :Yield, :Year, :Percentage_Sugarcane_Area, :Percentage_Sugarcane_Production)
     end
 end

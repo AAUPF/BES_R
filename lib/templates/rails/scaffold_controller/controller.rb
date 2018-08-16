@@ -37,7 +37,7 @@ def test
           a = <%= class_name %>.map(b,params[:year],rain_fall_type,views)
          else
           b = <%= class_name %>.map_search(params[:search],compare,year,rain_fall_type)
-          a = <%= class_name %>.map(b,rain_fall_type,year,ji,unit1)
+          a = <%= class_name %>.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
         b = <%= class_name %>.search(params[:search],compare,year,rain_fall_type)

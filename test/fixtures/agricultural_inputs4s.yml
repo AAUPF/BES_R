@@ -2,7 +2,6 @@
 
 one:
   Districts: MyString
-  Year: 1
   Urea: 1.5
   DAP: 1.5
   SSP: 1.5
@@ -15,22 +14,17 @@ one:
   K: 1.5
   Total_NPK: 1.5
   Grand_Total: 1.5
-  Urea_Colour: MyString
-  DAP_Colour: MyString
-  SSP_Colour: MyString
-  MOP_Colour: MyString
-  Ammonium_Sulphate_Colour: MyString
-  Complex_Colour: MyString
-  Total_Colour: MyString
-  N_Colour: MyString
-  P_Colour: MyString
-  K_Colour: MyString
-  Total_NPK_Colour: MyString
-  Grand_Total_Colour: MyString
+  Year: 1
+  Percentage_Urea: 1.5
+  Percentage_DAP: 1.5
+  Percentage_SSP: 1.5
+  Percentage_MOP: 1.5
+  Percentage_Ammonium_Sulphate: 1.5
+  Percentage_Complex: 1.5
+  Percentage_Total_NPK: 1.5
 
 two:
   Districts: MyString
-  Year: 1
   Urea: 1.5
   DAP: 1.5
   SSP: 1.5
@@ -43,15 +37,11 @@ two:
   K: 1.5
   Total_NPK: 1.5
   Grand_Total: 1.5
-  Urea_Colour: MyString
-  DAP_Colour: MyString
-  SSP_Colour: MyString
-  MOP_Colour: MyString
-  Ammonium_Sulphate_Colour: MyString
-  Complex_Colour: MyString
-  Total_Colour: MyString
-  N_Colour: MyString
-  P_Colour: MyString
-  K_Colour: MyString
-  Total_NPK_Colour: MyString
-  Grand_Total_Colour: MyString
+  Year: 1
+  Percentage_Urea: 1.5
+  Percentage_DAP: 1.5
+  Percentage_SSP: 1.5
+  Percentage_MOP: 1.5
+  Percentage_Ammonium_Sulphate: 1.5
+  Percentage_Complex: 1.5
+  Percentage_Total_NPK: 1.5

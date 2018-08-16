@@ -5,10 +5,9 @@ class CreateNewrices < ActiveRecord::Migration[5.2]
       t.float :Area
       t.float :Production
       t.float :Productivity
-      t.integer :Year
-      t.string :Area_Colour
-      t.string :Production_Colour
-      t.string :Productivity_Colour
+      t.float :Year
+      t.float :Percentage_Area
+      t.float :Percentage_Production
 
       t.timestamps
     end

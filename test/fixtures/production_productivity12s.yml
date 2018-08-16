@@ -6,9 +6,8 @@ one:
   Production: 1.5
   Yield: 1.5
   Year: 1
-  Area_Colour: MyString
-  Production_Colour: MyString
-  Yield_Colour: MyString
+  Percentage_Sugarcane_Area: 1.5
+  Percentage_Sugarcane_Production: 1.5
 
 two:
   Districts: MyString
@@ -16,6 +15,5 @@ two:
   Production: 1.5
   Yield: 1.5
   Year: 1
-  Area_Colour: MyString
-  Production_Colour: MyString
-  Yield_Colour: MyString
+  Percentage_Sugarcane_Area: 1.5
+  Percentage_Sugarcane_Production: 1.5

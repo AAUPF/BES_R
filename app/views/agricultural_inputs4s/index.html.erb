@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th>Districts</th>
-      <th>Year</th>
       <th>Urea</th>
       <th>Dap</th>
       <th>Ssp</th>
@@ -19,18 +18,14 @@
       <th>K</th>
       <th>Total npk</th>
       <th>Grand total</th>
-      <th>Urea colour</th>
-      <th>Dap colour</th>
-      <th>Ssp colour</th>
-      <th>Mop colour</th>
-      <th>Ammonium sulphate colour</th>
-      <th>Complex colour</th>
-      <th>Total colour</th>
-      <th>N colour</th>
-      <th>P colour</th>
-      <th>K colour</th>
-      <th>Total npk colour</th>
-      <th>Grand total colour</th>
+      <th>Year</th>
+      <th>Percentage urea</th>
+      <th>Percentage dap</th>
+      <th>Percentage ssp</th>
+      <th>Percentage mop</th>
+      <th>Percentage ammonium sulphate</th>
+      <th>Percentage complex</th>
+      <th>Percentage total npk</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -39,7 +34,6 @@
     <% @agricultural_inputs4s.each do |agricultural_inputs4| %>
       <tr>
         <td><%= agricultural_inputs4.Districts %></td>
-        <td><%= agricultural_inputs4.Year %></td>
         <td><%= agricultural_inputs4.Urea %></td>
         <td><%= agricultural_inputs4.DAP %></td>
         <td><%= agricultural_inputs4.SSP %></td>
@@ -52,21 +46,15 @@
         <td><%= agricultural_inputs4.K %></td>
         <td><%= agricultural_inputs4.Total_NPK %></td>
         <td><%= agricultural_inputs4.Grand_Total %></td>
-        <td><%= agricultural_inputs4.Urea_Colour %></td>
-        <td><%= agricultural_inputs4.DAP_Colour %></td>
-        <td><%= agricultural_inputs4.SSP_Colour %></td>
-        <td><%= agricultural_inputs4.MOP_Colour %></td>
-        <td><%= agricultural_inputs4.Ammonium_Sulphate_Colour %></td>
-        <td><%= agricultural_inputs4.Complex_Colour %></td>
-        <td><%= agricultural_inputs4.Total_Colour %></td>
-        <td><%= agricultural_inputs4.N_Colour %></td>
-        <td><%= agricultural_inputs4.P_Colour %></td>
-        <td><%= agricultural_inputs4.K_Colour %></td>
-        <td><%= agricultural_inputs4.Total_NPK_Colour %></td>
-        <td><%= agricultural_inputs4.Grand_Total_Colour %></td>
-        <td><%= link_to 'Show', agricultural_inputs4 %></td>
-        <td><%= link_to 'Edit', edit_agricultural_inputs4_path(agricultural_inputs4) %></td>
-        <td><%= link_to 'Destroy', agricultural_inputs4, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= agricultural_inputs4.Year %></td>
+        <td><%= agricultural_inputs4.Percentage_Urea %></td>
+        <td><%= agricultural_inputs4.Percentage_DAP %></td>
+        <td><%= agricultural_inputs4.Percentage_SSP %></td>
+        <td><%= agricultural_inputs4.Percentage_MOP %></td>
+        <td><%= agricultural_inputs4.Percentage_Ammonium_Sulphate %></td>
+        <td><%= agricultural_inputs4.Percentage_Complex %></td>
+        <td><%= agricultural_inputs4.Percentage_Total_NPK %></td>
+       
       </tr>
     <% end %>
   </tbody>

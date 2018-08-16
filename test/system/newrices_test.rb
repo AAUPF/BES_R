@@ -15,12 +15,11 @@ class NewricesTest < ApplicationSystemTestCase
     click_on "New Newrice"
 
     fill_in "Area", with: @newrice.Area
-    fill_in "Area Colour", with: @newrice.Area_Colour
     fill_in "Districts", with: @newrice.Districts
+    fill_in "Percentage Area", with: @newrice.Percentage_Area
+    fill_in "Percentage Production", with: @newrice.Percentage_Production
     fill_in "Production", with: @newrice.Production
-    fill_in "Production Colour", with: @newrice.Production_Colour
     fill_in "Productivity", with: @newrice.Productivity
-    fill_in "Productivity Colour", with: @newrice.Productivity_Colour
     fill_in "Year", with: @newrice.Year
     click_on "Create Newrice"
 
@@ -33,12 +32,11 @@ class NewricesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Area", with: @newrice.Area
-    fill_in "Area Colour", with: @newrice.Area_Colour
     fill_in "Districts", with: @newrice.Districts
+    fill_in "Percentage Area", with: @newrice.Percentage_Area
+    fill_in "Percentage Production", with: @newrice.Percentage_Production
     fill_in "Production", with: @newrice.Production
-    fill_in "Production Colour", with: @newrice.Production_Colour
     fill_in "Productivity", with: @newrice.Productivity
-    fill_in "Productivity Colour", with: @newrice.Productivity_Colour
     fill_in "Year", with: @newrice.Year
     click_on "Update Newrice"
 

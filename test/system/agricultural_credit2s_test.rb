@@ -15,10 +15,10 @@ class AgriculturalCredit2sTest < ApplicationSystemTestCase
     click_on "New Agricultural Credit2"
 
     fill_in "Achievement", with: @agricultural_credit2.Achievement
-    fill_in "Achievement Colour", with: @agricultural_credit2.Achievement_Colour
     fill_in "Districts", with: @agricultural_credit2.Districts
+    fill_in "Percentage Achievement", with: @agricultural_credit2.Percentage_Achievement
+    fill_in "Percentage Target", with: @agricultural_credit2.Percentage_Target
     fill_in "Target", with: @agricultural_credit2.Target
-    fill_in "Target Colour", with: @agricultural_credit2.Target_Colour
     fill_in "Year", with: @agricultural_credit2.Year
     click_on "Create Agricultural credit2"
 
@@ -31,10 +31,10 @@ class AgriculturalCredit2sTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Achievement", with: @agricultural_credit2.Achievement
-    fill_in "Achievement Colour", with: @agricultural_credit2.Achievement_Colour
     fill_in "Districts", with: @agricultural_credit2.Districts
+    fill_in "Percentage Achievement", with: @agricultural_credit2.Percentage_Achievement
+    fill_in "Percentage Target", with: @agricultural_credit2.Percentage_Target
     fill_in "Target", with: @agricultural_credit2.Target
-    fill_in "Target Colour", with: @agricultural_credit2.Target_Colour
     fill_in "Year", with: @agricultural_credit2.Year
     click_on "Update Agricultural credit2"
 

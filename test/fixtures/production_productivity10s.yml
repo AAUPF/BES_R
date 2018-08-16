@@ -2,6 +2,7 @@
 
 one:
   Districts: MyString
+  Area: 1.5
   Mango_Area: 1.5
   Mango_Production: 1.5
   Guava_Area: 1.5
@@ -11,17 +12,18 @@ one:
   Banana_Area: 1.5
   Banana_Production: 1.5
   Year: 1
-  Mango_Area_Colour: MyString
-  Mango_Production_Colour: MyString
-  Guava_Area_Colour: MyString
-  Guava_Production_Colour: MyString
-  Litchi_Area_Colour: MyString
-  Litchi_Production_Colour: MyString
-  Banana_Area_Colour: MyString
-  Banana_Production_Colour: MyString
+  Percentage_Mango_Area: 1.5
+  Percentage_Mango_Production: 1.5
+  Percentage_Guava_Area: 1.5
+  Percentage_Guava_Production: 1.5
+  Percentage_Litchi_Area: 1.5
+  Percentage_Litchi_Production: 1.5
+  Percentage_Banana_Area: 1.5
+  Percentage_Banana_Production: 1.5
 
 two:
   Districts: MyString
+  Area: 1.5
   Mango_Area: 1.5
   Mango_Production: 1.5
   Guava_Area: 1.5
@@ -31,11 +33,11 @@ two:
   Banana_Area: 1.5
   Banana_Production: 1.5
   Year: 1
-  Mango_Area_Colour: MyString
-  Mango_Production_Colour: MyString
-  Guava_Area_Colour: MyString
-  Guava_Production_Colour: MyString
-  Litchi_Area_Colour: MyString
-  Litchi_Production_Colour: MyString
-  Banana_Area_Colour: MyString
-  Banana_Production_Colour: MyString
+  Percentage_Mango_Area: 1.5
+  Percentage_Mango_Production: 1.5
+  Percentage_Guava_Area: 1.5
+  Percentage_Guava_Production: 1.5
+  Percentage_Litchi_Area: 1.5
+  Percentage_Litchi_Production: 1.5
+  Percentage_Banana_Area: 1.5
+  Percentage_Banana_Production: 1.5

@@ -17,21 +17,19 @@ one:
   Net_Area_Sown: 1.5
   Gross_Crop_Area: 1.5
   Cropping_Intensity: 1.5
-  Geographical_area_Colour: MyString
-  Forest_Colour: MyString
-  Barren_unculturable_land_Colour: MyString
-  Non_Agriculture_Land_area_Colour: MyString
-  Non_Agriculture_Perennial_Water_Area_Colour: MyString
-  Non_Agriculture_Temporary_Water_Area_Colour: MyString
-  Culturable_Waste_Land_Colour: MyString
-  Permanent_Pastures_Colour: MyString
-  Tree_Crops_Colour: MyString
-  _ColourFallow_land: MyString
-  Current_Fallow_Colour: MyString
-  Total_Uncultivable_Land_Colour: MyString
-  Net_Area_Sown_Colour: MyString
-  Gross_Crop_Area_Colour: MyString
-  Cropping_Intensity_Colour: MyString
+  Percentage_Geographical_area: 1.5
+  Percentage_Forest: 1.5
+  Percentage_Barren_unculturable_land: 1.5
+  Percentage_Non_Agriculture_Land_area: 1.5
+  Percentage_Non_Agriculture_Perennial_Water_Area: 1.5
+  Non_Agriculture_Temporary_Water_Area: 1.5
+  Percentage_Culturable_Waste_Land: 1.5
+  Percentage_Permanent_Pastures: 1.5
+  Percentage_Tree_Crops: 1.5
+  Percentage_Fallow_land: 1.5
+  Percentage_Current_Fallow: 1.5
+  Percentage_Total_Uncultivable_Land: 1.5
+  Percentage_Net_Area_Sown: 1.5
 
 two:
   Districts: MyString
@@ -50,18 +48,16 @@ two:
   Net_Area_Sown: 1.5
   Gross_Crop_Area: 1.5
   Cropping_Intensity: 1.5
-  Geographical_area_Colour: MyString
-  Forest_Colour: MyString
-  Barren_unculturable_land_Colour: MyString
-  Non_Agriculture_Land_area_Colour: MyString
-  Non_Agriculture_Perennial_Water_Area_Colour: MyString
-  Non_Agriculture_Temporary_Water_Area_Colour: MyString
-  Culturable_Waste_Land_Colour: MyString
-  Permanent_Pastures_Colour: MyString
-  Tree_Crops_Colour: MyString
-  _ColourFallow_land: MyString
-  Current_Fallow_Colour: MyString
-  Total_Uncultivable_Land_Colour: MyString
-  Net_Area_Sown_Colour: MyString
-  Gross_Crop_Area_Colour: MyString
-  Cropping_Intensity_Colour: MyString
+  Percentage_Geographical_area: 1.5
+  Percentage_Forest: 1.5
+  Percentage_Barren_unculturable_land: 1.5
+  Percentage_Non_Agriculture_Land_area: 1.5
+  Percentage_Non_Agriculture_Perennial_Water_Area: 1.5
+  Non_Agriculture_Temporary_Water_Area: 1.5
+  Percentage_Culturable_Waste_Land: 1.5
+  Percentage_Permanent_Pastures: 1.5
+  Percentage_Tree_Crops: 1.5
+  Percentage_Fallow_land: 1.5
+  Percentage_Current_Fallow: 1.5
+  Percentage_Total_Uncultivable_Land: 1.5
+  Percentage_Net_Area_Sown: 1.5

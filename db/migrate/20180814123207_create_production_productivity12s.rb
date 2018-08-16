@@ -6,9 +6,8 @@ class CreateProductionProductivity12s < ActiveRecord::Migration[5.2]
       t.float :Production
       t.float :Yield
       t.integer :Year
-      t.string :Area_Colour
-      t.string :Production_Colour
-      t.string :Yield_Colour
+      t.float :Percentage_Sugarcane_Area
+      t.float :Percentage_Sugarcane_Production
 
       t.timestamps
     end

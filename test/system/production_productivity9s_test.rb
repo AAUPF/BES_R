@@ -15,12 +15,11 @@ class ProductionProductivity9sTest < ApplicationSystemTestCase
     click_on "New Production Productivity9"
 
     fill_in "Area", with: @production_productivity9.Area
-    fill_in "Area Colour", with: @production_productivity9.Area_Colour
     fill_in "Districts", with: @production_productivity9.Districts
+    fill_in "Percentage Area", with: @production_productivity9.Percentage_Area
+    fill_in "Percentage Production", with: @production_productivity9.Percentage_Production
     fill_in "Production", with: @production_productivity9.Production
-    fill_in "Production Colour", with: @production_productivity9.Production_Colour
     fill_in "Productivity", with: @production_productivity9.Productivity
-    fill_in "Productivity Colour", with: @production_productivity9.Productivity_Colour
     fill_in "Year", with: @production_productivity9.Year
     click_on "Create Production productivity9"
 
@@ -33,12 +32,11 @@ class ProductionProductivity9sTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Area", with: @production_productivity9.Area
-    fill_in "Area Colour", with: @production_productivity9.Area_Colour
     fill_in "Districts", with: @production_productivity9.Districts
+    fill_in "Percentage Area", with: @production_productivity9.Percentage_Area
+    fill_in "Percentage Production", with: @production_productivity9.Percentage_Production
     fill_in "Production", with: @production_productivity9.Production
-    fill_in "Production Colour", with: @production_productivity9.Production_Colour
     fill_in "Productivity", with: @production_productivity9.Productivity
-    fill_in "Productivity Colour", with: @production_productivity9.Productivity_Colour
     fill_in "Year", with: @production_productivity9.Year
     click_on "Update Production productivity9"
 

@@ -17,7 +17,7 @@ class NewricesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create newrice" do
     assert_difference('Newrice.count') do
-      post newrices_url, params: { newrice: { Area: @newrice.Area, Area_Colour: @newrice.Area_Colour, Districts: @newrice.Districts, Production: @newrice.Production, Production_Colour: @newrice.Production_Colour, Productivity: @newrice.Productivity, Productivity_Colour: @newrice.Productivity_Colour, Year: @newrice.Year } }
+      post newrices_url, params: { newrice: { Area: @newrice.Area, Districts: @newrice.Districts, Percentage_Area: @newrice.Percentage_Area, Percentage_Production: @newrice.Percentage_Production, Production: @newrice.Production, Productivity: @newrice.Productivity, Year: @newrice.Year } }
     end
 
     assert_redirected_to newrice_url(Newrice.last)
@@ -34,7 +34,7 @@ class NewricesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update newrice" do
-    patch newrice_url(@newrice), params: { newrice: { Area: @newrice.Area, Area_Colour: @newrice.Area_Colour, Districts: @newrice.Districts, Production: @newrice.Production, Production_Colour: @newrice.Production_Colour, Productivity: @newrice.Productivity, Productivity_Colour: @newrice.Productivity_Colour, Year: @newrice.Year } }
+    patch newrice_url(@newrice), params: { newrice: { Area: @newrice.Area, Districts: @newrice.Districts, Percentage_Area: @newrice.Percentage_Area, Percentage_Production: @newrice.Percentage_Production, Production: @newrice.Production, Productivity: @newrice.Productivity, Year: @newrice.Year } }
     assert_redirected_to newrice_url(@newrice)
   end
 

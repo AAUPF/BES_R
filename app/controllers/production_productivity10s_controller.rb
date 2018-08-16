@@ -16,87 +16,12 @@ class ProductionProductivity10sController < ApplicationController
   end
 
 def test
-  ji = [:Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production]
+  ji = [ :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production, :Percentage_Mango_Area, :Percentage_Mango_Production, :Percentage_Guava_Area, :Percentage_Guava_Production, :Percentage_Litchi_Area, :Percentage_Litchi_Production, :Percentage_Banana_Area, :Percentage_Banana_Production]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-
-   ji1 = [:Districts, :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production, :Year]
-
-   unit1 = "'000 tonnes"
-
-
-   units = [{Mango_Area: "000 Hectare" },{Guava_Area: "000 Hectare" },{Banana_Area: "000 Hectare" },{Litchi_Area:  "000 Hectare" },{Mango_Production: "'000 tonnes" },{Guava_Production: "'000 tonnes" },{Litchi_Production: "'000 tonnes" },{Banana_Production: "'000 tonnes" }]
-
-
-   
-
-
-
-   if year == '2015'
-
-    if rain_fall_type == "Mango_Area"
-      unit1 =  units[0][:Mango_Area]
-      ranges = NewricesHelper.ranges1(13,10,9,5,3,2,0)
-    elsif rain_fall_type == "Guava_Area"
-      ranges = NewricesHelper.ranges1(3,1.5,1,0.5,0.3,0.2,0)
-      unit1 =  units[1][:Guava_Area]
-      ranges = NewricesHelper.ranges1(45,29,20,15,10,5,0)
-    elsif rain_fall_type == "Banana_Area"
-      ranges = NewricesHelper.ranges1(5,3,2,1,0.5,0.3,0)
-      unit1 =  units[2][:Banana_Area]
-    elsif rain_fall_type == "Litchi_Area"
-      ranges = NewricesHelper.ranges1(7,3,2,1,0.5,0.2,0)
-      unit1 =  units[3][:Litchi_Area]
-
-    elsif rain_fall_type == "Mango_Production"
-      ranges = NewricesHelper.ranges1(140,90,70,50,30,20,0)
-      unit1 =  units[4][:Mango_Production]
-    elsif rain_fall_type == "Guava_Production"
-      ranges = NewricesHelper.ranges1(145,25,14,10,6,3,0)
-      unit1 =  units[5][:Guava_Production]
-    elsif rain_fall_type == "Litchi_Production"
-      ranges = NewricesHelper.ranges1(40,21,15,10,5,2,0)
-      unit1 =  units[6][:Litchi_Production]
-    elsif rain_fall_type == "Banana_Production"
-      ranges = NewricesHelper.ranges1(272,142,100,70,50,30,0)
-      unit1 =  units[7][:Banana_Production]
-      
-    else
- end
-
-  elsif year == '2016'
-    if rain_fall_type == "Mango_Area"
-      unit1 =  units[0][:Mango_Area]
-      ranges = NewricesHelper.ranges1(13,10,9,5,3,2,0)
-    elsif rain_fall_type == "Guava_Area"
-      ranges = NewricesHelper.ranges1(3,1.5,1,0.5,0.3,0.2,0)
-      unit1 =  units[1][:Guava_Area]
-      ranges = NewricesHelper.ranges1(45,29,20,15,10,5,0)
-    elsif rain_fall_type == "Banana_Area"
-      ranges = NewricesHelper.ranges1(5,3,2,1,0.5,0.3,0)
-      unit1 =  units[2][:Banana_Area]
-    elsif rain_fall_type == "Litchi_Area"
-      ranges = NewricesHelper.ranges1(7,3,2,1,0.5,0.2,0)
-      unit1 =  units[3][:Litchi_Area]
-
-    elsif rain_fall_type == "Mango_Production"
-      ranges = NewricesHelper.ranges1(140,90,70,50,30,20,0)
-      unit1 =  units[4][:Mango_Production]
-    elsif rain_fall_type == "Guava_Production"
-      ranges = NewricesHelper.ranges1(145,25,14,10,6,3,0)
-      unit1 =  units[5][:Guava_Production]
-    elsif rain_fall_type == "Litchi_Production"
-      ranges = NewricesHelper.ranges1(40,21,15,10,5,2,0)
-      unit1 =  units[6][:Litchi_Production]
-    elsif rain_fall_type == "Banana_Production"
-      ranges = NewricesHelper.ranges1(271,142,100,70,50,30,0)
-      unit1 =  units[7][:Banana_Production]
-      
-    else
- end
-  end
+   ji1 = [:Districts, :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production,  :Percentage_Mango_Area, :Percentage_Mango_Production, :Percentage_Guava_Area, :Percentage_Guava_Production, :Percentage_Litchi_Area, :Percentage_Litchi_Production, :Percentage_Banana_Area, :Percentage_Banana_Production,:Year]
 
   if rain_fall_type || views
 
@@ -108,7 +33,7 @@ def test
           a = ProductionProductivity10.map(b,params[:year],rain_fall_type,views)
          else
           b = ProductionProductivity10.map_search(params[:search],compare,year,rain_fall_type)
-          a = ProductionProductivity10.map(b,rain_fall_type,year,ji,unit1,ranges)
+          a = ProductionProductivity10.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
         b = ProductionProductivity10.search(params[:search],compare,year,rain_fall_type)
@@ -174,6 +99,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def production_productivity10_params
-      params.require(:production_productivity10).permit(:Districts, :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production, :Year, :Mango_Area_Colour, :Mango_Production_Colour, :Guava_Area_Colour, :Guava_Production_Colour, :Litchi_Area_Colour, :Litchi_Production_Colour, :Banana_Area_Colour, :Banana_Production_Colour)
+      params.require(:production_productivity10).permit(:Districts, :Area, :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production, :Year, :Percentage_Mango_Area, :Percentage_Mango_Production, :Percentage_Guava_Area, :Percentage_Guava_Production, :Percentage_Litchi_Area, :Percentage_Litchi_Production, :Percentage_Banana_Area, :Percentage_Banana_Production)
     end
 end

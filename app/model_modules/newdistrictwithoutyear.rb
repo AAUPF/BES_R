@@ -319,7 +319,7 @@ module Newdistrictwithoutyear
 
 
 
-  def map(b, rain_fall_type, _views, _ji, unit1, ranges)
+  def map(b, rain_fall_type, _views, _ji)
     #  abort(rain_fall_type)
     a = []
     below_min = []

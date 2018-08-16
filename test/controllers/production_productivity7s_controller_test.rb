@@ -17,7 +17,7 @@ class ProductionProductivity7sControllerTest < ActionDispatch::IntegrationTest
 
   test "should create production_productivity7" do
     assert_difference('ProductionProductivity7.count') do
-      post production_productivity7s_url, params: { production_productivity7: { Area: @production_productivity7.Area, Area_Colour: @production_productivity7.Area_Colour, Districts: @production_productivity7.Districts, Production: @production_productivity7.Production, Production_Colour: @production_productivity7.Production_Colour, Productivity: @production_productivity7.Productivity, Productivity_Colour: @production_productivity7.Productivity_Colour, Year: @production_productivity7.Year } }
+      post production_productivity7s_url, params: { production_productivity7: { Area: @production_productivity7.Area, Districts: @production_productivity7.Districts, Percentage_Area: @production_productivity7.Percentage_Area, Percentage_Production: @production_productivity7.Percentage_Production, Production: @production_productivity7.Production, Productivity: @production_productivity7.Productivity, Year: @production_productivity7.Year } }
     end
 
     assert_redirected_to production_productivity7_url(ProductionProductivity7.last)
@@ -34,7 +34,7 @@ class ProductionProductivity7sControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update production_productivity7" do
-    patch production_productivity7_url(@production_productivity7), params: { production_productivity7: { Area: @production_productivity7.Area, Area_Colour: @production_productivity7.Area_Colour, Districts: @production_productivity7.Districts, Production: @production_productivity7.Production, Production_Colour: @production_productivity7.Production_Colour, Productivity: @production_productivity7.Productivity, Productivity_Colour: @production_productivity7.Productivity_Colour, Year: @production_productivity7.Year } }
+    patch production_productivity7_url(@production_productivity7), params: { production_productivity7: { Area: @production_productivity7.Area, Districts: @production_productivity7.Districts, Percentage_Area: @production_productivity7.Percentage_Area, Percentage_Production: @production_productivity7.Percentage_Production, Production: @production_productivity7.Production, Productivity: @production_productivity7.Productivity, Year: @production_productivity7.Year } }
     assert_redirected_to production_productivity7_url(@production_productivity7)
   end
 

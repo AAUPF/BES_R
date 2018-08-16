@@ -5,17 +5,15 @@ one:
   Area: 1.5
   Production: 1.5
   Productivity: 1.5
-  Year: 1
-  Area_Colour: MyString
-  Production_Colour: MyString
-  Productivity_Colour: MyString
+  Year: 1.5
+  Percentage_Area: 1.5
+  Percentage_Production: 1.5
 
 two:
   Districts: MyString
   Area: 1.5
   Production: 1.5
   Productivity: 1.5
-  Year: 1
-  Area_Colour: MyString
-  Production_Colour: MyString
-  Productivity_Colour: MyString
+  Year: 1.5
+  Percentage_Area: 1.5
+  Percentage_Production: 1.5
