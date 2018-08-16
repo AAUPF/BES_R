@@ -17,7 +17,7 @@ class AnimalHusbandry4sControllerTest < ActionDispatch::IntegrationTest
 
   test "should create animal_husbandry4" do
     assert_difference('AnimalHusbandry4.count') do
-      post animal_husbandry4s_url, params: { animal_husbandry4: { Buffalo: @animal_husbandry4.Buffalo, Buffalo_Colour: @animal_husbandry4.Buffalo_Colour, Cow: @animal_husbandry4.Cow, Cow_Colour: @animal_husbandry4.Cow_Colour, Districts: @animal_husbandry4.Districts, Goat: @animal_husbandry4.Goat, Goat_Colour: @animal_husbandry4.Goat_Colour, Pig: @animal_husbandry4.Pig, Pig_Colour: @animal_husbandry4.Pig_Colour, Poultry: @animal_husbandry4.Poultry, Poultry_Colour: @animal_husbandry4.Poultry_Colour, Sheep: @animal_husbandry4.Sheep, Sheep_Colour: @animal_husbandry4.Sheep_Colour } }
+      post animal_husbandry4s_url, params: { animal_husbandry4: { Buffalo: @animal_husbandry4.Buffalo, Cow: @animal_husbandry4.Cow, Districts: @animal_husbandry4.Districts, Goat: @animal_husbandry4.Goat, Percentage_Buffalo: @animal_husbandry4.Percentage_Buffalo, Percentage_Cow: @animal_husbandry4.Percentage_Cow, Percentage_Goat: @animal_husbandry4.Percentage_Goat, Percentage_Pig: @animal_husbandry4.Percentage_Pig, Percentage_Poultry: @animal_husbandry4.Percentage_Poultry, Percentage_Sheep: @animal_husbandry4.Percentage_Sheep, Pig: @animal_husbandry4.Pig, Poultry: @animal_husbandry4.Poultry, Sheep: @animal_husbandry4.Sheep } }
     end
 
     assert_redirected_to animal_husbandry4_url(AnimalHusbandry4.last)
@@ -34,7 +34,7 @@ class AnimalHusbandry4sControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update animal_husbandry4" do
-    patch animal_husbandry4_url(@animal_husbandry4), params: { animal_husbandry4: { Buffalo: @animal_husbandry4.Buffalo, Buffalo_Colour: @animal_husbandry4.Buffalo_Colour, Cow: @animal_husbandry4.Cow, Cow_Colour: @animal_husbandry4.Cow_Colour, Districts: @animal_husbandry4.Districts, Goat: @animal_husbandry4.Goat, Goat_Colour: @animal_husbandry4.Goat_Colour, Pig: @animal_husbandry4.Pig, Pig_Colour: @animal_husbandry4.Pig_Colour, Poultry: @animal_husbandry4.Poultry, Poultry_Colour: @animal_husbandry4.Poultry_Colour, Sheep: @animal_husbandry4.Sheep, Sheep_Colour: @animal_husbandry4.Sheep_Colour } }
+    patch animal_husbandry4_url(@animal_husbandry4), params: { animal_husbandry4: { Buffalo: @animal_husbandry4.Buffalo, Cow: @animal_husbandry4.Cow, Districts: @animal_husbandry4.Districts, Goat: @animal_husbandry4.Goat, Percentage_Buffalo: @animal_husbandry4.Percentage_Buffalo, Percentage_Cow: @animal_husbandry4.Percentage_Cow, Percentage_Goat: @animal_husbandry4.Percentage_Goat, Percentage_Pig: @animal_husbandry4.Percentage_Pig, Percentage_Poultry: @animal_husbandry4.Percentage_Poultry, Percentage_Sheep: @animal_husbandry4.Percentage_Sheep, Pig: @animal_husbandry4.Pig, Poultry: @animal_husbandry4.Poultry, Sheep: @animal_husbandry4.Sheep } }
     assert_redirected_to animal_husbandry4_url(@animal_husbandry4)
   end
 

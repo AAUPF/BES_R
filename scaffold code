@@ -1,1 +1,1 @@
-rails g scaffold health3 Year:integer Area:string Crude_Birth_Rate:float Infant_Mortality_Rate:float Child_Mortality_Rate:float Under_Five_Mortality_Rate:float Neo_Natal_Mortality_Rate:float Total_Fertility_Rate:float Total_Marital_Fertility_Rate:float Region:string
+rails g scaffold animal-husbandry4 Districts:string Cow:float Buffalo:float Pig:float Sheep:float Goat:float Poultry:float Percentage_Cow:float Percentage_Buffalo:float Percentage_Pig:float Percentage_Sheep:float Percentage_Goat:float Percentage_Poultry:float	

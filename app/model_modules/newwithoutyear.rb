@@ -131,8 +131,8 @@ module Newwithoutyear
 
   def query(b,year,rain_fall_type,views,ji,compare)
     d = "Typeofirrigationpotential"
-    if rain_fall_type == "All"
-
+    color = "#4f81bc"
+      if rain_fall_type == "All"
       if views 
         hash_data =  ji.map do |column_name|
           if compare =="Bihar vs District"
@@ -179,7 +179,7 @@ module Newwithoutyear
         hash_data =
         [{
           type:views,
-         
+         color: color,
           legendText: dataset,
           showInLegend: true,
           dataPoints: b.map do |el|
@@ -187,12 +187,12 @@ module Newwithoutyear
           end
         }]
       else
-        
+
           dataset = rain_fall_type.gsub("_"," ")
         hash_data =
         [{
           type:views,
-         
+         color: color,
           legendText: dataset,
           showInLegend: true,
           dataPoints: b.reject{|x| x["TypeofIrrigationPotential"]== "Total"}.map do |el|

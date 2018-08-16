@@ -41,7 +41,7 @@ def test
         a = Irrigation4.table(b,rain_fall_type,year,ji1,compare)
       else
         @Irrigation4s = Irrigation4.search(params[:search],compare,year,rain_fall_type)
-        a = Irrigation4.query(@Irrigation4s,params[:year],rain_fall_type,views,ji,compare)
+         a = Irrigation4.query(@Irrigation4s,params[:year],rain_fall_type,views,ji,compare)
       end
       respond_to do |format|
         format.html { render json:a }

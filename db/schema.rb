@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_13_051924) do
+ActiveRecord::Schema.define(version: 2018_08_16_053524) do
 
   create_table "agricultural_credit1s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "Year"
@@ -238,12 +238,12 @@ ActiveRecord::Schema.define(version: 2018_08_13_051924) do
     t.float "Sheep"
     t.float "Goat"
     t.float "Poultry"
-    t.string "Cow_Colour"
-    t.string "Buffalo_Colour"
-    t.string "Pig_Colour"
-    t.string "Sheep_Colour"
-    t.string "Goat_Colour"
-    t.string "Poultry_Colour"
+    t.float "Percentage_Cow"
+    t.float "Percentage_Buffalo"
+    t.float "Percentage_Pig"
+    t.float "Percentage_Sheep"
+    t.float "Percentage_Goat"
+    t.float "Percentage_Poultry"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -961,7 +961,7 @@ ActiveRecord::Schema.define(version: 2018_08_13_051924) do
 
   create_table "tests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.float "number"
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

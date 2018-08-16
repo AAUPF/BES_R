@@ -16,33 +16,14 @@ class AnimalHusbandry4sController < ApplicationController
   end
 
 def test
-  ji = [:Districts, :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry]
+  ji = [:Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry, :Percentage_Cow, :Percentage_Buffalo, :Percentage_Pig, :Percentage_Sheep, :Percentage_Goat, :Percentage_Poultry]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-
-
-   ji1 = [:Districts, :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry]
-   rain_fall_type = params[:rain_fall_type]
-   unit1 =  "000"
-
-   if rain_fall_type == 'Cow'
-    ranges = NewricesHelper.ranges1(650,600,500,450,300,200,0)
-  elsif rain_fall_type == 'Buffalo'
-    ranges =  NewricesHelper.ranges1(820,350,300,250,200,100,0)
-  elsif rain_fall_type == 'Pig'
-    ranges =  NewricesHelper.ranges1(130,80,30,20,10,5,0)
-  elsif rain_fall_type == 'Sheep'
-    ranges =  NewricesHelper.ranges1(43,25,15,10,5,2.5,0)
-  elsif rain_fall_type == 'Goat'
-    ranges =  NewricesHelper.ranges1(950,720,500,400,300,200,0)
-  elsif rain_fall_type == 'Poultry'
-    ranges =  NewricesHelper.ranges1(850,750,500,400,200,100,0)
-  else
- end
-
-
+   unit1 = ""
+   ranges = ""
+ji1 = [:Districts, :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry, :Percentage_Cow, :Percentage_Buffalo, :Percentage_Pig, :Percentage_Sheep, :Percentage_Goat, :Percentage_Poultry]
   if rain_fall_type || views
 
       if views == "Map View"
@@ -119,6 +100,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def animal_husbandry4_params
-      params.require(:animal_husbandry4).permit(:Districts, :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry, :Cow_Colour, :Buffalo_Colour, :Pig_Colour, :Sheep_Colour, :Goat_Colour, :Poultry_Colour)
+      params.require(:animal_husbandry4).permit(:Districts, :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry, :Percentage_Cow, :Percentage_Buffalo, :Percentage_Pig, :Percentage_Sheep, :Percentage_Goat, :Percentage_Poultry)
     end
 end

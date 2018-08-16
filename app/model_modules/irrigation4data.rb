@@ -14,20 +14,43 @@ module Irrigation4data
            end
   end
 
+  # if compare == "None"
+  #   # abort(compare)
+  #   # abort("errror")
+  #   if rain_fall_type == "All"
+  #     where("Year = ?", year)
+  #   else
+  #     # abort(rain_fall_type)
+  #     select(rain_fall_type,"Year").where("Year = ?", year)
+  #   end
+  #  else
+  #   if year == "All"
+  #     select(rain_fall_type,compare,"Year")
+  #   else
+  #     where("Year = ?", year)
+  #   end
+  #  end
+
   def search(search,compare,year,rain_fall_type)
     if search == "All"
           if rain_fall_type == "All"
-            
             all
           else
+            
             all.order(rain_fall_type)
           end
-    elsif compare == "Bihar vs District"
-        where("Status = ? OR Status = ?", search, "Bihar").order(:id)
+    elsif compare
+      # select(rain_fall_type,compare,"Status")
+      # where("Status = ?", search)
+      
+       select(rain_fall_type,compare,"Status")
+        # where("Status = ? OR Status = ?", search,compare ).order(:id)
+        
     else
           if rain_fall_type == "All"
             where("Status = ? ", search).order(:id)
          else
+          
             where("Status = ? ", search).order(rain_fall_type)
         end
     end
@@ -154,7 +177,7 @@ module Irrigation4data
             type:views,
             legendText: dataset,
             showInLegend: true,
-            dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+            dataPoints: b.map do |el|
               { y: el[column_name],z:el[column_name], label: el["Status"] }
             end
           }
@@ -173,7 +196,7 @@ module Irrigation4data
 
         return title
     else
-      if compare == "Bihar vs District"
+      if compare
           dataset = rain_fall_type.gsub("_"," ")
 
         hash_data =
@@ -195,7 +218,7 @@ module Irrigation4data
          
           legendText: dataset,
           showInLegend: true,
-          dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+          dataPoints: b.map do |el|
                { y: el[rain_fall_type], label: el["Status"] }
           end
         }]

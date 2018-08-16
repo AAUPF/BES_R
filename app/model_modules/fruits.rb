@@ -93,7 +93,7 @@ module Fruits
 
   def query(b, year, rain_fall_type, views, ji, compare, district)
     d = 'Fruits'
-
+    color  = "#014D20"
     if rain_fall_type == 'All'
 
       if views
@@ -184,6 +184,7 @@ module Fruits
               dataset = vegetable.to_s.gsub("_"," ")
               {
                 type: views,
+                # color: color,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: values.map { |value|
@@ -200,6 +201,7 @@ module Fruits
           hash_data =
             [{
               type: views,
+               color: color,
               legendText: dataset,
               showInLegend: true,
               dataPoints: b.reject { |x| x['Fruits'] == 'Total' }.map do |el|
@@ -216,6 +218,7 @@ module Fruits
           hash_data =
             [{
               type: views,
+              color: color,
               legendText: dataset,
               showInLegend: true,
               dataPoints: b.reject { |x| x['Fruits'] == 'Total' }.map do |el|
@@ -239,6 +242,7 @@ module Fruits
             hash_data =
               [{
                 type: views,
+                color: color,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.reject { |x| x['Fruits'] == 'Total' }.map do |el|

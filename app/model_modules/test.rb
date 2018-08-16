@@ -97,6 +97,7 @@ module Test
 
   def query(b, _year, rain_fall_type, views, ji, compare)
     d = 'Districts'
+    color  = "#014D20"
     if rain_fall_type == 'All'
       if views
         hash_data = ji.map do |column_name|
@@ -166,7 +167,7 @@ module Test
         hash_data =
           [{
             type: views,
-
+            color: color,
             legendText: dataset,
             showInLegend: true,
             dataPoints: b.map do |el|
@@ -178,7 +179,7 @@ module Test
         hash_data =
           [{
             type: views,
-
+            color: color,
             legendText: dataset,
             showInLegend: true,
             dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
