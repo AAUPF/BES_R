@@ -131,6 +131,7 @@ module Irrigation5data
 
   def query(b,year,rain_fall_type,views,ji,compare)
     d = "Irrigation_Sources"
+    color = "#4f81bc"
     if rain_fall_type == "All"
 
       if views 
@@ -179,7 +180,7 @@ module Irrigation5data
         hash_data =
         [{
           type:views,
-         
+          color: color,
           legendText: dataset,
           showInLegend: true,
           dataPoints: b.map do |el|
@@ -192,7 +193,7 @@ module Irrigation5data
         hash_data =
         [{
           type:views,
-         
+          color: color,
           legendText: dataset,
           showInLegend: true,
           dataPoints: b.reject{|x| x["Irrigation_Sources"]== "Total"}.map do |el|

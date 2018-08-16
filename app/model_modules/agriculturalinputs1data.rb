@@ -161,6 +161,7 @@ module Agriculturalinputs1data
     
               {
                 type: views,
+                
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
@@ -176,6 +177,7 @@ module Agriculturalinputs1data
     
               {
                 type: views,
+                color: color,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|

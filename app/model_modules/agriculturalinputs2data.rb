@@ -173,6 +173,7 @@ def import1(file)
     
               {
                 type: views,
+                color: color,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
