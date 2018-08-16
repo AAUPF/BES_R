@@ -9,14 +9,14 @@ one:
   Total_Cow_Buffalo: 1.5
   Goat: 1.5
   Total_Production: 1.5
-  Year: 1
-  Crossbred_Cow_Colour: MyString
-  Local_Cow_Colour: MyString
-  Total_Cow_Colour: MyString
-  Buffalo_Colour: MyString
-  Total_Cow_Buffalo_Colour: MyString
-  Goat_Colour: MyString
-  Total_Production_Colour: MyString
+  Year: 1.5
+  Percentage_Crossbred_Cow: 1.5
+  Percentage_Local_Cow: 1.5
+  Percentage_Total_Cow: 1.5
+  Percentage_Buffalo: 1.5
+  Percentage_Total_Cow_Buffalo: 1.5
+  Percentage_Goat: 1.5
+  Percentage_Total_Production: 1.5
 
 two:
   Districts: MyString
@@ -27,11 +27,11 @@ two:
   Total_Cow_Buffalo: 1.5
   Goat: 1.5
   Total_Production: 1.5
-  Year: 1
-  Crossbred_Cow_Colour: MyString
-  Local_Cow_Colour: MyString
-  Total_Cow_Colour: MyString
-  Buffalo_Colour: MyString
-  Total_Cow_Buffalo_Colour: MyString
-  Goat_Colour: MyString
-  Total_Production_Colour: MyString
+  Year: 1.5
+  Percentage_Crossbred_Cow: 1.5
+  Percentage_Local_Cow: 1.5
+  Percentage_Total_Cow: 1.5
+  Percentage_Buffalo: 1.5
+  Percentage_Total_Cow_Buffalo: 1.5
+  Percentage_Goat: 1.5
+  Percentage_Total_Production: 1.5

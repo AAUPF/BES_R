@@ -15,20 +15,20 @@ class AnimalHusbandry6sTest < ApplicationSystemTestCase
     click_on "New Animal Husbandry6"
 
     fill_in "Buffalo", with: @animal_husbandry6.Buffalo
-    fill_in "Buffalo Colour", with: @animal_husbandry6.Buffalo_Colour
     fill_in "Crossbred Cow", with: @animal_husbandry6.Crossbred_Cow
-    fill_in "Crossbred Cow Colour", with: @animal_husbandry6.Crossbred_Cow_Colour
     fill_in "Districts", with: @animal_husbandry6.Districts
     fill_in "Goat", with: @animal_husbandry6.Goat
-    fill_in "Goat Colour", with: @animal_husbandry6.Goat_Colour
     fill_in "Local Cow", with: @animal_husbandry6.Local_Cow
-    fill_in "Local Cow Colour", with: @animal_husbandry6.Local_Cow_Colour
+    fill_in "Percentage Buffalo", with: @animal_husbandry6.Percentage_Buffalo
+    fill_in "Percentage Crossbred Cow", with: @animal_husbandry6.Percentage_Crossbred_Cow
+    fill_in "Percentage Goat", with: @animal_husbandry6.Percentage_Goat
+    fill_in "Percentage Local Cow", with: @animal_husbandry6.Percentage_Local_Cow
+    fill_in "Percentage Total Cow", with: @animal_husbandry6.Percentage_Total_Cow
+    fill_in "Percentage Total Cow Buffalo", with: @animal_husbandry6.Percentage_Total_Cow_Buffalo
+    fill_in "Percentage Total Production", with: @animal_husbandry6.Percentage_Total_Production
     fill_in "Total Cow", with: @animal_husbandry6.Total_Cow
     fill_in "Total Cow Buffalo", with: @animal_husbandry6.Total_Cow_Buffalo
-    fill_in "Total Cow Buffalo Colour", with: @animal_husbandry6.Total_Cow_Buffalo_Colour
-    fill_in "Total Cow Colour", with: @animal_husbandry6.Total_Cow_Colour
     fill_in "Total Production", with: @animal_husbandry6.Total_Production
-    fill_in "Total Production Colour", with: @animal_husbandry6.Total_Production_Colour
     fill_in "Year", with: @animal_husbandry6.Year
     click_on "Create Animal husbandry6"
 
@@ -41,20 +41,20 @@ class AnimalHusbandry6sTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Buffalo", with: @animal_husbandry6.Buffalo
-    fill_in "Buffalo Colour", with: @animal_husbandry6.Buffalo_Colour
     fill_in "Crossbred Cow", with: @animal_husbandry6.Crossbred_Cow
-    fill_in "Crossbred Cow Colour", with: @animal_husbandry6.Crossbred_Cow_Colour
     fill_in "Districts", with: @animal_husbandry6.Districts
     fill_in "Goat", with: @animal_husbandry6.Goat
-    fill_in "Goat Colour", with: @animal_husbandry6.Goat_Colour
     fill_in "Local Cow", with: @animal_husbandry6.Local_Cow
-    fill_in "Local Cow Colour", with: @animal_husbandry6.Local_Cow_Colour
+    fill_in "Percentage Buffalo", with: @animal_husbandry6.Percentage_Buffalo
+    fill_in "Percentage Crossbred Cow", with: @animal_husbandry6.Percentage_Crossbred_Cow
+    fill_in "Percentage Goat", with: @animal_husbandry6.Percentage_Goat
+    fill_in "Percentage Local Cow", with: @animal_husbandry6.Percentage_Local_Cow
+    fill_in "Percentage Total Cow", with: @animal_husbandry6.Percentage_Total_Cow
+    fill_in "Percentage Total Cow Buffalo", with: @animal_husbandry6.Percentage_Total_Cow_Buffalo
+    fill_in "Percentage Total Production", with: @animal_husbandry6.Percentage_Total_Production
     fill_in "Total Cow", with: @animal_husbandry6.Total_Cow
     fill_in "Total Cow Buffalo", with: @animal_husbandry6.Total_Cow_Buffalo
-    fill_in "Total Cow Buffalo Colour", with: @animal_husbandry6.Total_Cow_Buffalo_Colour
-    fill_in "Total Cow Colour", with: @animal_husbandry6.Total_Cow_Colour
     fill_in "Total Production", with: @animal_husbandry6.Total_Production
-    fill_in "Total Production Colour", with: @animal_husbandry6.Total_Production_Colour
     fill_in "Year", with: @animal_husbandry6.Year
     click_on "Update Animal husbandry6"
 

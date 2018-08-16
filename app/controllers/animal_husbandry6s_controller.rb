@@ -16,57 +16,23 @@ class AnimalHusbandry6sController < ApplicationController
   end
 
 def test
-  #ji = [:Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production]
+  ji = [:Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production, :Percentage_Crossbred_Cow, :Percentage_Local_Cow, :Percentage_Total_Cow, :Percentage_Buffalo, :Percentage_Total_Cow_Buffalo, :Percentage_Goat, :Percentage_Total_Production]
   rain_fall_type = params[:rain_fall_type]
-  if rain_fall_type == "All"
-      ji = [:Crossbred_Cow, :Local_Cow, :Buffalo, :Goat]
-
-  else
-      ji = [:Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production]
-
-  end
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-
-   ji1 = [:Districts, :Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production, :Year]
-
-
-   unit1 =  "000 Tonnes"
-
-if year == '2015'
-  if rain_fall_type == 'Crossbred_Cow'
-    ranges = NewricesHelper.ranges1(299,250,150,110,100,40,0)
-  elsif rain_fall_type == 'Local_Cow'
-    ranges =  NewricesHelper.ranges1(145,120,100,70,50,20,0)
-  elsif rain_fall_type == 'Total_Cow'
-    ranges =  NewricesHelper.ranges1(300,250,200,100,50,20,0)
-  elsif rain_fall_type == 'Buffalo'
-    ranges =  NewricesHelper.ranges1(200,170,130,100,70,50,20)
-  elsif rain_fall_type == 'Total_Cow_Buffalo'
-    ranges =  NewricesHelper.ranges1(450,400,300,200,100,50,20)
-  elsif rain_fall_type == 'Goat'
-    ranges =  NewricesHelper.ranges1(2510,8,6,4,2,0)
-  elsif rain_fall_type == 'Total_Production'
-    ranges =  NewricesHelper.ranges1(450,400,300,200,100,50,20)
-  else
- end
-else
-  
-end
-  
-
-
+ji1 = [:Districts, :Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production, :Year, :Percentage_Crossbred_Cow, :Percentage_Local_Cow, :Percentage_Total_Cow, :Percentage_Buffalo, :Percentage_Total_Cow_Buffalo, :Percentage_Goat, :Percentage_Total_Production]
   if rain_fall_type || views
 
       if views == "Map View"
         l =  rain_fall_type.gsub(" ","")           
          if rain_fall_type  ==  "All"
           b = AnimalHusbandry6.map_search("All",compare,year,rain_fall_type)
-          a = AnimalHusbandry6.map(b,params[:year],rain_fall_type,views,unit1)
+          u = "Total"
+          a = AnimalHusbandry6.map(b,params[:year],rain_fall_type,views)
          else
           b = AnimalHusbandry6.map_search(params[:search],compare,year,rain_fall_type)
-          a = AnimalHusbandry6.map(b,rain_fall_type,year,ji,unit1,ranges)
+          a = AnimalHusbandry6.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
         b = AnimalHusbandry6.search(params[:search],compare,year,rain_fall_type)
@@ -132,6 +98,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def animal_husbandry6_params
-      params.require(:animal_husbandry6).permit(:Districts, :Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production, :Year, :Crossbred_Cow_Colour, :Local_Cow_Colour, :Total_Cow_Colour, :Buffalo_Colour, :Total_Cow_Buffalo_Colour, :Goat_Colour, :Total_Production_Colour)
+      params.require(:animal_husbandry6).permit(:Districts, :Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_Buffalo, :Goat, :Total_Production, :Year, :Percentage_Crossbred_Cow, :Percentage_Local_Cow, :Percentage_Total_Cow, :Percentage_Buffalo, :Percentage_Total_Cow_Buffalo, :Percentage_Goat, :Percentage_Total_Production)
     end
 end

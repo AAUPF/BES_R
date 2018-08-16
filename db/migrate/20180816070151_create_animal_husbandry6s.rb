@@ -9,14 +9,14 @@ class CreateAnimalHusbandry6s < ActiveRecord::Migration[5.2]
       t.float :Total_Cow_Buffalo
       t.float :Goat
       t.float :Total_Production
-      t.integer :Year
-      t.string :Crossbred_Cow_Colour
-      t.string :Local_Cow_Colour
-      t.string :Total_Cow_Colour
-      t.string :Buffalo_Colour
-      t.string :Total_Cow_Buffalo_Colour
-      t.string :Goat_Colour
-      t.string :Total_Production_Colour
+      t.float :Year
+      t.float :Percentage_Crossbred_Cow
+      t.float :Percentage_Local_Cow
+      t.float :Percentage_Total_Cow
+      t.float :Percentage_Buffalo
+      t.float :Percentage_Total_Cow_Buffalo
+      t.float :Percentage_Goat
+      t.float :Percentage_Total_Production
 
       t.timestamps
     end
