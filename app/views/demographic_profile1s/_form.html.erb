@@ -1,0 +1,37 @@
+<%= form_with(model: demographic_profile1, local: true) do |form| %>
+  <% if demographic_profile1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(demographic_profile1.errors.count, "error") %> prohibited this demographic_profile1 from being saved:</h2>
+
+      <ul>
+      <% demographic_profile1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Demographic_Indicator %>
+    <%= form.text_field :Demographic_Indicator %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Bihar %>
+    <%= form.text_field :Bihar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :India %>
+    <%= form.text_field :India %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

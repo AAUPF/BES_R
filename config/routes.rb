@@ -1,4 +1,29 @@
 Rails.application.routes.draw do
+  resources :state_domestic_product11s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :state_domestic_product9s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :state_domestic_product2s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :demographic_profile2s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :demographic_profile1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :animal_husbandry6s do 
                       collection { post :import }
                       collection { get :dropdown }

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Demographic Profile2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Population</th>
+      <th>Sex ratio overall</th>
+      <th>Sex ratio child</th>
+      <th>Density</th>
+      <th>Urbanisation</th>
+      <th>Decadal growth</th>
+      <th>Year</th>
+      <th>Percentage population</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @demographic_profile2s.each do |demographic_profile2| %>
+      <tr>
+        <td><%= demographic_profile2.Districts %></td>
+        <td><%= demographic_profile2.Population %></td>
+        <td><%= demographic_profile2.Sex_Ratio_Overall %></td>
+        <td><%= demographic_profile2.Sex_Ratio_Child %></td>
+        <td><%= demographic_profile2.Density %></td>
+        <td><%= demographic_profile2.Urbanisation %></td>
+        <td><%= demographic_profile2.Decadal_Growth %></td>
+        <td><%= demographic_profile2.Year %></td>
+        <td><%= demographic_profile2.Percentage_Population %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Demographic Profile2', new_demographic_profile2_path %>

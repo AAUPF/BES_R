@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Population: 1.5
+  Sex_Ratio_Overall: 1.5
+  Sex_Ratio_Child: 1.5
+  Density: 1.5
+  Urbanisation: 1.5
+  Decadal_Growth: 1.5
+  Year: 1
+  Percentage_Population: 1.5
+
+two:
+  Districts: MyString
+  Population: 1.5
+  Sex_Ratio_Overall: 1.5
+  Sex_Ratio_Child: 1.5
+  Density: 1.5
+  Urbanisation: 1.5
+  Decadal_Growth: 1.5
+  Year: 1
+  Percentage_Population: 1.5

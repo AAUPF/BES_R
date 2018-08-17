@@ -1,1 +1,1 @@
-rails g scaffold animal-husbandry6 Districts:string Crossbred_Cow:float Local_Cow:float Total_Cow:float Buffalo:float Total_Cow_Buffalo:float Goat:float Total_Production:float Year:float Percentage_Crossbred_Cow:float Percentage_Local_Cow:float Percentage_Total_Cow:float Percentage_Buffalo:float Percentage_Total_Cow_Buffalo:float Percentage_Goat:float Percentage_Total_Production:float
+rails g scaffold State-Domestic-Product11 Districts:string Target:float Achievement:float Year:integer

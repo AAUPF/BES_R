@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>State Domestic Product9s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Per capita gdp</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @state_domestic_product9s.each do |state_domestic_product9| %>
+      <tr>
+        <td><%= state_domestic_product9.Districts %></td>
+        <td><%= state_domestic_product9.Per_Capita_GDP %></td>
+        <td><%= state_domestic_product9.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New State Domestic Product9', new_state_domestic_product9_path %>

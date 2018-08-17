@@ -1,0 +1,62 @@
+<%= form_with(model: demographic_profile2, local: true) do |form| %>
+  <% if demographic_profile2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(demographic_profile2.errors.count, "error") %> prohibited this demographic_profile2 from being saved:</h2>
+
+      <ul>
+      <% demographic_profile2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Population %>
+    <%= form.text_field :Population %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Sex_Ratio_Overall %>
+    <%= form.text_field :Sex_Ratio_Overall %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Sex_Ratio_Child %>
+    <%= form.text_field :Sex_Ratio_Child %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Density %>
+    <%= form.text_field :Density %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Urbanisation %>
+    <%= form.text_field :Urbanisation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Decadal_Growth %>
+    <%= form.text_field :Decadal_Growth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_Population %>
+    <%= form.text_field :Percentage_Population %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

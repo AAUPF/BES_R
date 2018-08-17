@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Demographic Profile1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Demographic indicator</th>
+      <th>Bihar</th>
+      <th>India</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @demographic_profile1s.each do |demographic_profile1| %>
+      <tr>
+        <td><%= demographic_profile1.Demographic_Indicator %></td>
+        <td><%= demographic_profile1.Bihar %></td>
+        <td><%= demographic_profile1.India %></td>
+        <td><%= demographic_profile1.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Demographic Profile1', new_demographic_profile1_path %>

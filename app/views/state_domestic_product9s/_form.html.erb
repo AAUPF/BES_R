@@ -1,0 +1,32 @@
+<%= form_with(model: state_domestic_product9, local: true) do |form| %>
+  <% if state_domestic_product9.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(state_domestic_product9.errors.count, "error") %> prohibited this state_domestic_product9 from being saved:</h2>
+
+      <ul>
+      <% state_domestic_product9.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Per_Capita_GDP %>
+    <%= form.text_field :Per_Capita_GDP %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

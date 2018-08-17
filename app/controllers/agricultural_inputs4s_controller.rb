@@ -16,7 +16,7 @@ class AgriculturalInputs4sController < ApplicationController
   end
 
 def test
-  ji = [:Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :Total, :N, :P, :K, :Total_NPK, :Grand_Total]
+  ji = [:Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :N, :P, :K]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]

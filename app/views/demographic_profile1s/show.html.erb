@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Demographic indicator:</strong>
+  <%= @demographic_profile1.Demographic_Indicator %>
+</p>
+
+<p>
+  <strong>Bihar:</strong>
+  <%= @demographic_profile1.Bihar %>
+</p>
+
+<p>
+  <strong>India:</strong>
+  <%= @demographic_profile1.India %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @demographic_profile1.Year %>
+</p>
+
+<%= link_to 'Edit', edit_demographic_profile1_path(@demographic_profile1) %> |
+<%= link_to 'Back', demographic_profile1s_path %>

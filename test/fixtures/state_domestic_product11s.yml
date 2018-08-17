@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Target: 1.5
+  Achievement: 1.5
+  Year: 1
+
+two:
+  Districts: MyString
+  Target: 1.5
+  Achievement: 1.5
+  Year: 1
