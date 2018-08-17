@@ -81,7 +81,7 @@ module Newdistrictwithoutyear
 
   def query(b, _year, rain_fall_type, views, ji, compare)
     d = 'Districts'
-    color  = "#014D20"
+    color  = "#4f81bc"
     if rain_fall_type == 'All'
       if views
         hash_data = ji.map do |column_name|

@@ -93,7 +93,7 @@ module Vegetable
 
   def query(b, year, rain_fall_type, views, ji, compare, district)
     d = 'Vegetables'
-    color  = "#014D20"
+    color  = "#4f81bc"
     if rain_fall_type == 'All'
 
       if views
