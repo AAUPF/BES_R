@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fiscal Performance1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Revenue deficit gfd percentage</th>
+      <th>Capital outlay gfd percentage</th>
+      <th>Non dev exp agg disbursements percentage</th>
+      <th>Non dev exp revenue receipts percentage</th>
+      <th>Interest payments revenue exp percentage</th>
+      <th>State own revenue revenue exp percentage</th>
+      <th>Gross transfers aggregate disbursements percentage</th>
+      <th>Debt servicing gross transfers percentage</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fiscal_performance1s.each do |fiscal_performance1| %>
+      <tr>
+        <td><%= fiscal_performance1.State %></td>
+        <td><%= fiscal_performance1.Revenue_Deficit_GFD_Percentage %></td>
+        <td><%= fiscal_performance1.Capital_Outlay_GFD_Percentage %></td>
+        <td><%= fiscal_performance1.Non_Dev_Exp_Agg_Disbursements_Percentage %></td>
+        <td><%= fiscal_performance1.Non_Dev_Exp_Revenue_Receipts_Percentage %></td>
+        <td><%= fiscal_performance1.Interest_Payments_Revenue_Exp_Percentage %></td>
+        <td><%= fiscal_performance1.State_Own_Revenue_Revenue_Exp_Percentage %></td>
+        <td><%= fiscal_performance1.Gross_Transfers_Aggregate_Disbursements_Percentage %></td>
+        <td><%= fiscal_performance1.Debt_Servicing_Gross_Transfers_Percentage %></td>
+        <td><%= fiscal_performance1.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fiscal Performance1', new_fiscal_performance1_path %>

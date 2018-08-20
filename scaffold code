@@ -1,1 +1,1 @@
-rails g scaffold State-Domestic-Product11 Districts:string Target:float Achievement:float Year:integer
+rails g scaffold Tax_GSDP_Ratio State:string Revenue_Receipts:float States_Own_Tax:float GSDP:float Ratio_of_SOT_and_RR:float Ratio_of_SOT_and_GSDP:float Ratio_of_Total_Revenue_and_GSDP:float

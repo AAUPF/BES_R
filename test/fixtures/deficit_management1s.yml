@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  Revenue_Deficit_Surplus: 1.5
+  Conventional_Deficit_Surplus: 1.5
+  Year: MyString
+
+two:
+  State: MyString
+  Revenue_Deficit_Surplus: 1.5
+  Conventional_Deficit_Surplus: 1.5
+  Year: MyString

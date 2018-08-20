@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Public_Debt_Repayment_Liabilities: MyString
+  Amounts: 1.5
+  Year: MyString
+
+two:
+  Public_Debt_Repayment_Liabilities: MyString
+  Amounts: 1.5
+  Year: MyString

@@ -1,0 +1,52 @@
+<%= form_with(model: tax_gsdp_ratio, local: true) do |form| %>
+  <% if tax_gsdp_ratio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tax_gsdp_ratio.errors.count, "error") %> prohibited this tax_gsdp_ratio from being saved:</h2>
+
+      <ul>
+      <% tax_gsdp_ratio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :State %>
+    <%= form.text_field :State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Revenue_Receipts %>
+    <%= form.text_field :Revenue_Receipts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :States_Own_Tax %>
+    <%= form.text_field :States_Own_Tax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :GSDP %>
+    <%= form.text_field :GSDP %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Ratio_of_SOT_and_RR %>
+    <%= form.text_field :Ratio_of_SOT_and_RR %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Ratio_of_SOT_and_GSDP %>
+    <%= form.text_field :Ratio_of_SOT_and_GSDP %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Ratio_of_Total_Revenue_and_GSDP %>
+    <%= form.text_field :Ratio_of_Total_Revenue_and_GSDP %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

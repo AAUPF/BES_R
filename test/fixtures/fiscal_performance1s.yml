@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  Revenue_Deficit_GFD_Percentage: 1.5
+  Capital_Outlay_GFD_Percentage: 1.5
+  Non_Dev_Exp_Agg_Disbursements_Percentage: 1.5
+  Non_Dev_Exp_Revenue_Receipts_Percentage: 1.5
+  Interest_Payments_Revenue_Exp_Percentage: 1.5
+  State_Own_Revenue_Revenue_Exp_Percentage: 1.5
+  Gross_Transfers_Aggregate_Disbursements_Percentage: 1.5
+  Debt_Servicing_Gross_Transfers_Percentage: 1.5
+  Year: MyString
+
+two:
+  State: MyString
+  Revenue_Deficit_GFD_Percentage: 1.5
+  Capital_Outlay_GFD_Percentage: 1.5
+  Non_Dev_Exp_Agg_Disbursements_Percentage: 1.5
+  Non_Dev_Exp_Revenue_Receipts_Percentage: 1.5
+  Interest_Payments_Revenue_Exp_Percentage: 1.5
+  State_Own_Revenue_Revenue_Exp_Percentage: 1.5
+  Gross_Transfers_Aggregate_Disbursements_Percentage: 1.5
+  Debt_Servicing_Gross_Transfers_Percentage: 1.5
+  Year: MyString

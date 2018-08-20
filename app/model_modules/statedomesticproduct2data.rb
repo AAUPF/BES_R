@@ -16,15 +16,31 @@ module Statedomesticproduct2data
         if rain_fall_type == 'All'
           where(Year: year).order('id ')
         else
-          where(Year: year).order("#{rain_fall_type} ")
+          if year == "All"
+            all.order("id")
+          else
+            where(Year: year).order("#{rain_fall_type} ")
+          end
+          # where(Year: year).order("#{rain_fall_type} ")
         end
       elsif compare == "Bihar vs State"
-        where('State = ? OR State = ?', search, 'Bihar').where('year = ?', year).order(:id)
+        if year == "All"
+          where('State = ? OR State = ?', search, 'Bihar').order(:id)
+        else
+          where('State = ? OR State = ?', search, 'Bihar').where('year = ?', year).order(:id)
+        end
+        
       else
         if rain_fall_type == 'All'
           where('State = ? ', search).where('year = ?', year).order(:id)
         else
-          where('State = ? ', search).where('year = ?', year).order(rain_fall_type)
+          if year == "All"
+            where('State = ? ', search).order("id")
+          else
+            where('State = ? ', search).where('year = ?', year).order(rain_fall_type)
+          end
+          
+           
         end
       end
     end
@@ -37,7 +53,7 @@ module Statedomesticproduct2data
   
         hash_data = ji.map do |el|
           if el.to_s == 'State'
-            { title: 'District', field: el, headerFilter: true }
+            { title: 'State', field: el, headerFilter: true }
           else
             { title: el.to_s.tr('_', ' '), field: el }
           end
@@ -45,13 +61,13 @@ module Statedomesticproduct2data
       else
         if compare == 'None'
           hash_data = [
-            { title: 'District', field: 'State', headerFilter: true },
+            { title: 'State', field: 'State', headerFilter: true },
             { title: dataset, field: rain_fall_type }
           ]
         else
           hash_data = [
             # {title:compare, field:compare, sorter:"string", },
-            { title: 'District', field: 'State', headerFilter: true },
+            { title: 'State', field: 'State', headerFilter: true },
   
             { title: dataset, field: rain_fall_type }
           ]
@@ -108,12 +124,7 @@ module Statedomesticproduct2data
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
-                              if dataset == 'Productivity'
-                                du = el[column_name] / 100
-                                { y: du, z: du, label: el[d] }
-                              else
-                                { y: el[column_name], z: el[column_name], label: el[d] }
-                              end
+                  { y: el[column_name], z: el[column_name], label: el[d] }
                             end
               }
             else
@@ -123,12 +134,7 @@ module Statedomesticproduct2data
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
-                              if dataset == 'Productivity'
-                                du = el[column_name] / 100
-                                { y: du, z: du, label: el[d] }
-                              else
-                                { y: el[column_name], z: el[column_name], label: el[d] }
-                               end
+                  { y: el[column_name], z: el[column_name], label: el[d] }
                             end
               }
             end
@@ -151,19 +157,33 @@ module Statedomesticproduct2data
             title:{
               text: "#{rain_fall_type.to_s.gsub("_"," ")}"
                   },
-                  axisX: {
-                    interval:1,
-                    labelMaxWidth: 180,
-                    labelAngle: 90,
-                    labelFontFamily:"verdana0"
-                    },
+                  # axisX: {
+                  #   interval:1,
+                  #   labelMaxWidth: 180,
+                  #   labelAngle: 90,
+                  #   labelFontFamily:"verdana0"
+                  #   },
             data: hash_data
         }
         end
         return title
       else
         if compare == 'Bihar vs State'
-          dataset = rain_fall_type.tr('_', ' ')
+          if _year == "All"
+            grouped_data = b.group_by{ |data| data[:Year]}
+            hash_data = grouped_data.map{ |vegetable, values| 
+            dataset = vegetable.to_s.gsub("_"," ")
+            {
+            type: views,
+            legendText: dataset,
+            showInLegend: true,
+            dataPoints: values.map { |value|
+            { y: value[rain_fall_type], label: value[:State] }
+            }
+            }
+            }
+          else
+            dataset = rain_fall_type.tr('_', ' ')
           hash_data =
             [{
               type: views,
@@ -174,25 +194,37 @@ module Statedomesticproduct2data
                             { y: el[rain_fall_type], label: el['State'] }
                           end
             }]
+          end
+          
         else
-          dataset = rain_fall_type.tr('_', ' ')
-          hash_data =
-            [{
-              type: views,
-              color: color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.map do |el|
-                            if rain_fall_type == 'Productivity'
-                              du = el[rain_fall_type] / 100
-  
-                              { y: du, label: el['State'] }
-  
-                            else
-                              { y: el[rain_fall_type], label: el['State'] }
+          if _year == "All"
+            grouped_data = b.group_by{ |data| data[:Year]}
+            hash_data = grouped_data.map{ |vegetable, values| 
+            dataset = vegetable.to_s.gsub("_"," ")
+            {
+            type: views,
+            legendText: dataset,
+            showInLegend: true,
+            dataPoints: values.map { |value|
+            { y: value[rain_fall_type], label: value[:State] }
+            }
+            }
+            }
+
+          else
+            dataset = rain_fall_type.tr('_', ' ')
+            hash_data =
+              [{
+                type: views,
+                color: color,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: b.map do |el|
+                  { y: el[rain_fall_type], label: el['State'] }
                             end
-                          end
-            }]
+              }]
+          end
+          
         end
         if views == "stackedBar100" or views == "stackedBar"
           title = {
@@ -211,12 +243,12 @@ module Statedomesticproduct2data
             title:{
               text: "#{rain_fall_type.to_s.gsub("_"," ")}"
                   },
-                  axisX: {
-                    interval:1,
-                    labelMaxWidth: 180,
-                    labelAngle: 90,
-                    labelFontFamily:"verdana0"
-                    },
+                  # axisX: {
+                  #   interval:1,
+                  #   labelMaxWidth: 180,
+                  #   labelAngle: 90,
+                  #   labelFontFamily:"verdana0"
+                  #   },
             data: hash_data
         }
           

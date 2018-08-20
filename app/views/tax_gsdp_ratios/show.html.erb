@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>State:</strong>
+  <%= @tax_gsdp_ratio.State %>
+</p>
+
+<p>
+  <strong>Revenue receipts:</strong>
+  <%= @tax_gsdp_ratio.Revenue_Receipts %>
+</p>
+
+<p>
+  <strong>States own tax:</strong>
+  <%= @tax_gsdp_ratio.States_Own_Tax %>
+</p>
+
+<p>
+  <strong>Gsdp:</strong>
+  <%= @tax_gsdp_ratio.GSDP %>
+</p>
+
+<p>
+  <strong>Ratio of sot and rr:</strong>
+  <%= @tax_gsdp_ratio.Ratio_of_SOT_and_RR %>
+</p>
+
+<p>
+  <strong>Ratio of sot and gsdp:</strong>
+  <%= @tax_gsdp_ratio.Ratio_of_SOT_and_GSDP %>
+</p>
+
+<p>
+  <strong>Ratio of total revenue and gsdp:</strong>
+  <%= @tax_gsdp_ratio.Ratio_of_Total_Revenue_and_GSDP %>
+</p>
+
+<%= link_to 'Edit', edit_tax_gsdp_ratio_path(@tax_gsdp_ratio) %> |
+<%= link_to 'Back', tax_gsdp_ratios_path %>

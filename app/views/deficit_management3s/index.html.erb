@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Deficit Management3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gross fiscal deficit</th>
+      <th>Amount</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deficit_management3s.each do |deficit_management3| %>
+      <tr>
+        <td><%= deficit_management3.Gross_Fiscal_Deficit %></td>
+        <td><%= deficit_management3.Amount %></td>
+        <td><%= deficit_management3.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Deficit Management3', new_deficit_management3_path %>

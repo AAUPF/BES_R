@@ -1,0 +1,67 @@
+<%= form_with(model: fiscal_performance1, local: true) do |form| %>
+  <% if fiscal_performance1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fiscal_performance1.errors.count, "error") %> prohibited this fiscal_performance1 from being saved:</h2>
+
+      <ul>
+      <% fiscal_performance1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :State %>
+    <%= form.text_field :State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Revenue_Deficit_GFD_Percentage %>
+    <%= form.text_field :Revenue_Deficit_GFD_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Capital_Outlay_GFD_Percentage %>
+    <%= form.text_field :Capital_Outlay_GFD_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Non_Dev_Exp_Agg_Disbursements_Percentage %>
+    <%= form.text_field :Non_Dev_Exp_Agg_Disbursements_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Non_Dev_Exp_Revenue_Receipts_Percentage %>
+    <%= form.text_field :Non_Dev_Exp_Revenue_Receipts_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Interest_Payments_Revenue_Exp_Percentage %>
+    <%= form.text_field :Interest_Payments_Revenue_Exp_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :State_Own_Revenue_Revenue_Exp_Percentage %>
+    <%= form.text_field :State_Own_Revenue_Revenue_Exp_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Gross_Transfers_Aggregate_Disbursements_Percentage %>
+    <%= form.text_field :Gross_Transfers_Aggregate_Disbursements_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Debt_Servicing_Gross_Transfers_Percentage %>
+    <%= form.text_field :Debt_Servicing_Gross_Transfers_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

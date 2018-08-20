@@ -1,0 +1,2 @@
+json.extract! fiscal_performance1, :id, :State, :Revenue_Deficit_GFD_Percentage, :Capital_Outlay_GFD_Percentage, :Non_Dev_Exp_Agg_Disbursements_Percentage, :Non_Dev_Exp_Revenue_Receipts_Percentage, :Interest_Payments_Revenue_Exp_Percentage, :State_Own_Revenue_Revenue_Exp_Percentage, :Gross_Transfers_Aggregate_Disbursements_Percentage, :Debt_Servicing_Gross_Transfers_Percentage, :Year, :created_at, :updated_at
+json.url fiscal_performance1_url(fiscal_performance1, format: :json)

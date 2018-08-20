@@ -1,0 +1,32 @@
+<%= form_with(model: deficit_management2, local: true) do |form| %>
+  <% if deficit_management2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(deficit_management2.errors.count, "error") %> prohibited this deficit_management2 from being saved:</h2>
+
+      <ul>
+      <% deficit_management2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :State %>
+    <%= form.text_field :State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Gross_Fiscal_Deficit %>
+    <%= form.text_field :Gross_Fiscal_Deficit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

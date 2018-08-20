@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  Revenue_Receipts: 1.5
+  States_Own_Tax: 1.5
+  GSDP: 1.5
+  Ratio_of_SOT_and_RR: 1.5
+  Ratio_of_SOT_and_GSDP: 1.5
+  Ratio_of_Total_Revenue_and_GSDP: 1.5
+
+two:
+  State: MyString
+  Revenue_Receipts: 1.5
+  States_Own_Tax: 1.5
+  GSDP: 1.5
+  Ratio_of_SOT_and_RR: 1.5
+  Ratio_of_SOT_and_GSDP: 1.5
+  Ratio_of_Total_Revenue_and_GSDP: 1.5

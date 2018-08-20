@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Gross_Fiscal_Deficit: MyString
+  Amount: 1.5
+  Year: 1
+
+two:
+  Gross_Fiscal_Deficit: MyString
+  Amount: 1.5
+  Year: 1
