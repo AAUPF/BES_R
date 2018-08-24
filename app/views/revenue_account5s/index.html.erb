@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Revenue Account5s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Transfer of resources</th>
+      <th>Amount</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @revenue_account5s.each do |revenue_account5| %>
+      <tr>
+        <td><%= revenue_account5.Transfer_of_Resources %></td>
+        <td><%= revenue_account5.Amount %></td>
+        <td><%= revenue_account5.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Revenue Account5', new_revenue_account5_path %>

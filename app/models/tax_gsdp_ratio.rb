@@ -1,4 +1,4 @@
 class TaxGsdpRatio < ApplicationRecord
-  extend Code  
+  extend Taxdata  
 
       end

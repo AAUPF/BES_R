@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Transfer_of_Resources: MyString
+  Amount: 1.5
+  Year: MyString
+
+two:
+  Transfer_of_Resources: MyString
+  Amount: 1.5
+  Year: MyString

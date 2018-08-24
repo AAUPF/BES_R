@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Expenditure_Pattern: MyString
+  Amount: 1.5
+  Year: MyString
+
+two:
+  Expenditure_Pattern: MyString
+  Amount: 1.5
+  Year: MyString

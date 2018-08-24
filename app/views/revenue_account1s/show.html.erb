@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Revenue account:</strong>
+  <%= @revenue_account1.Revenue_Account %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @revenue_account1.Amount %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @revenue_account1.Year %>
+</p>
+
+<%= link_to 'Edit', edit_revenue_account1_path(@revenue_account1) %> |
+<%= link_to 'Back', revenue_account1s_path %>

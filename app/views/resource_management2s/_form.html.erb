@@ -1,0 +1,32 @@
+<%= form_with(model: resource_management2, local: true) do |form| %>
+  <% if resource_management2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(resource_management2.errors.count, "error") %> prohibited this resource_management2 from being saved:</h2>
+
+      <ul>
+      <% resource_management2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sources_of_Revenue %>
+    <%= form.text_field :Sources_of_Revenue %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Amount %>
+    <%= form.text_field :Amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

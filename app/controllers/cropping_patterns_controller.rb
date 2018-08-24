@@ -16,13 +16,18 @@ class CroppingPatternsController < ApplicationController
   end
 
 def test
-  ji = [:Food_grains, :Cereals, :Pulses, :Oil_seeds, :Fibre_Crops, :Sugarcane, :Total_Area]
+  # ji = [:"Total_food_grains", :"Cereals(food_grain)", :"Pulses(food_grain)", :"Oil_seeds", :"Fibre_Crops", :"Sugarcane", :"Total_Area"]
   rain_fall_type = params[:rain_fall_type]
+  if rain_fall_type == "All"
+    ji = [:"Cereals(food_grain)", :"Pulses(food_grain)", :"Oil_seeds", :"Fibre_Crops", :"Sugarcane", :"Total_Area"]
+  else
+    ji = [:"Total_food_grains", :"Cereals(food_grain)", :"Pulses(food_grain)", :"Oil_seeds", :"Fibre_Crops", :"Sugarcane", :"Total_Area"]
+  end
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
-   ji1 = [:Year, :Food_grains, :Cereals, :Pulses, :Oil_seeds, :Fibre_Crops, :Sugarcane, :Total_Area]
+   ji1 = [:"Year", :"Total_food_grains", :"Cereals(food_grain)", :"Pulses(food_grain)", :"Oil_seeds", :"Fibre_Crops", :"Sugarcane", :"Total_Area"]
 
 
   if rain_fall_type || views

@@ -1,0 +1,32 @@
+<%= form_with(model: revenue_account3, local: true) do |form| %>
+  <% if revenue_account3.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(revenue_account3.errors.count, "error") %> prohibited this revenue_account3 from being saved:</h2>
+
+      <ul>
+      <% revenue_account3.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Interest_Payment_and_Receipt %>
+    <%= form.text_field :Interest_Payment_and_Receipt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Amount %>
+    <%= form.text_field :Amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
