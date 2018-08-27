@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Aug 24, 2018 at 12:18 PM
+-- Host: localhost
+-- Generation Time: Aug 27, 2018 at 04:59 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `bihar_survey`
+-- Database: `newdata`
 --
 
 -- --------------------------------------------------------
@@ -1661,6 +1661,60 @@ INSERT INTO `annual_rainfalls` (`id`, `Districts`, `January`, `February`, `March
 (530, 'Supaul', 1.35385, 7.00769, 11.5449, 15.2141, 67.4233, 83.8007, 166.822, 173.451, 110.131, 37.3068, 2.37949, 0.512821, 1947, '2018-08-09 10:43:19', '2018-08-09 10:43:19'),
 (531, 'Vaishali', 7.14214, 8.09941, 7.78686, 9.06441, 28.6533, 105.131, 228.095, 177.305, 137.141, 33.5457, 0.0769231, 0.44359, 1947, '2018-08-09 10:43:19', '2018-08-09 10:43:19'),
 (532, 'WestChamparan', 5.52955, 10.6964, 16.5237, 15.1033, 66.2109, 133.394, 339.71, 330.098, 194.835, 51.7007, 0.326442, 0.379638, 1947, '2018-08-09 10:43:19', '2018-08-09 10:43:19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `annual_state_domestic_product3s`
+--
+
+DROP TABLE IF EXISTS `annual_state_domestic_product3s`;
+CREATE TABLE `annual_state_domestic_product3s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2011-12` float DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `annual_state_domestic_product3s`
+--
+
+INSERT INTO `annual_state_domestic_product3s` (`id`, `Sector`, `2011-12`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `created_at`, `updated_at`) VALUES
+(1, 'Agriculture, forestry and fishing', 25.7, 27, 22.8, 22, 21.1, 20.6, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(2, 'Crops', 17.6, 18.9, 14.2, 13.1, 12.3, 12.1, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(3, 'Livestock', 5, 5, 5.4, 5.7, 5.6, 5.5, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(4, 'Forestry and logging', 1.7, 1.7, 1.7, 1.6, 1.5, 1.4, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(5, 'Fishing and aquaculture', 1.3, 1.5, 1.6, 1.7, 1.7, 1.5, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(6, 'Mining and quarrying', 0.1, 0.1, 0.5, 0.2, 0.6, 0.5, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(7, 'Primary', 25.8, 27.1, 23.4, 22.2, 21.7, 21, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(8, 'Manufacturing', 6.1, 3.9, 7.2, 9.6, 9.8, 8.8, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(9, 'Electricity, gas, water supply & other utility services', 1.5, 1.6, 1.6, 1.6, 1.4, 1.4, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(10, 'Construction', 11.2, 10.2, 10.5, 9.7, 8.5, 7.8, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(11, 'Secondary', 18.8, 15.6, 19.3, 20.9, 19.8, 18, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(12, 'Trade, repair, hotels and restaurants', 18.2, 18.6, 17.5, 15.8, 17.3, 19.7, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(13, 'Trade & repair services', 17, 17.5, 16.4, 14.8, 16.3, 18.8, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(14, 'Hotels & restaurants', 1.2, 1.1, 1.1, 1, 1, 1, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(15, 'Transport, storage, communication & services related to broadcasting', 7.3, 8.1, 9, 9.7, 10.1, 10.2, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(16, 'Railways', 1.1, 1.3, 1.5, 1.5, 1.4, 1.3, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(17, 'Road transport', 3.5, 4, 4.4, 4.7, 4.9, 5, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(18, 'Water transport', 0, 0, 0, 0, 0, 0, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(19, 'Air transport', 0, 0, 0, 0, 0, 0.1, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(20, 'Services incidental to transport', 0.4, 0.4, 0.5, 0.5, 0.5, 0.5, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(21, 'Storage', 0, 0, 0, 0, 0, 0, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(22, 'Communication & services related to broadcasting', 2.2, 2.3, 2.6, 2.9, 3.2, 3.2, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(23, 'Financial services', 3.7, 3.8, 3.9, 4.3, 4.5, 4.6, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(24, 'Real estate, ownership of dwelling & professional services', 11.6, 11.4, 11.4, 11.4, 10.7, 9.8, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(25, 'Public administration', 5.6, 5.3, 4.9, 4.9, 4.5, 5.3, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(26, 'Other services', 9.2, 10.1, 10.5, 10.8, 11.4, 11.3, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(27, 'Tertiary', 55.5, 57.2, 57.3, 56.9, 58.5, 61, '2018-08-23 06:48:27', '2018-08-23 06:48:27'),
+(28, 'Total GSVA at basic prices', 100, 100, 100, 100, 100, 100, '2018-08-23 06:48:27', '2018-08-23 06:48:27');
 
 -- --------------------------------------------------------
 
@@ -6236,7 +6290,8 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180821082939'),
 ('20180821110740'),
 ('20180821120258'),
-('20180821120902');
+('20180821120902'),
+('20180823062912');
 
 -- --------------------------------------------------------
 
@@ -6964,6 +7019,12 @@ ALTER TABLE `annual_rainfalls`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `annual_state_domestic_product3s`
+--
+ALTER TABLE `annual_state_domestic_product3s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `ar_internal_metadata`
 --
 ALTER TABLE `ar_internal_metadata`
@@ -7488,6 +7549,12 @@ ALTER TABLE `animal_husbandry6s`
 --
 ALTER TABLE `annual_rainfalls`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=533;
+
+--
+-- AUTO_INCREMENT for table `annual_state_domestic_product3s`
+--
+ALTER TABLE `annual_state_domestic_product3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `cropping_patterns`
