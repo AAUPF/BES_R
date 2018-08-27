@@ -1,1 +1,1 @@
-rails g scaffold Annual_Rainfall Districts:string January:float	February:float	March:float	April:float	May:float	June:float	July:float	August:float	September:float	October:float	November:float	December:float	Year:integer
+rails g scaffold Annual_State_Domestic_Product3  Sector:string '2011-12':float '2012-13':float '2013-14':float '2014-15':float '2015-16':float '2016-17':float 

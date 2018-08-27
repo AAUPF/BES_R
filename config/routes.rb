@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :annual_state_domestic_product3s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :resource_management2s do 
                       collection { post :import }
                       collection { get :dropdown }

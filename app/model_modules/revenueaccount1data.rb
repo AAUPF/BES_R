@@ -82,7 +82,21 @@ module Revenueaccount1data
      else
        j = b
      end
+
+     if _year == "All"
+      grouped = {}
+        b.each do |x|
+          grouped[x[:Revenue_Account]] ||= {}
+          grouped[x[:Revenue_Account]][:Sector] = x[:Revenue_Account]
+          grouped[x[:Revenue_Account]][x[:Year]] = x[:Amount]
+        end
+
+      data = { column: hash_data, data: grouped.values }
+       
+     else
       data = { column: hash_data, data: j }
+     end
+      
       data
     end
   

@@ -21,7 +21,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:Revenue_Account, :Amount, :Year]
+ji1 = [:Sector, :"2012-13", :"2013-14",:"2014-15",:"2015-16",:"2016-17",:"2017-18_BE"]
   if rain_fall_type || views
 
       if views == "Map View"
@@ -44,14 +44,17 @@ ji1 = [:Revenue_Account, :Amount, :Year]
 
       # group = b.group_by{|data| data[:Revenue_Account]}
       # du = []
-      # group.each do |i|
-      #   i[1].each do |i|
-      #     puts  b = a:i[0]
+
+      # @hash = {}
+      # group.map do |i|
+      #   i[1].map do |i|
+      #     puts  "#{i.Year}" => i.Year
+
+      #     @hash["#{i.Year}"] = i.Year
       #    end
-      # du.push({a:i[0],b
-        
-      
-      # })
+      #    @hash["Sector"]  =i[0]
+     
+      # du.push(@hash)
       # end
      
       respond_to do |format|
