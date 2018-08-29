@@ -21,7 +21,18 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:Demographic_Indicator, :Bihar, :India, :Year]
+# ji1 = [:Demographic_Indicator, :Bihar, :India, :Year]
+if year == "All"
+  ji1 = [:Demographic_Indicator, :"2001", :"2011"]
+else
+  if rain_fall_type == "Bihar"
+    ji1 = [:Demographic_Indicator, :Bihar, :Year]
+  elsif rain_fall_type == "India"
+    ji1 = [:Demographic_Indicator, :India, :Year]
+  else
+  ji1 = [:Demographic_Indicator, :Bihar, :India, :Year]
+end
+end
   if rain_fall_type || views
 
       if views == "Map View"
@@ -41,6 +52,9 @@ ji1 = [:Demographic_Indicator, :Bihar, :India, :Year]
         @DemographicProfile1s = DemographicProfile1.search(params[:search],compare,year,rain_fall_type)
         a = DemographicProfile1.query(@DemographicProfile1s,params[:year],rain_fall_type,views,ji,compare)
       end
+
+
+    # l =  @DemographicProfile1s.group_by{ |data| data[:Year]}
       respond_to do |format|
         format.html { render json:a }
     end

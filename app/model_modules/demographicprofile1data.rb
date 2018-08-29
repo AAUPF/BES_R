@@ -14,71 +14,107 @@ module Demographicprofile1data
     def search(search, compare, year, rain_fall_type)
       if search == 'All'
         if rain_fall_type == 'All'
-          where(Year: year).order('id ')
+            if year == "All"
+                all.order("id")
+              else
+                where(Year: year).order('id ')
+              end
         else
-          where(Year: year).order("#{rain_fall_type} ")
+            if year == "All"
+                all.order("#{rain_fall_type} ")
+            else
+                where(Year: year).order("#{rain_fall_type} ")
+            end
         end
       elsif compare
-         where('Demographic_Indicator = ? OR Demographic_Indicator = ?', search, compare).where('year = ?', year).order(:id)
-        # select(rain_fall_type,compare,"Year").where("Year = ?", year)
+        if year == "All"
+            where('Demographic_Indicator = ? OR Demographic_Indicator = ?', search, compare).order(:id)
+        else
+            where('Demographic_Indicator = ? OR Demographic_Indicator = ?', search, compare).where('year = ?', year).order(:id)
+        end
       else
         if rain_fall_type == 'All'
-          where('Demographic_Indicator = ? ', search).where('year = ?', year).order(:id)
+            if year == "All"
+                where('Demographic_Indicator = ? ', search).order(:id)
+            else
+                where('Demographic_Indicator = ? ', search).where('year = ?', year).order(:id)
+            end
         else
-          where('Demographic_Indicator = ? ', search).where('year = ?', year).order(rain_fall_type)
+            if year == "All"
+                where('Demographic_Indicator = ? ', search).order(rain_fall_type)
+            else
+                where('Demographic_Indicator = ? ', search).where('year = ?', year).order(rain_fall_type)
+            end
+          
         end
       end
     end
   
-    # Logic to generate table starts
+    
+
+
     def table(b, rain_fall_type, _year, ji, compare)
-      dataset = rain_fall_type.tr('_', ' ')
-  
-      if rain_fall_type == 'All'
-  
-        hash_data = ji.map do |el|
-          if el.to_s == 'Demographic_Indicator'
-            { title: 'District', field: el, headerFilter: true }
+        dataset = rain_fall_type.tr('_', ' ')
+    
+        if rain_fall_type 
+    
+          hash_data = ji.map do |el|
+            if el.to_s == 'Demographic_Indicator'
+              { title: 'Demographic Indicator', field: el, headerFilter: true }
+            else
+              { title: el.to_s.tr('_', ' '), field: el }
+            end
+          end
+        else
+          if compare == 'None'
+            hash_data = [
+              { title: 'Demographic Indicator', field: 'Demographic_Indicator', headerFilter: true },
+              { title: dataset, field: rain_fall_type }
+            ]
           else
-            { title: el.to_s.tr('_', ' '), field: el }
+  
+            hash_data = [
+              # {title:compare, field:compare, sorter:"string", },
+              { title: 'Demographic Indicator', field: 'Demographic_Indicator', headerFilter: true },
+    
+              { title: dataset, field: rain_fall_type }
+            ]
           end
         end
-      else
-        if compare == 'None'
-          hash_data = [
-            { title: 'District', field: 'Demographic_Indicator', headerFilter: true },
-            { title: dataset, field: rain_fall_type }
-          ]
+  
+    
+       if rain_fall_type == "Productivity"
+        j = b.each { |item| item[:Productivity] = item[:Productivity]/100}
+    
+       else
+         j = b
+       end
+  
+       if _year == "All"
+        grouped = {}
+        if rain_fall_type == "Bihar"
+            b.each do |x|
+                grouped[x[:Demographic_Indicator]] ||= {}
+                grouped[x[:Demographic_Indicator]][:Demographic_Indicator] = x[:Demographic_Indicator]
+                grouped[x[:Demographic_Indicator]][x[:Year]] = x[:Bihar]
+              end
         else
-          hash_data = [
-            # {title:compare, field:compare, sorter:"string", },
-            { title: 'District', field: 'Demographic_Indicator', headerFilter: true },
-  
-            { title: dataset, field: rain_fall_type }
-          ]
+            b.each do |x|
+                grouped[x[:Demographic_Indicator]] ||= {}
+                grouped[x[:Demographic_Indicator]][:Demographic_Indicator] = x[:Demographic_Indicator]
+                grouped[x[:Demographic_Indicator]][x[:Year]] = x[:India]
+              end
         end
+          
+  
+        data = { column: hash_data, data: grouped.values }
+         
+       else
+        data = { column: hash_data, data: j }
+       end
+        
+        data
       end
-  
-      # j = []
-      # b.map do |k|
-      #   if k.Productivity
-      #     u = k.Productivity/100
-      #     j.push({id: k.id, Productivity: u ,Demographic_Indicator: k.Demographic_Indicator, Area: k.Area, Production: k.Production, Year: k.Year })
-      #   else
-      #     j.push(k)
-      #   end
-      # end
-  
-  
-     if rain_fall_type == "Productivity"
-      j = b.each { |item| item[:Productivity] = item[:Productivity]/100}
-  
-     else
-       j = b
-     end
-      data = { column: hash_data, data: j }
-      data
-    end
   
     # Logic to generate table end
   
@@ -100,11 +136,13 @@ module Demographicprofile1data
       d = 'Demographic_Indicator'
       color  = "#4f81bc"
       if rain_fall_type == 'All'
+        
         if views
           hash_data = ji.map do |column_name|
             if compare == 'Bihar vs District'
               dataset = column_name.to_s.tr('_', ' ')
               {
+
                 type: views,
                 legendText: dataset,
                 showInLegend: true,
@@ -113,7 +151,24 @@ module Demographicprofile1data
                             end
               }
             else
-              dataset = column_name.to_s.tr('_', ' ')
+                if _year == "All"
+            
+            grouped_data = b.group_by{ |data| data[:Year]}
+            hash_data = grouped_data.map{ |vegetable, values| 
+            dataset = vegetable.to_s.gsub("_"," ")
+            {
+            type: views,
+            legendText: dataset,
+            showInLegend: true,
+            dataPoints: values.map { |value|
+            { y: value[rain_fall_type], label: value["Year"] }
+            }
+            }
+            }
+
+
+                else
+                dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
                 legendText: dataset,
@@ -122,6 +177,8 @@ module Demographicprofile1data
                     { y: el[column_name], z: el[column_name], label: el[d] }
                             end
               }
+                end
+              
             end
           end
         end
@@ -166,7 +223,21 @@ module Demographicprofile1data
                           end
             }]
         else
-          dataset = rain_fall_type.tr('_', ' ')
+            if _year == "All"
+            grouped_data = b.group_by{ |data| data[:Demographic_Indicator]}
+            hash_data = grouped_data.map{ |vegetable, values| 
+            dataset = vegetable.to_s.gsub("_"," ")
+            {
+            type: views,
+            legendText: dataset,
+            showInLegend: true,
+            dataPoints: values.reject { |x| x['Demographic_Indicator'] == 'No. of Villages' }.map { |value|
+            { y: value[rain_fall_type], label: value["Year"] }
+            }
+            }
+            }
+            else
+                dataset = rain_fall_type.tr('_', ' ')
           hash_data =
             [{
               type: views,
@@ -177,6 +248,8 @@ module Demographicprofile1data
                 { y: el[rain_fall_type], label: el['Demographic_Indicator'] }
                           end
             }]
+            end
+          
         end
         if views == "stackedBar100" or views == "stackedBar"
           title = {

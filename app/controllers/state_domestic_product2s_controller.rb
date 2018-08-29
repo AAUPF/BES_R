@@ -21,7 +21,13 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:State, :Per_Capita_Income, :Year]
+   search = params[:search]
+# ji1 = [:State, :Per_Capita_Income, :Year]
+if year == "All"
+  ji1 = [:State, :"2011", :"2012", :"2013", :"2014", :"2015", :"2016"]
+else
+  ji1 = [:State, :Per_Capita_Income, :Year]
+end
   if rain_fall_type || views
 
       if views == "Map View"
@@ -39,7 +45,7 @@ ji1 = [:State, :Per_Capita_Income, :Year]
         a = StateDomesticProduct2.table(b,rain_fall_type,year,ji1,compare)
       else
         @StateDomesticProduct2s = StateDomesticProduct2.search(params[:search],compare,year,rain_fall_type)
-        a = StateDomesticProduct2.query(@StateDomesticProduct2s,params[:year],rain_fall_type,views,ji,compare)
+        a = StateDomesticProduct2.query(@StateDomesticProduct2s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

@@ -11,39 +11,54 @@ module Revenueaccount1data
       end
     end
   
-    def search(search, compare, year, rain_fall_type)
-      if search == 'All'
+    def search(search, compare, year, rain_fall_type,district1)
+            if search == "None"
+                getit = district1
+            else
+                getit = search
+            end
+    if search == 'All'
         if rain_fall_type == 'All'
           where(Year: year).order('id ')
         else
           if year == "All"
-            all.order("id")
+            # all.order("id")
+            where('Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ?', "Revenue Receipt", 'Revenue Expenditure', 'Revenue Surplus',"State's own tax plus non tax revenue").order('id')
           else
-            where(Year: year).order("#{rain_fall_type} ")
+            where('Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ?', "Revenue Receipt", 'Revenue Expenditure', 'Revenue Surplus',"State's own tax plus non tax revenue").where(Year: year).order("#{rain_fall_type} ")
           end
           # where(Year: year).order("#{rain_fall_type} ")
         end
-      elsif compare
+    elsif compare
         if year == "All"
-          where('Revenue_Account = ? OR Revenue_Account = ?', search, compare).order(:id)
+            if district1 == "All"
+                where('Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ?', "State’s own revenue as percentage of total revenue", 'State’s share of Central tax as percentage of total revenue', 'Central Grants as percentage of its total revenue',"State’s own revenue as percentage of revenue expenditure").order('id')
+            else
+                where('Revenue_Account = ? OR Revenue_Account = ?', getit, compare).order(:id)
+            end
+          
         else
-          where('Revenue_Account = ? OR Revenue_Account = ?', search, compare).where('year = ?', year).order(:id)
+            if district1 == "All"
+                where('Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ?', "State’s own revenue as percentage of total revenue", 'State’s share of Central tax as percentage of total revenue', 'Central Grants as percentage of its total revenue',"State’s own revenue as percentage of revenue expenditure").where(Year: year).order("#{rain_fall_type} ")
+            else
+                where('Revenue_Account = ? OR Revenue_Account = ?', getit, compare).where('year = ?', year).order(:id)
+            end
+          
         end
-        
-      else
+    else
         if rain_fall_type == 'All'
-          where('Revenue_Account = ? ', search).where('year = ?', year).order(:id)
+          where('Revenue_Account = ? ', getit).where('year = ?', year).order(:id)
         else
           if year == "All"
-            where('Revenue_Account = ? ', search).order("id")
+            where('Revenue_Account = ? ', getit).order("id")
           else
-            where('Revenue_Account = ? ', search).where('year = ?', year).order(rain_fall_type)
+            where('Revenue_Account = ? ', getit).where('year = ?', year).order(rain_fall_type)
           end
           
            
         end
-      end
     end
+end
   
     # Logic to generate table starts
     def table(b, rain_fall_type, _year, ji, compare)
@@ -87,7 +102,7 @@ module Revenueaccount1data
       grouped = {}
         b.each do |x|
           grouped[x[:Revenue_Account]] ||= {}
-          grouped[x[:Revenue_Account]][:Sector] = x[:Revenue_Account]
+          grouped[x[:Revenue_Account]][:Revenue_Account] = x[:Revenue_Account]
           grouped[x[:Revenue_Account]][x[:Year]] = x[:Amount]
         end
 
@@ -116,7 +131,7 @@ module Revenueaccount1data
       end
     end
   
-    def query(b, _year, rain_fall_type, views, ji, compare)
+    def query(b, _year, rain_fall_type, views, ji, compare,search,district1)
       d = 'Revenue_Account'
       color  = "#4f81bc"
       if rain_fall_type == 'All'
@@ -175,17 +190,41 @@ module Revenueaccount1data
       else
         if compare
           if _year == "All"
-            grouped_data = b.group_by{ |data| data[:Year]}
+            grouped_data = b.group_by{ |data| data[:Revenue_Account]}
             hash_data = grouped_data.map{ |vegetable, values| 
             dataset = vegetable.to_s.gsub("_"," ")
-            {
-            type: views,
-            legendText: dataset,
-            showInLegend: true,
-            dataPoints: values.map { |value|
-            { y: value[rain_fall_type], label: value[:Revenue_Account] }
-            }
-            }
+            if search=="All" || district1 == "All"
+                {
+                    type: views,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: values.map { |value|
+                    { y: value[rain_fall_type], label: value["Year"] }
+                    }
+                }
+            else
+                if compare == "None"
+                    {
+                        type: views,
+                        legendText: dataset,
+                        color:color,
+                        showInLegend: true,
+                        dataPoints: values.map { |value|
+                        { y: value[rain_fall_type], label: value["Year"] }
+                        }
+                    }
+                else
+                    {
+                        type: views,
+                        legendText: dataset,
+                        showInLegend: true,
+                        dataPoints: values.map { |value|
+                        { y: value[rain_fall_type], label: value["Year"] }
+                        }
+                    }
+                end
+                
+            end
             }
           else
             dataset = rain_fall_type.tr('_', ' ')

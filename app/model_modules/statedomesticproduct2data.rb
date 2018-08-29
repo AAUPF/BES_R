@@ -45,11 +45,10 @@ module Statedomesticproduct2data
       end
     end
   
-    # Logic to generate table starts
-    def table(b, rain_fall_type, _year, ji, compare)
+def table(b, rain_fall_type, _year, ji, compare)
       dataset = rain_fall_type.tr('_', ' ')
   
-      if rain_fall_type == 'All'
+      if rain_fall_type 
   
         hash_data = ji.map do |el|
           if el.to_s == 'State'
@@ -65,6 +64,7 @@ module Statedomesticproduct2data
             { title: dataset, field: rain_fall_type }
           ]
         else
+
           hash_data = [
             # {title:compare, field:compare, sorter:"string", },
             { title: 'State', field: 'State', headerFilter: true },
@@ -73,17 +73,7 @@ module Statedomesticproduct2data
           ]
         end
       end
-  
-      # j = []
-      # b.map do |k|
-      #   if k.Productivity
-      #     u = k.Productivity/100
-      #     j.push({id: k.id, Productivity: u ,State: k.State, Area: k.Area, Production: k.Production, Year: k.Year })
-      #   else
-      #     j.push(k)
-      #   end
-      # end
-  
+
   
      if rain_fall_type == "Productivity"
       j = b.each { |item| item[:Productivity] = item[:Productivity]/100}
@@ -91,7 +81,21 @@ module Statedomesticproduct2data
      else
        j = b
      end
+
+     if _year == "All"
+      grouped = {}
+        b.each do |x|
+          grouped[x[:State]] ||= {}
+          grouped[x[:State]][:State] = x[:State]
+          grouped[x[:State]][x[:Year]] = x[:Per_Capita_Income]
+        end
+
+      data = { column: hash_data, data: grouped.values }
+       
+     else
       data = { column: hash_data, data: j }
+     end
+      
       data
     end
   
@@ -111,7 +115,7 @@ module Statedomesticproduct2data
       end
     end
   
-    def query(b, _year, rain_fall_type, views, ji, compare)
+    def query(b, _year, rain_fall_type, views, ji, compare,search)
       d = 'State'
       color  = "#4f81bc"
       if rain_fall_type == 'All'
@@ -170,7 +174,7 @@ module Statedomesticproduct2data
       else
         if compare == 'Bihar vs State'
           if _year == "All"
-            grouped_data = b.group_by{ |data| data[:Year]}
+            grouped_data = b.group_by{ |data| data[:State]}
             hash_data = grouped_data.map{ |vegetable, values| 
             dataset = vegetable.to_s.gsub("_"," ")
             {
@@ -178,7 +182,7 @@ module Statedomesticproduct2data
             legendText: dataset,
             showInLegend: true,
             dataPoints: values.map { |value|
-            { y: value[rain_fall_type], label: value[:State] }
+            { y: value[rain_fall_type], label: value["Year"] }
             }
             }
             }
@@ -197,19 +201,40 @@ module Statedomesticproduct2data
           end
           
         else
+          
           if _year == "All"
-            grouped_data = b.group_by{ |data| data[:Year]}
-            hash_data = grouped_data.map{ |vegetable, values| 
-            dataset = vegetable.to_s.gsub("_"," ")
-            {
-            type: views,
-            legendText: dataset,
-            showInLegend: true,
-            dataPoints: values.map { |value|
-            { y: value[rain_fall_type], label: value[:State] }
-            }
-            }
-            }
+            grouped_data = b.group_by{ |data| data[:State]}
+            if search == "All"
+              hash_data = grouped_data.map{ |vegetable, values| 
+                dataset = vegetable.to_s.gsub("_"," ")
+                {
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                legendText: dataset,
+                name:dataset,
+                showInLegend: true,
+                dataPoints: values.map { |value|
+                { y: value[rain_fall_type], label: value["Year"] }
+                }
+                }
+                }
+            else
+              hash_data = grouped_data.map{ |vegetable, values| 
+                dataset = vegetable.to_s.gsub("_"," ")
+                {
+                type: views,
+                color:color,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                legendText: dataset,
+                name:dataset,
+                showInLegend: true,
+                dataPoints: values.map { |value|
+                { y: value[rain_fall_type], label: value["Year"] }
+                }
+                }
+                }
+            end
+            
 
           else
             dataset = rain_fall_type.tr('_', ' ')

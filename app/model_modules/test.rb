@@ -16,15 +16,30 @@ module Test
       if rain_fall_type == 'All'
         where(Year: year).order('id ')
       else
-        where(Year: year).order("#{rain_fall_type} ")
+        if year == "All"
+          all.order("#{rain_fall_type} ")
+        else
+          where(Year: year).order("#{rain_fall_type} ")
+        end
+        
       end
     elsif compare == 'Bihar vs District'
-      where('Districts = ? OR Districts = ?', search, 'Bihar').where('year = ?', year).order(:id)
+      if year == "All"
+        where('Districts = ? OR Districts = ?', search, 'Bihar').order(:id)
+      else
+        where('Districts = ? OR Districts = ?', search, 'Bihar').where('year = ?', year).order(:id)
+      end
+     
     else
       if rain_fall_type == 'All'
         where('Districts = ? ', search).where('year = ?', year).order(:id)
       else
-        where('Districts = ? ', search).where('year = ?', year).order(rain_fall_type)
+        if year == "All"
+          where('Districts = ? ', search).order(rain_fall_type)
+        else
+          where('Districts = ? ', search).where('year = ?', year).order(rain_fall_type)
+        end
+        
       end
     end
   end
@@ -175,7 +190,23 @@ module Test
                         end
           }]
       else
-        dataset = rain_fall_type.tr('_', ' ')
+        if _year == "All"
+          grouped_data = b.group_by{ |data| data[:Districts]}
+          hash_data  = grouped_data.map{ |vegetable, values| 
+              dataset = vegetable.to_s.gsub("_"," ")
+              {
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                legendText: dataset,
+                name:dataset,
+                showInLegend: true,
+                dataPoints: values.reject { |x| x['Districts'] == 'Bihar' }.map { |value|
+                  { y: value[rain_fall_type], label: value["Year"] }
+                }
+              }
+           }
+        else
+          dataset = rain_fall_type.tr('_', ' ')
         hash_data =
           [{
             type: views,
@@ -193,6 +224,11 @@ module Test
                           end
                         end
           }]
+        end
+
+
+
+        
       end
       if views == "stackedBar100" or views == "stackedBar"
         title = {

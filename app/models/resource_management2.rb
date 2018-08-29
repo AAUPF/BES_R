@@ -1,8 +1,7 @@
 class ResourceManagement2 < ApplicationRecord
-  # extend Code  
-# module ResourceManagement2
   
-    def import1(file)
+  
+    def self.import1(file)
       spreadsheet = Roo::Spreadsheet.open(file.path)
       header = spreadsheet.row(1)
       (2..spreadsheet.last_row).each do |i|
@@ -14,7 +13,7 @@ class ResourceManagement2 < ApplicationRecord
       end
     end
   
-    def search(search, compare, year, rain_fall_type)
+    def self.search(search, compare, year, rain_fall_type)
       if search == 'All'
         if rain_fall_type == 'All'
           where(Year: year).order('id ')
@@ -49,14 +48,14 @@ class ResourceManagement2 < ApplicationRecord
     end
   
     # Logic to generate table starts
-    def table(b, rain_fall_type, _year, ji, compare)
+    def self.table(b, rain_fall_type, _year, ji, compare)
       dataset = rain_fall_type.tr('_', ' ')
   
       if rain_fall_type == 'All'
   
         hash_data = ji.map do |el|
           if el.to_s == 'Sources_of_Revenue'
-            { title: 'Sources_of_Revenue', field: el, headerFilter: true }
+            { title: 'Sources of Revenue', field: el, headerFilter: true }
           else
             { title: el.to_s.tr('_', ' '), field: el }
           end
@@ -64,13 +63,13 @@ class ResourceManagement2 < ApplicationRecord
       else
         if compare == 'None'
           hash_data = [
-            { title: 'Sources_of_Revenue', field: 'Sources_of_Revenue', headerFilter: true },
+            { title: 'Sources of Revenue', field: 'Sources_of_Revenue', headerFilter: true },
             { title: dataset, field: rain_fall_type }
           ]
         else
           hash_data = [
             # {title:compare, field:compare, sorter:"string", },
-            { title: 'Sources_of_Revenue', field: 'Sources_of_Revenue', headerFilter: true },
+            { title: 'Sources of Revenue', field: 'Sources_of_Revenue', headerFilter: true },
   
             { title: dataset, field: rain_fall_type }
           ]
@@ -91,7 +90,7 @@ class ResourceManagement2 < ApplicationRecord
   
     # Logic to generate table end
   
-    def map_search(search, _compare, year, rain_fall_type)
+    def self.map_search(search, _compare, year, rain_fall_type)
       if search == 'All'
         if rain_fall_type == 'All'
           where(Year: year).order(:id)
@@ -105,7 +104,7 @@ class ResourceManagement2 < ApplicationRecord
       end
     end
   
-    def query(b, _year, rain_fall_type, views, ji, compare)
+    def self.query(b, _year, rain_fall_type, views, ji, compare)
       d = 'Sources_of_Revenue'
       color  = "#4f81bc"
       if rain_fall_type == 'All'
@@ -151,32 +150,34 @@ class ResourceManagement2 < ApplicationRecord
             title:{
               text: "#{rain_fall_type.to_s.gsub("_"," ")}"
                   },
-                  # axisX: {
-                  #   interval:1,
-                  #   labelMaxWidth: 180,
-                  #   labelAngle: 90,
-                  #   labelFontFamily:"verdana0"
-                  #   },
+                  axisX: {
+                    interval:1,
+                    labelMaxWidth: 180,
+                    labelAngle: 90,
+                    labelFontFamily:"verdana0"
+                    },
             data: hash_data
         }
         end
         return title
       else
+
         if compare
           if _year == "All"
-            grouped_data = b.group_by{ |data| data[:Year]}
+            grouped_data = b.group_by{ |data| data[:Sources_of_Revenue]}
             hash_data = grouped_data.map{ |vegetable, values| 
             dataset = vegetable.to_s.gsub("_"," ")
             {
             type: views,
             legendText: dataset,
             showInLegend: true,
-            dataPoints: values.map { |value|
-            { y: value[rain_fall_type], label: value[:Sources_of_Revenue] }
+            dataPoints: values.reject{|x| x["Sources_of_Revenue"]== "Total"}.map { |value|
+            { y: value[rain_fall_type], label: value["Year"] }
             }
             }
             }
           else
+
             dataset = rain_fall_type.tr('_', ' ')
           hash_data =
             [{
@@ -184,14 +185,16 @@ class ResourceManagement2 < ApplicationRecord
               color: color,
               legendText: dataset,
               showInLegend: true,
-              dataPoints: b.map do |el|
+              dataPoints: b.reject{|x| x["Sources_of_Revenue"]== "Total"}.map do |el|
                             { y: el[rain_fall_type], label: el['Sources_of_Revenue'] }
                           end
             }]
           end
           
         else
+
           if _year == "All"
+
             grouped_data = b.group_by{ |data| data[:Year]}
             hash_data = grouped_data.map{ |vegetable, values| 
             dataset = vegetable.to_s.gsub("_"," ")
@@ -199,13 +202,14 @@ class ResourceManagement2 < ApplicationRecord
             type: views,
             legendText: dataset,
             showInLegend: true,
-            dataPoints: values.map { |value|
+            dataPoints: values.reject{|x| x["Sources_of_Revenue"]== "Total"}.map { |value|
             { y: value[rain_fall_type], label: value[:Sources_of_Revenue] }
             }
             }
             }
 
           else
+
             dataset = rain_fall_type.tr('_', ' ')
             hash_data =
               [{
@@ -213,7 +217,7 @@ class ResourceManagement2 < ApplicationRecord
                 color: color,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.map do |el|
+                dataPoints: b.reject{|x| x["Sources_of_Revenue"]== "Total"}.map do |el|
                   { y: el[rain_fall_type], label: el['Sources_of_Revenue'] }
                             end
               }]
@@ -240,7 +244,7 @@ class ResourceManagement2 < ApplicationRecord
                   # axisX: {
                   #   interval:1,
                   #   labelMaxWidth: 180,
-                  #   labelAngle: 90,
+                  #   labelAngle: 120,
                   #   labelFontFamily:"verdana0"
                   #   },
             data: hash_data
@@ -251,7 +255,7 @@ class ResourceManagement2 < ApplicationRecord
       end
     end
   
-    def map1(b, rain_fall_type, _views, _ji, unit1, ranges)
+    def self.map1(b, rain_fall_type, _views, _ji, unit1, ranges)
       array = []
       # a = []
       l = rain_fall_type.delete(' ')
@@ -372,7 +376,7 @@ class ResourceManagement2 < ApplicationRecord
     end
   
   
-    def map1(b, rain_fall_type, _views, _ji, unit1, ranges)
+    def self.map1(b, rain_fall_type, _views, _ji, unit1, ranges)
         #  abort(rain_fall_type)
         a = []
         below_min = []
@@ -492,7 +496,7 @@ class ResourceManagement2 < ApplicationRecord
         return a
     end
   
-    def map(b, rain_fall_type, _views, _ji)
+    def self.map(b, rain_fall_type, _views, _ji)
       #  abort(rain_fall_type)
       a = []
       below_min = []

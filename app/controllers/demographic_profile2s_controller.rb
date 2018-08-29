@@ -22,6 +22,28 @@ def test
    year  = params[:year]
    compare = params[:compare]
 ji1 = [:Districts, :Population, :Sex_Ratio_Overall, :Sex_Ratio_Child, :Density, :Urbanisation, :Decadal_Growth, :Year, :Percentage_Population]
+if year == "All"
+  ji1 = [:Districts, :"2001", :"2011"]
+else
+  if rain_fall_type == "Population"
+    ji1 = [:Districts, :Population, :Year]
+  elsif rain_fall_type == "Sex_Ratio_Overall"
+    ji1 = [:Districts, :Sex_Ratio_Overall, :Year]
+  elsif rain_fall_type == "Sex_Ratio_Child"
+    ji1 = [:Districts, :Sex_Ratio_Child, :Year]
+  elsif rain_fall_type == "Density"
+    ji1 = [:Districts, :Density, :Year]
+  elsif rain_fall_type == "Urbanisation"
+    ji1 = [:Districts, :Urbanisation, :Year]
+  elsif rain_fall_type == "Decadal_Growth"
+    ji1 = [:Districts, :Decadal_Growth, :Year]
+  elsif rain_fall_type == "Percentage_Population"
+    ji1 = [:Districts, :Percentage_Population, :Year]
+  else
+    ji1 = [:Districts, :Population, :Sex_Ratio_Overall, :Sex_Ratio_Child, :Density, :Urbanisation, :Decadal_Growth, :Year, :Percentage_Population]
+  end
+end
+
   if rain_fall_type || views
 
       if views == "Map View"

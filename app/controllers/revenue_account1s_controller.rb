@@ -21,7 +21,15 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:Sector, :"2012-13", :"2013-14",:"2014-15",:"2015-16",:"2016-17",:"2017-18_BE"]
+   district1 = params[:district1]
+   search = params[:search]
+   if year == "All"
+    ji1 = [:Revenue_Account, :"2012-13", :"2013-14",:"2014-15",:"2015-16",:"2016-17",:"2017-18_BE"]
+   else
+    ji1 = [:Revenue_Account,:Amount,:Year]
+    
+   end
+# ji1 = [:Sector, :"2012-13", :"2013-14",:"2014-15",:"2015-16",:"2016-17",:"2017-18_BE"]
   if rain_fall_type || views
 
       if views == "Map View"
@@ -35,11 +43,11 @@ ji1 = [:Sector, :"2012-13", :"2013-14",:"2014-15",:"2015-16",:"2016-17",:"2017-1
           a = RevenueAccount1.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = RevenueAccount1.search(params[:search],compare,year,rain_fall_type)
+        b = RevenueAccount1.search(params[:search],compare,year,rain_fall_type,district1)
         a = RevenueAccount1.table(b,rain_fall_type,year,ji1,compare)
       else
-        @RevenueAccount1s = RevenueAccount1.search(params[:search],compare,year,rain_fall_type)
-        a = RevenueAccount1.query(@RevenueAccount1s,params[:year],rain_fall_type,views,ji,compare)
+        @RevenueAccount1s = RevenueAccount1.search(params[:search],compare,year,rain_fall_type,district1)
+        a = RevenueAccount1.query(@RevenueAccount1s,params[:year],rain_fall_type,views,ji,compare,search,district1)
       end
 
       # group = b.group_by{|data| data[:Revenue_Account]}
