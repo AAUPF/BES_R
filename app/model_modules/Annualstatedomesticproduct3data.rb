@@ -19,10 +19,17 @@ module Annualstatedomesticproduct3data
         all
       else
         if year == 'All'
-          where(Sector: rain_fall_type).order('id')
+          if rain_fall_type == "None"
+            where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').order('id')
+          else
+            where(Sector: rain_fall_type).order('id')
+          end
         else
           if rain_fall_type == "All"
             order("#{year} ")
+
+          elsif rain_fall_type == "None"
+            where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').order('id')
            else
             where(Sector: rain_fall_type).order("#{year} ")
            end
@@ -40,99 +47,122 @@ module Annualstatedomesticproduct3data
         all
       else
         if year == 'All'
-          where('Sector = ? ', rain_fall_type).order('id')
+          if rain_fall_type == "None"
+            where('Sector = ? ', search).order('id')
+          else
+            where('Sector = ? ', rain_fall_type).order('id')
+          end
         else
+          if rain_fall_type == "None"
 
-          where('Sector = ? ', rain_fall_type).order('id')
+            if search == "All"
+              where('Sector = ? ', search).order('id')
+            else
+              where('Sector = ? ', search).order('id')
+            end
+          else
+            where('Sector = ? ', rain_fall_type).order('id')
+          end
         end
-
       end
     end
   end
 
   # Logic to generate table starts
-  def table(b, rain_fall_type, _year, ji, compare,search)
+  def table(b, rain_fall_type, _year, ji, compare,search,data)
     dataset = rain_fall_type.tr('_', ' ')
+    # if search == 'Primary'
+    #   data = [
+    #     'Agriculture, forestry and fishing',
+    #     'Crops',
+    #     'Livestock',
+    #     'Forestry and logging',
+    #     'Fishing and aquaculture',
+    #     'Mining and quarrying',
+    #     'Primary'
+    #   ]
+    # elsif search == 'Secondary'
 
+    #   data = [
+    #     'Manufacturing',
+    #     'Electricity and Utilitiy Services',
+    #     'Construction',
+    #     'Secondary'
+    #   ]
+    # elsif search == 'Tertiary'
 
+    #   data = [
+    #     "Trade and Hospitality",
+    #     "Trade and repair services",
+    #     "Hotels and restaurants",
+    #     "Transport and Communication",
+    #     "Railways",
+    #     "Road transport",
+    #     "Water transport",
+    #     "Air transport",
+    #     "Services incidental to transport",
+    #     "Storage",
+    #     "Communication and Broadcasting",
+    #     "Financial services",
+    #     "Real Estate Services",
+    #     "Public administration",
+    #     "Other services",
+    #     "Tertiary",
+    #   ]
+    # elsif search == 'All'
 
-    if search == 'Primary'
-      data = [
-        'Agriculture, forestry and fishing',
-        'Crops',
-        'Livestock',
-        'Forestry and logging',
-        'Fishing and aquaculture',
-        'Mining and quarrying'
-      ]
-    elsif search == 'Secondary'
-
-      data = [
-        'Manufacturing',
-        'Electricity, gas, water supply & other utility services',
-        'Construction'
-      ]
-    elsif search == 'Tertiary'
-
-      data = [
-        'Trade, repair, hotels and restaurants',
-        'Trade & repair services',
-        'Hotels & restaurants',
-        'Transport, storage, communication & services related to broadcasting',
-        'Railways',
-        'Road transport',
-        'Water transport',
-        'Air transport',
-        'Services incidental to transport',
-        'Storage',
-        'Communication & services related to broadcasting',
-        'Financial services',
-        'Real estate, ownership of dwelling & professional services',
-        'Public administration',
-        'Other services'
-      ]
-    elsif search == 'All'
-
-      data = [
-        "Agriculture, forestry and fishing",
-        "Crops",
-        "Livestock",
-        "Forestry and logging",
-        "Fishing and aquaculture",
-        "Mining and quarrying",
-        "Primary",
-        "Manufacturing",
-        "Electricity, gas, water supply & other utility services",
-        "Construction",
-        "Secondary",
-        "Trade, repair, hotels and restaurants",
-        "Trade & repair services",
-        "Hotels & restaurants",
-        "Transport, storage, communication & services related to broadcasting",
-        "Railways",
-        "Road transport",
-        "Water transport",
-        "Air transport",
-        "Services incidental to transport",
-        "Storage",
-        "Communication & services related to broadcasting",
-        "Financial services",
-        "Real estate, ownership of dwelling & professional services",
-        "Public administration",
-        "Other services",
-        "Tertiary",
-        "Total GSVA at basic prices",
-      ]
-    end
+    #   data = [
+    #     "Agriculture, forestry and fishing",
+    #     "Crops",
+    #     "Livestock",
+    #     "Forestry and logging",
+    #     "Fishing and aquaculture",
+    #     "Mining and quarrying",
+    #     "Primary",
+    #     "Manufacturing",
+    #     "Electricity, gas, water supply & other utility services",
+    #     "Construction",
+    #     "Secondary",
+    #     "Trade, repair, hotels and restaurants",
+    #     "Trade & repair services",
+    #     "Hotels & restaurants",
+    #     "Transport, storage, communication & services related to broadcasting",
+    #     "Railways",
+    #     "Road transport",
+    #     "Water transport",
+    #     "Air transport",
+    #     "Services incidental to transport",
+    #     "Storage",
+    #     "Communication & services related to broadcasting",
+    #     "Financial services",
+    #     "Real estate, ownership of dwelling & professional services",
+    #     "Public administration",
+    #     "Other services",
+    #     "Tertiary",
+    #     "Total GSVA at basic prices",
+    #   ]
+    # end
     
+    if _year == "2011-16"
+      years = "CAGR(2011-16)"
+    else
+      years = _year
+    end
     hash_data = if rain_fall_type == 'All'
-         
+   
       if _year == "All"
+
         ji.map do |el|
+          puts el
           if el.to_s == 'Sector'
             { title: 'Sector', field: el, headerFilter: true }
+
+          elsif el.to_s == '2011-16'
+            { title: "CAGR(2011-16)", field: el }
           else
+            
             { title: el.to_s.tr('_', ' '), field: el }
+            
           end
         end
 
@@ -146,58 +176,48 @@ module Annualstatedomesticproduct3data
         #   end
         # end
 
-
         [
           { title: 'Sector', field: 'Sector', headerFilter: true },
-          { title: _year, field: _year }
-        
-        
+          { title: years, field: _year }
         ]
 
       end
-           
+         else
+       
+              if _year == "All"
+                hash_data = ji.map do |el|
 
-                else
-
-
-                  if _year == "All"
-
-                    hash_data = ji.map do |el|
-                      { title: el, field: el, headerFilter: true }
-                    end
-                    
+                  if el.to_s == '2011-16'
+                    { title: "CAGR(2011-16)", field: el }
                   else
-                    
-                    hash_data = if compare == 'None'
-                      [
-                        { title: _year, field: 'Sector', headerFilter: true },
-                        { title: _year, field: _year }
-                      ]
-                    else
-                      [
-                        # {title:compare, field:compare, sorter:"string", },
-                        { title: _year, field: 'Sector', headerFilter: true },
-
-                        { title: _year, field: _year }
-                      ]
-                    end
-
+                    { title: el, field: el}
                   end
-           
+                 
                 end
-
+              else
+                hash_data = if compare == 'None'
+                  [
+                    { title: 'Sector', field: 'Sector', headerFilter: true },
+                    { title: years, field: _year }
+                  ]
+                else
 
             
 
+                  [
+                    # {title:compare, field:compare, sorter:"string", },
+                    { title: 'Sector', field: 'Sector', headerFilter: true },
+                    { title: years, field: _year }
+                  ]
+                end
+              end  
+      end
     j = if rain_fall_type == 'Productivity'
           b.each { |item| item[:Productivity] = item[:Productivity] / 100 }
-
         else
           b
         end
-
         if search == 'Primary'
-
          ji1 = []
            b.each do |el|
                  data.each do |el1|
@@ -206,9 +226,7 @@ module Annualstatedomesticproduct3data
                   end
                  end
                end
-
           data = { column: hash_data, data:  ji1 }
-                 
         elsif search == 'Secondary'
           ji1 = []
           b.each do |el|
@@ -218,7 +236,6 @@ module Annualstatedomesticproduct3data
                  end
                 end
               end
-
          data = { column: hash_data, data:  ji1 }
         elsif search == 'Tertiary'
           ji1 = []
@@ -229,9 +246,7 @@ module Annualstatedomesticproduct3data
                  end
                 end
               end
-
          data = { column: hash_data, data:  ji1 }
-
         elsif search == 'All'
           ji1 = []
           b.each do |el|
@@ -268,95 +283,93 @@ module Annualstatedomesticproduct3data
     end
   end
 
-  def query(b, _year, rain_fall_type, views, _ji, compare, search)
-    if search == 'Primary'
-      data = [
-        'Agriculture, forestry and fishing',
-        'Crops',
-        'Livestock',
-        'Forestry and logging',
-        'Fishing and aquaculture',
-        'Mining and quarrying'
-      ]
-    elsif search == 'Secondary'
+  def query(b, _year, rain_fall_type, views, _ji, compare, search,data,jip)
+    # if search == 'Primary'
+    #   data = [
+    #     'Agriculture, forestry and fishing',
+    #     'Crops',
+    #     'Livestock',
+    #     'Forestry and logging',
+    #     'Fishing and aquaculture',
+    #     'Mining and quarrying',
+    #     'Primary'
+    #   ]
+    # elsif search == 'Secondary'
 
-      data = [
-        'Manufacturing',
-        'Electricity, gas, water supply & other utility services',
-        'Construction'
-      ]
-    elsif search == 'Tertiary'
+    #   data = [
+    #     'Manufacturing',
+    #     'Electricity and Utilitiy Services',
+    #     'Construction',
+    #     'Secondary'
+    #   ]
+    # elsif search == 'Tertiary'
 
-      data = [
-        'Trade, repair, hotels and restaurants',
-        'Trade & repair services',
-        'Hotels & restaurants',
-        'Transport, storage, communication & services related to broadcasting',
-        'Railways',
-        'Road transport',
-        'Water transport',
-        'Air transport',
-        'Services incidental to transport',
-        'Storage',
-        'Communication & services related to broadcasting',
-        'Financial services',
-        'Real estate, ownership of dwelling & professional services',
-        'Public administration',
-        'Other services'
-      ]
-    elsif search == 'All'
-
-      data = [
-        "Agriculture, forestry and fishing",
-        "Crops",
-        "Livestock",
-        "Forestry and logging",
-        "Fishing and aquaculture",
-        "Mining and quarrying",
-        "Primary",
-        "Manufacturing",
-        "Electricity, gas, water supply & other utility services",
-        "Construction",
-        "Secondary",
-        "Trade, repair, hotels and restaurants",
-        "Trade & repair services",
-        "Hotels & restaurants",
-        "Transport, storage, communication & services related to broadcasting",
-        "Railways",
-        "Road transport",
-        "Water transport",
-        "Air transport",
-        "Services incidental to transport",
-        "Storage",
-        "Communication & services related to broadcasting",
-        "Financial services",
-        "Real estate, ownership of dwelling & professional services",
-        "Public administration",
-        "Other services",
-        "Tertiary",
-        "Total GSVA at basic prices",
-      ]
-    end
-
+    #   data = [
+    #     'Trade, repair, hotels and restaurants',
+    #     'Trade & repair services',
+    #     'Hotels & restaurants',
+    #     'Transport, storage, communication & services related to broadcasting',
+    #     'Railways',
+    #     'Road transport',
+    #     'Water transport',
+    #     'Air transport',
+    #     'Services incidental to transport',
+    #     'Storage',
+    #     'Communication & services related to broadcasting',
+    #     'Financial services',
+    #     'Real estate, ownership of dwelling & professional services',
+    #     'Public administration',
+    #     'Other services',
+    #     'Tertiary'
+    #   ]
+    # elsif search == 'All'
+    #   data = [
+    #     "Agriculture, forestry and fishing",
+    #     "Crops",
+    #     "Livestock",
+    #     "Forestry and logging",
+    #     "Fishing and aquaculture",
+    #     "Mining and quarrying",
+    #     "Primary",
+    #     "Manufacturing",
+    #     "Electricity, gas, water supply & other utility services",
+    #     "Construction",
+    #     "Secondary",
+    #     "Trade, repair, hotels and restaurants",
+    #     "Trade & repair services",
+    #     "Hotels & restaurants",
+    #     "Transport, storage, communication & services related to broadcasting",
+    #     "Railways",
+    #     "Road transport",
+    #     "Water transport",
+    #     "Air transport",
+    #     "Services incidental to transport",
+    #     "Storage",
+    #     "Communication & services related to broadcasting",
+    #     "Financial services",
+    #     "Real estate, ownership of dwelling & professional services",
+    #     "Public administration",
+    #     "Other services",
+    #     "Tertiary",
+    #     "Total GSVA at basic prices",
+    #   ]
+    # end
     d = 'Sector'
     color = '#4f81bc'
-    if rain_fall_type == 'All'
-
+    if rain_fall_type == 'All' or rain_fall_type == 'None'
       if views
         if search == "All"
-     
-
-
           if _year == "All"
+            # abort("error")
             result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-            jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
-            hash_data = jip.map do |col|
+
+            hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
               {
                 type:views,
-                legendText: col,
+                legendText: col[:Sector],
                 showInLegend: true,
-                dataPoints: result.map do |el|
-                     { y: el[col], label: el[:Sector] }
+                dataPoints: jip.map do |el|
+                     { y: col[el], label: el }
                 end
               }
             end
@@ -367,6 +380,7 @@ module Annualstatedomesticproduct3data
               dataset = vegetable.to_s.tr('_', ' ')
               {
                 type: views,
+                color: color,
                 legendText: _year,
                 showInLegend: true,
                 dataPoints: values.map do |value|
@@ -377,42 +391,63 @@ module Annualstatedomesticproduct3data
           end
         else
 
-
-
-          if _year == "All"
+          if _year == "All"  
+     
             result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-            jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
-            hash_data = jip.map do |col|
+            # jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
+            hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
               {
                 type:views,
-                legendText: col,
+                legendText: col[:Sector],
                 showInLegend: true,
-                dataPoints: result.map do |el|
-                     { y: el[col], label: el[:Sector] }
+                dataPoints: jip.map do |el|
+
+                  if el.to_s == "2011-16"
+                    years = "CAGR(2011-16)"
+                  else
+                    years = el
+                  end
+                     { y: col[el], label: years }
                 end
               }
             end
           else
+
             result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
             hash_data = [{
               type: views,
+              color: color,
               legendText: search,
               showInLegend: true,
               dataPoints: result.map do |hash|
                             { y: hash[_year], label: hash[:Sector] }
                           end
             }]
-            
           end
         
         end
+      end
+
+      if search == "All" && rain_fall_type == "None"
+        new_type = "Primary vs Secondary vs Tertiary"
+
+      else
+
+        if rain_fall_type == "None"
+          new_type = search
+
+        else
+          new_type = rain_fall_type
+
+        end
+
       end
       title = if (views == 'stackedBar100') || (views == 'stackedBar')
                 {
                   animationEnabled: true,
                   exportEnabled: true,
                   title: {
-                    text: rain_fall_type.to_s.tr('_', ' ').to_s
+                    text: new_type.to_s.tr('_', ' ').to_s
                   },
                   data: hash_data
                 }
@@ -422,7 +457,7 @@ module Annualstatedomesticproduct3data
                   animationEnabled: true,
                   exportEnabled: true,
                   title: {
-                    text: rain_fall_type.to_s.tr('_', ' ').to_s
+                    text: new_type.to_s.tr('_', ' ').to_s
                   },
                   axisX: {
                     interval:1,
@@ -438,6 +473,7 @@ module Annualstatedomesticproduct3data
     else
       if compare == 'Bihar vs Sector'
         if _year == 'All'
+
           grouped_data = b.group_by { |data| data[:Year] }
           hash_data = grouped_data.map do |vegetable, values|
             dataset = vegetable.to_s.tr('_', ' ')
@@ -468,19 +504,40 @@ module Annualstatedomesticproduct3data
       else
         if _year == 'All'
 
-         jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
-            hash_data = jip.map do |col|
-              {
+          u = []
+          hash_data = [
+                {
                 type:views,
-                legendText: col,
+                color: color,
+                legendText: rain_fall_type,
                 showInLegend: true,
-                dataPoints: b.map do |el|
-                     { y: el[col], label: rain_fall_type }
-                end
+                dataPoints: u
               }
+          ]
+    
+            # puts b.each {|key, value| puts "#{key} is #{value}" }
+          b.each do |col|
+           jip.each  do |el|
+            if el.to_s == "2011-16"
+              years = "CAGR(2011-16)"
+            else
+              years = el
             end
+             u.push({ y: col[el], label: years })
+           end
+          end
+        #  jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
+        #     hash_data = jip.map do |col|
+        #       {
+        #         type:views,
+        #         legendText: col,
+        #         showInLegend: true,
+        #         dataPoints: b.map do |el|
+        #              { y: el[col], label: rain_fall_type }
+        #         end
+        #       }
+        #     end
         else
-
           dataset = rain_fall_type.tr('_', ' ')
           hash_data =
             [{

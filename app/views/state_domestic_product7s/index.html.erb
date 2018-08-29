@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>State Domestic Product7s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>2011-12</th>
+      <th>2012-13</th>
+      <th>2013-14</th>
+      <th>2014-15</th>
+      <th>2015-16</th>
+      <th>2016-17</th>
+      <th>2011-16</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @state_domestic_product7s.each do |state_domestic_product7| %>
+      <tr>
+        <td><%= state_domestic_product7.Sector %></td>
+        <td><%= state_domestic_product7.2011-12 %></td>
+        <td><%= state_domestic_product7.2012-13 %></td>
+        <td><%= state_domestic_product7.2013-14 %></td>
+        <td><%= state_domestic_product7.2014-15 %></td>
+        <td><%= state_domestic_product7.2015-16 %></td>
+        <td><%= state_domestic_product7.2016-17 %></td>
+        <td><%= state_domestic_product7.2011-16 %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New State Domestic Product7', new_state_domestic_product7_path %>
