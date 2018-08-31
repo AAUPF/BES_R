@@ -1,0 +1,32 @@
+<%= form_with(model: regional_disparity, local: true) do |form| %>
+  <% if regional_disparity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(regional_disparity.errors.count, "error") %> prohibited this regional_disparity from being saved:</h2>
+
+      <ul>
+      <% regional_disparity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Criteria %>
+    <%= form.text_field :Criteria %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Top_3_District %>
+    <%= form.text_field :Top_3_District %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Bottom_3_District %>
+    <%= form.text_field :Bottom_3_District %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Regional Disparities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Criteria</th>
+      <th>Top 3 district</th>
+      <th>Bottom 3 district</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @regional_disparities.each do |regional_disparity| %>
+      <tr>
+        <td><%= regional_disparity.Criteria %></td>
+        <td><%= regional_disparity.Top_3_District %></td>
+        <td><%= regional_disparity.Bottom_3_District %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Regional Disparity', new_regional_disparity_path %>

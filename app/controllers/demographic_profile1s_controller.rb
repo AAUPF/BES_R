@@ -21,6 +21,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
 # ji1 = [:Demographic_Indicator, :Bihar, :India, :Year]
 if year == "All"
   ji1 = [:Demographic_Indicator, :"2001", :"2011"]
@@ -50,7 +51,7 @@ end
         a = DemographicProfile1.table(b,rain_fall_type,year,ji1,compare)
       else
         @DemographicProfile1s = DemographicProfile1.search(params[:search],compare,year,rain_fall_type)
-        a = DemographicProfile1.query(@DemographicProfile1s,params[:year],rain_fall_type,views,ji,compare)
+        a = DemographicProfile1.query(@DemographicProfile1s,params[:year],rain_fall_type,views,ji,compare,search)
       end
 
 

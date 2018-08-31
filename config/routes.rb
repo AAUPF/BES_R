@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :regional_disparities do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :state_domestic_product8s do 
                       collection { post :import }
                       collection { get :dropdown }

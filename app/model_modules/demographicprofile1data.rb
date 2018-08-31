@@ -13,6 +13,7 @@ module Demographicprofile1data
   
     def search(search, compare, year, rain_fall_type)
       if search == 'All'
+        
         if rain_fall_type == 'All'
             if year == "All"
                 all.order("id")
@@ -21,18 +22,20 @@ module Demographicprofile1data
               end
         else
             if year == "All"
-                all.order("#{rain_fall_type} ")
+                all.order("id")
             else
                 where(Year: year).order("#{rain_fall_type} ")
             end
         end
       elsif compare
+        
         if year == "All"
             where('Demographic_Indicator = ? OR Demographic_Indicator = ?', search, compare).order(:id)
         else
             where('Demographic_Indicator = ? OR Demographic_Indicator = ?', search, compare).where('year = ?', year).order(:id)
         end
       else
+        
         if rain_fall_type == 'All'
             if year == "All"
                 where('Demographic_Indicator = ? ', search).order(:id)
@@ -132,18 +135,18 @@ module Demographicprofile1data
       end
     end
   
-    def query(b, _year, rain_fall_type, views, ji, compare)
+    def query(b, _year, rain_fall_type, views, ji, compare,search)
       d = 'Demographic_Indicator'
       color  = "#4f81bc"
       if rain_fall_type == 'All'
-        
         if views
           hash_data = ji.map do |column_name|
             if compare == 'Bihar vs District'
               dataset = column_name.to_s.tr('_', ' ')
               {
-
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
@@ -151,33 +154,33 @@ module Demographicprofile1data
                             end
               }
             else
-                if _year == "All"
-            
-            grouped_data = b.group_by{ |data| data[:Year]}
-            hash_data = grouped_data.map{ |vegetable, values| 
-            dataset = vegetable.to_s.gsub("_"," ")
-            {
-            type: views,
-            legendText: dataset,
-            showInLegend: true,
-            dataPoints: values.map { |value|
-            { y: value[rain_fall_type], label: value["Year"] }
-            }
-            }
-            }
-
-
-                else
-                dataset = column_name.to_s.tr('_', ' ')
+                if search == "All"
+                    dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.reject { |x| x['Demographic_Indicator'] == 'No. of Villages' }.map do |el|
                     { y: el[column_name], z: el[column_name], label: el[d] }
                             end
               }
+                else
+                    dataset = column_name.to_s.tr('_', ' ')
+              {
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: b.map do |el|
+                    { y: el[column_name], z: el[column_name], label: el[d] }
+                            end
+              }
                 end
+            
+                
               
             end
           end
@@ -215,6 +218,8 @@ module Demographicprofile1data
           hash_data =
             [{
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               color: color,
               legendText: dataset,
               showInLegend: true,
@@ -224,30 +229,85 @@ module Demographicprofile1data
             }]
         else
             if _year == "All"
-            grouped_data = b.group_by{ |data| data[:Demographic_Indicator]}
-            hash_data = grouped_data.map{ |vegetable, values| 
-            dataset = vegetable.to_s.gsub("_"," ")
-            {
-            type: views,
-            legendText: dataset,
-            showInLegend: true,
-            dataPoints: values.reject { |x| x['Demographic_Indicator'] == 'No. of Villages' }.map { |value|
-            { y: value[rain_fall_type], label: value["Year"] }
-            }
-            }
-            }
+                grouped_data = b.group_by{ |data| data[:Demographic_Indicator]}
+                if search == "All"
+                    hash_data = grouped_data.map{ |vegetable, values| 
+                        dataset = vegetable.to_s.gsub("_"," ")
+                        {
+                        type: views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:dataset,
+                        legendText: dataset,
+                        showInLegend: true,
+                        dataPoints: values.reject { |x| x['Demographic_Indicator'] == 'No. of Villages' }.map { |value|
+                        { y: value[rain_fall_type], label: value["Year"] }
+                        }
+                        }
+                        }
+                    else
+                        if compare != "None"
+                            hash_data = grouped_data.map{ |vegetable, values| 
+                                dataset = vegetable.to_s.gsub("_"," ")
+                                {
+                                type: views,
+                                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                                name:dataset,
+                                legendText: dataset,
+                                showInLegend: true,
+                                dataPoints: values.map { |value|
+                                { y: value[rain_fall_type], label: value["Year"] }
+                                }
+                                }
+                                }
+                        else
+                            hash_data = grouped_data.map{ |vegetable, values| 
+                                dataset = vegetable.to_s.gsub("_"," ")
+                                {
+                                type: views,
+                                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                                name:dataset,
+                                color:color,
+                                legendText: dataset,
+                                showInLegend: true,
+                                dataPoints: values.map { |value|
+                                { y: value[rain_fall_type], label: value["Year"] }
+                                }
+                                }
+                                }
+                        end
+                    
+                end
             else
+                if search == "All"
                 dataset = rain_fall_type.tr('_', ' ')
-          hash_data =
-            [{
-              type: views,
-              color: color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.reject { |x| x['Demographic_Indicator'] == 'No. of Villages' }.map do |el|
-                { y: el[rain_fall_type], label: el['Demographic_Indicator'] }
-                          end
-            }]
+                hash_data =
+                [{
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
+                color: color,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: b.reject { |x| x['Demographic_Indicator'] == 'No. of Villages' }.map do |el|
+                    { y: el[rain_fall_type], label: el['Demographic_Indicator'] }
+                            end
+                }]
+                else
+                dataset = rain_fall_type.tr('_', ' ')
+                hash_data =
+                [{
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
+                color: color,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: b.map do |el|
+                    { y: el[rain_fall_type], label: el['Demographic_Indicator'] }
+                            end
+                }]
+                end
+                
             end
           
         end

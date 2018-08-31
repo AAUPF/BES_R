@@ -21,6 +21,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
 ji1 = [:Districts, :Population, :Sex_Ratio_Overall, :Sex_Ratio_Child, :Density, :Urbanisation, :Decadal_Growth, :Year, :Percentage_Population]
 if year == "All"
   ji1 = [:Districts, :"2001", :"2011"]
@@ -61,7 +62,7 @@ end
         a = DemographicProfile2.table(b,rain_fall_type,year,ji1,compare)
       else
         @DemographicProfile2s = DemographicProfile2.search(params[:search],compare,year,rain_fall_type)
-        a = DemographicProfile2.query(@DemographicProfile2s,params[:year],rain_fall_type,views,ji,compare)
+        a = DemographicProfile2.query(@DemographicProfile2s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

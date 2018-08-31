@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Criteria: MyString
+  Top_3_District: MyString
+  Bottom_3_District: MyString
+
+two:
+  Criteria: MyString
+  Top_3_District: MyString
+  Bottom_3_District: MyString

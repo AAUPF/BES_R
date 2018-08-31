@@ -18,7 +18,7 @@ class StateDomesticProduct9 < ApplicationRecord
           where(Year: year).order('id ')
         else
           if year == "All"
-            all.order("#{rain_fall_type} ")
+            all.order('id ')
           else
             where(Year: year).order("#{rain_fall_type} ")
           end
@@ -36,7 +36,7 @@ class StateDomesticProduct9 < ApplicationRecord
           where('Districts = ? ', search).where('year = ?', year).order(:id)
         else
           if year == "All"
-            where('Districts = ? ', search).order(rain_fall_type)
+            where('Districts = ? ', search).order('id ')
           else
             where('Districts = ? ', search).where('year = ?', year).order(rain_fall_type)
           end

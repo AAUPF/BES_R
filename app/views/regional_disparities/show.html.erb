@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Criteria:</strong>
+  <%= @regional_disparity.Criteria %>
+</p>
+
+<p>
+  <strong>Top 3 district:</strong>
+  <%= @regional_disparity.Top_3_District %>
+</p>
+
+<p>
+  <strong>Bottom 3 district:</strong>
+  <%= @regional_disparity.Bottom_3_District %>
+</p>
+
+<%= link_to 'Edit', edit_regional_disparity_path(@regional_disparity) %> |
+<%= link_to 'Back', regional_disparities_path %>

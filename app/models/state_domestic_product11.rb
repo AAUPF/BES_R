@@ -18,7 +18,7 @@ class StateDomesticProduct11 < ApplicationRecord
           where(Year: year).order('id ')
         else
           if year == "All"
-            all.order("#{rain_fall_type} ")
+            all.order('id ')
           else
             where(Year: year).order("#{rain_fall_type} ")
           end
@@ -33,10 +33,14 @@ class StateDomesticProduct11 < ApplicationRecord
        
       else
         if rain_fall_type == 'All'
-          where('Districts = ? ', search).where('year = ?', year).order(:id)
+          if year == "All"
+            where('Districts = ? ', search).order(:id)
+          else
+            where('Districts = ? ', search).where('year = ?', year).order(:id)
+          end
         else
           if year == "All"
-            where('Districts = ? ', search).order(rain_fall_type)
+            where('Districts = ? ', search).order('id ')
           else
             where('Districts = ? ', search).where('year = ?', year).order(rain_fall_type)
           end
@@ -46,46 +50,7 @@ class StateDomesticProduct11 < ApplicationRecord
     end
   
     # Logic to generate table starts
-    # def self.table(b, rain_fall_type, _year, ji, compare)
-    #   dataset = rain_fall_type.tr('_', ' ')
-  
-    #   if rain_fall_type == 'All'
-  
-    #     hash_data = ji.map do |el|
-    #       if el.to_s == 'Districts'
-    #         { title: 'District', field: el, headerFilter: true }
-    #       else
-    #         { title: el.to_s.tr('_', ' '), field: el }
-    #       end
-    #     end
-    #   else
-    #     if compare == 'None'
-    #       hash_data = [
-    #         { title: 'District', field: 'Districts', headerFilter: true },
-    #         { title: dataset, field: rain_fall_type }
-    #       ]
-    #     else
-    #       hash_data = [
-    #         # {title:compare, field:compare, sorter:"string", },
-    #         { title: 'District', field: 'Districts', headerFilter: true },
-  
-    #         { title: dataset, field: rain_fall_type }
-    #       ]
-    #     end
-    #   end
-  
-    #  if rain_fall_type == "Productivity"
-    #   j = b.each { |item| item[:Productivity] = item[:Productivity]/100}
-  
-    #  else
-    #    j = b
-    #  end
-    #   data = { column: hash_data, data: j }
-    #   data
-    # end
-
-
-    def self.table(b, rain_fall_type, _year, ji, compare)
+ def self.table(b, rain_fall_type, _year, ji, compare)
       dataset = rain_fall_type.tr('_', ' ')
   
       if rain_fall_type 

@@ -18,9 +18,11 @@ class DemographicProfile2 < ApplicationRecord
           where(Year: year).order('id ')
         else
           if year == "All"
-            all.order("#{rain_fall_type} ")
+            # all.order("#{rain_fall_type} ")
+            all.order(:id)
           else
             where(Year: year).order("#{rain_fall_type} ")
+            #  where(Year: year).order('id ')
           end
           
         end
@@ -36,7 +38,7 @@ class DemographicProfile2 < ApplicationRecord
           where('Districts = ? ', search).where('year = ?', year).order(:id)
         else
           if year == "All"
-            where('Districts = ? ', search).order(rain_fall_type)
+            where('Districts = ? ', search).order(:id)
           else
             where('Districts = ? ', search).where('year = ?', year).order(rain_fall_type)
           end
@@ -155,7 +157,7 @@ class DemographicProfile2 < ApplicationRecord
       end
     end
   
-    def self.query(b, _year, rain_fall_type, views, ji, compare)
+    def self.query(b, _year, rain_fall_type, views, ji, compare,search)
       d = 'Districts'
       color  = "#4f81bc"
       if rain_fall_type == 'All'
@@ -165,32 +167,40 @@ class DemographicProfile2 < ApplicationRecord
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
-                              if dataset == 'Productivity'
-                                du = el[column_name] / 100
-                                { y: du, z: du, label: el[d] }
-                              else
-                                { y: el[column_name], z: el[column_name], label: el[d] }
-                              end
+                  { y: el[column_name], z: el[column_name], label: el[d] }
                             end
               }
             else
               dataset = column_name.to_s.tr('_', ' ')
-              {
-                type: views,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
-                              if dataset == 'Productivity'
-                                du = el[column_name] / 100
-                                { y: du, z: du, label: el[d] }
-                              else
-                                { y: el[column_name], z: el[column_name], label: el[d] }
-                               end
-                            end
-              }
+              if search == "All"
+                {
+                  type: views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
+                    { y: el[column_name], z: el[column_name], label: el[d] }
+                              end
+                }
+              else
+                {
+                  type: views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: b.map do |el|
+                    { y: el[column_name], z: el[column_name], label: el[d] }
+                              end
+                }
+              end
+              
             end
           end
         end
@@ -223,10 +233,28 @@ class DemographicProfile2 < ApplicationRecord
         return title
       else
         if compare == 'Bihar vs District'
-          dataset = rain_fall_type.tr('_', ' ')
+          if _year == "All"
+            grouped_data = b.group_by{ |data| data[:Districts]}
+            hash_data  = grouped_data.map{ |vegetable, values| 
+              dataset = vegetable.to_s.gsub("_"," ")
+              {
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                legendText: dataset,
+                name:dataset,
+                showInLegend: true,
+                dataPoints: values.map { |value|
+                  { y: value[rain_fall_type], label: value["Year"] }
+                }
+              }
+           }
+          else
+            dataset = rain_fall_type.tr('_', ' ')
           hash_data =
             [{
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               color: color,
               legendText: dataset,
               showInLegend: true,
@@ -234,10 +262,13 @@ class DemographicProfile2 < ApplicationRecord
                             { y: el[rain_fall_type], label: el['Districts'] }
                           end
             }]
+          end
+          
         else
           if _year == "All"
             grouped_data = b.group_by{ |data| data[:Districts]}
-            hash_data  = grouped_data.map{ |vegetable, values| 
+            if search == "All"
+              hash_data  = grouped_data.map{ |vegetable, values| 
                 dataset = vegetable.to_s.gsub("_"," ")
                 {
                   type: views,
@@ -250,25 +281,55 @@ class DemographicProfile2 < ApplicationRecord
                   }
                 }
              }
+            else
+              
+              hash_data  = grouped_data.map{ |vegetable, values| 
+                dataset = vegetable.to_s.gsub("_"," ")
+                {
+                  type: views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  legendText: dataset,
+                  color:color,
+                  name:dataset,
+                  showInLegend: true,
+                  dataPoints: values.map { |value|
+                    { y: value[rain_fall_type], label: value["Year"] }
+                  }
+                }
+             }
+            end
+            
           else
             dataset = rain_fall_type.tr('_', ' ')
-          hash_data =
+            if search == "All"
+              hash_data =
             [{
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               color: color,
               legendText: dataset,
               showInLegend: true,
               dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
-                            if rain_fall_type == 'Productivity'
-                              du = el[rain_fall_type] / 100
-  
-                              { y: du, label: el['Districts'] }
-  
-                            else
-                              { y: el[rain_fall_type], label: el['Districts'] }
-                            end
+                { y: el[rain_fall_type], label: el['Districts'] }
                           end
             }]
+            else
+              hash_data =
+            [{
+              type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
+              color: color,
+              legendText: dataset,
+              showInLegend: true,
+              dataPoints: b.map do |el|
+                { y: el[rain_fall_type], label: el['Districts'] }
+                          end
+            }]
+            end
+            
+          
           end
   
   
