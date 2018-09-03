@@ -74,7 +74,7 @@ class StateDomesticProduct4 < ApplicationRecord
     if rain_fall_type == "All"
       hash_data = ji.map do |el|
         if el.to_s == "Reference"
-          {title: "Reference", field: el, sorter: "string", headerFilter: true}
+          {title: "Price Reference", field: el, sorter: "string", headerFilter: true}
         else
           {title: el.to_s.gsub("_"," "), field: el, sorter: "string"}
         end
@@ -82,20 +82,20 @@ class StateDomesticProduct4 < ApplicationRecord
     else
       if compare == "None"
         hash_data = [
-            {title: "Reference", field: "Reference", sorter: "string",  headerFilter: true},
+            {title: "Price Reference", field: "Reference", sorter: "string",  headerFilter: true},
             {title: rain_fall_type.to_s.gsub("_"," "), field: rain_fall_type, sorter: "string", },
             {title: "Year", field: "Year", sorter: "string"}
         ]
       elsif compare == "undefined"
         hash_data = [
-          {title: "Reference", field: "Reference", sorter: "string",  headerFilter: true},
+          {title: "Price Reference", field: "Reference", sorter: "string",  headerFilter: true},
           {title: rain_fall_type.to_s.gsub("_"," "), field: rain_fall_type, sorter: "string", },
           {title: "Year", field: "Year", sorter: "string"}
       ]
       else
         hash_data = [
             # {title:compare, field:compare, sorter:"string", },
-            {title: "Reference", field: "Reference", sorter: "string", headerFilter: true },
+            {title: "Price Reference", field: "Reference", sorter: "string", headerFilter: true },
             {title: rain_fall_type.to_s.gsub("_"," "), field: rain_fall_type, sorter: "string", },
             {title: "Year", field: "Year", sorter: "string", }
         ]
@@ -103,8 +103,8 @@ class StateDomesticProduct4 < ApplicationRecord
     end
     if year == "All"
       hash_data1 = ji.map do |el|
-        if el.to_s == "Districts"
-          {title: "District", field: el, sorter: "string", headerFilter: true}
+        if el.to_s == "Reference"
+          {title: "Price Reference", field: el, sorter: "string", headerFilter: true}
         else
           {title: el.to_s.gsub("_"," "), field: el, sorter: "string"}
         end
