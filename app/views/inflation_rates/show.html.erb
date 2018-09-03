@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>State:</strong>
+  <%= @inflation_rate.State %>
+</p>
+
+<p>
+  <strong>Rural oct 16 index final:</strong>
+  <%= @inflation_rate.Rural_Oct_16_Index_Final %>
+</p>
+
+<p>
+  <strong>Rural oct 17 index provisional:</strong>
+  <%= @inflation_rate.Rural_Oct_17_Index_Provisional %>
+</p>
+
+<p>
+  <strong>Rural inflation rate in percentage:</strong>
+  <%= @inflation_rate.Rural_Inflation_Rate_in_percentage %>
+</p>
+
+<p>
+  <strong>Urban oct 16 index final:</strong>
+  <%= @inflation_rate.Urban_Oct_16_Index_Final %>
+</p>
+
+<p>
+  <strong>Urban oct 17 index provisional:</strong>
+  <%= @inflation_rate.Urban_Oct_17_Index_Provisional %>
+</p>
+
+<p>
+  <strong>Urban inflation rate in percentage:</strong>
+  <%= @inflation_rate.Urban_Inflation_Rate_in_percentage %>
+</p>
+
+<p>
+  <strong>Combined oct 16 index final:</strong>
+  <%= @inflation_rate.Combined_Oct_16_Index_Final %>
+</p>
+
+<p>
+  <strong>Combined oct 17 index provisional:</strong>
+  <%= @inflation_rate.Combined_Oct_17_Index_Provisional %>
+</p>
+
+<p>
+  <strong>Combined inflation rate in percentage:</strong>
+  <%= @inflation_rate.Combined_Inflation_Rate_in_percentage %>
+</p>
+
+<%= link_to 'Edit', edit_inflation_rate_path(@inflation_rate) %> |
+<%= link_to 'Back', inflation_rates_path %>

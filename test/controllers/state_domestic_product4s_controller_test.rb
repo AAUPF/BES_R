@@ -17,7 +17,7 @@ class StateDomesticProduct4sControllerTest < ActionDispatch::IntegrationTest
 
   test "should create state_domestic_product4" do
     assert_difference('StateDomesticProduct4.count') do
-      post state_domestic_product4s_url, params: { state_domestic_product4: { 2011-12: @state_domestic_product4.2011-12, 2011-16: @state_domestic_product4.2011-16, 2012-13: @state_domestic_product4.2012-13, 2013-14: @state_domestic_product4.2013-14, 2014-15: @state_domestic_product4.2014-15, 2015-16: @state_domestic_product4.2015-16, 2016-17: @state_domestic_product4.2016-17, Sector: @state_domestic_product4.Sector } }
+      post state_domestic_product4s_url, params: { state_domestic_product4: { Factor_Cost: @state_domestic_product4.Factor_Cost, GSDP: @state_domestic_product4.GSDP, NSDP: @state_domestic_product4.NSDP, Per_Capita_GSDP: @state_domestic_product4.Per_Capita_GSDP, Reference: @state_domestic_product4.Reference, Year: @state_domestic_product4.Year } }
     end
 
     assert_redirected_to state_domestic_product4_url(StateDomesticProduct4.last)
@@ -34,7 +34,7 @@ class StateDomesticProduct4sControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update state_domestic_product4" do
-    patch state_domestic_product4_url(@state_domestic_product4), params: { state_domestic_product4: { 2011-12: @state_domestic_product4.2011-12, 2011-16: @state_domestic_product4.2011-16, 2012-13: @state_domestic_product4.2012-13, 2013-14: @state_domestic_product4.2013-14, 2014-15: @state_domestic_product4.2014-15, 2015-16: @state_domestic_product4.2015-16, 2016-17: @state_domestic_product4.2016-17, Sector: @state_domestic_product4.Sector } }
+    patch state_domestic_product4_url(@state_domestic_product4), params: { state_domestic_product4: { Factor_Cost: @state_domestic_product4.Factor_Cost, GSDP: @state_domestic_product4.GSDP, NSDP: @state_domestic_product4.NSDP, Per_Capita_GSDP: @state_domestic_product4.Per_Capita_GSDP, Reference: @state_domestic_product4.Reference, Year: @state_domestic_product4.Year } }
     assert_redirected_to state_domestic_product4_url(@state_domestic_product4)
   end
 

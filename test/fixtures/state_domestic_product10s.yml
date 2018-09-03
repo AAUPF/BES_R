@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Share_of_Population: 1.5
+  Petrol: 1.5
+  Diesel: 1.5
+  LPG: 1.5
+  Year: MyString
+  Percentage_Share_of_Petrol: 1.5
+  Percentage_Share_of_Diesel: 1.5
+  Percentage_Share_of_LPG: 1.5
+
+two:
+  Districts: MyString
+  Share_of_Population: 1.5
+  Petrol: 1.5
+  Diesel: 1.5
+  LPG: 1.5
+  Year: MyString
+  Percentage_Share_of_Petrol: 1.5
+  Percentage_Share_of_Diesel: 1.5
+  Percentage_Share_of_LPG: 1.5

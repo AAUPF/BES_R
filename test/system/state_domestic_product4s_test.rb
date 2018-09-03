@@ -14,14 +14,12 @@ class StateDomesticProduct4sTest < ApplicationSystemTestCase
     visit state_domestic_product4s_url
     click_on "New State Domestic Product4"
 
-    fill_in "2011 12", with: @state_domestic_product4.2011-12
-    fill_in "2011 16", with: @state_domestic_product4.2011-16
-    fill_in "2012 13", with: @state_domestic_product4.2012-13
-    fill_in "2013 14", with: @state_domestic_product4.2013-14
-    fill_in "2014 15", with: @state_domestic_product4.2014-15
-    fill_in "2015 16", with: @state_domestic_product4.2015-16
-    fill_in "2016 17", with: @state_domestic_product4.2016-17
-    fill_in "Sector", with: @state_domestic_product4.Sector
+    fill_in "Factor Cost", with: @state_domestic_product4.Factor_Cost
+    fill_in "Gsdp", with: @state_domestic_product4.GSDP
+    fill_in "Nsdp", with: @state_domestic_product4.NSDP
+    fill_in "Per Capita Gsdp", with: @state_domestic_product4.Per_Capita_GSDP
+    fill_in "Reference", with: @state_domestic_product4.Reference
+    fill_in "Year", with: @state_domestic_product4.Year
     click_on "Create State domestic product4"
 
     assert_text "State domestic product4 was successfully created"
@@ -32,14 +30,12 @@ class StateDomesticProduct4sTest < ApplicationSystemTestCase
     visit state_domestic_product4s_url
     click_on "Edit", match: :first
 
-    fill_in "2011 12", with: @state_domestic_product4.2011-12
-    fill_in "2011 16", with: @state_domestic_product4.2011-16
-    fill_in "2012 13", with: @state_domestic_product4.2012-13
-    fill_in "2013 14", with: @state_domestic_product4.2013-14
-    fill_in "2014 15", with: @state_domestic_product4.2014-15
-    fill_in "2015 16", with: @state_domestic_product4.2015-16
-    fill_in "2016 17", with: @state_domestic_product4.2016-17
-    fill_in "Sector", with: @state_domestic_product4.Sector
+    fill_in "Factor Cost", with: @state_domestic_product4.Factor_Cost
+    fill_in "Gsdp", with: @state_domestic_product4.GSDP
+    fill_in "Nsdp", with: @state_domestic_product4.NSDP
+    fill_in "Per Capita Gsdp", with: @state_domestic_product4.Per_Capita_GSDP
+    fill_in "Reference", with: @state_domestic_product4.Reference
+    fill_in "Year", with: @state_domestic_product4.Year
     click_on "Update State domestic product4"
 
     assert_text "State domestic product4 was successfully updated"

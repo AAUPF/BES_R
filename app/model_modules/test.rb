@@ -501,7 +501,7 @@ module Test
       a.push("data": hu)
       return a
   end
-
+  
   def map(b, rain_fall_type, _views, _ji)
     #  abort(rain_fall_type)
     a = []

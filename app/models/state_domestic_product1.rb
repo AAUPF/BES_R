@@ -1,7 +1,5 @@
-# frozen_string_literal: true
-
-module Annualstatedomesticproduct3data
-  def import1(file)
+class StateDomesticProduct1 < ApplicationRecord
+  def self.import1(file)
     spreadsheet = Roo::Spreadsheet.open(file.path)
     header = spreadsheet.row(1)
     (2..spreadsheet.last_row).each do |i|
@@ -13,55 +11,58 @@ module Annualstatedomesticproduct3data
     end
   end
 
-  def search(search, compare, year, rain_fall_type)
+  def self.search(search, compare, year, rain_fall_type)
     if search == 'All'
       if rain_fall_type == 'All'
-        all
+        where(Reference: compare).order('id')
       else
-        if year == 'All'
-          if rain_fall_type == "None"
-            where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').order('id')
-          else
-            where(Sector: rain_fall_type).order('id')
-          end
-        else
-          if rain_fall_type == "All"
-            order("#{year} ")
+          if year == 'All'
+            if rain_fall_type == "None"
+              where('Sector = ? OR Sector = ? OR Sector = ?', "Total Primary Sector", 'Total Secondary Sector', 'Total Tertiary Sector').order('id').where(Reference: compare)
+            else
 
-          elsif rain_fall_type == "None"
-            where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').order('id')
-           else
-            where(Sector: rain_fall_type).order("#{year} ")
-           end
-        end
+              where(Sector: rain_fall_type).where(Reference: compare).order('id')
+            end
+          else
+            if rain_fall_type == "All"
+              where(Reference: compare).where(Reference: compare).order("#{year} ")
+
+            elsif rain_fall_type == "None"
+              where('Sector = ? OR Sector = ? OR Sector = ?', "Total Primary Sector", 'Total Secondary Sector', 'Total Tertiary Sector').where(Reference: compare).order('id')
+            else
+              where(Sector: rain_fall_type).where(Reference: compare).order("#{year} ")
+            end
+          end
         # where(Year: year).order("#{rain_fall_type} ")
       end
     elsif compare == 'Bihar vs Sector'
       if year == 'All'
-        where('Sector = ? OR Sector = ?', search, 'Bihar').order(:id)
+        where('Sector = ? OR Sector = ?', search, 'Bihar').where(Reference: compare).order(:id)
       else
-        where('Sector = ? OR Sector = ?', search, 'Bihar').where('year = ?', year).order(:id)
+        where('Sector = ? OR Sector = ?', search, 'Bihar').where(Reference: compare).where('year = ?', year).order(:id)
       end
     else
       if rain_fall_type == 'All'
-        all
+
+
+        where(Reference: compare)
       else
         if year == 'All'
           if rain_fall_type == "None"
-            where('Sector = ? ', search).order('id')
+            where('Sector = ? ', search).where(Reference: compare).order('id')
           else
-            where('Sector = ? ', rain_fall_type).order('id')
+            where('Sector = ? ', rain_fall_type).where(Reference: compare).order('id')
           end
         else
           if rain_fall_type == "None"
 
             if search == "All"
-              where('Sector = ? ', search).order('id')
+              where('Sector = ? ', search).where(Reference: compare).order('id')
             else
-              where('Sector = ? ', search).order('id')
+              where('Sector = ? ', search).where(Reference: compare).order('id')
             end
           else
-            where('Sector = ? ', rain_fall_type).order('id')
+            where('Sector = ? ', rain_fall_type).where(Reference: compare).order('id')
           end
         end
       end
@@ -69,10 +70,8 @@ module Annualstatedomesticproduct3data
   end
 
   # Logic to generate table starts
-  def table(b, rain_fall_type, _year, ji, compare,search,data)
-    dataset = rain_fall_type.tr('_', ' ')
-
-    
+  def self.table(b, rain_fall_type, _year, ji, compare,search,data)
+    dataset = rain_fall_type.tr('_', ' ')    
     if _year == "2011-16"
       years = "CAGR(2011-16)"
     else
@@ -108,7 +107,7 @@ module Annualstatedomesticproduct3data
 
         [
           { title: 'Sector', field: 'Sector', headerFilter: true },
-          { title: years, field: _year }
+          { title: years.to_s.tr('_', ' '), field: _year }
         ]
 
       end
@@ -120,15 +119,14 @@ module Annualstatedomesticproduct3data
                   if el.to_s == '2011-16'
                     { title: "CAGR(2011-16)", field: el }
                   else
-                    { title: el, field: el}
+                    { title: el.to_s.tr('_', ' '), field: el}
                   end
-                 
                 end
               else
                 hash_data = if compare == 'None'
                   [
                     { title: 'Sector', field: 'Sector', headerFilter: true },
-                    { title: years, field: _year }
+                    { title: years.to_s.tr('_', ' '), field: _year }
                   ]
                 else
 
@@ -137,7 +135,7 @@ module Annualstatedomesticproduct3data
                   [
                     # {title:compare, field:compare, sorter:"string", },
                     { title: 'Sector', field: 'Sector', headerFilter: true },
-                    { title: years, field: _year }
+                    { title: years.to_s.tr('_', ' '), field: _year }
                   ]
                 end
               end  
@@ -199,7 +197,7 @@ module Annualstatedomesticproduct3data
   end
   # Logic to generate table end
 
-  def map_search(search, _compare, year, rain_fall_type)
+  def self.map_search(search, _compare, year, rain_fall_type)
     if search == 'All'
       if rain_fall_type == 'All'
         where(Year: year).order(:id)
@@ -213,77 +211,8 @@ module Annualstatedomesticproduct3data
     end
   end
 
-  def query(b, _year, rain_fall_type, views, _ji, compare, search,data,jip)
-    # if search == 'Primary'
-    #   data = [
-    #     'Agriculture, forestry and fishing',
-    #     'Crops',
-    #     'Livestock',
-    #     'Forestry and logging',
-    #     'Fishing and aquaculture',
-    #     'Mining and quarrying',
-    #     'Primary'
-    #   ]
-    # elsif search == 'Secondary'
+  def self.query(b, _year, rain_fall_type, views, _ji, compare, search,data,jip)
 
-    #   data = [
-    #     'Manufacturing',
-    #     'Electricity and Utilitiy Services',
-    #     'Construction',
-    #     'Secondary'
-    #   ]
-    # elsif search == 'Tertiary'
-
-    #   data = [
-    #     'Trade, repair, hotels and restaurants',
-    #     'Trade & repair services',
-    #     'Hotels & restaurants',
-    #     'Transport, storage, communication & services related to broadcasting',
-    #     'Railways',
-    #     'Road transport',
-    #     'Water transport',
-    #     'Air transport',
-    #     'Services incidental to transport',
-    #     'Storage',
-    #     'Communication & services related to broadcasting',
-    #     'Financial services',
-    #     'Real estate, ownership of dwelling & professional services',
-    #     'Public administration',
-    #     'Other services',
-    #     'Tertiary'
-    #   ]
-    # elsif search == 'All'
-    #   data = [
-    #     "Agriculture, forestry and fishing",
-    #     "Crops",
-    #     "Livestock",
-    #     "Forestry and logging",
-    #     "Fishing and aquaculture",
-    #     "Mining and quarrying",
-    #     "Primary",
-    #     "Manufacturing",
-    #     "Electricity, gas, water supply & other utility services",
-    #     "Construction",
-    #     "Secondary",
-    #     "Trade, repair, hotels and restaurants",
-    #     "Trade & repair services",
-    #     "Hotels & restaurants",
-    #     "Transport, storage, communication & services related to broadcasting",
-    #     "Railways",
-    #     "Road transport",
-    #     "Water transport",
-    #     "Air transport",
-    #     "Services incidental to transport",
-    #     "Storage",
-    #     "Communication & services related to broadcasting",
-    #     "Financial services",
-    #     "Real estate, ownership of dwelling & professional services",
-    #     "Public administration",
-    #     "Other services",
-    #     "Tertiary",
-    #     "Total GSVA at basic prices",
-    #   ]
-    # end
     d = 'Sector'
     color = '#4f81bc'
     if rain_fall_type == 'All' or rain_fall_type == 'None'
@@ -299,7 +228,7 @@ module Annualstatedomesticproduct3data
                 legendText: col[:Sector],
                 showInLegend: true,
                 dataPoints: jip.map do |el|
-                     { y: col[el], label: el }
+                     { y: col[el], label: el.to_s.tr('_', ' ') }
                 end
               }
             end
@@ -337,7 +266,7 @@ module Annualstatedomesticproduct3data
                   else
                     years = el
                   end
-                     { y: col[el], label: years }
+                     { y: col[el], label: years.to_s.tr('_', ' ') }
                 end
               }
             end
@@ -453,7 +382,7 @@ module Annualstatedomesticproduct3data
             else
               years = el
             end
-             u.push({ y: col[el], label: years })
+             u.push({ y: col[el], label: years.to_s.tr('_', ' ') })
            end
           end
         #  jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
@@ -512,7 +441,7 @@ module Annualstatedomesticproduct3data
     end
   end
 
-  def map1(b, rain_fall_type, _views, _ji, _unit1, ranges)
+  def self.map1(b, rain_fall_type, _views, _ji, _unit1, ranges)
     array = []
     # a = []
     l = rain_fall_type.delete(' ')
@@ -749,7 +678,7 @@ module Annualstatedomesticproduct3data
     a
   end
 
-  def map(b, rain_fall_type, _views, _ji)
+  def self.map(b, rain_fall_type, _views, _ji)
     #  abort(rain_fall_type)
     a = []
     below_min = []
@@ -865,4 +794,4 @@ module Annualstatedomesticproduct3data
     a.push("data": hu)
     a
 end
-  end
+      end

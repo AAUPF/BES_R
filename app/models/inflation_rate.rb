@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Annualstatedomesticproduct3data
-  def import1(file)
+class InflationRate < ApplicationRecord
+  def self.import1(file)
     spreadsheet = Roo::Spreadsheet.open(file.path)
     header = spreadsheet.row(1)
     (2..spreadsheet.last_row).each do |i|
@@ -13,193 +13,94 @@ module Annualstatedomesticproduct3data
     end
   end
 
-  def search(search, compare, year, rain_fall_type)
+  def self.search(search, compare, year, rain_fall_type)
     if search == 'All'
       if rain_fall_type == 'All'
-        all
+        order('id ')
       else
         if year == 'All'
-          if rain_fall_type == "None"
-            where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').order('id')
-          else
-            where(Sector: rain_fall_type).order('id')
-          end
+          all.order('id')
         else
-          if rain_fall_type == "All"
-            order("#{year} ")
-
-          elsif rain_fall_type == "None"
-            where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').order('id')
-           else
-            where(Sector: rain_fall_type).order("#{year} ")
-           end
+          order("#{rain_fall_type} ")
         end
         # where(Year: year).order("#{rain_fall_type} ")
       end
-    elsif compare == 'Bihar vs Sector'
+    elsif compare != 'None'
       if year == 'All'
-        where('Sector = ? OR Sector = ?', search, 'Bihar').order(:id)
+        where('State = ? OR State = ?', search, compare).order(:id)
       else
-        where('Sector = ? OR Sector = ?', search, 'Bihar').where('year = ?', year).order(:id)
+        where('State = ? OR State = ?', search, compare).order(:id)
       end
     else
       if rain_fall_type == 'All'
-        all
+        where('State = ? ', search).order(:id)
       else
         if year == 'All'
-          if rain_fall_type == "None"
-            where('Sector = ? ', search).order('id')
-          else
-            where('Sector = ? ', rain_fall_type).order('id')
-          end
+          where('State = ? ', search).order('id')
         else
-          if rain_fall_type == "None"
-
-            if search == "All"
-              where('Sector = ? ', search).order('id')
-            else
-              where('Sector = ? ', search).order('id')
-            end
-          else
-            where('Sector = ? ', rain_fall_type).order('id')
-          end
+          # select("#{rain_fall_type}, #{year}, State").where('State = ? ', search).order(rain_fall_type)
+          where('State = ? ', search).order(rain_fall_type)
         end
       end
     end
   end
 
-  # Logic to generate table starts
-  def table(b, rain_fall_type, _year, ji, compare,search,data)
+  def self.table(b, rain_fall_type, _year, ji, compare)
     dataset = rain_fall_type.tr('_', ' ')
 
-    
-    if _year == "2011-16"
-      years = "CAGR(2011-16)"
-    else
-      years = _year
-    end
-    hash_data = if rain_fall_type == 'All'
-   
-      if _year == "All"
+    hash_data = if rain_fall_type
 
-        ji.map do |el|
-          puts el
-          if el.to_s == 'Sector'
-            { title: 'Sector', field: el, headerFilter: true }
-
-          elsif el.to_s == '2011-16'
-            { title: "CAGR(2011-16)", field: el }
-          else
-            
-            { title: el.to_s.tr('_', ' '), field: el }
-            
-          end
-        end
-
-      else
-
-        # ji.map do |el|
-        #   if el.to_s == 'Sector'
-        #     { title: 'Sector', field: el, headerFilter: true }
-        #   else
-        #     { title: el.to_s.tr('_', ' '), field: el }
-        #   end
-        # end
-
-        [
-          { title: 'Sector', field: 'Sector', headerFilter: true },
-          { title: years, field: _year }
-        ]
-
-      end
-         else
-       
-              if _year == "All"
-                hash_data = ji.map do |el|
-
-                  if el.to_s == '2011-16'
-                    { title: "CAGR(2011-16)", field: el }
-                  else
-                    { title: el, field: el}
+                  ji.map do |el|
+                    if el.to_s == 'State'
+                      { title: 'State', field: el, headerFilter: true }
+                    else
+                      { title: el.to_s.tr('_', ' '), field: el }
+                    end
                   end
-                 
-                end
-              else
-                hash_data = if compare == 'None'
-                  [
-                    { title: 'Sector', field: 'Sector', headerFilter: true },
-                    { title: years, field: _year }
-                  ]
                 else
+                  hash_data = if compare == 'None'
+                                [
+                                  { title: 'State', field: 'State', headerFilter: true },
+                                  { title: dataset, field: rain_fall_type }
+                                ]
+                              else
 
-            
+                                [
+                                  # {title:compare, field:compare, sorter:"string", },
+                                  { title: 'State', field: 'State', headerFilter: true },
 
-                  [
-                    # {title:compare, field:compare, sorter:"string", },
-                    { title: 'Sector', field: 'Sector', headerFilter: true },
-                    { title: years, field: _year }
-                  ]
+                                  { title: dataset, field: rain_fall_type }
+                                ]
+                              end
                 end
-              end  
-      end
+
     j = if rain_fall_type == 'Productivity'
           b.each { |item| item[:Productivity] = item[:Productivity] / 100 }
+
         else
           b
         end
-        if search == 'Primary'
-         ji1 = []
-           b.each do |el|
-                 data.each do |el1|
-                  if el.Sector ==el1
-                    ji1.push(el)
-                  end
-                 end
-               end
-          data = { column: hash_data, data:  ji1 }
-        elsif search == 'Secondary'
-          ji1 = []
-          b.each do |el|
-                data.each do |el1|
-                 if el.Sector ==el1
-                   ji1.push(el)
-                 end
-                end
-              end
-         data = { column: hash_data, data:  ji1 }
-        elsif search == 'Tertiary'
-          ji1 = []
-          b.each do |el|
-                data.each do |el1|
-                 if el.Sector ==el1
-                   ji1.push(el)
-                 end
-                end
-              end
-         data = { column: hash_data, data:  ji1 }
-        elsif search == 'All'
-          ji1 = []
-          b.each do |el|
-                data.each do |el1|
-                 if el.Sector ==el1
-                   ji1.push(el)
-                 end
-                end
-              end
 
-         data = { column: hash_data, data:  ji1 }
+    if _year == 'All'
+      grouped = {}
+      b.each do |x|
+        grouped[x[:State]] ||= {}
+        grouped[x[:State]][:State] = x[:State]
+        grouped[x[:State]][x[:Year]] = x[:Per_Capita_Income]
+      end
 
-        else
-          data = { column: hash_data, data: j }
-        end  
+      data = { column: hash_data, data: grouped.values }
 
+    else
+      data = { column: hash_data, data: j }
+    end
 
-   
-   
-  end
+    data
+      end
+
   # Logic to generate table end
 
-  def map_search(search, _compare, year, rain_fall_type)
+  def self.map_search(search, _compare, year, rain_fall_type)
     if search == 'All'
       if rain_fall_type == 'All'
         where(Year: year).order(:id)
@@ -208,176 +109,47 @@ module Annualstatedomesticproduct3data
       end
 
     else
-      # where(Sector: search)
+      # where(State: search)
       where(Year: year).order(rain_fall_type)
     end
   end
 
-  def query(b, _year, rain_fall_type, views, _ji, compare, search,data,jip)
-    # if search == 'Primary'
-    #   data = [
-    #     'Agriculture, forestry and fishing',
-    #     'Crops',
-    #     'Livestock',
-    #     'Forestry and logging',
-    #     'Fishing and aquaculture',
-    #     'Mining and quarrying',
-    #     'Primary'
-    #   ]
-    # elsif search == 'Secondary'
-
-    #   data = [
-    #     'Manufacturing',
-    #     'Electricity and Utilitiy Services',
-    #     'Construction',
-    #     'Secondary'
-    #   ]
-    # elsif search == 'Tertiary'
-
-    #   data = [
-    #     'Trade, repair, hotels and restaurants',
-    #     'Trade & repair services',
-    #     'Hotels & restaurants',
-    #     'Transport, storage, communication & services related to broadcasting',
-    #     'Railways',
-    #     'Road transport',
-    #     'Water transport',
-    #     'Air transport',
-    #     'Services incidental to transport',
-    #     'Storage',
-    #     'Communication & services related to broadcasting',
-    #     'Financial services',
-    #     'Real estate, ownership of dwelling & professional services',
-    #     'Public administration',
-    #     'Other services',
-    #     'Tertiary'
-    #   ]
-    # elsif search == 'All'
-    #   data = [
-    #     "Agriculture, forestry and fishing",
-    #     "Crops",
-    #     "Livestock",
-    #     "Forestry and logging",
-    #     "Fishing and aquaculture",
-    #     "Mining and quarrying",
-    #     "Primary",
-    #     "Manufacturing",
-    #     "Electricity, gas, water supply & other utility services",
-    #     "Construction",
-    #     "Secondary",
-    #     "Trade, repair, hotels and restaurants",
-    #     "Trade & repair services",
-    #     "Hotels & restaurants",
-    #     "Transport, storage, communication & services related to broadcasting",
-    #     "Railways",
-    #     "Road transport",
-    #     "Water transport",
-    #     "Air transport",
-    #     "Services incidental to transport",
-    #     "Storage",
-    #     "Communication & services related to broadcasting",
-    #     "Financial services",
-    #     "Real estate, ownership of dwelling & professional services",
-    #     "Public administration",
-    #     "Other services",
-    #     "Tertiary",
-    #     "Total GSVA at basic prices",
-    #   ]
-    # end
-    d = 'Sector'
+  def self.query(b, _year, rain_fall_type, views, ji, compare, search)
+    d = 'State'
     color = '#4f81bc'
-    if rain_fall_type == 'All' or rain_fall_type == 'None'
+    if rain_fall_type == 'All'
       if views
-        if search == "All"
-          if _year == "All"
-            # abort("error")
-            result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-
-            hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
-              {
-                type:views,
-                legendText: col[:Sector],
-                showInLegend: true,
-                dataPoints: jip.map do |el|
-                     { y: col[el], label: el }
-                end
-              }
-            end
-          else
-
-            grouped_data = b.group_by { |data| data[:Year] }
-            hash_data = grouped_data.map do |vegetable, values|
-              dataset = vegetable.to_s.tr('_', ' ')
-              {
-                type: views,
-                color: color,
-                legendText: _year,
-                showInLegend: true,
-                dataPoints: values.map do |value|
-                              { y: value[_year], label: value[:Sector] }
-                            end
-              }
-            end
-          end
-        else
-
-          if _year == "All"  
-     
-            result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-            # jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
-            hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
-              {
-                type:views,
-                legendText: col[:Sector],
-                showInLegend: true,
-                dataPoints: jip.map do |el|
-
-                  if el.to_s == "2011-16"
-                    years = "CAGR(2011-16)"
-                  else
-                    years = el
-                  end
-                     { y: col[el], label: years }
-                end
-              }
-            end
-          else
-
-            result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-            hash_data = [{
+        hash_data = ji.map do |column_name|
+          if compare == 'Bihar vs State'
+            dataset = column_name.to_s.tr('_', ' ')
+            {
               type: views,
-              color: color,
-              legendText: search,
+              legendText: dataset,
               showInLegend: true,
-              dataPoints: result.map do |hash|
-                            { y: hash[_year], label: hash[:Sector] }
+              dataPoints: b.map do |el|
+                            { y: el[column_name], z: el[column_name], label: el[d] }
                           end
-            }]
+            }
+          else
+            
+            dataset = column_name.to_s.tr('_', ' ')
+            {
+              type: views,
+              legendText: dataset,
+              showInLegend: true,
+              dataPoints: b.map do |el|
+                            { y: el[column_name], z: el[column_name], label: el[d] }
+                          end
+            }
           end
-        
         end
-      end
-
-      if search == "All" && rain_fall_type == "None"
-        new_type = "Primary vs Secondary vs Tertiary"
-
-      else
-
-        if rain_fall_type == "None"
-          new_type = search
-
-        else
-          new_type = rain_fall_type
-
-        end
-
       end
       title = if (views == 'stackedBar100') || (views == 'stackedBar')
                 {
                   animationEnabled: true,
                   exportEnabled: true,
                   title: {
-                    text: new_type.to_s.tr('_', ' ').to_s
+                    text: rain_fall_type.to_s.tr('_', ' ').to_s
                   },
                   data: hash_data
                 }
@@ -387,24 +159,22 @@ module Annualstatedomesticproduct3data
                   animationEnabled: true,
                   exportEnabled: true,
                   title: {
-                    text: new_type.to_s.tr('_', ' ').to_s
+                    text: rain_fall_type.to_s.tr('_', ' ').to_s
                   },
-                  axisX: {
-                    interval:1,
-                    labelMaxWidth: 180,
-                    labelAngle: 100,
-                    labelFontFamily:"verdana0"
-                    },
+                  # axisX: {
+                  #   interval:1,
+                  #   labelMaxWidth: 180,
+                  #   labelAngle: 90,
+                  #   labelFontFamily:"verdana0"
+                  #   },
                   data: hash_data
                 }
               end
-
       return title
     else
-      if compare == 'Bihar vs Sector'
+      if compare == 'Bihar vs State'
         if _year == 'All'
-
-          grouped_data = b.group_by { |data| data[:Year] }
+          grouped_data = b.group_by { |data| data[:State] }
           hash_data = grouped_data.map do |vegetable, values|
             dataset = vegetable.to_s.tr('_', ' ')
             {
@@ -412,12 +182,11 @@ module Annualstatedomesticproduct3data
               legendText: dataset,
               showInLegend: true,
               dataPoints: values.map do |value|
-                            { y: value[rain_fall_type], label: value[:Sector] }
+                            { y: value[rain_fall_type], label: value['Year'] }
                           end
             }
           end
         else
-
           dataset = rain_fall_type.tr('_', ' ')
           hash_data =
             [{
@@ -426,67 +195,67 @@ module Annualstatedomesticproduct3data
               legendText: dataset,
               showInLegend: true,
               dataPoints: b.map do |el|
-                            { y: el[rain_fall_type], label: el['Sector'] }
+                            { y: el[rain_fall_type], label: el['State'] }
                           end
             }]
         end
 
       else
-        if _year == 'All'
 
-          u = []
-          hash_data = [
-                {
-                type:views,
-                color: color,
-                legendText: rain_fall_type,
+        if _year == 'All'
+          grouped_data = b.group_by { |data| data[:State] }
+          if search == 'All'
+            hash_data = grouped_data.map do |vegetable, values|
+              dataset = vegetable.to_s.tr('_', ' ')
+              {
+                type: views,
+                toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
+                legendText: dataset,
+                name: dataset,
                 showInLegend: true,
-                dataPoints: u
+                dataPoints: values.map do |value|
+                              { y: value[rain_fall_type], label: value['Year'] }
+                            end
               }
-          ]
-    
-            # puts b.each {|key, value| puts "#{key} is #{value}" }
-          b.each do |col|
-           jip.each  do |el|
-            if el.to_s == "2011-16"
-              years = "CAGR(2011-16)"
-            else
-              years = el
             end
-             u.push({ y: col[el], label: years })
-           end
+          else
+
+            hash_data = grouped_data.map do |vegetable, values|
+              dataset = vegetable.to_s.tr('_', ' ')
+              {
+                type: views,
+                color: color,
+                toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
+                legendText: dataset,
+                name: dataset,
+                showInLegend: true,
+                dataPoints: values.map do |value|
+                              { y: value[rain_fall_type], label: value['Year'] }
+                            end
+              }
+            end
           end
-        #  jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
-        #     hash_data = jip.map do |col|
-        #       {
-        #         type:views,
-        #         legendText: col,
-        #         showInLegend: true,
-        #         dataPoints: b.map do |el|
-        #              { y: el[col], label: rain_fall_type }
-        #         end
-        #       }
-        #     end
         else
           dataset = rain_fall_type.tr('_', ' ')
           hash_data =
             [{
               type: views,
               color: color,
-              legendText: _year,
+              legendText: dataset,
               showInLegend: true,
               dataPoints: b.map do |el|
-                            { y: el[_year], label: el['Sector'] }
+                            { y: el[rain_fall_type], label: el['State'] }
                           end
             }]
         end
+
       end
       title = if (views == 'stackedBar100') || (views == 'stackedBar')
                 {
                   animationEnabled: true,
                   exportEnabled: true,
                   title: {
-                    text: search.to_s.tr('_', ' ').to_s
+                    text: rain_fall_type.to_s.tr('_', ' ').to_s
                   },
                   data: hash_data
                 }
@@ -496,7 +265,7 @@ module Annualstatedomesticproduct3data
                   animationEnabled: true,
                   exportEnabled: true,
                   title: {
-                    text: search.to_s.tr('_', ' ').to_s
+                    text: rain_fall_type.to_s.tr('_', ' ').to_s
                   },
                   # axisX: {
                   #   interval:1,
@@ -512,7 +281,7 @@ module Annualstatedomesticproduct3data
     end
   end
 
-  def map1(b, rain_fall_type, _views, _ji, _unit1, ranges)
+  def self.map1(b, rain_fall_type, _views, _ji, _unit1, ranges)
     array = []
     # a = []
     l = rain_fall_type.delete(' ')
@@ -528,7 +297,7 @@ module Annualstatedomesticproduct3data
     above_extreme = []
 
     b.map.with_index do |el, _i|
-      dist = el['Sector']
+      dist = el['State']
 
       colour = "#{rain_fall_type}_Colour"
       if el[colour] == 'Red'
@@ -632,7 +401,7 @@ module Annualstatedomesticproduct3data
     a
   end
 
-  def map1(b, rain_fall_type, _views, _ji, _unit1, _ranges)
+  def self.map1(b, rain_fall_type, _views, _ji, _unit1, _ranges)
     #  abort(rain_fall_type)
     a = []
     below_min = []
@@ -644,37 +413,37 @@ module Annualstatedomesticproduct3data
     above_extreme = []
 
     b.map.with_index do |el, i|
-      dist = el['Sector']
+      dist = el['State']
 
       if (0..6) === i
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Red' }
         below_min.push(hash1)
       elsif (6..12) === i
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Orange' }
-        # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+        # hash1 = { y: el[rain_fall_type], label: el["State"] }
         min.push(hash1)
       elsif (12..18) === i
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Dark_Yellow' }
-        # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+        # hash1 = { y: el[rain_fall_type], label: el["State"] }
         blow_max.push(hash1)
       elsif (18..24) === i
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Yellow' }
-        # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+        # hash1 = { y: el[rain_fall_type], label: el["State"] }
         max.push(hash1)
 
       elsif (24..30) === i
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Light_Green' }
-        # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+        # hash1 = { y: el[rain_fall_type], label: el["State"] }
         above_max.push(hash1)
 
       elsif (30..36) === i
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Green' }
-        # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+        # hash1 = { y: el[rain_fall_type], label: el["State"] }
         extreme.push(hash1)
 
       elsif (36..40) === i
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Dark_Green' }
-        # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+        # hash1 = { y: el[rain_fall_type], label: el["State"] }
         above_extreme.push(hash1)
       end
       # array.push(a)
@@ -749,7 +518,7 @@ module Annualstatedomesticproduct3data
     a
   end
 
-  def map(b, rain_fall_type, _views, _ji)
+  def self.map(b, rain_fall_type, _views, _ji)
     #  abort(rain_fall_type)
     a = []
     below_min = []
@@ -761,37 +530,37 @@ module Annualstatedomesticproduct3data
     above_extreme = []
 
     b.map.with_index do |el, i|
-      dist = el['Sector']
+      dist = el['State']
 
       if (0..6) === i
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Red' }
         below_min.push(hash1)
       elsif (6..12) === i
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Orange' }
-        # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+        # hash1 = { y: el[rain_fall_type], label: el["State"] }
         min.push(hash1)
       elsif (12..18) === i
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Dark_Yellow' }
-        # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+        # hash1 = { y: el[rain_fall_type], label: el["State"] }
         blow_max.push(hash1)
       elsif (18..24) === i
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Yellow' }
-        # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+        # hash1 = { y: el[rain_fall_type], label: el["State"] }
         max.push(hash1)
 
       elsif (24..30) === i
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Light_Green' }
-        # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+        # hash1 = { y: el[rain_fall_type], label: el["State"] }
         above_max.push(hash1)
 
       elsif (30..36) === i
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Green' }
-        # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+        # hash1 = { y: el[rain_fall_type], label: el["State"] }
         extreme.push(hash1)
 
       elsif (36..40) === i
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Dark_Green' }
-        # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+        # hash1 = { y: el[rain_fall_type], label: el["State"] }
         above_extreme.push(hash1)
       end
       # array.push(a)

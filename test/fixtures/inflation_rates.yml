@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  Rural_Oct_16_Index_Final: 1.5
+  Rural_Oct_17_Index_Provisional: 1.5
+  Rural_Inflation_Rate_in_percentage: 1.5
+  Urban_Oct_16_Index_Final: 1.5
+  Urban_Oct_17_Index_Provisional: 1.5
+  Urban_Inflation_Rate_in_percentage: 1.5
+  Combined_Oct_16_Index_Final: 1.5
+  Combined_Oct_17_Index_Provisional: 1.5
+  Combined_Inflation_Rate_in_percentage: 1.5
+
+two:
+  State: MyString
+  Rural_Oct_16_Index_Final: 1.5
+  Rural_Oct_17_Index_Provisional: 1.5
+  Rural_Inflation_Rate_in_percentage: 1.5
+  Urban_Oct_16_Index_Final: 1.5
+  Urban_Oct_17_Index_Provisional: 1.5
+  Urban_Inflation_Rate_in_percentage: 1.5
+  Combined_Oct_16_Index_Final: 1.5
+  Combined_Oct_17_Index_Provisional: 1.5
+  Combined_Inflation_Rate_in_percentage: 1.5

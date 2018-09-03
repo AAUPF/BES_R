@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>State Domestic Product10s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Share of population</th>
+      <th>Petrol</th>
+      <th>Diesel</th>
+      <th>Lpg</th>
+      <th>Year</th>
+      <th>Percentage share of petrol</th>
+      <th>Percentage share of diesel</th>
+      <th>Percentage share of lpg</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @state_domestic_product10s.each do |state_domestic_product10| %>
+      <tr>
+        <td><%= state_domestic_product10.Districts %></td>
+        <td><%= state_domestic_product10.Share_of_Population %></td>
+        <td><%= state_domestic_product10.Petrol %></td>
+        <td><%= state_domestic_product10.Diesel %></td>
+        <td><%= state_domestic_product10.LPG %></td>
+        <td><%= state_domestic_product10.Year %></td>
+        <td><%= state_domestic_product10.Percentage_Share_of_Petrol %></td>
+        <td><%= state_domestic_product10.Percentage_Share_of_Diesel %></td>
+        <td><%= state_domestic_product10.Percentage_Share_of_LPG %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New State Domestic Product10', new_state_domestic_product10_path %>

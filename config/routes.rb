@@ -1,5 +1,25 @@
 Rails.application.routes.draw do
+  resources :state_domestic_product4s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :state_domestic_product1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :regional_disparities do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end
+  resources :state_domestic_product10s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :inflation_rates do 
                       collection { post :import }
                       collection { get :dropdown }
                       collection { get :test }
@@ -20,11 +40,6 @@ Rails.application.routes.draw do
                       collection { get :test }
                       end 
   resources :state_domestic_product5s do 
-                      collection { post :import }
-                      collection { get :dropdown }
-                      collection { get :test }
-                      end 
-  resources :state_domestic_product4s do 
                       collection { post :import }
                       collection { get :dropdown }
                       collection { get :test }

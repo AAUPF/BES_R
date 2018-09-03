@@ -4,10 +4,6 @@ class StateDomesticProduct4sController < ApplicationController
   # GET /state_domestic_product4s
   def index
     @state_domestic_product4s = StateDomesticProduct4.all
-
-    respond_to do |format|
-      format.html { render json:@state_domestic_product4s }
-  end
   end
 
   # GET /state_domestic_product4s/1
@@ -18,93 +14,17 @@ class StateDomesticProduct4sController < ApplicationController
   def new
     @state_domestic_product4 = StateDomesticProduct4.new
   end
+
 def test
-  ji = [:Sector, :'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17', :'2011-16']
+  ji = [:GSDP, :NSDP, :Per_Capita_GSDP]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
 
-   ji1 = [:Sector, :'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17', :'2011-16']
+   ji1 = [:GSDP, :NSDP, :Per_Capita_GSDP, :Year]
 
-
-
-   if search == 'Primary'
-    data = [
-      "Agriculture, forestry and fishing",
-      "Crops",
-      "Livestock",
-      "Forestry and logging",
-      "Fishing and aquaculture",
-      "Mining and quarrying",
-      "Primary",
-    ]
-  elsif search == 'Secondary'
-
-    data = [
-      "Manufacturing",
-      "Electricity, gas, water supply And other utility services",
-      "Construction",
-      "Secondary",
-    ]
-  elsif search == 'Tertiary'
-
-    data = [
-      "Trade, repair, hotels and restaurants",
-      "Trade And repair services",
-      "Hotels And restaurants",
-      "Transport, storage, communication And services related to broadcasting",
-      "Railways",
-      "Road transport",
-      "Water transport",
-      "Air transport",
-      "Services incidental to transport",
-      "Storage",
-      "Communication And services related to broadcasting",
-      "Financial services",
-      "Real estate, ownership of dwelling And professional services",
-      "Public administration",
-      "Other services",
-      "Tertiary",
-    ]
-  elsif search == 'All'
-    data = [
-      "Agriculture, forestry and fishing",
-      "Crops",
-      "Livestock",
-      "Forestry and logging",
-      "Fishing and aquaculture",
-      "Mining and quarrying",
-      "Primary",
-      "Manufacturing",
-      "Electricity, gas, water supply And other utility services",
-      "Construction",
-      "Secondary",
-      "Trade, repair, hotels and restaurants",
-      "Trade And repair services",
-      "Hotels And restaurants",
-      "Transport, storage, communication And services related to broadcasting",
-      "Railways",
-      "Road transport",
-      "Water transport",
-      "Air transport",
-      "Services incidental to transport",
-      "Storage",
-      "Communication And services related to broadcasting",
-      "Financial services",
-      "Real estate, ownership of dwelling And professional services",
-      "Public administration",
-      "Other services",
-      "Tertiary",
-      "Total GSVA at basic prices",
-      "Taxes on Products",
-      "Subsidies on products",
-      "Gross State Domestic Product",
-      "Population (crore)",
-      "Per Capita GSDP (Rs.)",
-    ]
-  end
 
   if rain_fall_type || views
 
@@ -120,10 +40,10 @@ def test
          end
       elsif views == "Table"  
         b = StateDomesticProduct4.search(params[:search],compare,year,rain_fall_type)
-        a = StateDomesticProduct4.table(b,rain_fall_type,year,ji1,compare,search,data)
+        a = StateDomesticProduct4.table(b,rain_fall_type,year,ji1,compare,search)
       else
         @StateDomesticProduct4s = StateDomesticProduct4.search(params[:search],compare,year,rain_fall_type)
-        a = StateDomesticProduct4.query(@StateDomesticProduct4s,params[:year],rain_fall_type,views,ji,compare,search,data)
+        a = StateDomesticProduct4.query(@StateDomesticProduct4s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }
@@ -182,6 +102,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def state_domestic_product4_params
-      params.require(:state_domestic_product4).permit(:Sector, :'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17', :'2011-16')
+      params.require(:state_domestic_product4).permit(:Year, :GSDP, :NSDP, :Per_Capita_GSDP, :Reference, :Factor_Cost)
     end
 end

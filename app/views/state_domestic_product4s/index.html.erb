@@ -5,14 +5,12 @@
 <table>
   <thead>
     <tr>
-      <th>Sector</th>
-      <th>2011-12</th>
-      <th>2012-13</th>
-      <th>2013-14</th>
-      <th>2014-15</th>
-      <th>2015-16</th>
-      <th>2016-17</th>
-      <th>2011-16</th>
+      <th>Year</th>
+      <th>Gsdp</th>
+      <th>Nsdp</th>
+      <th>Per capita gsdp</th>
+      <th>Reference</th>
+      <th>Factor cost</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,14 +18,12 @@
   <tbody>
     <% @state_domestic_product4s.each do |state_domestic_product4| %>
       <tr>
-        <td><%= state_domestic_product4.Sector %></td>
-        <td><%= state_domestic_product4.2011-12 %></td>
-        <td><%= state_domestic_product4.2012-13 %></td>
-        <td><%= state_domestic_product4.2013-14 %></td>
-        <td><%= state_domestic_product4.2014-15 %></td>
-        <td><%= state_domestic_product4.2015-16 %></td>
-        <td><%= state_domestic_product4.2016-17 %></td>
-        <td><%= state_domestic_product4.2011-16 %></td>
+        <td><%= state_domestic_product4.Year %></td>
+        <td><%= state_domestic_product4.GSDP %></td>
+        <td><%= state_domestic_product4.NSDP %></td>
+        <td><%= state_domestic_product4.Per_Capita_GSDP %></td>
+        <td><%= state_domestic_product4.Reference %></td>
+        <td><%= state_domestic_product4.Factor_Cost %></td>
        
       </tr>
     <% end %>

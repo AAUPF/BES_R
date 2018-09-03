@@ -1,4 +1,4 @@
-class StateDomesticProduct4 < ApplicationRecord
+class StateDomesticProduct10 < ApplicationRecord
   def self.import1(file)
     spreadsheet = Roo::Spreadsheet.open(file.path)
     header = spreadsheet.row(1)
@@ -11,7 +11,7 @@ class StateDomesticProduct4 < ApplicationRecord
     end
   end
 
-  def self.search(search, compare, year, rain_fall_type)
+  def self.search(search, compare, year, rain_fall_type,fuel)
     # if search == "All"
     #   if fuel == "All"
     #     where(Year: year).order('id ')
@@ -34,15 +34,15 @@ class StateDomesticProduct4 < ApplicationRecord
       if rain_fall_type == 'All'
           if year == "All"
 
-            where('Reference = ?', rain_fall_type).where('Factor_Cost = ?', compare).order(:id)
+              all.order("id")
             else
-              where(Year: year).where('Factor_Cost = ?', compare).order(year)
+              where(Year: year).order(year)
             end
       else
           if year == "All"
-            where('Reference = ?', rain_fall_type).where('Factor_Cost = ?', compare).order(:id)
+              all.order(:id)
           else
-            where('year = ?', year).where('Reference = ?', rain_fall_type).where('Factor_Cost = ?', compare).order(:id)
+              where(Year: year).order(:id)
           end
       end
     elsif compare == "Share_of_Population"
@@ -54,78 +54,93 @@ class StateDomesticProduct4 < ApplicationRecord
     else
       if rain_fall_type == 'All'
           if year == "All"
-            where('Reference = ?', rain_fall_type).order(:id)
+              where('Districts = ? ', search).order(:id)
           else
-            where('year = ?', year).where('Reference = ?', rain_fall_type).where('Factor_Cost = ?', compare).order(:id)
+              where('Districts = ? ', search).where('year = ?', year).order(:id)
           end
       else
           if year == "All"
-            where('Reference = ?', rain_fall_type).where('Factor_Cost = ?', compare).order(:id)
+              where('Districts = ? ', search).order(:id)
           else
-              where('year = ?', year).where('Reference = ?', rain_fall_type).where('Factor_Cost = ?', compare).order(:id)
+              where('Districts = ? ', search).where('year = ?', year).order(rain_fall_type)
           end
+        
       end
     end
   end
 
   # Logic to generate table starts
-  def self.table (b, rain_fall_type, year, ji, compare,search)
-    rain_fall_type = search
+  def self.table (b, rain_fall_type, year, ji, compare,fuel)
+
+
+    rain_fall_type = fuel
+
     if rain_fall_type == "All"
       hash_data = ji.map do |el|
-        if el.to_s == "Reference"
-          {title: "Reference", field: el, sorter: "string", headerFilter: true}
+        if el.to_s == "Districts"
+          {title: "District", field: el, sorter: "string", headerFilter: true}
         else
           {title: el.to_s.gsub("_"," "), field: el, sorter: "string"}
         end
+
       end
     else
       if compare == "None"
         hash_data = [
-            {title: "Reference", field: "Reference", sorter: "string",  headerFilter: true},
+            
+           
+            {title: "District", field: "Districts", sorter: "string",  headerFilter: true},
             {title: rain_fall_type.to_s.gsub("_"," "), field: rain_fall_type, sorter: "string", },
             {title: "Year", field: "Year", sorter: "string"}
         ]
+
       elsif compare == "undefined"
         hash_data = [
-          {title: "Reference", field: "Reference", sorter: "string",  headerFilter: true},
+            
+          
+          {title: "District", field: "Districts", sorter: "string",  headerFilter: true},
           {title: rain_fall_type.to_s.gsub("_"," "), field: rain_fall_type, sorter: "string", },
           {title: "Year", field: "Year", sorter: "string"}
       ]
+
       else
         hash_data = [
             # {title:compare, field:compare, sorter:"string", },
-            {title: "Reference", field: "Reference", sorter: "string", headerFilter: true },
+            {title: "District", field: "Districts", sorter: "string", headerFilter: true },
             {title: rain_fall_type.to_s.gsub("_"," "), field: rain_fall_type, sorter: "string", },
+            {title: compare.to_s.gsub("_"," "), field: compare, sorter: "string", },
             {title: "Year", field: "Year", sorter: "string", }
         ]
       end
     end
     if year == "All"
+
+
       hash_data1 = ji.map do |el|
         if el.to_s == "Districts"
           {title: "District", field: el, sorter: "string", headerFilter: true}
         else
           {title: el.to_s.gsub("_"," "), field: el, sorter: "string"}
         end
+
       end
       grouped = {}
-          if rain_fall_type == "Bihar"
-              b.each do |x|
-                  grouped[x[:Districts]] ||= {}
-                  grouped[x[:Districts]][:Districts] = x[:Districts]
-                  grouped[x[:Districts]][x[:Year]] = x[:Bihar]
-                end
-          else
-              b.each do |x|
-                  grouped[x[:Districts]] ||= {}
-                  grouped[x[:Districts]][:Districts] = x[:Districts]
-                  grouped[x[:Districts]][x[:Year]] = x[search]
-                end
-          end
+      if rain_fall_type == "Bihar"
+          b.each do |x|
+              grouped[x[:Districts]] ||= {}
+              grouped[x[:Districts]][:Districts] = x[:Districts]
+              grouped[x[:Districts]][x[:Year]] = x[:Bihar]
+            end
+      else
+          b.each do |x|
+              grouped[x[:Districts]] ||= {}
+              grouped[x[:Districts]][:Districts] = x[:Districts]
+              grouped[x[:Districts]][x[:Year]] = x[rain_fall_type]
+            end
+      end
         
 
-      data = { column: hash_data1, data: b }
+      data = { column: hash_data1, data: grouped.values }
        
      else
       data = { column: hash_data, data: b }
@@ -155,10 +170,10 @@ class StateDomesticProduct4 < ApplicationRecord
 
 
 
-  def self.query(b, _year, rain_fall_type, views, ji, compare,search)
+  def self.query(b, _year, rain_fall_type, views, ji, compare,fuel,search)
     d = 'Districts'
     color  = "#4f81bc"
-     rain_fall_type = search
+    rain_fall_type = fuel
     if rain_fall_type == 'All'
       if views
           if _year == "All"
@@ -168,7 +183,7 @@ class StateDomesticProduct4 < ApplicationRecord
                 type: views,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.reject { |x| x['Year'] == 'CAGR (2004-15)' }.reject { |x| x['Year'] == 'CAGR (2011-17)' }.map do |el|
+                dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
                               if dataset == 'Productivity'
                                 du = el[column_name] / 100
                                 { y: du, z: du, label: el[d] }
@@ -186,7 +201,7 @@ class StateDomesticProduct4 < ApplicationRecord
                 type: views,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.map do |el|
+                dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
                               if dataset == 'Productivity'
                                 du = el[column_name] / 100
                                 { y: du, z: du, label: el[d] }
@@ -232,6 +247,7 @@ class StateDomesticProduct4 < ApplicationRecord
       end
       return title
     else
+
       if compare == 'Share_of_Population'
         dataset = rain_fall_type.tr('_', ' ')
         hash_data =
@@ -248,6 +264,7 @@ class StateDomesticProduct4 < ApplicationRecord
       else
         if _year == "All"
           grouped_data = b.group_by{ |data| data[:Districts]}
+
            if search == "All"
             hash_data  = grouped_data.map{ |vegetable, values| 
               dataset = vegetable.to_s.gsub("_"," ")
@@ -257,7 +274,7 @@ class StateDomesticProduct4 < ApplicationRecord
                 legendText: dataset,
                 name:dataset,
                 showInLegend: true,
-                dataPoints: values.reject { |x| x['Year'] == 'CAGR (2004-15)' }.reject { |x| x['Year'] == 'CAGR (2011-17)' }.map { |value|
+                dataPoints: values.reject { |x| x['Districts'] == 'Bihar' }.map { |value|
                   { y: value[rain_fall_type], label: value["Year"] }
                 }
               }
@@ -268,18 +285,19 @@ class StateDomesticProduct4 < ApplicationRecord
               {
                 type: views,
                 toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                legendText: search,
+                legendText: dataset,
                 color: color,
                 name:dataset,
                 showInLegend: true,
-                dataPoints: values.reject { |x| x['Year'] == 'CAGR (2004-15)' }.reject { |x| x['Year'] == 'CAGR (2011-17)' }.map { |value|
-                  { y: value[search], label: value["Year"] }
+                dataPoints: values.reject { |x| x['Districts'] == 'Bihar' }.map { |value|
+                  { y: value[rain_fall_type], label: value["Year"] }
                 }
               }
            }
            end
         else
-        dataset = search.tr('_', ' ')
+
+          dataset = rain_fall_type.tr('_', ' ')
         hash_data =
           [{
             type: views,
@@ -288,12 +306,12 @@ class StateDomesticProduct4 < ApplicationRecord
             showInLegend: true,
             dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
                           if rain_fall_type == 'Productivity'
-                            du = el[compare] / 100
+                            du = el[rain_fall_type] / 100
 
-                            { y: search, label: el['Year'] }
+                            { y: du, label: el['Districts'] }
 
                           else
-                            { y: el[search], label: el['Year'] }
+                            { y: el[rain_fall_type], label: el['Districts'] }
                           end
                         end
           }]
@@ -316,7 +334,12 @@ class StateDomesticProduct4 < ApplicationRecord
           title:{
             text: "#{rain_fall_type.to_s.gsub("_"," ")}"
                 },
-             
+                axisX: {
+                  interval:1,
+                  labelMaxWidth: 180,
+                  labelAngle: 90,
+                  labelFontFamily:"verdana0"
+                  },
           data: hash_data
       }
       end
@@ -444,5 +467,7 @@ class StateDomesticProduct4 < ApplicationRecord
       }
     a.push("data": hu)
     return a
-   end
+end
+
+
 end

@@ -1,0 +1,42 @@
+<%= form_with(model: state_domestic_product1, local: true) do |form| %>
+  <% if state_domestic_product1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(state_domestic_product1.errors.count, "error") %> prohibited this state_domestic_product1 from being saved:</h2>
+
+      <ul>
+      <% state_domestic_product1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sector %>
+    <%= form.text_field :Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2015-16 %>
+    <%= form.text_field :2015-16 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2016-17 %>
+    <%= form.text_field :2016-17 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2011-12_to_2015-16 %>
+    <%= form.text_field :2011-12_to_2015-16 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Reference %>
+    <%= form.text_field :Reference %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
