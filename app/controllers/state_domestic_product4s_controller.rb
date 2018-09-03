@@ -23,7 +23,7 @@ def test
    compare = params[:compare]
    search = params[:search]
 
-   ji1 = [:GSDP, :NSDP, :Per_Capita_GSDP, :Year]
+   ji1 = [:Reference,:GSDP, :NSDP, :Per_Capita_GSDP, :Year]
 
 
   if rain_fall_type || views
