@@ -21,7 +21,31 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:State, :Revenue_Deficit_GFD_Percentage, :Capital_Outlay_GFD_Percentage, :Non_Dev_Exp_Agg_Disbursements_Percentage, :Non_Dev_Exp_Revenue_Receipts_Percentage, :Interest_Payments_Revenue_Exp_Percentage, :State_Own_Revenue_Revenue_Exp_Percentage, :Gross_Transfers_Aggregate_Disbursements_Percentage, :Debt_Servicing_Gross_Transfers_Percentage, :Year]
+   search = params[:search]
+# ji1 = [:State, :Revenue_Deficit_GFD_Percentage, :Capital_Outlay_GFD_Percentage, :Non_Dev_Exp_Agg_Disbursements_Percentage, :Non_Dev_Exp_Revenue_Receipts_Percentage, :Interest_Payments_Revenue_Exp_Percentage, :State_Own_Revenue_Revenue_Exp_Percentage, :Gross_Transfers_Aggregate_Disbursements_Percentage, :Debt_Servicing_Gross_Transfers_Percentage, :Year]
+if year == "All"
+  ji1 = [:State, :"2015", :"2016_RE", :"2017_RE"]
+else
+  if rain_fall_type == "Revenue_Deficit_GFD_Percentage"
+    ji1 = [:State, :Revenue_Deficit_GFD_Percentage, :Year]
+  elsif rain_fall_type == "Capital_Outlay_GFD_Percentage"
+    ji1 = [:State, :Capital_Outlay_GFD_Percentage, :Year]
+  elsif rain_fall_type == "Non_Dev_Exp_Agg_Disbursements_Percentage"
+    ji1 = [:State, :Non_Dev_Exp_Agg_Disbursements_Percentage, :Year]
+  elsif rain_fall_type == "Non_Dev_Exp_Revenue_Receipts_Percentage"
+    ji1 = [:State, :Non_Dev_Exp_Revenue_Receipts_Percentage, :Year]
+  elsif rain_fall_type == "Interest_Payments_Revenue_Exp_Percentage"
+    ji1 = [:State, :Interest_Payments_Revenue_Exp_Percentage, :Year]
+  elsif rain_fall_type == "State_Own_Revenue_Revenue_Exp_Percentage"
+    ji1 = [:State, :State_Own_Revenue_Revenue_Exp_Percentage, :Year]
+  elsif rain_fall_type == "Gross_Transfers_Aggregate_Disbursements_Percentage"
+    ji1 = [:State, :Gross_Transfers_Aggregate_Disbursements_Percentage, :Year]
+  elsif rain_fall_type == "Debt_Servicing_Gross_Transfers_Percentage"
+    ji1 = [:State, :Debt_Servicing_Gross_Transfers_Percentage, :Year]
+  else
+  ji1 = [:State, :Revenue_Deficit_GFD_Percentage, :Capital_Outlay_GFD_Percentage, :Non_Dev_Exp_Agg_Disbursements_Percentage, :Non_Dev_Exp_Revenue_Receipts_Percentage, :Interest_Payments_Revenue_Exp_Percentage, :State_Own_Revenue_Revenue_Exp_Percentage, :Gross_Transfers_Aggregate_Disbursements_Percentage, :Debt_Servicing_Gross_Transfers_Percentage, :Year]
+end
+end
   if rain_fall_type || views
 
       if views == "Map View"
@@ -39,7 +63,7 @@ ji1 = [:State, :Revenue_Deficit_GFD_Percentage, :Capital_Outlay_GFD_Percentage, 
         a = FiscalPerformance1.table(b,rain_fall_type,year,ji1,compare)
       else
         @FiscalPerformance1s = FiscalPerformance1.search(params[:search],compare,year,rain_fall_type)
-        a = FiscalPerformance1.query(@FiscalPerformance1s,params[:year],rain_fall_type,views,ji,compare)
+        a = FiscalPerformance1.query(@FiscalPerformance1s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

@@ -125,6 +125,8 @@ def table(b, rain_fall_type, _year, ji, compare)
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
@@ -135,6 +137,8 @@ def table(b, rain_fall_type, _year, ji, compare)
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
@@ -179,6 +183,8 @@ def table(b, rain_fall_type, _year, ji, compare)
             dataset = vegetable.to_s.gsub("_"," ")
             {
             type: views,
+            toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+            name:dataset,
             legendText: dataset,
             showInLegend: true,
             dataPoints: values.map { |value|
@@ -191,6 +197,8 @@ def table(b, rain_fall_type, _year, ji, compare)
           hash_data =
             [{
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               color: color,
               legendText: dataset,
               showInLegend: true,
@@ -241,6 +249,8 @@ def table(b, rain_fall_type, _year, ji, compare)
             hash_data =
               [{
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 color: color,
                 legendText: dataset,
                 showInLegend: true,

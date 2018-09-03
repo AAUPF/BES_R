@@ -58,7 +58,6 @@ module Demographicprofile1data
 
     def table(b, rain_fall_type, _year, ji, compare)
         dataset = rain_fall_type.tr('_', ' ')
-    
         if rain_fall_type 
     
           hash_data = ji.map do |el|

@@ -21,7 +21,14 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1  = [:State, :Gross_Fiscal_Deficit, :Year]
+   search = params[:search]
+# ji1  = [:State, :Gross_Fiscal_Deficit, :Year]
+if year == "All"
+  ji1 = [:State, :"2015", :"2016_RE", :"2017_BE"]
+else
+  ji1  = [:State, :Gross_Fiscal_Deficit, :Year]
+end
+
   if rain_fall_type || views
 
       if views == "Map View"
@@ -39,7 +46,7 @@ ji1  = [:State, :Gross_Fiscal_Deficit, :Year]
         a = DeficitManagement2.table(b,rain_fall_type,year,ji1,compare)
       else
         @DeficitManagement2s = DeficitManagement2.search(params[:search],compare,year,rain_fall_type)
-        a = DeficitManagement2.query(@DeficitManagement2s,params[:year],rain_fall_type,views,ji,compare)
+        a = DeficitManagement2.query(@DeficitManagement2s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

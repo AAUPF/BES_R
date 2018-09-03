@@ -58,18 +58,7 @@ module Debtmanagement3data
         end
       end
   
-      # j = []
-      # b.map do |k|
-      #   if k.Productivity
-      #     u = k.Productivity/100
-      #     j.push({id: k.id, Productivity: u ,Public_Debt_Repayment_Liabilities: k.Public_Debt_Repayment_Liabilities, Area: k.Area, Production: k.Production, Year: k.Year })
-      #   else
-      #     j.push(k)
-      #   end
-      # end
-  
-  
-     if rain_fall_type == "Productivity"
+      if rain_fall_type == "Productivity"
       j = b.each { |item| item[:Productivity] = item[:Productivity]/100}
   
      else
@@ -95,7 +84,7 @@ module Debtmanagement3data
       end
     end
   
-    def query(b, _year, rain_fall_type, views, ji, compare)
+    def query(b, _year, rain_fall_type, views, ji, compare,search)
       d = 'Public_Debt_Repayment_Liabilities'
       color  = "#4f81bc"
       if rain_fall_type == 'All'
