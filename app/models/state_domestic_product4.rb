@@ -74,30 +74,30 @@ class StateDomesticProduct4 < ApplicationRecord
     if rain_fall_type == "All"
       hash_data = ji.map do |el|
         if el.to_s == "Reference"
-          {title: "Price Reference", field: el, sorter: "string", headerFilter: true}
+          {title: "Price Reference", field: el, sorter: "string"}
         else
-          {title: el.to_s.gsub("_"," "), field: el, sorter: "string"}
+          {title: el.to_s.gsub("_"," "), field: el, sorter: "string", headerFilter: true}
         end
       end
     else
       if compare == "None"
         hash_data = [
-            {title: "Price Reference", field: "Reference", sorter: "string",  headerFilter: true},
+            {title: "Price Reference", field: "Reference", sorter: "string"},
             {title: rain_fall_type.to_s.gsub("_"," "), field: rain_fall_type, sorter: "string", },
-            {title: "Year", field: "Year", sorter: "string"}
+            {title: "Year", field: "Year", sorter: "string", headerFilter: true}
         ]
       elsif compare == "undefined"
         hash_data = [
-          {title: "Price Reference", field: "Reference", sorter: "string",  headerFilter: true},
+          {title: "Price Reference", field: "Reference", sorter: "string"},
           {title: rain_fall_type.to_s.gsub("_"," "), field: rain_fall_type, sorter: "string", },
-          {title: "Year", field: "Year", sorter: "string"}
+          {title: "Year", field: "Year", sorter: "string", headerFilter: true}
       ]
       else
         hash_data = [
             # {title:compare, field:compare, sorter:"string", },
-            {title: "Price Reference", field: "Reference", sorter: "string", headerFilter: true },
+            {title: "Price Reference", field: "Reference", sorter: "string" },
             {title: rain_fall_type.to_s.gsub("_"," "), field: rain_fall_type, sorter: "string", },
-            {title: "Year", field: "Year", sorter: "string", }
+            {title: "Year", field: "Year", sorter: "string", headerFilter: true }
         ]
       end
     end
@@ -106,7 +106,7 @@ class StateDomesticProduct4 < ApplicationRecord
         if el.to_s == "Reference"
           {title: "Price Reference", field: el, sorter: "string", headerFilter: true}
         else
-          {title: el.to_s.gsub("_"," "), field: el, sorter: "string"}
+          {title: el.to_s.gsub("_"," "), field: el, sorter: "string", headerFilter: true}
         end
       end
       grouped = {}
@@ -123,8 +123,6 @@ class StateDomesticProduct4 < ApplicationRecord
                   grouped[x[:Districts]][x[:Year]] = x[search]
                 end
           end
-        
-
       data = { column: hash_data1, data: b }
        
      else
@@ -134,9 +132,6 @@ class StateDomesticProduct4 < ApplicationRecord
     # data = {column: hash_data, data: b}
     return data
   end
-
-  # Logic to generate table end
-
 
   def self.map_search(search, compare, year, rain_fall_type)
     if search == "All"

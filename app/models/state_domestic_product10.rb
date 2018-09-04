@@ -36,7 +36,7 @@ class StateDomesticProduct10 < ApplicationRecord
 
               all.order("id")
             else
-              where(Year: year).order(year)
+              where(Year: year).order("id")
             end
       else
           if year == "All"
