@@ -53,6 +53,7 @@ module Annualstatedomesticproduct3data
             where('Sector = ? ', rain_fall_type).order('id')
           end
         else
+
           if rain_fall_type == "None"
 
             if search == "All"
@@ -61,6 +62,7 @@ module Annualstatedomesticproduct3data
               where('Sector = ? ', search).order('id')
             end
           else
+            # all
             where('Sector = ? ', rain_fall_type).order('id')
           end
         end
@@ -79,9 +81,7 @@ module Annualstatedomesticproduct3data
       years = _year
     end
     hash_data = if rain_fall_type == 'All'
-   
       if _year == "All"
-
         ji.map do |el|
           puts el
           if el.to_s == 'Sector'
@@ -97,20 +97,10 @@ module Annualstatedomesticproduct3data
         end
 
       else
-
-        # ji.map do |el|
-        #   if el.to_s == 'Sector'
-        #     { title: 'Sector', field: el, headerFilter: true }
-        #   else
-        #     { title: el.to_s.tr('_', ' '), field: el }
-        #   end
-        # end
-
         [
           { title: 'Sector', field: 'Sector', headerFilter: true },
           { title: years, field: _year }
         ]
-
       end
          else
        
@@ -214,76 +204,6 @@ module Annualstatedomesticproduct3data
   end
 
   def query(b, _year, rain_fall_type, views, _ji, compare, search,data,jip)
-    # if search == 'Primary'
-    #   data = [
-    #     'Agriculture, forestry and fishing',
-    #     'Crops',
-    #     'Livestock',
-    #     'Forestry and logging',
-    #     'Fishing and aquaculture',
-    #     'Mining and quarrying',
-    #     'Primary'
-    #   ]
-    # elsif search == 'Secondary'
-
-    #   data = [
-    #     'Manufacturing',
-    #     'Electricity and Utilitiy Services',
-    #     'Construction',
-    #     'Secondary'
-    #   ]
-    # elsif search == 'Tertiary'
-
-    #   data = [
-    #     'Trade, repair, hotels and restaurants',
-    #     'Trade & repair services',
-    #     'Hotels & restaurants',
-    #     'Transport, storage, communication & services related to broadcasting',
-    #     'Railways',
-    #     'Road transport',
-    #     'Water transport',
-    #     'Air transport',
-    #     'Services incidental to transport',
-    #     'Storage',
-    #     'Communication & services related to broadcasting',
-    #     'Financial services',
-    #     'Real estate, ownership of dwelling & professional services',
-    #     'Public administration',
-    #     'Other services',
-    #     'Tertiary'
-    #   ]
-    # elsif search == 'All'
-    #   data = [
-    #     "Agriculture, forestry and fishing",
-    #     "Crops",
-    #     "Livestock",
-    #     "Forestry and logging",
-    #     "Fishing and aquaculture",
-    #     "Mining and quarrying",
-    #     "Primary",
-    #     "Manufacturing",
-    #     "Electricity, gas, water supply & other utility services",
-    #     "Construction",
-    #     "Secondary",
-    #     "Trade, repair, hotels and restaurants",
-    #     "Trade & repair services",
-    #     "Hotels & restaurants",
-    #     "Transport, storage, communication & services related to broadcasting",
-    #     "Railways",
-    #     "Road transport",
-    #     "Water transport",
-    #     "Air transport",
-    #     "Services incidental to transport",
-    #     "Storage",
-    #     "Communication & services related to broadcasting",
-    #     "Financial services",
-    #     "Real estate, ownership of dwelling & professional services",
-    #     "Public administration",
-    #     "Other services",
-    #     "Tertiary",
-    #     "Total GSVA at basic prices",
-    #   ]
-    # end
     d = 'Sector'
     color = '#4f81bc'
     if rain_fall_type == 'All' or rain_fall_type == 'None'
@@ -296,6 +216,8 @@ module Annualstatedomesticproduct3data
             hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
               {
                 type:views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:col[:Sector],
                 legendText: col[:Sector],
                 showInLegend: true,
                 dataPoints: jip.map do |el|
@@ -305,46 +227,23 @@ module Annualstatedomesticproduct3data
             end
           else
 
-            grouped_data = b.group_by { |data| data[:Year] }
-            hash_data = grouped_data.map do |vegetable, values|
-              dataset = vegetable.to_s.tr('_', ' ')
-              {
-                type: views,
-                color: color,
-                legendText: _year,
-                showInLegend: true,
-                dataPoints: values.map do |value|
-                              { y: value[_year], label: value[:Sector] }
-                            end
-              }
-            end
-          end
-        else
 
-          if _year == "All"  
-     
             result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-            # jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
+            if views != "column"
+
             hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
               {
                 type:views,
+                toolTipContent: "{label}<br/>{name}: <strong>{y}</strong>",
+                name:col[:Sector],
                 legendText: col[:Sector],
                 showInLegend: true,
-                dataPoints: jip.map do |el|
-
-                  if el.to_s == "2011-16"
-                    years = "CAGR(2011-16)"
-                  else
-                    years = el
-                  end
-                     { y: col[el], label: years }
-                end
+                dataPoints: [{ y: col[_year], label: _year }]
               }
             end
-          else
-
-            result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-            hash_data = [{
+              
+            else
+                  hash_data = [{
               type: views,
               color: color,
               legendText: search,
@@ -353,6 +252,95 @@ module Annualstatedomesticproduct3data
                             { y: hash[_year], label: hash[:Sector] }
                           end
             }]
+              
+            end
+
+            # grouped_data = b.group_by { |data| data[:Year] }
+            # hash_data = grouped_data.map do |vegetable, values|
+            #   dataset = vegetable.to_s.tr('_', ' ')
+            #   {
+            #     type: views,
+            #     color: color,
+            #     legendText: _year,
+            #     showInLegend: true,
+            #     dataPoints: values.map do |value|
+            #                   { y: value[_year], label: value[:Sector] }
+            #                 end
+            #   }
+            # end
+          end
+        else
+
+          if _year == "All"  
+
+            result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
+            # jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
+                if rain_fall_type == "None"
+                  hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
+                    {
+                      type:views,
+                      legendText: col[:Sector],
+                      color: color,
+                      showInLegend: true,
+                      dataPoints: jip.map do |el|
+
+                        if el.to_s == "2011-16"
+                          years = "CAGR(2011-16)"
+                        else
+                          years = el
+                        end
+                          { y: col[el], label: years }
+                      end
+                    }
+                  end
+                  
+                else
+
+                  hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
+                    {
+                      type:views,
+                      legendText: col[:Sector],
+                      showInLegend: true,
+                      dataPoints: jip.map do |el|
+
+                        if el.to_s == "2011-16"
+                          years = "CAGR(2011-16)"
+                        else
+                          years = el
+                        end
+                          { y: col[el], label: years }
+                      end
+                    }
+                  end
+                  
+                end
+          else
+
+             result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
+            if views != "column"
+
+            hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
+              {
+                type:views,
+                legendText: col[:Sector],
+                showInLegend: true,
+                dataPoints: [{ y: col[_year], label: _year }]
+              }
+            end
+              
+            else
+                  hash_data = [{
+              type: views,
+              color: color,
+              legendText: search,
+              showInLegend: true,
+              dataPoints: result.map do |hash|
+                            { y: hash[_year], label: hash[:Sector] }
+                          end
+            }]
+              
+            end
+
           end
         
         end
@@ -363,10 +351,12 @@ module Annualstatedomesticproduct3data
 
       else
 
-        if rain_fall_type == "None"
+        if rain_fall_type == "None" or rain_fall_type == "All"
           new_type = search
 
         else
+          
+
           new_type = rain_fall_type
 
         end
@@ -381,7 +371,18 @@ module Annualstatedomesticproduct3data
                   },
                   data: hash_data
                 }
+             elsif _year != "All"
 
+
+              {
+                animationEnabled: true,
+                exportEnabled: true,
+                title: {
+                  text: new_type.to_s.tr('_', ' ').to_s
+                },
+             
+                data: hash_data
+              }
               else
                 {
                   animationEnabled: true,

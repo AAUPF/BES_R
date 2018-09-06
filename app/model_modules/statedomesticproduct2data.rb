@@ -17,7 +17,7 @@ module Statedomesticproduct2data
           where(Year: year).order('id ')
         else
           if year == "All"
-            all.order("id")
+            all.order(rain_fall_type)
           else
             where(Year: year).order("#{rain_fall_type} ")
           end

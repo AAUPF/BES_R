@@ -249,8 +249,8 @@ class StateDomesticProduct4 < ApplicationRecord
               {
                 type: views,
                 toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                legendText: dataset,
-                name:dataset,
+                legendText: dataset.tr('_', ' '),
+                name:dataset.tr('_', ' '),
                 showInLegend: true,
                 dataPoints: values.reject { |x| x['Year'] == 'CAGR (2004-15)' }.reject { |x| x['Year'] == 'CAGR (2011-17)' }.map { |value|
                   { y: value[rain_fall_type], label: value["Year"] }
@@ -263,9 +263,9 @@ class StateDomesticProduct4 < ApplicationRecord
               {
                 type: views,
                 toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                legendText: search,
+                legendText: search.tr('_', ' '),
                 color: color,
-                name:dataset,
+                name:dataset.tr('_', ' '),
                 showInLegend: true,
                 dataPoints: values.reject { |x| x['Year'] == 'CAGR (2004-15)' }.reject { |x| x['Year'] == 'CAGR (2011-17)' }.map { |value|
                   { y: value[search], label: value["Year"] }

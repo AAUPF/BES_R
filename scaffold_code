@@ -1,1 +1,1 @@
-rails g scaffold State_Domestic_Product4  Year:string	GSDP:float	NSDP:float	Per _Capita_GSDP:float	Reference:string	Factor_Cost:string
+rails g scaffold FinancialPosition1  Sector:string	2012-13:float	2013-14:float	2014-15:float	2015-16:float	2016-17:float	2017-18_BE:float	Type:string

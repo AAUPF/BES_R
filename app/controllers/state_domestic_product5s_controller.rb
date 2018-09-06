@@ -31,81 +31,247 @@ class StateDomesticProduct5sController < ApplicationController
   
      jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
 
-     if search == 'Primary'
-      data = [
-        "Agriculture, Forestry and Fishing",
-        "Crops",
-        "Livestock",
-        "Forestry and Logging",
-        "Fishing and Aquaculture",
-        "Mining and Quarrying",
-        "Primary",
-      ]
-    elsif search == 'Secondary'
+   if search == 'Primary'
+        if rain_fall_type == "Agriculture, Forestry and Fishing"
+
+          if compare == "None"
+            search = "None"
+            rain_fall_type
+          elsif compare == "All"
+            rain_fall_type = compare
+            data = [
+              "Crops",
+              "Livestock",
+              "Forestry and Logging",
+              "Fishing and Aquaculture",
+            ]
+          else
+            search = "None"
+            rain_fall_type = compare
+          end
+
+        elsif rain_fall_type == "None"
+          rain_fall_type
+
+          data = [
+            "Primary",
+          ]
+
+        else
+          data = [
+            "Agriculture, Forestry and Fishing",
+            "Mining and Quarrying",
+          ]
+        end
+
+  elsif search == 'Secondary'
+
+
+    if rain_fall_type == "None"
+      rain_fall_type
   
+      data = [
+        "Secondary",
+      ]
+      
+    else
       data = [
         "Manufacturing",
         "Electricity and Utilitiy Services",
         "Construction",
-        "Secondary",
+       
       ]
-    elsif search == 'Tertiary'
-  
+      
+    end
+
+
+  elsif search == 'Tertiary'
+    if rain_fall_type == "Trade and Hospitality"
+
+      if compare == "None"
+        search = "None"
+
+        rain_fall_type
+      elsif compare == "All"
+        rain_fall_type = compare
+        data = [
+          "Trade and Repair Services",
+          "Hotels and Restaurants",
+        ]
+
+      else
+        search = "None"
+        rain_fall_type = compare
+        data = [
+          "Trade and Repair Services",
+          "Hotels and Restaurants",
+        ]
+
+      end
+
+    elsif rain_fall_type == "Transport and Communication"
+
+      if compare == "None"
+        rain_fall_type
+      elsif compare == "All"
+        rain_fall_type = compare
+        data = [
+          "Railways",
+          "Road Transport",
+          "Water Transport",
+          "Air Transport",
+          "Services incidental to transport",
+          "Storage",
+          "Communication and Broadcasting",
+        ]
+
+      else
+        rain_fall_type = compare
+      end
+
+    elsif rain_fall_type == "None"
+      rain_fall_type
+
+      data = [
+        "Tertiary",
+      ]
+
+    else
       data = [
         "Trade and Hospitality",
-        "Trade and Repair Services",
-        "Hotels and Restaurants",
         "Transport and Communication",
-        "Railways",
-        "Road Transport",
-        "Water Transport",
-        "Air Transport",
-        "Services incidental to transport",
-        "Storage",
-        "Communication and Broadcasting",
         "Financial Services",
         "Real Estate Services",
         "Public Administration",
         "Other Services",
-        "Tertiary",
       ]
-    elsif search == 'All'
-      data = [
+    end
+
+
+  elsif search == 'All'
+    if rain_fall_type == "Agriculture, Forestry and Fishing"
+      if compare == "None"
+        search = "None"
+
+        rain_fall_type
+      elsif compare == "All"
+        rain_fall_type = compare
+        data = [
+          "Crops",
+          "Livestock",
+          "Forestry and Logging",
+          "Fishing and Aquaculture",
+        ]
+
+        elsif rain_fall_type == "None"
+          rain_fall_type
+    
+          data = [
+            "Tertiary",
+            "Secondary",
+            "Primary"
+          ]
+
+      else
+        search = "None"
+        rain_fall_type = compare
+        data = [
         "Agriculture, Forestry and Fishing",
-        "Crops",
-        "Livestock",
-        "Forestry and Logging",
-        "Fishing and Aquaculture",
         "Mining and Quarrying",
-        "Primary",
         "Manufacturing",
         "Electricity and Utilitiy Services",
         "Construction",
-        "Secondary",
         "Trade and Hospitality",
-        "Trade and Repair Services",
-        "Hotels and Restaurants",
         "Transport and Communication",
-        "Railways",
-        "Road Transport",
-        "Water Transport",
-        "Air Transport",
-        "Services incidental to transport",
-        "Storage",
-        "Communication and Broadcasting",
         "Financial Services",
         "Real Estate Services",
         "Public Administration",
         "Other Services",
-        "Tertiary",
         "Total GSVA at basic prices",
         "Taxes on Products",
         "Subsidies on Products",
         "Gross State Domestic Product",
         "Population (crore)",
         "Per Capita GSDP (Rs.)",
+        ]
+      end
+    elsif rain_fall_type == "Trade and Hospitality"
+
+      if compare == "None"
+        search = "None"
+
+        rain_fall_type
+      elsif compare == "All"
+        rain_fall_type = compare
+        data = [
+          "Trade and Repair Services",
+          "Hotels and Restaurants",
+        ]
+
+
+      else
+        search = "None"
+        rain_fall_type = compare
+        data = [
+          "Trade and Repair Services",
+          "Hotels and Restaurants",
+        ]
+
+      end
+
+    elsif rain_fall_type == "Transport and Communication"
+
+      if compare == "None"
+        rain_fall_type
+      elsif compare == "All"
+        rain_fall_type = compare
+        data = [
+          "Railways",
+          "Road Transport",
+          "Water Transport",
+          "Air Transport",
+          "Services incidental to transport",
+          "Storage",
+          "Communication and Broadcasting",
+        ]
+
+      else
+        rain_fall_type = compare
+      end
+
+
+    elsif  rain_fall_type == "None"
+      rain_fall_type
+
+      data = [
+        "Tertiary",
+        "Secondary",
+        "Primary"
+      ]
+
+    else
+      data = [
+        "Agriculture, Forestry and Fishing",
+        "Mining and Quarrying",
+        "Manufacturing",
+        "Electricity and Utilitiy Services",
+        "Construction",
+        "Trade and Hospitality",
+        "Transport and Communication",
+        "Financial Services",
+        "Real Estate Services",
+        "Public Administration",
+        "Other Services",
+        "Total GSVA at basic prices",
+        "Taxes on Products",
+        "Subsidies on Products",
+        "Gross State Domestic Product",
+        "Population (crore)",
+        "Per Capita GSDP (Rs.)",
+        
       ]
     end
+  end
   
     if rain_fall_type || views
   
