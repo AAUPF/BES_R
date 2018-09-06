@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Sep 03, 2018 at 12:31 PM
+-- Host: localhost:3306
+-- Generation Time: Sep 06, 2018 at 10:45 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `newdata`
+-- Database: `bihar_survey`
 --
 
 -- --------------------------------------------------------
@@ -5917,6 +5917,612 @@ INSERT INTO `resource_management2s` (`id`, `Sources_of_Revenue`, `Amount`, `Year
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `resource_management3s`
+--
+
+DROP TABLE IF EXISTS `resource_management3s`;
+CREATE TABLE `resource_management3s` (
+  `id` bigint(20) NOT NULL,
+  `Sources_of_Revenue` varchar(255) DEFAULT NULL,
+  `Percentage` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `resource_management3s`
+--
+
+INSERT INTO `resource_management3s` (`id`, `Sources_of_Revenue`, `Percentage`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Taxes on Sales/ Trade ', 53.3, '2012-13', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(2, 'Taxes on Goods and Passengers', 11.9, '2012-13', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(3, 'State Excise', 14.9, '2012-13', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(4, 'Stamp and Registration Fees', 13.4, '2012-13', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(5, 'Taxes on Vehicles', 4.1, '2012-13', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(6, 'Land Revenue', 1.3, '2012-13', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(7, 'Taxes & Duties on Electricity', 0.6, '2012-13', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(8, 'Total', 100, '2012-13', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(9, 'Taxes on Sales/ Trade ', 42.3, '2013-14', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(10, 'Taxes on Goods and Passengers', 21.8, '2013-14', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(11, 'State Excise', 15.9, '2013-14', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(12, 'Stamp and Registration Fees', 13.6, '2013-14', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(13, 'Taxes on Vehicles', 4.2, '2013-14', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(14, 'Land Revenue', 1, '2013-14', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(15, 'Taxes & Duties on Electricity', 0.7, '2013-14', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(16, 'Total', 100, '2013-14', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(17, 'Taxes on Sales/ Trade ', 41.5, '2014-15', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(18, 'Taxes on Goods and Passengers', 21.5, '2014-15', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(19, 'State Excise', 15.5, '2014-15', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(20, 'Stamp and Registration Fees', 13, '2014-15', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(21, 'Taxes on Vehicles', 4.6, '2014-15', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(22, 'Land Revenue', 1.3, '2014-15', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(23, 'Taxes & Duties on Electricity', 1.8, '2014-15', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(24, 'Total', 100, '2014-15', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(25, 'Taxes on Sales/ Trade ', 41.7, '2015-16', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(26, 'Taxes on Goods and Passengers', 23.9, '2015-16', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(27, 'State Excise', 12.3, '2015-16', '2018-09-05 12:06:30', '2018-09-05 12:06:30'),
+(28, 'Stamp and Registration Fees', 13.4, '2015-16', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(29, 'Taxes on Vehicles', 4.2, '2015-16', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(30, 'Land Revenue', 2.7, '2015-16', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(31, 'Taxes & Duties on Electricity', 1.2, '2015-16', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(32, 'Total', 100, '2015-16', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(33, 'Taxes on Sales/ Trade ', 50, '2016-17', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(34, 'Taxes on Goods and Passengers', 26.3, '2016-17', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(35, 'State Excise', 0.1, '2016-17', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(36, 'Stamp and Registration Fees', 12.6, '2016-17', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(37, 'Taxes on Vehicles', 5.3, '2016-17', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(38, 'Land Revenue', 4.1, '2016-17', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(39, 'Taxes & Duties on Electricity', 0.9, '2016-17', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(40, 'Total', 100, '2016-17', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(41, 'Taxes on Sales/ Trade ', 76.2, '2017-18_BE', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(42, 'Taxes on Goods and Passengers', 0, '2017-18_BE', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(43, 'State Excise', 0, '2017-18_BE', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(44, 'Stamp and Registration Fees', 14.4, '2017-18_BE', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(45, 'Taxes on Vehicles', 5.6, '2017-18_BE', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(46, 'Land Revenue', 1.9, '2017-18_BE', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(47, 'Taxes & Duties on Electricity', 1.6, '2017-18_BE', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
+(48, 'Total', 100, '2017-18_BE', '2018-09-05 12:06:31', '2018-09-05 12:06:31');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resource_management4s`
+--
+
+DROP TABLE IF EXISTS `resource_management4s`;
+CREATE TABLE `resource_management4s` (
+  `id` bigint(20) NOT NULL,
+  `Sources_of_Revenue` varchar(255) DEFAULT NULL,
+  `Percentage_Growth_Over_Previous_Year` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `resource_management4s`
+--
+
+INSERT INTO `resource_management4s` (`id`, `Sources_of_Revenue`, `Percentage_Growth_Over_Previous_Year`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Taxes on Sales, Trade etc.', -2.5, '2013-14', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(2, 'Taxes on Goods and Passengers', 125.1, '2013-14', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(3, 'State Excise', 30.4, '2013-14', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(4, 'Stamp and Registration Fees', 24.8, '2013-14', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(5, 'Taxes on Vehicles', 24.4, '2013-14', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(6, 'Land Revenue', -1.8, '2013-14', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(7, 'Taxes & Duties on Electricity', 37.8, '2013-14', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(8, 'Other Taxes and Duties  ', 48.6, '2013-14', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(9, 'Total', 22.8, '2013-14', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(10, 'Taxes on Sales, Trade etc.', 1.8, '2014-15', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(11, 'Taxes on Goods and Passengers', 2.4, '2014-15', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(12, 'State Excise', 1.5, '2014-15', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(13, 'Stamp and Registration Fees', -0.5, '2014-15', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(14, 'Taxes on Vehicles', 15.1, '2014-15', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(15, 'Land Revenue', 37.4, '2014-15', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(16, 'Taxes & Duties on Electricity', 165.2, '2014-15', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(17, 'Other Taxes and Duties  ', 63.5, '2014-15', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(18, 'Total', 4, '2014-15', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(19, 'Taxes on Sales, Trade etc.', 23.2, '2015-16', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(20, 'Taxes on Goods and Passengers', 36.8, '2015-16', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(21, 'State Excise', -2.3, '2015-16', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(22, 'Stamp and Registration Fees', 26.3, '2015-16', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(23, 'Taxes on Vehicles', 12.2, '2015-16', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(24, 'Land Revenue', 150.8, '2015-16', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(25, 'Taxes & Duties on Electricity', -20.5, '2015-16', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(26, 'Other Taxes and Duties  ', -16.5, '2015-16', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(27, 'Total', 22.6, '2015-16', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(28, 'Taxes on Sales, Trade etc.', 12, '2016-17', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(29, 'Taxes on Goods and Passengers', 2.6, '2016-17', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(30, 'State Excise', -99.1, '2016-17', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(31, 'Stamp and Registration Fees', -12.5, '2016-17', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(32, 'Taxes on Vehicles', 16.2, '2016-17', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(33, 'Land Revenue', 39.7, '2016-17', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(34, 'Taxes & Duties on Electricity', -24.9, '2016-17', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(35, 'Other Taxes and Duties  ', 19.4, '2016-17', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(36, 'Total', -6.7, '2016-17', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(37, 'Taxes on Sales, Trade etc.', 105.5, '2017-18_BE', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(38, 'Taxes on Goods and Passengers', -100, '2017-18_BE', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(39, 'State Excise', -100, '2017-18_BE', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(40, 'Stamp and Registration Fees', 54.3, '2017-18_BE', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(41, 'Taxes on Vehicles', 43.2, '2017-18_BE', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(42, 'Land Revenue', -38.2, '2017-18_BE', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(43, 'Taxes & Duties on Electricity', 123.8, '2017-18_BE', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(44, 'Other Taxes and Duties  ', -37.4, '2017-18_BE', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(45, 'Total', 34.8, '2017-18_BE', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(46, 'Taxes on Sales, Trade etc.', 20.1, 'CAGR_2012_to_18', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(47, 'Taxes on Goods and Passengers', 30.8, 'CAGR_2012_to_18', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(48, 'State Excise', -58.6, 'CAGR_2012_to_18', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(49, 'Stamp and Registration Fees', 13, 'CAGR_2012_to_18', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(50, 'Taxes on Vehicles', 19.5, 'CAGR_2012_to_18', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(51, 'Land Revenue', 36.9, 'CAGR_2012_to_18', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(52, 'Taxes & Duties on Electricity', 29.6, 'CAGR_2012_to_18', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(53, 'Other Taxes and Duties  ', 10.1, 'CAGR_2012_to_18', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
+(54, 'Total', 12.5, 'CAGR_2012_to_18', '2018-09-06 05:39:20', '2018-09-06 05:39:20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resource_management5s`
+--
+
+DROP TABLE IF EXISTS `resource_management5s`;
+CREATE TABLE `resource_management5s` (
+  `id` bigint(20) NOT NULL,
+  `Source` varchar(255) DEFAULT NULL,
+  `Percentage` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `resource_management5s`
+--
+
+INSERT INTO `resource_management5s` (`id`, `Source`, `Percentage`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Share of Indirect Taxes in State’s Own Tax Revenue in percentage', 80.4, '2012-13', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(2, 'Share of Direct Taxes in State’s Own Tax Revenue in percentage', 19.6, '2012-13', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(3, 'Total ', 100, '2012-13', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(4, 'Share of Indirect Taxes in State’s Own Tax Revenue in percentage', 80.3, '2013-14', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(5, 'Share of Direct Taxes in State’s Own Tax Revenue in percentage', 19.7, '2013-14', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(6, 'Total ', 100, '2013-14', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(7, 'Share of Indirect Taxes in State’s Own Tax Revenue in percentage', 78.9, '2014-15', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(8, 'Share of Direct Taxes in State’s Own Tax Revenue in percentage', 21.1, '2014-15', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(9, 'Total ', 100, '2014-15', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(10, 'Share of Indirect Taxes in State’s Own Tax Revenue in percentage', 78.2, '2015-16', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(11, 'Share of Direct Taxes in State’s Own Tax Revenue in percentage', 21.8, '2015-16', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(12, 'Total ', 100, '2015-16', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(13, 'Share of Indirect Taxes in State’s Own Tax Revenue in percentage', 76.8, '2016-17', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(14, 'Share of Direct Taxes in State’s Own Tax Revenue in percentage', 23.2, '2016-17', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(15, 'Total ', 100, '2016-17', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(16, 'Share of Indirect Taxes in State’s Own Tax Revenue in percentage', 76.2, '2017-18_BE', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(17, 'Share of Direct Taxes in State’s Own Tax Revenue in percentage', 23.8, '2017-18_BE', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
+(18, 'Total ', 100, '2017-18_BE', '2018-09-05 12:39:28', '2018-09-05 12:39:28');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resource_management6s`
+--
+
+DROP TABLE IF EXISTS `resource_management6s`;
+CREATE TABLE `resource_management6s` (
+  `id` bigint(20) NOT NULL,
+  `Sources_of_Revenue` varchar(255) DEFAULT NULL,
+  `Amount` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `resource_management6s`
+--
+
+INSERT INTO `resource_management6s` (`id`, `Sources_of_Revenue`, `Amount`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Non-Ferrous Mining and Metallurgical Industries', 511, '2012-13', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(2, 'Interest Receipts', 167, '2012-13', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(3, 'Miscellaneous General Services', 22, '2012-13', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(4, 'Other Administrative Services', 10, '2012-13', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(5, 'Police', 25, '2012-13', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(6, 'Major  Irrigation', 3, '2012-13', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(7, 'Education, Sports, Arts and Culture', 8, '2012-13', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(8, 'Roads and Bridges', 33, '2012-13', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(9, 'Medical and Public Health', 41, '2012-13', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(10, 'Other Rural Development Programmes', 21, '2012-13', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(11, 'Social Security and Welfare', 1, '2012-13', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(12, 'Others', 294, '2012-13', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(13, 'Total', 1135, '2012-13', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(14, 'Non-Ferrous Mining and Metallurgical Industries', 569, '2013-14', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(15, 'Interest Receipts', 269, '2013-14', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(16, 'Miscellaneous General Services', 0, '2013-14', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(17, 'Other Administrative Services', 10, '2013-14', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(18, 'Police', 27, '2013-14', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(19, 'Major  Irrigation', 1, '2013-14', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(20, 'Education, Sports, Arts and Culture', 14, '2013-14', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(21, 'Roads and Bridges', 41, '2013-14', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(22, 'Medical and Public Health', 30, '2013-14', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(23, 'Other Rural Development Programmes', 28, '2013-14', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(24, 'Social Security and Welfare', -1, '2013-14', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(25, 'Others', 555, '2013-14', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(26, 'Total', 1545, '2013-14', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(27, 'Non-Ferrous Mining and Metallurgical Industries', 880, '2014-15', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(28, 'Interest Receipts', 345, '2014-15', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(29, 'Miscellaneous General Services', 2, '2014-15', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(30, 'Other Administrative Services', 22, '2014-15', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(31, 'Police', 30, '2014-15', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(32, 'Major  Irrigation', 1, '2014-15', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(33, 'Education, Sports, Arts and Culture', 11, '2014-15', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(34, 'Roads and Bridges', 55, '2014-15', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(35, 'Medical and Public Health', 30, '2014-15', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(36, 'Other Rural Development Programmes', 29, '2014-15', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(37, 'Social Security and Welfare', 0, '2014-15', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(38, 'Others', 154, '2014-15', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(39, 'Total', 1558, '2014-15', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(40, 'Non-Ferrous Mining and Metallurgical Industries', 971, '2015-16', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(41, 'Interest Receipts', 584, '2015-16', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(42, 'Miscellaneous General Services', 1, '2015-16', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(43, 'Other Administrative Services', 73, '2015-16', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(44, 'Police', 66, '2015-16', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(45, 'Major  Irrigation', 15, '2015-16', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(46, 'Education, Sports, Arts and Culture', 41, '2015-16', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(47, 'Roads and Bridges', 42, '2015-16', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(48, 'Medical and Public Health', 40, '2015-16', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(49, 'Other Rural Development Programmes', 24, '2015-16', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(50, 'Social Security and Welfare', 0, '2015-16', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(51, 'Others', 328, '2015-16', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(52, 'Total', 2186, '2015-16', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(53, 'Non-Ferrous Mining and Metallurgical Industries', 998, '2016-17', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(54, 'Interest Receipts', 940, '2016-17', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(55, 'Miscellaneous General Services', 6, '2016-17', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(56, 'Other Administrative Services', 100, '2016-17', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(57, 'Police', 42, '2016-17', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(58, 'Major  Irrigation', 14, '2016-17', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(59, 'Education, Sports, Arts and Culture', 17, '2016-17', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(60, 'Roads and Bridges', 42, '2016-17', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(61, 'Medical and Public Health', 40, '2016-17', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(62, 'Other Rural Development Programmes', 36, '2016-17', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(63, 'Social Security and Welfare', 0, '2016-17', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(64, 'Others', 168, '2016-17', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(65, 'Total', 2403, '2016-17', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(66, 'Non-Ferrous Mining and Metallurgical Industries', 1350, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(67, 'Interest Receipts', 619, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(68, 'Miscellaneous General Services', 0, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(69, 'Other Administrative Services', 256, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(70, 'Police', 42, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(71, 'Major  Irrigation', 38, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(72, 'Education, Sports, Arts and Culture', 44, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(73, 'Roads and Bridges', 72, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(74, 'Medical and Public Health', 43, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(75, 'Other Rural Development Programmes', 15, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(76, 'Social Security and Welfare', 0, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(77, 'Others', 395, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
+(78, 'Total', 2875, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resource_management7s`
+--
+
+DROP TABLE IF EXISTS `resource_management7s`;
+CREATE TABLE `resource_management7s` (
+  `id` bigint(20) NOT NULL,
+  `Revenue_Sources` varchar(255) DEFAULT NULL,
+  `Percentage` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `resource_management7s`
+--
+
+INSERT INTO `resource_management7s` (`id`, `Revenue_Sources`, `Percentage`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Non-Ferrous Mining and Metallurgical Industries', 45, '2012-13', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(2, 'Interest Receipts', 14.7, '2012-13', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(3, 'Miscellaneous General Services', 1.9, '2012-13', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(4, 'Other Administrative Services', 0.9, '2012-13', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(5, 'Other non-Tax Revenues', 37.4, '2012-13', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(6, 'Total', 100, '2012-13', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(7, 'Non-Ferrous Mining and Metallurgical Industries', 36.8, '2013-14', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(8, 'Interest Receipts', 17.4, '2013-14', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(9, 'Miscellaneous General Services', 0, '2013-14', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(10, 'Other Administrative Services', 0.7, '2013-14', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(11, 'Other non-Tax Revenues', 45, '2013-14', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(12, 'Total', 100, '2013-14', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(13, 'Non-Ferrous Mining and Metallurgical Industries', 56.5, '2014-15', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(14, 'Interest Receipts', 22.1, '2014-15', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(15, 'Miscellaneous General Services', 0.1, '2014-15', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(16, 'Other Administrative Services', 1.4, '2014-15', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(17, 'Other non-Tax Revenues', 19.9, '2014-15', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(18, 'Total', 100, '2014-15', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(19, 'Non-Ferrous Mining and Metallurgical Industries', 44.4, '2015-16', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(20, 'Interest Receipts', 26.7, '2015-16', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(21, 'Miscellaneous General Services', 0, '2015-16', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(22, 'Other Administrative Services', 3.3, '2015-16', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(23, 'Other non-Tax Revenues', 25.5, '2015-16', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(24, 'Total', 100, '2015-16', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(25, 'Non-Ferrous Mining and Metallurgical Industries', 41.5, '2016-17', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(26, 'Interest Receipts', 39.1, '2016-17', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(27, 'Miscellaneous General Services', 0.3, '2016-17', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(28, 'Other Administrative Services', 4.2, '2016-17', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(29, 'Other non-Tax Revenues', 14.9, '2016-17', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(30, 'Total', 100, '2016-17', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(31, 'Non-Ferrous Mining and Metallurgical Industries', 47, '2017-18_BE', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(32, 'Interest Receipts', 21.5, '2017-18_BE', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(33, 'Miscellaneous General Services', 0, '2017-18_BE', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(34, 'Other Administrative Services', 8.9, '2017-18_BE', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(35, 'Other non-Tax Revenues', 22.6, '2017-18_BE', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
+(36, 'Total', 100, '2017-18_BE', '2018-09-05 13:18:53', '2018-09-05 13:18:53');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resource_management8s`
+--
+
+DROP TABLE IF EXISTS `resource_management8s`;
+CREATE TABLE `resource_management8s` (
+  `id` bigint(20) NOT NULL,
+  `Revenue_Sources` varchar(255) DEFAULT NULL,
+  `Yearly_Growth_Rates` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `resource_management8s`
+--
+
+INSERT INTO `resource_management8s` (`id`, `Revenue_Sources`, `Yearly_Growth_Rates`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Non-Ferrous Mining and Metallurgical Industries', 15.3, '2012-13', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(2, 'Interest Receipts', -70.9, '2012-13', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(3, 'Miscellaneous General Services', -105.7, '2012-13', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(4, 'Other Administrative Services', -12.9, '2012-13', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(5, 'Other non-Tax Revenues', 73.2, '2012-13', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(6, 'Total', 27.6, '2012-13', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(7, 'Non-Ferrous Mining and Metallurgical Industries', 11.4, '2013-14', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(8, 'Interest Receipts', 61.2, '2013-14', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(9, 'Miscellaneous General Services', -98.7, '2013-14', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(10, 'Other Administrative Services', 1.7, '2013-14', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(11, 'Other non-Tax Revenues', 63.7, '2013-14', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(12, 'Total', 36.1, '2013-14', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(13, 'Non-Ferrous Mining and Metallurgical Industries', 54.6, '2014-15', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(14, 'Interest Receipts', 27.9, '2014-15', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(15, 'Miscellaneous General Services', 611, '2014-15', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(16, 'Other Administrative Services', 113.9, '2014-15', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(17, 'Other non-Tax Revenues', -55.5, '2014-15', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(18, 'Total', 0.9, '2014-15', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(19, 'Non-Ferrous Mining and Metallurgical Industries', 10.4, '2015-16', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(20, 'Interest Receipts', 69.3, '2015-16', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(21, 'Miscellaneous General Services', -48.3, '2015-16', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(22, 'Other Administrative Services', 233.5, '2015-16', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(23, 'Other non-Tax Revenues', 79.9, '2015-16', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(24, 'Total', 40.3, '2015-16', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(25, 'Non-Ferrous Mining and Metallurgical Industries', 2.7, '2016-17', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(26, 'Interest Receipts', 61, '2016-17', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(27, 'Miscellaneous General Services', 512, '2016-17', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(28, 'Other Administrative Services', 37.6, '2016-17', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(29, 'Other non-Tax Revenues', -35.5, '2016-17', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(30, 'Total', 9.9, '2016-17', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(31, 'Non-Ferrous Mining and Metallurgical Industries', 35.3, '2017-18', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(32, 'Interest Receipts', -34.1, '2017-18', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(33, 'Miscellaneous General Services', -95.5, '2017-18', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(34, 'Other Administrative Services', 156.6, '2017-18', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(35, 'Other non-Tax Revenues', 80.8, '2017-18', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(36, 'Total', 19.7, '2017-18', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(37, 'Non-Ferrous Mining and Metallurgical Industries', 20.9, 'CAGR_2012_to_18', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(38, 'Interest Receipts', 36.2, 'CAGR_2012_to_18', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(39, 'Miscellaneous General Services', -31.3, 'CAGR_2012_to_18', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(40, 'Other Administrative Services', 100, 'CAGR_2012_to_18', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(41, 'Other non-Tax Revenues', 2.1, 'CAGR_2012_to_18', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
+(42, 'Total', 19.8, 'CAGR_2012_to_18', '2018-09-06 06:22:31', '2018-09-06 06:22:31');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resource_management11s`
+--
+
+DROP TABLE IF EXISTS `resource_management11s`;
+CREATE TABLE `resource_management11s` (
+  `id` bigint(20) NOT NULL,
+  `Indicators` varchar(255) DEFAULT NULL,
+  `Percentage` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `resource_management11s`
+--
+
+INSERT INTO `resource_management11s` (`id`, `Indicators`, `Percentage`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Own Tax Revenue as percentage of GSDP', 5.8, '2012-13', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(2, 'Own Non-Tax Revenue as percentage of GSDP', 0.4, '2012-13', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(3, 'Total Revenue as percentage of GSDP', 21.1, '2012-13', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(4, 'Buoyancy  of Total Revenue w.r.t. GSDP (Ratio)', 1.1, '2012-13', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(5, 'Buoyancy of  State’s Own Taxes w.r.t. GSDP(Ratio)', 2, '2012-13', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(6, 'Own Tax Revenue as percentage of GSDP', 6.3, '2013-14', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(7, 'Own Non-Tax Revenue as percentage of GSDP', 0.5, '2013-14', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(8, 'Total Revenue as percentage of GSDP', 21.7, '2013-14', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(9, 'Buoyancy  of Total Revenue w.r.t. GSDP (Ratio)', 1.3, '2013-14', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(10, 'Buoyancy of  State’s Own Taxes w.r.t. GSDP(Ratio)', 1.9, '2013-14', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(11, 'Own Tax Revenue as percentage of GSDP', 6.1, '2014-15', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(12, 'Own Non-Tax Revenue as percentage of GSDP', 0.5, '2014-15', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(13, 'Total Revenue as percentage of GSDP', 22.9, '2014-15', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(14, 'Buoyancy  of Total Revenue w.r.t. GSDP (Ratio)', 1.7, '2014-15', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(15, 'Buoyancy of  State’s Own Taxes w.r.t. GSDP(Ratio)', 0.5, '2014-15', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(16, 'Own Tax Revenue as percentage of GSDP', 6.7, '2015-16', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(17, 'Own Non-Tax Revenue as percentage of GSDP', 0.6, '2015-16', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(18, 'Total Revenue as percentage of GSDP', 25.2, '2015-16', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(19, 'Buoyancy  of Total Revenue w.r.t. GSDP (Ratio)', 2, '2015-16', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(20, 'Buoyancy of  State’s Own Taxes w.r.t. GSDP(Ratio)', 2, '2015-16', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(21, 'Own Tax Revenue as percentage of GSDP', 5.4, '2016-17', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(22, 'Own Non-Tax Revenue as percentage of GSDP', 0.5, '2016-17', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(23, 'Total Revenue as percentage of GSDP', 24.1, '2016-17', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(24, 'Buoyancy  of Total Revenue w.r.t. GSDP (Ratio)', 0.7, '2016-17', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(25, 'Buoyancy of  State’s Own Taxes w.r.t. GSDP(Ratio)', -0.5, '2016-17', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(26, 'Own Tax Revenue as percentage of GSDP', 6.9, '2017-18_BE', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(27, 'Own Non-Tax Revenue as percentage of GSDP', 0.6, '2017-18_BE', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(28, 'Total Revenue as percentage of GSDP', 29.4, '2017-18_BE', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(29, 'Buoyancy  of Total Revenue w.r.t. GSDP (Ratio)', 4.6, '2017-18_BE', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(30, 'Buoyancy of  State’s Own Taxes w.r.t. GSDP(Ratio)', 5.4, '2017-18_BE', '2018-09-06 06:43:08', '2018-09-06 06:43:08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resource_management12s`
+--
+
+DROP TABLE IF EXISTS `resource_management12s`;
+CREATE TABLE `resource_management12s` (
+  `id` bigint(20) NOT NULL,
+  `Revenue_Sources` varchar(255) DEFAULT NULL,
+  `Buoyancy_Ratio` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `resource_management12s`
+--
+
+INSERT INTO `resource_management12s` (`id`, `Revenue_Sources`, `Buoyancy_Ratio`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Taxes on Sales, Trade ', 1.1, '2012-13', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(2, 'Stamp and Registration Fees', 3.3, '2012-13', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(3, 'Taxes on Goods and Passengers', 9.4, '2012-13', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(4, 'State Excise', 1.6, '2012-13', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(5, 'Taxes on Vehicles', 1.3, '2012-13', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(6, 'Land Revenue', 1.6, '2012-13', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(7, 'Taxes & Duties on Electricity', 6.1, '2012-13', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(8, 'Total Tax Revenue', 1.3, '2012-13', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(9, 'Non Ferrous Minerals', 1.1, '2012-13', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(10, 'Interest Receipts', -5, '2012-13', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(11, 'Total Non Tax Revenue', 1.9, '2012-13', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(12, 'Taxes on Sales, Trade ', -0.2, '2013-14', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(13, 'Stamp and Registration Fees', 2, '2013-14', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(14, 'Taxes on Goods and Passengers', 10.2, '2013-14', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(15, 'State Excise', 2.5, '2013-14', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(16, 'Taxes on Vehicles', 2, '2013-14', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(17, 'Land Revenue', -0.1, '2013-14', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(18, 'Taxes & Duties on Electricity', 3.1, '2013-14', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(19, 'Total Tax Revenue', 1.1, '2013-14', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(20, 'Non Ferrous Minerals', 0.9, '2013-14', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(21, 'Interest Receipts', 5, '2013-14', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(22, 'Total Non Tax Revenue', 2.9, '2013-14', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(23, 'Taxes on Sales, Trade ', 0.2, '2014-15', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(24, 'Stamp and Registration Fees', -0.1, '2014-15', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(25, 'Taxes on Goods and Passengers', 0.3, '2014-15', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(26, 'State Excise', 0.2, '2014-15', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(27, 'Taxes on Vehicles', 1.8, '2014-15', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(28, 'Land Revenue', 4.6, '2014-15', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(29, 'Taxes & Duties on Electricity', 20.3, '2014-15', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(30, 'Total Tax Revenue', 0.7, '2014-15', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(31, 'Non Ferrous Minerals', 6.7, '2014-15', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(32, 'Interest Receipts', 3.4, '2014-15', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(33, 'Total Non Tax Revenue', 0.1, '2014-15', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(34, 'Taxes on Sales, Trade ', 2.1, '2015-16', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(35, 'Stamp and Registration Fees', 2.3, '2015-16', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(36, 'Taxes on Goods and Passengers', 3.3, '2015-16', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(37, 'State Excise', -0.2, '2015-16', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(38, 'Taxes on Vehicles', 1.1, '2015-16', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(39, 'Land Revenue', 13.4, '2015-16', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(40, 'Taxes & Duties on Electricity', -1.8, '2015-16', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(41, 'Total Tax Revenue', 2.6, '2015-16', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(42, 'Non Ferrous Minerals', 0.9, '2015-16', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(43, 'Interest Receipts', 6.2, '2015-16', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(44, 'Total Non Tax Revenue', 3.6, '2015-16', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(45, 'Taxes on Sales, Trade ', 0.8, '2016-17', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(46, 'Stamp and Registration Fees', -0.8, '2016-17', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(47, 'Taxes on Goods and Passengers', 0.2, '2016-17', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(48, 'State Excise', -6.7, '2016-17', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(49, 'Taxes on Vehicles', 1.1, '2016-17', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(50, 'Land Revenue', 2.7, '2016-17', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(51, 'Taxes & Duties on Electricity', -1.7, '2016-17', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(52, 'Total Tax Revenue', 0.7, '2016-17', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(53, 'Non Ferrous Minerals', 0.2, '2016-17', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(54, 'Interest Receipts', 4.1, '2016-17', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(55, 'Total Non Tax Revenue', 0.7, '2016-17', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(56, 'Taxes on Sales, Trade ', 16.3, '2017-18_BE', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(57, 'Stamp and Registration Fees', 8.4, '2017-18_BE', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(58, 'Taxes on Goods and Passengers', -15.5, '2017-18_BE', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(59, 'State Excise', -15.5, '2017-18_BE', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(60, 'Taxes on Vehicles', 6.7, '2017-18_BE', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(61, 'Land Revenue', -5.9, '2017-18_BE', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(62, 'Taxes & Duties on Electricity', 19.1, '2017-18_BE', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(63, 'Total Tax Revenue', 2.8, '2017-18_BE', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(64, 'Non Ferrous Minerals', 5.5, '2017-18_BE', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(65, 'Interest Receipts', -5.3, '2017-18_BE', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
+(66, 'Total Non Tax Revenue', 3, '2017-18_BE', '2018-09-06 07:09:44', '2018-09-06 07:09:44');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resource_management13s`
+--
+
+DROP TABLE IF EXISTS `resource_management13s`;
+CREATE TABLE `resource_management13s` (
+  `id` bigint(20) NOT NULL,
+  `Sources` varchar(255) DEFAULT NULL,
+  `Amount` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `resource_management13s`
+--
+
+INSERT INTO `resource_management13s` (`id`, `Sources`, `Amount`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Grants for State Plan Schemes', 5052, '2012-13', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(2, 'Grants for Central Plan Schemes', 36, '2012-13', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(3, 'Grants for Centrally Sponsored Schemes', 2778, '2012-13', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(4, 'Non-plan Grants', 2413, '2012-13', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(5, 'Total Grants', 10278, '2012-13', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(6, 'BCR', 14128, '2012-13', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(7, 'Grants for State Plan Schemes', 6238, '2013-14', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(8, 'Grants for Central Plan Schemes', 137, '2013-14', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(9, 'Grants for Centrally Sponsored Schemes', 2921, '2013-14', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(10, 'Non-plan Grants', 3288, '2013-14', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(11, 'Total Grants', 12584, '2013-14', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(12, 'BCR', 16242, '2013-14', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(13, 'Grants for State Plan Schemes', 14936, '2014-15', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(14, 'Grants for Central Plan Schemes', 117, '2014-15', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(15, 'Grants for Centrally Sponsored Schemes', 822, '2014-15', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(16, 'Non-plan Grants', 3271, '2014-15', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(17, 'Total Grants', 19146, '2014-15', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(18, 'BCR', 15483, '2014-15', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(19, 'Grants for State Plan Schemes', 13886, '2015-16', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(20, 'Grants for Central Plan Schemes', 2084, '2015-16', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(21, 'Grants for Centrally Sponsored Schemes', 161, '2015-16', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(22, 'Non-plan Grants', 3434, '2015-16', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(23, 'Total Grants', 19566, '2015-16', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(24, 'BCR', 26027, '2015-16', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(25, 'Grants for State Plan Schemes', 16499, '2016-17', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(26, 'Grants for Central Plan Schemes', 93, '2016-17', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(27, 'Grants for Centrally Sponsored Schemes', 0, '2016-17', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(28, 'Non-plan Grants', 3968, '2016-17', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(29, 'Total Grants', 20559, '2016-17', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(30, 'BCR', 27804, '2016-17', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(31, 'Grants for State Plan Schemes', 31655, '2017-18_BE', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(32, 'Grants for Central Plan Schemes', 232, '2017-18_BE', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(33, 'Grants for Centrally Sponsored Schemes', 0, '2017-18_BE', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(34, 'Non-plan Grants', 5069, '2017-18_BE', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(35, 'Total Grants', 36956, '2017-18_BE', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
+(36, 'BCR', 31320, '2017-18_BE', '2018-09-06 07:28:52', '2018-09-06 07:28:52');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `revenue_account1s`
 --
 
@@ -6378,7 +6984,17 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180831054959'),
 ('20180901090744'),
 ('20180903082419'),
-('20180903083149');
+('20180903083149'),
+('20180905120528'),
+('20180905123853'),
+('20180905130130'),
+('20180905131807'),
+('20180906053734'),
+('20180906062154'),
+('20180906064223'),
+('20180906070911'),
+('20180906072726'),
+('20180906075118');
 
 -- --------------------------------------------------------
 
@@ -7431,6 +8047,89 @@ INSERT INTO `state_domestic_product11s` (`id`, `Districts`, `Target`, `Achieveme
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tax_department3s`
+--
+
+DROP TABLE IF EXISTS `tax_department3s`;
+CREATE TABLE `tax_department3s` (
+  `id` bigint(20) NOT NULL,
+  `Name_of_Commodity` varchar(255) DEFAULT NULL,
+  `Collection` float DEFAULT NULL,
+  `Rate_of_Growth` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tax_department3s`
+--
+
+INSERT INTO `tax_department3s` (`id`, `Name_of_Commodity`, `Collection`, `Rate_of_Growth`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Petro Products', 2912, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(2, 'Electrical Goods', 341, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(3, 'Cement', 800, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(4, 'Unregistered Dealer Works Contractor', 490, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(5, 'FMCG', 414, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(6, 'Four Wheelers & Chassis of Automobile', 515, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(7, 'Crude Oil', 315, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(8, 'Works Contract and TDS', 369, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(9, 'Two and Three Wheelers', 272, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(10, 'Drugs and Medicines', 357, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(11, ' Others', 4122, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(12, 'Total', 10907, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(13, 'Petro Products', 3152, 8.3, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(14, 'Electrical Goods', 546, 60.5, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(15, 'Cement', 929, 16.1, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(16, 'Unregistered Dealer Works Contractor', 659, 34.7, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(17, 'FMCG', 492, 18.9, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(18, 'Four Wheelers & Chassis of Automobile', 491, -4.7, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(19, 'Crude Oil', 817, 159.4, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(20, 'Works Contract and TDS', 334, -9.5, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(21, 'Two and Three Wheelers', 336, 23.4, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(22, 'Drugs and Medicines', 408, 14.1, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(23, ' Others', 4991, 21.1, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(24, 'Total', 13156, 20.6, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(25, 'Petro Products', 3284, 4.2, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(26, 'Electrical Goods', 787, 44, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(27, 'Cement', 920, -0.9, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(28, 'Unregistered Dealer Works Contractor', 750, 13.8, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(29, 'FMCG', 523, 6.2, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(30, 'Four Wheelers & Chassis of Automobile', 528, 7.5, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(31, 'Crude Oil', 635, -22.2, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(32, 'Works Contract and TDS', 248, -25.6, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(33, 'Two and Three Wheelers', 378, 12.5, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(34, 'Drugs and Medicines', 459, 12.7, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(35, ' Others', 5237, 4.9, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(36, 'Total', 13750, 4.5, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(37, 'Petro Products', 4385, 33.5, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(38, 'Electrical Goods', 1093, 38.9, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(39, 'Cement', 1005, 9.2, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(40, 'Unregistered Dealer Works Contractor', 912, 21.5, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(41, 'FMCG', 615, 17.6, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(42, 'Four Wheelers & Chassis of Automobile', 596, 12.9, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(43, 'Crude Oil', 1350, 112.5, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(44, 'Works Contract and TDS', 371, 49.4, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(45, 'Two and Three Wheelers', 452, 19.5, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(46, 'Drugs and Medicines', 469, 2.1, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(47, ' Others', 6133, 17.1, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(48, 'Total', 17378, 26.4, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(49, 'Petro Products', 5118, 16.7, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(50, 'Electrical Goods', 1374, 25.7, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(51, 'Cement', 1165, 16, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(52, 'Unregistered Dealer Works Contractor', 1118, 22.6, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(53, 'FMCG', 820, 33.5, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(54, 'Four Wheelers & Chassis of Automobile', 747, 25.4, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(55, 'Crude Oil', 702, -48, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(56, 'Works Contract and TDS', 605, 63.1, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(57, 'Two and Three Wheelers', 584, 29.1, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(58, 'Drugs and Medicines', 544, 16.1, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(59, ' Others', 5974, -2.6, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(60, 'Total', 18751, 7.9, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tax_gsdp_ratios`
 --
 
@@ -7994,6 +8693,60 @@ ALTER TABLE `resource_management2s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `resource_management3s`
+--
+ALTER TABLE `resource_management3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management4s`
+--
+ALTER TABLE `resource_management4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management5s`
+--
+ALTER TABLE `resource_management5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management6s`
+--
+ALTER TABLE `resource_management6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management7s`
+--
+ALTER TABLE `resource_management7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management8s`
+--
+ALTER TABLE `resource_management8s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management11s`
+--
+ALTER TABLE `resource_management11s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management12s`
+--
+ALTER TABLE `resource_management12s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management13s`
+--
+ALTER TABLE `resource_management13s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `revenue_account1s`
 --
 ALTER TABLE `revenue_account1s`
@@ -8087,6 +8840,12 @@ ALTER TABLE `state_domestic_product10s`
 -- Indexes for table `state_domestic_product11s`
 --
 ALTER TABLE `state_domestic_product11s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tax_department3s`
+--
+ALTER TABLE `tax_department3s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -8574,6 +9333,60 @@ ALTER TABLE `resource_management2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
+-- AUTO_INCREMENT for table `resource_management3s`
+--
+ALTER TABLE `resource_management3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+
+--
+-- AUTO_INCREMENT for table `resource_management4s`
+--
+ALTER TABLE `resource_management4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+
+--
+-- AUTO_INCREMENT for table `resource_management5s`
+--
+ALTER TABLE `resource_management5s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `resource_management6s`
+--
+ALTER TABLE `resource_management6s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
+--
+-- AUTO_INCREMENT for table `resource_management7s`
+--
+ALTER TABLE `resource_management7s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- AUTO_INCREMENT for table `resource_management8s`
+--
+ALTER TABLE `resource_management8s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+
+--
+-- AUTO_INCREMENT for table `resource_management11s`
+--
+ALTER TABLE `resource_management11s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `resource_management12s`
+--
+ALTER TABLE `resource_management12s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+
+--
+-- AUTO_INCREMENT for table `resource_management13s`
+--
+ALTER TABLE `resource_management13s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
 -- AUTO_INCREMENT for table `revenue_account1s`
 --
 ALTER TABLE `revenue_account1s`
@@ -8662,6 +9475,12 @@ ALTER TABLE `state_domestic_product10s`
 --
 ALTER TABLE `state_domestic_product11s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+
+--
+-- AUTO_INCREMENT for table `tax_department3s`
+--
+ALTER TABLE `tax_department3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `tax_gsdp_ratios`
