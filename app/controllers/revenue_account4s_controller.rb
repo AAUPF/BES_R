@@ -21,7 +21,13 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:Revenue, :Amount, :Year]
+   search = params[:search]
+# ji1 = [:Revenue, :Amount, :Year]
+if year == "All"
+  ji1 = [:Revenue, :"2012-13", :"2013-14",:"2014-15",:"2015-16",:"2016-17",:"2017-18_BE"]
+ else
+  ji1 = [:Revenue, :Amount, :Year]
+ end
   if rain_fall_type || views
 
       if views == "Map View"
@@ -39,7 +45,7 @@ ji1 = [:Revenue, :Amount, :Year]
         a = RevenueAccount4.table(b,rain_fall_type,year,ji1,compare)
       else
         @RevenueAccount4s = RevenueAccount4.search(params[:search],compare,year,rain_fall_type)
-        a = RevenueAccount4.query(@RevenueAccount4s,params[:year],rain_fall_type,views,ji,compare)
+        a = RevenueAccount4.query(@RevenueAccount4s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

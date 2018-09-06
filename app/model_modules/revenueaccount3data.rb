@@ -45,55 +45,60 @@ module Revenueaccount3data
       end
     end
   
-    # Logic to generate table starts
+
     def table(b, rain_fall_type, _year, ji, compare)
-      dataset = rain_fall_type.tr('_', ' ')
-  
-      if rain_fall_type == 'All'
-  
-        hash_data = ji.map do |el|
-          if el.to_s == 'Interest_Payment_and_Receipt'
-            { title: 'Interest_Payment_and_Receipt', field: el, headerFilter: true }
+        dataset = rain_fall_type.tr('_', ' ')
+    
+        if rain_fall_type 
+    
+          hash_data = ji.map do |el|
+            if el.to_s == 'Interest_Payment_and_Receipt'
+              { title: 'Expenditure Pattern', field: el, headerFilter: true }
+            else
+              { title: el.to_s.tr('_', ' '), field: el }
+            end
+          end
+        else
+          if compare == 'None'
+            hash_data = [
+              { title: 'Expenditure Pattern', field: 'Interest_Payment_and_Receipt', headerFilter: true },
+              { title: dataset, field: rain_fall_type }
+            ]
           else
-            { title: el.to_s.tr('_', ' '), field: el }
+  
+            hash_data = [
+              # {title:compare, field:compare, sorter:"string", },
+              { title: 'Expenditure Pattern', field: 'Interest_Payment_and_Receipt', headerFilter: true },
+    
+              { title: dataset, field: rain_fall_type }
+            ]
           end
         end
-      else
-        if compare == 'None'
-          hash_data = [
-            { title: 'Interest_Payment_and_Receipt', field: 'Interest_Payment_and_Receipt', headerFilter: true },
-            { title: dataset, field: rain_fall_type }
-          ]
-        else
-          hash_data = [
-            # {title:compare, field:compare, sorter:"string", },
-            { title: 'Interest_Payment_and_Receipt', field: 'Interest_Payment_and_Receipt', headerFilter: true },
   
-            { title: dataset, field: rain_fall_type }
-          ]
-        end
+    
+       if rain_fall_type == "Productivity"
+        j = b.each { |item| item[:Productivity] = item[:Productivity]/100}
+    
+       else
+         j = b
+       end
+  
+       if _year == "All"
+        grouped = {}
+          b.each do |x|
+            grouped[x[:Interest_Payment_and_Receipt]] ||= {}
+            grouped[x[:Interest_Payment_and_Receipt]][:Interest_Payment_and_Receipt] = x[:Interest_Payment_and_Receipt]
+            grouped[x[:Interest_Payment_and_Receipt]][x[:Year]] = x[:Amount]
+          end
+  
+        data = { column: hash_data, data: grouped.values }
+         
+       else
+        data = { column: hash_data, data: j }
+       end
+        
+        data
       end
-  
-      # j = []
-      # b.map do |k|
-      #   if k.Productivity
-      #     u = k.Productivity/100
-      #     j.push({id: k.id, Productivity: u ,Interest_Payment_and_Receipt: k.Interest_Payment_and_Receipt, Area: k.Area, Production: k.Production, Year: k.Year })
-      #   else
-      #     j.push(k)
-      #   end
-      # end
-  
-  
-     if rain_fall_type == "Productivity"
-      j = b.each { |item| item[:Productivity] = item[:Productivity]/100}
-  
-     else
-       j = b
-     end
-      data = { column: hash_data, data: j }
-      data
-    end
   
     # Logic to generate table end
   
@@ -111,7 +116,7 @@ module Revenueaccount3data
       end
     end
   
-    def query(b, _year, rain_fall_type, views, ji, compare)
+    def query(b, _year, rain_fall_type, views, ji, compare,search)
       d = 'Interest_Payment_and_Receipt'
       color  = "#4f81bc"
       if rain_fall_type == 'All'
@@ -121,6 +126,8 @@ module Revenueaccount3data
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
@@ -131,6 +138,8 @@ module Revenueaccount3data
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
@@ -168,62 +177,121 @@ module Revenueaccount3data
         end
         return title
       else
-        if compare
+        if compare == "None"
+            
           if _year == "All"
-            grouped_data = b.group_by{ |data| data[:Year]}
-            hash_data = grouped_data.map{ |vegetable, values| 
-            dataset = vegetable.to_s.gsub("_"," ")
-            {
-            type: views,
-            legendText: dataset,
-            showInLegend: true,
-            dataPoints: values.map { |value|
-            { y: value[rain_fall_type], label: value[:Interest_Payment_and_Receipt] }
-            }
-            }
-            }
+            grouped_data = b.group_by{ |data| data[:Interest_Payment_and_Receipt]}
+            if search == "All"
+              h = b.reject{|x| x["Interest_Payment_and_Receipt"] == "Development Expenditure as percentage of Total Expenditure"}.group_by{ |data| data[:Interest_Payment_and_Receipt]}
+              hash_data = h.map{ |vegetable, values| 
+                dataset = vegetable.to_s.gsub("_"," ")
+               {
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: values.map { |value|
+                { y: value[rain_fall_type], label: value["Year"] }
+                }
+                }
+                }
+            else
+              h = grouped_data
+              hash_data = h.map{ |vegetable, values| 
+                dataset = vegetable.to_s.gsub("_"," ")
+               {
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                color:color,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: values.map { |value|
+                { y: value[rain_fall_type], label: value["Year"] }
+                }
+                }
+                }
+            end
+           
+            
           else
+            if search == "All"
+                h = b.reject{|x| x["Interest_Payment_and_Receipt"] == "Development Expenditure as percentage of Total Expenditure"}
+            else
+                h = b
+            end
             dataset = rain_fall_type.tr('_', ' ')
           hash_data =
             [{
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
               color: color,
               legendText: dataset,
               showInLegend: true,
-              dataPoints: b.map do |el|
+              dataPoints: h.map do |el|
                             { y: el[rain_fall_type], label: el['Interest_Payment_and_Receipt'] }
                           end
             }]
           end
           
         else
-          if _year == "All"
-            grouped_data = b.group_by{ |data| data[:Year]}
-            hash_data = grouped_data.map{ |vegetable, values| 
-            dataset = vegetable.to_s.gsub("_"," ")
-            {
-            type: views,
-            legendText: dataset,
-            showInLegend: true,
-            dataPoints: values.map { |value|
-            { y: value[rain_fall_type], label: value[:Interest_Payment_and_Receipt] }
-            }
-            }
-            }
-
-          else
-            dataset = rain_fall_type.tr('_', ' ')
-            hash_data =
-              [{
-                type: views,
-                color: color,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: b.map do |el|
-                  { y: el[rain_fall_type], label: el['Interest_Payment_and_Receipt'] }
-                            end
-              }]
-          end
+            if _year == "All"
+                grouped_data = b.group_by{ |data| data[:Interest_Payment_and_Receipt]}
+                if search == "All"
+                  h = b.reject{|x| x["Interest_Payment_and_Receipt"] == "Development Expenditure as percentage of Total Expenditure"}.group_by{ |data| data[:Interest_Payment_and_Receipt]}
+                  hash_data = h.map{ |vegetable, values| 
+                    dataset = vegetable.to_s.gsub("_"," ")
+                   {
+                    type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: values.map { |value|
+                    { y: value[rain_fall_type], label: value["Year"] }
+                    }
+                    }
+                    }
+                else
+                  h = grouped_data
+                  hash_data = h.map{ |vegetable, values| 
+                    dataset = vegetable.to_s.gsub("_"," ")
+                   {
+                    type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: values.map { |value|
+                    { y: value[rain_fall_type], label: value["Year"] }
+                    }
+                    }
+                    }
+                end
+               
+                
+              else
+                if search == "All"
+                    h = b.reject{|x| x["Interest_Payment_and_Receipt"] == "Development Expenditure as percentage of Total Expenditure"}
+                else
+                    h = b
+                end
+                dataset = rain_fall_type.tr('_', ' ')
+              hash_data =
+                [{
+                  type: views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                  color: color,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: h.map do |el|
+                                { y: el[rain_fall_type], label: el['Interest_Payment_and_Receipt'] }
+                              end
+                }]
+              end
           
         end
         if views == "stackedBar100" or views == "stackedBar"
@@ -237,11 +305,17 @@ module Revenueaccount3data
         }
        
         else
+            if search.include? "percentage"
+                l = "Percentage"
+            else
+                l = "Amount"
+
+            end
           title = {
             animationEnabled: true,
             exportEnabled: true,
             title:{
-              text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+              text: "#{l.to_s.gsub("_"," ")}"
                   },
                   # axisX: {
                   #   interval:1,

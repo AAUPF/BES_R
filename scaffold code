@@ -1,1 +1,1 @@
-rails g scaffold Resource-Management2 Sources_of_Revenue:string Amount:float Year:string
+rails g scaffold TaxDepartment3 Name_of_Commodity:string Collection:float Rate_of_Growth:float Year:string

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Sources: MyString
+  Amount: 1.5
+  Year: MyString
+
+two:
+  Sources: MyString
+  Amount: 1.5
+  Year: MyString

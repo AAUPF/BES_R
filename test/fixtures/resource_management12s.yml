@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Revenue_Sources: MyString
+  Buoyancy_Ratio: 1.5
+  Year: MyString
+
+two:
+  Revenue_Sources: MyString
+  Buoyancy_Ratio: 1.5
+  Year: MyString

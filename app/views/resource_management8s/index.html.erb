@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Resource Management8s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Revenue sources</th>
+      <th>Yearly growth rates</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resource_management8s.each do |resource_management8| %>
+      <tr>
+        <td><%= resource_management8.Revenue_Sources %></td>
+        <td><%= resource_management8.Yearly_Growth_Rates %></td>
+        <td><%= resource_management8.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Resource Management8', new_resource_management8_path %>

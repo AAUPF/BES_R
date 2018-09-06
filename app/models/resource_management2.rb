@@ -1,6 +1,5 @@
 class ResourceManagement2 < ApplicationRecord
   
-  
     def self.import1(file)
       spreadsheet = Roo::Spreadsheet.open(file.path)
       header = spreadsheet.row(1)
@@ -47,46 +46,60 @@ class ResourceManagement2 < ApplicationRecord
       end
     end
   
-    # Logic to generate table starts
+  
     def self.table(b, rain_fall_type, _year, ji, compare)
-      dataset = rain_fall_type.tr('_', ' ')
-  
-      if rain_fall_type == 'All'
-  
-        hash_data = ji.map do |el|
-          if el.to_s == 'Sources_of_Revenue'
-            { title: 'Sources of Revenue', field: el, headerFilter: true }
+        dataset = rain_fall_type.tr('_', ' ')
+    
+        if rain_fall_type 
+    
+          hash_data = ji.map do |el|
+            if el.to_s == 'Sources_of_Revenue'
+              { title: 'Sources of Revenue', field: el, headerFilter: true }
+            else
+              { title: el.to_s.tr('_', ' '), field: el }
+            end
+          end
+        else
+          if compare == 'None'
+            hash_data = [
+              { title: 'Sources of Revenue', field: 'Sources_of_Revenue', headerFilter: true },
+              { title: dataset, field: rain_fall_type }
+            ]
           else
-            { title: el.to_s.tr('_', ' '), field: el }
+  
+            hash_data = [
+              # {title:compare, field:compare, sorter:"string", },
+              { title: 'Sources of Revenue', field: 'Sources_of_Revenue', headerFilter: true },
+    
+              { title: dataset, field: rain_fall_type }
+            ]
           end
         end
-      else
-        if compare == 'None'
-          hash_data = [
-            { title: 'Sources of Revenue', field: 'Sources_of_Revenue', headerFilter: true },
-            { title: dataset, field: rain_fall_type }
-          ]
-        else
-          hash_data = [
-            # {title:compare, field:compare, sorter:"string", },
-            { title: 'Sources of Revenue', field: 'Sources_of_Revenue', headerFilter: true },
   
-            { title: dataset, field: rain_fall_type }
-          ]
-        end
-      end
     
+       if rain_fall_type == "Productivity"
+        j = b.each { |item| item[:Productivity] = item[:Productivity]/100}
+    
+       else
+         j = b
+       end
   
+       if _year == "All"
+        grouped = {}
+          b.each do |x|
+            grouped[x[:Sources_of_Revenue]] ||= {}
+            grouped[x[:Sources_of_Revenue]][:Sources_of_Revenue] = x[:Sources_of_Revenue]
+            grouped[x[:Sources_of_Revenue]][x[:Year]] = x[:Amount]
+          end
   
-     if rain_fall_type == "Productivity"
-      j = b.each { |item| item[:Productivity] = item[:Productivity]/100}
-  
-     else
-       j = b
-     end
-      data = { column: hash_data, data: j }
-      data
-    end
+        data = { column: hash_data, data: grouped.values }
+         
+       else
+        data = { column: hash_data, data: j }
+       end
+        
+        data
+      end
   
     # Logic to generate table end
   
@@ -104,7 +117,7 @@ class ResourceManagement2 < ApplicationRecord
       end
     end
   
-    def self.query(b, _year, rain_fall_type, views, ji, compare)
+    def self.query(b, _year, rain_fall_type, views, ji, compare,search)
       d = 'Sources_of_Revenue'
       color  = "#4f81bc"
       if rain_fall_type == 'All'
@@ -114,6 +127,8 @@ class ResourceManagement2 < ApplicationRecord
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
@@ -124,6 +139,8 @@ class ResourceManagement2 < ApplicationRecord
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
@@ -150,34 +167,61 @@ class ResourceManagement2 < ApplicationRecord
             title:{
               text: "#{rain_fall_type.to_s.gsub("_"," ")}"
                   },
-                  axisX: {
-                    interval:1,
-                    labelMaxWidth: 180,
-                    labelAngle: 90,
-                    labelFontFamily:"verdana0"
-                    },
+                  # axisX: {
+                  #   interval:1,
+                  #   labelMaxWidth: 180,
+                  #   labelAngle: 90,
+                  #   labelFontFamily:"verdana0"
+                  #   },
             data: hash_data
         }
         end
         return title
       else
-
-        if compare
+        if compare == "None"
+            
           if _year == "All"
             grouped_data = b.group_by{ |data| data[:Sources_of_Revenue]}
-            hash_data = grouped_data.map{ |vegetable, values| 
-            dataset = vegetable.to_s.gsub("_"," ")
-            {
-            type: views,
-            legendText: dataset,
-            showInLegend: true,
-            dataPoints: values.reject{|x| x["Sources_of_Revenue"]== "Total"}.map { |value|
-            { y: value[rain_fall_type], label: value["Year"] }
-            }
-            }
-            }
+            if search == "All"
+              h = b.reject{|x| x["Sources_of_Revenue"] == "Total"}.group_by{ |data| data[:Sources_of_Revenue]}
+              hash_data = h.map{ |vegetable, values| 
+                dataset = vegetable.to_s.gsub("_"," ")
+               {
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: values.map { |value|
+                { y: value[rain_fall_type], label: value["Year"] }
+                }
+                }
+                }
+            else
+              h = grouped_data
+              hash_data = h.map{ |vegetable, values| 
+                dataset = vegetable.to_s.gsub("_"," ")
+               {
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
+                color:color,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: values.map { |value|
+                { y: value[rain_fall_type], label: value["Year"] }
+                }
+                }
+                }
+            end
+           
+            
           else
-
+            if search == "All"
+                h = b.reject{|x| x["Sources_of_Revenue"] == "Total"}
+            else
+                h = b
+            end
             dataset = rain_fall_type.tr('_', ' ')
           hash_data =
             [{
@@ -185,43 +229,68 @@ class ResourceManagement2 < ApplicationRecord
               color: color,
               legendText: dataset,
               showInLegend: true,
-              dataPoints: b.reject{|x| x["Sources_of_Revenue"]== "Total"}.map do |el|
+              dataPoints: h.map do |el|
                             { y: el[rain_fall_type], label: el['Sources_of_Revenue'] }
                           end
             }]
           end
           
         else
-
-          if _year == "All"
-
-            grouped_data = b.group_by{ |data| data[:Year]}
-            hash_data = grouped_data.map{ |vegetable, values| 
-            dataset = vegetable.to_s.gsub("_"," ")
-            {
-            type: views,
-            legendText: dataset,
-            showInLegend: true,
-            dataPoints: values.reject{|x| x["Sources_of_Revenue"]== "Total"}.map { |value|
-            { y: value[rain_fall_type], label: value[:Sources_of_Revenue] }
-            }
-            }
-            }
-
-          else
-
-            dataset = rain_fall_type.tr('_', ' ')
-            hash_data =
-              [{
-                type: views,
-                color: color,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: b.reject{|x| x["Sources_of_Revenue"]== "Total"}.map do |el|
-                  { y: el[rain_fall_type], label: el['Sources_of_Revenue'] }
-                            end
-              }]
-          end
+            if _year == "All"
+                grouped_data = b.group_by{ |data| data[:Sources_of_Revenue]}
+                if search == "All"
+                  h = b.reject{|x| x["Sources_of_Revenue"] == "Total"}.group_by{ |data| data[:Sources_of_Revenue]}
+                  hash_data = h.map{ |vegetable, values| 
+                    dataset = vegetable.to_s.gsub("_"," ")
+                   {
+                    type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:dataset,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: values.map { |value|
+                    { y: value[rain_fall_type], label: value["Year"] }
+                    }
+                    }
+                    }
+                else
+                  h = grouped_data
+                  hash_data = h.map{ |vegetable, values| 
+                    dataset = vegetable.to_s.gsub("_"," ")
+                   {
+                    type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:dataset,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: values.map { |value|
+                    { y: value[rain_fall_type], label: value["Year"] }
+                    }
+                    }
+                    }
+                end
+               
+                
+              else
+                if search == "All"
+                    h = b.reject{|x| x["Sources_of_Revenue"] == "Total"}
+                else
+                    h = b
+                end
+                dataset = rain_fall_type.tr('_', ' ')
+              hash_data =
+                [{
+                  type: views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                  color: color,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: h.map do |el|
+                                { y: el[rain_fall_type], label: el['Sources_of_Revenue'] }
+                              end
+                }]
+              end
           
         end
         if views == "stackedBar100" or views == "stackedBar"
@@ -235,16 +304,22 @@ class ResourceManagement2 < ApplicationRecord
         }
        
         else
+            if search.include? "percentage"
+                l = "Percentage"
+            else
+                l = "Amount"
+  
+            end
           title = {
             animationEnabled: true,
             exportEnabled: true,
             title:{
-              text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+              text: "#{l.to_s.gsub("_"," ")}"
                   },
                   # axisX: {
                   #   interval:1,
                   #   labelMaxWidth: 180,
-                  #   labelAngle: 120,
+                  #   labelAngle: 90,
                   #   labelFontFamily:"verdana0"
                   #   },
             data: hash_data
@@ -615,7 +690,7 @@ class ResourceManagement2 < ApplicationRecord
       a.push("data": hu)
       return a
   end
-  # end
-
+  
+  
 end
       

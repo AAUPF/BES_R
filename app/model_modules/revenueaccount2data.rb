@@ -167,6 +167,8 @@ module Revenueaccount2data
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
@@ -177,6 +179,8 @@ module Revenueaccount2data
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
@@ -224,6 +228,8 @@ module Revenueaccount2data
                 dataset = vegetable.to_s.gsub("_"," ")
                {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: values.map { |value|
@@ -237,6 +243,8 @@ module Revenueaccount2data
                 dataset = vegetable.to_s.gsub("_"," ")
                {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
                 color:color,
                 legendText: dataset,
                 showInLegend: true,
@@ -258,6 +266,8 @@ module Revenueaccount2data
           hash_data =
             [{
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
               color: color,
               legendText: dataset,
               showInLegend: true,
@@ -276,6 +286,8 @@ module Revenueaccount2data
                     dataset = vegetable.to_s.gsub("_"," ")
                    {
                     type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
                     legendText: dataset,
                     showInLegend: true,
                     dataPoints: values.map { |value|
@@ -289,6 +301,8 @@ module Revenueaccount2data
                     dataset = vegetable.to_s.gsub("_"," ")
                    {
                     type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
                     legendText: dataset,
                     showInLegend: true,
                     dataPoints: values.map { |value|
@@ -309,6 +323,8 @@ module Revenueaccount2data
               hash_data =
                 [{
                   type: views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
                   color: color,
                   legendText: dataset,
                   showInLegend: true,

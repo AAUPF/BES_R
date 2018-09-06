@@ -141,6 +141,8 @@ end
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
@@ -151,6 +153,8 @@ end
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
@@ -196,6 +200,8 @@ end
             if search=="All" || district1 == "All"
                 {
                     type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
                     legendText: dataset,
                     showInLegend: true,
                     dataPoints: values.map { |value|
@@ -206,6 +212,8 @@ end
                 if compare == "None"
                     {
                         type: views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
                         legendText: dataset,
                         color:color,
                         showInLegend: true,
@@ -216,6 +224,8 @@ end
                 else
                     {
                         type: views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
                         legendText: dataset,
                         showInLegend: true,
                         dataPoints: values.map { |value|
@@ -231,6 +241,8 @@ end
           hash_data =
             [{
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
               color: color,
               legendText: dataset,
               showInLegend: true,
@@ -247,6 +259,8 @@ end
             dataset = vegetable.to_s.gsub("_"," ")
             {
             type: views,
+            toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
             legendText: dataset,
             showInLegend: true,
             dataPoints: values.map { |value|
@@ -260,6 +274,8 @@ end
             hash_data =
               [{
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
                 color: color,
                 legendText: dataset,
                 showInLegend: true,

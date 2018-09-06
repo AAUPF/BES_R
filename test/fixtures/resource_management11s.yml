@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Indicators: MyString
+  Percentage: 1.5
+  Year: MyString
+
+two:
+  Indicators: MyString
+  Percentage: 1.5
+  Year: MyString
