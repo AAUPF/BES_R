@@ -114,7 +114,6 @@ end
       
       data
     end
-  
     # Logic to generate table end
   
     def map_search(search, _compare, year, rain_fall_type)
