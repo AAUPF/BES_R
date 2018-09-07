@@ -1,0 +1,47 @@
+<%= form_with(model: tax_department5, local: true) do |form| %>
+  <% if tax_department5.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tax_department5.errors.count, "error") %> prohibited this tax_department5 from being saved:</h2>
+
+      <ul>
+      <% tax_department5.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Document %>
+    <%= form.text_field :Number_of_Document %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Receipt %>
+    <%= form.text_field :Total_Receipt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Target %>
+    <%= form.text_field :Target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_receipt_against_target %>
+    <%= form.text_field :Percentage_receipt_against_target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Receipt_per_Document %>
+    <%= form.text_field :Receipt_per_Document %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,1 +1,1 @@
-rails g scaffold TaxDepartment3 Name_of_Commodity:string Collection:float Rate_of_Growth:float Year:string
+rails g scaffold TaxDepartment5 Districts:string Number_of_Document:float Total_Receipt:float Target:float Percentage_receipt_against_target:float Receipt_per_Document:float

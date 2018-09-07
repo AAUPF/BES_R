@@ -157,6 +157,8 @@ end
             if compare == "none"
             {
               type:views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               legendText: dataset,
               color: color,
               #name:dataset,
@@ -169,6 +171,8 @@ end
 
             {
               type:views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               legendText: dataset,
               #name:dataset,
               showInLegend: true,
@@ -206,6 +210,8 @@ end
               {
           
                 type:views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
@@ -221,6 +227,8 @@ end
             hash_data =
             [{
               type:views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               color: color,
               legendText: dataset,
               showInLegend: true,
@@ -261,6 +269,8 @@ end
               hash_data =  ji.map do |col|
                 {
                   type:views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:col,
                   legendText: col.to_s.gsub("_"," "),
                   showInLegend: true,
                   dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
@@ -280,19 +290,15 @@ end
               return title
 
             else
-              # b.each do |element|
-              #   hash1 = {:y => element[rain_fall_type] ,:label => rain_fall_type}
-              #   hash2 = {:y => element[compare] ,:label => compare}
-              #   array.push(hash1)
-              #   array.push(hash2)
-              # end
-              # return array
+              
 
                 if compare == "None"
                       ji1 = [rain_fall_type]
                       hash_data =  ji1.map do |col|
                         {
                           type:views,
+                          toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                          name:col,
                           legendText: col.to_s.gsub("_"," "),
                           showInLegend: true,
                           dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
@@ -318,6 +324,8 @@ end
                hash_data =  ji1.map do |col|
                  {
                    type:views,
+                   toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                   name:col,
                    legendText: col.to_s.gsub("_"," "),
                    showInLegend: true,
                    dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|

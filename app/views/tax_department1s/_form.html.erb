@@ -1,0 +1,67 @@
+<%= form_with(model: tax_department1, local: true) do |form| %>
+  <% if tax_department1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tax_department1.errors.count, "error") %> prohibited this tax_department1 from being saved:</h2>
+
+      <ul>
+      <% tax_department1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :BST/VAT %>
+    <%= form.text_field :BST/VAT %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CST %>
+    <%= form.text_field :CST %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ENT %>
+    <%= form.text_field :ENT %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ED %>
+    <%= form.text_field :ED %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ADV %>
+    <%= form.text_field :ADV %>
+  </div>
+
+  <div class="field">
+    <%= form.label :HLT %>
+    <%= form.text_field :HLT %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ET %>
+    <%= form.text_field :ET %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PT %>
+    <%= form.text_field :PT %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tax Department1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Bst/vat</th>
+      <th>Cst</th>
+      <th>Ent</th>
+      <th>Ed</th>
+      <th>Adv</th>
+      <th>Hlt</th>
+      <th>Et</th>
+      <th>Pt</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tax_department1s.each do |tax_department1| %>
+      <tr>
+        <td><%= tax_department1.Year %></td>
+        <td><%= tax_department1.BST/VAT %></td>
+        <td><%= tax_department1.CST %></td>
+        <td><%= tax_department1.ENT %></td>
+        <td><%= tax_department1.ED %></td>
+        <td><%= tax_department1.ADV %></td>
+        <td><%= tax_department1.HLT %></td>
+        <td><%= tax_department1.ET %></td>
+        <td><%= tax_department1.PT %></td>
+        <td><%= tax_department1.Total %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tax Department1', new_tax_department1_path %>

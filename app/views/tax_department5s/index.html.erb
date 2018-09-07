@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tax Department5s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Number of document</th>
+      <th>Total receipt</th>
+      <th>Target</th>
+      <th>Percentage receipt against target</th>
+      <th>Receipt per document</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tax_department5s.each do |tax_department5| %>
+      <tr>
+        <td><%= tax_department5.Districts %></td>
+        <td><%= tax_department5.Number_of_Document %></td>
+        <td><%= tax_department5.Total_Receipt %></td>
+        <td><%= tax_department5.Target %></td>
+        <td><%= tax_department5.Percentage_receipt_against_target %></td>
+        <td><%= tax_department5.Receipt_per_Document %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tax Department5', new_tax_department5_path %>

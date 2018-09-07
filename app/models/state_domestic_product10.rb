@@ -42,7 +42,7 @@ class StateDomesticProduct10 < ApplicationRecord
           if year == "All"
               all.order(:id)
           else
-              where(Year: year).order(:id)
+              where(Year: year).order(rain_fall_type)
           end
       end
     elsif compare == "Share_of_Population"
@@ -181,6 +181,8 @@ class StateDomesticProduct10 < ApplicationRecord
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
@@ -199,6 +201,8 @@ class StateDomesticProduct10 < ApplicationRecord
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
@@ -253,6 +257,8 @@ class StateDomesticProduct10 < ApplicationRecord
         hash_data =
           [{
             type: views,
+            toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+            name:dataset,
             color: color,
             legendText: dataset,
             showInLegend: true,
@@ -301,6 +307,8 @@ class StateDomesticProduct10 < ApplicationRecord
         hash_data =
           [{
             type: views,
+            toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+            name:dataset,
             color: color,
             legendText: dataset,
             showInLegend: true,
