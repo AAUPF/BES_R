@@ -39,7 +39,7 @@ class InflationRate < ApplicationRecord
           where('State = ? ', search).where(Sector: year).order('id')
         else
           # select("#{rain_fall_type}, #{year}, State").where('State = ? ', search).order(rain_fall_type)
-          where('State = ? ', search).order(rain_fall_type)
+          where('State = ? ', search).where(Sector: year).order(rain_fall_type)
         end
       end
     end
