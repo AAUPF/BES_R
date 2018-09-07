@@ -114,6 +114,7 @@ end
       
       data
     end
+  
     # Logic to generate table end
   
     def map_search(search, _compare, year, rain_fall_type)
@@ -285,22 +286,31 @@ end
           end
           
         end
+        if district1.include? "percentage"
+            l = "Percentage"
+        elsif(district1 == "All")
+            l = "Percentage"
+        else
+            l = "Amount"
+        end
+            
         if views == "stackedBar100" or views == "stackedBar"
           title = {
             animationEnabled: true,
             exportEnabled: true,
             title:{
-              text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+              text: "#{l.to_s.gsub("_"," ")}"
                   },
             data: hash_data
         }
        
         else
+            
           title = {
             animationEnabled: true,
             exportEnabled: true,
             title:{
-              text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+              text: "#{l.to_s.gsub("_"," ")}"
                   },
                   # axisX: {
                   #   interval:1,
