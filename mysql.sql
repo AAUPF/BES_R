@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Sep 07, 2018 at 05:48 AM
+-- Host: localhost:3306
+-- Generation Time: Sep 07, 2018 at 08:35 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `newdata`
+-- Database: `bihar_survey`
 --
 
 -- --------------------------------------------------------
@@ -6994,7 +6994,9 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180906064223'),
 ('20180906070911'),
 ('20180906072726'),
-('20180906075118');
+('20180906075118'),
+('20180906122134'),
+('20180907055304');
 
 -- --------------------------------------------------------
 
@@ -7224,44 +7226,44 @@ CREATE TABLE `state_domestic_product4s` (
 --
 
 INSERT INTO `state_domestic_product4s` (`id`, `Year`, `GSDP`, `NSDP`, `Per_Capita_GSDP`, `Reference`, `Factor_Cost`, `created_at`, `updated_at`) VALUES
-(1, '2004-05', 77781, 70167, 8773, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(2, '2005-06', 82490, 74144, 9149, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(3, '2006-07', 100737, 91331, 10994, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(4, '2007-08', 113680, 102853, 12215, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(5, '2008-09', 142279, 129690, 15060, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(6, '2009-10', 162923, 148151, 16998, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(7, '2010-11', 203555, 185745, 20944, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(8, '2011-12', 243269, 222442, 24696, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(9, '2012-13', 293616, 268902, 29425, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(10, '2013-14 (P)', 343663, 315225, 34014, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(11, '2014-15 (Q)', 402283, 369576, 39341, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(12, 'CAGR (2004-15)', 18.9, 19.1, 17.2, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(13, '2004-05', 77781, 70167, 8773, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(14, '2005-06', 76466, 68419, 8481, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(15, '2006-07', 88840, 80260, 9695, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(16, '2007-08', 93774, 84415, 10076, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(17, '2008-09', 107412, 97284, 11369, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(18, '2009-10', 113158, 101938, 11806, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(19, '2010-11', 130171, 117503, 13393, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(20, '2011-12', 143560, 129521, 14574, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(21, '2012-13', 158909, 143250, 15925, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(22, '2013-14 (P)', 173409, 156671, 17163, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(23, '2014-15 (Q)', 189789, 171802, 18560, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(24, 'CAGR (2004-15)', 10, 10.1, 8.5, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(25, '2011-12', 247144, 228497, 23525, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(26, '2012-13', 282368, 261327, 26459, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(27, '2013-14', 317101, 292143, 29251, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(28, '2014-15', 342951, 315732, 31142, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(29, '2015-16 (P)', 381501, 351871, 34103, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(30, '2016-17 (Q)', 438030, 404438, 38546, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(31, 'CAGR (2011-17)', 11.6, 11.5, 9.9, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(32, '2011-12', 247144, 228497, 23525, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(33, '2012-13', 256851, 236933, 24068, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(34, '2013-14', 269650, 246915, 24874, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(35, '2014-15', 279482, 255739, 25379, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(36, '2015-16 (P)', 300566, 274882, 26868, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(37, '2016-17 (Q)', 331572, 303333, 29178, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 04:42:31', '2018-09-07 04:42:31'),
-(38, 'CAGR (2011-17)', 5.8, 5.6, 4.2, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 04:42:31', '2018-09-07 04:42:31');
+(1, '2004–05', 77781, 70167, 8773, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(2, '2005–06', 82490, 74144, 9149, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(3, '2006–07', 100737, 91331, 10994, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(4, '2007–08', 113680, 102853, 12215, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(5, '2008–09', 142279, 129690, 15060, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(6, '2009–10 ', 162923, 148151, 16998, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(7, '2010–11', 203555, 185745, 20944, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(8, '2011-12', 243269, 222442, 24696, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(9, '2012-13', 293616, 268902, 29425, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(10, '2013-14 (P)', 343663, 315225, 34014, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(11, '2014-15 (Q)', 402283, 369576, 39341, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(12, 'CAGR (2004-15)', 18.9, 19.1, 17.2, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(13, '2004–05', 77781, 70167, 8773, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(14, '2005–06', 76466, 68419, 8481, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(15, '2006–07', 88840, 80260, 9695, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(16, '2007–08', 93774, 84415, 10076, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(17, '2008–09', 107412, 97284, 11369, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(18, '2009–10 ', 113158, 101938, 11806, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(19, '2010–11', 130171, 117503, 13393, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(20, '2011-12', 143560, 129521, 14574, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:21', '2018-09-03 08:32:21'),
+(21, '2012-13', 158909, 143250, 15925, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(22, '2013-14 (P)', 173409, 156671, 17163, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(23, '2014-15 (Q)', 189789, 171802, 18560, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(24, 'CAGR (2004-15)', 10, 10.1, 8.5, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(25, '2011-12', 247144, 228497, 23525, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(26, '2012-13', 282368, 261327, 26459, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(27, '2013-14', 317101, 292143, 29251, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(28, '2014-15', 342951, 315732, 31142, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(29, '2015-16 (P)', 381501, 351871, 34103, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(30, '2016-17 (Q)', 438030, 404438, 38546, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(31, 'CAGR (2011-17)', 11.6, 11.5, 9.9, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(32, '2011-12', 247144, 228497, 23525, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(33, '2012-13', 256851, 236933, 24068, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(34, '2013-14', 269650, 246915, 24874, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(35, '2014-15', 279482, 255739, 25379, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(36, '2015-16 (P)', 300566, 274882, 26868, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(37, '2016-17 (Q)', 331572, 303333, 29178, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-03 08:32:22', '2018-09-03 08:32:22'),
+(38, 'CAGR (2011-17)', 5.8, 5.6, 4.2, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-03 08:32:22', '2018-09-03 08:32:22');
 
 -- --------------------------------------------------------
 
@@ -8047,6 +8049,40 @@ INSERT INTO `state_domestic_product11s` (`id`, `Districts`, `Target`, `Achieveme
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tax_department1s`
+--
+
+DROP TABLE IF EXISTS `tax_department1s`;
+CREATE TABLE `tax_department1s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `BST/VAT` float DEFAULT NULL,
+  `CST` float DEFAULT NULL,
+  `ENT` float DEFAULT NULL,
+  `ED` float DEFAULT NULL,
+  `ADV` float DEFAULT NULL,
+  `HLT` float DEFAULT NULL,
+  `ET` float DEFAULT NULL,
+  `PT` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tax_department1s`
+--
+
+INSERT INTO `tax_department1s` (`id`, `Year`, `BST/VAT`, `CST`, `ENT`, `ED`, `ADV`, `HLT`, `ET`, `PT`, `Total`, `created_at`, `updated_at`) VALUES
+(1, '2012', 7391, 74, 28, 102, 1, 8, 3268, 40, 10911, '2018-09-06 12:23:21', '2018-09-06 12:23:21'),
+(2, '2013', 8546, 83, 39, 141, 1, 10, 4283, 53, 13156, '2018-09-06 12:23:21', '2018-09-06 12:23:21'),
+(3, '2014', 8796, 71, 46, 373, 1, 11, 4406, 55, 13758, '2018-09-06 12:23:21', '2018-09-06 12:23:21'),
+(4, '2015', 10726, 60, 55, 297, 1, 11, 6162, 66, 17378, '2018-09-06 12:23:21', '2018-09-06 12:23:21'),
+(5, '2016', 11908, 70, 70, 226, 1, 11, 6389, 77, 18751, '2018-09-06 12:23:21', '2018-09-06 12:23:21');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tax_department3s`
 --
 
@@ -8126,6 +8162,70 @@ INSERT INTO `tax_department3s` (`id`, `Name_of_Commodity`, `Collection`, `Rate_o
 (58, 'Drugs and Medicines', 544, 16.1, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (59, 'Others', 5974, -2.6, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (60, 'Total', 18751, 7.9, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tax_department5s`
+--
+
+DROP TABLE IF EXISTS `tax_department5s`;
+CREATE TABLE `tax_department5s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Number_of_Document` float DEFAULT NULL,
+  `Total_Receipt` float DEFAULT NULL,
+  `Target` float DEFAULT NULL,
+  `Percentage_receipt_against_target` float DEFAULT NULL,
+  `Receipt_per_Document` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tax_department5s`
+--
+
+INSERT INTO `tax_department5s` (`id`, `Districts`, `Number_of_Document`, `Total_Receipt`, `Target`, `Percentage_receipt_against_target`, `Receipt_per_Document`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 36608, 318.88, 397.29, 80.3, 87107, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(2, 'Nalanda', 14411, 45.13, 50.54, 89.3, 31316, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(3, 'Bhojpur', 14435, 44.8, 51.96, 86.2, 31036, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(4, 'Buxar', 7913, 25.1, 28.72, 87.4, 31720, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(5, 'Rohtas', 14616, 52.36, 54.5, 96.1, 35824, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(6, 'Kaimur', 8606, 19.71, 20.48, 96.2, 22903, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(7, 'Gaya', 18819, 63.75, 83.9, 76, 33875, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(8, 'Jehanabad', 5248, 16.69, 19.57, 85.3, 31803, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(9, 'Arwal', 3396, 8.12, 8.61, 94.3, 23910, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(10, 'Nawada', 11020, 24, 29.26, 82, 21779, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(11, 'Aurangabad', 13012, 45.55, 44.83, 101.6, 35006, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(12, 'Saran', 19368, 47.69, 60.26, 79.1, 24623, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(13, 'Siwan', 17562, 45.95, 58.57, 78.5, 26164, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(14, 'Gopalganj', 14894, 42.36, 53, 79.9, 28441, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(15, 'EastChamparan', 32255, 85.98, 100.11, 85.9, 26656, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(16, 'WestChamparan ', 24195, 44.91, 50.22, 89.4, 18562, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(17, 'Muzaffarpur ', 26408, 94.96, 117.96, 80.5, 35959, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(18, 'Sitamarhi', 19927, 43.62, 55.71, 78.3, 21890, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(19, 'Sheohar', 3941, 6.76, 8.96, 75.4, 17153, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(20, 'Vaishali ', 19105, 58.69, 69.26, 84.7, 30720, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(21, 'Darbhanga', 17896, 50.12, 60.62, 82.7, 28006, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(22, 'Madhubani', 26183, 48.15, 58.2, 82.7, 18390, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(23, 'Samastipur', 26146, 50.65, 62.05, 81.6, 19372, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(24, 'Begusarai', 13736, 48.64, 53.76, 90.5, 35411, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(25, 'Munger', 4135, 17.7, 21.98, 80.5, 42805, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(26, 'Sheikhpura', 4212, 7.57, 8.99, 84.2, 17972, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(27, 'Lakhisarai', 4770, 14.56, 16.6, 87.7, 30524, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(28, 'Jamui', 8435, 16.27, 18.37, 88.6, 19289, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(29, 'Khagaria ', 6463, 15.52, 17.2, 90.2, 24014, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(30, 'Bhagalpur', 11878, 70, 68.31, 102.5, 58932, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(31, 'Banka', 9562, 19.5, 22.18, 87.9, 20393, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(32, 'Saharsa ', 9821, 26.52, 33.2, 79.9, 27003, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(33, 'Supaul ', 11977, 22.48, 26.89, 83.6, 18769, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(34, 'Madhepura', 10307, 24.01, 28.9, 83.1, 23295, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(35, 'Purnia', 18105, 47.89, 60.34, 79.4, 26451, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(36, 'Kishanganj', 14604, 21.3, 24.6, 86.6, 14585, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(37, 'Araria', 17379, 28.72, 35.17, 81.7, 16526, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(38, 'Katihar', 17449, 37.53, 43.68, 85.9, 21508, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(39, 'Total', 558797, 1702.14, 2024.75, 84.1, 30461, '2018-09-07 05:53:46', '2018-09-07 05:53:46');
 
 -- --------------------------------------------------------
 
@@ -8843,9 +8943,21 @@ ALTER TABLE `state_domestic_product11s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tax_department1s`
+--
+ALTER TABLE `tax_department1s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tax_department3s`
 --
 ALTER TABLE `tax_department3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tax_department5s`
+--
+ALTER TABLE `tax_department5s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -9477,10 +9589,22 @@ ALTER TABLE `state_domestic_product11s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
 
 --
+-- AUTO_INCREMENT for table `tax_department1s`
+--
+ALTER TABLE `tax_department1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `tax_department3s`
 --
 ALTER TABLE `tax_department3s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+
+--
+-- AUTO_INCREMENT for table `tax_department5s`
+--
+ALTER TABLE `tax_department5s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `tax_gsdp_ratios`
