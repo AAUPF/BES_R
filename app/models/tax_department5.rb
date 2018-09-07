@@ -20,8 +20,8 @@ class TaxDepartment5 < ApplicationRecord
       else
         order("#{rain_fall_type} ")
       end
-    elsif compare == 'Bihar vs District'
-      where('Districts = ? OR Districts = ?', search, 'Bihar').order(:id)
+    elsif compare == 'District vs Total'
+      where('Districts = ? OR Districts = ?', search, 'Total').order(:id)
     else
       if rain_fall_type == 'All'
         where('Districts = ? ', search).order(:id)
@@ -86,7 +86,7 @@ class TaxDepartment5 < ApplicationRecord
     if rain_fall_type == 'All'
       if views
         hash_data = ji.map do |column_name|
-          if compare == 'Bihar vs District'
+          if compare == 'District vs Total'
             dataset = column_name.to_s.tr('_', ' ')
             {
               type: views,
@@ -140,7 +140,7 @@ class TaxDepartment5 < ApplicationRecord
       end
       return title
     else
-      if compare == 'Bihar vs District'
+      if compare == 'District vs Total'
         dataset = rain_fall_type.tr('_', ' ')
 
         hash_data =
