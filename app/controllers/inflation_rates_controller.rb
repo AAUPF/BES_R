@@ -16,11 +16,14 @@ class InflationRatesController < ApplicationController
   end
 
 def test
-  ji = [:State, :Sector, :Oct_16_Index_Final, :Oct_17_Index_Provisional, :Inflation_Rate_in_percentage]
+  ji = [:Oct_16_Index_Final, :Oct_17_Index_Provisional, :Inflation_Rate_in_percentage]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
+
+   ji1 = [:State, :Sector, :Oct_16_Index_Final, :Oct_17_Index_Provisional, :Inflation_Rate_in_percentage]
 
   if rain_fall_type || views
 
@@ -39,7 +42,7 @@ def test
         a = InflationRate.table(b,rain_fall_type,year,ji1,compare)
       else
         @InflationRates = InflationRate.search(params[:search],compare,year,rain_fall_type)
-        a = InflationRate.query(@InflationRates,params[:year],rain_fall_type,views,ji,compare)
+        a = InflationRate.query(@InflationRates,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

@@ -266,6 +266,7 @@ class DemographicProfile2 < ApplicationRecord
           
         else
           if _year == "All"
+
             grouped_data = b.group_by{ |data| data[:Districts]}
             if search == "All"
               hash_data  = grouped_data.map{ |vegetable, values| 
@@ -282,38 +283,74 @@ class DemographicProfile2 < ApplicationRecord
                 }
              }
             else
-              
-              hash_data  = grouped_data.map{ |vegetable, values| 
-                dataset = vegetable.to_s.gsub("_"," ")
-                {
-                  type: views,
-                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  legendText: dataset,
-                  color:color,
-                  name:dataset,
-                  showInLegend: true,
-                  dataPoints: values.map { |value|
-                    { y: value[rain_fall_type], label: value["Year"] }
-                  }
-                }
-             }
+              if views != "column" && views!="line"
+                hash_data =[]
+                grouped_data.map{ |vegetable, values| 
+                 values.map do |value|
+                   hash_data.push(
+                     {
+                       type:views,
+                       legendText:"#{value["Year"]}",
+                       showInLegend: true,
+                       dataPoints: [{ y: value[rain_fall_type], label:  value["Districts"] }]
+                   }
+                   )
+                 end
+                 }
+                else
+                  hash_data  = grouped_data.map{ |vegetable, values| 
+                    dataset = vegetable.to_s.gsub("_"," ")
+                    {
+                      type: views,
+                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                      legendText: dataset,
+                      color:color,
+                      name:dataset,
+                      showInLegend: true,
+                      dataPoints: values.map { |value|
+                        { y: value[rain_fall_type], label: value["Year"] }
+                      }
+                    }
+                 }
+                end 
+         
             end
             
           else
             dataset = rain_fall_type.tr('_', ' ')
             if search == "All"
-              hash_data =
-            [{
-              type: views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-              name:dataset,
-              color: color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
-                { y: el[rain_fall_type], label: el['Districts'] }
-                          end
-            }]
+      
+
+
+            if views != "column" && views!="line"
+       hash_data = 
+       
+       b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
+                    {
+                      type:views,
+                      legendText:"#{el["Districts"]}",
+                      showInLegend: true,
+                      dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
+                  }
+                  end
+              else
+                hash_data =
+                [{
+                  type: views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                  color: color,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
+                    { y: el[rain_fall_type], label: el['Districts'] }
+                              end
+                }]
+    
+    
+    
+              end
+
             else
               hash_data =
             [{
@@ -328,15 +365,9 @@ class DemographicProfile2 < ApplicationRecord
                           end
             }]
             end
-            
-          
           end
-  
-  
-  
-          
         end
-        if views == "stackedBar100" or views == "stackedBar"
+        if views != "column"
           title = {
             animationEnabled: true,
             exportEnabled: true,
@@ -345,7 +376,6 @@ class DemographicProfile2 < ApplicationRecord
                   },
             data: hash_data
         }
-       
         else
           title = {
             animationEnabled: true,
@@ -361,7 +391,6 @@ class DemographicProfile2 < ApplicationRecord
                     },
             data: hash_data
         }
-          
         end
         return title
       end

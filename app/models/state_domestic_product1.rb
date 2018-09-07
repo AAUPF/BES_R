@@ -212,68 +212,47 @@ class StateDomesticProduct1 < ApplicationRecord
   end
 
   def self.query(b, _year, rain_fall_type, views, _ji, compare, search,data,jip)
-
     d = 'Sector'
     color = '#4f81bc'
     if rain_fall_type == 'All' or rain_fall_type == 'None'
       if views
         if search == "All"
           if _year == "All"
+
             # abort("error")
             result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
 
             hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
               {
                 type:views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:col[:Sector],
                 legendText: col[:Sector],
                 showInLegend: true,
                 dataPoints: jip.map do |el|
-                     { y: col[el], label: el.to_s.tr('_', ' ') }
+                     { y: col[el], label: el }
                 end
               }
             end
           else
 
-            grouped_data = b.group_by { |data| data[:Year] }
-            hash_data = grouped_data.map do |vegetable, values|
-              dataset = vegetable.to_s.tr('_', ' ')
-              {
-                type: views,
-                color: color,
-                legendText: _year,
-                showInLegend: true,
-                dataPoints: values.map do |value|
-                              { y: value[_year], label: value[:Sector] }
-                            end
-              }
-            end
-          end
-        else
 
-          if _year == "All"  
-     
             result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-            # jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
+            if views != "column" && views!= "line"
+
             hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
               {
                 type:views,
+                toolTipContent: "{label}<br/>{name}: <strong>{y}</strong>",
+                name:col[:Sector],
                 legendText: col[:Sector],
                 showInLegend: true,
-                dataPoints: jip.map do |el|
-
-                  if el.to_s == "2011-16"
-                    years = "CAGR(2011-16)"
-                  else
-                    years = el
-                  end
-                     { y: col[el], label: years.to_s.tr('_', ' ') }
-                end
+                dataPoints: [{ y: col[_year], label: _year }]
               }
             end
-          else
-
-            result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-            hash_data = [{
+              
+            else
+                  hash_data = [{
               type: views,
               color: color,
               legendText: search,
@@ -282,6 +261,94 @@ class StateDomesticProduct1 < ApplicationRecord
                             { y: hash[_year], label: hash[:Sector] }
                           end
             }]
+              
+            end
+
+            # grouped_data = b.group_by { |data| data[:Year] }
+            # hash_data = grouped_data.map do |vegetable, values|
+            #   dataset = vegetable.to_s.tr('_', ' ')
+            #   {
+            #     type: views,
+            #     color: color,
+            #     legendText: _year,
+            #     showInLegend: true,
+            #     dataPoints: values.map do |value|
+            #                   { y: value[_year], label: value[:Sector] }
+            #                 end
+            #   }
+            # end
+          end
+        else
+
+          if _year == "All"  
+
+
+            result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
+            # jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
+                if rain_fall_type == "None"
+                  hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
+                    {
+                      type:views,
+                      legendText: col[:Sector],
+                      color: color,
+                      showInLegend: true,
+                      dataPoints: jip.map do |el|
+
+                        if el.to_s == "2011-16"
+                          years = "CAGR(2011-16)"
+                        else
+                          years = el
+                        end
+                          { y: col[el], label: years }
+                      end
+                    }
+                  end
+                  
+                else
+
+                  hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
+                    {
+                      type:views,
+                      legendText: col[:Sector],
+                      showInLegend: true,
+                      dataPoints: jip.map do |el|
+
+                        if el.to_s == "2011-16"
+                          years = "CAGR(2011-16)"
+                        else
+                          years = el
+                        end
+                          { y: col[el], label: years }
+                      end
+                    }
+                  end
+                  
+                end
+          else
+             result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
+            if views != "column"
+            hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
+              {
+                type:views,
+                legendText: col[:Sector],
+                showInLegend: true,
+                dataPoints: [{ y: col[_year], label: _year }]
+              }
+            end
+              
+            else
+                  hash_data = [{
+              type: views,
+              color: color,
+              legendText: search,
+              showInLegend: true,
+              dataPoints: result.map do |hash|
+                            { y: hash[_year], label: hash[:Sector] }
+                          end
+            }]
+              
+            end
+
           end
         
         end
@@ -292,10 +359,12 @@ class StateDomesticProduct1 < ApplicationRecord
 
       else
 
-        if rain_fall_type == "None"
+        if rain_fall_type == "None" or rain_fall_type == "All"
           new_type = search
 
         else
+          
+
           new_type = rain_fall_type
 
         end
@@ -310,7 +379,18 @@ class StateDomesticProduct1 < ApplicationRecord
                   },
                   data: hash_data
                 }
+             elsif _year != "All"
 
+
+              {
+                animationEnabled: true,
+                exportEnabled: true,
+                title: {
+                  text: new_type.to_s.tr('_', ' ').to_s
+                },
+             
+                data: hash_data
+              }
               else
                 {
                   animationEnabled: true,
@@ -362,40 +442,50 @@ class StateDomesticProduct1 < ApplicationRecord
 
       else
         if _year == 'All'
-
-          u = []
-          hash_data = [
+          if views != "column" && views!="line"
+            hash_data = []
+            b.each do |col|
+             jip.each  do |el|
+              if el.to_s == "2011-16"
+                years = "CAGR(2011-16)"
+              else
+                years = el
+              end
+              hash_data.push(
                 {
-                type:views,
-                color: color,
-                legendText: rain_fall_type,
-                showInLegend: true,
-                dataPoints: u
-              }
-          ]
-    
-            # puts b.each {|key, value| puts "#{key} is #{value}" }
-          b.each do |col|
-           jip.each  do |el|
-            if el.to_s == "2011-16"
-              years = "CAGR(2011-16)"
-            else
-              years = el
+                  type:views,
+                  legendText: rain_fall_type,
+                  showInLegend: true,
+                  dataPoints: [{ y: col[el], label: years }]
+                }
+                
+                
+                )
+             end
             end
-             u.push({ y: col[el], label: years.to_s.tr('_', ' ') })
-           end
-          end
-        #  jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
-        #     hash_data = jip.map do |col|
-        #       {
-        #         type:views,
-        #         legendText: col,
-        #         showInLegend: true,
-        #         dataPoints: b.map do |el|
-        #              { y: el[col], label: rain_fall_type }
-        #         end
-        #       }
-        #     end
+              
+            else
+              u = []
+              hash_data = [
+                    {
+                    type:views,
+                    color: color,
+                    legendText: rain_fall_type,
+                    showInLegend: true,
+                    dataPoints: u
+                  }
+              ]
+              b.each do |col|
+               jip.each  do |el|
+                if el.to_s == "2011-16"
+                  years = "CAGR(2011-16)"
+                else
+                  years = el
+                end
+                 u.push({ y: col[el], label: years })
+               end
+              end
+            end
         else
           dataset = rain_fall_type.tr('_', ' ')
           hash_data =
@@ -440,7 +530,7 @@ class StateDomesticProduct1 < ApplicationRecord
       return title
     end
   end
-
+ 
   def self.map1(b, rain_fall_type, _views, _ji, _unit1, ranges)
     array = []
     # a = []

@@ -16,27 +16,27 @@ class InflationRate < ApplicationRecord
   def self.search(search, compare, year, rain_fall_type)
     if search == 'All'
       if rain_fall_type == 'All'
-        order('id ')
+        where(Sector: year).order('id ')
       else
         if year == 'All'
-          all.order('id')
+          where(Sector: year).order('id')
         else
-          order("#{rain_fall_type} ")
+          where(Sector: year).order("#{rain_fall_type} ")
         end
         # where(Year: year).order("#{rain_fall_type} ")
       end
     elsif compare != 'None'
       if year == 'All'
-        where('State = ? OR State = ?', search, compare).order(:id)
+        where('State = ? OR State = ?', search, compare).where(Sector: year).order(:id)
       else
-        where('State = ? OR State = ?', search, compare).order(:id)
+        where('State = ? OR State = ?', search, compare).where(Sector: year).order(:id)
       end
     else
       if rain_fall_type == 'All'
-        where('State = ? ', search).order(:id)
+        where('State = ? ', search).where(Sector: year).order(:id)
       else
         if year == 'All'
-          where('State = ? ', search).order('id')
+          where('State = ? ', search).where(Sector: year).order('id')
         else
           # select("#{rain_fall_type}, #{year}, State").where('State = ? ', search).order(rain_fall_type)
           where('State = ? ', search).order(rain_fall_type)

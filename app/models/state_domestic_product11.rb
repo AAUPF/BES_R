@@ -213,9 +213,12 @@ class StateDomesticProduct11 < ApplicationRecord
             }
          }
         else
+
           if _year == "All"
             grouped_data = b.group_by{ |data| data[:Districts]}
             if search == "All"
+
+
               hash_data  = grouped_data.map{ |vegetable, values| 
                 dataset = vegetable.to_s.gsub("_"," ")
                 {
@@ -230,13 +233,32 @@ class StateDomesticProduct11 < ApplicationRecord
                 }
              }
             else
-              hash_data  = grouped_data.map{ |vegetable, values| 
+
+
+
+
+              if views != "column" && views!="line"
+                dataset = rain_fall_type.tr('_', ' ')
+                hash_data =  b.map do |el|
+                  {
+                    type:views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:"#{el["Year"]}",
+                    legendText:"#{el["Year"]}",
+                    showInLegend: true,
+                    dataPoints: [{ y: el[rain_fall_type], label:  el["Districts"] }]
+                }
+    
+                end
+            
+                  else
+                      hash_data  = grouped_data.map{ |vegetable, values| 
                 dataset = vegetable.to_s.gsub("_"," ")
                 {
                   type: views,
-                  color:color,
                   toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
                   legendText: dataset,
+                  color: color,
                   name:dataset,
                   showInLegend: true,
                   dataPoints: values.reject { |x| x['Districts'] == 'Bihar' }.map { |value|
@@ -244,13 +266,54 @@ class StateDomesticProduct11 < ApplicationRecord
                   }
                 }
              }
+                  end
+    
+    
+    
+    
+    
+                  
+
+            #   hash_data  = grouped_data.map{ |vegetable, values| 
+            #     dataset = vegetable.to_s.gsub("_"," ")
+            #     {
+            #       type: views,
+            #       color:color,
+            #       toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+            #       legendText: dataset,
+            #       name:dataset,
+            #       showInLegend: true,
+            #       dataPoints: values.reject { |x| x['Districts'] == 'Bihar' }.map { |value|
+            #         { y: value[rain_fall_type], label: value["Year"] }
+            #       }
+            #     }
+            #  }
             end
             
           else
-            dataset = rain_fall_type.tr('_', ' ')
+
+
+            if views != "column" && views!="line"
+              dataset = rain_fall_type.tr('_', ' ')
+              hash_data =  b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
+                {
+                  type:views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:"#{el["Districts"]}",
+                  legendText:"#{el["Districts"]}",
+                  showInLegend: true,
+                  dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
+              }
+  
+              end
+          
+                else
+                    dataset = rain_fall_type.tr('_', ' ')
           hash_data =
             [{
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               color: color,
               legendText: dataset,
               showInLegend: true,
@@ -265,13 +328,40 @@ class StateDomesticProduct11 < ApplicationRecord
                             end
                           end
             }]
-          end
+                end
+  
+  
+  
+  
+  
+                
+            
+
+          #   dataset = rain_fall_type.tr('_', ' ')
+          # hash_data =
+          #   [{
+          #     type: views,
+          #     color: color,
+          #     legendText: dataset,
+          #     showInLegend: true,
+          #     dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
+          #                   if rain_fall_type == 'Productivity'
+          #                     du = el[rain_fall_type] / 100
+  
+          #                     { y: du, label: el['Districts'] }
+  
+          #                   else
+          #                     { y: el[rain_fall_type], label: el['Districts'] }
+          #                   end
+          #                 end
+          #   }]
+           end
   
   
   
           
         end
-        if views == "stackedBar100" or views == "stackedBar"
+        if views != "column"
           title = {
             animationEnabled: true,
             exportEnabled: true,

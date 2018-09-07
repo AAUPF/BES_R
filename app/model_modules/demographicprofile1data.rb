@@ -275,11 +275,6 @@ module Demographicprofile1data
                                   )
                               
                                 end
-                                  
-                          
-
-                         
-
                           }
                               
                             else
@@ -330,7 +325,6 @@ module Demographicprofile1data
                           { y: el[rain_fall_type], label: el['Demographic_Indicator'] }
                                   end
                       }]
-                      
                     end           
 
          

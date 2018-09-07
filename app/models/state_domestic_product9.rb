@@ -256,27 +256,64 @@ class StateDomesticProduct9 < ApplicationRecord
                 }
              }
             else
-              hash_data  = grouped_data.map{ |vegetable, values| 
-                dataset = vegetable.to_s.gsub("_"," ")
-                {
-                  type: views,
-                  color:color,
-                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  legendText: dataset,
-                  name:dataset,
-                  showInLegend: true,
-                  dataPoints: values.reject { |x| x['Districts'] == 'Bihar' }.map { |value|
-                    { y: value[rain_fall_type], label: value["Year"] }
-                  }
-                }
-             }
+
+
+              if views != "column" && views!="line"
+                hash_data =[]
+                grouped_data.map{ |vegetable, values| 
+                 values.map do |value|
+                   hash_data.push(
+                     {
+                       type:views,
+                       legendText:"#{value["Year"]}",
+                       showInLegend: true,
+                       dataPoints: [{ y: value[rain_fall_type], label:  value["Districts"] }]
+                   }
+                   )
+                 end
+                 }
+                else
+                  hash_data  = grouped_data.map{ |vegetable, values| 
+                    dataset = vegetable.to_s.gsub("_"," ")
+                    {
+                      type: views,
+                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                      legendText: dataset,
+                      color:color,
+                      name:dataset,
+                      showInLegend: true,
+                      dataPoints: values.map { |value|
+                        { y: value[rain_fall_type], label: value["Year"] }
+                      }
+                    }
+                 }
+                end 
+
+           
             end
             
           else
+            if views != "column" && views!="line"
             dataset = rain_fall_type.tr('_', ' ')
+            hash_data =  b.map do |el|
+              {
+                type:views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:"#{el["Districts"]}",
+                legendText:"#{el["Districts"]}",
+                showInLegend: true,
+                dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
+            }
+
+            end
+        
+              else
+                dataset = rain_fall_type.tr('_', ' ')
           hash_data =
             [{
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
               color: color,
               legendText: dataset,
               showInLegend: true,
@@ -291,13 +328,10 @@ class StateDomesticProduct9 < ApplicationRecord
                             end
                           end
             }]
+              end 
           end
-  
-  
-  
-          
         end
-        if views == "stackedBar100" or views == "stackedBar"
+        if views != "column"
           title = {
             animationEnabled: true,
             exportEnabled: true,
