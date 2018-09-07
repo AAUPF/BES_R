@@ -151,7 +151,7 @@ class StateDomesticProduct4 < ApplicationRecord
 
 
   def self.query(b, _year, rain_fall_type, views, ji, compare,search)
-    d = 'Districts'
+    d = 'Reference'
     color  = "#4f81bc"
      rain_fall_type = search
     if rain_fall_type == 'All'
@@ -175,6 +175,7 @@ class StateDomesticProduct4 < ApplicationRecord
           end
             
           else
+            # abort("error")
             hash_data = ji.map do |column_name|
               dataset = column_name.to_s.tr('_', ' ')
               {
@@ -216,12 +217,12 @@ class StateDomesticProduct4 < ApplicationRecord
           title:{
             text: dub
                 },
-                axisX: {
-                  interval:1,
-                  labelMaxWidth: 180,
-                  labelAngle: 90,
-                  labelFontFamily:"verdana0"
-                  },
+                # axisX: {
+                #   interval:1,
+                #   labelMaxWidth: 180,
+                #   labelAngle: 90,
+                #   labelFontFamily:"verdana0"
+                #   },
           data: hash_data
       }
       end
