@@ -1,2 +1,2 @@
-json.extract! inflation_rate, :id, :State, :Rural_Oct_16_Index_Final, :Rural_Oct_17_Index_Provisional, :Rural_Inflation_Rate_in_percentage, :Urban_Oct_16_Index_Final, :Urban_Oct_17_Index_Provisional, :Urban_Inflation_Rate_in_percentage, :Combined_Oct_16_Index_Final, :Combined_Oct_17_Index_Provisional, :Combined_Inflation_Rate_in_percentage, :created_at, :updated_at
+json.extract! inflation_rate, :id, :State, :Sector, :Oct_16_Index_Final, :Oct_17_Index_Provisional, :Inflation_Rate_in_percentage, :created_at, :updated_at
 json.url inflation_rate_url(inflation_rate, format: :json)

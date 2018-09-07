@@ -6,15 +6,10 @@
   <thead>
     <tr>
       <th>State</th>
-      <th>Rural oct 16 index final</th>
-      <th>Rural oct 17 index provisional</th>
-      <th>Rural inflation rate in percentage</th>
-      <th>Urban oct 16 index final</th>
-      <th>Urban oct 17 index provisional</th>
-      <th>Urban inflation rate in percentage</th>
-      <th>Combined oct 16 index final</th>
-      <th>Combined oct 17 index provisional</th>
-      <th>Combined inflation rate in percentage</th>
+      <th>Sector</th>
+      <th>Oct 16 index final</th>
+      <th>Oct 17 index provisional</th>
+      <th>Inflation rate in percentage</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,15 +18,10 @@
     <% @inflation_rates.each do |inflation_rate| %>
       <tr>
         <td><%= inflation_rate.State %></td>
-        <td><%= inflation_rate.Rural_Oct_16_Index_Final %></td>
-        <td><%= inflation_rate.Rural_Oct_17_Index_Provisional %></td>
-        <td><%= inflation_rate.Rural_Inflation_Rate_in_percentage %></td>
-        <td><%= inflation_rate.Urban_Oct_16_Index_Final %></td>
-        <td><%= inflation_rate.Urban_Oct_17_Index_Provisional %></td>
-        <td><%= inflation_rate.Urban_Inflation_Rate_in_percentage %></td>
-        <td><%= inflation_rate.Combined_Oct_16_Index_Final %></td>
-        <td><%= inflation_rate.Combined_Oct_17_Index_Provisional %></td>
-        <td><%= inflation_rate.Combined_Inflation_Rate_in_percentage %></td>
+        <td><%= inflation_rate.Sector %></td>
+        <td><%= inflation_rate.Oct_16_Index_Final %></td>
+        <td><%= inflation_rate.Oct_17_Index_Provisional %></td>
+        <td><%= inflation_rate.Inflation_Rate_in_percentage %></td>
        
       </tr>
     <% end %>

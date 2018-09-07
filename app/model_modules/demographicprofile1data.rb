@@ -244,6 +244,8 @@ module Demographicprofile1data
                         }
                         }
                     else
+
+
                         if compare != "None"
                             hash_data = grouped_data.map{ |vegetable, values| 
                                 dataset = vegetable.to_s.gsub("_"," ")
@@ -259,7 +261,30 @@ module Demographicprofile1data
                                 }
                                 }
                         else
-                            hash_data = grouped_data.map{ |vegetable, values| 
+                          if views != "column"
+                            hash_data =[]
+                               grouped_data.map{ |vegetable, values| 
+                                values.map do |value|
+                                  hash_data.push(
+                                    {
+                                      type:views,
+                                      legendText:"#{value["Year"]}",
+                                      showInLegend: true,
+                                      dataPoints: [{ y: value[rain_fall_type], label:  value["Demographic_Indicator"] }]
+                                  }
+                                  )
+                              
+                                end
+                                  
+                          
+
+                         
+
+                          }
+                              
+                            else
+                          
+                              hash_data = grouped_data.map{ |vegetable, values| 
                                 dataset = vegetable.to_s.gsub("_"," ")
                                 {
                                 type: views,
@@ -274,23 +299,41 @@ module Demographicprofile1data
                                 }
                                 }
                         end
+                      end
+
                     
                 end
             else
                 if search == "All"
-                dataset = rain_fall_type.tr('_', ' ')
-                hash_data =
-                [{
-                type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:dataset,
-                color: color,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: b.reject { |x| x['Demographic_Indicator'] == 'No. of Villages' }.map do |el|
-                    { y: el[rain_fall_type], label: el['Demographic_Indicator'] }
-                            end
-                }]
+                  
+                  if views != "column"
+                    hash_data = b.reject { |x| x['Demographic_Indicator'] == 'No. of Villages' }.map do |col|
+                      {
+                        type:views,
+                        legendText: col[:Demographic_Indicator],
+                        showInLegend: true,
+                        dataPoints: [{ y: col[rain_fall_type], label: col[:Year] }]
+                      }
+                    end
+                      
+                    else
+                      dataset = rain_fall_type.tr('_', ' ')
+                      hash_data =
+                      [{
+                      type: views,
+                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                      name:dataset,
+                      color: color,
+                      legendText: dataset,
+                      showInLegend: true,
+                      dataPoints: b.reject { |x| x['Demographic_Indicator'] == 'No. of Villages' }.map do |el|
+                          { y: el[rain_fall_type], label: el['Demographic_Indicator'] }
+                                  end
+                      }]
+                      
+                    end           
+
+         
                 else
                 dataset = rain_fall_type.tr('_', ' ')
                 hash_data =

@@ -14,16 +14,11 @@ class InflationRatesTest < ApplicationSystemTestCase
     visit inflation_rates_url
     click_on "New Inflation Rate"
 
-    fill_in "Combined Inflation Rate In Percentage", with: @inflation_rate.Combined_Inflation_Rate_in_percentage
-    fill_in "Combined Oct 16 Index Final", with: @inflation_rate.Combined_Oct_16_Index_Final
-    fill_in "Combined Oct 17 Index Provisional", with: @inflation_rate.Combined_Oct_17_Index_Provisional
-    fill_in "Rural Inflation Rate In Percentage", with: @inflation_rate.Rural_Inflation_Rate_in_percentage
-    fill_in "Rural Oct 16 Index Final", with: @inflation_rate.Rural_Oct_16_Index_Final
-    fill_in "Rural Oct 17 Index Provisional", with: @inflation_rate.Rural_Oct_17_Index_Provisional
+    fill_in "Inflation Rate In Percentage", with: @inflation_rate.Inflation_Rate_in_percentage
+    fill_in "Oct 16 Index Final", with: @inflation_rate.Oct_16_Index_Final
+    fill_in "Oct 17 Index Provisional", with: @inflation_rate.Oct_17_Index_Provisional
+    fill_in "Sector", with: @inflation_rate.Sector
     fill_in "State", with: @inflation_rate.State
-    fill_in "Urban Inflation Rate In Percentage", with: @inflation_rate.Urban_Inflation_Rate_in_percentage
-    fill_in "Urban Oct 16 Index Final", with: @inflation_rate.Urban_Oct_16_Index_Final
-    fill_in "Urban Oct 17 Index Provisional", with: @inflation_rate.Urban_Oct_17_Index_Provisional
     click_on "Create Inflation rate"
 
     assert_text "Inflation rate was successfully created"
@@ -34,16 +29,11 @@ class InflationRatesTest < ApplicationSystemTestCase
     visit inflation_rates_url
     click_on "Edit", match: :first
 
-    fill_in "Combined Inflation Rate In Percentage", with: @inflation_rate.Combined_Inflation_Rate_in_percentage
-    fill_in "Combined Oct 16 Index Final", with: @inflation_rate.Combined_Oct_16_Index_Final
-    fill_in "Combined Oct 17 Index Provisional", with: @inflation_rate.Combined_Oct_17_Index_Provisional
-    fill_in "Rural Inflation Rate In Percentage", with: @inflation_rate.Rural_Inflation_Rate_in_percentage
-    fill_in "Rural Oct 16 Index Final", with: @inflation_rate.Rural_Oct_16_Index_Final
-    fill_in "Rural Oct 17 Index Provisional", with: @inflation_rate.Rural_Oct_17_Index_Provisional
+    fill_in "Inflation Rate In Percentage", with: @inflation_rate.Inflation_Rate_in_percentage
+    fill_in "Oct 16 Index Final", with: @inflation_rate.Oct_16_Index_Final
+    fill_in "Oct 17 Index Provisional", with: @inflation_rate.Oct_17_Index_Provisional
+    fill_in "Sector", with: @inflation_rate.Sector
     fill_in "State", with: @inflation_rate.State
-    fill_in "Urban Inflation Rate In Percentage", with: @inflation_rate.Urban_Inflation_Rate_in_percentage
-    fill_in "Urban Oct 16 Index Final", with: @inflation_rate.Urban_Oct_16_Index_Final
-    fill_in "Urban Oct 17 Index Provisional", with: @inflation_rate.Urban_Oct_17_Index_Provisional
     click_on "Update Inflation rate"
 
     assert_text "Inflation rate was successfully updated"
