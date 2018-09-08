@@ -259,7 +259,25 @@ class StateDomesticProduct4 < ApplicationRecord
               }
            }
            else
-            hash_data  = grouped_data.map{ |vegetable, values| 
+
+
+
+            if views != "column" && views!="line"
+              dataset = rain_fall_type.tr('_', ' ')
+              hash_data =  b.map do |el|
+                {
+                  type:views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:"#{el["Year"]}",
+                  legendText:"#{el["Year"]}",
+                  showInLegend: true,
+                  dataPoints: [{ y: el[rain_fall_type], label:  dataset }]
+              }
+  
+              end
+          
+                else
+                    hash_data  = grouped_data.map{ |vegetable, values| 
               dataset = vegetable.to_s.gsub("_"," ")
               {
                 type: views,
@@ -273,6 +291,8 @@ class StateDomesticProduct4 < ApplicationRecord
                 }
               }
            }
+                end
+        
            end
         else
         dataset = search.tr('_', ' ')
