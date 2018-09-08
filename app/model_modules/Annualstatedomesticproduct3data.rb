@@ -272,13 +272,39 @@ module Annualstatedomesticproduct3data
           end
         else
 
-          if _year == "All"  
-
-
+          if _year == "All" 
             result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
             # jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
                 if rain_fall_type == "None"
-                  hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
+
+
+                  # result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
+                  if views != "column" && views!= "line"
+                    hash_data = []
+                   result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
+                   jip.map do |el|
+                        
+                   hash_data.push(
+
+
+                    {
+                      type:views,
+                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                      name:"#{el["Districts"]}",
+                      legendText:"#{el["Districts"]}",
+                      showInLegend: true,
+                      dataPoints: [{ y: col[el], label:  el }]
+                  }
+                      
+                   )   
+                
+                
+                    end
+                   
+                  end
+                    
+                  else
+                     hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
                     {
                       type:views,
                       legendText: col[:Sector],
@@ -295,6 +321,9 @@ module Annualstatedomesticproduct3data
                       end
                     }
                   end
+                    
+                  end
+            
                   
                 else
 
@@ -404,7 +433,6 @@ module Annualstatedomesticproduct3data
     else
       if compare == 'Bihar vs Sector'
         if _year == 'All'
-
           grouped_data = b.group_by { |data| data[:Year] }
           hash_data = grouped_data.map do |vegetable, values|
             dataset = vegetable.to_s.tr('_', ' ')
@@ -446,16 +474,15 @@ module Annualstatedomesticproduct3data
               hash_data.push(
                 {
                   type:views,
-                  legendText: rain_fall_type,
+                  legendText: el,
                   showInLegend: true,
-                  dataPoints: [{ y: col[el], label: years }]
+                  dataPoints: [{ y: col[el], label: rain_fall_type }]
                 }
                 
                 
                 )
              end
             end
-              
             else
               u = []
               hash_data = [

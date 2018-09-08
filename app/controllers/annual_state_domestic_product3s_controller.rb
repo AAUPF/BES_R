@@ -36,7 +36,7 @@ def test
         if rain_fall_type == "Agriculture, Forestry and Fishing"
 
           if compare == "None"
-            search = "None"
+            # #search = "None"
             rain_fall_type
           elsif compare == "All"
             rain_fall_type = compare
@@ -47,7 +47,7 @@ def test
               "Fishing and Aquaculture",
             ]
           else
-            search = "None"
+            # #search = "None"
             rain_fall_type = compare
           end
 
@@ -90,7 +90,7 @@ def test
     if rain_fall_type == "Trade and Hospitality"
 
       if compare == "None"
-        search = "None"
+        # #search = "None"
 
         rain_fall_type
       elsif compare == "All"
@@ -101,7 +101,7 @@ def test
         ]
 
       else
-        search = "None"
+        #search = "None"
         rain_fall_type = compare
         data = [
           "Trade and Repair Services",
@@ -152,7 +152,7 @@ def test
   elsif search == 'All'
     if rain_fall_type == "Agriculture, Forestry and Fishing"
       if compare == "None"
-        search = "None"
+        #search = "None"
 
         rain_fall_type
       elsif compare == "All"
@@ -174,7 +174,7 @@ def test
           ]
 
       else
-        search = "None"
+        #search = "None"
         rain_fall_type = compare
         data = [
           "Agriculture, Forestry and Fishing",
@@ -195,7 +195,7 @@ def test
     elsif rain_fall_type == "Trade and Hospitality"
 
       if compare == "None"
-        search = "None"
+        #search = "None"
 
         rain_fall_type
       elsif compare == "All"
@@ -207,7 +207,7 @@ def test
 
 
       else
-        search = "None"
+        #search = "None"
         rain_fall_type = compare
         data = [
           "Trade and Repair Services",
