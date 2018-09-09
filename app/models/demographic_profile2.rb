@@ -313,7 +313,6 @@ class DemographicProfile2 < ApplicationRecord
                     }
                  }
                 end 
-         
             end
             
           else

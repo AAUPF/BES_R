@@ -27,84 +27,324 @@ def test
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
+   price = params[:price]
+
 
    ji1 = [:Sector, :'2015-16', :'2016-17', :'2011-12_to_2015-16', :Reference]
 
    jip = [:'2015-16', :'2016-17', :'2011-12_to_2015-16']
 
+
+
    if search == 'Total Primary Sector'
+    if rain_fall_type == "Agriculture, Forestry and Fishing"
+
+      if compare == "None"
+        # #search = "None"
+        rain_fall_type
+      elsif compare == "All"
+        rain_fall_type = compare
+        data = [
+          "Crops",
+          "Livestock",
+          "Forestry and Logging",
+          "Fishing and Aquaculture",
+        ]
+      else
+        # #search = "None"
+        rain_fall_type = compare
+      end
+
+    elsif rain_fall_type == "None"
+      rain_fall_type
+
+      data = [
+        "Total Primary Sector",
+      ]
+
+    else
+      data = [
+        "Agriculture, Forestry and Fishing",
+        "Mining and Quarrying",
+      ]
+    end
+
+elsif search == 'Total Secondary Sector'
+
+
+if rain_fall_type == "None"
+  rain_fall_type
+
+  data = [
+    "Total Secondary Sector",
+  ]
+  
+else
+  data = [
+    "Manufacturing",
+    "Electricity and Utilitiy Services",
+    "Construction",
+   
+  ]
+  
+end
+
+
+elsif search == 'Total Tertiary Sector'
+if rain_fall_type == "Trade and Hospitality"
+
+  if compare == "None"
+    # #search = "None"
+
+    rain_fall_type
+  elsif compare == "All"
+    rain_fall_type = compare
     data = [
-      "Agriculture, Forestry and Fishing",
+      "Trade and Repair Services",
+      "Hotels and Restaurants",
+    ]
+
+  else
+    #search = "None"
+    rain_fall_type = compare
+    data = [
+      "Trade and Repair Services",
+      "Hotels and Restaurants",
+    ]
+
+  end
+
+elsif rain_fall_type == "Transport and Communication"
+
+  if compare == "None"
+    rain_fall_type
+  elsif compare == "All"
+    rain_fall_type = compare
+    data = [
+      "Railways",
+      "Road Transport",
+      "Water Transport",
+      "Air Transport",
+      "Services incidental to transport",
+      "Storage",
+      "Communication and Broadcasting",
+    ]
+
+  else
+    rain_fall_type = compare
+  end
+
+elsif rain_fall_type == "None"
+  rain_fall_type
+
+  data = [
+    "Total Tertiary Sector",
+  ]
+
+else
+  data = [
+    "Trade and Hospitality",
+    "Transport and Communication",
+    "Financial Services",
+    "Real Estate Services",
+    "Public Administration",
+    "Other Services",
+  ]
+end
+
+
+elsif search == 'All'
+if rain_fall_type == "Agriculture, Forestry and Fishing"
+  if compare == "None"
+    #search = "None"
+
+    rain_fall_type
+  elsif compare == "All"
+    rain_fall_type = compare
+    data = [
       "Crops",
       "Livestock",
       "Forestry and Logging",
       "Fishing and Aquaculture",
-      "Mining and Quarrying",
-      "Total Primary Sector",
     ]
-  elsif search == 'Total Secondary Sector'
 
-    data = [
-      "Manufacturing",
-      "Electricity, gas, water supply and other utility services",
-      "Construction",
-      "Total Secondary Sector",
-    ]
-  elsif search == 'Total Tertiary Sector'
+    elsif rain_fall_type == "None"
+      rain_fall_type
 
-    data = [
-      "Trade, repair, hotels and restaurants",
-      "Trade and repair services",
-      "Hotels and restaurants",
-      "Transport, storage, communication and services related to broadcasting",
-      "Railways",
-      "Road transport",
-      "Water transport",
-      "Air transport",
-      "Services incidental to transport",
-      "Storage",
-      "Communication and services related to broadcasting",
-      "Financial services",
-      "Real estate, ownership of dwelling and professional services",
-      "Public administration",
-      "Other services",
-      "Total Tertiary Sector",
-    ]
-  elsif search == 'All'
+      data = [
+        "Total Tertiary Sector",
+        "Total Secondary Sector",
+        "Total Primary Sector"
+      ]
+
+  else
+    #search = "None"
+    rain_fall_type = compare
     data = [
       "Agriculture, Forestry and Fishing",
-      "Crops",
-      "Livestock",
-      "Forestry and Logging",
-      "Fishing and Aquaculture",
       "Mining and Quarrying",
-      "Total Primary Sector",
       "Manufacturing",
-      "Electricity, gas, water supply and other utility services",
+      "Electricity and Utilitiy Services",
       "Construction",
-      "Total Secondary Sector",
-      "Trade, repair, hotels and restaurants",
-      "Trade and repair services",
-      "Hotels and restaurants",
-      "Transport, storage, communication and services related to broadcasting",
-      "Railways",
-      "Road transport",
-      "Water transport",
-      "Air transport",
-      "Services incidental to transport",
-      "Storage",
-      "Communication and services related to broadcasting",
-      "Financial services",
-      "Real estate, ownership of dwelling and professional services",
-      "Public administration",
-      "Other services",
-      "Total Tertiary Sector",
-      "Total Gross State Value Added at basic prices",
-      "Taxes on Products",
-      "Subsidies on products",
-      "Gross State Domestic Product",
+      "Trade and Hospitality",
+      "Transport and Communication",
+      "Financial Services",
+      "Real Estate Services",
+      "Public Administration",
+      "Other Services",
+      "Tertiary",
+      "Total GSVA at basic prices",
     ]
   end
+elsif rain_fall_type == "Trade and Hospitality"
+
+  if compare == "None"
+    #search = "None"
+
+    rain_fall_type
+  elsif compare == "All"
+    rain_fall_type = compare
+    data = [
+      "Trade and Repair Services",
+      "Hotels and Restaurants",
+    ]
+
+
+  else
+    #search = "None"
+    rain_fall_type = compare
+    data = [
+      "Trade and Repair Services",
+      "Hotels and Restaurants",
+    ]
+
+  end
+
+elsif rain_fall_type == "Transport and Communication"
+
+  if compare == "None"
+    rain_fall_type
+  elsif compare == "All"
+    rain_fall_type = compare
+    data = [
+      "Railways",
+      "Road Transport",
+      "Water Transport",
+      "Air Transport",
+      "Services incidental to transport",
+      "Storage",
+      "Communication and Broadcasting",
+    ]
+
+  else
+    rain_fall_type = compare
+  end
+
+
+elsif  rain_fall_type == "None"
+  rain_fall_type
+
+  data = [
+    "Total Tertiary Sector",
+    "Total Secondary Sector",
+    "Total Primary Sector"
+  ]
+
+
+else
+  data = [
+    "Agriculture, Forestry and Fishing",
+    "Mining and Quarrying",
+    "Manufacturing",
+    "Electricity and Utilitiy Services",
+    "Construction",
+    "Trade and Hospitality",
+    "Transport and Communication",
+    "Financial Services",
+    "Real Estate Services",
+    "Public Administration",
+    "Other Services",
+    "Total Gross State Value Added at basic prices",
+    "Taxes on Products",
+    "Subsidies on products",
+    "Gross State Domestic Product",
+  ]
+end
+end
+
+  #  if search == 'Total Primary Sector'
+  #   data = [
+  #     "Agriculture, Forestry and Fishing",
+  #     "Crops",
+  #     "Livestock",
+  #     "Forestry and Logging",
+  #     "Fishing and Aquaculture",
+  #     "Mining and Quarrying",
+  #     "Total Primary Sector",
+  #   ]
+  # elsif search == 'Total Secondary Sector'
+
+  #   data = [
+  #     "Manufacturing",
+  #     "Electricity, gas, water supply and other utility services",
+  #     "Construction",
+  #     "Total Secondary Sector",
+  #   ]
+  # elsif search == 'Total Tertiary Sector'
+
+  #   data = [
+  #     "Trade, repair, hotels and restaurants",
+  #     "Trade and repair services",
+  #     "Hotels and restaurants",
+  #     "Transport, storage, communication and services related to broadcasting",
+  #     "Railways",
+  #     "Road transport",
+  #     "Water transport",
+  #     "Air transport",
+  #     "Services incidental to transport",
+  #     "Storage",
+  #     "Communication and services related to broadcasting",
+  #     "Financial services",
+  #     "Real estate, ownership of dwelling and professional services",
+  #     "Public administration",
+  #     "Other services",
+  #     "Total Tertiary Sector",
+  #   ]
+  # elsif search == 'All'
+  #   data = [
+  #     "Agriculture, Forestry and Fishing",
+  #     "Crops",
+  #     "Livestock",
+  #     "Forestry and Logging",
+  #     "Fishing and Aquaculture",
+  #     "Mining and Quarrying",
+  #     "Total Primary Sector",
+  #     "Manufacturing",
+  #     "Electricity, gas, water supply and other utility services",
+  #     "Construction",
+  #     "Total Secondary Sector",
+  #     "Trade, repair, hotels and restaurants",
+  #     "Trade and repair services",
+  #     "Hotels and restaurants",
+  #     "Transport, storage, communication and services related to broadcasting",
+  #     "Railways",
+  #     "Road transport",
+  #     "Water transport",
+  #     "Air transport",
+  #     "Services incidental to transport",
+  #     "Storage",
+  #     "Communication and services related to broadcasting",
+  #     "Financial services",
+  #     "Real estate, ownership of dwelling and professional services",
+  #     "Public administration",
+  #     "Other services",
+  #     "Total Tertiary Sector",
+  #     "Total Gross State Value Added at basic prices",
+  #     "Taxes on Products",
+  #     "Subsidies on products",
+  #     "Gross State Domestic Product",
+  #   ]
+  # end
 
   if rain_fall_type || views
 
@@ -119,10 +359,10 @@ def test
           a = StateDomesticProduct1.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = StateDomesticProduct1.search(params[:search],compare,year,rain_fall_type)
+        b = StateDomesticProduct1.search(params[:search],compare,year,rain_fall_type,price)
         a = StateDomesticProduct1.table(b,rain_fall_type,year,ji1,compare,search,data)
       else
-        @StateDomesticProduct1s = StateDomesticProduct1.search(params[:search],compare,year,rain_fall_type)
+        @StateDomesticProduct1s = StateDomesticProduct1.search(params[:search],compare,year,rain_fall_type,price)
         a = StateDomesticProduct1.query(@StateDomesticProduct1s,params[:year],rain_fall_type,views,ji,compare,search,data,jip)
       end
       respond_to do |format|

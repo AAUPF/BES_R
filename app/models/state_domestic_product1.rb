@@ -11,58 +11,58 @@ class StateDomesticProduct1 < ApplicationRecord
     end
   end
 
-  def self.search(search, compare, year, rain_fall_type)
+  def self.search(search, compare, year, rain_fall_type,price)
     if search == 'All'
       if rain_fall_type == 'All'
-        where(Reference: compare).order('id')
+        where(Reference: price).order('id')
       else
           if year == 'All'
             if rain_fall_type == "None"
-              where('Sector = ? OR Sector = ? OR Sector = ?', "Total Primary Sector", 'Total Secondary Sector', 'Total Tertiary Sector').order('id').where(Reference: compare)
+              where('Sector = ? OR Sector = ? OR Sector = ?', "Total Primary Sector", 'Total Secondary Sector', 'Total Tertiary Sector').order('id').where(Reference: price)
             else
 
-              where(Sector: rain_fall_type).where(Reference: compare).order('id')
+              where(Sector: rain_fall_type).where(Reference: price).order('id')
             end
           else
             if rain_fall_type == "All"
-              where(Reference: compare).where(Reference: compare).order("#{year} ")
+              where(Reference: price).where(Reference: price).order("#{year} ")
 
             elsif rain_fall_type == "None"
-              where('Sector = ? OR Sector = ? OR Sector = ?', "Total Primary Sector", 'Total Secondary Sector', 'Total Tertiary Sector').where(Reference: compare).order('id')
+              where('Sector = ? OR Sector = ? OR Sector = ?', "Total Primary Sector", 'Total Secondary Sector', 'Total Tertiary Sector').where(Reference: price).order('id')
             else
-              where(Sector: rain_fall_type).where(Reference: compare).order("#{year} ")
+              where(Sector: rain_fall_type).where(Reference: price).order("#{year} ")
             end
           end
         # where(Year: year).order("#{rain_fall_type} ")
       end
     elsif compare == 'Bihar vs Sector'
       if year == 'All'
-        where('Sector = ? OR Sector = ?', search, 'Bihar').where(Reference: compare).order(:id)
+        where('Sector = ? OR Sector = ?', search, 'Bihar').where(Reference: price).order(:id)
       else
-        where('Sector = ? OR Sector = ?', search, 'Bihar').where(Reference: compare).where('year = ?', year).order(:id)
+        where('Sector = ? OR Sector = ?', search, 'Bihar').where(Reference: price).where('year = ?', year).order(:id)
       end
     else
       if rain_fall_type == 'All'
 
 
-        where(Reference: compare)
+        where(Reference: price)
       else
         if year == 'All'
           if rain_fall_type == "None"
-            where('Sector = ? ', search).where(Reference: compare).order('id')
+            where('Sector = ? ', search).where(Reference: price).order('id')
           else
-            where('Sector = ? ', rain_fall_type).where(Reference: compare).order('id')
+            where('Sector = ? ', rain_fall_type).where(Reference: price).order('id')
           end
         else
           if rain_fall_type == "None"
 
             if search == "All"
-              where('Sector = ? ', search).where(Reference: compare).order('id')
+              where('Sector = ? ', search).where(Reference: price).order('id')
             else
-              where('Sector = ? ', search).where(Reference: compare).order('id')
+              where('Sector = ? ', search).where(Reference: price).order('id')
             end
           else
-            where('Sector = ? ', rain_fall_type).where(Reference: compare).order('id')
+            where('Sector = ? ', rain_fall_type).where(Reference: price).order('id')
           end
         end
       end
@@ -145,7 +145,7 @@ class StateDomesticProduct1 < ApplicationRecord
         else
           b
         end
-        if search == 'Primary'
+        if search == 'Total Primary Sector'
          ji1 = []
            b.each do |el|
                  data.each do |el1|
@@ -155,7 +155,7 @@ class StateDomesticProduct1 < ApplicationRecord
                  end
                end
           data = { column: hash_data, data:  ji1 }
-        elsif search == 'Secondary'
+        elsif search == 'Total Secondary Sector'
           ji1 = []
           b.each do |el|
                 data.each do |el1|
@@ -165,7 +165,7 @@ class StateDomesticProduct1 < ApplicationRecord
                 end
               end
          data = { column: hash_data, data:  ji1 }
-        elsif search == 'Tertiary'
+        elsif search == 'Total Tertiary Sector'
           ji1 = []
           b.each do |el|
                 data.each do |el1|
