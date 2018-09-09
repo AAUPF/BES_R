@@ -304,7 +304,6 @@ class InflationRate < ApplicationRecord
                 type: views,
                 toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
                 legendText: dataset,
-                color: color,
                 name:dataset,
                 showInLegend: true,
                 dataPoints: values.map { |value|
