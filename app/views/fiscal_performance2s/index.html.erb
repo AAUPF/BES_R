@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fiscal Performance2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>2012-13</th>
+      <th>2013-14</th>
+      <th>2014-15</th>
+      <th>2015-16</th>
+      <th>2016-17</th>
+      <th>2017-18 be</th>
+      <th>Sub sector</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fiscal_performance2s.each do |fiscal_performance2| %>
+      <tr>
+        <td><%= fiscal_performance2.Sector %></td>
+        <td><%= fiscal_performance2.2012-13 %></td>
+        <td><%= fiscal_performance2.2013-14 %></td>
+        <td><%= fiscal_performance2.2014-15 %></td>
+        <td><%= fiscal_performance2.2015-16 %></td>
+        <td><%= fiscal_performance2.2016-17 %></td>
+        <td><%= fiscal_performance2.2017-18_BE %></td>
+        <td><%= fiscal_performance2.Sub_Sector %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fiscal Performance2', new_fiscal_performance2_path %>

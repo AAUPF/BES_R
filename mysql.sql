@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 09, 2018 at 10:28 AM
+-- Generation Time: Sep 09, 2018 at 02:14 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -2260,6 +2260,52 @@ INSERT INTO `fiscal_performance1s` (`id`, `State`, `Revenue_Deficit_GFD_Percenta
 (49, 'Tamil Nadu', 37.1, 64.8, 34, 46.5, 14.7, 63.8, 23.1, 73.4, '2017_RE', '2018-08-20 05:54:45', '2018-08-20 05:54:45'),
 (50, 'Himachal Pradesh', 44.3, 49.7, 29.6, 40.6, 11.3, 30.9, 48, 36.2, '2017_RE', '2018-08-20 05:54:45', '2018-08-20 05:54:45'),
 (51, 'Chhatisgarh', -49.6, 149.8, 20.6, 24.3, 5.3, 50.8, 45.6, 14.5, '2017_RE', '2018-08-20 05:54:45', '2018-08-20 05:54:45');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fiscal_performance2s`
+--
+
+DROP TABLE IF EXISTS `fiscal_performance2s`;
+CREATE TABLE `fiscal_performance2s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `Sub_Sector` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `fiscal_performance2s`
+--
+
+INSERT INTO `fiscal_performance2s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `Sub_Sector`, `created_at`, `updated_at`) VALUES
+(1, 'Balance from Current Revenue (Rs. crore)', 14128, 16242, 15483, 26027, 27804, 31320, 'A. Sustainability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(2, 'Interest Ratio (Percentage)', 8.67, 9.26, 9.82, 8.57, 8.62, 9.01, 'A. Sustainability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(3, 'Buoyancy of Own Tax Receipts w.r.t. GSDP ', 2, 1.9, 0.5, 2, -0.5, 5.4, 'A. Sustainability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(4, 'Buoyancy of Non-Tax Receipts w.r.t. GSDP ', 1.9, 2.9, 0.1, 3.6, 0.7, 3, 'A. Sustainability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(5, 'Growth in outstanding debt (Percentage)', 12.9, 13.6, 13.9, 17.7, 19, 12.1, 'A. Sustainability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(6, 'Growth in total revenue receipts (Percentage)', 16.1, 15.7, 13.8, 22.6, 9.8, 29.9, 'A. Sustainability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(7, 'Growth in state’s own revenue receipts (Percentage)', 28.8, 23.7, 3.7, 23.9, -5.4, 33.4, 'A. Sustainability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(8, 'Growth in GSDP (Percentage)', 14.3, 12.3, 8.2, 11.2, 14.8, 6.5, 'A. Sustainability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(9, 'Capital Repayment / Capital Borrowings (Percentage)', 54, 39.6, 28.6, 25.8, 20.1, 22.2, 'B. Flexibility', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(10, 'Total Tax Receipts / GSDP (Percentage)', 17.1, 17.3, 16.8, 19.5, 18.9, 20.9, 'B. Flexibility', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(11, 'Capital Outlay / Capital Receipts (Percentage)', 100.1, 141.1, 117.8, 130.2, 126, 134.8, 'B. Flexibility', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(12, 'State’s Own Tax Receipts / GSDP (Percentage)', 5.8, 6.3, 6.1, 6.7, 5.4, 6.9, 'B. Flexibility', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(13, 'State’s Own Non-Tax Receipts / GSDP (Percentage)', 0.4, 0.5, 0.5, 0.6, 0.5, 0.6, 'B. Flexibility', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(14, 'Debt Outstanding / GSDP (Percentage)', 27.1, 27.4, 28.93, 30.6, 31.7, 33.4, 'B. Flexibility', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(15, 'Revenue Deficit (Rs. crore)', -5101, -6441, -5847, -12507, -10819, -14556, 'C. Vulnerability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(16, 'Fiscal Deficit (Rs. crore)', 6545, 8352, 11179, 12062, 16480, 18112, 'C. Vulnerability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(17, 'Primary Deficit (Rs. crore)', 2117, 2893, 5050, 4964, 8289, 8521, 'C. Vulnerability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(18, 'Primary Deficit / Fiscal Deficit (Percentage)', 32.3, 34.6, 45.2, 41.2, 50.3, 47, 'C. Vulnerability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
+(19, 'Revenue Deficit / Fiscal Deficit (Percentage)', -77.9, -77.1, -52.3, -103.7, -65.7, -80.4, 'C. Vulnerability', '2018-09-09 14:07:27', '2018-09-09 14:07:27');
 
 -- --------------------------------------------------------
 
@@ -7026,7 +7072,9 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180906075118'),
 ('20180906122134'),
 ('20180907055304'),
-('20180907060842');
+('20180907060842'),
+('20180909111230'),
+('20180909111907');
 
 -- --------------------------------------------------------
 
@@ -8529,6 +8577,12 @@ ALTER TABLE `fiscal_performance1s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `fiscal_performance2s`
+--
+ALTER TABLE `fiscal_performance2s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `health1s`
 --
 ALTER TABLE `health1s`
@@ -9179,6 +9233,12 @@ ALTER TABLE `demographic_profile2s`
 --
 ALTER TABLE `fiscal_performance1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+
+--
+-- AUTO_INCREMENT for table `fiscal_performance2s`
+--
+ALTER TABLE `fiscal_performance2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `health1s`
