@@ -19,7 +19,7 @@ class InflationRate < ApplicationRecord
         where(Sector: year).order('id ')
       else
         if year == 'All'
-          where(Sector: year).order('id')
+         all.order('id')
         else
           where(Sector: year).order("#{rain_fall_type} ")
         end
@@ -27,28 +27,35 @@ class InflationRate < ApplicationRecord
       end
     elsif compare != 'None'
       if year == 'All'
-        where('State = ? OR State = ?', search, compare).where(Sector: year).order(:id)
+        where('State = ? OR State = ?', search, compare).order(:id)
       else
         where('State = ? OR State = ?', search, compare).where(Sector: year).order(:id)
       end
     else
       if rain_fall_type == 'All'
-        where('State = ? ', search).where(Sector: year).order(:id)
-      else
+        # where('State = ? ', search).where(Sector: year).order(:id)
         if year == 'All'
-          where('State = ? ', search).where(Sector: year).order('id')
+          where('State = ? ', search).order('id')
         else
           # select("#{rain_fall_type}, #{year}, State").where('State = ? ', search).order(rain_fall_type)
-          where('State = ? ', search).where(Sector: year).order(rain_fall_type)
+
+          where('State = ? ', search).where(Sector: year).order('id')
+        end
+      else
+        if year == 'All'
+          where('State = ? ', search).order('id')
+        else
+          # select("#{rain_fall_type}, #{year}, State").where('State = ? ', search).order(rain_fall_type)
+          where('State = ? ', search).where(Sector: year).order('id')
         end
       end
     end
   end
 
-  def self.table(b, rain_fall_type, _year, ji, compare)
+  def self.table(b, rain_fall_type, _year, ji, compare,search)
     dataset = rain_fall_type.tr('_', ' ')
 
-    hash_data = if rain_fall_type
+    hash_data = if rain_fall_type == "All"
 
                   ji.map do |el|
                     if el.to_s == 'State'
@@ -61,7 +68,8 @@ class InflationRate < ApplicationRecord
                   hash_data = if compare == 'None'
                                 [
                                   { title: 'State', field: 'State', headerFilter: true },
-                                  { title: dataset, field: rain_fall_type }
+                                  { title: dataset, field: rain_fall_type },
+                                  { title: 'Sector', field: 'Sector' }
                                 ]
                               else
 
@@ -69,7 +77,8 @@ class InflationRate < ApplicationRecord
                                   # {title:compare, field:compare, sorter:"string", },
                                   { title: 'State', field: 'State', headerFilter: true },
 
-                                  { title: dataset, field: rain_fall_type }
+                                  { title: dataset, field: rain_fall_type },
+                                  { title: 'Sector', field: 'Sector' }
                                 ]
                               end
                 end
@@ -88,8 +97,7 @@ class InflationRate < ApplicationRecord
         grouped[x[:State]][:State] = x[:State]
         grouped[x[:State]][x[:Year]] = x[:Per_Capita_Income]
       end
-
-      data = { column: hash_data, data: grouped.values }
+      data = { column: hash_data, data: j }
 
     else
       data = { column: hash_data, data: j }
@@ -119,29 +127,79 @@ class InflationRate < ApplicationRecord
     color = '#4f81bc'
     if rain_fall_type == 'All'
       if views
-        hash_data = ji.map do |column_name|
-          if compare == 'Bihar vs State'
-            dataset = column_name.to_s.tr('_', ' ')
-            {
-              type: views,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.map do |el|
-                            { y: el[column_name], z: el[column_name], label: el[d] }
-                          end
-            }
-          else
+
+            if _year == "All"
+
+              if compare != "None"
+
+                grouped_data = b.group_by { |data| data[:State] }
+                hash_data = grouped_data.map do |vegetable, values|
+                  dataset = vegetable.to_s.tr('_', ' ')
+                  {
+                    type: views,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: values.map do |value|
+                                  { y: value, label: value['Year'] }
+                                end
+                  }
+                end
+              else
+
+
+              hash_data = ji.map do |column_name|
+                dataset = column_name.to_s.tr('_', ' ')
+                {
+                  type: views,
+                  legendText: dataset,
+                  toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
+                  name:search,
+                  showInLegend: true,
+                  dataPoints: b.map do |el|
+                                { y: el[column_name], z: el[column_name], label: el["Sector"] }
+                              end
+                }
+             
             
-            dataset = column_name.to_s.tr('_', ' ')
-            {
-              type: views,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.map do |el|
-                            { y: el[column_name], z: el[column_name], label: el[d] }
-                          end
-            }
           end
+
+                
+              end
+
+              
+              
+            else
+
+              hash_data = ji.map do |column_name|
+                if compare == 'Bihar vs State'
+                  dataset = column_name.to_s.tr('_', ' ')
+                  {
+                    type: views,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: b.map do |el|
+                                  { y: el[column_name], z: el[column_name], label: el[d] }
+                                end
+                  }
+                else
+                  
+                  dataset = column_name.to_s.tr('_', ' ')
+
+              
+                  {
+                    type: views,
+                    toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
+                    name:dataset,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: b.map do |el|
+                                  { y: el[column_name], z: el[column_name], label: el[d] }
+                                end
+                  }
+                end
+              
+            end
+
         end
       end
       title = if (views == 'stackedBar100') || (views == 'stackedBar')
@@ -149,7 +207,7 @@ class InflationRate < ApplicationRecord
                   animationEnabled: true,
                   exportEnabled: true,
                   title: {
-                    text: rain_fall_type.to_s.tr('_', ' ').to_s
+                    text: _year.to_s.tr('_', ' ').to_s
                   },
                   data: hash_data
                 }
@@ -159,7 +217,7 @@ class InflationRate < ApplicationRecord
                   animationEnabled: true,
                   exportEnabled: true,
                   title: {
-                    text: rain_fall_type.to_s.tr('_', ' ').to_s
+                    text: _year.to_s.tr('_', ' ').to_s
                   },
                   # axisX: {
                   #   interval:1,
@@ -172,6 +230,7 @@ class InflationRate < ApplicationRecord
               end
       return title
     else
+
       if compare == 'Bihar vs State'
         if _year == 'All'
           grouped_data = b.group_by { |data| data[:State] }
@@ -203,6 +262,8 @@ class InflationRate < ApplicationRecord
       else
 
         if _year == 'All'
+
+
           grouped_data = b.group_by { |data| data[:State] }
           if search == 'All'
             hash_data = grouped_data.map do |vegetable, values|
@@ -220,33 +281,88 @@ class InflationRate < ApplicationRecord
             end
           else
 
-            hash_data = grouped_data.map do |vegetable, values|
-              dataset = vegetable.to_s.tr('_', ' ')
+
+
+            if views != "column" && views!="line"
+              dataset = rain_fall_type.tr('_', ' ')
+              hash_data =  b.map do |el|
+                {
+                  type:views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                  legendText:"#{el["Sector"]}",
+                  showInLegend: true,
+                  dataPoints: [{ y: el[rain_fall_type], label:  search }]
+              }
+  
+              end
+          
+                else
+                    hash_data  = grouped_data.map{ |vegetable, values| 
+              dataset = vegetable.to_s.gsub("_"," ")
               {
                 type: views,
-                color: color,
-                toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
                 legendText: dataset,
-                name: dataset,
+                color: color,
+                name:dataset,
                 showInLegend: true,
-                dataPoints: values.map do |value|
-                              { y: value[rain_fall_type], label: value['Year'] }
-                            end
+                dataPoints: values.map { |value|
+                  { y: value[rain_fall_type], label: value["Sector"] }
+                }
               }
-            end
+           }
+                end
+
+            # hash_data = grouped_data.map do |vegetable, values|
+            #   dataset = rain_fall_type.to_s.tr('_', ' ')
+            #   {
+            #     type: views,
+            #     toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
+            #     legendText: vegetable,
+            #     name: vegetable,
+            #     showInLegend: true,
+            #     dataPoints: values.map do |value|
+            #                   { y: value[rain_fall_type], label: value['Sector'] }
+            #                 end
+            #   }
+            # end
           end
         else
-          dataset = rain_fall_type.tr('_', ' ')
-          hash_data =
-            [{
-              type: views,
-              color: color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.map do |el|
-                            { y: el[rain_fall_type], label: el['State'] }
-                          end
-            }]
+
+          if views != "column" && views!="line"
+
+            dataset = rain_fall_type.tr('_', ' ')
+            hash_data =  b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
+              {
+                type:views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:"#{el["State"]}",
+                legendText:"#{el["State"]}",
+                showInLegend: true,
+                dataPoints: [{ y: el[rain_fall_type], label:  dataset }]
+            }
+
+            end
+        
+              else
+              dataset = rain_fall_type.tr('_', ' ')
+                hash_data =
+                  [{
+                    type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:dataset,
+                    color: color,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: b.map do |el|
+                                  { y: el[rain_fall_type], label: el['State'] }
+                                end
+                  }]
+              end
+
+
+      
         end
 
       end
@@ -255,7 +371,7 @@ class InflationRate < ApplicationRecord
                   animationEnabled: true,
                   exportEnabled: true,
                   title: {
-                    text: rain_fall_type.to_s.tr('_', ' ').to_s
+                    text: _year.to_s.tr('_', ' ').to_s
                   },
                   data: hash_data
                 }
@@ -265,7 +381,7 @@ class InflationRate < ApplicationRecord
                   animationEnabled: true,
                   exportEnabled: true,
                   title: {
-                    text: rain_fall_type.to_s.tr('_', ' ').to_s
+                    text: _year.to_s.tr('_', ' ').to_s
                   },
                   # axisX: {
                   #   interval:1,

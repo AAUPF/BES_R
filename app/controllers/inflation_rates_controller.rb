@@ -39,7 +39,7 @@ def test
          end
       elsif views == "Table"  
         b = InflationRate.search(params[:search],compare,year,rain_fall_type)
-        a = InflationRate.table(b,rain_fall_type,year,ji1,compare)
+        a = InflationRate.table(b,rain_fall_type,year,ji1,compare,search)
       else
         @InflationRates = InflationRate.search(params[:search],compare,year,rain_fall_type)
         a = InflationRate.query(@InflationRates,params[:year],rain_fall_type,views,ji,compare,search)
