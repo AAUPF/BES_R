@@ -1,4 +1,4 @@
 class ResourceManagement1 < ApplicationRecord
-  extend Code  
+  extend Statefinanceyearsector  
 
       end

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :expenditure_managements do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :tax_department2s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :support_institutions2s do 
     collection { post :import }
     collection { get :dropdown }

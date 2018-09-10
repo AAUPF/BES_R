@@ -22,8 +22,8 @@ module Statefinanceyearsector
               if rain_fall_type == "None"
                 where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').order('id')
               else
-                all
-                # where(Sector: rain_fall_type).order('id')
+                # all
+                 where(Sector: rain_fall_type).order('id')
               end
             else
               if rain_fall_type == "All"
@@ -135,6 +135,7 @@ module Statefinanceyearsector
                     end
                   end  
           end
+
         j = if rain_fall_type == 'Productivity'
               b.each { |item| item[:Productivity] = item[:Productivity] / 100 }
             else
@@ -179,11 +180,21 @@ module Statefinanceyearsector
                      end
                     end
                   end
+                  
     
              data = { column: hash_data, data:  ji1 }
     
             else
-              data = { column: hash_data, data: j }
+
+              ji1 = []
+              b.each do |el|
+                    data.each do |el1|
+                     if el.Sector ==el1
+                       ji1.push(el)
+                     end
+                    end
+                  end
+              data = { column: hash_data, data: ji1 }
             end  
     
     
@@ -199,8 +210,6 @@ module Statefinanceyearsector
             if rain_fall_type == "All"
     
               if _year == "All"
-    
-    
                 # abort("error")
                 result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
     

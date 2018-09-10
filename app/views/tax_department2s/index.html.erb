@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tax Department2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>2012-13</th>
+      <th>2013-14</th>
+      <th>2014-15</th>
+      <th>2015-16</th>
+      <th>2016-17</th>
+      <th>2017-18 be</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tax_department2s.each do |tax_department2| %>
+      <tr>
+        <td><%= tax_department2.Sector %></td>
+        <td><%= tax_department2.2012-13 %></td>
+        <td><%= tax_department2.2013-14 %></td>
+        <td><%= tax_department2.2014-15 %></td>
+        <td><%= tax_department2.2015-16 %></td>
+        <td><%= tax_department2.2016-17 %></td>
+        <td><%= tax_department2.2017-18_BE %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tax Department2', new_tax_department2_path %>
