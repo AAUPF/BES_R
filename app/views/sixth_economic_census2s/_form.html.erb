@@ -1,0 +1,47 @@
+<%= form_with(model: sixth_economic_census2, local: true) do |form| %>
+  <% if sixth_economic_census2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sixth_economic_census2.errors.count, "error") %> prohibited this sixth_economic_census2 from being saved:</h2>
+
+      <ul>
+      <% sixth_economic_census2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :District %>
+    <%= form.text_field :District %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Establishments_Rural %>
+    <%= form.text_field :Number_of_Establishments_Rural %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Establishments_Urban %>
+    <%= form.text_field :Number_of_Establishments_Urban %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Number_of_Establishments %>
+    <%= form.text_field :Total_Number_of_Establishments %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_Share_Establishments %>
+    <%= form.text_field :Percentage_Share_Establishments %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_Share_Population %>
+    <%= form.text_field :Percentage_Share_Population %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Support Institutions2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Amount allotted rs lakh</th>
+      <th>Amount spent rs lakh</th>
+      <th>Number of entrepreneurs benefited</th>
+      <th>Amount spent in percentage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @support_institutions2s.each do |support_institutions2| %>
+      <tr>
+        <td><%= support_institutions2.Year %></td>
+        <td><%= support_institutions2.Amount_Allotted_Rs_lakh %></td>
+        <td><%= support_institutions2.Amount_spent_Rs_lakh %></td>
+        <td><%= support_institutions2.Number_of_Entrepreneurs_benefited %></td>
+        <td><%= support_institutions2.Amount_Spent_in_Percentage %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Support Institutions2', new_support_institutions2_path %>

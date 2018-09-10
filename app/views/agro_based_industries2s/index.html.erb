@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agro Based Industries2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location of union or project</th>
+      <th>Organised societies</th>
+      <th>Working societies</th>
+      <th>Registered societies</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agro_based_industries2s.each do |agro_based_industries2| %>
+      <tr>
+        <td><%= agro_based_industries2.Location_of_Union_or_Project %></td>
+        <td><%= agro_based_industries2.Organised_Societies %></td>
+        <td><%= agro_based_industries2.Working_Societies %></td>
+        <td><%= agro_based_industries2.Registered_Societies %></td>
+        <td><%= agro_based_industries2.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agro Based Industries2', new_agro_based_industries2_path %>

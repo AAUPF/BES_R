@@ -1,0 +1,42 @@
+<%= form_with(model: agro_based_industries2, local: true) do |form| %>
+  <% if agro_based_industries2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(agro_based_industries2.errors.count, "error") %> prohibited this agro_based_industries2 from being saved:</h2>
+
+      <ul>
+      <% agro_based_industries2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Location_of_Union_or_Project %>
+    <%= form.text_field :Location_of_Union_or_Project %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Organised_Societies %>
+    <%= form.text_field :Organised_Societies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Working_Societies %>
+    <%= form.text_field :Working_Societies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Registered_Societies %>
+    <%= form.text_field :Registered_Societies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

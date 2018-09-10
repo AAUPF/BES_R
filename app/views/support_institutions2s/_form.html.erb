@@ -1,0 +1,42 @@
+<%= form_with(model: support_institutions2, local: true) do |form| %>
+  <% if support_institutions2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(support_institutions2.errors.count, "error") %> prohibited this support_institutions2 from being saved:</h2>
+
+      <ul>
+      <% support_institutions2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Amount_Allotted_Rs_lakh %>
+    <%= form.text_field :Amount_Allotted_Rs_lakh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Amount_spent_Rs_lakh %>
+    <%= form.text_field :Amount_spent_Rs_lakh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Entrepreneurs_benefited %>
+    <%= form.text_field :Number_of_Entrepreneurs_benefited %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Amount_Spent_in_Percentage %>
+    <%= form.text_field :Amount_Spent_in_Percentage %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

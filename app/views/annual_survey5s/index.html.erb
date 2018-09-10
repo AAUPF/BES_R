@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Annual Survey5s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Characteristics</th>
+      <th>India</th>
+      <th>Bihar</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @annual_survey5s.each do |annual_survey5| %>
+      <tr>
+        <td><%= annual_survey5.Characteristics %></td>
+        <td><%= annual_survey5.India %></td>
+        <td><%= annual_survey5.Bihar %></td>
+        <td><%= annual_survey5.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Annual Survey5', new_annual_survey5_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Annual Survey1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>Annual growth rate</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @annual_survey1s.each do |annual_survey1| %>
+      <tr>
+        <td><%= annual_survey1.Sector %></td>
+        <td><%= annual_survey1.Annual_Growth_Rate %></td>
+        <td><%= annual_survey1.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Annual Survey1', new_annual_survey1_path %>

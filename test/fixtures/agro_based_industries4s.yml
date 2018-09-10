@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Location_of_Project: MyString
+  Procurement: 1.5
+  Year: MyString
+
+two:
+  Location_of_Project: MyString
+  Procurement: 1.5
+  Year: MyString

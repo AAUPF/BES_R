@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Amount_Allotted_Rs_lakh: 1.5
+  Amount_spent_Rs_lakh: 1.5
+  Number_of_Entrepreneurs_benefited: 1.5
+  Amount_Spent_in_Percentage: 1.5
+
+two:
+  Year: MyString
+  Amount_Allotted_Rs_lakh: 1.5
+  Amount_spent_Rs_lakh: 1.5
+  Number_of_Entrepreneurs_benefited: 1.5
+  Amount_Spent_in_Percentage: 1.5

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sector:</strong>
+  <%= @annual_survey1.Sector %>
+</p>
+
+<p>
+  <strong>Annual growth rate:</strong>
+  <%= @annual_survey1.Annual_Growth_Rate %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @annual_survey1.Year %>
+</p>
+
+<%= link_to 'Edit', edit_annual_survey1_path(@annual_survey1) %> |
+<%= link_to 'Back', annual_survey1s_path %>

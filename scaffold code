@@ -1,1 +1,1 @@
-rails g scaffold TaxDepartment5 Districts:string Number_of_Document:float Total_Receipt:float Target:float Percentage_receipt_against_target:float Receipt_per_Document:float
+rails g scaffold SupportInstitutions2 Year:string Amount_Allotted_Rs_lakh:float Amount_spent_Rs_lakh:float Number_of_Entrepreneurs_benefited:float Amount_Spent_in_Percentage:float

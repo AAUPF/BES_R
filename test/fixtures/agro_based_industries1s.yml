@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name_of_Sugar_Mill: MyString
+  Sugarcane_Crushed: 1.5
+  Sugar_Produced: 1.5
+  Recovery_Percentage: 1.5
+  Year: MyString
+
+two:
+  Name_of_Sugar_Mill: MyString
+  Sugarcane_Crushed: 1.5
+  Sugar_Produced: 1.5
+  Recovery_Percentage: 1.5
+  Year: MyString

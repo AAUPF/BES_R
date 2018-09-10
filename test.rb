@@ -49,6 +49,7 @@
 
 
               if views != "column" && views!="line"
+                
                 dataset = rain_fall_type.tr('_', ' ')
                 hash_data =  b.map do |el|
                   {

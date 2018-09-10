@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Sector: MyString
+  Annual_Growth_Rate: 1.5
+  Year: MyString
+
+two:
+  Sector: MyString
+  Annual_Growth_Rate: 1.5
+  Year: MyString

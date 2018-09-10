@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agro Based Industries4s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location of project</th>
+      <th>Procurement</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agro_based_industries4s.each do |agro_based_industries4| %>
+      <tr>
+        <td><%= agro_based_industries4.Location_of_Project %></td>
+        <td><%= agro_based_industries4.Procurement %></td>
+        <td><%= agro_based_industries4.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agro Based Industries4', new_agro_based_industries4_path %>

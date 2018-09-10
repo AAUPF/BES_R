@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sixth Economic Census2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>District</th>
+      <th>Number of establishments rural</th>
+      <th>Number of establishments urban</th>
+      <th>Total number of establishments</th>
+      <th>Percentage share establishments</th>
+      <th>Percentage share population</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sixth_economic_census2s.each do |sixth_economic_census2| %>
+      <tr>
+        <td><%= sixth_economic_census2.District %></td>
+        <td><%= sixth_economic_census2.Number_of_Establishments_Rural %></td>
+        <td><%= sixth_economic_census2.Number_of_Establishments_Urban %></td>
+        <td><%= sixth_economic_census2.Total_Number_of_Establishments %></td>
+        <td><%= sixth_economic_census2.Percentage_Share_Establishments %></td>
+        <td><%= sixth_economic_census2.Percentage_Share_Population %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sixth Economic Census2', new_sixth_economic_census2_path %>

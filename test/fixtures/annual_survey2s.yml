@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  Cotribution: 1.5
+  Year: MyString
+
+two:
+  State: MyString
+  Cotribution: 1.5
+  Year: MyString

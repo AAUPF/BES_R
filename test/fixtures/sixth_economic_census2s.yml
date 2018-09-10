@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  District: MyString
+  Number_of_Establishments_Rural: 1.5
+  Number_of_Establishments_Urban: 1.5
+  Total_Number_of_Establishments: 1.5
+  Percentage_Share_Establishments: 1.5
+  Percentage_Share_Population: 1.5
+
+two:
+  District: MyString
+  Number_of_Establishments_Rural: 1.5
+  Number_of_Establishments_Urban: 1.5
+  Total_Number_of_Establishments: 1.5
+  Percentage_Share_Establishments: 1.5
+  Percentage_Share_Population: 1.5
