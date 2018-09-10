@@ -374,20 +374,32 @@ class AnnualSurvey5 < ApplicationRecord
         }
        
         else
-          title = {
-            animationEnabled: true,
-            exportEnabled: true,
-            title:{
-              text: "#{rain_fall_type.to_s.gsub("_"," ")}"
-                  },
-                #   axisX: {
-                #     interval:1,
-                #     labelMaxWidth: 180,
-                #     labelAngle: 90,
-                #     labelFontFamily:"verdana0"
-                #     },
-            data: hash_data
-        }
+          if search == "All"
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                    },
+                    axisX: {
+                      interval:1,
+                      labelMaxWidth: 150,
+                      labelAngle: 0,
+                      labelFontFamily:"verdana0"
+                      },
+              data: hash_data
+          }
+          else
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+              },
+              data: hash_data
+          }
+          end
+          
           
         end
         return title
