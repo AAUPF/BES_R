@@ -72,7 +72,7 @@ class AgriculturalInputs5sController < ApplicationController
           a = AgriculturalInputs5.map(b, params[:year], rain_fall_type, views)
         else
           b = AgriculturalInputs5.map_search(params[:search], compare, year, rain_fall_type)
-          a = AgriculturalInputs5.map(b, rain_fall_type, year, ji,unit1,ranges)
+          a = AgriculturalInputs5.map(b, rain_fall_type, year, ji)
         end
       elsif views == 'Table'
         b = AgriculturalInputs5.search(params[:search], compare, year)

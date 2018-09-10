@@ -32,7 +32,7 @@ ji1 = [:Districts, :Crossbred_Cow, :Local_Cow, :Total_Cow, :Buffalo, :Total_Cow_
           a = AnimalHusbandry6.map(b,params[:year],rain_fall_type,views)
          else
           b = AnimalHusbandry6.map_search(params[:search],compare,year,rain_fall_type)
-          a = AnimalHusbandry6.map(b,rain_fall_type,year,ji,unit1)
+          a = AnimalHusbandry6.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
         b = AnimalHusbandry6.search(params[:search],compare,year,rain_fall_type)

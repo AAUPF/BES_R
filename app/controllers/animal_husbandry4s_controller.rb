@@ -34,7 +34,7 @@ ji1 = [:Districts, :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry, :Percentage_Co
           a = AnimalHusbandry4.map(b,params[:year],rain_fall_type,views)
          else
           b = AnimalHusbandry4.map_search(params[:search],compare,year,rain_fall_type)
-          a = AnimalHusbandry4.map(b,rain_fall_type,year,ji,unit1,ranges)
+          a = AnimalHusbandry4.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
         b = AnimalHusbandry4.search(params[:search],compare,year,rain_fall_type)

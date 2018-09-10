@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 09, 2018 at 02:14 PM
+-- Generation Time: Sep 10, 2018 at 08:48 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -1772,6 +1772,42 @@ INSERT INTO `cropping_patterns` (`id`, `Year`, `Total_food_grains`, `Cereals(foo
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `debt_management1s`
+--
+
+DROP TABLE IF EXISTS `debt_management1s`;
+CREATE TABLE `debt_management1s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `debt_management1s`
+--
+
+INSERT INTO `debt_management1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `Indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Internal  Debt', 48826, 55624, 65848, 79990, 96595, 114451, 'Public Debt', '2018-09-10 05:10:38', '2018-09-10 05:10:38'),
+(2, 'Central Loans', 8649, 8638, 8722, 8838, 9596, 10805, 'Public Debt', '2018-09-10 05:10:38', '2018-09-10 05:10:38'),
+(3, 'Total', 57474, 64262, 74570, 88829, 106191, 125256, 'Public Debt', '2018-09-10 05:10:38', '2018-09-10 05:10:38'),
+(4, 'Small Savings, PF etc.', 9346, 9048, 8865, 8792, 8891, 8776, 'Other Liabilities', '2018-09-10 05:10:38', '2018-09-10 05:10:38'),
+(5, 'Reserve Funds', 1819, 2081, 1836, 1435, 723, 723, 'Other Liabilities', '2018-09-10 05:10:38', '2018-09-10 05:10:38'),
+(6, 'Deposits and Advances', 7864, 11548, 13784, 17523, 22917, 20782, 'Other Liabilities', '2018-09-10 05:10:38', '2018-09-10 05:10:38'),
+(7, 'Total', 19029, 22677, 24485, 27749, 32531, 30281, 'Other Liabilities', '2018-09-10 05:10:38', '2018-09-10 05:10:38'),
+(8, 'Total (Public Debt plus Other Liabilities)', 76503, 86939, 99056, 116578, 138722, 155537, 'Other Liabilities', '2018-09-10 05:10:38', '2018-09-10 05:10:38'),
+(9, 'Outstanding Liability as Percentage of GSDP', 27.1, 27.4, 28.9, 30.6, 31.7, 33.4, 'Other Liabilities', '2018-09-10 05:10:38', '2018-09-10 05:10:38');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `debt_management3s`
 --
 
@@ -1826,6 +1862,41 @@ INSERT INTO `debt_management3s` (`id`, `Public_Debt_Repayment_Liabilities`, `Amo
 (34, 'Total Repayment', 36725, '2017-18_BE', '2018-08-20 08:09:38', '2018-08-20 08:09:38'),
 (35, 'Total Interest Payment', 9591, '2017-18_BE', '2018-08-20 08:09:38', '2018-08-20 08:09:38'),
 (36, 'Total Debt Service Burden', 46316, '2017-18_BE', '2018-08-20 08:09:38', '2018-08-20 08:09:38');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `debt_management4s`
+--
+
+DROP TABLE IF EXISTS `debt_management4s`;
+CREATE TABLE `debt_management4s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `debt_management4s`
+--
+
+INSERT INTO `debt_management4s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `created_at`, `updated_at`) VALUES
+(1, 'Gross Central Loans Received', 508, 550, 718, 818, 1512, 2160, '2018-09-10 07:24:07', '2018-09-10 07:24:07'),
+(2, 'Internal Debt Recd', 9046, 9357, 13199, 17565, 20065, 21703, '2018-09-10 07:24:07', '2018-09-10 07:24:07'),
+(3, 'Total Public Debt Received', 9554, 9907, 13918, 18383, 21577, 23863, '2018-09-10 07:24:07', '2018-09-10 07:24:07'),
+(4, 'Recoveries of Loans and Advances', 25, 15, 1493, 19, 23, 18, '2018-09-10 07:24:07', '2018-09-10 07:24:07'),
+(5, 'Interest payments', 4428, 5459, 6129, 7098, 8191, 9591, '2018-09-10 07:24:07', '2018-09-10 07:24:07'),
+(6, 'Interest Received', 167, 269, 345, 584, 940, 619, '2018-09-10 07:24:07', '2018-09-10 07:24:07'),
+(7, 'Repayment of Debt ', 3070, 3120, 3609, 4125, 4215, 4797, '2018-09-10 07:24:07', '2018-09-10 07:24:07'),
+(8, 'Net Public Debt Received', 2248, 1613, 6018, 7763, 10135, 10111, '2018-09-10 07:24:07', '2018-09-10 07:24:07'),
+(9, 'Net Debt Received as percentage             of total borrowing', 23.5, 16.3, 43.2, 42.2, 47, 42.4, '2018-09-10 07:24:07', '2018-09-10 07:24:07');
 
 -- --------------------------------------------------------
 
@@ -2031,6 +2102,40 @@ INSERT INTO `deficit_management3s` (`id`, `Gross_Fiscal_Deficit`, `Amount`, `Yea
 (34, 'GFD', 18112, 2017, '2018-08-20 07:20:06', '2018-08-20 07:20:06'),
 (35, 'GSDP', 466365, 2017, '2018-08-20 07:20:06', '2018-08-20 07:20:06'),
 (36, 'GFD: GSDP ratio (%)', 3.9, 2017, '2018-08-20 07:20:06', '2018-08-20 07:20:06');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `deficit_management4s`
+--
+
+DROP TABLE IF EXISTS `deficit_management4s`;
+CREATE TABLE `deficit_management4s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `deficit_management4s`
+--
+
+INSERT INTO `deficit_management4s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `Indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Net Borrowing', 6484, 6788, 10309, 14258, 17362, 19065, 'Amount', '2018-09-09 16:32:07', '2018-09-09 16:32:07'),
+(2, 'Net Public Account', 343, 1606, 551, -1983, -893, -2100, 'Amount', '2018-09-09 16:32:07', '2018-09-09 16:32:07'),
+(3, 'Net Decrease in Cash Balance (Opening - Closing Balance)', -281, -42, 319, -214, 10, 1147, 'Amount', '2018-09-09 16:32:07', '2018-09-09 16:32:07'),
+(4, 'GFD', 6545, 8352, 11179, 12062, 16480, 18112, 'Amount', '2018-09-09 16:32:07', '2018-09-09 16:32:07'),
+(5, 'Net Borrowing', 99.1, 81.3, 92.2, 118.2, 105.4, 105.3, 'Percentage Composition', '2018-09-09 16:32:07', '2018-09-09 16:32:07'),
+(6, 'Net Public Account', 5.2, 19.2, 4.9, -16.4, -5.4, -11.6, 'Percentage Composition', '2018-09-09 16:32:07', '2018-09-09 16:32:07'),
+(7, 'Net Decrease in Cash Balance', -4.3, -0.5, 2.9, -1.8, 0.1, 6.3, 'Percentage Composition', '2018-09-09 16:32:07', '2018-09-09 16:32:07');
 
 -- --------------------------------------------------------
 
@@ -5910,6 +6015,26 @@ INSERT INTO `regional_disparities` (`id`, `Criteria`, `Top_3_District`, `Bottom_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `resource_management1s`
+--
+
+DROP TABLE IF EXISTS `resource_management1s`;
+CREATE TABLE `resource_management1s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `resource_management2s`
 --
 
@@ -7074,7 +7199,11 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180907055304'),
 ('20180907060842'),
 ('20180909111230'),
-('20180909111907');
+('20180909111907'),
+('20180909162046'),
+('20180910045939'),
+('20180910070927'),
+('20180910081251');
 
 -- --------------------------------------------------------
 
@@ -8535,9 +8664,21 @@ ALTER TABLE `cropping_patterns`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `debt_management1s`
+--
+ALTER TABLE `debt_management1s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `debt_management3s`
 --
 ALTER TABLE `debt_management3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `debt_management4s`
+--
+ALTER TABLE `debt_management4s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -8556,6 +8697,12 @@ ALTER TABLE `deficit_management2s`
 -- Indexes for table `deficit_management3s`
 --
 ALTER TABLE `deficit_management3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `deficit_management4s`
+--
+ALTER TABLE `deficit_management4s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -8868,6 +9015,12 @@ ALTER TABLE `rainfalls`
 -- Indexes for table `regional_disparities`
 --
 ALTER TABLE `regional_disparities`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management1s`
+--
+ALTER TABLE `resource_management1s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -9193,10 +9346,22 @@ ALTER TABLE `cropping_patterns`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `debt_management1s`
+--
+ALTER TABLE `debt_management1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT for table `debt_management3s`
 --
 ALTER TABLE `debt_management3s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- AUTO_INCREMENT for table `debt_management4s`
+--
+ALTER TABLE `debt_management4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `deficit_management1s`
@@ -9215,6 +9380,12 @@ ALTER TABLE `deficit_management2s`
 --
 ALTER TABLE `deficit_management3s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- AUTO_INCREMENT for table `deficit_management4s`
+--
+ALTER TABLE `deficit_management4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `demographic_profile1s`
@@ -9527,6 +9698,12 @@ ALTER TABLE `rainfalls`
 --
 ALTER TABLE `regional_disparities`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `resource_management1s`
+--
+ALTER TABLE `resource_management1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `resource_management2s`

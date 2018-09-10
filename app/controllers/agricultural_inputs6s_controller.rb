@@ -62,7 +62,7 @@ end
           a = AgriculturalInputs6.map(b,params[:year],rain_fall_type,views)
          else
           b = AgriculturalInputs6.map_search(params[:search],compare,year,rain_fall_type)
-          a = AgriculturalInputs6.map(b,rain_fall_type,year,ji,unit1,ranges)
+          a = AgriculturalInputs6.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
         b = AgriculturalInputs6.search(params[:search],compare,year,rain_fall_type)
