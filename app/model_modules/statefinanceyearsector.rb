@@ -37,11 +37,11 @@ module Statefinanceyearsector
             end
             # where(Year: year).order("#{rain_fall_type} ")
           end
-        elsif compare == 'Bihar vs Sector'
+        elsif compare != "None"
           if year == 'All'
-            where('Sector = ? OR Sector = ?', search, 'Bihar').order(:id)
+            where('Sector = ? OR Sector = ?', rain_fall_type, compare).order(:id)
           else
-            where('Sector = ? OR Sector = ?', search, 'Bihar').where('year = ?', year).order(:id)
+            where('Sector = ? OR Sector = ?', rain_fall_type, compare).order(:id)
           end
         else
     
@@ -210,91 +210,16 @@ module Statefinanceyearsector
             if rain_fall_type == "All"
     
               if _year == "All"
-                # abort("error")
-                result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-    
-                hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
-                  {
-                    type:views,
-                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                    name:col[:Sector],
-                    legendText: col[:Sector],
-                    showInLegend: true,
-                    dataPoints: jip.map do |el|
-                         { y: col[el], label: el }
-                    end
-                  }
-                end
-                
+                hash_data = year_all(result,b,data)        
               else
-    
-                result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-    
-                hash_data = result.reject{|x| x["Sector"]== "Balance from Current Revenue (Rs. crore)"}.map do |col|
-                  {
-                    type:views,
-                    toolTipContent: "{label}<br/>{name}: <strong>{y}</strong>",
-                    name:col[:Sector],
-                    legendText: col[:Sector],
-                    showInLegend: true,
-                    dataPoints: [{ y: col[_year], label: col[:Sector]}]
-                  }
-                end
-                
+                hash_data = single_year(result,b,data)
               end
-     
-              
             else
-    
               if _year == "All"
-    
-                if views != "column" && views!="line"
-                  hash_data = []
-                  b.each do |col|
-                   jip.each  do |el|
-                    if el.to_s == "2011-16"
-                      years = "CAGR(2011-16)"
-                    else
-                      years = el
-                    end
-                    hash_data.push(
-                      {
-                        type:views,
-                        legendText: el,
-                        showInLegend: true,
-                        dataPoints: [{ y: col[el], label: rain_fall_type }]
-                      }
-                      
-                      
-                      )
-                   end
-                  end
-                  else
-                    u = []
-                    hash_data = [
-                          {
-                          type:views,
-                          color: color,
-                          legendText: rain_fall_type,
-                          showInLegend: true,
-                          dataPoints: u
-                        }
-                    ]
-                    b.each do |col|
-                     
-                     jip.each  do |el|
-                      if el.to_s == "2011-16"
-                        years = "CAGR(2011-16)"
-                      else
-                        years = el
-                      end
-                       u.push({ y: col[el], label: years })
-                     end
-                    end
-                  end
-                
+                hash_data =  year_to_stack(b,rain_fall_type,_year,views,color,jip)
               else
-    
+
+                
                 dataset = rain_fall_type.tr('_', ' ')
                 hash_data =
                   [{
@@ -306,40 +231,144 @@ module Statefinanceyearsector
                                   { y: el[_year], label: el['Sector'] }
                                 end
                   }]
-                
               end
-       
-              
             end
-          title = if (views == 'stackedBar100') || (views == 'stackedBar')
-                    {
-                      animationEnabled: true,
-                      exportEnabled: true,
-                      title: {
-                        text: search.to_s.tr('_', ' ').to_s
-                      },
-                      data: hash_data
-                    }
-    
-                  else
-                    {
-                      animationEnabled: true,
-                      exportEnabled: true,
-                      title: {
-                        text: search.to_s.tr('_', ' ').to_s
-                      },
-                      # axisX: {
-                      #   interval:1,
-                      #   labelMaxWidth: 180,
-                      #   labelAngle: 90,
-                      #   labelFontFamily:"verdana0"
-                      #   },
-                      data: hash_data
-                    }
-    
-                  end
-          return title
+            title_return(views,search,hash_data)
         
       end
+
+
+      def year_to_stack(b,rain_fall_type,_year,views,color,jip)
+
+        if views != "column" && views!="line"
+          hash_data = []
+          b.each do |col|
+           jip.each  do |el|
+            if el.to_s == "2011-16"
+              years = "CAGR(2011-16)"
+            else
+              years = el
+            end
+            hash_data.push(
+              {
+                type:views,
+                legendText: el,
+                showInLegend: true,
+                dataPoints: [{ y: col[el], label: rain_fall_type }]
+              }
+              
+              
+              )
+           end
+          end
+
+          else
+
+
+            u = []
+           hash_data = [
+                  {
+                  type:views,
+                  color: color,
+                  legendText: rain_fall_type,
+                  showInLegend: true,
+                  dataPoints: u
+                }
+            ]
+            b.each do |col|
+             
+             jip.each  do |el|
+              if el.to_s == "2011-16"
+                years = "CAGR(2011-16)"
+              else
+                years = el
+              end
+               u.push({ y: col[el], label: years })
+             end
+            end
+
+
+          end
+
+          return hash_data
+        
+      end
+
+
+
+      def title_return(views,search,hash_data)
+
+
+        title = if (views == 'stackedBar100') || (views == 'stackedBar')
+          {
+            animationEnabled: true,
+            exportEnabled: true,
+            title: {
+              text: search.to_s.tr('_', ' ').to_s
+            },
+            data: hash_data
+          }
+
+        else
+          {
+            animationEnabled: true,
+            exportEnabled: true,
+            title: {
+              text: search.to_s.tr('_', ' ').to_s
+            },
+            # axisX: {
+            #   interval:1,
+            #   labelMaxWidth: 180,
+            #   labelAngle: 90,
+            #   labelFontFamily:"verdana0"
+            #   },
+            data: hash_data
+          }
+
+        end
+    return title
+        
+      end
+
+
+
+      def year_all(result,b,data)
+
+               result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
+    
+               hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
+                 {
+                   type:views,
+                   toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                   name:col[:Sector],
+                   legendText: col[:Sector],
+                   showInLegend: true,
+                   dataPoints: jip.map do |el|
+                        { y: col[el], label: el }
+                   end
+                 }
+               end
+
+               return hash_data
+      end
+
+
+      def single_year(b,data)
+        result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
+    
+        hash_data = result.reject{|x| x["Sector"]== "Balance from Current Revenue (Rs. crore)"}.map do |col|
+          {
+            type:views,
+            toolTipContent: "{label}<br/>{name}: <strong>{y}</strong>",
+            name:col[:Sector],
+            legendText: col[:Sector],
+            showInLegend: true,
+            dataPoints: [{ y: col[_year], label: col[:Sector]}]
+          }
+        end
+        return hash_data
+
+      end
+
     
 end

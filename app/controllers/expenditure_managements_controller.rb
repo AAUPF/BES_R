@@ -4,6 +4,10 @@ class ExpenditureManagementsController < ApplicationController
   # GET /expenditure_managements
   def index
     @expenditure_managements = ExpenditureManagement.all
+
+    respond_to do |format|
+      format.html { render json: @expenditure_managements }
+    end
   end
 
   # GET /expenditure_managements/1
@@ -29,11 +33,14 @@ class ExpenditureManagementsController < ApplicationController
     ji1 = %i[Sector 2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE]
 
       data = [
-        "Total Revenue of State (Rs. crore)",
-        "State’s Own Tax Revenues (Rs. crore)",
-        "Revenue from Commercial Taxes (Rs. crore)",
-        "Share of Commercial Taxes in Total Revenue (Percentage)",
-        "Share of Commercial Taxes in State’s Own Taxes (Percentage)",
+        "General Services",
+        "Social Services",
+        "Economic Services",
+        "Grants in Aid ",
+        "Capital Outlay",
+        "Discharge of Public Debt ",
+        "Loans and Advances by State",
+        "Total  ",
       ]
 
 
@@ -43,19 +50,19 @@ class ExpenditureManagementsController < ApplicationController
       if views == 'Map View'
         l = rain_fall_type.delete(' ')
         if rain_fall_type == 'All'
-          b = TaxDepartment2.map_search('All', compare, year, rain_fall_type)
+          b = ExpenditureManagement.map_search('All', compare, year, rain_fall_type)
           u = 'Total'
-          a = TaxDepartment2.map(b, params[:year], rain_fall_type, views)
+          a = ExpenditureManagement.map(b, params[:year], rain_fall_type, views)
         else
-          b = TaxDepartment2.map_search(params[:search], compare, year, rain_fall_type)
-          a = TaxDepartment2.map(b, rain_fall_type, year, ji)
+          b = ExpenditureManagement.map_search(params[:search], compare, year, rain_fall_type)
+          a = ExpenditureManagement.map(b, rain_fall_type, year, ji)
          end
       elsif views == 'Table'
-        b = TaxDepartment2.search(params[:search], compare, year, rain_fall_type)
-        a = TaxDepartment2.table(b, rain_fall_type, year, ji1, compare, search, data)
+        b = ExpenditureManagement.search(params[:search], compare, year, rain_fall_type)
+        a = ExpenditureManagement.table(b, rain_fall_type, year, ji1, compare, search, data)
       else
-        @TaxDepartment2s = TaxDepartment2.search(params[:search], compare, year, rain_fall_type)
-        a = TaxDepartment2.query(@TaxDepartment2s, params[:year], rain_fall_type, views, ji, compare, search, data, jip)
+        @ExpenditureManagements = ExpenditureManagement.search(params[:search], compare, year, rain_fall_type)
+        a = ExpenditureManagement.query(@ExpenditureManagements, params[:year], rain_fall_type, views, ji, compare, search, data, jip)
       end
       respond_to do |format|
         format.html { render json: a }
