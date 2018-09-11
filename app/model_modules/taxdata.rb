@@ -79,7 +79,7 @@ module Taxdata
       end
     end
   
-    def query(b, _year, rain_fall_type, views, ji, compare)
+    def query(b, _year, rain_fall_type, views, ji, compare,search)
       d = 'State'
       color  = "#4f81bc"
       if rain_fall_type == 'All'
@@ -122,52 +122,80 @@ module Taxdata
             data: hash_data
           }
         else
-          title = {
-            animationEnabled: true,
-            exportEnabled: true,
-            title: {
-              text: rain_fall_type.to_s.tr('_', ' ').to_s
-            },
-            axisX: {
-              interval:1,
-              labelMaxWidth: 180,
-              labelAngle: 90,
-              labelFontFamily:"verdana0"
-          },
-            data: hash_data
-          }
+            if search == "All"
+                
+                title = {
+                    animationEnabled: true,
+                    exportEnabled: true,
+                    title: {
+                      text: rain_fall_type.to_s.tr('_', ' ').to_s
+                    },
+                    axisX: {
+                      interval:1,
+                      labelMaxWidth: 180,
+                      labelAngle: 120,
+                      labelFontFamily:"verdana0"
+                  },
+                    data: hash_data
+                  }
+            else
+                title = {
+                    animationEnabled: true,
+                    exportEnabled: true,
+                    title: {
+                      text: rain_fall_type.to_s.tr('_', ' ').to_s
+                    },
+                    
+                    data: hash_data
+                  }
+            end
+          
         end
         return title
       else
         if compare == 'Bihar vs State'
           dataset = rain_fall_type.tr('_', ' ')
-  
-          hash_data =
-            [{
-              type: views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-              name:dataset,
-              color: color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.map do |el|
-                            { y: el[rain_fall_type], label: el['State'] }
-                          end
-            }]
+                    hash_data =  b.map do |el|
+                    {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["State"]}",
+                        legendText:"#{el["State"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:  dataset }]
+                    }
+
+            end
         else
-          dataset = rain_fall_type.tr('_', ' ')
-          hash_data =
-            [{
-              type: views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-              name:dataset,
-              color: color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.map do |el|
-                            { y: el[rain_fall_type], label: el['State'] }
-                          end
-            }]
+            if search == "All"
+                dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  b.map do |el|
+                    {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["State"]}",
+                        legendText:"#{el["State"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:  dataset }]
+                    }
+
+            end
+            else
+                  dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =
+                        [{
+                        type: views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:dataset,
+                        color: color,
+                        legendText: dataset,
+                        showInLegend: true,
+                        dataPoints: b.map do |el|
+                                        { y: el[rain_fall_type], label: el['State'] }
+                                    end
+                        }]
+            end
+
         end
         if views == "stackedBar" || views == "stackedBar100"
           title = {
@@ -185,12 +213,12 @@ module Taxdata
             title: {
               text: rain_fall_type.to_s.tr('_', ' ').to_s
             },
-            axisX: {
-              interval:1,
-              labelMaxWidth: 180,
-              labelAngle: 90,
-              labelFontFamily:"verdana0"
-          },
+        #     axisX: {
+        #       interval:1,
+        #       labelMaxWidth: 180,
+        #       labelAngle: 90,
+        #       labelFontFamily:"verdana0"
+        #   },
             data: hash_data
           }
         end

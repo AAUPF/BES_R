@@ -193,6 +193,7 @@ end
         return title
       else
         if compare
+            
           if _year == "All"
             grouped_data = b.group_by{ |data| data[:Revenue_Account]}
             hash_data = grouped_data.map{ |vegetable, values| 
@@ -201,7 +202,7 @@ end
                 {
                     type: views,
                     toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
+                    name:dataset,
                     legendText: dataset,
                     showInLegend: true,
                     dataPoints: values.map { |value|
@@ -209,11 +210,12 @@ end
                     }
                 }
             else
+                
                 if compare == "None"
                     {
                         type: views,
                         toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
+                        name:dataset,
                         legendText: dataset,
                         color:color,
                         showInLegend: true,
@@ -225,7 +227,7 @@ end
                     {
                         type: views,
                         toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
+                        name:dataset,
                         legendText: dataset,
                         showInLegend: true,
                         dataPoints: values.map { |value|
@@ -242,7 +244,7 @@ end
             [{
               type: views,
               toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
+              name:dataset,
               color: color,
               legendText: dataset,
               showInLegend: true,
@@ -253,6 +255,7 @@ end
           end
           
         else
+            
           if _year == "All"
             grouped_data = b.group_by{ |data| data[:Year]}
             hash_data = grouped_data.map{ |vegetable, values| 
@@ -260,7 +263,7 @@ end
             {
             type: views,
             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
+            name:dataset,
             legendText: dataset,
             showInLegend: true,
             dataPoints: values.map { |value|
@@ -275,7 +278,7 @@ end
               [{
                 type: views,
                 toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
+                name:dataset,
                 color: color,
                 legendText: dataset,
                 showInLegend: true,

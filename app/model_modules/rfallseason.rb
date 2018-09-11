@@ -222,20 +222,34 @@ end
 
           else
 
-            dataset = rain_fall_type.gsub("_"," ")
+            # dataset = rain_fall_type.gsub("_"," ")
 
-            hash_data =
-            [{
-              type:views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-              name:dataset,
-              color: color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
-                   { y: el[rain_fall_type], label: el["Year"] }
-              end
-            }]
+            # hash_data =
+            # [{
+            #   type:views,
+            #   toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+            #   name:dataset,
+            #   color: color,
+            #   legendText: dataset,
+            #   showInLegend: true,
+            #   dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+            #        { y: el[rain_fall_type], label: el["Year"] }
+            #   end
+            # }]
+
+            dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  b.map do |el|
+                    {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Year"]}",
+                        legendText:"#{el["Year"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:  dataset }]
+                    }
+
+            end
+
           end
          
 

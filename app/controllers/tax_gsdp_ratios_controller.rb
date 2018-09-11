@@ -21,6 +21,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
 ji1  = [:State, :Revenue_Receipts, :States_Own_Tax, :GSDP, :Ratio_of_SOT_and_RR, :Ratio_of_SOT_and_GSDP, :Ratio_of_Total_Revenue_and_GSDP]
   if rain_fall_type || views
 
@@ -39,7 +40,7 @@ ji1  = [:State, :Revenue_Receipts, :States_Own_Tax, :GSDP, :Ratio_of_SOT_and_RR,
         a = TaxGsdpRatio.table(b,rain_fall_type,year,ji1,compare)
       else
         @TaxGsdpRatios = TaxGsdpRatio.search(params[:search],compare,year,rain_fall_type)
-        a = TaxGsdpRatio.query(@TaxGsdpRatios,params[:year],rain_fall_type,views,ji,compare)
+        a = TaxGsdpRatio.query(@TaxGsdpRatios,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

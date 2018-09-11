@@ -116,13 +116,13 @@ def self.table(b, rain_fall_type, _year, ji, compare)
       end
     end
   
-    def self.query(b, _year, rain_fall_type, views, ji, compare,search)
+def self.query(b, _year, rain_fall_type, views, ji, compare,search)
       d = 'State'
       color  = "#4f81bc"
       if rain_fall_type == 'All'
         if views
           hash_data = ji.map do |column_name|
-            if compare == 'Bihar vs State'
+            if compare
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
@@ -177,50 +177,19 @@ def self.table(b, rain_fall_type, _year, ji, compare)
         end
         return title
       else
-        if compare == 'Bihar vs State'
-          if _year == "All"
-            grouped_data = b.group_by{ |data| data[:State]}
-            hash_data = grouped_data.map{ |vegetable, values| 
-            dataset = vegetable.to_s.gsub("_"," ")
-            {
-            type: views,
-            toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-            name:dataset,
-            legendText: dataset,
-            showInLegend: true,
-            dataPoints: values.map { |value|
-            { y: value[rain_fall_type], label: value["Year"] }
-            }
-            }
-            }
-          else
-            dataset = rain_fall_type.tr('_', ' ')
-          hash_data =
-            [{
-              type: views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-              name:dataset,
-              color: color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.map do |el|
-                            { y: el[rain_fall_type], label: el['State'] }
-                          end
-            }]
-          end
-          
-        else
-          
+        if compare == "None"
+            
           if _year == "All"
             grouped_data = b.group_by{ |data| data[:State]}
             if search == "All"
-              hash_data = grouped_data.map{ |vegetable, values| 
+              h = b.group_by{ |data| data[:State]}
+              hash_data = h.map{ |vegetable, values| 
                 dataset = vegetable.to_s.gsub("_"," ")
-                {
+               {
                 type: views,
                 toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                legendText: dataset,
                 name:dataset,
+                legendText: dataset,
                 showInLegend: true,
                 dataPoints: values.map { |value|
                 { y: value[rain_fall_type], label: value["Year"] }
@@ -228,39 +197,103 @@ def self.table(b, rain_fall_type, _year, ji, compare)
                 }
                 }
             else
-              hash_data = grouped_data.map{ |vegetable, values| 
-                dataset = vegetable.to_s.gsub("_"," ")
-                {
-                type: views,
-                color:color,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                legendText: dataset,
-                name:dataset,
-                showInLegend: true,
-                dataPoints: values.map { |value|
-                { y: value[rain_fall_type], label: value["Year"] }
-                }
-                }
-                }
-            end
-            
 
+              dataset = rain_fall_type.tr('_', ' ')
+            hash_data =  b.map do |el|
+              {
+                type:views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:"#{el["Year"]}",
+                legendText:"#{el["Year"]}",
+                showInLegend: true,
+                dataPoints: [{ y: el[rain_fall_type], label:  el["State"] }]
+            }
+
+            end
+
+            end
           else
+
+           if views != "column" && views!="line"
+            
             dataset = rain_fall_type.tr('_', ' ')
-            hash_data =
+            hash_data =  b.map do |el|
+              {
+                type:views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:"#{el["State"]}",
+                legendText:"#{el["State"]}",
+                showInLegend: true,
+                dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
+            }
+
+            end
+        
+          else
+              dataset = rain_fall_type.tr('_', ' ')
+              hash_data =
               [{
                 type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:dataset,
                 color: color,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
-                  { y: el[rain_fall_type], label: el['State'] }
+                              { y: el[rain_fall_type], label: el['State'] }
                             end
               }]
           end
+
+          end
           
+        else
+            if _year == "All"
+                grouped_data = b.group_by{ |data| data[:State]}
+                if search == "All"
+                  h = b.group_by{ |data| data[:State]}
+                  hash_data = h.map{ |vegetable, values| 
+                    dataset = vegetable.to_s.gsub("_"," ")
+                   {
+                    type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:dataset,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: values.map { |value|
+                    { y: value[rain_fall_type], label: value["Year"] }
+                    }
+                    }
+                    }
+                else
+                  h = grouped_data
+                  hash_data = h.map{ |vegetable, values| 
+                    dataset = vegetable.to_s.gsub("_"," ")
+                   {
+                    type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:dataset,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: values.map { |value|
+                    { y: value[rain_fall_type], label: value["Year"] }
+                    }
+                    }
+                    }
+                end
+              else
+              dataset = rain_fall_type.tr('_', ' ')
+              hash_data =  b.map do |el|
+                {
+                  type:views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:"#{el["State"]}",
+                  legendText:"#{el["State"]}",
+                  showInLegend: true,
+                  dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
+              }
+  
+              end
+
+              end
         end
         if views == "stackedBar100" or views == "stackedBar"
           title = {
@@ -273,11 +306,17 @@ def self.table(b, rain_fall_type, _year, ji, compare)
         }
        
         else
+            if search.include? "percentage"
+                l = "Percentage"
+            else
+                l = "Gross Fiscal Deficit"
+  
+            end
           title = {
             animationEnabled: true,
             exportEnabled: true,
             title:{
-              text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+              text: "#{l.to_s.gsub("_"," ")}"
                   },
                   # axisX: {
                   #   interval:1,
