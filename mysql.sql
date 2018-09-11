@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Sep 10, 2018 at 09:35 AM
+-- Host: localhost
+-- Generation Time: Sep 10, 2018 at 12:59 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `bihar_survey`
+-- Database: `newdata`
 --
 
 -- --------------------------------------------------------
@@ -2720,6 +2720,26 @@ INSERT INTO `demographic_profile2s` (`id`, `Districts`, `Population`, `Sex_Ratio
 (76, 'Araria', 28.1, 921, 957, 992, 6, 30.2, 2011, 2.7, '2018-08-17 09:26:20', '2018-08-17 09:26:20'),
 (77, 'Katihar', 30.7, 919, 961, 1004, 8.9, 28.4, 2011, 2.9, '2018-08-17 09:26:20', '2018-08-17 09:26:20'),
 (78, 'Bihar', 1041, 918, 935, 1106, 11, 25.4, 2011, 100, '2018-08-17 09:26:20', '2018-08-17 09:26:20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `expenditure_managements`
+--
+
+DROP TABLE IF EXISTS `expenditure_managements`;
+CREATE TABLE `expenditure_managements` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -6495,6 +6515,20 @@ CREATE TABLE `resource_management1s` (
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `resource_management1s`
+--
+
+INSERT INTO `resource_management1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `created_at`, `updated_at`) VALUES
+(1, 'I.    State’s Own Revenue', 17388, 21505, 22308, 27635, 26145, 34876, '2018-09-10 10:41:39', '2018-09-10 10:41:39'),
+(2, '(a) Tax Revenue', 16253, 19961, 20750, 25449, 23742, 32001, '2018-09-10 10:41:39', '2018-09-10 10:41:39'),
+(3, '(b)  Non-Tax Revenue', 1135, 1545, 1558, 2186, 2403, 2875, '2018-09-10 10:41:39', '2018-09-10 10:41:39'),
+(4, 'II.  Receipts from Centre', 42178, 47413, 56109, 68488, 79440, 102282, '2018-09-10 10:41:39', '2018-09-10 10:41:39'),
+(5, '(a)  Share of Divisible Taxes', 31900, 34829, 36963, 48923, 58881, 65326, '2018-09-10 10:41:39', '2018-09-10 10:41:39'),
+(6, '(b) Grants-in-aid', 10278, 12584, 19146, 19566, 20559, 36956, '2018-09-10 10:41:39', '2018-09-10 10:41:39'),
+(7, 'III. Total Revenue Receipts', 59567, 68919, 78418, 96123, 105585, 137158, '2018-09-10 10:41:39', '2018-09-10 10:41:39'),
+(8, 'State’s Own Revenue as Percentage of Total Receipts', 29.2, 31.2, 28.4, 28.7, 24.8, 25.4, '2018-09-10 10:41:39', '2018-09-10 10:41:39');
+
 -- --------------------------------------------------------
 
 --
@@ -7674,7 +7708,9 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180909111907'),
 ('20180909162046'),
 ('20180910045939'),
-('20180910081251');
+('20180910081251'),
+('20180910114200'),
+('20180910123231');
 
 -- --------------------------------------------------------
 
@@ -7847,7 +7883,7 @@ CREATE TABLE `state_domestic_product2s` (
 --
 
 INSERT INTO `state_domestic_product2s` (`id`, `State`, `Per_Capita_Income`, `Year`, `created_at`, `updated_at`) VALUES
-(1, 'AndhraPradesh', 69000, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(1, 'Andhra Pradesh', 69000, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
 (2, 'Bihar', 21750, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
 (3, 'Chhattisgarh', 55177, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
 (4, 'Gujarat', 87481, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
@@ -7855,15 +7891,15 @@ INSERT INTO `state_domestic_product2s` (`id`, `State`, `Per_Capita_Income`, `Yea
 (6, 'Jharkhand', 41254, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
 (7, 'Karnataka', 90263, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
 (8, 'Kerala', 97912, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
-(9, 'MadhyaPradesh', 38550, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(9, 'Madhya Pradesh', 38550, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
 (10, 'Maharashtra', 99173, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
 (11, 'Odisha', 47632, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
 (12, 'Punjab', 85577, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
 (13, 'Rajasthan', 57391, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
 (14, 'TamilNadu', 92984, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
-(15, 'UttarPradesh', 32002, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(15, 'Uttar Pradesh', 32002, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
 (16, 'India', 63462, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
-(17, 'AndhraPradesh', 68865, 2012, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(17, 'Andhra Pradesh', 68865, 2012, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
 (18, 'Bihar', 22201, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
 (19, 'Chhattisgarh', 56761, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
 (20, 'Gujarat', 96683, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
@@ -7871,7 +7907,7 @@ INSERT INTO `state_domestic_product2s` (`id`, `State`, `Per_Capita_Income`, `Yea
 (22, 'Jharkhand', 44176, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
 (23, 'Karnataka', 94417, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
 (24, 'Kerala', 103551, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
-(25, 'MadhyaPradesh', 41257, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(25, 'Madhya Pradesh', 41257, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
 (26, 'Maharashtra', 103426, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
 (27, 'Odisha', 49543, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
 (28, 'Punjab', 88915, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
@@ -8855,6 +8891,37 @@ INSERT INTO `tax_department1s` (`id`, `Year`, `BST/VAT`, `CST`, `ENT`, `ED`, `AD
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tax_department2s`
+--
+
+DROP TABLE IF EXISTS `tax_department2s`;
+CREATE TABLE `tax_department2s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tax_department2s`
+--
+
+INSERT INTO `tax_department2s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `created_at`, `updated_at`) VALUES
+(1, 'Total Revenue of State (Rs. crore)', 59567, 68919, 78417, 96123, 105585, 137158, '2018-09-10 11:50:44', '2018-09-10 11:50:44'),
+(2, 'State’s Own Tax Revenues (Rs. crore)', 16253, 19961, 20750, 25449, 23742, 32001, '2018-09-10 11:50:44', '2018-09-10 11:50:44'),
+(3, 'Revenue from Commercial Taxes (Rs. crore)', 10911, 13156, 13758, 17378, 18751, 25000, '2018-09-10 11:50:44', '2018-09-10 11:50:44'),
+(4, 'Share of Commercial Taxes in Total Revenue (Percentage)', 18.3, 19.1, 17.5, 18.1, 17.8, 18.2, '2018-09-10 11:50:44', '2018-09-10 11:50:44'),
+(5, 'Share of Commercial Taxes in State’s Own Taxes (Percentage)', 67.1, 65.9, 66.3, 68.3, 79, 78.1, '2018-09-10 11:50:44', '2018-09-10 11:50:44');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tax_department3s`
 --
 
@@ -9322,6 +9389,12 @@ ALTER TABLE `demographic_profile1s`
 -- Indexes for table `demographic_profile2s`
 --
 ALTER TABLE `demographic_profile2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `expenditure_managements`
+--
+ALTER TABLE `expenditure_managements`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -9811,6 +9884,12 @@ ALTER TABLE `tax_department1s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tax_department2s`
+--
+ALTER TABLE `tax_department2s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tax_department3s`
 --
 ALTER TABLE `tax_department3s`
@@ -10065,6 +10144,12 @@ ALTER TABLE `demographic_profile1s`
 --
 ALTER TABLE `demographic_profile2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
+--
+-- AUTO_INCREMENT for table `expenditure_managements`
+--
+ALTER TABLE `expenditure_managements`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `fiscal_performance1s`
@@ -10376,7 +10461,7 @@ ALTER TABLE `regional_disparities`
 -- AUTO_INCREMENT for table `resource_management1s`
 --
 ALTER TABLE `resource_management1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `resource_management2s`
@@ -10544,6 +10629,12 @@ ALTER TABLE `support_institutions2s`
 -- AUTO_INCREMENT for table `tax_department1s`
 --
 ALTER TABLE `tax_department1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tax_department2s`
+--
+ALTER TABLE `tax_department2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
