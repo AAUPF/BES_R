@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Number_of_Document: 1.5
+  Registration_Fees: 1.5
+  Stamp_Fee: 1.5
+  Total_Receipt: 1.5
+  Target: 1.5
+  Year: MyString
+
+two:
+  Districts: MyString
+  Number_of_Document: 1.5
+  Registration_Fees: 1.5
+  Stamp_Fee: 1.5
+  Total_Receipt: 1.5
+  Target: 1.5
+  Year: MyString

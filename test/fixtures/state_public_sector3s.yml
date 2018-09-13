@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Sector: MyString
+  Number_of_Statutory_Corporations: 1.5
+  Number_of_Working_Companies: 1.5
+  Number_of_NonWorking_Companies: 1.5
+
+two:
+  Sector: MyString
+  Number_of_Statutory_Corporations: 1.5
+  Number_of_Working_Companies: 1.5
+  Number_of_NonWorking_Companies: 1.5

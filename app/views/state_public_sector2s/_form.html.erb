@@ -1,0 +1,57 @@
+<%= form_with(model: state_public_sector2, local: true) do |form| %>
+  <% if state_public_sector2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(state_public_sector2.errors.count, "error") %> prohibited this state_public_sector2 from being saved:</h2>
+
+      <ul>
+      <% state_public_sector2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Type_of_Company_or_corporation %>
+    <%= form.text_field :Type_of_Company_or_corporation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Government_Companies_Capital %>
+    <%= form.text_field :Government_Companies_Capital %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Government_Companies_Long_Term_Loans %>
+    <%= form.text_field :Government_Companies_Long_Term_Loans %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Government_Companies %>
+    <%= form.text_field :Total_Government_Companies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Statutory_Corporations_Capital %>
+    <%= form.text_field :Statutory_Corporations_Capital %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Statutory_Corporations_Long_Term_Loans %>
+    <%= form.text_field :Statutory_Corporations_Long_Term_Loans %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Statutory_Corporations %>
+    <%= form.text_field :Total_Statutory_Corporations %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Grand_Total %>
+    <%= form.text_field :Grand_Total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

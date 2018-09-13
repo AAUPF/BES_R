@@ -198,21 +198,36 @@ class ResourceManagement6 < ApplicationRecord
               }
               }
           else
-            h = grouped_data
-            hash_data = h.map{ |vegetable, values| 
-              dataset = vegetable.to_s.gsub("_"," ")
-             {
-              type: views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-              name:dataset,
-              color:color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: values.map { |value|
-              { y: value[rain_fall_type], label: value["Year"] }
+            if views == "line" || views == "scatter" || views == "column"
+                h = grouped_data
+              hash_data = h.map{ |vegetable, values| 
+                dataset = vegetable.to_s.gsub("_"," ")
+                {
+                  type: views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                  color:color,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: values.map { |value|
+                      { y: value[rain_fall_type], label: value["Year"] }
+                  }
+                }
               }
-              }
-              }
+            else
+              dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  b.map do |el|
+                      {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Year"]}",
+                        legendText:"#{el["Year"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:  el["Sources_of_Revenue"] }]
+                      }
+                    end
+            end
+            
           end
          
           
@@ -222,17 +237,32 @@ class ResourceManagement6 < ApplicationRecord
           else
               h = b
           end
-          dataset = rain_fall_type.tr('_', ' ')
-        hash_data =
-          [{
-            type: views,
-            color: color,
-            legendText: dataset,
-            showInLegend: true,
-            dataPoints: h.map do |el|
-                          { y: el[rain_fall_type], label: el['Sources_of_Revenue'] }
-                        end
-          }]
+          if views == "line" || views == "scatter" || views == "column"
+            dataset = rain_fall_type.tr('_', ' ')
+            hash_data =
+              [{
+                type: views,
+                color: color,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: h.map do |el|
+                              { y: el[rain_fall_type], label: el['Sources_of_Revenue'] }
+                            end
+              }]
+          else
+            dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  h.map do |el|
+                      {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Sources_of_Revenue"]}",
+                        legendText:"#{el["Sources_of_Revenue"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
+                      }
+                    end
+          end
+          
         end
         
       else
@@ -277,19 +307,34 @@ class ResourceManagement6 < ApplicationRecord
               else
                   h = b
               end
-              dataset = rain_fall_type.tr('_', ' ')
-            hash_data =
-              [{
-                type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:dataset,
-                color: color,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: h.map do |el|
-                              { y: el[rain_fall_type], label: el['Sources_of_Revenue'] }
-                            end
-              }]
+              if views == "line" || views == "scatter" || views == "column"
+                dataset = rain_fall_type.tr('_', ' ')
+                hash_data =
+                  [{
+                    type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:dataset,
+                    color: color,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: h.map do |el|
+                                  { y: el[rain_fall_type], label: el['Sources_of_Revenue'] }
+                                end
+                  }]
+              else
+                dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  h.map do |el|
+                      {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Sources_of_Revenue"]}",
+                        legendText:"#{el["Sources_of_Revenue"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
+                      }
+                    end
+              end
+              
             end
         
       end

@@ -1,1 +1,1 @@
-rails g scaffold SupportInstitutions2 Year:string Amount_Allotted_Rs_lakh:float Amount_spent_Rs_lakh:float Number_of_Entrepreneurs_benefited:float Amount_Spent_in_Percentage:float
+rails g scaffold TaxDepartment6 Districts:string Number_of_Document:float Registration_Fees:float Stamp_Fee:float Total_Receipt:float Target:float Year:string

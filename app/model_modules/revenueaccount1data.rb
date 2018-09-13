@@ -195,10 +195,12 @@ end
         if compare
             
           if _year == "All"
+            
             grouped_data = b.group_by{ |data| data[:Revenue_Account]}
-            hash_data = grouped_data.map{ |vegetable, values| 
-            dataset = vegetable.to_s.gsub("_"," ")
+            
             if search=="All" || district1 == "All"
+                hash_data = grouped_data.map{ |vegetable, values| 
+                    dataset = vegetable.to_s.gsub("_"," ")
                 {
                     type: views,
                     toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
@@ -209,53 +211,81 @@ end
                     { y: value[rain_fall_type], label: value["Year"] }
                     }
                 }
+            }
             else
                 
                 if compare == "None"
-                    {
-                        type: views,
-                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                        name:dataset,
-                        legendText: dataset,
-                        color:color,
-                        showInLegend: true,
-                        dataPoints: values.map { |value|
-                        { y: value[rain_fall_type], label: value["Year"] }
+                    if views == "line" || views == "scatter" || views == "column"
+                        hash_data = grouped_data.map{ |vegetable, values| 
+                            dataset = vegetable.to_s.gsub("_"," ")
+                        {
+                            type: views,
+                            toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                            name:dataset,
+                            legendText: dataset,
+                            color:color,
+                            showInLegend: true,
+                            dataPoints: values.map { |value|
+                            { y: value[rain_fall_type], label: value["Year"] }
+                            }
                         }
                     }
+                    else
+                        dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  b.map do |el|
+                    {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Year"]}",
+                        legendText:"#{el["Year"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:el["Revenue_Account"] }]
+                    }
+                    end
+                    
+
+                    end
+                    
                 else
-                    {
-                        type: views,
-                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                        name:dataset,
-                        legendText: dataset,
-                        showInLegend: true,
-                        dataPoints: values.map { |value|
-                        { y: value[rain_fall_type], label: value["Year"] }
-                        }
-                    }
+                    
+            
+            hash_data = grouped_data.map{ |vegetable, values| 
+                dataset = vegetable.to_s.gsub("_"," ")
+            {
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: values.map { |value|
+                { y: value[rain_fall_type], label: value["Year"] }
+                }
+            }
+        }
+                    
                 end
                 
             end
-            }
+            
           else
             dataset = rain_fall_type.tr('_', ' ')
-          hash_data =
-            [{
-              type: views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-              name:dataset,
-              color: color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.map do |el|
-                            { y: el[rain_fall_type], label: el['Revenue_Account'] }
-                          end
-            }]
+                    hash_data =  b.map do |el|
+                    {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Revenue_Account"]}",
+                        legendText:"#{el["Revenue_Account"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:el["Year"] }]
+                    }
+
+            end
+            
+        
           end
           
         else
-            
+           
           if _year == "All"
             grouped_data = b.group_by{ |data| data[:Year]}
             hash_data = grouped_data.map{ |vegetable, values| 
@@ -273,6 +303,7 @@ end
             }
 
           else
+            
             dataset = rain_fall_type.tr('_', ' ')
             hash_data =
               [{

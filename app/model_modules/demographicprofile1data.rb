@@ -261,7 +261,7 @@ module Demographicprofile1data
                                 }
                                 }
                         else
-                          if views != "column"
+                          if views != "column" && views != "line"
                             hash_data =[]
                                grouped_data.map{ |vegetable, values| 
                                 values.map do |value|

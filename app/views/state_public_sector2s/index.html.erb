@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>State Public Sector2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type of company or corporation</th>
+      <th>Government companies capital</th>
+      <th>Government companies long term loans</th>
+      <th>Total government companies</th>
+      <th>Statutory corporations capital</th>
+      <th>Statutory corporations long term loans</th>
+      <th>Total statutory corporations</th>
+      <th>Grand total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @state_public_sector2s.each do |state_public_sector2| %>
+      <tr>
+        <td><%= state_public_sector2.Type_of_Company_or_corporation %></td>
+        <td><%= state_public_sector2.Government_Companies_Capital %></td>
+        <td><%= state_public_sector2.Government_Companies_Long_Term_Loans %></td>
+        <td><%= state_public_sector2.Total_Government_Companies %></td>
+        <td><%= state_public_sector2.Statutory_Corporations_Capital %></td>
+        <td><%= state_public_sector2.Statutory_Corporations_Long_Term_Loans %></td>
+        <td><%= state_public_sector2.Total_Statutory_Corporations %></td>
+        <td><%= state_public_sector2.Grand_Total %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New State Public Sector2', new_state_public_sector2_path %>
