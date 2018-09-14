@@ -24,13 +24,13 @@ class ExpenditureManagement2sController < ApplicationController
     views = params[:views]
     year = params[:year]
     compare = params[:compare]
-    search = params[:search]
-
+    
     jip = %i[2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE]
     ji1 = %i[Sector 2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE]
     compare = "None"
+    search = params[:search]
 
-    if search == 'Revenue Account'
+    if search == "Revenue Account"
       if rain_fall_type == "None"
         data = [
           'Revenue Account'

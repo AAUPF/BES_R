@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Sep 14, 2018 at 06:11 AM
+-- Host: localhost
+-- Generation Time: Sep 14, 2018 at 12:52 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `bihar_survey`
+-- Database: `newdata`
 --
 
 -- --------------------------------------------------------
@@ -2905,6 +2905,90 @@ INSERT INTO `expenditure_on_salary_and_pensions` (`id`, `Sector`, `2012-13`, `20
 (13, 'Total as percentage of GSDP', 7.8, 7.4, 7.6, 7, 6.5, 8.3, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
 (14, 'Total as percentage of RR', 36.8, 34.1, 33.1, 27.9, 26.8, 28.1, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
 (15, 'Total as percentage of RE', 40.2, 37.6, 35.8, 32, 29.9, 31.4, '2018-09-11 13:26:16', '2018-09-11 13:26:16');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `financial_position1s`
+--
+
+DROP TABLE IF EXISTS `financial_position1s`;
+CREATE TABLE `financial_position1s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `financial_position1s`
+--
+
+INSERT INTO `financial_position1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `Indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Total Receipts Revenue Account', 59567, 68919, 78417, 96123, 105585, 137158, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(2, 'Tax Revenue', 48153, 54790, 57713, 74372, 82623, 97327, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(3, 'Non Tax Revenue', 1135, 1545, 1558, 2186, 2403, 2875, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(4, 'Grants in Aid and Contributions', 10278, 12584, 19146, 19566, 20559, 36956, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(5, 'Total Exp. Revenue Account', 54466, 62477, 72570, 83616, 94765, 122603, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(6, 'General Services, of which', 18645, 22018, 26408, 27972, 30607, 41603, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(7, 'Interest Payments', 4428, 5459, 6129, 7098, 8191, 9591, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(8, 'Social Services', 23107, 26395, 31713, 35943, 40737, 53306, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(9, 'Economic Services', 12710, 14060, 14445, 19696, 23417, 27688, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(10, 'Grants-in-aid', 4, 4, 4, 4, 4, 5, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(11, 'Revenue Deficit', -5101, -6441, -5847, -12507, -10819, -14556, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(12, 'Capital Receipts', 9579, 9922, 15411, 18402, 21600, 23881, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(13, 'Public Debt etc.', 9554, 9907, 13918, 18383, 21577, 23863, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(14, 'Recovery of Loan and Advances', 25, 15, 1493, 19, 23, 18, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(15, 'Capital Expenditure, of which', 14740, 17928, 22128, 28712, 31537, 37483, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(16, 'Capital Outlay', 9585, 14001, 18150, 23966, 27208, 32196, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(17, 'Loans and Advances', 2086, 807, 369, 621, 114, 490, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(18, 'Public Debt.', 3070, 3120, 3609, 4125, 4215, 4797, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(19, 'Total Expenditure', 69207, 80405, 94698, 112328, 126302, 160086, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(20, 'Plan Expenditure', 28381, 33678, 43939, 53732, 60840, 81267, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(21, 'Non Plan Expenditure', 40825, 46728, 50759, 58596, 65462, 78818, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(22, 'Gross Fiscal Deficit', 6545, 8352, 11179, 12062, 16480, 18112, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(23, 'Primary Deficit', 2117, 2893, 5050, 4964, 8289, 8521, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(24, 'Total Borrowings', 9554, 9907, 13918, 18383, 21577, 23863, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(25, 'Internal Debt Receipt', 9046, 9357, 13199, 17565, 20065, 21703, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(26, 'Loans from Central Government', 508, 550, 718, 818, 1512, 2160, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(27, 'Repayment of Public Debt', 3070, 3120, 3609, 4125, 4215, 4797, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(28, 'Debt Outstanding', 76503, 86939, 99056, 116578, 138722, 155537, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(29, 'GSDP', 282368, 317101, 342951, 381501, 438030, 466365, 'As number of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(30, 'Total Receipts Revenue Account', 21.1, 21.7, 22.9, 25.2, 24.1, 29.4, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(31, 'Tax Revenue', 17.1, 17.3, 16.8, 19.5, 18.9, 20.9, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(32, 'Non Tax Revenue', 0.4, 0.5, 0.5, 0.6, 0.5, 0.6, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(33, 'Grants in aid and contr.', 3.6, 4, 5.6, 5.1, 4.7, 7.9, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(34, 'Total Exp. Revenue Account', 19.3, 19.7, 21.2, 21.9, 21.6, 26.3, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(35, 'General Services, of which', 6.6, 6.9, 7.7, 7.3, 7, 8.9, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(36, 'Interest payments', 1.6, 1.7, 1.8, 1.9, 1.9, 2.1, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(37, 'Social Services', 8.2, 8.3, 9.2, 9.4, 9.3, 11.4, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(38, 'Economic Services', 4.5, 4.4, 4.2, 5.2, 5.3, 5.9, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(39, 'Grants-in-aid', 0, 0, 0, 0, 0, 0, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(40, 'Revenue Deficit', -1.8, -2, -1.7, -3.3, -2.5, -3.1, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(41, 'Capital Receipts', 3.4, 3.1, 4.5, 4.8, 4.9, 5.1, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(42, 'Public Debt etc.', 3.4, 3.1, 4.1, 4.8, 4.9, 5.1, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(43, 'Recovery of Loan and Advances', 0, 0, 0.4, 0, 0, 0, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(44, 'Capital Expenditure, of which', 5.2, 5.7, 6.5, 7.5, 7.2, 8, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(45, 'Capital Outlay', 3.4, 4.4, 5.3, 6.3, 6.2, 6.9, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(46, 'Loans and Advances', 0.7, 0.3, 0.1, 0.2, 0, 0.1, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(47, 'Public Debt.', 1.1, 1, 1.1, 1.1, 1, 1, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(48, 'Total Expenditure', 24.5, 25.4, 27.6, 29.4, 28.8, 34.3, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(49, 'Plan Expenditure', 10.1, 10.6, 12.8, 14.1, 13.9, 17.4, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(50, 'Non Plan Expenditure', 14.5, 14.7, 14.8, 15.4, 14.9, 16.9, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(51, 'Gross Fiscal Deficit', 2.3, 2.6, 3.3, 3.2, 3.8, 3.9, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(52, 'Primary Deficit', 0.7, 0.9, 1.5, 1.3, 1.9, 1.8, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(53, 'Total Borrowing', 3.4, 3.1, 4.1, 4.8, 4.9, 5.1, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(54, 'Internal Debt Receipt', 3.2, 3, 3.8, 4.6, 4.6, 4.7, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(55, 'Loans from Central Government', 0.2, 0.2, 0.2, 0.2, 0.3, 0.5, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(56, 'Repayment of Public Debt', 1.1, 1, 1.1, 1.1, 1, 1, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
+(57, 'Debt Outstanding', 27.1, 27.4, 28.9, 30.6, 31.7, 33.4, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21');
 
 -- --------------------------------------------------------
 
@@ -7969,7 +8053,9 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180913095424'),
 ('20180913101027'),
 ('20180913112235'),
-('20180913114123');
+('20180913114123'),
+('20180914075251'),
+('20180914122349');
 
 -- --------------------------------------------------------
 
@@ -9481,6 +9567,45 @@ INSERT INTO `tax_department3s` (`id`, `Name_of_Commodity`, `Collection`, `Rate_o
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tax_department4s`
+--
+
+DROP TABLE IF EXISTS `tax_department4s`;
+CREATE TABLE `tax_department4s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tax_department4s`
+--
+
+INSERT INTO `tax_department4s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `created_at`, `updated_at`) VALUES
+(1, 'From Printed Non-judicial stamps', 369, 320, 330, 391, 339, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(2, 'From Non-judicial stamp duty deposited through Bank challan', 1340, 1856, 1750, 2024, 2064, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(3, 'Non-Judicial adhesive stamps', 13, 28, 30, 32, 26, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(4, 'Non Judicial special adhesive stamp –  through  Franking machines', 24, 16, 18, 20, 17, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(5, 'Revenue Stamps', 3, 2, 2, 2, 2, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(6, 'Judicial Stamps', 12, 36, 37, 40, 37, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(7, 'Sub-Total', 1761, 2257, 2167, 2509, 2485, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(8, 'Fees on registration of instruments', 522, 668, 646, 741, 730, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(9, 'Landlord’s Registration fee', 27, 32, 31, 34, 31, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(10, 'Landlord’s Process fee', 4, 4, 4, 5, 4, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(11, 'Fee from searches of records & Non-Encumbrances', 2, 4, 5, 5, 5, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(12, 'Fee from certified copies', 3, 2, 2, 2, 2, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(13, 'Sub-Total', 558, 711, 688, 787, 772, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(14, 'Total', 2319, 2968, 2855, 3296, 3257, '2018-09-14 12:40:05', '2018-09-14 12:40:05');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tax_department5s`
 --
 
@@ -9999,6 +10124,12 @@ ALTER TABLE `expenditure_managements`
 -- Indexes for table `expenditure_on_salary_and_pensions`
 --
 ALTER TABLE `expenditure_on_salary_and_pensions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `financial_position1s`
+--
+ALTER TABLE `financial_position1s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -10542,6 +10673,12 @@ ALTER TABLE `tax_department3s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tax_department4s`
+--
+ALTER TABLE `tax_department4s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tax_department5s`
 --
 ALTER TABLE `tax_department5s`
@@ -10826,6 +10963,12 @@ ALTER TABLE `expenditure_managements`
 --
 ALTER TABLE `expenditure_on_salary_and_pensions`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `financial_position1s`
+--
+ALTER TABLE `financial_position1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `fiscal_performance1s`
@@ -11360,6 +11503,12 @@ ALTER TABLE `tax_department2s`
 --
 ALTER TABLE `tax_department3s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+
+--
+-- AUTO_INCREMENT for table `tax_department4s`
+--
+ALTER TABLE `tax_department4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tax_department5s`

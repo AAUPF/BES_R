@@ -324,6 +324,7 @@ return title
   end
 
   def eov(b,rain_fall_type,data,jip,views) 
+    color = "Blue"
 
     result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
     # jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
@@ -423,6 +424,188 @@ return title
                     end
       }]
 
+  end
+
+  def self.controller_code(rain_fall_type,search)
+
+    if search == "Total Receipts Revenue Account"
+
+      if rain_fall_type == "All"
+        data = [
+          "Tax Revenue",
+          "Non Tax Revenue",
+          "Grants in Aid and Contributions",
+        ]
+      else
+        rain_fall_type
+        data = [
+          "Total Receipts Revenue Account"
+        ]    
+      end
+  
+    elsif search == "Total Exp. Revenue Account"
+  
+      if rain_fall_type == "All"
+        data = [
+          "General Services, of which",
+          "Social Services",
+          "Economic Services",
+          "Grants-in-aid",
+        ]
+      else
+        rain_fall_type
+        data = [
+          "Total Exp. Revenue Account"
+        ]    
+      end
+  
+    elsif search == "Revenue Deficit"
+  
+      if rain_fall_type == "All"
+        data = [
+          "General Services, of which",
+          "Social Services",
+          "Economic Services",
+          "Grants-in-aid",
+        ]
+      else
+        rain_fall_type
+        data = [
+          "Revenue Deficit"
+        ]    
+      end
+  
+    elsif search == "Capital Receipts"
+  
+      if rain_fall_type == "All"
+        data = [
+          "Public Debt etc.",
+          "Recovery of Loan and Advances",
+        ]
+      else
+        rain_fall_type
+        data = [
+          "Capital Receipts"
+        ]    
+      end
+  
+    elsif search == "Capital Expenditure, of which"
+  
+      if rain_fall_type == "All"
+        data = [
+          "Capital Outlay",
+          "Loans and Advances",
+          "Public Debt.",
+        ]
+      else
+        rain_fall_type
+        data = [
+          "Capital Expenditure, of which"
+        ]    
+      end
+  
+    elsif search == "Total Expenditure"
+  
+      if rain_fall_type == "All"
+        data = [
+          "Plan Expenditure",
+          "Non Plan Expenditure",
+        ]
+      else
+        rain_fall_type
+        data = [
+          "Total Expenditure"
+        ]    
+      end
+  
+  
+    elsif search == "Gross Fiscal Deficit"
+  
+      if rain_fall_type == "All"
+        data = [
+          "Plan Expenditure",
+          "Non Plan Expenditure",
+        ]
+      else
+        rain_fall_type
+        data = [
+          "Gross Fiscal Deficit"
+        ]    
+      end
+  
+  
+  
+    elsif search == "Primary Deficit"
+  
+      if rain_fall_type == "All"
+        data = [
+          "Plan Expenditure",
+          "Non Plan Expenditure",
+        ]
+      else
+        rain_fall_type
+        data = [
+          "Primary Deficit"
+        ]    
+      end
+  
+  
+    elsif search == "Total Borrowings"
+  
+      if rain_fall_type == "All"
+        data = [
+          "Internal Debt Receipt",
+          "Loans from Central Government",
+        ]
+      else
+        rain_fall_type
+        data = [
+          "Total Borrowings"
+        ]    
+      end
+  
+    elsif search == "Repayment of Public Debt"
+  
+      if rain_fall_type == "All"
+        data = [
+          "Internal Debt Receipt",
+          "Loans from Central Government",
+        ]
+      else
+        rain_fall_type
+        data = [
+          "Repayment of Public Debt"
+        ]    
+      end
+  
+    elsif search == "Debt Outstanding"
+  
+      if rain_fall_type == "All"
+        data = [
+          "Internal Debt Receipt",
+          "Loans from Central Government",
+        ]
+      else
+        rain_fall_type
+        data = [
+          "Debt Outstanding"
+        ]    
+      end
+  
+    elsif search == "GSDP"
+  
+      if rain_fall_type == "All"
+        data = [
+          "Internal Debt Receipt",
+          "Loans from Central Government",
+        ]
+      else
+        rain_fall_type
+        data = [
+          "GSDP"
+        ]    
+      end
+    end
   end
     
 end

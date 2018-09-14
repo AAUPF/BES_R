@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Financial Position1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>2012-13</th>
+      <th>2013-14</th>
+      <th>2014-15</th>
+      <th>2015-16</th>
+      <th>2016-17</th>
+      <th>2017-18 be</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @financial_position1s.each do |financial_position1| %>
+      <tr>
+        <td><%= financial_position1.Sector %></td>
+        <td><%= financial_position1.2012-13 %></td>
+        <td><%= financial_position1.2013-14 %></td>
+        <td><%= financial_position1.2014-15 %></td>
+        <td><%= financial_position1.2015-16 %></td>
+        <td><%= financial_position1.2016-17 %></td>
+        <td><%= financial_position1.2017-18_BE %></td>
+        <td><%= financial_position1.Indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Financial Position1', new_financial_position1_path %>

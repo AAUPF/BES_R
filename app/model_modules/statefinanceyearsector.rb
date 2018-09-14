@@ -217,7 +217,7 @@ module Statefinanceyearsector
       hash_data = if _year == 'All'
                     Newmodulefunctions.year_all(b, data, views, _year, jip)
                   else
-                    Newmodulefunctions.single_year(b, data, views, _year)
+                    Newmodulefunctions.eov_year(b,data,views,_year,color,search)
                   end
     else
       if _year == 'All'

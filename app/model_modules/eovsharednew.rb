@@ -68,12 +68,72 @@ module Eovsharednew
           end
         end
       end
+
+
+
+
+      def new_search(search, compare, year, rain_fall_type,price)
+        if search == 'All'
+          if rain_fall_type == 'All'
+            where(Indicator: price)
+          else
+            if year == 'All'
+              if rain_fall_type == "None"
+                where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').where(Indicator: price).order('id')
+              else
+                where(Sector: rain_fall_type).where(Indicator: price).order('id')
+              end
+            else
+              if rain_fall_type == "All"
+                where(Indicator: price).order("#{year} ")
+    
+              elsif rain_fall_type == "None"
+                where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').where(Indicator: price).order('id')
+               else
+                where(Sector: rain_fall_type).where(Indicator: price).order("#{year} ")
+               end
+            end
+            # where(Year: year).order("#{rain_fall_type} ")
+          end
+        elsif compare == 'Bihar vs Sector'
+          if year == 'All'
+            where('Sector = ? OR Sector = ?', search, 'Bihar').where(Indicator: price).order(:id)
+          else
+            where('Sector = ? OR Sector = ?', search, 'Bihar').where('year = ?', year).where(Indicator: price).order(:id)
+          end
+        else
+          if rain_fall_type == 'All'
+            where(Indicator: price)
+          else
+            if year == 'All'
+              if rain_fall_type == "None"
+                where('Sector = ? ', search).where(Indicator: price).order('id')
+              else
+                where('Sector = ? ', rain_fall_type).where(Indicator: price).order('id')
+              end
+            else
+    
+              if rain_fall_type == "None"
+    
+                if search == "All"
+                  where('Sector = ? ', search).where(Indicator: price).order('id')
+                else
+                  where('Sector = ? ', search).where(Indicator: price).order('id')
+                end
+              else
+                # all
+                where('Sector = ? ', rain_fall_type).where(Indicator: price).order('id')
+              end
+            end
+          end
+        end
+      end
     
       # Logic to generate table starts
       def table(b, rain_fall_type, _year, ji, compare,search,data)
         dataset = rain_fall_type.tr('_', ' ')
     
-        
+
         if _year == "2011-16"
           years = "CAGR(2011-16)"
         else
@@ -132,12 +192,7 @@ module Eovsharednew
                   end  
           end
           
-        j = if rain_fall_type == 'Productivity'
-              b.each { |item| item[:Productivity] = item[:Productivity] / 100 }
-            else
-              b
-            end
-            if compare == 'All'
+        j = if compare == 'All'
                 ji1 = []
                 b.each do |el|
                       data.each do |el1|
@@ -148,9 +203,22 @@ module Eovsharednew
                     end
     
              data = { column: hash_data, data:  ji1 }
-    
+                elsif rain_fall_type == 'All'
+
+                    ji1 = []
+                    b.each do |el|
+                          data.each do |el1|
+                           if el.Sector ==el1
+                             ji1.push(el)
+                           end
+                          end
+                        end
+        
+                 data = { column: hash_data, data:  ji1 }
+
+
             else
-              data = { column: hash_data, data: j }
+              data = { column: hash_data, data: b }
             end  
     
     

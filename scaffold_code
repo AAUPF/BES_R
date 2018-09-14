@@ -1,3 +1,3 @@
-rails g scaffold SectoralExpenditure2  Sector:string	"2012-13":float	"2013-14":float	"2014-15":float	"2015-16":float	"2016-17":float	"2017-18_BE":float Sub_Sector:string
+rails g scaffold TaxDepartment4  Sector:string	"2012-13":float	"2013-14":float	"2014-15":float	"2015-16":float	"2016-17":float	
 
 rails d scaffold DebtManagement4 
