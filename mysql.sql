@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Sep 14, 2018 at 05:59 AM
+-- Host: localhost:3306
+-- Generation Time: Sep 14, 2018 at 06:11 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `newdata`
+-- Database: `bihar_survey`
 --
 
 -- --------------------------------------------------------
@@ -7964,8 +7964,11 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180911124824'),
 ('20180911130638'),
 ('20180912063537'),
+('20180912121935'),
 ('20180912123018'),
+('20180913095424'),
 ('20180913101027'),
+('20180913112235'),
 ('20180913114123');
 
 -- --------------------------------------------------------
@@ -9239,6 +9242,67 @@ INSERT INTO `state_domestic_product11s` (`id`, `Districts`, `Target`, `Achieveme
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `state_public_sector2s`
+--
+
+DROP TABLE IF EXISTS `state_public_sector2s`;
+CREATE TABLE `state_public_sector2s` (
+  `id` bigint(20) NOT NULL,
+  `Type_of_Company_or_corporation` varchar(255) DEFAULT NULL,
+  `Government_Companies_Capital` float DEFAULT NULL,
+  `Government_Companies_Long_Term_Loans` float DEFAULT NULL,
+  `Total_Government_Companies` float DEFAULT NULL,
+  `Statutory_Corporations_Capital` float DEFAULT NULL,
+  `Statutory_Corporations_Long_Term_Loans` float DEFAULT NULL,
+  `Total_Statutory_Corporations` float DEFAULT NULL,
+  `Grand_Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_public_sector2s`
+--
+
+INSERT INTO `state_public_sector2s` (`id`, `Type_of_Company_or_corporation`, `Government_Companies_Capital`, `Government_Companies_Long_Term_Loans`, `Total_Government_Companies`, `Statutory_Corporations_Capital`, `Statutory_Corporations_Long_Term_Loans`, `Total_Statutory_Corporations`, `Grand_Total`, `created_at`, `updated_at`) VALUES
+(1, 'Working', 31028, 13657, 44685, 186, 1095, 1280, 45965, '2018-09-12 12:20:36', '2018-09-12 12:20:36'),
+(2, 'Non-Working', 181, 548, 729, NULL, NULL, NULL, 729, '2018-09-12 12:20:36', '2018-09-12 12:20:36'),
+(3, 'Total', 31209, 14205, 45414, 186, 1095, 1280, 46694, '2018-09-12 12:20:36', '2018-09-12 12:20:36');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `state_public_sector3s`
+--
+
+DROP TABLE IF EXISTS `state_public_sector3s`;
+CREATE TABLE `state_public_sector3s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `Number_of_Statutory_Corporations` float DEFAULT NULL,
+  `Number_of_Working_Companies` float DEFAULT NULL,
+  `Number_of_NonWorking_Companies` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_public_sector3s`
+--
+
+INSERT INTO `state_public_sector3s` (`id`, `Sector`, `Number_of_Statutory_Corporations`, `Number_of_Working_Companies`, `Number_of_NonWorking_Companies`, `created_at`, `updated_at`) VALUES
+(1, 'Agriculture', 0, 3, 0, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
+(2, 'Power', 0, 9, 0, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
+(3, 'Infrastructure ', 0, 6, 1, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
+(4, 'Manufacturing', 0, 3, 12, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
+(5, 'Services', 2, 3, 1, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
+(6, 'Finance', 1, 4, 4, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
+(7, 'Others', 0, 3, 10, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
+(8, 'Total', 3, 31, 40, '2018-09-13 09:54:53', '2018-09-13 09:54:53');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `support_institutions2s`
 --
 
@@ -9477,6 +9541,110 @@ INSERT INTO `tax_department5s` (`id`, `Districts`, `Number_of_Document`, `Total_
 (37, 'Araria', 17379, 28.72, 35.17, 81.7, 16526, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
 (38, 'Katihar', 17449, 37.53, 43.68, 85.9, 21508, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
 (39, 'Total', 558797, 1702.14, 2024.75, 84.1, 30461, '2018-09-07 05:53:46', '2018-09-07 05:53:46');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tax_department6s`
+--
+
+DROP TABLE IF EXISTS `tax_department6s`;
+CREATE TABLE `tax_department6s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Number_of_Document` float DEFAULT NULL,
+  `Registration_Fees` float DEFAULT NULL,
+  `Stamp_Fee` float DEFAULT NULL,
+  `Total_Receipt` float DEFAULT NULL,
+  `Target` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tax_department6s`
+--
+
+INSERT INTO `tax_department6s` (`id`, `Districts`, `Number_of_Document`, `Registration_Fees`, `Stamp_Fee`, `Total_Receipt`, `Target`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 79112, 142, 488, 631, 677, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(2, 'Nalanda', 29250, 18, 59, 78, 89, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(3, 'Bhojpur', 27709, 19, 60, 80, 91, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(4, 'Buxar', 14426, 11, 33, 44, 53, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(5, 'Rohtas', 26480, 21, 62, 83, 87, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(6, 'Kaimur', 14156, 8, 23, 31, 39, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(7, 'Gaya', 38711, 34, 104, 138, 147, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(8, 'Jehanabad', 10194, 7, 23, 30, 32, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(9, 'Arwal', 5673, 3, 10, 13, 15, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(10, 'Nawadah', 18682, 11, 34, 45, 45, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(11, 'Aurangabad', 25048, 17, 51, 68, 75, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(12, 'Saran', 36704, 23, 67, 90, 95, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(13, 'Siwan', 35244, 23, 66, 89, 97, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(14, 'Gopalganj', 30793, 21, 61, 81, 86, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(15, 'WestChamparan', 45640, 20, 58, 78, 86, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(16, 'EastChamparan', 63728, 40, 114, 153, 155, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(17, 'Muzaffarpur', 58102, 48, 137, 185, 204, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(18, 'Sitamarhi', 39375, 23, 66, 89, 101, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(19, 'Sheohar', 7508, 3, 10, 14, 16, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(20, 'Vaishali', 36740, 28, 82, 110, 115, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(21, 'Darbhanga', 36876, 25, 75, 100, 110, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(22, 'Madhubani', 48077, 24, 67, 91, 99, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(23, 'Samastipur', 50032, 25, 72, 97, 108, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(24, 'Begusarai', 28037, 22, 69, 91, 102, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(25, 'Munger', 8438, 8, 26, 34, 34, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(26, 'Sheikhpura', 8340, 3, 11, 14, 15, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(27, 'Lakhisarai', 9575, 6, 19, 25, 28, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(28, 'Jamui', 15372, 7, 21, 28, 30, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(29, 'Khagaria', 12443, 7, 21, 28, 33, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(30, 'Bhagalpur', 27039, 26, 80, 106, 110, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(31, 'Banka', 17015, 10, 26, 35, 40, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(32, 'Saharsha', 19559, 12, 38, 50, 56, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(33, 'Supaul', 24527, 11, 31, 42, 41, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(34, 'Madhepura', 19179, 11, 33, 44, 45, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(35, 'Purnia', 33895, 23, 71, 95, 100, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(36, 'Kishanganj', 26915, 9, 29, 38, 45, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(37, 'Araria', 35906, 15, 42, 57, 66, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(38, 'Katihar', 38674, 18, 51, 69, 85, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(39, 'Total', 1103170, 784, 2391, 3175, 3450, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(40, 'Patna', 69684, 137, 483, 620, 756, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(41, 'Nalanda', 25808, 20, 63, 83, 91, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(42, 'Bhojpur', 24680, 27, 79, 106, 95, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(43, 'Buxar', 12392, 10, 31, 41, 53, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(44, 'Rohtas', 23482, 22, 68, 91, 99, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(45, 'Kaimur', 13530, 8, 23, 31, 37, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(46, 'Gaya', 36673, 32, 103, 135, 165, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(47, 'Jehanabad', 9189, 8, 26, 33, 35, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(48, 'Arwal', 5121, 3, 10, 14, 16, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(49, 'Nawadah', 16647, 9, 29, 38, 54, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(50, 'Aurangabad', 20493, 18, 54, 71, 82, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(51, 'Saran', 32485, 21, 62, 83, 108, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(52, 'Siwan', 30849, 21, 62, 84, 106, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(53, 'Gopalganj', 26461, 19, 55, 75, 97, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(54, 'WestChamparan', 38500, 20, 58, 78, 93, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(55, 'EastChamparan', 51988, 36, 103, 139, 184, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(56, 'Muzaffarpur', 49459, 44, 128, 172, 221, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(57, 'Sitamarhi', 32094, 36, 103, 140, 107, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(58, 'Sheohar', 6587, 3, 9, 12, 16, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(59, 'Vaishali', 30809, 25, 74, 99, 132, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(60, 'Darbhanga', 31175, 23, 67, 90, 119, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(61, 'Madhubani', 40771, 21, 59, 80, 107, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(62, 'Samastipur', 42282, 23, 67, 90, 115, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(63, 'Begusarai', 23687, 21, 63, 84, 109, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(64, 'Munger', 7320, 8, 25, 33, 41, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(65, 'Sheikhpura', 7445, 3, 10, 13, 17, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(66, 'Lakhisarai', 8149, 6, 18, 24, 30, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(67, 'Jamui', 13664, 7, 19, 26, 34, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(68, 'Khagaria', 11041, 7, 21, 28, 34, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(69, 'Bhagalpur', 22073, 31, 97, 129, 127, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(70, 'Banka', 15559, 9, 24, 33, 42, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(71, 'Saharsha', 15647, 11, 34, 45, 60, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(72, 'Supaul', 19962, 10, 27, 37, 51, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(73, 'Madhepura', 16444, 11, 33, 44, 53, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(74, 'Purnia', 29501, 21, 66, 88, 114, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(75, 'Kishanganj', 23457, 10, 29, 39, 47, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(76, 'Araria', 29243, 13, 38, 52, 69, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(77, 'Katihar', 31550, 17, 50.75, 68, 82, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(78, 'Total', 945901, 773, 2321, 3145, 3800, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48');
 
 -- --------------------------------------------------------
 
@@ -10338,6 +10506,18 @@ ALTER TABLE `state_domestic_product11s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `state_public_sector2s`
+--
+ALTER TABLE `state_public_sector2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `state_public_sector3s`
+--
+ALTER TABLE `state_public_sector3s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `support_institutions2s`
 --
 ALTER TABLE `support_institutions2s`
@@ -10365,6 +10545,12 @@ ALTER TABLE `tax_department3s`
 -- Indexes for table `tax_department5s`
 --
 ALTER TABLE `tax_department5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tax_department6s`
+--
+ALTER TABLE `tax_department6s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -11140,6 +11326,18 @@ ALTER TABLE `state_domestic_product11s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
 
 --
+-- AUTO_INCREMENT for table `state_public_sector2s`
+--
+ALTER TABLE `state_public_sector2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `state_public_sector3s`
+--
+ALTER TABLE `state_public_sector3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
 -- AUTO_INCREMENT for table `support_institutions2s`
 --
 ALTER TABLE `support_institutions2s`
@@ -11168,6 +11366,12 @@ ALTER TABLE `tax_department3s`
 --
 ALTER TABLE `tax_department5s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `tax_department6s`
+--
+ALTER TABLE `tax_department6s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- AUTO_INCREMENT for table `tax_gsdp_ratios`
