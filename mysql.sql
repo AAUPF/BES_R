@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 10, 2018 at 12:59 PM
+-- Generation Time: Sep 14, 2018 at 05:59 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -2724,6 +2724,116 @@ INSERT INTO `demographic_profile2s` (`id`, `Districts`, `Population`, `Sex_Ratio
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `expenditure_management1s`
+--
+
+DROP TABLE IF EXISTS `expenditure_management1s`;
+CREATE TABLE `expenditure_management1s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `expenditure_management1s`
+--
+
+INSERT INTO `expenditure_management1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `created_at`, `updated_at`) VALUES
+(1, 'General Services ', 26.9, 27.4, 27.9, 24.9, 24.2, 26, '2018-09-11 09:18:18', '2018-09-11 09:18:18'),
+(2, 'Social Services ', 33.4, 32.8, 33.5, 32, 32.3, 33.3, '2018-09-11 09:18:18', '2018-09-11 09:18:18'),
+(3, 'Economic Services ', 18.4, 17.5, 15.3, 17.5, 18.5, 17.3, '2018-09-11 09:18:18', '2018-09-11 09:18:18'),
+(4, 'Capital Outlay', 13.8, 17.4, 19.2, 21.3, 21.5, 20.1, '2018-09-11 09:18:18', '2018-09-11 09:18:18'),
+(5, 'Discharge of Public Debt ', 4.4, 3.9, 3.8, 3.7, 3.3, 3, '2018-09-11 09:18:18', '2018-09-11 09:18:18'),
+(6, 'Loans and Advances ', 3, 1, 0.4, 0.6, 0.1, 0.3, '2018-09-11 09:18:18', '2018-09-11 09:18:18'),
+(7, 'Total', 100, 100, 100, 100, 100, 100, '2018-09-11 09:18:18', '2018-09-11 09:18:18');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `expenditure_management2s`
+--
+
+DROP TABLE IF EXISTS `expenditure_management2s`;
+CREATE TABLE `expenditure_management2s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `expenditure_management2s`
+--
+
+INSERT INTO `expenditure_management2s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `created_at`, `updated_at`) VALUES
+(1, 'Revenue Account', 78.7, 77.7, 76.6, 74.4, 75, 76.6, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(2, 'Non-Developmental  Revenue Expenditure', 26.6, 26.9, 27.5, 24.5, 23.9, 25.6, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(3, 'Developmental Revenue Expenditure', 52.1, 50.8, 49.2, 49.9, 51.1, 51, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(4, 'General Services (Public Works)', 0.4, 0.5, 0.4, 0.4, 0.3, 0.4, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(5, 'Social Services', 33.4, 32.8, 33.5, 32, 32.3, 33.3, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(6, 'Economic Services', 18.4, 17.5, 15.3, 17.5, 18.5, 17.3, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(7, 'Capital Account ', 21.3, 22.3, 23.4, 25.6, 25, 23.4, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(8, 'Non-Developmental  Capital Expenditure', 5.1, 5, 4.6, 6, 4.2, 3.7, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(9, 'General Service (Except Public Works)', 0.7, 1.1, 0.8, 2.3, 0.9, 0.7, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(10, 'Discharge of Public Debt (General Services) ', 4.4, 3.9, 3.8, 3.7, 3.3, 3, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(11, 'Loans and Advances by State (General Services)', 0, 0, 0, 0, 0, 0, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(12, 'Developmental Capital Expenditure', 16.2, 17.3, 18.7, 19.6, 20.8, 19.7, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(13, 'Capital Outlay (General Services (Public Works), Social and Economic Services)', 13.2, 16.3, 18.4, 19, 20.7, 19.4, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(14, 'Loans and Advances by State  (Social and Economic Services)', 3, 1, 0.4, 0.5, 0.1, 0.3, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(15, 'Total Non- Developmental Expenditure ', 31.7, 31.9, 32.1, 30.5, 28.1, 29.4, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(16, 'Total Developmental Expenditure', 68.3, 68.1, 67.9, 69.5, 71.9, 70.6, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
+(17, 'Total Expenditure ', 100, 100, 100, 100, 100, 100, '2018-09-11 10:47:20', '2018-09-11 10:47:20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `expenditure_management3s`
+--
+
+DROP TABLE IF EXISTS `expenditure_management3s`;
+CREATE TABLE `expenditure_management3s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `2012-17` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `expenditure_management3s`
+--
+
+INSERT INTO `expenditure_management3s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `2012-17`, `created_at`, `updated_at`) VALUES
+(1, 'General Services', 5.2, 18.1, 19.9, 5.9, 9.4, 35.9, 13.2, '2018-09-11 11:17:16', '2018-09-11 11:17:16'),
+(2, 'Social Services', 23.4, 14.2, 20.1, 13.3, 13.3, 30.9, 15.2, '2018-09-11 11:17:16', '2018-09-11 11:17:16'),
+(3, 'Economic Services', 26.6, 10.6, 2.7, 36.4, 18.9, 18.2, 16.5, '2018-09-11 11:17:16', '2018-09-11 11:17:16'),
+(4, 'Capital Outlay', 8.3, 46.1, 29.6, 32, 13.5, 18.3, 29.8, '2018-09-11 11:17:16', '2018-09-11 11:17:16'),
+(5, 'Discharge of Public Debt', 5, 1.6, 15.7, 14.3, 2.2, 13.8, 8.2, '2018-09-11 11:17:16', '2018-09-11 11:17:16'),
+(6, 'Loans and Advances ', 9.4, -61.3, -54.3, 68.5, -81.7, 330.1, -51.7, '2018-09-11 11:17:16', '2018-09-11 11:17:16'),
+(7, 'Total ', 15, 16.2, 17.8, 18.6, 12.4, 26.7, 16.2, '2018-09-11 11:17:16', '2018-09-11 11:17:16');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `expenditure_managements`
 --
 
@@ -2740,6 +2850,61 @@ CREATE TABLE `expenditure_managements` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `expenditure_managements`
+--
+
+INSERT INTO `expenditure_managements` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `created_at`, `updated_at`) VALUES
+(1, 'General Services', 18645, 22018, 26408, 27972, 30607, 41603, '2018-09-10 15:36:23', '2018-09-10 15:36:23'),
+(2, 'Social Services', 23107, 26395, 31713, 35943, 40737, 53306, '2018-09-10 15:36:23', '2018-09-10 15:36:23'),
+(3, 'Economic Services', 12710, 14060, 14445, 19696, 23417, 27688, '2018-09-10 15:36:23', '2018-09-10 15:36:23'),
+(4, 'Grants in Aid ', 4, 4, 4, 4, 4, 5, '2018-09-10 15:36:23', '2018-09-10 15:36:23'),
+(5, 'Capital Outlay', 9585, 14001, 18150, 23966, 27208, 32196, '2018-09-10 15:36:23', '2018-09-10 15:36:23'),
+(6, 'Discharge of Public Debt ', 3070, 3120, 3609, 4125, 4215, 4797, '2018-09-10 15:36:23', '2018-09-10 15:36:23'),
+(7, 'Loans and Advances by State', 2086, 807, 369, 621, 114, 490, '2018-09-10 15:36:23', '2018-09-10 15:36:23'),
+(8, 'Total  ', 69207, 80405, 94698, 112328, 126302, 160086, '2018-09-10 15:36:23', '2018-09-10 15:36:23');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `expenditure_on_salary_and_pensions`
+--
+
+DROP TABLE IF EXISTS `expenditure_on_salary_and_pensions`;
+CREATE TABLE `expenditure_on_salary_and_pensions` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `expenditure_on_salary_and_pensions`
+--
+
+INSERT INTO `expenditure_on_salary_and_pensions` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `created_at`, `updated_at`) VALUES
+(1, 'Expenditure on Salaries  ', 13558, 14037, 14607, 14924, 15784, 18657, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
+(2, 'Non-Plan Head', 12865, 13315, 13910, 14307, 15097, 18010, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
+(3, 'Plan Head', 693, 721, 697, 617, 687, 647, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
+(4, 'Salary as percentage of GSDP', 4.8, 4.4, 4.3, 3.9, 3.6, 4, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
+(5, 'Salary as percentage of RR', 22.8, 20.4, 18.6, 15.5, 14.9, 13.6, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
+(6, 'Salary as percentage of RE', 24.9, 22.5, 20.1, 17.8, 16.7, 15.2, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
+(7, 'Expenditure on Pensions', 8364, 9482, 11345, 11850, 12508, 19878, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
+(8, 'Rate of Growth', 7.1, 13.4, 19.6, 4.5, 5.5, 58.9, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
+(9, 'Pension as percentage of GSDP', 3, 3, 3.3, 3.1, 2.9, 4.3, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
+(10, 'Pension as percentage of RR', 14, 13.8, 14.5, 12.3, 11.8, 14.5, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
+(11, 'Pension as percentage of RE', 15.4, 15.2, 15.6, 14.2, 13.2, 16.2, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
+(12, 'Total expenditure on Salary and Pension', 21921, 23518, 25952, 26774, 28292, 38535, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
+(13, 'Total as percentage of GSDP', 7.8, 7.4, 7.6, 7, 6.5, 8.3, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
+(14, 'Total as percentage of RR', 36.8, 34.1, 33.1, 27.9, 26.8, 28.1, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
+(15, 'Total as percentage of RE', 40.2, 37.6, 35.8, 32, 29.9, 31.4, '2018-09-11 13:26:16', '2018-09-11 13:26:16');
 
 -- --------------------------------------------------------
 
@@ -6221,6 +6386,43 @@ INSERT INTO `production_productivity12s` (`id`, `Districts`, `Area`, `Production
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `qualityofexpenditures`
+--
+
+DROP TABLE IF EXISTS `qualityofexpenditures`;
+CREATE TABLE `qualityofexpenditures` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `qualityofexpenditures`
+--
+
+INSERT INTO `qualityofexpenditures` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `created_at`, `updated_at`) VALUES
+(1, 'Capital Outlay (Rs. crore)', 9585, 14001, 18150, 23966, 27208, 32196, '2018-09-12 06:55:27', '2018-09-12 06:55:27'),
+(2, 'Revenue Expenditure (Rs. crore)', 54466, 62477, 72570, 83616, 94765, 122603, '2018-09-12 06:55:27', '2018-09-12 06:55:27'),
+(3, 'Expenditure on Social/ Economic Services (Rs. crore)', 35817, 40455, 46158, 55639, 64154, 80994, '2018-09-12 06:55:27', '2018-09-12 06:55:27'),
+(4, '(i) Salary Component (Rs. crore)', 9033, 9072, 9176, 9108, 9349, 9981, '2018-09-12 06:55:27', '2018-09-12 06:55:27'),
+(5, 'Salary component (Percentage)', 25.2, 22.4, 19.9, 16.4, 14.6, 12.3, '2018-09-12 06:55:27', '2018-09-12 06:55:27'),
+(6, '(ii)  Non salary component (Rs. crore)', 26784, 31384, 36982, 46531, 54805, 71013, '2018-09-12 06:55:27', '2018-09-12 06:55:27'),
+(7, '       Non-salary component (Percentage)', 74.8, 77.6, 80.1, 83.6, 85.4, 87.7, '2018-09-12 06:55:27', '2018-09-12 06:55:27'),
+(8, 'Capital Outlay/ Total Expenditure (Percentage)', 13.8, 17.4, 19.2, 21.3, 21.5, 20.1, '2018-09-12 06:55:27', '2018-09-12 06:55:27'),
+(9, 'Revenue Expenditure / Total Expenditure (Percentage)', 78.7, 77.7, 76.6, 74.4, 75, 76.6, '2018-09-12 06:55:27', '2018-09-12 06:55:27'),
+(10, 'Revenue Expenditure /GSDP (Percentage)', 19.3, 19.7, 21.2, 21.9, 21.6, 26.3, '2018-09-12 06:55:27', '2018-09-12 06:55:27'),
+(11, 'Capital Outlay /GSDP (Percentage)', 3.4, 4.4, 5.3, 6.3, 6.2, 6.9, '2018-09-12 06:55:27', '2018-09-12 06:55:27');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `rainfall1s`
 --
 
@@ -7498,6 +7700,51 @@ INSERT INTO `revenue_account5s` (`id`, `Transfer_of_Resources`, `Amount`, `Year`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `revenue_expenditures`
+--
+
+DROP TABLE IF EXISTS `revenue_expenditures`;
+CREATE TABLE `revenue_expenditures` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `revenue_expenditures`
+--
+
+INSERT INTO `revenue_expenditures` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `created_at`, `updated_at`) VALUES
+(1, 'Revenue Expenditure (RE)', 54466, 62477, 72570, 83616, 94765, 122603, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(2, 'Capital Expenditure (CE)', 14740, 17928, 22128, 28712, 31537, 37483, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(3, 'Total Expenditure (TE)', 69207, 80405, 94698, 112328, 126302, 160086, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(4, 'Non Plan Expenditure', 40825, 46728, 50759, 58596, 65462, 78818, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(5, 'Revenue A/c (NPRE)', 37574, 43381, 47059, 53965, 61189, 73952, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(6, 'Capital A/c', 3252, 3347, 3700, 4630, 4273, 4867, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(7, 'Plan Expenditure', 28381, 33678, 43939, 53732, 60840, 81267, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(8, 'Revenue A/c (PRE)', 16892, 19096, 25511, 29651, 33576, 48651, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(9, 'Capital A/c', 11489, 14581, 18428, 24082, 27264, 32616, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(10, 'Rate of growth of NPRE (Percentage)', 10.47, 15.46, 8.48, 14.68, 13.39, 20.86, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(11, 'Rate of growth of PRE (Percentage)', 35.28, 13.05, 33.59, 16.23, 13.24, 44.9, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(12, 'RE/TE(Percentage)', 78.7, 77.7, 76.63, 74.44, 75.03, 76.59, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(13, 'NPRE/TE (Percentage)', 54.29, 53.95, 49.69, 48.04, 48.45, 46.2, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(14, 'TE/GSDP(Percentage)', 24.51, 25.36, 27.61, 29.44, 28.83, 34.33, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(15, 'RE/GSDP(Percentage)', 13.31, 13.68, 13.72, 14.15, 13.97, 15.86, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(16, 'Revenue Receipt (RR)/TE (Percentage)', 86.07, 85.71, 82.81, 85.57, 83.6, 85.68, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(17, 'NPRE/RR(Percentage)', 63.08, 62.95, 60.01, 56.14, 57.95, 53.92, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(18, 'Buoyancy of RE w.r.t. GSDP', 1.2, 1.2, 1.98, 1.35, 0.9, 4.54, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
+(19, 'Buoyancy of RE w.r.t. RR', 1.07, 0.94, 1.17, 0.67, 1.35, 0.98, '2018-09-11 12:51:57', '2018-09-11 12:51:57');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `schema_migrations`
 --
 
@@ -7710,7 +7957,172 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180910045939'),
 ('20180910081251'),
 ('20180910114200'),
-('20180910123231');
+('20180910123231'),
+('20180911085726'),
+('20180911101136'),
+('20180911111155'),
+('20180911124824'),
+('20180911130638'),
+('20180912063537'),
+('20180912123018'),
+('20180913101027'),
+('20180913114123');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sectoral_expenditure1s`
+--
+
+DROP TABLE IF EXISTS `sectoral_expenditure1s`;
+CREATE TABLE `sectoral_expenditure1s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sectoral_expenditure1s`
+--
+
+INSERT INTO `sectoral_expenditure1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Total Expenditure (Rs. crore)', 3262, 3670, 3615, 4120, 2414, 4376, 'Agriculture and Allied Activities', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(2, 'Revenue Expenditure (Rs. crore)', 3170, 3193, 3431, 3515, 2287, 4066, 'Agriculture and Allied Activities', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(3, '(a) Salary component (Percentage)', 14.8, 14.7, 13.9, 14.6, 22.7, 15, 'Agriculture and Allied Activities', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(4, '(b) Non-salary component (Percentage)', 85.2, 85.3, 86.1, 85.4, 77.3, 85, 'Agriculture and Allied Activities', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(5, 'Capital Outlay (Rs. crore)', 92, 477, 185, 605, 128, 310, 'Agriculture and Allied Activities', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(6, 'Capital Outlay (Percentage)', 2.8, 13, 5.1, 14.7, 5.3, 7.1, 'Agriculture and Allied Activities', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(7, 'Total Expenditure (Rs. crore)', 2854, 2838, 2444, 2836, 2844, 4388, 'Irrigation and Flood Control', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(8, 'Revenue Expenditure (Rs. crore)', 914, 1039, 1020, 1151, 1048, 1290, 'Irrigation and Flood Control', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(9, '(a) Salary component (Percentage)', 65.9, 56.3, 58, 57, 56.9, 54.6, 'Irrigation and Flood Control', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(10, '(b) Non-salary component (Percentage)', 34.1, 43.7, 42, 43, 43.1, 45.4, 'Irrigation and Flood Control', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(11, 'Capital Outlay (Rs. crore) ', 1940, 1799, 1424, 1685, 1796, 3098, 'Irrigation and Flood Control', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(12, 'Capital Outlay (Percentage)', 68, 63.4, 58.3, 59.4, 63.1, 70.6, 'Irrigation and Flood Control', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(13, 'Total Expenditure (Rs. crore)', 3374, 5133, 7948, 8945, 13437, 10575, 'Energy and Power', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(14, 'Revenue Expenditure (Rs. crore)', 3200, 3236, 3773, 6151, 7698, 5092, 'Energy and Power', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(15, '(a) Salary component (Percentage)', 0, 0, 0, 0, 0, 0, 'Energy and Power', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(16, '(b) Non-salary component (Percentage)', 100, 100, 100, 100, 100, 100, 'Energy and Power', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(17, 'Capital Outlay (Rs. crore) ', 174, 1897, 4175, 2794, 5739, 5483, 'Energy and Power', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(18, 'Capital Outlay (Percentage)', 5.1, 37, 52.5, 31.2, 42.7, 51.8, 'Energy and Power', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(19, 'Total Expenditure (Rs. crore)', 4138, 5471, 5194, 6130, 7388, 7556, 'Transport', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(20, 'Revenue Expenditure (Rs. crore)', 826, 1381, 996, 1712, 1787, 2023, 'Transport', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(21, '(a) Salary component (Percentage)', 24.6, 15.4, 21.7, 13.9, 13, 14.4, 'Transport', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(22, '(b) Non-salary component (Percentage)', 75.4, 84.6, 78.3, 86.1, 87, 85.6, 'Transport', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(23, 'Capital Outlay (Rs. crore) ', 3313, 4090, 4198, 4417, 5601, 5534, 'Transport', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(24, 'Capital Outlay (Percentage)', 80.1, 74.8, 80.8, 72.1, 75.8, 73.2, 'Transport', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(25, 'Total Expenditure (Rs. crore)', 583, 1115, 564, 1230, 1116, 1126, 'Industry and Minerals', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(26, 'Revenue Expenditure (Rs. crore)', 534, 580, 561, 1201, 888, 936, 'Industry and Minerals', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(27, '(a) Salary component (Percentage)', 15.6, 11, 11.5, 5.2, 7, 8.7, 'Industry and Minerals', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(28, '(b) Non-salary component (Percentage)', 84.4, 89, 88.5, 94.8, 93, 91.3, 'Industry and Minerals', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(29, 'Capital Outlay (Rs. crore) ', 49, 535, 3, 29, 228, 190, 'Industry and Minerals', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(30, 'Capital Outlay (Percentage)', 8.4, 48, 0.5, 2.4, 20.4, 16.9, 'Industry and Minerals', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(31, 'Total Expenditure (Rs. crore)', 20246, 24871, 29173, 37305, 44943, 51332, 'Total (Economic Services)', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(32, 'Revenue Expenditure (Rs. crore)', 12710, 14060, 14445, 19696, 23417, 27688, 'Total (Economic Services)', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(33, '(a) Salary component (Percentage)', 15.2, 14.6, 14.4, 11.2, 9.2, 8.7, 'Total (Economic Services)', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(34, '(b) Non-salary component (Percentage)', 84.8, 85.4, 85.6, 88.8, 90.8, 91.3, 'Total (Economic Services)', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(35, 'Capital Outlay (Rs. crore)', 7536, 10811, 14728, 17609, 21526, 23643, 'Total (Economic Services)', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(36, 'Capital Outlay (Percentage)', 37.2, 43.5, 50.5, 47.2, 47.9, 46.1, 'Total (Economic Services)', '2018-09-13 10:14:49', '2018-09-13 10:14:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sectoral_expenditure2s`
+--
+
+DROP TABLE IF EXISTS `sectoral_expenditure2s`;
+CREATE TABLE `sectoral_expenditure2s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sectoral_expenditure2s`
+--
+
+INSERT INTO `sectoral_expenditure2s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Estimated Population (crore)', 10.6, 10.9, 11.1, 11.4, 11.6, 11.9, 'Estimated Population (crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(2, 'Education, Sports & Culture', 14445, 15047, 16531, 19155, 20226, 26394, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(3, 'Medical and Public Health', 2398, 2574, 3604, 4571, 5493, 6535, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(4, 'Water Supply and Sanitation', 2587, 3605, 4542, 4518, 8786, 13148, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(5, 'Social Services', 24438, 28253, 33386, 38684, 44329, 58492, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(6, 'Economic Services', 20246, 24871, 29173, 37305, 44943, 51332, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(7, 'Capital Outlay ', 9585, 14001, 18150, 23966, 27208, 32196, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(8, 'General Services', 19362, 23351, 28157, 31589, 32697, 44970, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(9, 'Education, Sports & Culture', 1358, 1383, 1485, 1682, 1737, 2215, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(10, 'Medical and Public Health', 225, 237, 324, 401, 472, 549, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(11, 'Water Supply and Sanitation', 243, 331, 408, 397, 754, 1104, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(12, 'Social Services', 2297, 2596, 2999, 3397, 3806, 4910, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(13, 'Economic Services', 1903, 2286, 2621, 3276, 3859, 4309, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(14, 'Capital Outlay ', 901, 1287, 1631, 2105, 2336, 2702, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(15, 'General Services', 1820, 2146, 2530, 2774, 2807, 3775, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sectoral_expenditures`
+--
+
+DROP TABLE IF EXISTS `sectoral_expenditures`;
+CREATE TABLE `sectoral_expenditures` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sectoral_expenditures`
+--
+
+INSERT INTO `sectoral_expenditures` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Total Expenditure (Rs. crore)', 14445, 15047, 16531, 19155, 20226, 26394, 'Education, Sports, Arts and Culture ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(2, 'Revenue Expenditure (Rs. crore)', 14080, 14344, 16267, 18605, 19152, 24696, 'Education, Sports, Arts and Culture ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(3, '(a)  Salary component (Percentage)', 44.5, 33.7, 30, 24, 22.8, 19.5, 'Education, Sports, Arts and Culture ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(4, '(b)  Non-salary component (Percentage)', 55.5, 66.3, 70, 76, 77.2, 80.5, 'Education, Sports, Arts and Culture ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(5, 'Capital Outlay (Rs. crore)', 364, 704, 263, 550, 1074, 1698, 'Education, Sports, Arts and Culture ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(6, 'Capital Outlay (Percentage)', 2.5, 4.7, 1.6, 2.9, 5.3, 6.4, 'Education, Sports, Arts and Culture ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(7, 'Total Expenditure (Rs. crore)', 2398, 2574, 3604, 4571, 5493, 6535, 'Health and Family Welfare ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(8, 'Revenue Expenditure (Rs. crore)', 1836, 2113, 3288, 3481, 4622, 5711, 'Health and Family Welfare ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(9, '(a)  Salary component (Percentage)', 79.6, 74.8, 48.6, 52.6, 48.3, 37.2, 'Health and Family Welfare ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(10, '(b)  Non-salary component (Percentage)', 20.4, 25.2, 51.4, 47.4, 51.7, 62.8, 'Health and Family Welfare ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(11, 'Capital Outlay (Rs. crore)', 563, 460, 316, 1091, 870, 824, 'Health and Family Welfare ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(12, 'Capital Outlay (Percentage)', 23.5, 17.9, 8.8, 23.9, 15.8, 12.6, 'Health and Family Welfare ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(13, 'Total Expenditure (Rs. crore)', 2587, 3605, 4542, 4518, 8786, 13148, 'Water Supply, Sanitation, Housing and Urban Development', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(14, 'Revenue Expenditure (Rs. crore)', 2304, 2967, 3639, 3694, 7463, 11099, 'Water Supply, Sanitation, Housing and Urban Development', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(15, '(a)  Salary component (Percentage)', 8.9, 8, 6.4, 6.4, 3.1, 2.1, 'Water Supply, Sanitation, Housing and Urban Development', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(16, '(b)  Non-salary component (Percentage)', 91.1, 92, 93.6, 93.6, 96.9, 97.9, 'Water Supply, Sanitation, Housing and Urban Development', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(17, 'Capital Outlay (Rs. crore)', 282, 638, 903, 824, 1323, 2049, 'Water Supply, Sanitation, Housing and Urban Development', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(18, 'Capital Outlay (Percentage)', 10.9, 17.7, 19.9, 18.2, 15.1, 15.6, 'Water Supply, Sanitation, Housing and Urban Development', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(19, 'Total Expenditure (Rs. crore)', 24438, 28253, 33386, 38684, 44329, 58492, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(20, 'Revenue Expenditure (Rs. crore)', 23107, 26395, 31713, 35943, 40737, 53306, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(21, '(a)  Salary component (Percentage)', 30.7, 26.6, 22.4, 19.2, 17.7, 14.2, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(22, '(b)  Non-salary component (Percentage)', 69.3, 73.4, 77.6, 80.8, 82.3, 85.8, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(23, 'Capital Outlay (Rs. crore)', 1331, 1858, 1674, 2740, 3592, 5186, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(24, 'Capital Outlay (Percentage)', 5.4, 6.6, 5, 7.1, 8.1, 8.9, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24');
 
 -- --------------------------------------------------------
 
@@ -9392,9 +9804,33 @@ ALTER TABLE `demographic_profile2s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `expenditure_management1s`
+--
+ALTER TABLE `expenditure_management1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `expenditure_management2s`
+--
+ALTER TABLE `expenditure_management2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `expenditure_management3s`
+--
+ALTER TABLE `expenditure_management3s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `expenditure_managements`
 --
 ALTER TABLE `expenditure_managements`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `expenditure_on_salary_and_pensions`
+--
+ALTER TABLE `expenditure_on_salary_and_pensions`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -9680,6 +10116,12 @@ ALTER TABLE `production_productivity12s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `qualityofexpenditures`
+--
+ALTER TABLE `qualityofexpenditures`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `rainfall1s`
 --
 ALTER TABLE `rainfall1s`
@@ -9800,10 +10242,34 @@ ALTER TABLE `revenue_account5s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `revenue_expenditures`
+--
+ALTER TABLE `revenue_expenditures`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `schema_migrations`
 --
 ALTER TABLE `schema_migrations`
   ADD PRIMARY KEY (`version`);
+
+--
+-- Indexes for table `sectoral_expenditure1s`
+--
+ALTER TABLE `sectoral_expenditure1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sectoral_expenditure2s`
+--
+ALTER TABLE `sectoral_expenditure2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sectoral_expenditures`
+--
+ALTER TABLE `sectoral_expenditures`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `sixth_economic_census2s`
@@ -10146,10 +10612,34 @@ ALTER TABLE `demographic_profile2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
+-- AUTO_INCREMENT for table `expenditure_management1s`
+--
+ALTER TABLE `expenditure_management1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `expenditure_management2s`
+--
+ALTER TABLE `expenditure_management2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `expenditure_management3s`
+--
+ALTER TABLE `expenditure_management3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `expenditure_managements`
 --
 ALTER TABLE `expenditure_managements`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `expenditure_on_salary_and_pensions`
+--
+ALTER TABLE `expenditure_on_salary_and_pensions`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `fiscal_performance1s`
@@ -10434,6 +10924,12 @@ ALTER TABLE `production_productivity12s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
+-- AUTO_INCREMENT for table `qualityofexpenditures`
+--
+ALTER TABLE `qualityofexpenditures`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
 -- AUTO_INCREMENT for table `rainfall1s`
 --
 ALTER TABLE `rainfall1s`
@@ -10552,6 +11048,30 @@ ALTER TABLE `revenue_account4s`
 --
 ALTER TABLE `revenue_account5s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+
+--
+-- AUTO_INCREMENT for table `revenue_expenditures`
+--
+ALTER TABLE `revenue_expenditures`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `sectoral_expenditure1s`
+--
+ALTER TABLE `sectoral_expenditure1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- AUTO_INCREMENT for table `sectoral_expenditure2s`
+--
+ALTER TABLE `sectoral_expenditure2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `sectoral_expenditures`
+--
+ALTER TABLE `sectoral_expenditures`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `sixth_economic_census2s`
