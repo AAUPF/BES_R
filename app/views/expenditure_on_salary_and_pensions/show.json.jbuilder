@@ -1,0 +1,1 @@
+json.partial! "expenditure_on_salary_and_pensions/expenditure_on_salary_and_pension", expenditure_on_salary_and_pension: @expenditure_on_salary_and_pension

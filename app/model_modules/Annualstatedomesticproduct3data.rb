@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+include Newmodulefunctions
 
 module Annualstatedomesticproduct3data
   def import1(file)
@@ -202,353 +203,35 @@ module Annualstatedomesticproduct3data
       where(Year: year).order(rain_fall_type)
     end
   end
-
   def query(b, _year, rain_fall_type, views, _ji, compare, search,data,jip)
     d = 'Sector'
     color = '#4f81bc'
     if rain_fall_type == 'All' or rain_fall_type == 'None'
-      if views
         if search == "All"
           if _year == "All"
-
-            # abort("error")
-            result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-
-            hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
-              {
-                type:views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:col[:Sector],
-                legendText: col[:Sector],
-                showInLegend: true,
-                dataPoints: jip.map do |el|
-                     { y: col[el], label: el }
-                end
-              }
-            end
+            hash_data = Newmodulefunctions.eov_new(b,views, data,jip)
           else
-
-
-            result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-            if views != "column" && views!= "line"
-
-            hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
-              {
-                type:views,
-                toolTipContent: "{label}<br/>{name}: <strong>{y}</strong>",
-                name:col[:Sector],
-                legendText: col[:Sector],
-                showInLegend: true,
-                dataPoints: [{ y: col[_year], label: _year }]
-              }
-            end
-              
-            else
-                  hash_data = [{
-              type: views,
-              color: color,
-              legendText: search,
-              showInLegend: true,
-              dataPoints: result.map do |hash|
-                            { y: hash[_year], label: hash[:Sector] }
-                          end
-            }]
-              
-            end
-
-            # grouped_data = b.group_by { |data| data[:Year] }
-            # hash_data = grouped_data.map do |vegetable, values|
-            #   dataset = vegetable.to_s.tr('_', ' ')
-            #   {
-            #     type: views,
-            #     color: color,
-            #     legendText: _year,
-            #     showInLegend: true,
-            #     dataPoints: values.map do |value|
-            #                   { y: value[_year], label: value[:Sector] }
-            #                 end
-            #   }
-            # end
+             hash_data = Newmodulefunctions.single_year(b,data,views,_year)
           end
         else
-
           if _year == "All" 
-            result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-            # jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
-                if rain_fall_type == "None"
-
-
-                  # result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-                  if views != "column" && views!= "line"
-                    hash_data = []
-                   result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
-                   jip.map do |el|
-                        
-                   hash_data.push(
-
-
-                    {
-                      type:views,
-                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                      name:"#{el["Districts"]}",
-                      legendText:"#{el["Districts"]}",
-                      showInLegend: true,
-                      dataPoints: [{ y: col[el], label:  el }]
-                  }
-                      
-                   )   
-                
-                
-                    end
-                   
-                  end
-                    
-                  else
-                     hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
-                    {
-                      type:views,
-                      legendText: col[:Sector],
-                      color: color,
-                      showInLegend: true,
-                      dataPoints: jip.map do |el|
-
-                        if el.to_s == "2011-16"
-                          years = "CAGR(2011-16)"
-                        else
-                          years = el
-                        end
-                          { y: col[el], label: years }
-                      end
-                    }
-                  end
-                    
-                  end
-            
-                  
-                else
-
-                  hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
-                    {
-                      type:views,
-                      legendText: col[:Sector],
-                      showInLegend: true,
-                      dataPoints: jip.map do |el|
-
-                        if el.to_s == "2011-16"
-                          years = "CAGR(2011-16)"
-                        else
-                          years = el
-                        end
-                          { y: col[el], label: years }
-                      end
-                    }
-                  end
-                  
-                end
+           hash_data = Newmodulefunctions.eov(b,rain_fall_type,data,jip,views) 
           else
-             result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
-            if views != "column"
-            hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
-              {
-                type:views,
-                legendText: col[:Sector],
-                showInLegend: true,
-                dataPoints: [{ y: col[_year], label: _year }]
-              }
-            end
-              
-            else
-                  hash_data = [{
-              type: views,
-              color: color,
-              legendText: search,
-              showInLegend: true,
-              dataPoints: result.map do |hash|
-                            { y: hash[_year], label: hash[:Sector] }
-                          end
-            }]
-              
-            end
-
+            hash_data = Newmodulefunctions.eov_year(b,data,views,_year,color,search)
           end
-        
         end
-      end
-
-      if search == "All" && rain_fall_type == "None"
-        new_type = "Primary vs Secondary vs Tertiary"
-
-      else
-
-        if rain_fall_type == "None" or rain_fall_type == "All"
-          new_type = search
-
-        else
-          
-
-          new_type = rain_fall_type
-
-        end
-
-      end
-      title = if (views == 'stackedBar100') || (views == 'stackedBar')
-                {
-                  animationEnabled: true,
-                  exportEnabled: true,
-                  title: {
-                    text: new_type.to_s.tr('_', ' ').to_s
-                  },
-                  data: hash_data
-                }
-             elsif _year != "All"
-
-
-              {
-                animationEnabled: true,
-                exportEnabled: true,
-                title: {
-                  text: new_type.to_s.tr('_', ' ').to_s
-                },
-             
-                data: hash_data
-              }
-              else
-                {
-                  animationEnabled: true,
-                  exportEnabled: true,
-                  title: {
-                    text: new_type.to_s.tr('_', ' ').to_s
-                  },
-                  axisX: {
-                    interval:1,
-                    labelMaxWidth: 180,
-                    labelAngle: 100,
-                    labelFontFamily:"verdana0"
-                    },
-                  data: hash_data
-                }
-              end
-
-      return title
     else
-      if compare == 'Bihar vs Sector'
-        if _year == 'All'
-          grouped_data = b.group_by { |data| data[:Year] }
-          hash_data = grouped_data.map do |vegetable, values|
-            dataset = vegetable.to_s.tr('_', ' ')
-            {
-              type: views,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: values.map do |value|
-                            { y: value[rain_fall_type], label: value[:Sector] }
-                          end
-            }
-          end
-        else
-
-          dataset = rain_fall_type.tr('_', ' ')
-          hash_data =
-            [{
-              type: views,
-              color: color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.map do |el|
-                            { y: el[rain_fall_type], label: el['Sector'] }
-                          end
-            }]
-        end
-
+      if _year == 'All'
+         hash_data = Newmodulefunctions.year_to_stack(b, rain_fall_type, _year, views, color, jip)
       else
-        if _year == 'All'
-          if views != "column" && views!="line"
-            hash_data = []
-            b.each do |col|
-             jip.each  do |el|
-              if el.to_s == "2011-16"
-                years = "CAGR(2011-16)"
-              else
-                years = el
-              end
-              hash_data.push(
-                {
-                  type:views,
-                  legendText: el,
-                  showInLegend: true,
-                  dataPoints: [{ y: col[el], label: rain_fall_type }]
-                }
-                
-                
-                )
-             end
-            end
-            else
-              u = []
-              hash_data = [
-                    {
-                    type:views,
-                    color: color,
-                    legendText: rain_fall_type,
-                    showInLegend: true,
-                    dataPoints: u
-                  }
-              ]
-              b.each do |col|
-               jip.each  do |el|
-                if el.to_s == "2011-16"
-                  years = "CAGR(2011-16)"
-                else
-                  years = el
-                end
-                 u.push({ y: col[el], label: years })
-               end
-              end
-            end
-        else
-          dataset = rain_fall_type.tr('_', ' ')
-          hash_data =
-            [{
-              type: views,
-              color: color,
-              legendText: _year,
-              showInLegend: true,
-              dataPoints: b.map do |el|
-                            { y: el[_year], label: el['Sector'] }
-                          end
-            }]
-        end
+        hash_data = Newmodulefunctions.eov_unknown(rain_fall_type,b,_year,views,color)
       end
-      title = if (views == 'stackedBar100') || (views == 'stackedBar')
-                {
-                  animationEnabled: true,
-                  exportEnabled: true,
-                  title: {
-                    text: search.to_s.tr('_', ' ').to_s
-                  },
-                  data: hash_data
-                }
-
-              else
-                {
-                  animationEnabled: true,
-                  exportEnabled: true,
-                  title: {
-                    text: search.to_s.tr('_', ' ').to_s
-                  },
-                  # axisX: {
-                  #   interval:1,
-                  #   labelMaxWidth: 180,
-                  #   labelAngle: 90,
-                  #   labelFontFamily:"verdana0"
-                  #   },
-                  data: hash_data
-                }
-
-              end
-      return title
     end
+    Newmodulefunctions.title_return_three(views, search, hash_data, compare,rain_fall_type)
   end
+
+
+
 
   def map1(b, rain_fall_type, _views, _ji, _unit1, ranges)
     array = []

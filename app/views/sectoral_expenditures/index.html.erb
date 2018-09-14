@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sectoral Expenditures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>2012-13</th>
+      <th>2013-14</th>
+      <th>2014-15</th>
+      <th>2015-16</th>
+      <th>2016-17</th>
+      <th>2017-18 be</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sectoral_expenditures.each do |sectoral_expenditure| %>
+      <tr>
+        <td><%= sectoral_expenditure.Sector %></td>
+        <td><%= sectoral_expenditure.2012-13 %></td>
+        <td><%= sectoral_expenditure.2013-14 %></td>
+        <td><%= sectoral_expenditure.2014-15 %></td>
+        <td><%= sectoral_expenditure.2015-16 %></td>
+        <td><%= sectoral_expenditure.2016-17 %></td>
+        <td><%= sectoral_expenditure.2017-18_BE %></td>
+        <td><%= sectoral_expenditure.indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sectoral Expenditure', new_sectoral_expenditure_path %>

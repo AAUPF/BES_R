@@ -28,7 +28,7 @@ class ResourceManagement1sController < ApplicationController
 
     jip = %i[2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE]
     ji1 = %i[Sector 2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE]
-
+    compare = "None"
 
     if search == 'I.    State’s Own Revenue'
       if rain_fall_type == "None"

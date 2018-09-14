@@ -320,51 +320,154 @@ module Test
     # sleep 1
     # ranges = [{below_min: {min: 0, max: 50},min: {min: 50, max: 70},blow_max: {min: 70, max: 100},max: {min: 100, max: 150},above_max: {min: 150, max: 190},extreme: {min: 190, max: 200},above_extreme: {min: 2, max: 200}}]
 
-    if below_min.any?
-      b = { min: ranges[0][:below_min][:min], max: "#{ranges[0][:below_min][:max]}" }
+    # if below_min.any?
+    #   b = { min: ranges[0][:below_min][:min], max: "#{ranges[0][:below_min][:max]}" }
+    # else
+    #   b = { min: ranges[0][:below_min][:min], max: "#{ranges[0][:below_min][:max]}" }
+    # end
+
+    # c = if min.any?
+    #       { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}" }
+    #     else
+    #       { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}" }
+    #     end
+
+    # if blow_max.any?
+    #   d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}" }
+    # else
+    #   d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}" }
+    # end
+
+    # e = if max.any?
+    #       { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}" }
+    #     else
+    #       { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}" }
+    #     end
+
+    # if above_max.any?
+
+    #   f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}" }
+
+    # else
+    #   f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}" }
+
+    # end
+
+    # if extreme.any?
+    #   g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}" }
+
+    # else
+    #   g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}" }
+    # end
+
+    # if above_extreme.any?
+    #   h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}" }
+    # else
+    #   h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}" }
+    # end
+
+
+
+    if rain_fall_type = "Productivity"
+
+      if below_min.any?
+        b = { min: ranges[0][:below_min][:min]/100, max: "#{ranges[0][:below_min][:max]/100}" }
+      else
+        b = { min: ranges[0][:below_min][:min]/100, max: "#{ranges[0][:below_min][:max]/100}" }
+      end
+  
+      c = if min.any?
+            { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}" }
+          else
+            { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}" }
+          end
+  
+      if blow_max.any?
+        d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}" }
+      else
+        d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}" }
+      end
+  
+      e = if max.any?
+            { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}" }
+          else
+            { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}" }
+          end
+  
+      if above_max.any?
+  
+        f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}" }
+  
+      else
+        f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}" }
+  
+      end
+  
+      if extreme.any?
+        g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}" }
+  
+      else
+        g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}" }
+      end
+  
+      if above_extreme.any?
+        h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}" }
+      else
+        h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}" }
+      end
+      
     else
-      b = { min: ranges[0][:below_min][:min], max: "#{ranges[0][:below_min][:max]}" }
+
+
+      if below_min.any?
+        b = { min: ranges[0][:below_min][:min], max: "#{ranges[0][:below_min][:max]}" }
+      else
+        b = { min: ranges[0][:below_min][:min], max: "#{ranges[0][:below_min][:max]}" }
+      end
+  
+      c = if min.any?
+            { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}" }
+          else
+            { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}" }
+          end
+  
+      if blow_max.any?
+        d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}" }
+      else
+        d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}" }
+      end
+  
+      e = if max.any?
+            { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}" }
+          else
+            { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}" }
+          end
+  
+      if above_max.any?
+  
+        f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}" }
+  
+      else
+        f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}" }
+  
+      end
+  
+      if extreme.any?
+        g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}" }
+  
+      else
+        g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}" }
+      end
+  
+      if above_extreme.any?
+        h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}" }
+      else
+        h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}" }
+      end
+      
     end
 
-    c = if min.any?
-          { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}" }
-        else
-          { min: ranges[0][:min][:min], max: "#{ranges[0][:min][:max]}" }
-        end
 
-    if blow_max.any?
-      d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}" }
-    else
-      d = { min: ranges[0][:blow_max][:min], max: "#{ranges[0][:blow_max][:max]}" }
-    end
-
-    e = if max.any?
-          { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}" }
-        else
-          { min: ranges[0][:max][:min], max: "#{ranges[0][:max][:max]}" }
-        end
-
-    if above_max.any?
-
-      f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}" }
-
-    else
-      f = { min: ranges[0][:above_max][:min], max: "#{ranges[0][:above_max][:max]}" }
-
-    end
-
-    if extreme.any?
-      g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}" }
-
-    else
-      g = { min: ranges[0][:extreme][:min], max: "#{ranges[0][:extreme][:max]}" }
-    end
-
-    if above_extreme.any?
-      h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}" }
-    else
-      h = { min: ranges[0][:above_extreme][:min], max: "#{ranges[0][:above_extreme][:max]}" }
-    end
     hu = {
       below_min: b,
       min: c,
@@ -564,50 +667,158 @@ module Test
 
     unit1 = ""
 
-    if below_min.any?
-      b = { min: below_min.first[:y], max: "#{below_min.last[:y]}" }
+    # if below_min.any?
+    #   b = { min: below_min.first[:y], max: "#{below_min.last[:y]}" }
+    # else
+    #   b = { min: below_min.first[:y], max: "#{below_min.last[:y]}" }
+    # end
+
+    # if min.any?
+    #   c = { min: min.first[:y], max: "#{min.last[:y]}" }
+    # else
+    #   c = { min: min.first[:y], max: "#{min.last[:y]}" }
+    # end
+
+    # if blow_max.any?
+    #   d = { min: blow_max.first[:y], max: "#{blow_max.last[:y]}" }
+    # else
+    #   d = { min: blow_max.first[:y], max: "#{blow_max.last[:y]}" }
+    # end
+
+    # if max.any?
+    #   e = { min: max.first[:y], max: "#{max.last[:y]}" }
+    # else
+    #   e = { min: max.first[:y], max: "#{max.last[:y]}" }
+    # end
+
+    # if above_max.any?
+
+    #   f = { min: above_max.first[:y], max: "#{above_max.last[:y]}" }
+
+    # else
+    #   f = { min: above_max.first[:y], max: "#{above_max.last[:y]}" } 
+
+    # end
+
+    # if extreme.any?
+    #   g =  { min: extreme.first[:y], max: "#{extreme.last[:y]}" } 
+
+    # else
+    #   g = { min: extreme.first[:y], max: "#{extreme.last[:y]}" } 
+    # end
+
+    # if above_extreme.any?
+    #   h = { min: above_extreme.first[:y], max: "#{above_extreme.last[:y]}" }
+    # else
+    #   h = {  }
+    # end
+
+
+
+
+
+    if rain_fall_type = "Productivity"
+
+      if below_min.any?
+        b = { min: below_min.first[:y]/100, max: "#{below_min.last[:y]/100}" }
+      else
+        b = { min: below_min.first[:y]/100, max: "#{below_min.last[:y]/100}" }
+      end
+  
+      if min.any?
+        c = { min: min.first[:y]/100, max: "#{min.last[:y]/100}" }
+      else
+        c = { min: min.first[:y]/100, max: "#{min.last[:y]/100}" }
+      end
+  
+      if blow_max.any?
+        d = { min: blow_max.first[:y]/100, max: "#{blow_max.last[:y]/100}" }
+      else
+        d = { min: blow_max.first[:y]/100, max: "#{blow_max.last[:y]/100}" }
+      end
+  
+      if max.any?
+        e = { min: max.first[:y]/100, max: "#{max.last[:y]/100}" }
+      else
+        e = { min: max.first[:y]/100, max: "#{max.last[:y]/100}" }
+      end
+  
+      if above_max.any?
+  
+        f = { min: above_max.first[:y]/100, max: "#{above_max.last[:y]/100}" }
+  
+      else
+        f = { min: above_max.first[:y]/100, max: "#{above_max.last[:y]/100}" } 
+  
+      end
+  
+      if extreme.any?
+        g =  { min: extreme.first[:y]/100, max: "#{extreme.last[:y]/100}" } 
+  
+      else
+        g = { min: extreme.first[:y]/100, max: "#{extreme.last[:y]/100}" } 
+      end
+  
+      if above_extreme.any?
+        h = { min: above_extreme.first[:y]/100, max: "#{above_extreme.last[:y]/100}" }
+      else
+        h = {  }
+      end
+
+      
     else
-      b = { min: below_min.first[:y], max: "#{below_min.last[:y]}" }
-    end
 
-    if min.any?
-      c = { min: min.first[:y], max: "#{min.last[:y]}" }
-    else
-      c = { min: min.first[:y], max: "#{min.last[:y]}" }
-    end
 
-    if blow_max.any?
-      d = { min: blow_max.first[:y], max: "#{blow_max.last[:y]}" }
-    else
-      d = { min: blow_max.first[:y], max: "#{blow_max.last[:y]}" }
-    end
 
-    if max.any?
-      e = { min: max.first[:y], max: "#{max.last[:y]}" }
-    else
-      e = { min: max.first[:y], max: "#{max.last[:y]}" }
-    end
+      if below_min.any?
+        b = { min: below_min.first[:y], max: "#{below_min.last[:y]}" }
+      else
+        b = { min: below_min.first[:y], max: "#{below_min.last[:y]}" }
+      end
+  
+      if min.any?
+        c = { min: min.first[:y], max: "#{min.last[:y]}" }
+      else
+        c = { min: min.first[:y], max: "#{min.last[:y]}" }
+      end
+  
+      if blow_max.any?
+        d = { min: blow_max.first[:y], max: "#{blow_max.last[:y]}" }
+      else
+        d = { min: blow_max.first[:y], max: "#{blow_max.last[:y]}" }
+      end
+  
+      if max.any?
+        e = { min: max.first[:y], max: "#{max.last[:y]}" }
+      else
+        e = { min: max.first[:y], max: "#{max.last[:y]}" }
+      end
+  
+      if above_max.any?
+  
+        f = { min: above_max.first[:y], max: "#{above_max.last[:y]}" }
+  
+      else
+        f = { min: above_max.first[:y], max: "#{above_max.last[:y]}" } 
+  
+      end
+  
+      if extreme.any?
+        g =  { min: extreme.first[:y], max: "#{extreme.last[:y]}" } 
+  
+      else
+        g = { min: extreme.first[:y], max: "#{extreme.last[:y]}" } 
+      end
+  
+      if above_extreme.any?
+        h = { min: above_extreme.first[:y], max: "#{above_extreme.last[:y]}" }
+      else
+        h = {  }
+      end
 
-    if above_max.any?
 
-      f = { min: above_max.first[:y], max: "#{above_max.last[:y]}" }
-
-    else
-      f = { min: above_max.first[:y], max: "#{above_max.last[:y]}" } 
-
-    end
-
-    if extreme.any?
-      g =  { min: extreme.first[:y], max: "#{extreme.last[:y]}" } 
-
-    else
-      g = { min: extreme.first[:y], max: "#{extreme.last[:y]}" } 
-    end
-
-    if above_extreme.any?
-      h = { min: above_extreme.first[:y], max: "#{above_extreme.last[:y]}" }
-    else
-      h = {  }
+     
+      
     end
       hu = {
         below_min: b,

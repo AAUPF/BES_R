@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Expenditure On Salary And Pensions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>2012-13</th>
+      <th>2013-14</th>
+      <th>2014-15</th>
+      <th>2015-16</th>
+      <th>2016-17</th>
+      <th>2017-18 be</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expenditure_on_salary_and_pensions.each do |expenditure_on_salary_and_pension| %>
+      <tr>
+        <td><%= expenditure_on_salary_and_pension.Sector %></td>
+        <td><%= expenditure_on_salary_and_pension.2012-13 %></td>
+        <td><%= expenditure_on_salary_and_pension.2013-14 %></td>
+        <td><%= expenditure_on_salary_and_pension.2014-15 %></td>
+        <td><%= expenditure_on_salary_and_pension.2015-16 %></td>
+        <td><%= expenditure_on_salary_and_pension.2016-17 %></td>
+        <td><%= expenditure_on_salary_and_pension.2017-18_BE %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Expenditure On Salary And Pension', new_expenditure_on_salary_and_pension_path %>

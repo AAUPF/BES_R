@@ -33,6 +33,16 @@ class TaxDepartment2sController < ApplicationController
     jip = %i[2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE]
     ji1 = %i[Sector 2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE]
 
+    if views != "Table"
+
+      data = [
+        "Total Revenue of State (Rs. crore)",
+        "State’s Own Tax Revenues (Rs. crore)",
+        "Revenue from Commercial Taxes (Rs. crore)",
+      ]
+
+    else
+
       data = [
         "Total Revenue of State (Rs. crore)",
         "State’s Own Tax Revenues (Rs. crore)",
@@ -40,6 +50,8 @@ class TaxDepartment2sController < ApplicationController
         "Share of Commercial Taxes in Total Revenue (Percentage)",
         "Share of Commercial Taxes in State’s Own Taxes (Percentage)",
       ]
+    end
+     
 
 
 

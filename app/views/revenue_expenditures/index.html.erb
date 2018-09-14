@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Revenue Expenditures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>2012-13</th>
+      <th>2013-14</th>
+      <th>2014-15</th>
+      <th>2015-16</th>
+      <th>2016-17</th>
+      <th>2017-18 be</th>
+      <th>2012-17</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @revenue_expenditures.each do |revenue_expenditure| %>
+      <tr>
+        <td><%= revenue_expenditure.Sector %></td>
+        <td><%= revenue_expenditure.2012-13 %></td>
+        <td><%= revenue_expenditure.2013-14 %></td>
+        <td><%= revenue_expenditure.2014-15 %></td>
+        <td><%= revenue_expenditure.2015-16 %></td>
+        <td><%= revenue_expenditure.2016-17 %></td>
+        <td><%= revenue_expenditure.2017-18_BE %></td>
+        <td><%= revenue_expenditure.2012-17 %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Revenue Expenditure', new_revenue_expenditure_path %>

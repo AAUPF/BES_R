@@ -1,0 +1,1 @@
+json.array! @expenditure_on_salary_and_pensions, partial: 'expenditure_on_salary_and_pensions/expenditure_on_salary_and_pension', as: :expenditure_on_salary_and_pension

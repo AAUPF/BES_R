@@ -1,0 +1,57 @@
+<%= form_with(model: expenditure_management3, local: true) do |form| %>
+  <% if expenditure_management3.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(expenditure_management3.errors.count, "error") %> prohibited this expenditure_management3 from being saved:</h2>
+
+      <ul>
+      <% expenditure_management3.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sector %>
+    <%= form.text_field :Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2012-13 %>
+    <%= form.text_field :2012-13 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2013-14 %>
+    <%= form.text_field :2013-14 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2014-15 %>
+    <%= form.text_field :2014-15 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2015-16 %>
+    <%= form.text_field :2015-16 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2016-17 %>
+    <%= form.text_field :2016-17 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2017-18_BE %>
+    <%= form.text_field :2017-18_BE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2012-17 %>
+    <%= form.text_field :2012-17 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
