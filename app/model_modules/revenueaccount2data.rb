@@ -23,7 +23,7 @@ module Revenueaccount2data
           end
           # where(Year: year).order("#{rain_fall_type} ")
         end
-      elsif compare
+      elsif compare != "None"
         if year == "All"
           where('Expenditure_Pattern = ? OR Expenditure_Pattern = ?', search, compare).order(:id)
         else
@@ -46,46 +46,6 @@ module Revenueaccount2data
     end
   
     # Logic to generate table starts
-    # def table(b, rain_fall_type, _year, ji, compare)
-    #   dataset = rain_fall_type.tr('_', ' ')
-  
-    #   if rain_fall_type == 'All'
-  
-    #     hash_data = ji.map do |el|
-    #       if el.to_s == 'Expenditure_Pattern'
-    #         { title: 'Expenditure_Pattern', field: el, headerFilter: true }
-    #       else
-    #         { title: el.to_s.tr('_', ' '), field: el }
-    #       end
-    #     end
-    #   else
-    #     if compare == 'None'
-    #       hash_data = [
-    #         { title: 'Expenditure_Pattern', field: 'Expenditure_Pattern', headerFilter: true },
-    #         { title: dataset, field: rain_fall_type }
-    #       ]
-    #     else
-    #       hash_data = [
-    #         # {title:compare, field:compare, sorter:"string", },
-    #         { title: 'Expenditure_Pattern', field: 'Expenditure_Pattern', headerFilter: true },
-  
-    #         { title: dataset, field: rain_fall_type }
-    #       ]
-    #     end
-    #   end
-  
-  
-  
-    #  if rain_fall_type == "Productivity"
-    #   j = b.each { |item| item[:Productivity] = item[:Productivity]/100}
-  
-    #  else
-    #    j = b
-    #  end
-    #   data = { column: hash_data, data: j }
-    #   data
-    # end
-
 
     def table(b, rain_fall_type, _year, ji, compare)
         dataset = rain_fall_type.tr('_', ' ')
@@ -238,21 +198,38 @@ module Revenueaccount2data
                 }
                 }
             else
-              h = grouped_data
-              hash_data = h.map{ |vegetable, values| 
-                dataset = vegetable.to_s.gsub("_"," ")
-               {
-                type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
-                color:color,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: values.map { |value|
-                { y: value[rain_fall_type], label: value["Year"] }
-                }
-                }
-                }
+           
+                    if views == "line" || views == "scatter" || views == "column"
+                        h = grouped_data
+                                hash_data = h.map{ |vegetable, values| 
+                                    dataset = vegetable.to_s.gsub("_"," ")
+                                {
+                                    type: views,
+                                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                                    name:dataset,
+                                    color:color,
+                                    legendText: dataset,
+                                    showInLegend: true,
+                                    dataPoints: values.map { |value|
+                                    { y: value[rain_fall_type], label: value["Year"] }
+                                    }
+                                    }
+                                    }
+                    else
+                        dataset = rain_fall_type.tr('_', ' ')
+                                        hash_data =  b.map do |el|
+                                        {
+                                            type:views,
+                                            toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                                            name:"#{el["Year"]}",
+                                            legendText:"#{el["Year"]}",
+                                            showInLegend: true,
+                                            dataPoints: [{ y: el[rain_fall_type], label:el["Expenditure_Pattern"] }]
+                                        }
+
+                                    end
+                    end
+            
             end
            
             
@@ -262,19 +239,20 @@ module Revenueaccount2data
             else
                 h = b
             end
-            dataset = rain_fall_type.tr('_', ' ')
-          hash_data =
-            [{
-              type: views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
-              color: color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: h.map do |el|
-                            { y: el[rain_fall_type], label: el['Expenditure_Pattern'] }
-                          end
-            }]
+        
+        dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  h.map do |el|
+                    {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Expenditure_Pattern"]}",
+                        legendText:"#{el["Expenditure_Pattern"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:el["Year"] }]
+                    }
+
+                end
+        
           end
           
         else
@@ -319,19 +297,19 @@ module Revenueaccount2data
                 else
                     h = b
                 end
-                dataset = rain_fall_type.tr('_', ' ')
-              hash_data =
-                [{
-                  type: views,
-                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
-                  color: color,
-                  legendText: dataset,
-                  showInLegend: true,
-                  dataPoints: h.map do |el|
-                                { y: el[rain_fall_type], label: el['Expenditure_Pattern'] }
-                              end
-                }]
+            dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  h.map do |el|
+                    {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Expenditure_Pattern"]}",
+                        legendText:"#{el["Expenditure_Pattern"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:el["Year"] }]
+                    }
+
+                end
+
               end
           
         end

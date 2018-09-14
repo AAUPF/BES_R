@@ -84,20 +84,9 @@ module Taxdata
       color  = "#4f81bc"
       if rain_fall_type == 'All'
         if views
-          hash_data = ji.map do |column_name|
+          
             if compare == 'Bihar vs State'
-              dataset = column_name.to_s.tr('_', ' ')
-              {
-                type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:dataset,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: b.map do |el|
-                              { y: el[column_name], z: el[column_name], label: el[d] }
-                            end
-              }
-            else
+                hash_data = ji.map do |column_name|
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
@@ -110,7 +99,23 @@ module Taxdata
                             end
               }
             end
-          end
+            else
+
+                hash_data = ji.map do |column_name|
+              dataset = column_name.to_s.tr('_', ' ')
+              {
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: b.map do |el|
+                              { y: el[column_name], z: el[column_name], label: el[d] }
+                            end
+              }
+            end
+            
+        end
         end
         if views == "stackedBar" || views == "stackedBar100"
           title = {

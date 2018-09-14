@@ -118,220 +118,257 @@ module Revenueaccount5data
       end
     end
   
+
+
+
+
     def query(b, _year, rain_fall_type, views, ji, compare,search)
-      d = 'Transfer_of_Resources'
-      color  = "#4f81bc"
-      if rain_fall_type == 'All'
-        if views
-          hash_data = ji.map do |column_name|
-            if compare
-              dataset = column_name.to_s.tr('_', ' ')
-              {
-                type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: b.map do |el|
-                  { y: el[column_name], z: el[column_name], label: el[d] }
-                            end
-              }
-            else
-              dataset = column_name.to_s.tr('_', ' ')
-              {
-                type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: b.map do |el|
-                  { y: el[column_name], z: el[column_name], label: el[d] }
-                            end
-              }
-            end
-          end
-        end
-        if views == "stackedBar100" or views == "stackedBar"
-          title = {
-            animationEnabled: true,
-            exportEnabled: true,
-            title:{
-              text: "#{rain_fall_type.to_s.gsub("_"," ")}"
-                  },
-            data: hash_data
-        }
-       
-        else
-          title = {
-            animationEnabled: true,
-            exportEnabled: true,
-            title:{
-              text: "#{rain_fall_type.to_s.gsub("_"," ")}"
-                  },
-                  # axisX: {
-                  #   interval:1,
-                  #   labelMaxWidth: 180,
-                  #   labelAngle: 90,
-                  #   labelFontFamily:"verdana0"
-                  #   },
-            data: hash_data
-        }
-        end
-        return title
-      else
-        if compare == "None"
-            
-          if _year == "All"
-            grouped_data = b.group_by{ |data| data[:Transfer_of_Resources]}
-            if search == "All"
-              h = b.reject{|x| x["Transfer_of_Resources"] == "Development Expenditure as percentage of Total Expenditure"}.group_by{ |data| data[:Transfer_of_Resources]}
-              hash_data = h.map{ |vegetable, values| 
-                dataset = vegetable.to_s.gsub("_"," ")
-               {
-                type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: values.map { |value|
-                { y: value[rain_fall_type], label: value["Year"] }
-                }
-                }
-                }
-            else
-              h = grouped_data
-              hash_data = h.map{ |vegetable, values| 
-                dataset = vegetable.to_s.gsub("_"," ")
-               {
-                type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
-                color:color,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: values.map { |value|
-                { y: value[rain_fall_type], label: value["Year"] }
-                }
-                }
-                }
-            end
-           
-            
-          else
-            if search == "All"
-                h = b.reject{|x| x["Transfer_of_Resources"] == "Development Expenditure as percentage of Total Expenditure"}
-            else
-                h = b
-            end
-            dataset = rain_fall_type.tr('_', ' ')
-          hash_data =
-            [{
-              type: views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
-              color: color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: h.map do |el|
-                            { y: el[rain_fall_type], label: el['Transfer_of_Resources'] }
-                          end
-            }]
-          end
-          
-        else
-            if _year == "All"
-                grouped_data = b.group_by{ |data| data[:Transfer_of_Resources]}
-                if search == "All"
-                  h = b.reject{|x| x["Transfer_of_Resources"] == "Development Expenditure as percentage of Total Expenditure"}.group_by{ |data| data[:Transfer_of_Resources]}
-                  hash_data = h.map{ |vegetable, values| 
-                    dataset = vegetable.to_s.gsub("_"," ")
-                   {
-                    type: views,
-                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
-                    legendText: dataset,
-                    showInLegend: true,
-                    dataPoints: values.map { |value|
-                    { y: value[rain_fall_type], label: value["Year"] }
-                    }
-                    }
-                    }
-                else
-                  h = grouped_data
-                  hash_data = h.map{ |vegetable, values| 
-                    dataset = vegetable.to_s.gsub("_"," ")
-                   {
-                    type: views,
-                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
-                    legendText: dataset,
-                    showInLegend: true,
-                    dataPoints: values.map { |value|
-                    { y: value[rain_fall_type], label: value["Year"] }
-                    }
-                    }
-                    }
-                end
-               
-                
-              else
-                if search == "All"
-                    h = b.reject{|x| x["Transfer_of_Resources"] == "Development Expenditure as percentage of Total Expenditure"}
-                else
-                    h = b
-                end
-                dataset = rain_fall_type.tr('_', ' ')
-              hash_data =
-                [{
+        d = 'Transfer_of_Resources'
+        color  = "#4f81bc"
+        if rain_fall_type == 'All'
+          if views
+            hash_data = ji.map do |column_name|
+              if compare
+                dataset = column_name.to_s.tr('_', ' ')
+                {
                   type: views,
                   toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
                   name:dataset,
-                  color: color,
                   legendText: dataset,
                   showInLegend: true,
-                  dataPoints: h.map do |el|
-                                { y: el[rain_fall_type], label: el['Transfer_of_Resources'] }
+                  dataPoints: b.map do |el|
+                    { y: el[column_name], z: el[column_name], label: el[d] }
                               end
-                }]
+                }
+              else
+                dataset = column_name.to_s.tr('_', ' ')
+                {
+                  type: views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: b.map do |el|
+                    { y: el[column_name], z: el[column_name], label: el[d] }
+                              end
+                }
               end
-          
-        end
-        if views == "stackedBar100" or views == "stackedBar"
-          title = {
-            animationEnabled: true,
-            exportEnabled: true,
-            title:{
-              text: "#{rain_fall_type.to_s.gsub("_"," ")}"
-                  },
-            data: hash_data
-        }
-       
-        else
-            if search.include? "percentage"
-                l = "Percentage"
-            else
-                l = "Amount"
-
             end
-          title = {
-            animationEnabled: true,
-            exportEnabled: true,
-            title:{
-              text: "#{l.to_s.gsub("_"," ")}"
-                  },
-                  # axisX: {
-                  #   interval:1,
-                  #   labelMaxWidth: 180,
-                  #   labelAngle: 90,
-                  #   labelFontFamily:"verdana0"
-                  #   },
-            data: hash_data
-        }
-          
+          end
+          if views == "stackedBar100" or views == "stackedBar"
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                    },
+              data: hash_data
+          }
+         
+          else
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                    },
+                    # axisX: {
+                    #   interval:1,
+                    #   labelMaxWidth: 180,
+                    #   labelAngle: 90,
+                    #   labelFontFamily:"verdana0"
+                    #   },
+              data: hash_data
+          }
+          end
+          return title
+        else
+          if compare == "None"
+              
+            if _year == "All"
+              grouped_data = b.group_by{ |data| data[:Transfer_of_Resources]}
+              if search == "All"
+                h = b.reject{|x| x["Transfer_of_Resources"] == "Development Expenditure as percentage of Total Expenditure"}.group_by{ |data| data[:Transfer_of_Resources]}
+                hash_data = h.map{ |vegetable, values| 
+                  dataset = vegetable.to_s.gsub("_"," ")
+                 {
+                  type: views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:dataset,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: values.map { |value|
+                  { y: value[rain_fall_type], label: value["Year"] }
+                  }
+                  }
+                  }
+              else
+                  if views == "line" || views == "scatter" || views == "column"
+                      h = grouped_data
+                              hash_data = h.map{ |vegetable, values| 
+                                  dataset = vegetable.to_s.gsub("_"," ")
+                              {
+                                  type: views,
+                                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                                  name:dataset,
+                                  color:color,
+                                  legendText: dataset,
+                                  showInLegend: true,
+                                  dataPoints: values.map { |value|
+                                  { y: value[rain_fall_type], label: value["Year"] }
+                                  }
+                                  }
+                                  }
+                  else
+                      dataset = rain_fall_type.tr('_', ' ')
+                      hash_data =  b.map do |el|
+                      {
+                          type:views,
+                          toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                          name:"#{el["Year"]}",
+                          legendText:"#{el["Year"]}",
+                          showInLegend: true,
+                          dataPoints: [{ y: el[rain_fall_type], label:el["Transfer_of_Resources"] }]
+                      }
+                          end
+                  end
+              
+  
+             
+  
+              end
+             
+              
+            else
+              if search == "All"
+                  h = b.reject{|x| x["Transfer_of_Resources"] == "Development Expenditure as percentage of Total Expenditure"}
+              else
+                  h = b
+              end
+  
+          dataset = rain_fall_type.tr('_', ' ')
+          hash_data =  b.map do |el|
+          {
+              type:views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:"#{el["Transfer_of_Resources"]}",
+              legendText:"#{el["Transfer_of_Resources"]}",
+              showInLegend: true,
+              dataPoints: [{ y: el[rain_fall_type], label:el["Year"] }]
+          }
+              end
+  
+            end
+            
+          else
+              if _year == "All"
+                  grouped_data = b.group_by{ |data| data[:Transfer_of_Resources]}
+                  if search == "All"
+                    h = b.reject{|x| x["Transfer_of_Resources"] == "Development Expenditure as percentage of Total Expenditure"}.group_by{ |data| data[:Transfer_of_Resources]}
+                    hash_data = h.map{ |vegetable, values| 
+                      dataset = vegetable.to_s.gsub("_"," ")
+                     {
+                      type: views,
+                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:dataset,
+                      legendText: dataset,
+                      showInLegend: true,
+                      dataPoints: values.map { |value|
+                      { y: value[rain_fall_type], label: value["Year"] }
+                      }
+                      }
+                      }
+                  else
+                      
+                    h = grouped_data
+                    hash_data = h.map{ |vegetable, values| 
+                      dataset = vegetable.to_s.gsub("_"," ")
+                     {
+                      type: views,
+                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:dataset,
+                      legendText: dataset,
+                      showInLegend: true,
+                      dataPoints: values.map { |value|
+                      { y: value[rain_fall_type], label: value["Year"] }
+                      }
+                      }
+                      }
+                  end
+                 
+                  
+                else
+                  if search == "All"
+                      h = b.reject{|x| x["Transfer_of_Resources"] == "Development Expenditure as percentage of Total Expenditure"}
+                  else
+                      h = b
+                  end
+  
+              #     dataset = rain_fall_type.tr('_', ' ')
+              #   hash_data =
+              #     [{
+              #       type: views,
+              #       toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              #       name:dataset,
+              #       color: color,
+              #       legendText: dataset,
+              #       showInLegend: true,
+              #       dataPoints: h.map do |el|
+              #                     { y: el[rain_fall_type], label: el['Transfer_of_Resources'] }
+              #                   end
+              #     }]
+  
+              dataset = rain_fall_type.tr('_', ' ')
+              hash_data =  b.map do |el|
+              {
+                  type:views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:"#{el["Transfer_of_Resources"]}",
+                  legendText:"#{el["Transfer_of_Resources"]}",
+                  showInLegend: true,
+                  dataPoints: [{ y: el[rain_fall_type], label:el["Year"] }]
+              }
+                  end
+  
+                end
+            
+          end
+          if views == "stackedBar100" or views == "stackedBar"
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                    },
+              data: hash_data
+          }
+         
+          else
+              if search.include? "percentage"
+                  l = "Percentage"
+              else
+                  l = "Amount"
+  
+              end
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                text: "#{l.to_s.gsub("_"," ")}"
+                    },
+                    # axisX: {
+                    #   interval:1,
+                    #   labelMaxWidth: 180,
+                    #   labelAngle: 90,
+                    #   labelFontFamily:"verdana0"
+                    #   },
+              data: hash_data
+          }
+            
+          end
+          return title
         end
-        return title
       end
-    end
   
     def map1(b, rain_fall_type, _views, _ji, unit1, ranges)
       array = []

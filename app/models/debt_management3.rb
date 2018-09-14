@@ -377,24 +377,37 @@ class DebtManagement3 < ApplicationRecord
                 }
                 }
             else
+              if views == "line" || views == "scatter" || views == "column"
+                dataset = rain_fall_type.tr('_', ' ')
+                  hash_data =
+                    [{
+                      type: views,
+                      color: color,
+                      legendText: dataset,
+                      showInLegend: true,
+                      dataPoints: b.map do |el|
+                        { y: el[rain_fall_type], label: el['Public_Debt_Repayment_Liabilities'] }
+                                  end
+                    }]
+              else
+                  dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  b.map do |el|
+                      {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Year"]}",
+                        legendText:"#{el["Year"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:  el["Public_Debt_Repayment_Liabilities"] }]
+                    }
 
-              dataset = rain_fall_type.tr('_', ' ')
-            hash_data =  b.map do |el|
-              {
-                type:views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:"#{el["Year"]}",
-                legendText:"#{el["Year"]}",
-                showInLegend: true,
-                dataPoints: [{ y: el[rain_fall_type], label:  el["Public_Debt_Repayment_Liabilities"] }]
-            }
-
-            end
+                    end
+              end
 
             end
           else
 
-           if views != "column" && views!="line"
+           if views != "column" && views!= "line" && views!= "scatter"
             
             dataset = rain_fall_type.tr('_', ' ')
             hash_data =  b.map do |el|

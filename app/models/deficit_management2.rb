@@ -197,24 +197,40 @@ def self.query(b, _year, rain_fall_type, views, ji, compare,search)
                 }
                 }
             else
+              if views == "line" || views == "scatter" || views == "column"
+                dataset = rain_fall_type.tr('_', ' ')
+                  hash_data =
+                    [{
+                      type: views,
+                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                      name:dataset,
+                      color: color,
+                      legendText: dataset,
+                      showInLegend: true,
+                      dataPoints: b.map do |el|
+                        { y: el[rain_fall_type], label: el['Year'] }
+                                  end
+                    }]
+              else
+                  dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  b.map do |el|
+                      {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Year"]}",
+                        legendText:"#{el["Year"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:  el["State"] }]
+                      }
+                    end
 
-              dataset = rain_fall_type.tr('_', ' ')
-            hash_data =  b.map do |el|
-              {
-                type:views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:"#{el["Year"]}",
-                legendText:"#{el["Year"]}",
-                showInLegend: true,
-                dataPoints: [{ y: el[rain_fall_type], label:  el["State"] }]
-            }
+              end
 
-            end
-
+              
             end
           else
 
-           if views != "column" && views!="line"
+           if views != "column" && views!="line" && views!="scatter"
             
             dataset = rain_fall_type.tr('_', ' ')
             hash_data =  b.map do |el|

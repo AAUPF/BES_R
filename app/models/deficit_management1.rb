@@ -239,7 +239,7 @@ def self.query(b, _year, rain_fall_type, views, ji, compare,search)
                 }
             else
 
-              if views != "column" && views!="line"
+              if views != "column" && views!="line" && views!="scatter"
                 dataset = rain_fall_type.tr('_', ' ')
                 hash_data =  b.map do |el|
                   {
@@ -274,18 +274,35 @@ def self.query(b, _year, rain_fall_type, views, ji, compare,search)
             
           else
 
-            dataset = rain_fall_type.tr('_', ' ')
-            hash_data =  b.map do |el|
-              {
-                type:views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:"#{el["State"]}",
-                legendText:"#{el["State"]}",
-                showInLegend: true,
-                dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
-            }
-
+            if views != "column" && views!="line" && views!="scatter"
+                dataset = rain_fall_type.tr('_', ' ')
+                hash_data =  b.map do |el|
+                  {
+                    type:views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:"#{el["State"]}",
+                    legendText:"#{el["State"]}",
+                    showInLegend: true,
+                    dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
+                  }
+                end
+            else
+              dataset = rain_fall_type.tr('_', ' ')
+                  hash_data =
+                    [{
+                      type: views,
+                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                      name:dataset,
+                      color: color,
+                      legendText: dataset,
+                      showInLegend: true,
+                      dataPoints: b.map do |el|
+                        { y: el[rain_fall_type], label: el['State'] }
+                                  end
+                    }]
             end
+
+            
 
           end
           

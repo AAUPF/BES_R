@@ -117,6 +117,219 @@ class ResourceManagement12 < ApplicationRecord
     end
   end
 
+  # def self.query(b, _year, rain_fall_type, views, ji, compare,search)
+  #   d = 'Revenue_Sources'
+  #   color  = "#4f81bc"
+  #   if rain_fall_type == 'All'
+  #     if views
+  #       hash_data = ji.map do |column_name|
+  #         if compare
+  #           dataset = column_name.to_s.tr('_', ' ')
+  #           {
+  #             type: views,
+  #             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+  #             name:dataset,
+  #             legendText: dataset,
+  #             showInLegend: true,
+  #             dataPoints: b.map do |el|
+  #               { y: el[column_name], z: el[column_name], label: el[d] }
+  #                         end
+  #           }
+  #         else
+  #           dataset = column_name.to_s.tr('_', ' ')
+  #           {
+  #             type: views,
+  #             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+  #             name:dataset,
+  #             legendText: dataset,
+  #             showInLegend: true,
+  #             dataPoints: b.map do |el|
+  #               { y: el[column_name], z: el[column_name], label: el[d] }
+  #                         end
+  #           }
+  #         end
+  #       end
+  #     end
+  #     if views == "stackedBar100" or views == "stackedBar"
+  #       title = {
+  #         animationEnabled: true,
+  #         exportEnabled: true,
+  #         title:{
+  #           text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+  #               },
+  #         data: hash_data
+  #     }
+     
+  #     else
+  #       title = {
+  #         animationEnabled: true,
+  #         exportEnabled: true,
+  #         title:{
+  #           text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+  #               },
+  #               # axisX: {
+  #               #   interval:1,
+  #               #   labelMaxWidth: 180,
+  #               #   labelAngle: 90,
+  #               #   labelFontFamily:"verdana0"
+  #               #   },
+  #         data: hash_data
+  #     }
+  #     end
+  #     return title
+  #   else
+  #     if compare == "None"
+          
+  #       if _year == "All"
+  #         grouped_data = b.group_by{ |data| data[:Revenue_Sources]}
+  #         if search == "All"
+  #           h = b.reject{|x| x["Revenue_Sources"] == "Total"}.group_by{ |data| data[:Revenue_Sources]}
+  #           hash_data = h.map{ |vegetable, values| 
+  #             dataset = vegetable.to_s.gsub("_"," ")
+  #            {
+  #             type: views,
+  #             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+  #             name:dataset,
+  #             legendText: dataset,
+  #             showInLegend: true,
+  #             dataPoints: values.map { |value|
+  #             { y: value[rain_fall_type], label: value["Year"] }
+  #             }
+  #             }
+  #             }
+  #         else
+  #           h = grouped_data
+  #           hash_data = h.map{ |vegetable, values| 
+  #             dataset = vegetable.to_s.gsub("_"," ")
+  #            {
+  #             type: views,
+  #             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+  #             name:dataset,
+  #             color:color,
+  #             legendText: dataset,
+  #             showInLegend: true,
+  #             dataPoints: values.map { |value|
+  #             { y: value[rain_fall_type], label: value["Year"] }
+  #             }
+  #             }
+  #             }
+  #         end
+         
+          
+  #       else
+  #         if search == "All"
+  #             h = b.reject{|x| x["Revenue_Sources"] == "Total"}
+  #         else
+  #             h = b
+  #         end
+  #         dataset = rain_fall_type.tr('_', ' ')
+  #       hash_data =
+  #         [{
+  #           type: views,
+  #           color: color,
+  #           legendText: dataset,
+  #           showInLegend: true,
+  #           dataPoints: h.map do |el|
+  #                         { y: el[rain_fall_type], label: el['Revenue_Sources'] }
+  #                       end
+  #         }]
+  #       end
+        
+  #     else
+  #         if _year == "All"
+  #             grouped_data = b.group_by{ |data| data[:Revenue_Sources]}
+  #             if search == "All"
+  #               h = b.reject{|x| x["Revenue_Sources"] == "Total"}.group_by{ |data| data[:Revenue_Sources]}
+  #               hash_data = h.map{ |vegetable, values| 
+  #                 dataset = vegetable.to_s.gsub("_"," ")
+  #                {
+  #                 type: views,
+  #                 toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+  #                 name:dataset,
+  #                 legendText: dataset,
+  #                 showInLegend: true,
+  #                 dataPoints: values.map { |value|
+  #                 { y: value[rain_fall_type], label: value["Year"] }
+  #                 }
+  #                 }
+  #                 }
+  #             else
+  #               h = grouped_data
+  #               hash_data = h.map{ |vegetable, values| 
+  #                 dataset = vegetable.to_s.gsub("_"," ")
+  #                {
+  #                 type: views,
+  #                 toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+  #                 name:dataset,
+  #                 legendText: dataset,
+  #                 showInLegend: true,
+  #                 dataPoints: values.map { |value|
+  #                 { y: value[rain_fall_type], label: value["Year"] }
+  #                 }
+  #                 }
+  #                 }
+  #             end
+             
+              
+  #           else
+  #             if search == "All"
+  #                 h = b.reject{|x| x["Revenue_Sources"] == "Total"}
+  #             else
+  #                 h = b
+  #             end
+  #             dataset = rain_fall_type.tr('_', ' ')
+  #           hash_data =
+  #             [{
+  #               type: views,
+  #               toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+  #               name:dataset,
+  #               color: color,
+  #               legendText: dataset,
+  #               showInLegend: true,
+  #               dataPoints: h.map do |el|
+  #                             { y: el[rain_fall_type], label: el['Revenue_Sources'] }
+  #                           end
+  #             }]
+  #           end
+        
+  #     end
+  #     if views == "stackedBar100" or views == "stackedBar"
+  #       title = {
+  #         animationEnabled: true,
+  #         exportEnabled: true,
+  #         title:{
+  #           text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+  #               },
+  #         data: hash_data
+  #     }
+     
+  #     else
+  #         if search.include? "percentage"
+  #             l = "Percentage"
+  #         else
+  #             l = "Buoyancy Ratio"
+
+  #         end
+  #       title = {
+  #         animationEnabled: true,
+  #         exportEnabled: true,
+  #         title:{
+  #           text: "#{l.to_s.gsub("_"," ")}"
+  #               },
+  #               # axisX: {
+  #               #   interval:1,
+  #               #   labelMaxWidth: 180,
+  #               #   labelAngle: 90,
+  #               #   labelFontFamily:"verdana0"
+  #               #   },
+  #         data: hash_data
+  #     }
+        
+  #     end
+  #     return title
+  #   end
+  # end
+
   def self.query(b, _year, rain_fall_type, views, ji, compare,search)
     d = 'Revenue_Sources'
     color  = "#4f81bc"
@@ -198,7 +411,8 @@ class ResourceManagement12 < ApplicationRecord
               }
               }
           else
-            h = grouped_data
+            if views == "line" || views == "scatter" || views == "column"
+              h = grouped_data
             hash_data = h.map{ |vegetable, values| 
               dataset = vegetable.to_s.gsub("_"," ")
              {
@@ -213,6 +427,20 @@ class ResourceManagement12 < ApplicationRecord
               }
               }
               }
+            else
+              dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  b.map do |el|
+                      {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Year"]}",
+                        legendText:"#{el["Year"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:  el["Revenue_Sources"] }]
+                      }
+                    end
+            end
+            
           end
          
           
@@ -222,17 +450,32 @@ class ResourceManagement12 < ApplicationRecord
           else
               h = b
           end
-          dataset = rain_fall_type.tr('_', ' ')
-        hash_data =
-          [{
-            type: views,
-            color: color,
-            legendText: dataset,
-            showInLegend: true,
-            dataPoints: h.map do |el|
-                          { y: el[rain_fall_type], label: el['Revenue_Sources'] }
-                        end
-          }]
+          if views == "line" || views == "scatter" || views == "column"
+            dataset = rain_fall_type.tr('_', ' ')
+              hash_data =
+                [{
+                  type: views,
+                  color: color,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: h.map do |el|
+                                { y: el[rain_fall_type], label: el['Revenue_Sources'] }
+                              end
+                }]
+          else
+            dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  h.map do |el|
+                      {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Revenue_Sources"]}",
+                        legendText:"#{el["Revenue_Sources"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
+                      }
+                    end
+          end
+          
         end
         
       else
@@ -277,39 +520,54 @@ class ResourceManagement12 < ApplicationRecord
               else
                   h = b
               end
-              dataset = rain_fall_type.tr('_', ' ')
-            hash_data =
-              [{
-                type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:dataset,
-                color: color,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: h.map do |el|
-                              { y: el[rain_fall_type], label: el['Revenue_Sources'] }
-                            end
-              }]
+              if views == "line" || views == "scatter" || views == "column"
+                dataset = rain_fall_type.tr('_', ' ')
+                hash_data =
+                  [{
+                    type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:dataset,
+                    color: color,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: h.map do |el|
+                                  { y: el[rain_fall_type], label: el['Revenue_Sources'] }
+                                end
+                  }]
+              else
+                dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  h.map do |el|
+                      {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Revenue_Sources"]}",
+                        legendText:"#{el["Revenue_Sources"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
+                      }
+                    end
+              end
+              
             end
         
       end
+      if search.include? "percentage"
+        l = "Percentage"
+    else
+        l = "Percentage"
+
+    end
       if views == "stackedBar100" or views == "stackedBar"
         title = {
           animationEnabled: true,
           exportEnabled: true,
           title:{
-            text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+            text: "#{l.to_s.gsub("_"," ")}"
                 },
           data: hash_data
       }
      
       else
-          if search.include? "percentage"
-              l = "Percentage"
-          else
-              l = "Buoyancy Ratio"
-
-          end
         title = {
           animationEnabled: true,
           exportEnabled: true,
@@ -318,12 +576,14 @@ class ResourceManagement12 < ApplicationRecord
                 },
                 # axisX: {
                 #   interval:1,
-                #   labelMaxWidth: 180,
-                #   labelAngle: 90,
+                #   labelMaxWidth: 120,
+                #   labelAngle: 0,
                 #   labelFontFamily:"verdana0"
                 #   },
           data: hash_data
       }
+          
+        
         
       end
       return title

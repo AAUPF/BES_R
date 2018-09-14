@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-
-  resources :sectoral_expenditure2s do 
+  resources :tax_department6s do 
                       collection { post :import }
                       collection { get :dropdown }
                       collection { get :test }
                       end 
-  resources :sectoral_expenditure1s do 
+  resources :state_public_sector3s do 
                       collection { post :import }
                       collection { get :dropdown }
                       collection { get :test }
@@ -40,7 +39,7 @@ Rails.application.routes.draw do
                       collection { get :dropdown }
                       collection { get :test }
                       end 
-  resources :expenditure_management1s do 
+  resources :state_public_sector2s do 
                       collection { post :import }
                       collection { get :dropdown }
                       collection { get :test }

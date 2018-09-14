@@ -135,6 +135,214 @@ class TaxDepartment3 < ApplicationRecord
       end
     end
   
+    # def self.query(b, _year, rain_fall_type, views, ji, compare,search)
+    #   d = 'Name_of_Commodity'
+    #   color  = "#4f81bc"
+    #   if rain_fall_type == 'All'
+    #     if views
+    #       hash_data = ji.map do |column_name|
+    #         if compare == 'Bihar vs District'
+    #           dataset = column_name.to_s.tr('_', ' ')
+    #           {
+    #             type: views,
+    #             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+    #             name:dataset,
+    #             legendText: dataset,
+    #             showInLegend: true,
+    #             dataPoints: b.map do |el|
+    #                 { y: el[column_name], z: el[column_name], label: el[d] }
+    #                         end
+    #           }
+    #         else
+    #             if search == "All"
+    #                 dataset = column_name.to_s.tr('_', ' ')
+    #           {
+    #             type: views,
+    #             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+    #             name:dataset,
+    #             legendText: dataset,
+    #             showInLegend: true,
+    #             dataPoints: b.reject { |x| x['Name_of_Commodity'] == 'Total' }.map do |el|
+    #                 { y: el[column_name], z: el[column_name], label: el[d] }
+    #                         end
+    #           }
+    #             else
+    #                 dataset = column_name.to_s.tr('_', ' ')
+    #           {
+    #             type: views,
+    #             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+    #             name:dataset,
+    #             legendText: dataset,
+    #             showInLegend: true,
+    #             dataPoints: b.map do |el|
+    #                 { y: el[column_name], z: el[column_name], label: el[d] }
+    #                         end
+    #           }
+    #             end
+            
+                
+              
+    #         end
+    #       end
+    #     end
+    #     if views == "stackedBar100" or views == "stackedBar"
+    #       title = {
+    #         animationEnabled: true,
+    #         exportEnabled: true,
+    #         title:{
+    #           text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+    #               },
+    #         data: hash_data
+    #     }
+       
+    #     else
+    #       title = {
+    #         animationEnabled: true,
+    #         exportEnabled: true,
+    #         title:{
+    #           text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+    #               },
+    #             #   axisX: {
+    #             #     interval:1,
+    #             #     labelMaxWidth: 180,
+    #             #     labelAngle: 90,
+    #             #     labelFontFamily:"verdana0"
+    #             #     },
+    #         data: hash_data
+    #     }
+    #     end
+    #     return title
+    #   else
+    #     if compare == 'Bihar vs District'
+    #       dataset = rain_fall_type.tr('_', ' ')
+    #       hash_data =
+    #         [{
+    #           type: views,
+    #           toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+    #           name:dataset,
+    #           color: color,
+    #           legendText: dataset,
+    #           showInLegend: true,
+    #           dataPoints: b.map do |el|
+    #                         { y: el[rain_fall_type], label: el['Name_of_Commodity'] }
+    #                       end
+    #         }]
+    #     else
+    #         if _year == "All"
+    #             grouped_data = b.group_by{ |data| data[:Name_of_Commodity]}
+    #             if search == "All"
+    #                 hash_data = grouped_data.map{ |vegetable, values| 
+    #                     dataset = vegetable.to_s.gsub("_"," ")
+    #                     {
+    #                     type: views,
+    #                     toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+    #                     name:dataset,
+    #                     legendText: dataset,
+    #                     showInLegend: true,
+    #                     dataPoints: values.reject { |x| x['Name_of_Commodity'] == 'Total' }.map { |value|
+    #                     { y: value[rain_fall_type], label: value["Year"] }
+    #                     }
+    #                     }
+    #                     }
+    #                 else
+    #                     if compare != "None"
+    #                         hash_data = grouped_data.map{ |vegetable, values| 
+    #                             dataset = vegetable.to_s.gsub("_"," ")
+    #                             {
+    #                             type: views,
+    #                             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+    #                             name:dataset,
+    #                             legendText: dataset,
+    #                             showInLegend: true,
+    #                             dataPoints: values.map { |value|
+    #                             { y: value[rain_fall_type], label: value["Year"] }
+    #                             }
+    #                             }
+    #                             }
+    #                     else
+    #                         hash_data = grouped_data.map{ |vegetable, values| 
+    #                             dataset = vegetable.to_s.gsub("_"," ")
+    #                             {
+    #                             type: views,
+    #                             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+    #                             name:dataset,
+    #                             color:color,
+    #                             legendText: dataset,
+    #                             showInLegend: true,
+    #                             dataPoints: values.map { |value|
+    #                             { y: value[rain_fall_type], label: value["Year"] }
+    #                             }
+    #                             }
+    #                             }
+    #                     end
+                    
+    #             end
+    #         else
+    #             if search == "All"
+    #             dataset = rain_fall_type.tr('_', ' ')
+    #             hash_data =
+    #             [{
+    #             type: views,
+    #             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+    #             name:dataset,
+    #             color: color,
+    #             legendText: dataset,
+    #             showInLegend: true,
+    #             dataPoints: b.reject { |x| x['Name_of_Commodity'] == 'Total' }.map do |el|
+    #                 { y: el[rain_fall_type], label: el['Name_of_Commodity'] }
+    #                         end
+    #             }]
+    #             else
+    #             dataset = rain_fall_type.tr('_', ' ')
+    #             hash_data =
+    #             [{
+    #             type: views,
+    #             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+    #             name:dataset,
+    #             color: color,
+    #             legendText: dataset,
+    #             showInLegend: true,
+    #             dataPoints: b.map do |el|
+    #                 { y: el[rain_fall_type], label: el['Name_of_Commodity'] }
+    #                         end
+    #             }]
+    #             end
+                
+    #         end
+          
+    #     end
+    #     if views == "stackedBar100" or views == "stackedBar"
+    #       title = {
+    #         animationEnabled: true,
+    #         exportEnabled: true,
+    #         title:{
+    #           text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+    #               },
+    #         data: hash_data
+    #     }
+       
+    #     else
+    #       title = {
+    #         animationEnabled: true,
+    #         exportEnabled: true,
+    #         title:{
+    #           text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+    #               },
+    #             #   axisX: {
+    #             #     interval:1,
+    #             #     labelMaxWidth: 180,
+    #             #     labelAngle: 90,
+    #             #     labelFontFamily:"verdana0"
+    #             #     },
+    #         data: hash_data
+    #     }
+          
+    #     end
+    #     return title
+    #   end
+    # end
+
+
     def self.query(b, _year, rain_fall_type, views, ji, compare,search)
       d = 'Name_of_Commodity'
       color  = "#4f81bc"
@@ -245,6 +453,8 @@ class TaxDepartment3 < ApplicationRecord
                         }
                         }
                     else
+
+
                         if compare != "None"
                             hash_data = grouped_data.map{ |vegetable, values| 
                                 dataset = vegetable.to_s.gsub("_"," ")
@@ -260,7 +470,24 @@ class TaxDepartment3 < ApplicationRecord
                                 }
                                 }
                         else
-                            hash_data = grouped_data.map{ |vegetable, values| 
+                          if views != "column" && views != "line" && views != "scatter"
+                            hash_data =[]
+                               grouped_data.map{ |vegetable, values| 
+                                values.map do |value|
+                                  hash_data.push(
+                                    {
+                                      type:views,
+                                      legendText:"#{value["Year"]}",
+                                      showInLegend: true,
+                                      dataPoints: [{ y: value[rain_fall_type], label:  value["Name_of_Commodity"] }]
+                                  }
+                                  )
+                              end
+                          }
+                              
+                            else
+                          
+                              hash_data = grouped_data.map{ |vegetable, values| 
                                 dataset = vegetable.to_s.gsub("_"," ")
                                 {
                                 type: views,
@@ -275,23 +502,40 @@ class TaxDepartment3 < ApplicationRecord
                                 }
                                 }
                         end
+                      end
+
                     
                 end
             else
                 if search == "All"
-                dataset = rain_fall_type.tr('_', ' ')
-                hash_data =
-                [{
-                type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:dataset,
-                color: color,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: b.reject { |x| x['Name_of_Commodity'] == 'Total' }.map do |el|
-                    { y: el[rain_fall_type], label: el['Name_of_Commodity'] }
-                            end
-                }]
+                  
+                  if views != "column"
+                    hash_data = b.reject { |x| x['Name_of_Commodity'] == 'Total' }.map do |col|
+                      {
+                        type:views,
+                        legendText: col[:Name_of_Commodity],
+                        showInLegend: true,
+                        dataPoints: [{ y: col[rain_fall_type], label: col[:Year] }]
+                      }
+                    end
+                      
+                    else
+                      dataset = rain_fall_type.tr('_', ' ')
+                      hash_data =
+                      [{
+                      type: views,
+                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                      name:dataset,
+                      color: color,
+                      legendText: dataset,
+                      showInLegend: true,
+                      dataPoints: b.reject { |x| x['Name_of_Commodity'] == 'Total' }.map do |el|
+                          { y: el[rain_fall_type], label: el['Name_of_Commodity'] }
+                                  end
+                      }]
+                    end           
+
+         
                 else
                 dataset = rain_fall_type.tr('_', ' ')
                 hash_data =

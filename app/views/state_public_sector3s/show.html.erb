@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sector:</strong>
+  <%= @state_public_sector3.Sector %>
+</p>
+
+<p>
+  <strong>Number of statutory corporations:</strong>
+  <%= @state_public_sector3.Number_of_Statutory_Corporations %>
+</p>
+
+<p>
+  <strong>Number of working companies:</strong>
+  <%= @state_public_sector3.Number_of_Working_Companies %>
+</p>
+
+<p>
+  <strong>Number of nonworking companies:</strong>
+  <%= @state_public_sector3.Number_of_NonWorking_Companies %>
+</p>
+
+<%= link_to 'Edit', edit_state_public_sector3_path(@state_public_sector3) %> |
+<%= link_to 'Back', state_public_sector3s_path %>

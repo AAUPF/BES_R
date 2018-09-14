@@ -198,7 +198,8 @@ class ResourceManagement8 < ApplicationRecord
               }
               }
           else
-            h = grouped_data
+            if views == "line" || views == "scatter" || views == "column"
+              h = grouped_data
             hash_data = h.map{ |vegetable, values| 
               dataset = vegetable.to_s.gsub("_"," ")
              {
@@ -213,6 +214,20 @@ class ResourceManagement8 < ApplicationRecord
               }
               }
               }
+            else
+              dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  b.map do |el|
+                      {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Year"]}",
+                        legendText:"#{el["Year"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:  el["Revenue_Sources"] }]
+                      }
+                    end
+            end
+            
           end
          
           
@@ -222,17 +237,32 @@ class ResourceManagement8 < ApplicationRecord
           else
               h = b
           end
-          dataset = rain_fall_type.tr('_', ' ')
-        hash_data =
-          [{
-            type: views,
-            color: color,
-            legendText: dataset,
-            showInLegend: true,
-            dataPoints: h.map do |el|
-                          { y: el[rain_fall_type], label: el['Revenue_Sources'] }
-                        end
-          }]
+          if views == "line" || views == "scatter" || views == "column"
+            dataset = rain_fall_type.tr('_', ' ')
+              hash_data =
+                [{
+                  type: views,
+                  color: color,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: h.map do |el|
+                                { y: el[rain_fall_type], label: el['Revenue_Sources'] }
+                              end
+                }]
+          else
+            dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  h.map do |el|
+                      {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Revenue_Sources"]}",
+                        legendText:"#{el["Revenue_Sources"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
+                      }
+                    end
+          end
+          
         end
         
       else
@@ -277,53 +307,80 @@ class ResourceManagement8 < ApplicationRecord
               else
                   h = b
               end
-              dataset = rain_fall_type.tr('_', ' ')
-            hash_data =
-              [{
-                type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:dataset,
-                color: color,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: h.map do |el|
-                              { y: el[rain_fall_type], label: el['Revenue_Sources'] }
-                            end
-              }]
+              if views == "line" || views == "scatter" || views == "column"
+                dataset = rain_fall_type.tr('_', ' ')
+                hash_data =
+                  [{
+                    type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:dataset,
+                    color: color,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: h.map do |el|
+                                  { y: el[rain_fall_type], label: el['Revenue_Sources'] }
+                                end
+                  }]
+              else
+                dataset = rain_fall_type.tr('_', ' ')
+                    hash_data =  h.map do |el|
+                      {
+                        type:views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:"#{el["Revenue_Sources"]}",
+                        legendText:"#{el["Revenue_Sources"]}",
+                        showInLegend: true,
+                        dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
+                      }
+                    end
+              end
+              
             end
         
       end
-      if views == "stackedBar100" or views == "stackedBar"
-        title = {
-          animationEnabled: true,
-          exportEnabled: true,
-          title:{
-            text: "#{rain_fall_type.to_s.gsub("_"," ")}"
-                },
-          data: hash_data
-      }
-     
-      else
-          if search.include? "percentage"
-              l = "Percentage"
-          else
-              l = "Yearly Growth Rates"
+      if search.include? "percentage"
+        l = "Percentage"
+    else
+        l = "Percentage"
 
-          end
+    end
+      if views == "stackedBar100" or views == "stackedBar"
         title = {
           animationEnabled: true,
           exportEnabled: true,
           title:{
             text: "#{l.to_s.gsub("_"," ")}"
                 },
-                # axisX: {
-                #   interval:1,
-                #   labelMaxWidth: 180,
-                #   labelAngle: 90,
-                #   labelFontFamily:"verdana0"
-                #   },
           data: hash_data
       }
+     
+      else
+          if search == "All" && _year != "All" && views == "line" || views == "scatter" || views == "column"
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                text: "#{l.to_s.gsub("_"," ")}"
+                    },
+                    axisX: {
+                      interval:1,
+                      labelMaxWidth: 120,
+                      labelAngle: 0,
+                      labelFontFamily:"verdana0"
+                      },
+              data: hash_data
+          }
+          else
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                text: "#{l.to_s.gsub("_"," ")}"
+                    },
+              data: hash_data
+          }
+          end
+        
         
       end
       return title

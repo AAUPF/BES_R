@@ -199,24 +199,40 @@ def self.query(b, _year, rain_fall_type, views, ji, compare,search)
                 }
                 }
             else
-
-              dataset = rain_fall_type.tr('_', ' ')
-            hash_data =  b.map do |el|
-              {
-                type:views,
+              if views != "column" && views!= "line" && views!= "scatter"
+                  dataset = rain_fall_type.tr('_', ' ')
+                  hash_data =  b.map do |el|
+                        {
+                          type:views,
+                          toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                          name:"#{el["Year"]}",
+                          legendText:"#{el["Year"]}",
+                          showInLegend: true,
+                          dataPoints: [{ y: el[rain_fall_type], label:  el["Gross_Fiscal_Deficit"] }]
+                      }
+                  end
+              else
+                dataset = rain_fall_type.tr('_', ' ')
+              hash_data =
+              [{
+                type: views,
                 toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:"#{el["Year"]}",
-                legendText:"#{el["Year"]}",
+                name:dataset,
+                color: color,
+                legendText: dataset,
                 showInLegend: true,
-                dataPoints: [{ y: el[rain_fall_type], label:  el["Gross_Fiscal_Deficit"] }]
-            }
+                dataPoints: b.map do |el|
+                              { y: el[rain_fall_type], label: el['Year'] }
+                            end
+              }]
+              end
 
-            end
+              
 
             end
           else
 
-           if views != "column" && views!="line"
+           if views != "column" && views!="line" && views!="scatter"
             
             dataset = rain_fall_type.tr('_', ' ')
             hash_data =  b.map do |el|
@@ -236,6 +252,8 @@ def self.query(b, _year, rain_fall_type, views, ji, compare,search)
               hash_data =
               [{
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 color: color,
                 legendText: dataset,
                 showInLegend: true,
