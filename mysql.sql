@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Sep 17, 2018 at 08:42 AM
+-- Host: localhost
+-- Generation Time: Sep 17, 2018 at 08:49 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `bihar_survey`
+-- Database: `newdata`
 --
 
 -- --------------------------------------------------------
@@ -7577,17 +7577,17 @@ INSERT INTO `resource_management11s` (`id`, `Indicators`, `Percentage`, `Year`, 
 (2, 'Own Non-Tax Revenue as percentage of GSDP', 0.4, '2012-13', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (3, 'Total Revenue as percentage of GSDP', 21.1, '2012-13', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (4, 'Buoyancy  of Total Revenue w.r.t. GSDP (Ratio)', 1.1, '2012-13', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
-(5, 'Buoyancy of  State’s Own Taxes w.r.t. GSDP(Ratio)', 2, '2012-13', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(5, 'Buoyancy of State’s Own Taxes w.r.t. GSDP(Ratio)', 2, '2012-13', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (6, 'Own Tax Revenue as percentage of GSDP', 6.3, '2013-14', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (7, 'Own Non-Tax Revenue as percentage of GSDP', 0.5, '2013-14', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (8, 'Total Revenue as percentage of GSDP', 21.7, '2013-14', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (9, 'Buoyancy  of Total Revenue w.r.t. GSDP (Ratio)', 1.3, '2013-14', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
-(10, 'Buoyancy of  State’s Own Taxes w.r.t. GSDP(Ratio)', 1.9, '2013-14', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(10, 'Buoyancy of State’s Own Taxes w.r.t. GSDP(Ratio)', 1.9, '2013-14', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (11, 'Own Tax Revenue as percentage of GSDP', 6.1, '2014-15', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (12, 'Own Non-Tax Revenue as percentage of GSDP', 0.5, '2014-15', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (13, 'Total Revenue as percentage of GSDP', 22.9, '2014-15', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (14, 'Buoyancy  of Total Revenue w.r.t. GSDP (Ratio)', 1.7, '2014-15', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
-(15, 'Buoyancy of  State’s Own Taxes w.r.t. GSDP(Ratio)', 0.5, '2014-15', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(15, 'Buoyancy of State’s Own Taxes w.r.t. GSDP(Ratio)', 0.5, '2014-15', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (16, 'Own Tax Revenue as percentage of GSDP', 6.7, '2015-16', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (17, 'Own Non-Tax Revenue as percentage of GSDP', 0.6, '2015-16', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (18, 'Total Revenue as percentage of GSDP', 25.2, '2015-16', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
@@ -7597,12 +7597,12 @@ INSERT INTO `resource_management11s` (`id`, `Indicators`, `Percentage`, `Year`, 
 (22, 'Own Non-Tax Revenue as percentage of GSDP', 0.5, '2016-17', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (23, 'Total Revenue as percentage of GSDP', 24.1, '2016-17', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (24, 'Buoyancy  of Total Revenue w.r.t. GSDP (Ratio)', 0.7, '2016-17', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
-(25, 'Buoyancy of  State’s Own Taxes w.r.t. GSDP(Ratio)', -0.5, '2016-17', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
+(25, 'Buoyancy of State’s Own Taxes w.r.t. GSDP(Ratio)', -0.5, '2016-17', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (26, 'Own Tax Revenue as percentage of GSDP', 6.9, '2017-18_BE', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (27, 'Own Non-Tax Revenue as percentage of GSDP', 0.6, '2017-18_BE', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (28, 'Total Revenue as percentage of GSDP', 29.4, '2017-18_BE', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (29, 'Buoyancy  of Total Revenue w.r.t. GSDP (Ratio)', 4.6, '2017-18_BE', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
-(30, 'Buoyancy of  State’s Own Taxes w.r.t. GSDP(Ratio)', 5.4, '2017-18_BE', '2018-09-06 06:43:08', '2018-09-06 06:43:08');
+(30, 'Buoyancy of State’s Own Taxes w.r.t. GSDP(Ratio)', 5.4, '2017-18_BE', '2018-09-06 06:43:08', '2018-09-06 06:43:08');
 
 -- --------------------------------------------------------
 
