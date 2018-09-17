@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Sector: MyString
+  2016-17: 1.5
+  2017-18_BE: 1.5
+
+two:
+  Sector: MyString
+  2016-17: 1.5
+  2017-18_BE: 1.5

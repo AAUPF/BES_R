@@ -39,7 +39,7 @@ module Eovsharednew
           if year == 'All'
             where('Sector = ? OR Sector = ?', search, 'Bihar').where(indicator: search).order(:id)
           else
-            where('Sector = ? OR Sector = ?', search, 'Bihar').where('year = ?', year).where(indicator: search).order(:id)
+            where('Sector = ? OR Sector = ?', search, 'Bihar').where(indicator: search).order(:id)
           end
         else
           if rain_fall_type == 'All'
@@ -99,7 +99,7 @@ module Eovsharednew
           if year == 'All'
             where('Sector = ? OR Sector = ?', search, 'Bihar').where(Indicator: price).order(:id)
           else
-            where('Sector = ? OR Sector = ?', search, 'Bihar').where('year = ?', year).where(Indicator: price).order(:id)
+            where('Sector = ? OR Sector = ?', search, 'Bihar').where(Indicator: price).order(:id)
           end
         else
           if rain_fall_type == 'All'
@@ -123,6 +123,99 @@ module Eovsharednew
               else
                 # all
                 where('Sector = ? ', rain_fall_type).where(Indicator: price).order('id')
+              end
+            end
+          end
+        end
+      end
+
+
+      def sf_search(search, compare, year, rain_fall_type)
+        if search == 'All'
+          if rain_fall_type == 'All'
+            where(Year: year).order('id ')
+          else
+            if year == "All"
+              all.order(:id)
+            else
+              where(Year: year).order(:id)
+            end
+            # where(Year: year).order("#{rain_fall_type} ")
+          end
+        elsif compare == "Bihar vs Sector"
+          if year == "All"
+            where('Sector = ? OR Sector = ?', compare, 'Bihar').order(:id)
+          else
+            where('Sector = ? OR Sector = ?', compare, 'Bihar').order(:id)
+          end
+          
+        else
+          if rain_fall_type == 'All'
+            where('Sector = ? ', compare).order(:id)
+          else
+            if year == "All"
+              where('Sector = ? ', compare).order("id")
+            else
+              where('Sector = ? ', compare).order(:id)
+            end
+            
+             
+          end
+        end
+      end
+
+
+      def single_search(search, compare, year, rain_fall_type)
+        if search == 'All'
+          if rain_fall_type == 'All'
+            all
+          else
+            if year == 'All'
+              if rain_fall_type == "None"
+                where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').order('id')
+              else
+                where(Sector: rain_fall_type).order('id')
+              end
+            else
+              if rain_fall_type == "All"
+                where(Indicator: price).order("#{year} ")
+    
+              elsif rain_fall_type == "None"
+                where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').order('id')
+               else
+                where(Sector: rain_fall_type).order("#{year} ")
+               end
+            end
+            # where(Year: year).order("#{rain_fall_type} ")
+          end
+        elsif compare == 'Bihar vs Sector'
+          if year == 'All'
+            where('Sector = ? OR Sector = ?', search, 'Bihar').order(:id)
+          else
+            where('Sector = ? OR Sector = ?', search, 'Bihar').order(:id)
+          end
+        else
+          if rain_fall_type == 'All'
+            all
+          else
+            if year == 'All'
+              if rain_fall_type == "None"
+                where('Sector = ? ', search).order('id')
+              else
+                where('Sector = ? ', rain_fall_type).order('id')
+              end
+            else
+    
+              if rain_fall_type == "None"
+    
+                if search == "All"
+                  where('Sector = ? ', search).order('id')
+                else
+                  where('Sector = ? ', search).order('id')
+                end
+              else
+                # all
+                where('Sector = ? ', rain_fall_type).order('id')
               end
             end
           end

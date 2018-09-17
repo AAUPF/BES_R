@@ -13,94 +13,94 @@ module Statefinanceyearsector
     end
     end
 
-  # def search(search, compare, year, rain_fall_type)
-  #   if search == 'All'
-  #     if rain_fall_type == 'All'
-  #       all
-  #     else
-  #       if year == 'All'
-  #         if rain_fall_type == "None"
-  #           where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').order('id')
-  #         else
-  #           # all
-  #            where(Sector: rain_fall_type).order('id')
-  #         end
-  #       else
-  #         if rain_fall_type == "All"
-  #           order("#{year} ")
-
-  #         elsif rain_fall_type == "None"
-  #           where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').order('id')
-  #          else
-  #           where(Sector: rain_fall_type).order("#{year} ")
-  #          end
-  #       end
-  #       # where(Year: year).order("#{rain_fall_type} ")
-  #     end
-  #   elsif compare != "None"
-  #     if year == 'All'
-  #       where('Sector = ? OR Sector = ?', rain_fall_type, compare).order(:id)
-  #     else
-  #       where('Sector = ? OR Sector = ?', rain_fall_type, compare).order(:id)
-  #     end
-  #   else
-
-  #     if rain_fall_type == 'All'
-  #       all.order('id')
-  #     else
-  #       if year == 'All'
-
-  #         if rain_fall_type == "None"
-  #           where('Sector = ? ', search).order('id')
-  #         else
-
-  #           where('Sector = ? ', rain_fall_type).order('id')
-  #         end
-  #       else
-
-  #         if rain_fall_type == "None"
-
-  #           if search == "All"
-  #             where('Sector = ? ', search).order('id')
-  #           else
-  #             where('Sector = ? ', search).order('id')
-  #           end
-  #         else
-  #           # all
-  #           where('Sector = ? ', rain_fall_type).order('id')
-  #         end
-  #       end
-  #     end
-  #   end
-  # end
-
   def search(search, compare, year, rain_fall_type)
-    @search = search
-    @compare = compare
-    @year = year
-    @rain_fall_type = rain_fall_type
-    @query = all
-    @query = @query.where(Sector: sectors_to_use) if sectors_to_use
-    @query = @query.order(order_to_use) if order_to_use
-    @query
-  end
-
-  def sectors_to_use
-    return [@rain_fall_type, @compare] if @search != 'All' && @compare != 'None'
-    unless @rain_fall_type == 'All'
-      if @rain_fall_type == 'None'
-        @search == 'All' ? %w[Primary Secondary Tertiary] : [@search]
+    if search == 'All'
+      if rain_fall_type == 'All'
+        all
       else
-        [@rain_fall_type]
+        if year == 'All'
+          if rain_fall_type == "None"
+            where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').order('id')
+          else
+            # all
+             where(Sector: rain_fall_type).order('id')
+          end
+        else
+          if rain_fall_type == "All"
+            order("#{year} ")
+
+          elsif rain_fall_type == "None"
+            where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').order('id')
+           else
+            where(Sector: rain_fall_type).order("#{year} ")
+           end
+        end
+        # where(Year: year).order("#{rain_fall_type} ")
+      end
+    elsif compare != "None"
+      if year == 'All'
+        where('Sector = ? OR Sector = ?', rain_fall_type, compare).order(:id)
+      else
+        where('Sector = ? OR Sector = ?', rain_fall_type, compare).order(:id)
+      end
+    else
+
+      if rain_fall_type == 'All'
+        all.order('id')
+      else
+        if year == 'All'
+
+          if rain_fall_type == "None"
+            where('Sector = ? ', search).order('id')
+          else
+
+            where('Sector = ? ', rain_fall_type).order('id')
+          end
+        else
+
+          if rain_fall_type == "None"
+
+            if search == "All"
+              where('Sector = ? ', search).order('id')
+            else
+              where('Sector = ? ', search).order('id')
+            end
+          else
+            # all
+            where('Sector = ? ', rain_fall_type).order('id')
+          end
+        end
       end
     end
   end
 
-  def order_to_use
-    return nil if (@search == 'All') && (@rain_fall_type == 'All')
-    return @year if (@search == 'All') && @year != 'All'
-    :id
-  end
+  # def search(search, compare, year, rain_fall_type)
+  #   @search = search
+  #   @compare = compare
+  #   @year = year
+  #   @rain_fall_type = rain_fall_type
+  #   @query = all
+  #   @query = @query.where(Sector: sectors_to_use) if sectors_to_use
+  #   @query = @query.order(order_to_use) if order_to_use
+  #   @query
+  # end
+
+  # def sectors_to_use
+  #   return [@rain_fall_type, @compare] if @search != 'All' && @compare != 'None'
+  #   unless @rain_fall_type == 'All'
+  #     if @rain_fall_type == 'None'
+  #       @search == 'All' ? %w[Primary Secondary Tertiary] : [@search]
+  #     else
+  #       [@rain_fall_type]
+  #     end
+  #   end
+  # end
+
+  # def order_to_use
+  #   return nil if (@search == 'All') && (@rain_fall_type == 'All')
+  #   return @year if (@search == 'All') && @year != 'All'
+  #   :id
+  # end
 
   # Logic to generate table starts
   def table(b, rain_fall_type, _year, ji, compare, search, data)

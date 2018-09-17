@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sector:</strong>
+  <%= @comparison_of_budget.Sector %>
+</p>
+
+<p>
+  <strong>2016-17:</strong>
+  <%= @comparison_of_budget.2016-17 %>
+</p>
+
+<p>
+  <strong>2017-18 be:</strong>
+  <%= @comparison_of_budget.2017-18_BE %>
+</p>
+
+<%= link_to 'Edit', edit_comparison_of_budget_path(@comparison_of_budget) %> |
+<%= link_to 'Back', comparison_of_budgets_path %>

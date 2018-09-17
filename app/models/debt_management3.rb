@@ -378,15 +378,17 @@ class DebtManagement3 < ApplicationRecord
                 }
             else
               if views == "line" || views == "scatter" || views == "column"
-                dataset = rain_fall_type.tr('_', ' ')
+                dataset = search.tr('_', ' ')
                   hash_data =
                     [{
                       type: views,
                       color: color,
                       legendText: dataset,
+                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                      name:dataset,
                       showInLegend: true,
                       dataPoints: b.map do |el|
-                        { y: el[rain_fall_type], label: el['Public_Debt_Repayment_Liabilities'] }
+                        { y: el[rain_fall_type], label: el['Year'] }
                                   end
                     }]
               else

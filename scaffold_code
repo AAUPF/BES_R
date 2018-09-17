@@ -1,3 +1,7 @@
-rails g scaffold TaxDepartment4  Sector:string	"2012-13":float	"2013-14":float	"2014-15":float	"2015-16":float	"2016-17":float	
+rails g scaffold DebtManagement2  Sector:string 2015-16:float	2016-17:float	31_03_2016:float	31_03_2017:float	2017_from_2016:float	31_03_17:float
 
 rails d scaffold DebtManagement4 
+
+
+
+rails g scaffold TaxDepartment7 Districts:string	"VAT":float	"CST":float	"ENT_Tax":float	"ED":float	"ADV_Tax":float	"LUX_Tax":float	"Entry_Tax":float	"Professional_Tax":float	"Total":float	"Target":float	Year:integer

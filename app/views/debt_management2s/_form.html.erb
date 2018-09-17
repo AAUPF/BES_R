@@ -1,0 +1,52 @@
+<%= form_with(model: debt_management2, local: true) do |form| %>
+  <% if debt_management2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(debt_management2.errors.count, "error") %> prohibited this debt_management2 from being saved:</h2>
+
+      <ul>
+      <% debt_management2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sector %>
+    <%= form.text_field :Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2015-16 %>
+    <%= form.text_field :2015-16 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2016-17 %>
+    <%= form.text_field :2016-17 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :31_03_2016 %>
+    <%= form.text_field :31_03_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :31_03_2017 %>
+    <%= form.text_field :31_03_2017 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2017_from_2016 %>
+    <%= form.text_field :2017_from_2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :31_03_17 %>
+    <%= form.text_field :31_03_17 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

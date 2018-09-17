@@ -1,0 +1,77 @@
+<%= form_with(model: tax_department7, local: true) do |form| %>
+  <% if tax_department7.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tax_department7.errors.count, "error") %> prohibited this tax_department7 from being saved:</h2>
+
+      <ul>
+      <% tax_department7.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :VAT %>
+    <%= form.text_field :VAT %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CST %>
+    <%= form.text_field :CST %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ENT_Tax %>
+    <%= form.text_field :ENT_Tax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ED %>
+    <%= form.text_field :ED %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ADV_Tax %>
+    <%= form.text_field :ADV_Tax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :LUX_Tax %>
+    <%= form.text_field :LUX_Tax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Entry_Tax %>
+    <%= form.text_field :Entry_Tax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Professional_Tax %>
+    <%= form.text_field :Professional_Tax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Target %>
+    <%= form.text_field :Target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.number_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

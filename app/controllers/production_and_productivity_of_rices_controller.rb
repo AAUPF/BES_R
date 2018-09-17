@@ -16,62 +16,6 @@ class ProductionAndProductivityOfRicesController < ApplicationController
     @production_and_productivity_of_rice = ProductionAndProductivityOfRice.new
   end
 
-  #   def test
-
-  #     ji = [:Districts, :Area, :Production, :Productivity, :Year]
-  #     rain_fall_type = params[:rain_fall_type]
-  #      views  = params[:views]
-  #      year  = ""
-  #      compare = params[:compare]
-
-  #     if rain_fall_type || views
-
-  #         if views == "Map View"
-  #           l =  rain_fall_type.gsub(" ","")
-  #           if year == "2016"
-  #             j = "#{l}_2016"
-  #           elsif year == "2017"
-  #             j = "#{l}_2017"
-  #           else
-  #             puts "no year"
-  #           end
-
-  #            if rain_fall_type  ==  "All"
-
-  #             if year == "2016"
-  #               j = "Total_2016"
-  #             elsif year == "2017"
-  #               j = "Total_2017"
-  #             else
-  #               puts "no year"
-  #             end
-  #             b = ProductionAndProductivityOfRice.map_search(rain_fall_type)
-  #             u = "Total"
-  #             a = ProductionAndProductivityOfRice.map(b,u,year)
-  #            else
-  #             b = ProductionAndProductivityOfRice.map_search(rain_fall_type)
-  #             a = ProductionAndProductivityOfRice.map(b,rain_fall_type,year)
-  #            end
-  #         elsif views == "Table"
-  #           b = ProductionAndProductivityOfRice.search(params[:search],compare)
-
-  #           a = ProductionAndProductivityOfRice.table(b,rain_fall_type,year)
-  #         else
-  #           @ProductionAndProductivityOfRices = ProductionAndProductivityOfRice.search(params[:search],compare)
-  #           a = ProductionAndProductivityOfRice.query(@ProductionAndProductivityOfRices,params[:year],rain_fall_type,views,compare,ji)
-  #         end
-
-  #         respond_to do |format|
-  #           format.html { render json:a }
-  #       end
-
-  #     else
-  #       respond_to do |format|
-  #         format.html { render json: "error"}
-  #     end
-  #   end
-
-  # end
 
   def test
     ji = %i[Area Production Productivity]
@@ -81,7 +25,6 @@ class ProductionAndProductivityOfRicesController < ApplicationController
     compare = params[:compare]
 
     ji1 = %i[Districts Area Production Productivity]
-
     if rain_fall_type || views
 
       if views == 'Map View'

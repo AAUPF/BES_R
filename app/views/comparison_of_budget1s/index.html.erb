@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comparison Of Budget1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>2016-17</th>
+      <th>2017-18 be</th>
+      <th>Indicator</th>
+      <th>Sub sector</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comparison_of_budget1s.each do |comparison_of_budget1| %>
+      <tr>
+        <td><%= comparison_of_budget1.Sector %></td>
+        <td><%= comparison_of_budget1.2016-17 %></td>
+        <td><%= comparison_of_budget1.2017-18_BE %></td>
+        <td><%= comparison_of_budget1.Indicator %></td>
+        <td><%= comparison_of_budget1.Sub_sector %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comparison Of Budget1', new_comparison_of_budget1_path %>

@@ -1,0 +1,42 @@
+<%= form_with(model: comparison_of_budget1, local: true) do |form| %>
+  <% if comparison_of_budget1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comparison_of_budget1.errors.count, "error") %> prohibited this comparison_of_budget1 from being saved:</h2>
+
+      <ul>
+      <% comparison_of_budget1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sector %>
+    <%= form.text_field :Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2016-17 %>
+    <%= form.text_field :2016-17 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2017-18_BE %>
+    <%= form.text_field :2017-18_BE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Sub_sector %>
+    <%= form.text_field :Sub_sector %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

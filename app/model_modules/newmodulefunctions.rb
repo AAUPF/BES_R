@@ -153,7 +153,6 @@ def self.year_to_stack(b,rain_fall_type,_year,views,color,jip)
 
       else
 
-
         u = []
        hash_data = [
               {
@@ -607,5 +606,325 @@ return title
       end
     end
   end
-    
+
+
+  def self.controller_comparison(rain_fall_type,compare,search)
+    if rain_fall_type == 'Total Revenue Receipts'
+      if compare == 'None'
+
+      elsif compare == 'All'
+        rain_fall_type = compare
+        data = [
+            "Tax revenues",
+            "Non-Tax Revenues",
+            "Grants and Contributions",
+          ]
+      else
+        rain_fall_type = compare
+        data = [
+          "Tax revenues",
+          "Non-Tax Revenues",
+          "Grants and Contributions",
+          ]
+      end
+    elsif rain_fall_type == 'None'
+      rain_fall_type = search
+      data = [
+        'Revenue Account'
+      ]
+    else
+      data = [
+        "Total Revenue Receipts",
+        "Total Revenue Expenditure",
+        "Deficit Revenue A/c ",
+        "Consolidated Fund Receipts",
+        "Net Consolidated Fund (Receipt-Expenditure)",
+        "Contingency Fund ",
+        ]
+    end
+
+
+    if rain_fall_type == 'Total Revenue Expenditure'
+      if compare == 'None'
+        
+      elsif compare == 'All'
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      else
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      end
+    elsif rain_fall_type == 'None'
+      rain_fall_type = search
+      data = [
+        'Revenue Account'
+      ]
+    else
+      data = [
+        "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+        ]
+    end
+
+
+    if rain_fall_type == 'Contingency Fund '
+      if compare == 'None'
+        
+      elsif compare == 'All'
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      else
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      end
+    elsif rain_fall_type == 'None'
+      rain_fall_type = search
+      data = [
+        'Revenue Account'
+      ]
+    else
+      data = [
+        "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+        ]
+    end
+
+
+    if rain_fall_type == 'Total Receipts Public Account'
+      if compare == 'None'
+        
+      elsif compare == 'All'
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      else
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      end
+    elsif rain_fall_type == 'None'
+      rain_fall_type = search
+      data = [
+        'Revenue Account'
+      ]
+    else
+      data = [
+        "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+        ]
+    end
+
+
+
+
+    if rain_fall_type == 'Total Disbursements Public Account'
+      if compare == 'None'
+        
+      elsif compare == 'All'
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      else
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      end
+    elsif rain_fall_type == 'None'
+      rain_fall_type = search
+      data = [
+        'Revenue Account'
+      ]
+    else
+      data = [
+        "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+        ]
+    end
+
+
+    if rain_fall_type == 'Total Capital Receipts'
+      if compare == 'None'
+        
+      elsif compare == 'All'
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      else
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      end
+    elsif rain_fall_type == 'None'
+      rain_fall_type = search
+      data = [
+        'Revenue Account'
+      ]
+    else
+      data = [
+        "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+        ]
+    end
+
+
+    if rain_fall_type == 'Total Capital Expenditure '
+      if compare == 'None'
+        
+      elsif compare == 'All'
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      else
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      end
+    elsif rain_fall_type == 'None'
+      rain_fall_type = search
+      data = [
+        'Revenue Account'
+      ]
+    else
+      data = [
+        "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+        ]
+    end
+
+
+    if rain_fall_type == 'Deficit Capital Account'
+      if compare == 'None'
+        
+      elsif compare == 'All'
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      else
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      end
+    elsif rain_fall_type == 'None'
+      rain_fall_type = search
+      data = [
+        'Revenue Account'
+      ]
+    else
+      data = [
+        "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+        ]
+    end
+
+
+    if rain_fall_type == 'Consolidated Fund Expenditure'
+      if compare == 'None'
+        
+      elsif compare == 'All'
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      else
+        rain_fall_type = compare
+        data = [
+          "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+          ]
+      end
+    elsif rain_fall_type == 'None'
+      rain_fall_type = search
+      data = [
+        'Revenue Account'
+      ]
+    else
+      data = [
+        "General Services",
+          "Social Services",
+          "Economic Services",
+          "Grants and Contributions",
+        ]
+    end
+    return data, rain_fall_type
+  end
+
 end

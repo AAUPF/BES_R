@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tax Department7s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Vat</th>
+      <th>Cst</th>
+      <th>Ent tax</th>
+      <th>Ed</th>
+      <th>Adv tax</th>
+      <th>Lux tax</th>
+      <th>Entry tax</th>
+      <th>Professional tax</th>
+      <th>Total</th>
+      <th>Target</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tax_department7s.each do |tax_department7| %>
+      <tr>
+        <td><%= tax_department7.Districts %></td>
+        <td><%= tax_department7.VAT %></td>
+        <td><%= tax_department7.CST %></td>
+        <td><%= tax_department7.ENT_Tax %></td>
+        <td><%= tax_department7.ED %></td>
+        <td><%= tax_department7.ADV_Tax %></td>
+        <td><%= tax_department7.LUX_Tax %></td>
+        <td><%= tax_department7.Entry_Tax %></td>
+        <td><%= tax_department7.Professional_Tax %></td>
+        <td><%= tax_department7.Total %></td>
+        <td><%= tax_department7.Target %></td>
+        <td><%= tax_department7.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tax Department7', new_tax_department7_path %>
