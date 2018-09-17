@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Sep 17, 2018 at 07:57 AM
+-- Host: localhost:3306
+-- Generation Time: Sep 17, 2018 at 08:42 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `newdata`
+-- Database: `bihar_survey`
 --
 
 -- --------------------------------------------------------
@@ -7458,6 +7458,103 @@ INSERT INTO `resource_management8s` (`id`, `Revenue_Sources`, `Yearly_Growth_Rat
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `resource_management9s`
+--
+
+DROP TABLE IF EXISTS `resource_management9s`;
+CREATE TABLE `resource_management9s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `Budget_Estimate` float DEFAULT NULL,
+  `Actual_Receipts` float DEFAULT NULL,
+  `Variation_Excess_or_Shortfall_in_Amount` float DEFAULT NULL,
+  `Variation_Excess_or_Shortfall_in_Percentage` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `resource_management9s`
+--
+
+INSERT INTO `resource_management9s` (`id`, `Sector`, `Budget_Estimate`, `Actual_Receipts`, `Variation_Excess_or_Shortfall_in_Amount`, `Variation_Excess_or_Shortfall_in_Percentage`, `created_at`, `updated_at`) VALUES
+(1, 'Own Tax Revenue', NULL, NULL, NULL, NULL, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(2, 'Taxes on Sales, Trade', 14021, 11874, 2148, 18.1, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(3, 'Taxes on Goods and Passengers', 7212, 6246, 966, 15.5, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(4, 'State Excise', 2100, 30, 2070, 6979.6, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(5, 'Stamp and Registration Fees', 3800, 2982, 818, 27.4, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(6, 'Taxes on Vehicles', 1500, 1257, 243, 19.4, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(7, 'Land Revenue', 330, 971, -641, -66, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(8, 'Taxes & Duties on Electricity', 590, 224, 366, 163.5, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(9, 'Other Taxes and Duties on Commodities and Services', 89, 81, 8, 9.7, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(10, 'Total', 29730, 23742, 5988, 25.2, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(11, 'Non Tax Revenue', NULL, NULL, NULL, NULL, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(12, 'Non-Ferrous Mining and Metallurgical Industries', 1100, 998, 102, 10.3, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(13, 'Interest Receipts', 366, 940, -574, -61.1, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(14, 'Miscellaneous General Services', 2, 6, -4, -66.5, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(15, 'Other Administrative Services', 23, 100, -77, -76.6, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(16, 'Police', 32, 42, -10, -24.7, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(17, 'Major Irrigation', 29, 14, 15, 108.4, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(18, 'Education, Sports, Arts and Culture', 11, 17, -6, -33.2, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(19, 'Roads and Bridges', 72, 42, 30, 72.4, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(20, 'Medical and Public Health', 32, 40, -8, -19.7, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(21, 'Other Rural Development Programmes', 31, 36, -4, -12.6, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(22, 'Social Security and Welfare', 0, 0, 0, -90.4, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(23, 'Others', 660, 168, 491, 291.7, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(24, 'Total', 2358, 2403, -45, -1.9, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
+(25, 'Grant Total (Tax + Non-Tax)', 32088, 26145, 5943, 22.7, '2018-09-16 18:07:19', '2018-09-16 18:07:19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resource_management10s`
+--
+
+DROP TABLE IF EXISTS `resource_management10s`;
+CREATE TABLE `resource_management10s` (
+  `id` bigint(20) NOT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `Collection` float DEFAULT NULL,
+  `Expenditure_on_collection` float DEFAULT NULL,
+  `Cost_as_Percentage_of_Collection` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `resource_management10s`
+--
+
+INSERT INTO `resource_management10s` (`id`, `Indicator`, `Collection`, `Expenditure_on_collection`, `Cost_as_Percentage_of_Collection`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Taxes on sales / trade, etc', 8671, 78, 0.9, '2012-13', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(2, 'Taxes on sales / trade, etc', 8453, 70, 0.8, '2013-14', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(3, 'Taxes on sales / trade, etc', 8607, 96, 1.1, '2014-15', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(4, 'Taxes on sales / trade, etc', 10603, 90, 0.9, '2015-16', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(5, 'Taxes on sales / trade, etc', 11874, 117, 1, '2016-17', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(6, 'Taxes on sales / trade, etc', 24400, 129, 0.5, '2017-18 BE', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(7, 'State excise', 2430, 43, 1.8, '2012-13', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(8, 'State excise', 3168, 45, 1.4, '2013-14', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(9, 'State excise', 3217, 50, 1.6, '2014-15', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(10, 'State excise', 3142, 50, 1.6, '2015-16', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(11, 'State excise', 30, 92, 310, '2016-17', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(12, 'State excise', 0, 75, NULL, '2017-18 BE', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(13, 'Stamp duty and registration fee', 2173, 45, 2.1, '2012-13', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(14, 'Stamp duty and registration fee', 2712, 55, 2, '2013-14', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(15, 'Stamp duty and registration fee', 2699, 52, 1.9, '2014-15', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(16, 'Stamp duty and registration fee', 3409, 55, 1.6, '2015-16', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(17, 'Stamp duty and registration fee', 2982, 48, 1.6, '2016-17', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(18, 'Stamp duty and registration fee', 4600, 77, 1.7, '2017-18 BE', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(19, 'Taxes on Vehicles', 673, 25, 3.8, '2012-13', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(20, 'Taxes on Vehicles', 837, 30, 3.6, '2013-14', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(21, 'Taxes on Vehicles', 964, 38, 4, '2014-15', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(22, 'Taxes on Vehicles', 1081, 40, 3.7, '2015-16', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(23, 'Taxes on Vehicles', 1257, 46, 3.7, '2016-17', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
+(24, 'Taxes on Vehicles', 1800, 47, 2.6, '2017-18 BE', '2018-09-17 07:55:24', '2018-09-17 07:55:24');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `resource_management11s`
 --
 
@@ -7652,6 +7749,49 @@ INSERT INTO `resource_management13s` (`id`, `Sources`, `Amount`, `Year`, `create
 (34, 'Non-plan Grants', 5069, '2017-18_BE', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
 (35, 'Total Grants', 36956, '2017-18_BE', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
 (36, 'BCR', 31320, '2017-18_BE', '2018-09-06 07:28:52', '2018-09-06 07:28:52');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resource_management14s`
+--
+
+DROP TABLE IF EXISTS `resource_management14s`;
+CREATE TABLE `resource_management14s` (
+  `id` bigint(20) NOT NULL,
+  `Agency` varchar(255) DEFAULT NULL,
+  `GoI_Scheme` varchar(255) DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `resource_management14s`
+--
+
+INSERT INTO `resource_management14s` (`id`, `Agency`, `GoI_Scheme`, `2016-17`, `created_at`, `updated_at`) VALUES
+(1, 'Bihar Rural Development Society', 'MNREGA', 1619.33, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(2, 'FA&CAO, East Central railway, Patna', 'Other Schemes', 530, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(3, 'District Planning Officer', 'MPLADS', 201, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(4, 'IIT, Patna', 'IIT', 159.57, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(5, 'AIIMS, Patna', 'Establishment of AIIMS-type Super Speciality Hospitals-cum-Teaching Institutions', 140, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(6, 'Bihar State Tourism Development Corporation', 'Swadesh Darshan- Integrated Development of Theme based Tourism Circuits', 34.06, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(7, 'Bihar State Tourism Development Corporation', 'PRASAD', 24.92, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(8, 'NIT Patna', 'Technical Education Quality Improvement', 5.95, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(9, 'NIT Patna', 'NIT', 63, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(10, 'CRC Patna', 'Person with Disabilities', 10.88, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(11, 'Bihar State Milk Co-operative Federation', 'National Plan for Diary Development', 12.87, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(12, 'NIPER Hajipur', 'NIPER, Mohali', 5, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(13, 'Registrar General, HC, Patna', 'National Mission for Justice Delivery and Legal Reforms', 26.41, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(14, 'Central University of South Bihar', 'National Mission on Teachers and Teaching', 5.75, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(15, 'Heritage City Fund, GMC, Gaya', 'National Heritage Cities Programme', 11.53, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(16, 'Bihar State AIDS Control Society', 'NACO', 28.3, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(17, 'Nava Nalanda Mahavihara Agency', 'Kala Sanskriti Vikas Yojna', 10.2, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(18, 'Dr Rajendra Prasad Agricultural University, Pusa', 'Central Agricultural University, Bihar', 44.5, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(19, 'Upendra Maharathi Shilp Anusandhan Sansthan', 'Comprehensive Cluster Development Programme', 11.3, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(20, 'Security and Intelligence Services (India) Ltd.', 'ASI', 8.94, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
+(21, 'Total', NULL, 2953.51, '2018-09-16 18:52:27', '2018-09-16 18:52:27');
 
 -- --------------------------------------------------------
 
@@ -8209,7 +8349,11 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180914141703'),
 ('20180915101059'),
 ('20180916061054'),
-('20180917062638');
+('20180916180542'),
+('20180916183504'),
+('20180916184652'),
+('20180917062638'),
+('20180917075421');
 
 -- --------------------------------------------------------
 
@@ -10815,6 +10959,18 @@ ALTER TABLE `resource_management8s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `resource_management9s`
+--
+ALTER TABLE `resource_management9s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management10s`
+--
+ALTER TABLE `resource_management10s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `resource_management11s`
 --
 ALTER TABLE `resource_management11s`
@@ -10830,6 +10986,12 @@ ALTER TABLE `resource_management12s`
 -- Indexes for table `resource_management13s`
 --
 ALTER TABLE `resource_management13s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management14s`
+--
+ALTER TABLE `resource_management14s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -11677,6 +11839,18 @@ ALTER TABLE `resource_management8s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
+-- AUTO_INCREMENT for table `resource_management9s`
+--
+ALTER TABLE `resource_management9s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT for table `resource_management10s`
+--
+ALTER TABLE `resource_management10s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
 -- AUTO_INCREMENT for table `resource_management11s`
 --
 ALTER TABLE `resource_management11s`
@@ -11693,6 +11867,12 @@ ALTER TABLE `resource_management12s`
 --
 ALTER TABLE `resource_management13s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- AUTO_INCREMENT for table `resource_management14s`
+--
+ALTER TABLE `resource_management14s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `revenue_account1s`
