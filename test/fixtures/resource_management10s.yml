@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Indicator: MyString
+  Collection: 1.5
+  Expenditure_on_collection: 1.5
+  Cost_as_Percentage_of_Collection: 1.5
+  Year: MyString
+
+two:
+  Indicator: MyString
+  Collection: 1.5
+  Expenditure_on_collection: 1.5
+  Cost_as_Percentage_of_Collection: 1.5
+  Year: MyString

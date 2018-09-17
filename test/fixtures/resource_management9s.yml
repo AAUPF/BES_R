@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Revenue_Sources: MyString
+  Budget_Estimate: 1.5
+  Actual_Receipts: 1.5
+  Variation_Excess_or_Shortfall_in_Amount: 1.5
+  Variation_Excess_or_Shortfall_in_Percentage: 1.5
+
+two:
+  Revenue_Sources: MyString
+  Budget_Estimate: 1.5
+  Actual_Receipts: 1.5
+  Variation_Excess_or_Shortfall_in_Amount: 1.5
+  Variation_Excess_or_Shortfall_in_Percentage: 1.5

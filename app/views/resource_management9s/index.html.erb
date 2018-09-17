@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Resource Management9s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Revenue sources</th>
+      <th>Budget estimate</th>
+      <th>Actual receipts</th>
+      <th>Variation excess or shortfall in amount</th>
+      <th>Variation excess or shortfall in percentage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resource_management9s.each do |resource_management9| %>
+      <tr>
+        <td><%= resource_management9.Revenue_Sources %></td>
+        <td><%= resource_management9.Budget_Estimate %></td>
+        <td><%= resource_management9.Actual_Receipts %></td>
+        <td><%= resource_management9.Variation_Excess_or_Shortfall_in_Amount %></td>
+        <td><%= resource_management9.Variation_Excess_or_Shortfall_in_Percentage %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Resource Management9', new_resource_management9_path %>

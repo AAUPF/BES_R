@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Resource Management14s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Agency</th>
+      <th>Goi scheme</th>
+      <th>2016-17</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resource_management14s.each do |resource_management14| %>
+      <tr>
+        <td><%= resource_management14.Agency %></td>
+        <td><%= resource_management14.GoI_Scheme %></td>
+        <td><%= resource_management14.2016-17 %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Resource Management14', new_resource_management14_path %>

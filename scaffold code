@@ -1,1 +1,1 @@
-rails g scaffold TaxDepartment6 Districts:string Number_of_Document:float Registration_Fees:float Stamp_Fee:float Total_Receipt:float Target:float Year:string
+rails g scaffold ResourceManagement10 Indicator:string Collection:float Expenditure_on_collection:float Cost_as_Percentage_of_Collection:float Year:string

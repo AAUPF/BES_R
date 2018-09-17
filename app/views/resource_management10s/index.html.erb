@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Resource Management10s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Indicator</th>
+      <th>Collection</th>
+      <th>Expenditure on collection</th>
+      <th>Cost as percentage of collection</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resource_management10s.each do |resource_management10| %>
+      <tr>
+        <td><%= resource_management10.Indicator %></td>
+        <td><%= resource_management10.Collection %></td>
+        <td><%= resource_management10.Expenditure_on_collection %></td>
+        <td><%= resource_management10.Cost_as_Percentage_of_Collection %></td>
+        <td><%= resource_management10.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Resource Management10', new_resource_management10_path %>

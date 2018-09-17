@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+  resources :resource_management10s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :resource_management14s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :resource_management9s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
   resources :debt_management2s do 
                       collection { post :import }
                       collection { get :dropdown }
