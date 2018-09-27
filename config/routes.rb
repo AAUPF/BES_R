@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :mininngs do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :resource_management10s do 
     collection { post :import }
     collection { get :dropdown }

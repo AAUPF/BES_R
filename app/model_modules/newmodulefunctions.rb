@@ -1,5 +1,4 @@
 module Newmodulefunctions
-
   def self.eov_year(b,data,views,_year,color,search)
 
     result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
@@ -242,17 +241,7 @@ return title
 
       end
 
-    end
-
-    # if compare != "None"
-    #   newname = "#{search} vs #{compare}"
-    # else
-    #   newname = search
-     
-  
-    # end
-  
-  
+    end  
       title = if (views == 'stackedBar100') || (views == 'stackedBar')
         {
           animationEnabled: true,
@@ -283,10 +272,6 @@ return title
   return title
       
     end
-
-
-
-
   def self.year_to_stack_compare_all(b,rain_fall_type,_year,views,color,jip)
 
     if views != "column" && views!="line"
@@ -300,10 +285,7 @@ return title
           end
         }
       end
-
       else
-
-
         hash_data =  b.map do |col|
           {
             type:views,
@@ -314,8 +296,6 @@ return title
             end
           }
         end
-
-
       end
 
       return hash_data
@@ -927,4 +907,295 @@ return title
     return data, rain_fall_type
   end
 
+
+
+  def self.comparison_all(rain_fall_type,compare,search)
+
+    if search == 'Revenue Account'
+      if rain_fall_type == "Agriculture, Forestry and Fishing"
+
+        if compare == "None"
+          # #search = "None"
+          rain_fall_type
+        elsif compare == "All"
+          rain_fall_type = compare
+          data = [
+            "Crops",
+            "Livestock",
+            "Forestry and Logging",
+            "Fishing and Aquaculture",
+          ]
+        else
+          # #search = "None"
+          rain_fall_type = compare
+        end
+
+      elsif rain_fall_type == "None"
+        rain_fall_type
+
+        data = [
+          "Primary",
+        ]
+
+      else
+        data = [
+          "Total Revenue Expenditure",
+          "Deficit Revenue A/c ",
+          "Consolidated Fund Receipts",
+          "Net Consolidated Fund (Receipt-Expenditure)",
+          "Contingency Fund ",
+        ]
+      end
+
+elsif search == 'Secondary'
+
+
+  if rain_fall_type == "None"
+    rain_fall_type
+
+    data = [
+      "Secondary",
+    ]
+    
+  else
+    data = [
+      "Manufacturing",
+      "Electricity and Utilitiy Services",
+      "Construction",
+     
+    ]
+    
+  end
+
+
+elsif search == 'Tertiary'
+  if rain_fall_type == "Trade and Hospitality"
+
+    if compare == "None"
+      # #search = "None"
+
+      rain_fall_type
+    elsif compare == "All"
+      rain_fall_type = compare
+      data = [
+        "Trade and Repair Services",
+        "Hotels and Restaurants",
+      ]
+
+    else
+      #search = "None"
+      rain_fall_type = compare
+      data = [
+        "Trade and Repair Services",
+        "Hotels and Restaurants",
+      ]
+
+    end
+
+  elsif rain_fall_type == "Transport and Communication"
+
+    if compare == "None"
+      rain_fall_type
+    elsif compare == "All"
+      rain_fall_type = compare
+      data = [
+        "Railways",
+        "Road Transport",
+        "Water Transport",
+        "Air Transport",
+        "Services incidental to transport",
+        "Storage",
+        "Communication and Broadcasting",
+      ]
+
+    else
+      rain_fall_type = compare
+    end
+
+  elsif rain_fall_type == "None"
+    rain_fall_type
+
+    data = [
+      "Tertiary",
+    ]
+
+  else
+    data = [
+      "Trade and Hospitality",
+      "Transport and Communication",
+      "Financial Services",
+      "Real Estate Services",
+      "Public Administration",
+      "Other Services",
+    ]
+  end
+
+
+elsif search == 'All'
+  if rain_fall_type == "Agriculture, Forestry and Fishing"
+    if compare == "None"
+      #search = "None"
+
+      rain_fall_type
+    elsif compare == "All"
+      rain_fall_type = compare
+      data = [
+        "Crops",
+        "Livestock",
+        "Forestry and Logging",
+        "Fishing and Aquaculture",
+      ]
+
+      elsif rain_fall_type == "None"
+        rain_fall_type
+  
+        data = [
+          "Tertiary",
+          "Secondary",
+          "Primary"
+        ]
+
+    else
+      #search = "None"
+      rain_fall_type = compare
+      data = [
+        "Agriculture, Forestry and Fishing",
+        "Mining and Quarrying",
+        "Manufacturing",
+        "Electricity and Utilitiy Services",
+        "Construction",
+        "Trade and Hospitality",
+        "Transport and Communication",
+        "Financial Services",
+        "Real Estate Services",
+        "Public Administration",
+        "Other Services",
+        "Tertiary",
+        "Total GSVA at basic prices",
+      ]
+    end
+  elsif rain_fall_type == "Trade and Hospitality"
+
+    if compare == "None"
+      #search = "None"
+
+      rain_fall_type
+    elsif compare == "All"
+      rain_fall_type = compare
+      data = [
+        "Trade and Repair Services",
+        "Hotels and Restaurants",
+      ]
+
+
+    else
+      #search = "None"
+      rain_fall_type = compare
+      data = [
+        "Trade and Repair Services",
+        "Hotels and Restaurants",
+      ]
+
+    end
+
+  elsif rain_fall_type == "Transport and Communication"
+
+    if compare == "None"
+      rain_fall_type
+    elsif compare == "All"
+      rain_fall_type = compare
+      data = [
+        "Railways",
+        "Road Transport",
+        "Water Transport",
+        "Air Transport",
+        "Services incidental to transport",
+        "Storage",
+        "Communication and Broadcasting",
+      ]
+
+    else
+      rain_fall_type = compare
+    end
+
+
+  elsif  rain_fall_type == "None"
+    rain_fall_type
+
+    data = [
+      "Tertiary",
+      "Secondary",
+      "Primary"
+    ]
+
+  else
+    data = [
+      "Agriculture, Forestry and Fishing",
+      "Mining and Quarrying",
+      "Manufacturing",
+      "Electricity and Utilitiy Services",
+      "Construction",
+      "Trade and Hospitality",
+      "Transport and Communication",
+      "Financial Services",
+      "Real Estate Services",
+      "Public Administration",
+      "Other Services",
+      "Total GSVA at basic prices",
+    ]
+  end
 end
+
+    return data, rain_fall_type
+  end
+
+
+  def self.search_all_rainfalltype_all(color,rain_fall_type,b,ji,compare,views)
+
+    hash_data =  ji.map do |column_name|
+      dataset = column_name.to_s.gsub("_"," ")
+      if compare == "none"
+      {
+        type:views,
+        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+        name:dataset,
+        legendText: dataset,
+        color: color,
+        #name:dataset,
+        showInLegend: true,
+        dataPoints: b.map do |el|
+          { y: el[column_name],z:el[rain_fall_type], label: rain_fall_type }
+        end
+      }
+      else
+      {
+        type:views,
+        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+        name:dataset,
+        legendText: dataset,
+        #name:dataset,
+        showInLegend: true,
+        dataPoints: b.reject{|x| x["Type_of_Company_or_corporation"]== "Total"}.map do |el|
+             { y: el[column_name],z:el[column_name], label: el["Type_of_Company_or_corporation"] }
+        end
+      }
+      end
+    end
+        title = {
+          # toolTip: {
+          #   shared: true
+          # },
+          animationEnabled: true,
+          exportEnabled: true,
+          title:{
+            text: rain_fall_type.gsub("_"," ")
+                },
+          data: hash_data
+      }
+
+   return title
+
+  end
+
+end
+

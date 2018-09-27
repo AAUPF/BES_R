@@ -57,9 +57,6 @@ class SectoralExpendituresController < ApplicationController
       ]
     end
 
-
-
-
     if rain_fall_type || views
 
       if views == 'Map View'

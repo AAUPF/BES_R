@@ -29,7 +29,6 @@ class SectoralExpenditure1sController < ApplicationController
 
     jip = %i[2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE]
 
-
     if rain_fall_type == 'Revenue Expenditure (Rs. crore)'
       if compare == 'None'
         
@@ -48,13 +47,15 @@ class SectoralExpenditure1sController < ApplicationController
         '(a) Salary component (Percentage)',
         '(b) Non-salary component (Percentage)'
         ]
+   
     else
-      # data = [
-      #   "Total Expenditure (Rs. crore)",
-      #   "Revenue Expenditure (Rs. crore)",
-      #   "Capital Outlay (Rs. crore)",
-      #   "Capital Outlay (Percentage)",
-      # ]
+      data = [
+        "Total Expenditure (Rs. crore)",
+        "Revenue Expenditure (Rs. crore)",
+        "Capital Outlay (Rs. crore)",
+        "Capital Outlay (Percentage)",
+      ]
+
     end
 
 

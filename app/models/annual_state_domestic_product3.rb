@@ -184,10 +184,6 @@ class AnnualStateDomesticProduct3 < ApplicationRecord
         else
           data = { column: hash_data, data: j }
         end  
-
-
-   
-   
   end
   # Logic to generate table end
 
@@ -427,11 +423,8 @@ class AnnualStateDomesticProduct3 < ApplicationRecord
 
       return title
     else
-
-
       if compare == 'Bihar vs Sector'
         if _year == 'All'
-
           grouped_data = b.group_by { |data| data[:Year] }
           hash_data = grouped_data.map do |vegetable, values|
             dataset = vegetable.to_s.tr('_', ' ')
@@ -445,7 +438,6 @@ class AnnualStateDomesticProduct3 < ApplicationRecord
             }
           end
         else
-
           dataset = rain_fall_type.tr('_', ' ')
           hash_data =
             [{
@@ -458,7 +450,6 @@ class AnnualStateDomesticProduct3 < ApplicationRecord
                           end
             }]
         end
-
       else
         if _year == 'All'
 

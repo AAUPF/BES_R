@@ -1,0 +1,37 @@
+<%= form_with(model: mininng, local: true) do |form| %>
+  <% if mininng.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mininng.errors.count, "error") %> prohibited this mininng from being saved:</h2>
+
+      <ul>
+      <% mininng.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sector %>
+    <%= form.text_field :Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2014-15 %>
+    <%= form.text_field :2014-15 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2015-16 %>
+    <%= form.text_field :2015-16 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2016-17 %>
+    <%= form.text_field :2016-17 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

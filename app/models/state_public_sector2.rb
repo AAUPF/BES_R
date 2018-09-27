@@ -1,5 +1,5 @@
 class StatePublicSector2 < ApplicationRecord
-  
+  include Newmodulefunctions
 
         def self.import1(file)
           spreadsheet = Roo::Spreadsheet.open(file.path)
@@ -97,70 +97,22 @@ class StatePublicSector2 < ApplicationRecord
         end
       
       def self.query(b,year,rain_fall_type,views,ji,compare,search)
+
           
             d = "Districts"
-    
-    
+  
             if views == "pie"
               
               color = "none"
             else
               color = "#4f81bc"
             end
-    
-    
             if search == "All" && rain_fall_type == "All"
-    
-              hash_data =  ji.map do |column_name|
-    
-                dataset = column_name.to_s.gsub("_"," ")
-                if compare == "none"
-                {
-                  type:views,
-                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
-                  legendText: dataset,
-                  color: color,
-                  #name:dataset,
-                  showInLegend: true,
-                  dataPoints: b.map do |el|
-                    { y: el[column_name],z:el[rain_fall_type], label: rain_fall_type }
-                  end
-                }
-                else
-    
-                {
-                  type:views,
-                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
-                  legendText: dataset,
-                  #name:dataset,
-                  showInLegend: true,
-                  dataPoints: b.reject{|x| x["Type_of_Company_or_corporation"]== "Total"}.map do |el|
-                       { y: el[column_name],z:el[column_name], label: el["Type_of_Company_or_corporation"] }
-                  end
-                }
-                end
-              end
-                  title = {
-                    # toolTip: {
-                    #   shared: true
-                    # },
-                    animationEnabled: true,
-                    exportEnabled: true,
-                    title:{
-                      text: rain_fall_type.gsub("_"," ")
-                          },
-                    data: hash_data
-                }
-    
-             return title
+
+              title = Newmodulefunctions.search_all_rainfalltype_all(color,rain_fall_type,b,ji,compare,views)
     
             elsif search == "All"
-    
-    
-    
-    
+              testvariable = "Type_of_Company_or_corporation"
               if compare != "None"
               ji1 = [rain_fall_type,compare]
                 hash_data = ji1.map do |col|
@@ -174,32 +126,29 @@ class StatePublicSector2 < ApplicationRecord
                     name:dataset,
                     legendText: dataset,
                     showInLegend: true,
-                    dataPoints: b.reject{|x| x["Type_of_Company_or_corporation"]== "Total"}.map do |el|
-                         { y: el[col], label: el["Type_of_Company_or_corporation"] }
+                    dataPoints: b.reject{|x| x[testvariable]== "Total"}.map do |el|
+                         { y: el[col], label: el[testvariable] }
                     end
                   }
                 end
     
               else
+
+               
     
                 dataset = rain_fall_type.tr('_', ' ')
                         hash_data =  b.reject{|x| x["Type_of_Company_or_corporation"]== "Total"}.map do |el|
                         {
                             type:views,
                             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                            name:"#{el["Type_of_Company_or_corporation"]}",
-                            legendText:"#{el["Type_of_Company_or_corporation"]}",
+                            name:"#{el[testvariable]}",
+                            legendText:"#{el[testvariable]}",
                             showInLegend: true,
                             dataPoints: [{ y: el[rain_fall_type], label:  dataset }]
                         }
-    
                 end
-    
               end
-             
-    
-    
-           # logic of if starts here
+            # logic of if starts here
               if compare == "None"
                   name =  "#{rain_fall_type.to_s.gsub("_"," ")}"
               else
@@ -219,7 +168,7 @@ class StatePublicSector2 < ApplicationRecord
     
               return title
             else
-            
+
               if compare
     
                 if rain_fall_type == "All"
@@ -247,10 +196,9 @@ class StatePublicSector2 < ApplicationRecord
                 }
     
                   return title
-    
                 else
-                  
-    
+
+                
                     if compare == "None"
                           ji1 = [rain_fall_type]
                           hash_data =  ji1.map do |col|

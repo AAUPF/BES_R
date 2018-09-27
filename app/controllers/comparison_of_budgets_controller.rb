@@ -34,8 +34,7 @@ def test
 
 
 
-   data, rain_fall_type  =  Newmodulefunctions.controller_comparison(rain_fall_type,compare,search)
-
+   data, rain_fall_type  =  Newmodulefunctions.comparison_all(rain_fall_type,compare,search)
 
   if rain_fall_type || views
 
