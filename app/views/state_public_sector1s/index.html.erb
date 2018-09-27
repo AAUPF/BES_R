@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>State Public Sector1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year as on 31st march</th>
+      <th>Number of working psus</th>
+      <th>Number of non working psus</th>
+      <th>Statutory corporations</th>
+      <th>Public sector companies</th>
+      <th>Equity</th>
+      <th>Loans</th>
+      <th>Investment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @state_public_sector1s.each do |state_public_sector1| %>
+      <tr>
+        <td><%= state_public_sector1.Year_as_on_31st_March %></td>
+        <td><%= state_public_sector1.Number_of_Working_PSUs %></td>
+        <td><%= state_public_sector1.Number_of_Non_Working_PSUs %></td>
+        <td><%= state_public_sector1.Statutory_Corporations %></td>
+        <td><%= state_public_sector1.Public_Sector_Companies %></td>
+        <td><%= state_public_sector1.Equity %></td>
+        <td><%= state_public_sector1.Loans %></td>
+        <td><%= state_public_sector1.Investment %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New State Public Sector1', new_state_public_sector1_path %>

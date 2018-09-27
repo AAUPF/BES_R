@@ -1,0 +1,57 @@
+<%= form_with(model: state_public_sector1, local: true) do |form| %>
+  <% if state_public_sector1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(state_public_sector1.errors.count, "error") %> prohibited this state_public_sector1 from being saved:</h2>
+
+      <ul>
+      <% state_public_sector1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year_as_on_31st_March %>
+    <%= form.text_field :Year_as_on_31st_March %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Working_PSUs %>
+    <%= form.text_field :Number_of_Working_PSUs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Non_Working_PSUs %>
+    <%= form.text_field :Number_of_Non_Working_PSUs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Statutory_Corporations %>
+    <%= form.text_field :Statutory_Corporations %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Public_Sector_Companies %>
+    <%= form.text_field :Public_Sector_Companies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Equity %>
+    <%= form.text_field :Equity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Loans %>
+    <%= form.text_field :Loans %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Investment %>
+    <%= form.text_field :Investment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

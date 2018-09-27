@@ -1,1 +1,1 @@
-rails g scaffold ResourceManagement10 Indicator:string Collection:float Expenditure_on_collection:float Cost_as_Percentage_of_Collection:float Year:string
+rails g scaffold StatePublicSector1 Year_as_on_31st_March:string Number_of_Working_PSUs:float Number_of_Non_Working_PSUs:float Statutory_Corporations:float Public_Sector_Companies:string Equity:float Loans:float Investment:float

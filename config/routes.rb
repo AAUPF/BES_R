@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+    resources :state_public_sector1s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
   resources :mininngs do 
                       collection { post :import }
                       collection { get :dropdown }
