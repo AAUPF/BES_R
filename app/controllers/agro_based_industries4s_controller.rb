@@ -22,6 +22,8 @@ def test
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
+   legend = "Location_of_Project"
+   remove = "Total"
    
    if year == "All"
     ji1 = [:Location_of_Project, :"2012-13", :"2013-14",:"2014-15",:"2015-16",:"2016-17"]
@@ -42,11 +44,11 @@ def test
           a = AgroBasedIndustries4.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = AgroBasedIndustries4.search(params[:search],compare,year,rain_fall_type)
-        a = AgroBasedIndustries4.table(b,rain_fall_type,year,ji1,compare)
+        b = AgroBasedIndustries4.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AgroBasedIndustries4.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @AgroBasedIndustries4s = AgroBasedIndustries4.search(params[:search],compare,year,rain_fall_type)
-        a = AgroBasedIndustries4.query(@AgroBasedIndustries4s,params[:year],rain_fall_type,views,ji,compare,search)
+        @AgroBasedIndustries4s = AgroBasedIndustries4.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AgroBasedIndustries4.query(@AgroBasedIndustries4s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

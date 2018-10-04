@@ -22,11 +22,13 @@ def test
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
+   legend = "Union_Project"
+   remove = "Total"
    
 if year == "All"
-  ji1 = [:"Union/Project", :"2012-13", :"2013-14",:"2014-15",:"2015-16",:"2016-17",:"CAGR"]
+  ji1 = [:"Union_Project", :"2012-13", :"2013-14",:"2014-15",:"2015-16",:"2016-17",:"CAGR"]
 else
-  ji1 = [:"Union/Project", :Daily_Milk_Collection, :Year]
+  ji1 = [:"Union_Project", :Daily_Milk_Collection, :Year]
 end
   if rain_fall_type || views
 
@@ -41,11 +43,11 @@ end
           a = AgroBasedIndustries3.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = AgroBasedIndustries3.search(params[:search],compare,year,rain_fall_type)
-        a = AgroBasedIndustries3.table(b,rain_fall_type,year,ji1,compare)
+        b = AgroBasedIndustries3.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AgroBasedIndustries3.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @AgroBasedIndustries3s = AgroBasedIndustries3.search(params[:search],compare,year,rain_fall_type)
-        a = AgroBasedIndustries3.query(@AgroBasedIndustries3s,params[:year],rain_fall_type,views,ji,compare,search)
+        @AgroBasedIndustries3s = AgroBasedIndustries3.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AgroBasedIndustries3.query(@AgroBasedIndustries3s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

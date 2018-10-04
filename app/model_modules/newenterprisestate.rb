@@ -13,7 +13,7 @@ module Newenterprisestate
         end
       end
     
-      def search(search, compare, year, rain_fall_type)
+      def search(search, compare, year, rain_fall_type,legend)
         if search == 'All'
           if rain_fall_type == 'All'
             where(Year: year).order('id ')
@@ -27,19 +27,22 @@ module Newenterprisestate
           end
         elsif compare == "Bihar vs State"
           if year == "All"
-            where('State = ? OR State = ?', search, 'Bihar').order(:id)
+            # where('State = ? OR State = ?', search, 'Bihar').order(:id)
+            where("#{legend} = ? OR #{legend} = ?", search, 'Bihar').order(:id)
+            
           else
-            where('State = ? OR State = ?', search, 'Bihar').where('year = ?', year).order(:id)
+            # where('State = ? OR State = ?', search, 'Bihar').where('year = ?', year).order(:id)
+            where("#{legend} = ? OR #{legend} = ?", search, 'Bihar').where('year = ?', year).order(:id)
           end
           
         else
           if rain_fall_type == 'All'
-            where('State = ? ', search).where('year = ?', year).order(:id)
+            where("#{legend} = ? ", search).where('year = ?', year).order(:id)
           else
             if year == "All"
-              where('State = ? ', search).order("id")
+              where("#{legend} = ? ", search).order("id")
             else
-              where('State = ? ', search).where('year = ?', year).order(rain_fall_type)
+              where("#{legend} = ? ", search).where('year = ?', year).order(rain_fall_type)
             end
             
              
@@ -48,14 +51,14 @@ module Newenterprisestate
       end
     
     
-      def table(b, rain_fall_type, _year, ji, compare)
+      def table(b, rain_fall_type, _year, ji, compare,legend)
           dataset = rain_fall_type.tr('_', ' ')
       
           if rain_fall_type 
       
             hash_data = ji.map do |el|
-              if el.to_s == 'State'
-                { title: 'State', field: el, headerFilter: true }
+              if el.to_s == legend
+                { title: legend.tr('_', ' '), field: el, headerFilter: true }
               else
                 { title: el.to_s.tr('_', ' '), field: el }
               end
@@ -63,14 +66,14 @@ module Newenterprisestate
           else
             if compare == 'None'
               hash_data = [
-                { title: 'State', field: 'State', headerFilter: true },
+                { title: legend.tr('_', ' '), field: legend, headerFilter: true },
                 { title: dataset, field: rain_fall_type }
               ]
             else
     
               hash_data = [
                 # {title:compare, field:compare, sorter:"string", },
-                { title: 'State', field: 'State', headerFilter: true },
+                { title: legend.tr('_', ' '), field: legend, headerFilter: true },
       
                 { title: dataset, field: rain_fall_type }
               ]
@@ -88,9 +91,9 @@ module Newenterprisestate
          if _year == "All"
           grouped = {}
             b.each do |x|
-              grouped[x[:State]] ||= {}
-              grouped[x[:State]][:State] = x[:State]
-              grouped[x[:State]][x[:Year]] = x[:Contribution]
+              grouped[x["#{legend}"]] ||= {}
+              grouped[x["#{legend}"]]["#{legend}"] = x["#{legend}"]
+              grouped[x["#{legend}"]][x[:Year]] = x["#{rain_fall_type}"]
             end
     
           data = { column: hash_data, data: grouped.values }
@@ -118,8 +121,8 @@ module Newenterprisestate
         end
       end
     
-      def query(b, _year, rain_fall_type, views, ji, compare,search)
-        d = 'State'
+      def query(b, _year, rain_fall_type, views, ji, compare,search,legend)
+        d = legend
         color  = "#4f81bc"
         if rain_fall_type == 'All'
           if views
@@ -182,9 +185,9 @@ module Newenterprisestate
           if compare == "None"
               
             if _year == "All"
-              grouped_data = b.group_by{ |data| data[:State]}
+              grouped_data = b.group_by{ |data| data["#{legend}"]}
               if search == "All"
-                h = b.group_by{ |data| data[:State]}
+                h = b.group_by{ |data| data["#{legend}"]}
                 hash_data = h.map{ |vegetable, values| 
                   dataset = vegetable.to_s.gsub("_"," ")
                  {
@@ -200,31 +203,50 @@ module Newenterprisestate
                   }
               else
 
-                dataset = rain_fall_type.tr('_', ' ')
-              hash_data =  b.map do |el|
-                {
-                  type:views,
+                if views != "column" && views!="line" && views!="scatter"
+                  dataset = rain_fall_type.tr('_', ' ')
+                  hash_data =  b.map do |el|
+                    {
+                      type:views,
+                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                      name:"#{el["Year"]}",
+                      legendText:"#{el["Year"]}",
+                      showInLegend: true,
+                      dataPoints: [{ y: el[rain_fall_type], label:  el["#{legend}"] }]
+                  }
+      
+                  end
+                else
+                  hash_data = grouped_data.map{ |vegetable, values| 
+                  dataset = vegetable.to_s.gsub("_"," ")
+                  {
+                  type: views,
+                  color:color,
                   toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:"#{el["Year"]}",
-                  legendText:"#{el["Year"]}",
+                  legendText: dataset,
+                  name:dataset,
                   showInLegend: true,
-                  dataPoints: [{ y: el[rain_fall_type], label:  el["State"] }]
-              }
-  
-              end
+                  dataPoints: values.map { |value|
+                  { y: value[rain_fall_type], label: value["Year"] }
+                  }
+                  }
+                  }
+                end
+
+              
 
               end
             else
 
-             if views != "column" && views!="line"
+             if views != "column" && views!="line" && views!="scatter"
               
               dataset = rain_fall_type.tr('_', ' ')
               hash_data =  b.map do |el|
                 {
                   type:views,
                   toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:"#{el["State"]}",
-                  legendText:"#{el["State"]}",
+                  name:"#{el["#{legend}"]}",
+                  legendText:"#{el["#{legend}"]}",
                   showInLegend: true,
                   dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
               }
@@ -240,7 +262,7 @@ module Newenterprisestate
                   legendText: dataset,
                   showInLegend: true,
                   dataPoints: b.map do |el|
-                                { y: el[rain_fall_type], label: el['State'] }
+                                { y: el[rain_fall_type], label: el["#{legend}"] }
                               end
                 }]
             end
@@ -249,9 +271,9 @@ module Newenterprisestate
             
           else
               if _year == "All"
-                  grouped_data = b.group_by{ |data| data[:State]}
+                  grouped_data = b.group_by{ |data| data["#{legend}"]}
                   if search == "All"
-                    h = b.group_by{ |data| data[:State]}
+                    h = b.group_by{ |data| data["#{legend}"]}
                     hash_data = h.map{ |vegetable, values| 
                       dataset = vegetable.to_s.gsub("_"," ")
                      {
@@ -287,8 +309,8 @@ module Newenterprisestate
                   {
                     type:views,
                     toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                    name:"#{el["State"]}",
-                    legendText:"#{el["State"]}",
+                    name:"#{el["#{legend}"]}",
+                    legendText:"#{el["#{legend}"]}",
                     showInLegend: true,
                     dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
                 }
@@ -297,28 +319,30 @@ module Newenterprisestate
 
                 end
           end
+
+          if compare == "None"
+            name =  "#{rain_fall_type.to_s.gsub("_"," ")}"
+        else
+            name =  "#{search.to_s.gsub("_"," ")} vs. Bihar"
+        end
+
           if views == "stackedBar100" or views == "stackedBar"
             title = {
               animationEnabled: true,
               exportEnabled: true,
               title:{
-                text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                text: name
                     },
               data: hash_data
           }
          
           else
-              if search.include? "percentage"
-                  l = "Percentage"
-              else
-                  l = "Contribution"
-    
-              end
+              
             title = {
               animationEnabled: true,
               exportEnabled: true,
               title:{
-                text: "#{l.to_s.gsub("_"," ")}"
+                text: name
                     },
                     # axisX: {
                     #   interval:1,

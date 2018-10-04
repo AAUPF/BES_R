@@ -1,4 +1,4 @@
 class SupportInstitutions2 < ApplicationRecord
-  extend Rfallseason  
+  extend Rfallseason 
 
       end

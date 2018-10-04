@@ -135,21 +135,10 @@ end
 
 
     def query(b,year,rain_fall_type,views,ji,compare)
-      #  return b
-        # l =  rain_fall_type.gsub(" ","")
-        # abort(rain_fall_type)
+      
         d = "Districts"
-
-
-        if views == "pie"
-          
-          color = "none"
-        else
-          color = "#4f81bc"
-        end
-
-
-        if year == "All" && rain_fall_type == "All"
+        color = "#4f81bc"
+       if year == "All" && rain_fall_type == "All"
 
           hash_data =  ji.map do |column_name|
 
@@ -161,7 +150,6 @@ end
               name:dataset,
               legendText: dataset,
               color: color,
-              #name:dataset,
               showInLegend: true,
               dataPoints: b.map do |el|
                 { y: el[column_name],z:el[rain_fall_type], label: rain_fall_type }
@@ -174,7 +162,6 @@ end
               toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
               name:dataset,
               legendText: dataset,
-              #name:dataset,
               showInLegend: true,
               dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
                    { y: el[column_name],z:el[column_name], label: el["Year"] }
@@ -222,22 +209,8 @@ end
 
           else
 
-            # dataset = rain_fall_type.gsub("_"," ")
-
-            # hash_data =
-            # [{
-            #   type:views,
-            #   toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-            #   name:dataset,
-            #   color: color,
-            #   legendText: dataset,
-            #   showInLegend: true,
-            #   dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
-            #        { y: el[rain_fall_type], label: el["Year"] }
-            #   end
-            # }]
-
-            dataset = rain_fall_type.tr('_', ' ')
+            if views != "column" && views!="line" && views!="scatter"
+              dataset = rain_fall_type.tr('_', ' ')
                     hash_data =  b.map do |el|
                     {
                         type:views,
@@ -249,11 +222,25 @@ end
                     }
 
             end
+            else
+              dataset = rain_fall_type.gsub("_"," ")
+
+            hash_data =
+            [{
+              type:views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
+              color: color,
+              legendText: dataset,
+              showInLegend: true,
+              dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+                   { y: el[rain_fall_type], label: el["Year"] }
+              end
+            }]
+            end
 
           end
          
-
-
        # logic of if starts here
           if compare == "None"
               name =  "#{rain_fall_type.to_s.gsub("_"," ")}"
@@ -279,12 +266,11 @@ end
 
             if rain_fall_type == "All"
               # ji = [rain_fall_type,compare]
-
               hash_data =  ji.map do |col|
                 {
                   type:views,
                   toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:col,
+                  name:col.to_s.gsub("_"," "),
                   legendText: col.to_s.gsub("_"," "),
                   showInLegend: true,
                   dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
@@ -312,7 +298,7 @@ end
                         {
                           type:views,
                           toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                          name:col,
+                          name:col.to_s.gsub("_"," "),
                           legendText: col.to_s.gsub("_"," "),
                           showInLegend: true,
                           dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
@@ -339,7 +325,7 @@ end
                  {
                    type:views,
                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                   name:col,
+                   name:col.to_s.gsub("_"," "),
                    legendText: col.to_s.gsub("_"," "),
                    showInLegend: true,
                    dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|

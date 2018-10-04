@@ -22,16 +22,15 @@ def test
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
-   ji1 = [:Location_of_Union_or_Project, :Organised_Societies, :Working_Societies, :Registered_Societies, :Year]
+   legend  = "Location_of_Union_or_Project"
+   remove = "Total"
+  #  ji1 = [:Location_of_Union_or_Project, :Organised_Societies, :Working_Societies, :Registered_Societies, :Year]
    if year == "All"
     ji1 = [:Location_of_Union_or_Project,:"2015-16",:"2016-17"]
    else
-    if rain_fall_type == "Organised_Societies"
-      ji1 = [:Location_of_Union_or_Project, :Organised_Societies, :Year]
-      elsif rain_fall_type == "Working_Societies"
-        ji1 = [:Location_of_Union_or_Project, :Working_Societies, :Year]
-      elsif rain_fall_type == "Registered_Societies"
-        ji1 = [:Location_of_Union_or_Project, :Registered_Societies, :Year]
+    if rain_fall_type != "All"
+      ji1 = [:Location_of_Union_or_Project, "#{rain_fall_type}", :Year]
+      
     else
       ji1 = [:Location_of_Union_or_Project, :Organised_Societies, :Working_Societies, :Registered_Societies, :Year]
     end
@@ -50,11 +49,11 @@ def test
           a = AgroBasedIndustries2.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = AgroBasedIndustries2.search(params[:search],compare,year,rain_fall_type)
-        a = AgroBasedIndustries2.table(b,rain_fall_type,year,ji1,compare)
+        b = AgroBasedIndustries2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AgroBasedIndustries2.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @AgroBasedIndustries2s = AgroBasedIndustries2.search(params[:search],compare,year,rain_fall_type)
-        a = AgroBasedIndustries2.query(@AgroBasedIndustries2s,params[:year],rain_fall_type,views,ji,compare,search)
+        @AgroBasedIndustries2s = AgroBasedIndustries2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AgroBasedIndustries2.query(@AgroBasedIndustries2s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

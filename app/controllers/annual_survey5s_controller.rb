@@ -22,14 +22,15 @@ def test
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
+   legend = "Characteristics"
+   remove = ""
   #  ji1 = [:Characteristics, :India, :Bihar, :Year]
    if year == "All"
-    ji1 = [:Characteristics,:"2014-15",:"2015-16",:"2016-17"]
+    ji1 = [:Characteristics,:"2012-13",:"2013-14",:"2014-15"]
    else
-    if rain_fall_type == "India"
-      ji1 = [:Characteristics, :India, :Year]
-      elsif rain_fall_type == "Bihar"
-        ji1 = [:Characteristics, :Bihar, :Year]
+    if rain_fall_type != "All"
+      ji1 = [:Characteristics, "#{rain_fall_type}", :Year]
+      
     else
       ji1 = [:Characteristics, :India, :Bihar, :Year]
     end
@@ -48,11 +49,11 @@ def test
           a = AnnualSurvey5.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = AnnualSurvey5.search(params[:search],compare,year,rain_fall_type)
-        a = AnnualSurvey5.table(b,rain_fall_type,year,ji1,compare)
+        b = AnnualSurvey5.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AnnualSurvey5.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @AnnualSurvey5s = AnnualSurvey5.search(params[:search],compare,year,rain_fall_type)
-        a = AnnualSurvey5.query(@AnnualSurvey5s,params[:year],rain_fall_type,views,ji,compare,search)
+        @AnnualSurvey5s = AnnualSurvey5.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AnnualSurvey5.query(@AnnualSurvey5s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

@@ -22,18 +22,15 @@ def test
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
-   
+   legend  = "Name_of_Sugar_Mill"
+   remove = "Total"
    if year == "All"
     ji1 = [:Name_of_Sugar_Mill,:"2014-15",:"2015-16",:"2016-17"]
    else
-    if rain_fall_type == "Sugarcane_Crushed"
-      ji1 = [:Name_of_Sugar_Mill, :Sugarcane_Crushed, :Year]
-      elsif rain_fall_type == "Sugar_Produced"
-        ji1 = [:Name_of_Sugar_Mill, :Sugar_Produced, :Year]
-      elsif rain_fall_type == "Recovery_Percentage"
-        ji1 = [:Name_of_Sugar_Mill, :Recovery_Percentage, :Year]
+    if rain_fall_type != "All"
+      ji1 = [:Name_of_Sugar_Mill, "#{rain_fall_type}", :Year]
     else
-      ji = [:Name_of_Sugar_Mill, :Sugarcane_Crushed, :Sugar_Produced, :Recovery_Percentage, :Year]
+      ji1 = [:Name_of_Sugar_Mill, :Sugarcane_Crushed, :Sugar_Produced, :Recovery_Percentage, :Year]
     end
     
    end
@@ -51,11 +48,11 @@ def test
           a = AgroBasedIndustries1.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = AgroBasedIndustries1.search(params[:search],compare,year,rain_fall_type)
-        a = AgroBasedIndustries1.table(b,rain_fall_type,year,ji1,compare)
+        b = AgroBasedIndustries1.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AgroBasedIndustries1.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @AgroBasedIndustries1s = AgroBasedIndustries1.search(params[:search],compare,year,rain_fall_type)
-        a = AgroBasedIndustries1.query(@AgroBasedIndustries1s,params[:year],rain_fall_type,views,ji,compare,search)
+        @AgroBasedIndustries1s = AgroBasedIndustries1.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AgroBasedIndustries1.query(@AgroBasedIndustries1s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

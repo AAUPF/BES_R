@@ -1,4 +1,5 @@
-module Newenterprisesector
+module Generaldata
+
     def import1(file)
         spreadsheet = Roo::Spreadsheet.open(file.path)
         header = spreadsheet.row(1)
@@ -13,44 +14,51 @@ module Newenterprisesector
     
       def search(search, compare, year, rain_fall_type,legend)
         if search == 'All'
-          if rain_fall_type == 'All'
-            where(Year: year).order('id ')
-          else
-            if year == "All"
-              all.order(:id)
-            else
-              where(Year: year).order("#{rain_fall_type} ")
-            end
-            # where(Year: year).order("#{rain_fall_type} ")
-          end
-        elsif compare
-          if year == "All"
-             where("#{legend} = ? OR #{legend} = ?", search, compare).order(:id)
-            # where('Sector = ? OR Sector = ?' = ?', search, compare).order(:id)
-            
-          else
-            where("#{legend} = ? OR #{legend} = ?", search, compare).where('year = ?', year).order(:id)
-          end
           
-        else
           if rain_fall_type == 'All'
-            where("#{legend} = ? ", search).where('year = ?', year).order(:id)
+              if year == "All"
+                  all.order("id")
+                else
+                  where(Year: year).order(:id)
+                end
           else
-            if year == "All"
-              where("#{legend} = ? ", search).order("id")
-            else
-              where("#{legend} = ? ", search).where('year = ?', year).order(rain_fall_type)
-            end
+              if year == "All"
+                  all.order("id")
+              else
+                  where(Year: year).order("#{rain_fall_type} ")
+              end
+          end
+        elsif compare != "None"
+          
+          if year == "All"
+              where("#{legend} = ? OR #{legend} = ?", search, compare).order(:id)
+          else
+              where("#{legend} = ? OR #{legend} = ?", search, compare).where('year = ?', year).order(:id)
+          end
+        else
+          
+          if rain_fall_type == 'All'
+              if year == "All"
+                  where("#{legend} = ? ", search).order(:id)
+              else
+                  where("#{legend} = ? ", search).where('year = ?', year).order(:id)
+              end
+          else
+              if year == "All"
+                  where("#{legend} = ? ", search).order(rain_fall_type)
+              else
+                  where("#{legend} = ? ", search).where('year = ?', year).order(rain_fall_type)
+              end
             
-             
           end
         end
       end
     
-    
+      
+  
+  
       def table(b, rain_fall_type, _year, ji, compare,legend)
           dataset = rain_fall_type.tr('_', ' ')
-      
           if rain_fall_type 
       
             hash_data = ji.map do |el|
@@ -87,11 +95,14 @@ module Newenterprisesector
     
          if _year == "All"
           grouped = {}
-            b.each do |x|
-              grouped[x["#{legend}"]] ||= {}
-              grouped[x["#{legend}"]]["#{legend}"] = x["#{legend}"]
-              grouped[x["#{legend}"]][x[:Year]] = x["#{rain_fall_type}"]
-            end
+          
+              b.each do |x|
+                  grouped[x["#{legend}"]] ||= {}
+                  grouped[x["#{legend}"]]["#{legend}"] = x["#{legend}"]
+                  grouped[x["#{legend}"]][x[:Year]] = x["#{rain_fall_type}"]
+                end
+          
+            
     
           data = { column: hash_data, data: grouped.values }
            
@@ -113,18 +124,18 @@ module Newenterprisesector
           end
     
         else
-          # where(Sector: search)
+          # where(Characteristics: search)
           where(Year: year).order(rain_fall_type)
         end
       end
     
       def query(b, _year, rain_fall_type, views, ji, compare,search,legend,remove)
-        d = 'Sector'
+        d = legend
         color  = "#4f81bc"
         if rain_fall_type == 'All'
           if views
             hash_data = ji.map do |column_name|
-              if compare
+              if compare == 'Bihar vs District'
                 dataset = column_name.to_s.tr('_', ' ')
                 {
                   type: views,
@@ -133,11 +144,24 @@ module Newenterprisesector
                   legendText: dataset,
                   showInLegend: true,
                   dataPoints: b.map do |el|
-                    { y: el[column_name], z: el[column_name], label: el[d] }
+                      { y: el[column_name], z: el[column_name], label: el[d] }
                               end
                 }
               else
-                dataset = column_name.to_s.tr('_', ' ')
+                  if search == "All"
+                      dataset = column_name.to_s.tr('_', ' ')
+                {
+                  type: views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: b.reject{|x| x["#{legend}"]== "#{remove}"}.map do |el|
+                      { y: el[column_name], z: el[column_name], label: el[d] }
+                              end
+                }
+                  else
+                      dataset = column_name.to_s.tr('_', ' ')
                 {
                   type: views,
                   toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
@@ -145,180 +169,204 @@ module Newenterprisesector
                   legendText: dataset,
                   showInLegend: true,
                   dataPoints: b.map do |el|
-                    { y: el[column_name], z: el[column_name], label: el[d] }
+                      { y: el[column_name], z: el[column_name], label: el[d] }
                               end
                 }
+                  end
               end
             end
           end
+
+          if compare == "None"
+            name =  "#{rain_fall_type.to_s.gsub("_"," ")}"
+        else
+            name =  "#{search.to_s.gsub("_"," ")} vs. #{compare.to_s.gsub("_"," ")}"
+        end
+
           if views == "stackedBar100" or views == "stackedBar"
             title = {
               animationEnabled: true,
               exportEnabled: true,
               title:{
-                text: "#{rain_fall_type.to_s.gsub("_"," ")}"
+                text: name
                     },
               data: hash_data
           }
          
           else
-            title = {
-              animationEnabled: true,
-              exportEnabled: true,
-              title:{
-                text: "#{rain_fall_type.to_s.gsub("_"," ")}"
-                    },
-                    # axisX: {
-                    #   interval:1,
-                    #   labelMaxWidth: 180,
-                    #   labelAngle: 90,
-                    #   labelFontFamily:"verdana0"
-                    #   },
-              data: hash_data
-          }
+            if search == "All"
+              title = {
+                animationEnabled: true,
+                exportEnabled: true,
+                title:{
+                  text: name
+                      },
+                      axisX: {
+                        interval:1,
+                        labelMaxWidth: 120,
+                        labelAngle: 0,
+                        labelFontFamily:"verdana0"
+                        },
+                data: hash_data
+            }
+            else
+              title = {
+                animationEnabled: true,
+                exportEnabled: true,
+                title:{
+                  text: name
+                },
+                data: hash_data
+            }
+            end
+            
           end
           return title
         else
-          if compare == "None"
-              
-            if _year == "All"
-              grouped_data = b.group_by{ |data| data["#{legend}"]}
-              if search == "All"
-                h = b.reject{|x| x["#{legend}"]== "#{remove}"}.group_by{ |data| data["#{legend}"]}
-                hash_data = h.map{ |vegetable, values| 
-                  dataset = vegetable.to_s.gsub("_"," ")
-                 {
-                  type: views,
-                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:dataset,
-                  legendText: dataset,
-                  showInLegend: true,
-                  dataPoints: values.map { |value|
-                  { y: value[rain_fall_type], label: value["Year"] }
-                  }
-                  }
-                  }
+          if compare == 'Bihar vs District'
+            dataset = rain_fall_type.tr('_', ' ')
+            hash_data =
+              [{
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
+                color: color,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: b.map do |el|
+                              { y: el[rain_fall_type], label: el["#{legend}"] }
+                            end
+              }]
+          else
+              if _year == "All"
+                  grouped_data = b.reject{|x| x["#{legend}"]== "#{remove}"}.group_by{ |data| data["#{legend}"]}
+                  if search == "All"
+                    # abort("ok")
+                      hash_data = grouped_data.map{ |vegetable, values| 
+                          dataset = vegetable.to_s.gsub("_"," ")
+                          {
+                          type: views,
+                          toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                          name:dataset,
+                          legendText: dataset,
+                          showInLegend: true,
+                          dataPoints: values.map { |value|
+                          { y: value[rain_fall_type], label: value["Year"] }
+                          }
+                          }
+                          }
+                      else
+  
+  
+                          if compare != "None"
+                              hash_data = grouped_data.map{ |vegetable, values| 
+                                  dataset = vegetable.to_s.gsub("_"," ")
+                                  {
+                                  type: views,
+                                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                                  name:dataset,
+                                  legendText: dataset,
+                                  showInLegend: true,
+                                  dataPoints: values.map { |value|
+                                  { y: value[rain_fall_type], label: value["Year"] }
+                                  }
+                                  }
+                                  }
+                          else
+                            if views != "column" && views != "line" && views != "scatter"
+                              hash_data =[]
+                                 grouped_data.map{ |vegetable, values| 
+                                  values.map do |value|
+                                    hash_data.push(
+                                      {
+                                        type:views,
+                                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                                        name:"#{value["Year"]}",
+                                        legendText:"#{value["Year"]}",
+                                        showInLegend: true,
+                                        dataPoints: [{ y: value[rain_fall_type], label:  value["#{legend}"] }]
+                                    }
+                                    )
+                                
+                                  end
+                            }
+                                
+                              else
+                            
+                                hash_data = grouped_data.map{ |vegetable, values| 
+                                  dataset = vegetable.to_s.gsub("_"," ")
+                                  {
+                                  type: views,
+                                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                                  name:dataset,
+                                  color:color,
+                                  legendText: dataset,
+                                  showInLegend: true,
+                                  dataPoints: values.map { |value|
+                                  { y: value[rain_fall_type], label: value["Year"] }
+                                  }
+                                  }
+                                  }
+                          end
+                        end
+  
+                      
+                  end
               else
-                if views != "column" && views!="line" && views!="scatter"
+                  if search == "All"
+                    
+                    if views != "column" && views != "line" && views != "scatter"
+                      hash_data = b.reject{|x| x["#{legend}"]== "#{remove}"}.map do |col|
+                        {
+                          type:views,
+                          toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                          name:col["#{legend}"],
+                          legendText: col["#{legend}"],
+                          showInLegend: true,
+                          dataPoints: [{ y: col[rain_fall_type], label: col[:Year] }]
+                        }
+                      end
+                        
+                      else
+                        dataset = rain_fall_type.tr('_', ' ')
+                        hash_data =
+                        [{
+                        type: views,
+                        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                        name:dataset,
+                        color: color,
+                        legendText: dataset,
+                        showInLegend: true,
+                        dataPoints: b.reject{|x| x["#{legend}"]== "#{remove}"}.map do |el|
+                            { y: el[rain_fall_type], label: el["#{legend}"] }
+                                    end
+                        }]
+                      end           
+                  else
                   dataset = rain_fall_type.tr('_', ' ')
                   hash_data =  b.map do |el|
                     {
                       type:views,
                       toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                      name:"#{el["Year"]}",
-                      legendText:"#{el["Year"]}",
+                      name:"#{el["#{legend}"]}",
+                      legendText:"#{el["#{legend}"]}",
                       showInLegend: true,
-                      dataPoints: [{ y: el[rain_fall_type], label:  el["#{legend}"] }]
+                      dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
                   }
       
                   end
-                else
-                 hash_data = grouped_data.map{ |vegetable, values| 
-                  dataset = vegetable.to_s.gsub("_"," ")
-                  {
-                  type: views,
-                  color:color,
-                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  legendText: dataset,
-                  name:dataset,
-                  showInLegend: true,
-                  dataPoints: values.map { |value|
-                  { y: value[rain_fall_type], label: value["Year"] }
-                  }
-                  }
-                  }
-                end
-
-              end
-            else
-
-             if views != "column" && views!="line" && views!="scatter"
-              dataset = rain_fall_type.tr('_', ' ')
-              hash_data =  b.reject{|x| x["#{legend}"]== "#{remove}"}.map do |el|
-                {
-                  type:views,
-                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                  name:"#{el["#{legend}"]}",
-                  legendText:"#{el["#{legend}"]}",
-                  showInLegend: true,
-                  dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
-              }
   
-              end
-          
-            else
-                dataset = rain_fall_type.tr('_', ' ')
-                hash_data =
-                [{
-                  type: views,
-                  color: color,
-                  legendText: dataset,
-                  showInLegend: true,
-                  dataPoints: b.reject{|x| x["#{legend}"]== "#{remove}"}.map do |el|
-                                { y: el[rain_fall_type], label: el["#{legend}"] }
-                              end
-                }]
-            end
-
-            end
-            
-          else
-              if _year == "All"
-                  grouped_data = b.group_by{ |data| data["#{legend}"]}
-                  if search == "All"
-                    h = b.group_by{ |data| data["#{legend}"]}
-                    hash_data = h.map{ |vegetable, values| 
-                      dataset = vegetable.to_s.gsub("_"," ")
-                     {
-                      type: views,
-                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                      name:dataset,
-                      legendText: dataset,
-                      showInLegend: true,
-                      dataPoints: values.map { |value|
-                      { y: value[rain_fall_type], label: value["Year"] }
-                      }
-                      }
-                      }
-                  else
-                    h = grouped_data
-                    hash_data = h.map{ |vegetable, values| 
-                      dataset = vegetable.to_s.gsub("_"," ")
-                     {
-                      type: views,
-                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                      name:dataset,
-                      legendText: dataset,
-                      showInLegend: true,
-                      dataPoints: values.map { |value|
-                      { y: value[rain_fall_type], label: value["Year"] }
-                      }
-                      }
-                      }
                   end
-                else
-                dataset = rain_fall_type.tr('_', ' ')
-                hash_data =  b.map do |el|
-                  {
-                    type:views,
-                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                    name:"#{el["#{legend}"]}",
-                    legendText:"#{el["#{legend}"]}",
-                    showInLegend: true,
-                    dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
-                }
-    
-                end
-
-                end
+                  
+              end
+            
           end
           if compare == "None"
             name =  "#{rain_fall_type.to_s.gsub("_"," ")}"
         else
             name =  "#{search.to_s.gsub("_"," ")} vs. #{compare.to_s.gsub("_"," ")}"
         end
-        
-          if views == "stackedBar100" or views == "stackedBar"
+          if views == "stackedBar100" or views == "stackedBar" or views == "stackedColumn" or views == "stackedColumn100"
             title = {
               animationEnabled: true,
               exportEnabled: true,
@@ -329,21 +377,33 @@ module Newenterprisesector
           }
          
           else
-              
-            title = {
-              animationEnabled: true,
-              exportEnabled: true,
-              title:{
-                text: name
-                    },
-                    # axisX: {
-                    #   interval:1,
-                    #   labelMaxWidth: 180,
-                    #   labelAngle: 90,
-                    #   labelFontFamily:"verdana0"
-                    #   },
-              data: hash_data
-          }
+            
+            if search == "All"
+              title = {
+                animationEnabled: true,
+                exportEnabled: true,
+                title:{
+                  text: name
+                      },
+                      axisX: {
+                        interval:1,
+                        labelMaxWidth: 120,
+                        labelAngle: 0,
+                        labelFontFamily:"verdana0"
+                        },
+                data: hash_data
+            }
+            else
+              title = {
+                animationEnabled: true,
+                exportEnabled: true,
+                title:{
+                  text: name
+                },
+                data: hash_data
+            }
+            end
+            
             
           end
           return title
@@ -366,7 +426,7 @@ module Newenterprisesector
         above_extreme = []
     
         b.map.with_index do |el, _i|
-          dist = el['Sector']
+          dist = el['Characteristics']
     
           colour = "#{rain_fall_type}_Colour"
           if el[colour] == 'Red'
@@ -485,37 +545,37 @@ module Newenterprisesector
       
           b.map.with_index do |el,i|
       
-              dist = el["Sector"]
+              dist = el["Characteristics"]
       
             if (0..6) === i
               hash1 = { y: el[rain_fall_type], label: dist, color: "Red" }
               below_min.push(hash1)
             elsif (6..12) === i
               hash1 = { y: el[rain_fall_type], label: dist, color: "Orange" }
-              # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+              # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
               min.push(hash1)
             elsif (12..18) === i
               hash1 = { y: el[rain_fall_type], label: dist, color: "Dark_Yellow" }
-              # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+              # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
               blow_max.push(hash1)
             elsif (18..24) === i
               hash1 = { y: el[rain_fall_type], label: dist, color: "Yellow" }
-              # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+              # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
               max.push(hash1)
       
             elsif (24..30) === i
               hash1 = { y: el[rain_fall_type], label: dist, color: "Light_Green" }
-              # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+              # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
               above_max.push(hash1)
       
             elsif (30..36) === i
               hash1 = { y: el[rain_fall_type], label: dist, color: "Green" }
-              # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+              # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
               extreme.push(hash1)
       
             elsif (36..40) === i
               hash1 = { y: el[rain_fall_type], label: dist, color: "Dark_Green" }
-              # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+              # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
               above_extreme.push(hash1)
             else
             end
@@ -605,37 +665,37 @@ module Newenterprisesector
     
         b.map.with_index do |el,i|
     
-            dist = el["Sector"]
+            dist = el["Characteristics"]
     
           if (0..6) === i
             hash1 = { y: el[rain_fall_type], label: dist, color: "Red" }
             below_min.push(hash1)
           elsif (6..12) === i
             hash1 = { y: el[rain_fall_type], label: dist, color: "Orange" }
-            # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+            # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
             min.push(hash1)
           elsif (12..18) === i
             hash1 = { y: el[rain_fall_type], label: dist, color: "Dark_Yellow" }
-            # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+            # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
             blow_max.push(hash1)
           elsif (18..24) === i
             hash1 = { y: el[rain_fall_type], label: dist, color: "Yellow" }
-            # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+            # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
             max.push(hash1)
     
           elsif (24..30) === i
             hash1 = { y: el[rain_fall_type], label: dist, color: "Light_Green" }
-            # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+            # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
             above_max.push(hash1)
     
           elsif (30..36) === i
             hash1 = { y: el[rain_fall_type], label: dist, color: "Green" }
-            # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+            # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
             extreme.push(hash1)
     
           elsif (36..40) === i
             hash1 = { y: el[rain_fall_type], label: dist, color: "Dark_Green" }
-            # hash1 = { y: el[rain_fall_type], label: el["Sector"] }
+            # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
             above_extreme.push(hash1)
           else
           end
@@ -710,5 +770,5 @@ module Newenterprisesector
         a.push("data": hu)
         return a
     end
-    
+
 end

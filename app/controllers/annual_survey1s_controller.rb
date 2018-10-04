@@ -22,6 +22,8 @@ def test
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
+   legend  = "Sector"
+   remove = ""
 # ji1 = [:Sector, :Annual_Growth_Rate, :Year]
 if year == "All"
   ji1 = [:Sector, :"2012-13", :"2013-14",:"2014-15",:"2015-16",:"2016-17"]
@@ -41,11 +43,11 @@ if year == "All"
           a = AnnualSurvey1.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = AnnualSurvey1.search(params[:search],compare,year,rain_fall_type)
-        a = AnnualSurvey1.table(b,rain_fall_type,year,ji1,compare)
+        b = AnnualSurvey1.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AnnualSurvey1.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @AnnualSurvey1s = AnnualSurvey1.search(params[:search],compare,year,rain_fall_type)
-        a = AnnualSurvey1.query(@AnnualSurvey1s,params[:year],rain_fall_type,views,ji,compare,search)
+        @AnnualSurvey1s = AnnualSurvey1.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AnnualSurvey1.query(@AnnualSurvey1s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }
