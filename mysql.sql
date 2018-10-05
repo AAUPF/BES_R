@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 17, 2018 at 08:49 AM
+-- Generation Time: Oct 05, 2018 at 06:30 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -945,6 +945,52 @@ INSERT INTO `agro_based_industries4s` (`id`, `Location_of_Project`, `Procurement
 (53, 'Supaul', 32.61, '2016-17', '2018-09-09 08:51:41', '2018-09-09 08:51:41'),
 (54, 'Ranchi Dairy', 312.98, '2016-17', '2018-09-09 08:51:41', '2018-09-09 08:51:41'),
 (55, 'Total', 108.67, '2016-17', '2018-09-09 08:51:41', '2018-09-09 08:51:41');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `agro_based_industries5s`
+--
+
+DROP TABLE IF EXISTS `agro_based_industries5s`;
+CREATE TABLE `agro_based_industries5s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `agro_based_industries5s`
+--
+
+INSERT INTO `agro_based_industries5s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `Indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Organised', 13691, 16675, 18385, 19543, 20769, 'Cooperative Societies', '2018-10-03 10:07:42', '2018-10-03 10:07:42'),
+(2, 'Operational', 10524, 12654, 14189, 14016, 14842, 'Cooperative Societies', '2018-10-03 10:07:42', '2018-10-03 10:07:42'),
+(3, 'Registered', 4943, 5420, 5754, 6042, 6384, 'Cooperative Societies', '2018-10-03 10:07:42', '2018-10-03 10:07:42'),
+(4, 'No. of Members (lakh)', 7.59, 8.73, 9.42, 10.04, 10.86, 'Cooperative Societies', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(5, 'Collection of Milk (lakh kg/day)', 12.45, 14.95, 16.9, 17.4, 16.13, 'Collection of Milk', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(6, 'No. of Retail Outlets', 9558, 10944, 12299, 13099, 15857, 'Marketing of Products', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(7, 'Milk (lakh litres/day)', 9.2, 10.76, 11.52, 12.18, 13.45, 'Marketing of Products', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(8, 'Ghee (tonnes)', 1717, 2043, 1669, 1643, 1342, 'Marketing of Products', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(9, 'Lassi (tonnes)', 6426, 6747, 4385, 4103, 4975, 'Marketing of Products', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(10, 'Peda (tonnes)', 1242, 1638, 1173, 1190, 1314, 'Marketing of Products', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(11, 'Paneer (tonnes)', 3022, 3542, 3385, 3946, 4300, 'Marketing of Products', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(12, 'Dahi (tonnes)', 3132, 8595, 7498, 8088, 9110, 'Marketing of Products', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(13, 'Gulab Jamun (tonnes)', 1105, 1331, 1152, 1220, 1365, 'Marketing of Products', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(14, 'Ice-Cream (tonnes)', 1083, 1248, 1702, 1743, 1375, 'Marketing of Products', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(15, 'No. of Artificial Insemination Centres', 2329, 2897, 3117, 3275, 3436, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(16, 'Artificial Insemination (lakh)', 15.66, 18.44, 20.3, 21.37, 20.41, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(17, 'Vaccination (lakh)', 17.73, 22.81, 15.53, 18.05, 17.01, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(18, 'De-worming (lakh)', 12.92, 11.67, 12.92, 16.46, 14.3, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(19, 'Seed Distribution (tonnes)', 757.14, 885.61, 930.93, 1016.79, 1279.53, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
+(20, 'Cattle Feed Distribution (tonnes)', 61273, 54707, 56143, 62130, 53810, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43');
 
 -- --------------------------------------------------------
 
@@ -5446,6 +5492,41 @@ INSERT INTO `lands` (`id`, `Districts`, `Geographical_area`, `Forest`, `Barren_u
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `mininngs`
+--
+
+DROP TABLE IF EXISTS `mininngs`;
+CREATE TABLE `mininngs` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `mininngs`
+--
+
+INSERT INTO `mininngs` (`id`, `Sector`, `2014-15`, `2015-16`, `2016-17`, `created_at`, `updated_at`) VALUES
+(1, '1.  Major Minerals', 107.3, 99.1, 57.5, '2018-09-27 07:27:32', '2018-09-27 07:27:32'),
+(2, '2.  Minor Minerals', NULL, NULL, NULL, '2018-09-27 07:27:32', '2018-09-27 07:27:32'),
+(3, '(i)    bricks', 2659.1, 4295.6, 3639.9, '2018-09-27 07:27:32', '2018-09-27 07:27:32'),
+(4, '(ii)   sand', 50542.1, 42806.3, 45765.2, '2018-09-27 07:27:32', '2018-09-27 07:27:32'),
+(5, '(iii)  stone + crusher', 7516.9, 11097.9, 11140.6, '2018-09-27 07:27:32', '2018-09-27 07:27:32'),
+(6, '(iv)  morum', 0.5, 56.4, 0, '2018-09-27 07:27:32', '2018-09-27 07:27:32'),
+(7, '(v)   soil', 270.3, 271.4, 833.4, '2018-09-27 07:27:32', '2018-09-27 07:27:32'),
+(8, '(vi)  Works Deptt.', 24074.5, 36413.5, 35999.8, '2018-09-27 07:27:32', '2018-09-27 07:27:32'),
+(9, '(vii) Transit Pass', 42.4, 40.7, 25.2, '2018-09-27 07:27:32', '2018-09-27 07:27:32'),
+(10, '(viii) Others', 278.7, 626.2, 1564.9, '2018-09-27 07:27:32', '2018-09-27 07:27:32'),
+(11, '3.  Arrears', 443.3, 1392.9, 383.7, '2018-09-27 07:27:32', '2018-09-27 07:27:32'),
+(12, 'Total', 85935, 97100, 99410.2, '2018-09-27 07:27:32', '2018-09-27 07:27:32');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `newrices`
 --
 
@@ -8353,7 +8434,10 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180916183504'),
 ('20180916184652'),
 ('20180917062638'),
-('20180917075421');
+('20180917075421'),
+('20180926075549'),
+('20180927072143'),
+('20181003093812');
 
 -- --------------------------------------------------------
 
@@ -8445,14 +8529,14 @@ CREATE TABLE `sectoral_expenditure2s` (
 
 INSERT INTO `sectoral_expenditure2s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `indicator`, `created_at`, `updated_at`) VALUES
 (1, 'Estimated Population (crore)', 10.6, 10.9, 11.1, 11.4, 11.6, 11.9, 'Estimated Population (crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
-(2, 'Education, Sports & Culture', 14445, 15047, 16531, 19155, 20226, 26394, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(2, 'Education, Sports and Culture', 14445, 15047, 16531, 19155, 20226, 26394, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
 (3, 'Medical and Public Health', 2398, 2574, 3604, 4571, 5493, 6535, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
 (4, 'Water Supply and Sanitation', 2587, 3605, 4542, 4518, 8786, 13148, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
 (5, 'Social Services', 24438, 28253, 33386, 38684, 44329, 58492, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
 (6, 'Economic Services', 20246, 24871, 29173, 37305, 44943, 51332, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
 (7, 'Capital Outlay ', 9585, 14001, 18150, 23966, 27208, 32196, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
 (8, 'General Services', 19362, 23351, 28157, 31589, 32697, 44970, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
-(9, 'Education, Sports & Culture', 1358, 1383, 1485, 1682, 1737, 2215, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(9, 'Education, Sports and Culture', 1358, 1383, 1485, 1682, 1737, 2215, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
 (10, 'Medical and Public Health', 225, 237, 324, 401, 472, 549, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
 (11, 'Water Supply and Sanitation', 243, 331, 408, 397, 754, 1104, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
 (12, 'Social Services', 2297, 2596, 2999, 3397, 3806, 4910, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
@@ -9626,6 +9710,38 @@ INSERT INTO `state_domestic_product11s` (`id`, `Districts`, `Target`, `Achieveme
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `state_public_sector1s`
+--
+
+DROP TABLE IF EXISTS `state_public_sector1s`;
+CREATE TABLE `state_public_sector1s` (
+  `id` bigint(20) NOT NULL,
+  `Year_as_on_31st_March` varchar(255) DEFAULT NULL,
+  `Number_of_Working_PSUs` float DEFAULT NULL,
+  `Number_of_Non_Working_PSUs` float DEFAULT NULL,
+  `Statutory_Corporations` float DEFAULT NULL,
+  `Public_Sector_Companies` varchar(255) DEFAULT NULL,
+  `Equity` float DEFAULT NULL,
+  `Loans` float DEFAULT NULL,
+  `Investment` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_public_sector1s`
+--
+
+INSERT INTO `state_public_sector1s` (`id`, `Year_as_on_31st_March`, `Number_of_Working_PSUs`, `Number_of_Non_Working_PSUs`, `Statutory_Corporations`, `Public_Sector_Companies`, `Equity`, `Loans`, `Investment`, `created_at`, `updated_at`) VALUES
+(1, '2012', 22, 40, 4, '66.0', 633, 11741, 12374, '2018-09-26 07:57:47', '2018-09-26 07:57:47'),
+(2, '2013', 28, 40, 3, '71.0', 3743, 4579, 8322, '2018-09-26 07:57:47', '2018-09-26 07:57:47'),
+(3, '2014', 30, 40, 3, '73.0', 18323, 9898, 28221, '2018-09-26 07:57:47', '2018-09-26 07:57:47'),
+(4, '2015', 30, 40, 3, '73.0', 21542, 12242, 33783, '2018-09-26 07:57:47', '2018-09-26 07:57:47'),
+(5, '2016', 31, 40, 3, '74.0', 31394, 15299, 46694, '2018-09-26 07:57:47', '2018-09-26 07:57:47');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `state_public_sector2s`
 --
 
@@ -9806,7 +9922,7 @@ INSERT INTO `tax_department3s` (`id`, `Name_of_Commodity`, `Collection`, `Rate_o
 (3, 'Cement', 800, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (4, 'Unregistered Dealer Works Contractor', 490, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (5, 'FMCG', 414, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
-(6, 'Four Wheelers & Chassis of Automobile', 515, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(6, 'Four Wheelers and Chassis of Automobile', 515, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (7, 'Crude Oil', 315, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (8, 'Works Contract and TDS', 369, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (9, 'Two and Three Wheelers', 272, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
@@ -9830,7 +9946,7 @@ INSERT INTO `tax_department3s` (`id`, `Name_of_Commodity`, `Collection`, `Rate_o
 (27, 'Cement', 920, -0.9, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (28, 'Unregistered Dealer Works Contractor', 750, 13.8, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (29, 'FMCG', 523, 6.2, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
-(30, 'Four Wheelers & Chassis of Automobile', 528, 7.5, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(30, 'Four Wheelers and Chassis of Automobile', 528, 7.5, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (31, 'Crude Oil', 635, -22.2, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (32, 'Works Contract and TDS', 248, -25.6, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (33, 'Two and Three Wheelers', 378, 12.5, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
@@ -9842,7 +9958,7 @@ INSERT INTO `tax_department3s` (`id`, `Name_of_Commodity`, `Collection`, `Rate_o
 (39, 'Cement', 1005, 9.2, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (40, 'Unregistered Dealer Works Contractor', 912, 21.5, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (41, 'FMCG', 615, 17.6, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
-(42, 'Four Wheelers & Chassis of Automobile', 596, 12.9, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(42, 'Four Wheelers and Chassis of Automobile', 596, 12.9, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (43, 'Crude Oil', 1350, 112.5, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (44, 'Works Contract and TDS', 371, 49.4, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (45, 'Two and Three Wheelers', 452, 19.5, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
@@ -9854,7 +9970,7 @@ INSERT INTO `tax_department3s` (`id`, `Name_of_Commodity`, `Collection`, `Rate_o
 (51, 'Cement', 1165, 16, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (52, 'Unregistered Dealer Works Contractor', 1118, 22.6, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (53, 'FMCG', 820, 33.5, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
-(54, 'Four Wheelers & Chassis of Automobile', 747, 25.4, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(54, 'Four Wheelers and Chassis of Automobile', 747, 25.4, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (55, 'Crude Oil', 702, -48, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (56, 'Works Contract and TDS', 605, 63.1, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (57, 'Two and Three Wheelers', 584, 29.1, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
@@ -10413,6 +10529,12 @@ ALTER TABLE `agro_based_industries4s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `agro_based_industries5s`
+--
+ALTER TABLE `agro_based_industries5s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `animal_husbandry1s`
 --
 ALTER TABLE `animal_husbandry1s`
@@ -10803,6 +10925,12 @@ ALTER TABLE `lands`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `mininngs`
+--
+ALTER TABLE `mininngs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `newrices`
 --
 ALTER TABLE `newrices`
@@ -11121,6 +11249,12 @@ ALTER TABLE `state_domestic_product11s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `state_public_sector1s`
+--
+ALTER TABLE `state_public_sector1s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `state_public_sector2s`
 --
 ALTER TABLE `state_public_sector2s`
@@ -11297,6 +11431,12 @@ ALTER TABLE `agro_based_industries3s`
 --
 ALTER TABLE `agro_based_industries4s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+
+--
+-- AUTO_INCREMENT for table `agro_based_industries5s`
+--
+ALTER TABLE `agro_based_industries5s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `animal_husbandry1s`
@@ -11683,6 +11823,12 @@ ALTER TABLE `lands`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
+-- AUTO_INCREMENT for table `mininngs`
+--
+ALTER TABLE `mininngs`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT for table `newrices`
 --
 ALTER TABLE `newrices`
@@ -11993,6 +12139,12 @@ ALTER TABLE `state_domestic_product10s`
 --
 ALTER TABLE `state_domestic_product11s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+
+--
+-- AUTO_INCREMENT for table `state_public_sector1s`
+--
+ALTER TABLE `state_public_sector1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `state_public_sector2s`

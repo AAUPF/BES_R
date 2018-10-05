@@ -1,1 +1,1 @@
-rails g scaffold Mininng  Sector:string	2014-15:float	2015-16:float	2016-17:float
+rails g scaffold AgroBasedIndustries5  Sector:string	2012-13:float	2013-14:float	2014-15:float	2015-16:float	2016-17:float	Indicator:string

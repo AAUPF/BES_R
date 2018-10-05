@@ -717,7 +717,7 @@ module Test
 
 
 
-    if rain_fall_type = "Productivity"
+    if rain_fall_type === "Productivity"
 
       if below_min.any?
         b = { min: below_min.first[:y]/100, max: "#{below_min.last[:y]/100}" }
