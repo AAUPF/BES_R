@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Non Agro Based Industries5s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Agencies</th>
+      <th>Indicators</th>
+      <th>Kvic</th>
+      <th>Kvi board</th>
+      <th>Dic</th>
+      <th>Total</th>
+      <th>Year</th>
+      <th>Kvic percentage</th>
+      <th>Kvi board percentage</th>
+      <th>Dic percentage</th>
+      <th>Total percentage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @non_agro_based_industries5s.each do |non_agro_based_industries5| %>
+      <tr>
+        <td><%= non_agro_based_industries5.Agencies %></td>
+        <td><%= non_agro_based_industries5.Indicators %></td>
+        <td><%= non_agro_based_industries5.KVIC %></td>
+        <td><%= non_agro_based_industries5.KVI_Board %></td>
+        <td><%= non_agro_based_industries5.DIC %></td>
+        <td><%= non_agro_based_industries5.Total %></td>
+        <td><%= non_agro_based_industries5.Year %></td>
+        <td><%= non_agro_based_industries5.KVIC_Percentage %></td>
+        <td><%= non_agro_based_industries5.KVI_Board_Percentage %></td>
+        <td><%= non_agro_based_industries5.DIC_Percentage %></td>
+        <td><%= non_agro_based_industries5.Total_Percentage %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Non Agro Based Industries5', new_non_agro_based_industries5_path %>

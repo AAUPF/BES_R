@@ -1,0 +1,2 @@
+json.extract! annual_survey6, :id, :Districts, :Number_of_Factories_in_Operation, :Gross_Value_of_Output_GVO_Rs_crore, :Gross_Value_Added_GVA_Rs_crore, :GVA_Percentage_Share_in_India, :GVA_as_Percentage_of_GVO, :Number_of_Persons_Engaged, :Percentage_Share_in_India, :Employment_per_Factory, :Wages_Salaries_and_Bonus_per_Person_annually_Rs, :created_at, :updated_at
+json.url annual_survey6_url(annual_survey6, format: :json)

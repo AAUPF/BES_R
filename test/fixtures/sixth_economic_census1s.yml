@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Variable1: MyString
+  Variable2: MyString
+  Number_2005: 1.5
+  Number_2013: 1.5
+  Percentage_Increase: 1.5
+
+two:
+  Variable1: MyString
+  Variable2: MyString
+  Number_2005: 1.5
+  Number_2013: 1.5
+  Percentage_Increase: 1.5

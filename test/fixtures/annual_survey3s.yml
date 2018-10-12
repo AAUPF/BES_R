@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Number_of_Factories_Agro_based: 1.5
+  Number_of_Factories_Non_Agro_based: 1.5
+  Total_Number_of_Factories: 1.5
+  Number_of_Factories_in_Operation_Agro_based: 1.5
+  Number_of_Factories_in_Operation_Non_Agro_Based: 1.5
+  Total_Number_of_Factories_in_Operation: 1.5
+  Percentage_of_Agro_based: 1.5
+  Percentage_of_Non_Agro_based: 1.5
+  Percentage_of_Total_Factories: 1.5
+  Percentage_of_Operation_Agro_based: 1.5
+  Percentage_of_Operation_Non_Agro_Based: 1.5
+  Percentage_of_Total_Factories_in_Operation: 1.5
+  Indicator: MyString
+
+two:
+  Year: MyString
+  Number_of_Factories_Agro_based: 1.5
+  Number_of_Factories_Non_Agro_based: 1.5
+  Total_Number_of_Factories: 1.5
+  Number_of_Factories_in_Operation_Agro_based: 1.5
+  Number_of_Factories_in_Operation_Non_Agro_Based: 1.5
+  Total_Number_of_Factories_in_Operation: 1.5
+  Percentage_of_Agro_based: 1.5
+  Percentage_of_Non_Agro_based: 1.5
+  Percentage_of_Total_Factories: 1.5
+  Percentage_of_Operation_Agro_based: 1.5
+  Percentage_of_Operation_Non_Agro_Based: 1.5
+  Percentage_of_Total_Factories_in_Operation: 1.5
+  Indicator: MyString

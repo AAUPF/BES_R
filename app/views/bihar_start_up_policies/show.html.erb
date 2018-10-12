@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Incubators:</strong>
+  <%= @bihar_start_up_policy.Incubators %>
+</p>
+
+<p>
+  <strong>Number of startups:</strong>
+  <%= @bihar_start_up_policy.Number_of_Startups %>
+</p>
+
+<%= link_to 'Edit', edit_bihar_start_up_policy_path(@bihar_start_up_policy) %> |
+<%= link_to 'Back', bihar_start_up_policies_path %>

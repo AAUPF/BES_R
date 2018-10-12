@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Annual Survey6s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Number of factories in operation</th>
+      <th>Gross value of output gvo rs crore</th>
+      <th>Gross value added gva rs crore</th>
+      <th>Gva percentage share in india</th>
+      <th>Gva as percentage of gvo</th>
+      <th>Number of persons engaged</th>
+      <th>Percentage share in india</th>
+      <th>Employment per factory</th>
+      <th>Wages salaries and bonus per person annually rs</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @annual_survey6s.each do |annual_survey6| %>
+      <tr>
+        <td><%= annual_survey6.Districts %></td>
+        <td><%= annual_survey6.Number_of_Factories_in_Operation %></td>
+        <td><%= annual_survey6.Gross_Value_of_Output_GVO_Rs_crore %></td>
+        <td><%= annual_survey6.Gross_Value_Added_GVA_Rs_crore %></td>
+        <td><%= annual_survey6.GVA_Percentage_Share_in_India %></td>
+        <td><%= annual_survey6.GVA_as_Percentage_of_GVO %></td>
+        <td><%= annual_survey6.Number_of_Persons_Engaged %></td>
+        <td><%= annual_survey6.Percentage_Share_in_India %></td>
+        <td><%= annual_survey6.Employment_per_Factory %></td>
+        <td><%= annual_survey6.Wages_Salaries_and_Bonus_per_Person_annually_Rs %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Annual Survey6', new_annual_survey6_path %>

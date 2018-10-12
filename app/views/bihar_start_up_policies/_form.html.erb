@@ -1,0 +1,27 @@
+<%= form_with(model: bihar_start_up_policy, local: true) do |form| %>
+  <% if bihar_start_up_policy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bihar_start_up_policy.errors.count, "error") %> prohibited this bihar_start_up_policy from being saved:</h2>
+
+      <ul>
+      <% bihar_start_up_policy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Incubators %>
+    <%= form.text_field :Incubators %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Startups %>
+    <%= form.text_field :Number_of_Startups %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

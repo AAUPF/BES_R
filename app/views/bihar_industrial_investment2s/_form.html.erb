@@ -1,0 +1,27 @@
+<%= form_with(model: bihar_industrial_investment2, local: true) do |form| %>
+  <% if bihar_industrial_investment2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bihar_industrial_investment2.errors.count, "error") %> prohibited this bihar_industrial_investment2 from being saved:</h2>
+
+      <ul>
+      <% bihar_industrial_investment2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sectors %>
+    <%= form.text_field :Sectors %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Units %>
+    <%= form.text_field :Number_of_Units %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

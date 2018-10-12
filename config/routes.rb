@@ -1,5 +1,45 @@
 Rails.application.routes.draw do
-  resources :support_institutions1s do 
+    resources :annual_survey3s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :bihar_start_up_policies do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :bihar_industrial_investment2s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :bihar_industrial_investment1s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :non_agro_based_industries5s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :sixth_economic_census1s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :annual_survey6s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :annual_survey4s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+    resources :support_institutions1s do 
                       collection { post :import }
                       collection { get :dropdown }
                       collection { get :test }

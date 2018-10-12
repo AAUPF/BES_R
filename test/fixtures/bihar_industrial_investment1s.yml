@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Sectors: MyString
+  Number_of_Proposed_Units: 1.5
+  Proposed_Investment: 1.5
+
+two:
+  Sectors: MyString
+  Number_of_Proposed_Units: 1.5
+  Proposed_Investment: 1.5

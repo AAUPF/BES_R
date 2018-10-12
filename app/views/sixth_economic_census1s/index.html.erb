@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sixth Economic Census1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable1</th>
+      <th>Variable2</th>
+      <th>Number 2005</th>
+      <th>Number 2013</th>
+      <th>Percentage increase</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sixth_economic_census1s.each do |sixth_economic_census1| %>
+      <tr>
+        <td><%= sixth_economic_census1.Variable1 %></td>
+        <td><%= sixth_economic_census1.Variable2 %></td>
+        <td><%= sixth_economic_census1.Number_2005 %></td>
+        <td><%= sixth_economic_census1.Number_2013 %></td>
+        <td><%= sixth_economic_census1.Percentage_Increase %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sixth Economic Census1', new_sixth_economic_census1_path %>

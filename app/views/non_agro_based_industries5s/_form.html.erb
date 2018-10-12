@@ -1,0 +1,72 @@
+<%= form_with(model: non_agro_based_industries5, local: true) do |form| %>
+  <% if non_agro_based_industries5.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(non_agro_based_industries5.errors.count, "error") %> prohibited this non_agro_based_industries5 from being saved:</h2>
+
+      <ul>
+      <% non_agro_based_industries5.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Agencies %>
+    <%= form.text_field :Agencies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicators %>
+    <%= form.text_field :Indicators %>
+  </div>
+
+  <div class="field">
+    <%= form.label :KVIC %>
+    <%= form.text_field :KVIC %>
+  </div>
+
+  <div class="field">
+    <%= form.label :KVI_Board %>
+    <%= form.text_field :KVI_Board %>
+  </div>
+
+  <div class="field">
+    <%= form.label :DIC %>
+    <%= form.text_field :DIC %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :KVIC_Percentage %>
+    <%= form.text_field :KVIC_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :KVI_Board_Percentage %>
+    <%= form.text_field :KVI_Board_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :DIC_Percentage %>
+    <%= form.text_field :DIC_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Percentage %>
+    <%= form.text_field :Total_Percentage %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

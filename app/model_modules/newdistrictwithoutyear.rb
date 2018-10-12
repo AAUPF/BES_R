@@ -1,4 +1,3 @@
-
 module Newdistrictwithoutyear
   def import1(file)
     spreadsheet = Roo::Spreadsheet.open(file.path)

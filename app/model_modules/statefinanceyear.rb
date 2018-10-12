@@ -123,9 +123,6 @@ module Statefinanceyear
                         { title: years, field: _year }
                       ]
                     else
-    
-                
-    
                       [
                         # {title:compare, field:compare, sorter:"string", },
                         { title: 'Sector', field: 'Sector', headerFilter: true },

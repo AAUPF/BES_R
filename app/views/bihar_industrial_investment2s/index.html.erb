@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bihar Industrial Investment2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sectors</th>
+      <th>Number of units</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bihar_industrial_investment2s.each do |bihar_industrial_investment2| %>
+      <tr>
+        <td><%= bihar_industrial_investment2.Sectors %></td>
+        <td><%= bihar_industrial_investment2.Number_of_Units %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bihar Industrial Investment2', new_bihar_industrial_investment2_path %>

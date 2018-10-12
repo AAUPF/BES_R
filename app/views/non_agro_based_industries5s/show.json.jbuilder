@@ -1,0 +1,1 @@
+json.partial! "non_agro_based_industries5s/non_agro_based_industries5", non_agro_based_industries5: @non_agro_based_industries5

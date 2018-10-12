@@ -1,0 +1,1 @@
+json.partial! "bihar_industrial_investment1s/bihar_industrial_investment1", bihar_industrial_investment1: @bihar_industrial_investment1

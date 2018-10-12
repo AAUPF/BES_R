@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bihar Start Up Policies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Incubators</th>
+      <th>Number of startups</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bihar_start_up_policies.each do |bihar_start_up_policy| %>
+      <tr>
+        <td><%= bihar_start_up_policy.Incubators %></td>
+        <td><%= bihar_start_up_policy.Number_of_Startups %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bihar Start Up Policy', new_bihar_start_up_policy_path %>

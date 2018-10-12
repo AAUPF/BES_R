@@ -1,0 +1,37 @@
+<%= form_with(model: annual_survey4, local: true) do |form| %>
+  <% if annual_survey4.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(annual_survey4.errors.count, "error") %> prohibited this annual_survey4 from being saved:</h2>
+
+      <ul>
+      <% annual_survey4.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :India %>
+    <%= form.text_field :India %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Bihar %>
+    <%= form.text_field :Bihar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

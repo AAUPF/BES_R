@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Annual Survey3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Number of factories agro based</th>
+      <th>Number of factories non agro based</th>
+      <th>Total number of factories</th>
+      <th>Number of factories in operation agro based</th>
+      <th>Number of factories in operation non agro based</th>
+      <th>Total number of factories in operation</th>
+      <th>Percentage of agro based</th>
+      <th>Percentage of non agro based</th>
+      <th>Percentage of total factories</th>
+      <th>Percentage of operation agro based</th>
+      <th>Percentage of operation non agro based</th>
+      <th>Percentage of total factories in operation</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @annual_survey3s.each do |annual_survey3| %>
+      <tr>
+        <td><%= annual_survey3.Year %></td>
+        <td><%= annual_survey3.Number_of_Factories_Agro_based %></td>
+        <td><%= annual_survey3.Number_of_Factories_Non_Agro_based %></td>
+        <td><%= annual_survey3.Total_Number_of_Factories %></td>
+        <td><%= annual_survey3.Number_of_Factories_in_Operation_Agro_based %></td>
+        <td><%= annual_survey3.Number_of_Factories_in_Operation_Non_Agro_Based %></td>
+        <td><%= annual_survey3.Total_Number_of_Factories_in_Operation %></td>
+        <td><%= annual_survey3.Percentage_of_Agro_based %></td>
+        <td><%= annual_survey3.Percentage_of_Non_Agro_based %></td>
+        <td><%= annual_survey3.Percentage_of_Total_Factories %></td>
+        <td><%= annual_survey3.Percentage_of_Operation_Agro_based %></td>
+        <td><%= annual_survey3.Percentage_of_Operation_Non_Agro_Based %></td>
+        <td><%= annual_survey3.Percentage_of_Total_Factories_in_Operation %></td>
+        <td><%= annual_survey3.Indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Annual Survey3', new_annual_survey3_path %>

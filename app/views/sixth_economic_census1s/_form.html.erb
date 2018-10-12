@@ -1,0 +1,42 @@
+<%= form_with(model: sixth_economic_census1, local: true) do |form| %>
+  <% if sixth_economic_census1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sixth_economic_census1.errors.count, "error") %> prohibited this sixth_economic_census1 from being saved:</h2>
+
+      <ul>
+      <% sixth_economic_census1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Variable1 %>
+    <%= form.text_field :Variable1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Variable2 %>
+    <%= form.text_field :Variable2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_2005 %>
+    <%= form.text_field :Number_2005 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_2013 %>
+    <%= form.text_field :Number_2013 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_Increase %>
+    <%= form.text_field :Percentage_Increase %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

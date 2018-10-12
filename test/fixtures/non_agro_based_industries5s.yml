@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Agencies: MyString
+  Indicators: MyString
+  KVIC: 1.5
+  KVI_Board: 1.5
+  DIC: 1.5
+  Total: 1.5
+  Year: MyString
+  KVIC_Percentage: 1.5
+  KVI_Board_Percentage: 1.5
+  DIC_Percentage: 1.5
+  Total_Percentage: 1.5
+
+two:
+  Agencies: MyString
+  Indicators: MyString
+  KVIC: 1.5
+  KVI_Board: 1.5
+  DIC: 1.5
+  Total: 1.5
+  Year: MyString
+  KVIC_Percentage: 1.5
+  KVI_Board_Percentage: 1.5
+  DIC_Percentage: 1.5
+  Total_Percentage: 1.5
