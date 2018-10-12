@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 12, 2018 at 12:31 PM
+-- Host: localhost:3306
+-- Generation Time: Oct 12, 2018 at 12:45 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `newdata`
+-- Database: `bihar_survey`
 --
 
 -- --------------------------------------------------------
@@ -5926,6 +5926,78 @@ INSERT INTO `newrices` (`id`, `Districts`, `Area`, `Production`, `Productivity`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `non_agro_based_industries1s`
+--
+
+DROP TABLE IF EXISTS `non_agro_based_industries1s`;
+CREATE TABLE `non_agro_based_industries1s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Products` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `non_agro_based_industries1s`
+--
+
+INSERT INTO `non_agro_based_industries1s` (`id`, `Districts`, `Products`, `created_at`, `updated_at`) VALUES
+(1, 'Bhagalpur', 'Silk, Cotton, Furnishing cloth, Staple chadar, Exportable Silk and cotton cloth.', '2018-10-09 09:57:58', '2018-10-09 09:57:58'),
+(2, 'Banka', 'Tasar Silk, Exportable Silk Cloth', '2018-10-09 09:57:58', '2018-10-09 09:57:58'),
+(3, 'Gaya', 'Cotton and Silk Cloth', '2018-10-09 09:57:58', '2018-10-09 09:57:58'),
+(4, 'Nalanda', 'Ornamental Curtain, Bed Cover, Interior decoration material and ornamented cloth', '2018-10-09 09:57:58', '2018-10-09 09:57:58'),
+(5, 'Nawada', 'Tasar Silk and ladies dress material', '2018-10-09 09:57:58', '2018-10-09 09:57:58'),
+(6, 'Darbhanga, Madhubani, Sitamarhi', 'Fine Cotton long cloth, dhoti, shirting', '2018-10-09 09:57:58', '2018-10-09 09:57:58'),
+(7, 'Aurangabad, Rohtas', 'Woolen Blanket, Woolen Carpet and Sari', '2018-10-09 09:57:58', '2018-10-09 09:57:58'),
+(8, 'Kaimur', 'Woolen Carpet, Banarasi Sari', '2018-10-09 09:57:58', '2018-10-09 09:57:58'),
+(9, 'Patna, Siwan', 'Cotton cloth and Furnishing Cloth', '2018-10-09 09:57:58', '2018-10-09 09:57:58'),
+(10, 'Purnea, Katihar', 'Jute bags, Jute-blended material, Interior decorative material', '2018-10-09 09:57:58', '2018-10-09 09:57:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `non_agro_based_industries2s`
+--
+
+DROP TABLE IF EXISTS `non_agro_based_industries2s`;
+CREATE TABLE `non_agro_based_industries2s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Sanctioned_amount_in_Rs_lakh` float DEFAULT NULL,
+  `Handlooms_on_which_UID_No_has_been_engraved` float DEFAULT NULL,
+  `Pati_looms_on_which_UID_No_has_been_engraved` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `non_agro_based_industries2s`
+--
+
+INSERT INTO `non_agro_based_industries2s` (`id`, `Districts`, `Sanctioned_amount_in_Rs_lakh`, `Handlooms_on_which_UID_No_has_been_engraved`, `Pati_looms_on_which_UID_No_has_been_engraved`, `created_at`, `updated_at`) VALUES
+(1, 'Aurangabad', 3, 91, 489, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(2, 'Banka', 3, 995, NULL, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(3, 'Bhagalpur', 5, 2537, NULL, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(4, 'Gaya', 1, 84, 477, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(5, 'Jehanabad', 0.01, 3, NULL, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(6, 'Kaimur', 1, 124, 86, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(7, 'Katihar', 0.02, 2, NULL, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(8, 'Khagaria', 0.02, 1, NULL, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(9, 'Madhubani', 1.5, 89, NULL, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(10, 'Muzaffarpur', 0.01, 28, NULL, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(11, 'Nalanda', 1.5, 175, NULL, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(12, 'Nawada', 2, 181, NULL, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(13, 'Patna', 3.72, 448, NULL, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(14, 'Rohtas', 1, 141, 566, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(15, 'Siwan', 1.1, 112, NULL, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(16, 'Samastipur', 0.02, NULL, NULL, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(17, 'W. Champaran', 0.1, 51, NULL, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
+(18, 'Total', 24, 4882, 1618, '2018-10-09 11:23:22', '2018-10-09 11:23:22');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `non_agro_based_industries3s`
 --
 
@@ -5950,6 +6022,38 @@ INSERT INTO `non_agro_based_industries3s` (`id`, `Year`, `Target`, `Achievement`
 (3, '2015-16', 204, 167, 81.9, '2018-09-09 09:00:45', '2018-09-09 09:00:45'),
 (4, '2016-17', 204, 169, 82.8, '2018-09-09 09:00:45', '2018-09-09 09:00:45'),
 (5, '2017-18', 204, 156, 76.4, '2018-09-09 09:00:45', '2018-09-09 09:00:45');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `non_agro_based_industries4s`
+--
+
+DROP TABLE IF EXISTS `non_agro_based_industries4s`;
+CREATE TABLE `non_agro_based_industries4s` (
+  `id` bigint(20) NOT NULL,
+  `Sericulture_Sector` varchar(255) DEFAULT NULL,
+  `Mulberry` float DEFAULT NULL,
+  `Tasar` float DEFAULT NULL,
+  `Castor` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `non_agro_based_industries4s`
+--
+
+INSERT INTO `non_agro_based_industries4s` (`id`, `Sericulture_Sector`, `Mulberry`, `Tasar`, `Castor`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Plantation (ha)', 117, 608, 575, '2013-14', '2018-10-12 06:48:06', '2018-10-12 06:48:06'),
+(2, 'DFLs Rearing (lakh)', 5.07, 7.1, 0.81, '2013-14', '2018-10-12 06:48:06', '2018-10-12 06:48:06'),
+(3, 'Total Cocoon Production', 122.73, 386.94, 6.5, '2013-14', '2018-10-12 06:48:06', '2018-10-12 06:48:06'),
+(4, 'Raw Silk (Tonnes)', 15.08, 37.89, 5.2, '2013-14', '2018-10-12 06:48:06', '2018-10-12 06:48:06'),
+(5, 'Plantation (ha)', 117, 608, 575, '2014-15', '2018-10-12 06:48:06', '2018-10-12 06:48:06'),
+(6, 'DFLs Rearing (lakh)', 5.07, 7.1, 0.81, '2014-15', '2018-10-12 06:48:06', '2018-10-12 06:48:06'),
+(7, 'Total Cocoon Production', 122.73, 386.94, 6.5, '2014-15', '2018-10-12 06:48:06', '2018-10-12 06:48:06'),
+(8, 'Raw Silk (Tonnes)', 15.08, 37.89, 5.2, '2014-15', '2018-10-12 06:48:06', '2018-10-12 06:48:06');
 
 -- --------------------------------------------------------
 
@@ -8780,11 +8884,18 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20181008091131'),
 ('20181008103136'),
 ('20181008110736'),
+('20181009095714'),
+('20181009112156'),
 ('20181009112346'),
+('20181012064702'),
 ('20181012065103'),
+('20181012080429'),
+('20181012091630'),
 ('20181012091641'),
+('20181012100118'),
 ('20181012100818'),
-('20181012104359');
+('20181012104359'),
+('20181012115935');
 
 -- --------------------------------------------------------
 
@@ -10192,6 +10303,38 @@ INSERT INTO `state_public_sector3s` (`id`, `Sector`, `Number_of_Statutory_Corpor
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `support_institutions1s`
+--
+
+DROP TABLE IF EXISTS `support_institutions1s`;
+CREATE TABLE `support_institutions1s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `CAGR` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `support_institutions1s`
+--
+
+INSERT INTO `support_institutions1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `CAGR`, `created_at`, `updated_at`) VALUES
+(1, 'Expenditure on Industries', NULL, NULL, NULL, NULL, NULL, NULL, '2018-10-12 12:05:20', '2018-10-12 12:05:20'),
+(2, '(a)  Revenue', 534, 580, 561, 1201, 888, 19.1, '2018-10-12 12:05:20', '2018-10-12 12:05:20'),
+(3, '(b)  Capital', 49, 535, 3, 29, 228, 1.6, '2018-10-12 12:05:20', '2018-10-12 12:05:20'),
+(4, '(c)  Total', 583, 1115, 564, 1230, 1116, 15, '2018-10-12 12:05:20', '2018-10-12 12:05:20'),
+(5, 'Expenditure on Economic Services', 20246, 24871, 29173, 37305, 44943, 22.1, '2018-10-12 12:05:20', '2018-10-12 12:05:20'),
+(6, 'Expenditure on Industries as a percentage of Expenditure on Economic Services', 2.9, 4.5, 1.9, 3.3, 2.5, NULL, '2018-10-12 12:05:20', '2018-10-12 12:05:20');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `support_institutions2s`
 --
 
@@ -10218,6 +10361,39 @@ INSERT INTO `support_institutions2s` (`id`, `Year`, `Amount_Allotted_Rs_lakh`, `
 (4, '2014-15', 98.6, 88.94, 664, 90.2, '2018-09-09 09:21:11', '2018-09-09 09:21:11'),
 (5, '2015-16', 110.29, 92.37, 906, 83.8, '2018-09-09 09:21:11', '2018-09-09 09:21:11'),
 (6, '2016-17', 110, 110, 1098, 100, '2018-09-09 09:21:11', '2018-09-09 09:21:11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `support_institutions4s`
+--
+
+DROP TABLE IF EXISTS `support_institutions4s`;
+CREATE TABLE `support_institutions4s` (
+  `id` bigint(20) NOT NULL,
+  `Regional_Office` varchar(255) DEFAULT NULL,
+  `Total_Acquired_Land` float DEFAULT NULL,
+  `Total_Acquired_Constructed_Sheds` float DEFAULT NULL,
+  `Land_Reserved_for_Infrastructure_Administrative_Blocks_Roads_etc` float DEFAULT NULL,
+  `Total_Allotted_Land` float DEFAULT NULL,
+  `Total_Allotted_Constructed_Sheds` float DEFAULT NULL,
+  `Litigated_land` float DEFAULT NULL,
+  `Total_Vacant_Land_Allottable` float DEFAULT NULL,
+  `Total_Vacant_Constructed_Sheds_Allottable` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `support_institutions4s`
+--
+
+INSERT INTO `support_institutions4s` (`id`, `Regional_Office`, `Total_Acquired_Land`, `Total_Acquired_Constructed_Sheds`, `Land_Reserved_for_Infrastructure_Administrative_Blocks_Roads_etc`, `Total_Allotted_Land`, `Total_Allotted_Constructed_Sheds`, `Litigated_land`, `Total_Vacant_Land_Allottable`, `Total_Vacant_Constructed_Sheds_Allottable`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 2700.38, 230, 269.86, 2294.83, 215, 81.38, 51.59, 15, '2018-10-12 10:02:22', '2018-10-12 10:02:22'),
+(2, 'Bhagalpur', 1347.29, 148, 105.2, 374.15, 143, 836.14, 31.8, 5, '2018-10-12 10:02:22', '2018-10-12 10:02:22'),
+(3, 'Dharbhanga', 725.61, 158, 156.86, 441.79, 133, 61.1, 28.61, 23, '2018-10-12 10:02:22', '2018-10-12 10:02:22'),
+(4, 'Muzaffarpur', 411.96, 144, 55.16, 327.23, 131, 49.94, 29.51, 13, '2018-10-12 10:02:22', '2018-10-12 10:02:22'),
+(5, 'Total', 5185.24, 680, 587.08, 3438, 622, 1028.56, 141.51, 56, '2018-10-12 10:02:22', '2018-10-12 10:02:22');
 
 -- --------------------------------------------------------
 
@@ -10823,6 +10999,66 @@ CREATE TABLE `tests` (
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tourism1s`
+--
+
+DROP TABLE IF EXISTS `tourism1s`;
+CREATE TABLE `tourism1s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Budget_Estimate` float DEFAULT NULL,
+  `Expenditure` float DEFAULT NULL,
+  `Expenditure_as_percentage_of_Budget` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tourism1s`
+--
+
+INSERT INTO `tourism1s` (`id`, `Year`, `Budget_Estimate`, `Expenditure`, `Expenditure_as_percentage_of_Budget`, `created_at`, `updated_at`) VALUES
+(1, '2011-12', 34.45, 34.85, 101.2, '2018-10-12 08:06:59', '2018-10-12 08:06:59'),
+(2, '2012-13', 41.81, 103.69, 248, '2018-10-12 08:06:59', '2018-10-12 08:06:59'),
+(3, '2013-14', 105.85, 67.37, 63.6, '2018-10-12 08:06:59', '2018-10-12 08:06:59'),
+(4, '2014-15', 152.41, 84, 55.1, '2018-10-12 08:06:59', '2018-10-12 08:06:59'),
+(5, '2015-16', 57.01, 61.57, 108, '2018-10-12 08:06:59', '2018-10-12 08:06:59'),
+(6, '2016-17', 67.02, 143.05, 213.4, '2018-10-12 08:06:59', '2018-10-12 08:06:59');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tourism2s`
+--
+
+DROP TABLE IF EXISTS `tourism2s`;
+CREATE TABLE `tourism2s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Domestic_tourists` float DEFAULT NULL,
+  `Foreign_tourists` float DEFAULT NULL,
+  `Total_tourists` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tourism2s`
+--
+
+INSERT INTO `tourism2s` (`id`, `Year`, `Domestic_tourists`, `Foreign_tourists`, `Total_tourists`, `created_at`, `updated_at`) VALUES
+(1, '2011', 18396, 972, 19368, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
+(2, '2012', 21446, 1097, 22543, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
+(3, '2013', 21588, 765, 22353, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
+(4, '2014', 22544, 829, 23373, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
+(5, '2015', 28029, 923, 28952, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
+(6, '2016', 28516, 1011, 29527, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
+(7, '2017', 32414, 1083, 33497, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
+(8, 'CAGR', 9.5, 1.3, 9.1, '2018-10-12 09:17:39', '2018-10-12 09:17:39');
+
 --
 -- Indexes for dumped tables
 --
@@ -11362,9 +11598,27 @@ ALTER TABLE `newrices`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `non_agro_based_industries1s`
+--
+ALTER TABLE `non_agro_based_industries1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `non_agro_based_industries2s`
+--
+ALTER TABLE `non_agro_based_industries2s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `non_agro_based_industries3s`
 --
 ALTER TABLE `non_agro_based_industries3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `non_agro_based_industries4s`
+--
+ALTER TABLE `non_agro_based_industries4s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -11704,9 +11958,21 @@ ALTER TABLE `state_public_sector3s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `support_institutions1s`
+--
+ALTER TABLE `support_institutions1s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `support_institutions2s`
 --
 ALTER TABLE `support_institutions2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `support_institutions4s`
+--
+ALTER TABLE `support_institutions4s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -11776,6 +12042,18 @@ ALTER TABLE `tests`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tourism1s`
+--
+ALTER TABLE `tourism1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tourism2s`
+--
+ALTER TABLE `tourism2s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -11786,4 +12064,43 @@ ALTER TABLE `agricultural_credit1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `agricultu
+-- AUTO_INCREMENT for table `non_agro_based_industries1s`
+--
+ALTER TABLE `non_agro_based_industries1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `non_agro_based_industries2s`
+--
+ALTER TABLE `non_agro_based_industries2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `non_agro_based_industries4s`
+--
+ALTER TABLE `non_agro_based_industries4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `support_institutions1s`
+--
+ALTER TABLE `support_institutions1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `support_institutions4s`
+--
+ALTER TABLE `support_institutions4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tourism1s`
+--
+ALTER TABLE `tourism1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `tourism2s`
+--
+ALTER TABLE `tourism2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
