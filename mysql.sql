@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Oct 05, 2018 at 12:17 PM
+-- Host: localhost
+-- Generation Time: Oct 12, 2018 at 12:31 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `bihar_survey`
+-- Database: `newdata`
 --
 
 -- --------------------------------------------------------
@@ -2159,6 +2159,149 @@ INSERT INTO `annual_survey2s` (`id`, `State`, `Contribution`, `Year`, `created_a
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `annual_survey3s`
+--
+
+DROP TABLE IF EXISTS `annual_survey3s`;
+CREATE TABLE `annual_survey3s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Number_of_Factories_Agro_based` float DEFAULT NULL,
+  `Number_of_Factories_Non_Agro_based` float DEFAULT NULL,
+  `Total_Number_of_Factories` float DEFAULT NULL,
+  `Number_of_Factories_in_Operation_Agro_based` float DEFAULT NULL,
+  `Number_of_Factories_in_Operation_Non_Agro_Based` float DEFAULT NULL,
+  `Total_Number_of_Factories_in_Operation` float DEFAULT NULL,
+  `Percentage_of_Agro_based` float DEFAULT NULL,
+  `Percentage_of_Non_Agro_based` float DEFAULT NULL,
+  `Percentage_of_Total_Factories` float DEFAULT NULL,
+  `Percentage_of_Operation_Agro_based` float DEFAULT NULL,
+  `Percentage_of_Operation_Non_Agro_Based` float DEFAULT NULL,
+  `Percentage_of_Total_Factories_in_Operation` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `annual_survey3s`
+--
+
+INSERT INTO `annual_survey3s` (`id`, `Year`, `Number_of_Factories_Agro_based`, `Number_of_Factories_Non_Agro_based`, `Total_Number_of_Factories`, `Number_of_Factories_in_Operation_Agro_based`, `Number_of_Factories_in_Operation_Non_Agro_Based`, `Total_Number_of_Factories_in_Operation`, `Percentage_of_Agro_based`, `Percentage_of_Non_Agro_based`, `Percentage_of_Total_Factories`, `Percentage_of_Operation_Agro_based`, `Percentage_of_Operation_Non_Agro_Based`, `Percentage_of_Total_Factories_in_Operation`, `Indicator`, `created_at`, `updated_at`) VALUES
+(1, '2005-06', 470, 1199, 1669, 440, 978, 1420, 28.2, 71.8, 100, 31, 68.9, 100, 'Bihar', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(2, '2006-07', 278, 1323, 1601, 228, 1182, 1410, 17.4, 82.6, 100, 16.2, 83.8, 100, 'Bihar', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(3, '2007-08', 466, 1319, 1785, 404, 1209, 1613, 26.1, 73.9, 100, 25, 75, 100, 'Bihar', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(4, '2008-09', 437, 1340, 1777, 377, 1172, 1549, 24.6, 75.4, 100, 24.3, 75.7, 100, 'Bihar', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(5, '2009-10', 510, 1409, 1919, 454, 1271, 1725, 26.6, 73.4, 100, 26.3, 73.7, 100, 'Bihar', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(6, '2010-11', 918, 1889, 2807, 822, 1725, 2547, 32.7, 67.3, 100, 32.3, 67.7, 100, 'Bihar', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(7, '2011-12', 1126, 2106, 3232, 1014, 1858, 2872, 34.8, 65.2, 100, 35.3, 64.7, 100, 'Bihar', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(8, '2012-13', 1141, 2206, 3347, 1005, 1941, 2946, 34.1, 65.9, 100, 34.1, 65.9, 100, 'Bihar', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(9, '2013-14', 1148, 2272, 3420, 1036, 2096, 3132, 33.6, 66.4, 100, 33.1, 66.9, 100, 'Bihar', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(10, '2014-15', 1232, 2298, 3530, 1129, 1813, 2942, 34.9, 65.1, 100, 38.4, 61.6, 100, 'Bihar', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(11, 'CAGR', 17.4, 8.8, 11.1, 17.9, 8.6, 11.1, NULL, NULL, NULL, NULL, NULL, NULL, 'Bihar', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(12, '2005-06', 61936, 78224, 140160, 57863, 75028, 132891, 44.2, 55.8, 100, 43.5, 56.5, 100, 'India', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(13, '2006-07', 54902, 89809, 144711, 51681, 86937, 138618, 37.9, 62.1, 100, 37.3, 62.7, 100, 'India', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(14, '2007-08', 62189, 84196, 146385, 59124, 81443, 140567, 42.5, 57.5, 100, 42.1, 57.9, 100, 'India', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(15, '2008-09', 67259, 88063, 155322, 64005, 86285, 150290, 43.3, 56.7, 100, 42.6, 57.4, 100, 'India', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(16, '2009-10', 65409, 93469, 158878, 62299, 90336, 152635, 41.2, 58.8, 100, 40.8, 59.2, 100, 'India', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(17, '2010-11', 87520, 117011, 204531, 69249, 97387, 166636, 42.8, 57.2, 100, 41.6, 58.4, 100, 'India', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(18, '2011-12', 93251, 124303, 217554, 72769, 102939, 175708, 42.9, 57.1, 100, 41.4, 58.6, 100, 'India', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(19, '2012-13', 87803, 134317, 222120, 68698, 110403, 179101, 39.5, 60.5, 100, 38.4, 61.6, 100, 'India', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(20, '2013-14', 87775, 136803, 224578, 70993, 114697, 185690, 39.1, 60.9, 100, 38.2, 61.8, 100, 'India', '2018-10-12 10:44:54', '2018-10-12 10:44:54'),
+(21, '2014-15', 95887, 134546, 230433, 77049, 112417, 189466, 41.6, 58.4, 100, 40.7, 59.3, 100, 'India', '2018-10-12 10:44:54', '2018-10-12 10:44:54');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `annual_survey4s`
+--
+
+DROP TABLE IF EXISTS `annual_survey4s`;
+CREATE TABLE `annual_survey4s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `India` float DEFAULT NULL,
+  `Bihar` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `annual_survey4s`
+--
+
+INSERT INTO `annual_survey4s` (`id`, `Year`, `India`, `Bihar`, `Indicator`, `created_at`, `updated_at`) VALUES
+(1, '2005-06', 133, 1.42, 'Number of Factories in Operation ( in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(2, '2006-07', 139, 1.41, 'Number of Factories in Operation ( in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(3, '2007-08', 141, 1.61, 'Number of Factories in Operation ( in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(4, '2008-09', 150, 1.55, 'Number of Factories in Operation ( in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(5, '2009-10', 153, 1.73, 'Number of Factories in Operation ( in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(6, '2010-11', 167, 2.55, 'Number of Factories in Operation ( in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(7, '2011-12', 176, 2.87, 'Number of Factories in Operation ( in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(8, '2012-13', 179, 2.95, 'Number of Factories in Operation ( in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(9, '2013-14', 186, 3.13, 'Number of Factories in Operation ( in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(10, '2014-15', 189, 2.94, 'Number of Factories in Operation ( in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(11, 'CAGR', 4.3, 11.1, 'Number of Factories in Operation ( in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(12, '2005-06', 606.94, 2.92, 'Fixed capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(13, '2006-07', 715.13, 2.95, 'Fixed capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(14, '2007-08', 845.13, 3.01, 'Fixed capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(15, '2008-09', 1055.97, 3.03, 'Fixed capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(16, '2009-10', 1352.18, 4.45, 'Fixed capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(17, '2010-11', 1607.01, 5.26, 'Fixed capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(18, '2011-12', 1949.55, 7.55, 'Fixed capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(19, '2012-13', 2180.26, 6.47, 'Fixed capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(20, '2013-14', 2373.72, 8.04, 'Fixed capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(21, '2014-15', 2474.45, 9.94, 'Fixed capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(22, 'CAGR', 18.3, 16.2, 'Fixed capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(23, '2005-06-01', 184.46, 1.42, 'Working Capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(24, '2006-07-01', 282.19, 1.61, 'Working Capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(25, '2007-08-01', 316.95, 1.64, 'Working Capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(26, '2008-09-01', 311.23, 1.47, 'Working Capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(27, '2009-10-01', 387.75, 0.95, 'Working Capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(28, '2010-11-01', 620.36, 2.47, 'Working Capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(29, '2011-12-01', 588.79, -0.24, 'Working Capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(30, '2012-13', 603.41, 2.48, 'Working Capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(31, '2013-14', 1010.84, 5.88, 'Working Capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(32, '2014-15', 640.84, 3.49, 'Working Capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(33, 'CAGR', 16.9, 15.9, 'Working Capital (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(34, '2005-06', 9112, 67, 'Persons Engaged (in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(35, '2006-07', 10328, 67, 'Persons Engaged (in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(36, '2007-08', 10453, 74, 'Persons Engaged (in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(37, '2008-09', 11327, 74, 'Persons Engaged (in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(38, '2009-10', 11792, 87, 'Persons Engaged (in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(39, '2010-11', 12695, 106, 'Persons Engaged (in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(40, '2011-12', 13430, 127, 'Persons Engaged (in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(41, '2012-13', 12950, 116, 'Persons Engaged (in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(42, '2013-14', 13538, 114, 'Persons Engaged (in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(43, '2014-15', 13881, 146, 'Persons Engaged (in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(44, 'CAGR', 4.5, 9.4, 'Persons Engaged (in ‘000)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(45, '2005-06', 1908.36, 16.78, 'Value of Output (Rs. ‘ 000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(46, '2006-07', 2408.55, 19.04, 'Value of Output (Rs. ‘ 000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(47, '2007-08', 2775.71, 21.87, 'Value of Output (Rs. ‘ 000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(48, '2008-09', 3272.8, 29.54, 'Value of Output (Rs. ‘ 000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(49, '2009-10', 3733.04, 2.83, 'Value of Output (Rs. ‘ 000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(50, '2010-11', 4676.22, 36.05, 'Value of Output (Rs. ‘ 000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(51, '2011-12', 5776.02, 60.17, 'Value of Output (Rs. ‘ 000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(52, '2012-13', 6025.95, 51.68, 'Value of Output (Rs. ‘ 000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(53, '2013-14', 6555.25, 55.3, 'Value of Output (Rs. ‘ 000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(54, '2014-15', 6883.81, 58.76, 'Value of Output (Rs. ‘ 000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(55, 'CAGR', 15.9, 18.3, 'Value of Output (Rs. ‘ 000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(56, '2005-06', 311.86, 0.42, 'Net Value Added (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(57, '2006-07', 395.73, 0.32, 'Net Value Added (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(58, '2007-08', 481.59, 1.16, 'Net Value Added (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(59, '2008-09', 527.77, 3.18, 'Net Value Added (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(60, '2009-10', 592.11, 2.32, 'Net Value Added (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(61, '2010-11', 704.58, 4.42, 'Net Value Added (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(62, '2011-12', 836.7, 5.64, 'Net Value Added (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(63, '2012-13', 851.95, 1.3, 'Net Value Added (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(64, '2013-14', 895.34, 5.15, 'Net Value Added (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(65, '2014-15', 975.16, 5.82, 'Net Value Added (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
+(66, 'CAGR', 13.1, 32.2, 'Net Value Added (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `annual_survey5s`
 --
 
@@ -2200,6 +2343,52 @@ INSERT INTO `annual_survey5s` (`id`, `Characteristics`, `India`, `Bihar`, `Year`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `annual_survey6s`
+--
+
+DROP TABLE IF EXISTS `annual_survey6s`;
+CREATE TABLE `annual_survey6s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Number_of_Factories_in_Operation` float DEFAULT NULL,
+  `Gross_Value_of_Output_GVO_Rs_crore` float DEFAULT NULL,
+  `Gross_Value_Added_GVA_Rs_crore` float DEFAULT NULL,
+  `GVA_Percentage_Share_in_India` float DEFAULT NULL,
+  `GVA_as_Percentage_of_GVO` float DEFAULT NULL,
+  `Number_of_Persons_Engaged` float DEFAULT NULL,
+  `Percentage_Share_in_India` float DEFAULT NULL,
+  `Employment_per_Factory` float DEFAULT NULL,
+  `Wages_Salaries_and_Bonus_per_Person_annually_Rs` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `annual_survey6s`
+--
+
+INSERT INTO `annual_survey6s` (`id`, `Districts`, `Number_of_Factories_in_Operation`, `Gross_Value_of_Output_GVO_Rs_crore`, `Gross_Value_Added_GVA_Rs_crore`, `GVA_Percentage_Share_in_India`, `GVA_as_Percentage_of_GVO`, `Number_of_Persons_Engaged`, `Percentage_Share_in_India`, `Employment_per_Factory`, `Wages_Salaries_and_Bonus_per_Person_annually_Rs`, `created_at`, `updated_at`) VALUES
+(1, 'Andhra Pradesh', 12905, 251919, 35021, 3, 13.9, 528417, 3.8, 41, 198311, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(2, 'Bihar', 2942, 58759, 6805, 0.6, 11.58, 146109, 1.1, 50, 97790, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(3, 'Chhattisgarh', 2534, 119776, 22262, 1.9, 18.59, 179324, 1.3, 71, 305773, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(4, 'Gujarat', 17884, 1270120, 196451, 16.9, 15.47, 1462210, 10.5, 82, 230708, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(5, 'Haryana', 6611, 367485, 58783, 5, 16, 744026, 5.4, 113, 232538, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(6, 'Jharkhand', 2341, 121087, 26591, 2.3, 21.96, 182085, 1.3, 78, 354744, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(7, 'Karnataka', 10143, 461866, 71815, 6.2, 15.55, 974022, 7, 96, 246825, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(8, 'Kerala', 6440, 128664, 14215, 1.2, 11.05, 384058, 2.8, 60, 164682, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(9, 'Madhya Pradesh', 3664, 182530, 27290, 2.3, 14.95, 344031, 2.5, 94, 201948, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(10, 'Maharashtra', 22783, 1119620, 239076, 20.5, 21.35, 1883680, 13.6, 83, 320040, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(11, 'Odisha', 2469, 131180, 25432, 2.2, 19.39, 262817, 1.9, 106, 251498, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(12, 'Punjab', 10441, 189925, 25500, 2.2, 13.43, 583316, 4.2, 56, 155277, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(13, 'Rajasthan', 8005, 221415, 39596, 3.4, 17.88, 487520, 3.5, 61, 211309, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(14, 'Tamil Nadu', 29081, 700381, 109990, 9.4, 15.7, 2127700, 15.3, 73, 196236, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(15, 'Uttar Pradesh', 12327, 423098, 53056, 4.6, 12.54, 883331, 6.4, 72, 204453, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(16, 'West Bengal', 7878, 263802, 24965, 2.1, 9.46, 632470, 4.6, 80, 185085, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
+(17, 'India', 189468, 6883810, 1164700, 100, 16.92, 13881400, 100, 73, 222629, '2018-10-08 09:12:59', '2018-10-08 09:12:59');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `ar_internal_metadata`
 --
 
@@ -2217,6 +2406,112 @@ CREATE TABLE `ar_internal_metadata` (
 
 INSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES
 ('environment', 'development', '2018-07-10 04:34:40', '2018-07-10 04:34:40');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bihar_industrial_investment1s`
+--
+
+DROP TABLE IF EXISTS `bihar_industrial_investment1s`;
+CREATE TABLE `bihar_industrial_investment1s` (
+  `id` bigint(20) NOT NULL,
+  `Sectors` varchar(255) DEFAULT NULL,
+  `Number_of_Proposed_Units` float DEFAULT NULL,
+  `Proposed_Investment` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bihar_industrial_investment1s`
+--
+
+INSERT INTO `bihar_industrial_investment1s` (`id`, `Sectors`, `Number_of_Proposed_Units`, `Proposed_Investment`, `created_at`, `updated_at`) VALUES
+(1, 'Food Processing', 292, 1467.21, '2018-10-12 06:52:07', '2018-10-12 06:52:07'),
+(2, 'Manufacturing', 64, 256.66, '2018-10-12 06:52:07', '2018-10-12 06:52:07'),
+(3, 'Power Plant', 8, 3981.55, '2018-10-12 06:52:07', '2018-10-12 06:52:07'),
+(4, 'Small Equipment Manufacturing', 9, 9.7, '2018-10-12 06:52:07', '2018-10-12 06:52:07'),
+(5, 'Plastic & Rubber', 54, 124.46, '2018-10-12 06:52:07', '2018-10-12 06:52:07'),
+(6, 'Textile', 8, 43.88, '2018-10-12 06:52:07', '2018-10-12 06:52:07'),
+(7, 'Information Technology', 9, 30.94, '2018-10-12 06:52:07', '2018-10-12 06:52:07'),
+(8, 'Tourism', 14, 300.75, '2018-10-12 06:52:07', '2018-10-12 06:52:07'),
+(9, 'Technical Institutes (Engineering and Management)', 7, 41.03, '2018-10-12 06:52:07', '2018-10-12 06:52:07'),
+(10, 'Healthcare', 11, 123.03, '2018-10-12 06:52:07', '2018-10-12 06:52:07'),
+(11, 'Private Industrial Park', 1, 652, '2018-10-12 06:52:07', '2018-10-12 06:52:07'),
+(12, 'Others', 119, 1817.65, '2018-10-12 06:52:07', '2018-10-12 06:52:07'),
+(13, 'Total', 596, 8848.86, '2018-10-12 06:52:07', '2018-10-12 06:52:07');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bihar_industrial_investment2s`
+--
+
+DROP TABLE IF EXISTS `bihar_industrial_investment2s`;
+CREATE TABLE `bihar_industrial_investment2s` (
+  `id` bigint(20) NOT NULL,
+  `Sectors` varchar(255) DEFAULT NULL,
+  `Number_of_Units` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bihar_industrial_investment2s`
+--
+
+INSERT INTO `bihar_industrial_investment2s` (`id`, `Sectors`, `Number_of_Units`, `created_at`, `updated_at`) VALUES
+(1, 'Food Processing', 27, '2018-10-12 09:22:23', '2018-10-12 09:22:23'),
+(2, 'Tourism', 2, '2018-10-12 09:22:23', '2018-10-12 09:22:23'),
+(3, 'Manufacturing', 8, '2018-10-12 09:22:23', '2018-10-12 09:22:23'),
+(4, 'Plastic & Rubber', 6, '2018-10-12 09:22:23', '2018-10-12 09:22:23'),
+(5, 'IT', 1, '2018-10-12 09:22:23', '2018-10-12 09:22:23'),
+(6, 'Healthcare', 4, '2018-10-12 09:22:23', '2018-10-12 09:22:23'),
+(7, 'Solar Power', 1, '2018-10-12 09:22:23', '2018-10-12 09:22:23'),
+(8, 'Others', 23, '2018-10-12 09:22:23', '2018-10-12 09:22:23'),
+(9, 'Total', 72, '2018-10-12 09:22:23', '2018-10-12 09:22:23');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bihar_start_up_policies`
+--
+
+DROP TABLE IF EXISTS `bihar_start_up_policies`;
+CREATE TABLE `bihar_start_up_policies` (
+  `id` bigint(20) NOT NULL,
+  `Incubators` varchar(255) DEFAULT NULL,
+  `Number_of_Startups` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bihar_start_up_policies`
+--
+
+INSERT INTO `bihar_start_up_policies` (`id`, `Incubators`, `Number_of_Startups`, `created_at`, `updated_at`) VALUES
+(1, 'Indian Institute of Technology (IIT), Patna', 54, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(2, 'National Institute of Technology (NIT), Patna', 40, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(3, 'Bihar Industries Association (BIA)', 242, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(4, 'Bihar Entrepreneurs Association (BEA)', 51, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(5, 'Chandragupta Institute of Management, Patna', 163, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(6, 'National Institute of Fashion Technology, Patna', 26, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(7, 'Birla Institute of Technology (BIT), Patna', 34, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(8, 'Bihar Agricultural University (BAU), Sabour', 59, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(9, 'Development Management Institute (DMI)', 75, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(10, 'Central University', 20, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(11, 'Tool Room and Training Centre (TRTC), Patna', 1, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(12, 'Rajendra Agricultural University (RAU), Pusa', 9, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(13, 'Upendra Maharathi Shilp Anusandhan Sansthan (UMSAS)', 21, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(14, 'J.D. Women’s College, Patna', 8, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(15, 'Patna Women’s College', 1, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(16, 'Magadh Mahila College', 2, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(17, 'Software Technology Parks of India (STPI), Patna', 44, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(18, 'Sanjay Gandhi Institute of Dairy Technology (SGIDT)', 4, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(19, 'Central Institute of Plastic Engineering & Technology, Hajipur ', 2, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
+(20, 'Total', 856, '2018-10-12 10:31:43', '2018-10-12 10:31:43');
 
 -- --------------------------------------------------------
 
@@ -5659,6 +5954,48 @@ INSERT INTO `non_agro_based_industries3s` (`id`, `Year`, `Target`, `Achievement`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `non_agro_based_industries5s`
+--
+
+DROP TABLE IF EXISTS `non_agro_based_industries5s`;
+CREATE TABLE `non_agro_based_industries5s` (
+  `id` bigint(20) NOT NULL,
+  `Agencies` varchar(255) DEFAULT NULL,
+  `Indicators` varchar(255) DEFAULT NULL,
+  `KVIC` float DEFAULT NULL,
+  `KVI_Board` float DEFAULT NULL,
+  `DIC` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `KVIC_Percentage` float DEFAULT NULL,
+  `KVI_Board_Percentage` float DEFAULT NULL,
+  `DIC_Percentage` float DEFAULT NULL,
+  `Total_Percentage` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `non_agro_based_industries5s`
+--
+
+INSERT INTO `non_agro_based_industries5s` (`id`, `Agencies`, `Indicators`, `KVIC`, `KVI_Board`, `DIC`, `Total`, `Year`, `KVIC_Percentage`, `KVI_Board_Percentage`, `DIC_Percentage`, `Total_Percentage`, `created_at`, `updated_at`) VALUES
+(1, 'Target/Margin Money', 'Physical (Nos.)', 2294, 2294, 3060, 7648, '2014-15', 30, 30, 40, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
+(2, 'Target/Margin Money', 'Financial (Rs. lakh)', 3321.96, 3321.96, 4429.27, 11073.2, '2014-15', 30, 30, 40, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
+(3, 'Margin Money disbursed by Nodal banks', 'Physical (Nos.)', 280, 130, 1324, 1734, '2014-15', 16.1, 7.5, 76.4, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
+(4, 'Margin Money disbursed by Nodal banks', 'Financial (Rs. lakh)', 629.73, 389.54, 3338.79, 4358.06, '2014-15', 14.4, 8.9, 76.6, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
+(5, 'Target/Margin Money', 'Physical (Nos.)', 909, 909, 1211, 3029, '2015-16', 30, 30, 40, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
+(6, 'Target/Margin Money', 'Financial (Rs. lakh)', 1817.16, 1817.16, 2422.88, 6057.2, '2015-16', 30, 30, 40, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
+(7, 'Margin Money disbursed by Nodal banks', 'Physical (Nos.)', 189, 195, 2046, 2430, '2015-16', 7.8, 8, 84.2, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
+(8, 'Margin Money disbursed by Nodal banks', 'Financial (Rs. lakh)', 544.6, 543, 5500.95, 6588.55, '2015-16', 8.3, 8.2, 83.49, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
+(9, 'Target/Margin Money', 'Physical (Nos.)', 1122, 1122, 1506, 3750, '2016-17', 29.9, 29.9, 40.2, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
+(10, 'Target/Margin Money', 'Financial (Rs. lakh)', 2244, 2248, 3008, 7500, '2016-17', 29.4, 30, 40.1, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
+(11, 'Margin Money disbursed by Nodal banks', 'Physical (Nos.)', 532, 313, 2389, 3234, '2016-17', 16.5, 9.7, 73.9, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
+(12, 'Margin Money disbursed by Nodal banks', 'Financial (Rs. lakh)', 810.33, 995.34, 6530.83, 8336.5, '2016-17', 9.7, 11.9, 78.3, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `production_and_productivity_of_rices`
 --
 
@@ -8437,7 +8774,17 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20180917075421'),
 ('20180926075549'),
 ('20180927072143'),
-('20181003093812');
+('20181003093812'),
+('20181008061122'),
+('20181008061636'),
+('20181008091131'),
+('20181008103136'),
+('20181008110736'),
+('20181009112346'),
+('20181012065103'),
+('20181012091641'),
+('20181012100818'),
+('20181012104359');
 
 -- --------------------------------------------------------
 
@@ -8594,6 +8941,48 @@ INSERT INTO `sectoral_expenditures` (`id`, `Sector`, `2012-13`, `2013-14`, `2014
 (22, '(b)  Non-salary component (Percentage)', 69.3, 73.4, 77.6, 80.8, 82.3, 85.8, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
 (23, 'Capital Outlay (Rs. crore)', 1331, 1858, 1674, 2740, 3592, 5186, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
 (24, 'Capital Outlay (Percentage)', 5.4, 6.6, 5, 7.1, 8.1, 8.9, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sixth_economic_census1s`
+--
+
+DROP TABLE IF EXISTS `sixth_economic_census1s`;
+CREATE TABLE `sixth_economic_census1s` (
+  `id` bigint(20) NOT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `Number_2005` float DEFAULT NULL,
+  `Number_2013` float DEFAULT NULL,
+  `Percentage_Increase` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sixth_economic_census1s`
+--
+
+INSERT INTO `sixth_economic_census1s` (`id`, `Indicator`, `Sector`, `Number_2005`, `Number_2013`, `Percentage_Increase`, `created_at`, `updated_at`) VALUES
+(1, 'Number of Enterprises', 'Rural', 835, 1200, 43.7, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(2, 'Number of Enterprises', 'Urban', 389, 507, 30.3, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(3, 'Number of Enterprises', 'Total', 1225, 1707, 39.4, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(4, 'Own Account Enterprises', 'Rural', 751, 850, 13.2, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(5, 'Own Account Enterprises', 'Urban', 280, 309, 10.3, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(6, 'Own Account Enterprises', 'Total', 1031, 1159, 12.4, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(7, 'Enterprises with Hired Workers', 'Rural', 240, 350, 46.1, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(8, 'Enterprises with Hired Workers', 'Urban', 164, 198, 20.9, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(9, 'Enterprises with Hired Workers', 'Total', 404, 549, 35.9, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(10, 'Agriculture Enterprises', 'Rural', 30, 77, 159.2, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(11, 'Agriculture Enterprises', 'Urban', 5, 8, 57, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(12, 'Agriculture Enterprises', 'Total', 35, 85, 144, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(13, 'Non-Agriculture Enterprises', 'Rural', 806, 1123, 39.4, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(14, 'Non-Agriculture Enterprises', 'Urban', 384, 499, 29.9, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(15, 'Non-Agriculture Enterprises', 'Total', 1190, 1622, 36.3, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(16, 'No. of Persons Employed', 'Rural', 1405, 2171, 54.6, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(17, 'No. of Persons Employed', 'Urban', 865, 1073, 24, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(18, 'No. of Persons Employed', 'Total', 2270, 3244, 42.9, '2018-10-08 11:08:21', '2018-10-08 11:08:21');
 
 -- --------------------------------------------------------
 
@@ -10595,9 +10984,27 @@ ALTER TABLE `annual_survey2s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `annual_survey3s`
+--
+ALTER TABLE `annual_survey3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `annual_survey4s`
+--
+ALTER TABLE `annual_survey4s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `annual_survey5s`
 --
 ALTER TABLE `annual_survey5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `annual_survey6s`
+--
+ALTER TABLE `annual_survey6s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -10605,6 +11012,24 @@ ALTER TABLE `annual_survey5s`
 --
 ALTER TABLE `ar_internal_metadata`
   ADD PRIMARY KEY (`key`);
+
+--
+-- Indexes for table `bihar_industrial_investment1s`
+--
+ALTER TABLE `bihar_industrial_investment1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bihar_industrial_investment2s`
+--
+ALTER TABLE `bihar_industrial_investment2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bihar_start_up_policies`
+--
+ALTER TABLE `bihar_start_up_policies`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `comparison_of_budget1s`
@@ -10943,6 +11368,12 @@ ALTER TABLE `non_agro_based_industries3s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `non_agro_based_industries5s`
+--
+ALTER TABLE `non_agro_based_industries5s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `production_and_productivity_of_rices`
 --
 ALTER TABLE `production_and_productivity_of_rices`
@@ -11183,6 +11614,12 @@ ALTER TABLE `sectoral_expenditures`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `sixth_economic_census1s`
+--
+ALTER TABLE `sixth_economic_census1s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sixth_economic_census2s`
 --
 ALTER TABLE `sixth_economic_census2s`
@@ -11349,883 +11786,4 @@ ALTER TABLE `agricultural_credit1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `agricultural_credit2s`
---
-ALTER TABLE `agricultural_credit2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
-
---
--- AUTO_INCREMENT for table `agricultural_inputs1_part1s`
---
-ALTER TABLE `agricultural_inputs1_part1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `agricultural_inputs1_part2s`
---
-ALTER TABLE `agricultural_inputs1_part2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `agricultural_inputs2s`
---
-ALTER TABLE `agricultural_inputs2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `agricultural_inputs3s`
---
-ALTER TABLE `agricultural_inputs3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `agricultural_inputs4s`
---
-ALTER TABLE `agricultural_inputs4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `agricultural_inputs5s`
---
-ALTER TABLE `agricultural_inputs5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `agricultural_inputs6s`
---
-ALTER TABLE `agricultural_inputs6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `agricultural_inputs7s`
---
-ALTER TABLE `agricultural_inputs7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `agricultural_inputs8s`
---
-ALTER TABLE `agricultural_inputs8s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `agro_based_industries1s`
---
-ALTER TABLE `agro_based_industries1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
-
---
--- AUTO_INCREMENT for table `agro_based_industries2s`
---
-ALTER TABLE `agro_based_industries2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- AUTO_INCREMENT for table `agro_based_industries3s`
---
-ALTER TABLE `agro_based_industries3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
-
---
--- AUTO_INCREMENT for table `agro_based_industries4s`
---
-ALTER TABLE `agro_based_industries4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
-
---
--- AUTO_INCREMENT for table `agro_based_industries5s`
---
-ALTER TABLE `agro_based_industries5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- AUTO_INCREMENT for table `animal_husbandry1s`
---
-ALTER TABLE `animal_husbandry1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `animal_husbandry2s`
---
-ALTER TABLE `animal_husbandry2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `animal_husbandry3s`
---
-ALTER TABLE `animal_husbandry3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `animal_husbandry4s`
---
-ALTER TABLE `animal_husbandry4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `animal_husbandry5s`
---
-ALTER TABLE `animal_husbandry5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
-
---
--- AUTO_INCREMENT for table `animal_husbandry6s`
---
-ALTER TABLE `animal_husbandry6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `annual_rainfalls`
---
-ALTER TABLE `annual_rainfalls`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=533;
-
---
--- AUTO_INCREMENT for table `annual_state_domestic_product3s`
---
-ALTER TABLE `annual_state_domestic_product3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
-
---
--- AUTO_INCREMENT for table `annual_survey1s`
---
-ALTER TABLE `annual_survey1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
---
--- AUTO_INCREMENT for table `annual_survey2s`
---
-ALTER TABLE `annual_survey2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
-
---
--- AUTO_INCREMENT for table `annual_survey5s`
---
-ALTER TABLE `annual_survey5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT for table `comparison_of_budget1s`
---
-ALTER TABLE `comparison_of_budget1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `comparison_of_budgets`
---
-ALTER TABLE `comparison_of_budgets`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
-
---
--- AUTO_INCREMENT for table `cropping_patterns`
---
-ALTER TABLE `cropping_patterns`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `debt_management1s`
---
-ALTER TABLE `debt_management1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `debt_management2s`
---
-ALTER TABLE `debt_management2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `debt_management3s`
---
-ALTER TABLE `debt_management3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
-
---
--- AUTO_INCREMENT for table `debt_management4s`
---
-ALTER TABLE `debt_management4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `deficit_management1s`
---
-ALTER TABLE `deficit_management1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
-
---
--- AUTO_INCREMENT for table `deficit_management2s`
---
-ALTER TABLE `deficit_management2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
-
---
--- AUTO_INCREMENT for table `deficit_management3s`
---
-ALTER TABLE `deficit_management3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
-
---
--- AUTO_INCREMENT for table `deficit_management4s`
---
-ALTER TABLE `deficit_management4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `demographic_profile1s`
---
-ALTER TABLE `demographic_profile1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- AUTO_INCREMENT for table `demographic_profile2s`
---
-ALTER TABLE `demographic_profile2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `expenditure_management1s`
---
-ALTER TABLE `expenditure_management1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `expenditure_management2s`
---
-ALTER TABLE `expenditure_management2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `expenditure_management3s`
---
-ALTER TABLE `expenditure_management3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `expenditure_managements`
---
-ALTER TABLE `expenditure_managements`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `expenditure_on_salary_and_pensions`
---
-ALTER TABLE `expenditure_on_salary_and_pensions`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `financial_position1s`
---
-ALTER TABLE `financial_position1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
-
---
--- AUTO_INCREMENT for table `fiscal_performance1s`
---
-ALTER TABLE `fiscal_performance1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
-
---
--- AUTO_INCREMENT for table `fiscal_performance2s`
---
-ALTER TABLE `fiscal_performance2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
---
--- AUTO_INCREMENT for table `health1s`
---
-ALTER TABLE `health1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `health2s`
---
-ALTER TABLE `health2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `health3s`
---
-ALTER TABLE `health3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
---
--- AUTO_INCREMENT for table `health4s`
---
-ALTER TABLE `health4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `health5s`
---
-ALTER TABLE `health5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `health6s`
---
-ALTER TABLE `health6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
-
---
--- AUTO_INCREMENT for table `health7s`
---
-ALTER TABLE `health7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `health8s`
---
-ALTER TABLE `health8s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `health9s`
---
-ALTER TABLE `health9s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT for table `health10s`
---
-ALTER TABLE `health10s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `health11s`
---
-ALTER TABLE `health11s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
-
---
--- AUTO_INCREMENT for table `health12s`
---
-ALTER TABLE `health12s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
-
---
--- AUTO_INCREMENT for table `health13s`
---
-ALTER TABLE `health13s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- AUTO_INCREMENT for table `health14s`
---
-ALTER TABLE `health14s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `health15s`
---
-ALTER TABLE `health15s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `health16s`
---
-ALTER TABLE `health16s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `health17s`
---
-ALTER TABLE `health17s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
-
---
--- AUTO_INCREMENT for table `health18s`
---
-ALTER TABLE `health18s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
-
---
--- AUTO_INCREMENT for table `health19s`
---
-ALTER TABLE `health19s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
-
---
--- AUTO_INCREMENT for table `health20s`
---
-ALTER TABLE `health20s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=196;
-
---
--- AUTO_INCREMENT for table `health21s`
---
-ALTER TABLE `health21s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `health22s`
---
-ALTER TABLE `health22s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
-
---
--- AUTO_INCREMENT for table `hhs`
---
-ALTER TABLE `hhs`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `inflation_rates`
---
-ALTER TABLE `inflation_rates`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
-
---
--- AUTO_INCREMENT for table `irrigation1s`
---
-ALTER TABLE `irrigation1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `irrigation2s`
---
-ALTER TABLE `irrigation2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `irrigation3s`
---
-ALTER TABLE `irrigation3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `irrigation4s`
---
-ALTER TABLE `irrigation4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `irrigation5s`
---
-ALTER TABLE `irrigation5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `irrigation6s`
---
-ALTER TABLE `irrigation6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `land1s`
---
-ALTER TABLE `land1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `lands`
---
-ALTER TABLE `lands`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `mininngs`
---
-ALTER TABLE `mininngs`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `newrices`
---
-ALTER TABLE `newrices`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `non_agro_based_industries3s`
---
-ALTER TABLE `non_agro_based_industries3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `production_and_productivity_of_rices`
---
-ALTER TABLE `production_and_productivity_of_rices`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `production_productivity1s`
---
-ALTER TABLE `production_productivity1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `production_productivity2s`
---
-ALTER TABLE `production_productivity2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `production_productivity4s`
---
-ALTER TABLE `production_productivity4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
-
---
--- AUTO_INCREMENT for table `production_productivity5s`
---
-ALTER TABLE `production_productivity5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
-
---
--- AUTO_INCREMENT for table `production_productivity7s`
---
-ALTER TABLE `production_productivity7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `production_productivity8s`
---
-ALTER TABLE `production_productivity8s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `production_productivity9s`
---
-ALTER TABLE `production_productivity9s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `production_productivity10s`
---
-ALTER TABLE `production_productivity10s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `production_productivity11s`
---
-ALTER TABLE `production_productivity11s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `production_productivity12s`
---
-ALTER TABLE `production_productivity12s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `qualityofexpenditures`
---
-ALTER TABLE `qualityofexpenditures`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- AUTO_INCREMENT for table `rainfall1s`
---
-ALTER TABLE `rainfall1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `rainfall2s`
---
-ALTER TABLE `rainfall2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `rainfalls`
---
-ALTER TABLE `rainfalls`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `regional_disparities`
---
-ALTER TABLE `regional_disparities`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `resource_management1s`
---
-ALTER TABLE `resource_management1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `resource_management2s`
---
-ALTER TABLE `resource_management2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
-
---
--- AUTO_INCREMENT for table `resource_management3s`
---
-ALTER TABLE `resource_management3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
-
---
--- AUTO_INCREMENT for table `resource_management4s`
---
-ALTER TABLE `resource_management4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
-
---
--- AUTO_INCREMENT for table `resource_management5s`
---
-ALTER TABLE `resource_management5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT for table `resource_management6s`
---
-ALTER TABLE `resource_management6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `resource_management7s`
---
-ALTER TABLE `resource_management7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
-
---
--- AUTO_INCREMENT for table `resource_management8s`
---
-ALTER TABLE `resource_management8s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
-
---
--- AUTO_INCREMENT for table `resource_management9s`
---
-ALTER TABLE `resource_management9s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-
---
--- AUTO_INCREMENT for table `resource_management10s`
---
-ALTER TABLE `resource_management10s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
---
--- AUTO_INCREMENT for table `resource_management11s`
---
-ALTER TABLE `resource_management11s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
---
--- AUTO_INCREMENT for table `resource_management12s`
---
-ALTER TABLE `resource_management12s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
-
---
--- AUTO_INCREMENT for table `resource_management13s`
---
-ALTER TABLE `resource_management13s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
-
---
--- AUTO_INCREMENT for table `resource_management14s`
---
-ALTER TABLE `resource_management14s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
---
--- AUTO_INCREMENT for table `revenue_account1s`
---
-ALTER TABLE `revenue_account1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
-
---
--- AUTO_INCREMENT for table `revenue_account2s`
---
-ALTER TABLE `revenue_account2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
---
--- AUTO_INCREMENT for table `revenue_account3s`
---
-ALTER TABLE `revenue_account3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `revenue_account4s`
---
-ALTER TABLE `revenue_account4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
-
---
--- AUTO_INCREMENT for table `revenue_account5s`
---
-ALTER TABLE `revenue_account5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
-
---
--- AUTO_INCREMENT for table `revenue_expenditures`
---
-ALTER TABLE `revenue_expenditures`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
---
--- AUTO_INCREMENT for table `sectoral_expenditure1s`
---
-ALTER TABLE `sectoral_expenditure1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
-
---
--- AUTO_INCREMENT for table `sectoral_expenditure2s`
---
-ALTER TABLE `sectoral_expenditure2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `sectoral_expenditures`
---
-ALTER TABLE `sectoral_expenditures`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
---
--- AUTO_INCREMENT for table `sixth_economic_census2s`
---
-ALTER TABLE `sixth_economic_census2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `state_domestic_product1s`
---
-ALTER TABLE `state_domestic_product1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
-
---
--- AUTO_INCREMENT for table `state_domestic_product2s`
---
-ALTER TABLE `state_domestic_product2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
-
---
--- AUTO_INCREMENT for table `state_domestic_product4s`
---
-ALTER TABLE `state_domestic_product4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
-
---
--- AUTO_INCREMENT for table `state_domestic_product5s`
---
-ALTER TABLE `state_domestic_product5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
---
--- AUTO_INCREMENT for table `state_domestic_product6s`
---
-ALTER TABLE `state_domestic_product6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
---
--- AUTO_INCREMENT for table `state_domestic_product7s`
---
-ALTER TABLE `state_domestic_product7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
---
--- AUTO_INCREMENT for table `state_domestic_product8s`
---
-ALTER TABLE `state_domestic_product8s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
---
--- AUTO_INCREMENT for table `state_domestic_product9s`
---
-ALTER TABLE `state_domestic_product9s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=196;
-
---
--- AUTO_INCREMENT for table `state_domestic_product10s`
---
-ALTER TABLE `state_domestic_product10s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
-
---
--- AUTO_INCREMENT for table `state_domestic_product11s`
---
-ALTER TABLE `state_domestic_product11s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
-
---
--- AUTO_INCREMENT for table `state_public_sector1s`
---
-ALTER TABLE `state_public_sector1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `state_public_sector2s`
---
-ALTER TABLE `state_public_sector2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `state_public_sector3s`
---
-ALTER TABLE `state_public_sector3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `support_institutions2s`
---
-ALTER TABLE `support_institutions2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `tax_department1s`
---
-ALTER TABLE `tax_department1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `tax_department2s`
---
-ALTER TABLE `tax_department2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `tax_department3s`
---
-ALTER TABLE `tax_department3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
-
---
--- AUTO_INCREMENT for table `tax_department4s`
---
-ALTER TABLE `tax_department4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `tax_department5s`
---
-ALTER TABLE `tax_department5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `tax_department6s`
---
-ALTER TABLE `tax_department6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `tax_department7s`
---
-ALTER TABLE `tax_department7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
-
---
--- AUTO_INCREMENT for table `tax_gsdp_ratios`
---
-ALTER TABLE `tax_gsdp_ratios`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `test1s`
---
-ALTER TABLE `test1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `testies`
---
-ALTER TABLE `testies`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `tests`
---
-ALTER TABLE `tests`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+-- AUTO_INCREMENT for table `agricultu
