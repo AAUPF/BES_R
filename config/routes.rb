@@ -1,4 +1,39 @@
 Rails.application.routes.draw do
+  resources :support_institutions1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :support_institutions4s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :tourism2s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :tourism1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :non_agro_based_industries4s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :non_agro_based_industries2s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :non_agro_based_industries1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
     resources :agro_based_industries5s do 
         collection { post :import }
         collection { get :dropdown }

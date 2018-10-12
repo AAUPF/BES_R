@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Budget_Estimate: 1.5
+  Expenditure: 1.5
+  Expenditure_as_percentage_of_Budget: 1.5
+
+two:
+  Year: MyString
+  Budget_Estimate: 1.5
+  Expenditure: 1.5
+  Expenditure_as_percentage_of_Budget: 1.5

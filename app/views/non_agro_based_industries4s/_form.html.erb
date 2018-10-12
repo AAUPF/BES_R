@@ -1,0 +1,42 @@
+<%= form_with(model: non_agro_based_industries4, local: true) do |form| %>
+  <% if non_agro_based_industries4.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(non_agro_based_industries4.errors.count, "error") %> prohibited this non_agro_based_industries4 from being saved:</h2>
+
+      <ul>
+      <% non_agro_based_industries4.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sericulture_Sector %>
+    <%= form.text_field :Sericulture_Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mulberry %>
+    <%= form.text_field :Mulberry %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Tasar %>
+    <%= form.text_field :Tasar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Castor %>
+    <%= form.text_field :Castor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

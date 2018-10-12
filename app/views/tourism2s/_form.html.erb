@@ -1,0 +1,37 @@
+<%= form_with(model: tourism2, local: true) do |form| %>
+  <% if tourism2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tourism2.errors.count, "error") %> prohibited this tourism2 from being saved:</h2>
+
+      <ul>
+      <% tourism2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Domestic_tourists %>
+    <%= form.text_field :Domestic_tourists %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Foreign_tourists %>
+    <%= form.text_field :Foreign_tourists %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_tourists %>
+    <%= form.text_field :Total_tourists %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<%= form_with(model: non_agro_based_industries1, local: true) do |form| %>
+  <% if non_agro_based_industries1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(non_agro_based_industries1.errors.count, "error") %> prohibited this non_agro_based_industries1 from being saved:</h2>
+
+      <ul>
+      <% non_agro_based_industries1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Products %>
+    <%= form.text_field :Products %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

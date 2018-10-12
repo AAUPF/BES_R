@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Support Institutions1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Expenditure</th>
+      <th>2012-13</th>
+      <th>2013-14</th>
+      <th>2014-15</th>
+      <th>2015-16</th>
+      <th>2016-17</th>
+      <th>Cagr</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @support_institutions1s.each do |support_institutions1| %>
+      <tr>
+        <td><%= support_institutions1.Expenditure %></td>
+        <td><%= support_institutions1.2012-13 %></td>
+        <td><%= support_institutions1.2013-14 %></td>
+        <td><%= support_institutions1.2014-15 %></td>
+        <td><%= support_institutions1.2015-16 %></td>
+        <td><%= support_institutions1.2016-17 %></td>
+        <td><%= support_institutions1.CAGR %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Support Institutions1', new_support_institutions1_path %>

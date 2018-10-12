@@ -21,26 +21,14 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
+   legend = "Agency"
 ji1 = [:Agency, :GoI_Scheme, :"2016-17"]
   if rain_fall_type || views
 
-      if views == "Map View"
-        l =  rain_fall_type.gsub(" ","")           
-         if rain_fall_type  ==  "All"
-          b = ResourceManagement14.map_search("All",compare,year,rain_fall_type)
-          u = "Total"
-          a = ResourceManagement14.map(b,params[:year],rain_fall_type,views)
-         else
-          b = ResourceManagement14.map_search(params[:search],compare,year,rain_fall_type)
-          a = ResourceManagement14.map(b,rain_fall_type,year,ji)
-         end
-      elsif views == "Table"  
-        b = ResourceManagement14.search(params[:search],compare,year,rain_fall_type)
-        a = ResourceManagement14.table(b,rain_fall_type,year,ji1,compare)
-      else
-        @ResourceManagement14s = ResourceManagement14.search(params[:search],compare,year,rain_fall_type)
-        a = ResourceManagement14.query(@ResourceManagement14s,params[:year],rain_fall_type,views,ji,compare)
-      end
+       b = ResourceManagement14.search(params[:search],compare,year,rain_fall_type,legend)
+        a = ResourceManagement14.table(b,rain_fall_type,year,ji1,compare,legend)
+     
       respond_to do |format|
         format.html { render json:a }
     end

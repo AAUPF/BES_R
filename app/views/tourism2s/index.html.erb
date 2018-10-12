@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tourism2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Domestic tourists</th>
+      <th>Foreign tourists</th>
+      <th>Total tourists</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tourism2s.each do |tourism2| %>
+      <tr>
+        <td><%= tourism2.Year %></td>
+        <td><%= tourism2.Domestic_tourists %></td>
+        <td><%= tourism2.Foreign_tourists %></td>
+        <td><%= tourism2.Total_tourists %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tourism2', new_tourism2_path %>

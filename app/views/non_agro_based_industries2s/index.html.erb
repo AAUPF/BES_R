@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Non Agro Based Industries2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Sanctioned amount in rs lakh</th>
+      <th>Handlooms on which uid no has been engraved</th>
+      <th>Pati looms on which uid no has been engraved</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @non_agro_based_industries2s.each do |non_agro_based_industries2| %>
+      <tr>
+        <td><%= non_agro_based_industries2.Districts %></td>
+        <td><%= non_agro_based_industries2.Sanctioned_amount_in_Rs_lakh %></td>
+        <td><%= non_agro_based_industries2.Handlooms_on_which_UID_No_has_been_engraved %></td>
+        <td><%= non_agro_based_industries2.Pati_looms_on_which_UID_No_has_been_engraved %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Non Agro Based Industries2', new_non_agro_based_industries2_path %>

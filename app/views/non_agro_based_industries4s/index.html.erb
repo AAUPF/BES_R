@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Non Agro Based Industries4s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sericulture sector</th>
+      <th>Mulberry</th>
+      <th>Tasar</th>
+      <th>Castor</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @non_agro_based_industries4s.each do |non_agro_based_industries4| %>
+      <tr>
+        <td><%= non_agro_based_industries4.Sericulture_Sector %></td>
+        <td><%= non_agro_based_industries4.Mulberry %></td>
+        <td><%= non_agro_based_industries4.Tasar %></td>
+        <td><%= non_agro_based_industries4.Castor %></td>
+        <td><%= non_agro_based_industries4.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Non Agro Based Industries4', new_non_agro_based_industries4_path %>

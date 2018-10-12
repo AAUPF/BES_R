@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Sanctioned_amount_in_Rs_lakh: 1.5
+  Handlooms_on_which_UID_No_has_been_engraved: 1.5
+  Pati_looms_on_which_UID_No_has_been_engraved: 1.5
+
+two:
+  Districts: MyString
+  Sanctioned_amount_in_Rs_lakh: 1.5
+  Handlooms_on_which_UID_No_has_been_engraved: 1.5
+  Pati_looms_on_which_UID_No_has_been_engraved: 1.5

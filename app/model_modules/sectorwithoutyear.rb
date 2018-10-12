@@ -104,7 +104,7 @@ module Sectorwithoutyear
               name: dataset,
               legendText: dataset,
               showInLegend: true,
-              dataPoints: b.reject { |x| x["#{legend} "] == 'Total' }.map do |el|
+              dataPoints: b.reject { |x| x["#{legend}"] == 'Total' }.map do |el|
                             { y: el[column_name], z: el[column_name], label: el[d] }
                           end
             }

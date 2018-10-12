@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tourism1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Budget estimate</th>
+      <th>Expenditure</th>
+      <th>Expenditure as percentage of budget</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tourism1s.each do |tourism1| %>
+      <tr>
+        <td><%= tourism1.Year %></td>
+        <td><%= tourism1.Budget_Estimate %></td>
+        <td><%= tourism1.Expenditure %></td>
+        <td><%= tourism1.Expenditure_as_percentage_of_Budget %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tourism1', new_tourism1_path %>

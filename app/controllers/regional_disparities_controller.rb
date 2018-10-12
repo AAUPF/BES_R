@@ -21,26 +21,19 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1  = [:Criteria, :Top_3_District, :Bottom_3_District]
+   search = params[:search]
+   legend = "Criteria"
+
+if rain_fall_type != "All"
+  ji1 = [:Criteria, "#{rain_fall_type}"]
+else
+  ji1 = [:Criteria, :Top_3_District, :Bottom_3_District]
+end
   if rain_fall_type || views
 
-      if views == "Map View"
-        l =  rain_fall_type.gsub(" ","")           
-         if rain_fall_type  ==  "All"
-          b = RegionalDisparity.map_search("All",compare,year,rain_fall_type)
-          u = "Total"
-          a = RegionalDisparity.map(b,params[:year],rain_fall_type,views)
-         else
-          b = RegionalDisparity.map_search(params[:search],compare,year,rain_fall_type)
-          a = RegionalDisparity.map(b,rain_fall_type,year,ji)
-         end
-      elsif views == "Table"  
-        b = RegionalDisparity.search(params[:search],compare,year,rain_fall_type)
-        a = RegionalDisparity.table(b,rain_fall_type,year,ji1,compare)
-      else
-        @RegionalDisparitys = RegionalDisparity.search(params[:search],compare,year,rain_fall_type)
-        a = RegionalDisparity.query(@RegionalDisparitys,params[:year],rain_fall_type,views,ji,compare)
-      end
+       b = RegionalDisparity.search(params[:search],compare,year,rain_fall_type,legend)
+        a = RegionalDisparity.table(b,rain_fall_type,year,ji1,compare,legend)
+     
       respond_to do |format|
         format.html { render json:a }
     end

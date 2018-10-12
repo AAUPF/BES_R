@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @tourism1.Year %>
+</p>
+
+<p>
+  <strong>Budget estimate:</strong>
+  <%= @tourism1.Budget_Estimate %>
+</p>
+
+<p>
+  <strong>Expenditure:</strong>
+  <%= @tourism1.Expenditure %>
+</p>
+
+<p>
+  <strong>Expenditure as percentage of budget:</strong>
+  <%= @tourism1.Expenditure_as_percentage_of_Budget %>
+</p>
+
+<%= link_to 'Edit', edit_tourism1_path(@tourism1) %> |
+<%= link_to 'Back', tourism1s_path %>

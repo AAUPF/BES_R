@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Non Agro Based Industries1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Products</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @non_agro_based_industries1s.each do |non_agro_based_industries1| %>
+      <tr>
+        <td><%= non_agro_based_industries1.Districts %></td>
+        <td><%= non_agro_based_industries1.Products %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Non Agro Based Industries1', new_non_agro_based_industries1_path %>

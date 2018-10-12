@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Regional_Office: MyString
+  Total_Acquired_Land: 1.5
+  Total_Acquired_Constructed_Sheds: 1.5
+  Land_Reserved_for_Infrastructure_Administrative_Blocks_Roads_etc: 1.5
+  Total_Allotted_Land: 1.5
+  Total_Allotted_Constructed_Sheds: 1.5
+  Litigated_land: 1.5
+  Total_Vacant_Land_Allottable: 1.5
+  Total_Vacant_Constructed_Sheds_Allottable: 1.5
+
+two:
+  Regional_Office: MyString
+  Total_Acquired_Land: 1.5
+  Total_Acquired_Constructed_Sheds: 1.5
+  Land_Reserved_for_Infrastructure_Administrative_Blocks_Roads_etc: 1.5
+  Total_Allotted_Land: 1.5
+  Total_Allotted_Constructed_Sheds: 1.5
+  Litigated_land: 1.5
+  Total_Vacant_Land_Allottable: 1.5
+  Total_Vacant_Constructed_Sheds_Allottable: 1.5

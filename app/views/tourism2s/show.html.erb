@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @tourism2.Year %>
+</p>
+
+<p>
+  <strong>Domestic tourists:</strong>
+  <%= @tourism2.Domestic_tourists %>
+</p>
+
+<p>
+  <strong>Foreign tourists:</strong>
+  <%= @tourism2.Foreign_tourists %>
+</p>
+
+<p>
+  <strong>Total tourists:</strong>
+  <%= @tourism2.Total_tourists %>
+</p>
+
+<%= link_to 'Edit', edit_tourism2_path(@tourism2) %> |
+<%= link_to 'Back', tourism2s_path %>

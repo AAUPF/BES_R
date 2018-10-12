@@ -1,0 +1,62 @@
+<%= form_with(model: support_institutions4, local: true) do |form| %>
+  <% if support_institutions4.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(support_institutions4.errors.count, "error") %> prohibited this support_institutions4 from being saved:</h2>
+
+      <ul>
+      <% support_institutions4.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Regional_Office %>
+    <%= form.text_field :Regional_Office %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Acquired_Land %>
+    <%= form.text_field :Total_Acquired_Land %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Acquired_Constructed_Sheds %>
+    <%= form.text_field :Total_Acquired_Constructed_Sheds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Land_Reserved_for_Infrastructure_Administrative_Blocks_Roads_etc %>
+    <%= form.text_field :Land_Reserved_for_Infrastructure_Administrative_Blocks_Roads_etc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Allotted_Land %>
+    <%= form.text_field :Total_Allotted_Land %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Allotted_Constructed_Sheds %>
+    <%= form.text_field :Total_Allotted_Constructed_Sheds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Litigated_land %>
+    <%= form.text_field :Litigated_land %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Vacant_Land_Allottable %>
+    <%= form.text_field :Total_Vacant_Land_Allottable %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Vacant_Constructed_Sheds_Allottable %>
+    <%= form.text_field :Total_Vacant_Constructed_Sheds_Allottable %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
