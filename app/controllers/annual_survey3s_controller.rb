@@ -22,7 +22,7 @@ def test
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
-ji1 =   ji = [:Year, :Number_of_Factories_Agro_based, :Number_of_Factories_Non_Agro_based, :Total_Number_of_Factories, :Number_of_Factories_in_Operation_Agro_based, :Number_of_Factories_in_Operation_Non_Agro_Based, :Total_Number_of_Factories_in_Operation, :Percentage_of_Agro_based, :Percentage_of_Non_Agro_based, :Percentage_of_Total_Factories, :Percentage_of_Operation_Agro_based, :Percentage_of_Operation_Non_Agro_Based, :Percentage_of_Total_Factories_in_Operation, :Indicator]
+ji1 =   [:Year, :Number_of_Factories_Agro_based, :Number_of_Factories_Non_Agro_based, :Total_Number_of_Factories, :Number_of_Factories_in_Operation_Agro_based, :Number_of_Factories_in_Operation_Non_Agro_Based, :Total_Number_of_Factories_in_Operation, :Percentage_of_Agro_based, :Percentage_of_Non_Agro_based, :Percentage_of_Total_Factories, :Percentage_of_Operation_Agro_based, :Percentage_of_Operation_Non_Agro_Based, :Percentage_of_Total_Factories_in_Operation, :Indicator]
   if rain_fall_type || views
 
       if views == "Map View"
