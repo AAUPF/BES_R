@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Support Institutions3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Regional office</th>
+      <th>Number of working units</th>
+      <th>Number of working units under construction</th>
+      <th>Number of units which have not started construction</th>
+      <th>Number of units closed in cancellation process</th>
+      <th>Total existing units</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @support_institutions3s.each do |support_institutions3| %>
+      <tr>
+        <td><%= support_institutions3.Regional_Office %></td>
+        <td><%= support_institutions3.Number_of_Working_Units %></td>
+        <td><%= support_institutions3.Number_of_Working_Units_under_Construction %></td>
+        <td><%= support_institutions3.Number_of_Units_which_have_not_started_Construction %></td>
+        <td><%= support_institutions3.Number_of_Units_Closed_in_Cancellation_Process %></td>
+        <td><%= support_institutions3.Total_existing_Units %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Support Institutions3', new_support_institutions3_path %>

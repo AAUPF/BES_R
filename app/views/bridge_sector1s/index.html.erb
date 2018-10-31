@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bridge Sector1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Division</th>
+      <th>Number of projects</th>
+      <th>Cost</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bridge_sector1s.each do |bridge_sector1| %>
+      <tr>
+        <td><%= bridge_sector1.Division %></td>
+        <td><%= bridge_sector1.Number_of_Projects %></td>
+        <td><%= bridge_sector1.Cost %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bridge Sector1', new_bridge_sector1_path %>

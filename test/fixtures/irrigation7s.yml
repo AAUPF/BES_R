@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Scheme: MyString
+  Financial_Requirement_in_Rs_crores: 1.5
+  Creation_of_Additional_Irrigation_Potential_in_lakh_ha: 1.5
+  Restoration_of_Lost_irrigation_Potential_in_lakh_ha: 1.5
+
+two:
+  Scheme: MyString
+  Financial_Requirement_in_Rs_crores: 1.5
+  Creation_of_Additional_Irrigation_Potential_in_lakh_ha: 1.5
+  Restoration_of_Lost_irrigation_Potential_in_lakh_ha: 1.5

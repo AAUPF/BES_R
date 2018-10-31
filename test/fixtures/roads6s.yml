@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Indicator: MyString
+  NH_in_kms: 1.5
+  Expenditure_on_NH_Development: 1.5
+  Expenditure_on_NH_Maintenance: 1.5
+  Total_Expenditure_on_NH: 1.5
+  Year: MyString
+
+two:
+  Indicator: MyString
+  NH_in_kms: 1.5
+  Expenditure_on_NH_Development: 1.5
+  Expenditure_on_NH_Maintenance: 1.5
+  Total_Expenditure_on_NH: 1.5
+  Year: MyString

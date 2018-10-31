@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Airways</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Number of aircraft movements</th>
+      <th>Passengers</th>
+      <th>Freight</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @airways.each do |airway| %>
+      <tr>
+        <td><%= airway.Year %></td>
+        <td><%= airway.Number_of_Aircraft_Movements %></td>
+        <td><%= airway.Passengers %></td>
+        <td><%= airway.Freight %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Airway', new_airway_path %>

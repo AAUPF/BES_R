@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Roads7s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Length in kms</th>
+      <th>Remarks</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roads7s.each do |roads7| %>
+      <tr>
+        <td><%= roads7.Project %></td>
+        <td><%= roads7.Length_in_kms %></td>
+        <td><%= roads7.Remarks %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Roads7', new_roads7_path %>

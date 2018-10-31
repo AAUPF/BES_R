@@ -1,1 +1,1 @@
-rails g scaffold SupportInstitutions1 Expenditure:string "2012-13":float Total_Acquired_Constructed_Sheds:float Land_Reserved_for_Infrastructure_Administrative_Blocks_Roads_etc:float Total_Allotted_Land:float Total_Allotted_Constructed_Sheds:float Litigated_land:float Total_Vacant_Land_Allottable:float Total_Vacant_Constructed_Sheds_Allottable:float
+rails g scaffold Roads5 Category_of_Road:string Length_in_kms:float Percentage_share:float Indicator:string

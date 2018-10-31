@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>States:</strong>
+  <%= @railway.States %>
+</p>
+
+<p>
+  <strong>Total rail route:</strong>
+  <%= @railway.Total_Rail_Route %>
+</p>
+
+<p>
+  <strong>Total rail track:</strong>
+  <%= @railway.Total_Rail_Track %>
+</p>
+
+<p>
+  <strong>Total rail route per 1000 sq km:</strong>
+  <%= @railway.Total_Rail_Route_Per_1000_sq_km %>
+</p>
+
+<p>
+  <strong>Total rail route per lakh population:</strong>
+  <%= @railway.Total_Rail_Route_Per_lakh_Population %>
+</p>
+
+<p>
+  <strong>Total rail track per 1000 sq km:</strong>
+  <%= @railway.Total_Rail_Track_Per_1000_sq_km %>
+</p>
+
+<p>
+  <strong>Total rail track per lakh population:</strong>
+  <%= @railway.Total_Rail_Track_Per_lakh_Population %>
+</p>
+
+<%= link_to 'Edit', edit_railway_path(@railway) %> |
+<%= link_to 'Back', railways_path %>

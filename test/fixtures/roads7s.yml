@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Project: MyString
+  Length_in_kms: 1.5
+  Remarks: MyString
+
+two:
+  Project: MyString
+  Length_in_kms: 1.5
+  Remarks: MyString

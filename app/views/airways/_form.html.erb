@@ -1,0 +1,37 @@
+<%= form_with(model: airway, local: true) do |form| %>
+  <% if airway.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(airway.errors.count, "error") %> prohibited this airway from being saved:</h2>
+
+      <ul>
+      <% airway.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Aircraft_Movements %>
+    <%= form.text_field :Number_of_Aircraft_Movements %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Passengers %>
+    <%= form.text_field :Passengers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Freight %>
+    <%= form.text_field :Freight %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

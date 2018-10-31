@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  States: MyString
+  Total_Rail_Route: 1.5
+  Total_Rail_Track: 1.5
+  Total_Rail_Route_Per_1000_sq_km: 1.5
+  Total_Rail_Route_Per_lakh_Population: 1.5
+  Total_Rail_Track_Per_1000_sq_km: 1.5
+  Total_Rail_Track_Per_lakh_Population: 1.5
+
+two:
+  States: MyString
+  Total_Rail_Route: 1.5
+  Total_Rail_Track: 1.5
+  Total_Rail_Route_Per_1000_sq_km: 1.5
+  Total_Rail_Route_Per_lakh_Population: 1.5
+  Total_Rail_Track_Per_1000_sq_km: 1.5
+  Total_Rail_Track_Per_lakh_Population: 1.5

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Roads6s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Indicator</th>
+      <th>Nh in kms</th>
+      <th>Expenditure on nh development</th>
+      <th>Expenditure on nh maintenance</th>
+      <th>Total expenditure on nh</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roads6s.each do |roads6| %>
+      <tr>
+        <td><%= roads6.Indicator %></td>
+        <td><%= roads6.NH_in_kms %></td>
+        <td><%= roads6.Expenditure_on_NH_Development %></td>
+        <td><%= roads6.Expenditure_on_NH_Maintenance %></td>
+        <td><%= roads6.Total_Expenditure_on_NH %></td>
+        <td><%= roads6.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Roads6', new_roads6_path %>

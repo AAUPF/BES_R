@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Irrigation7s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scheme</th>
+      <th>Financial requirement in rs crores</th>
+      <th>Creation of additional irrigation potential in lakh ha</th>
+      <th>Restoration of lost irrigation potential in lakh ha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @irrigation7s.each do |irrigation7| %>
+      <tr>
+        <td><%= irrigation7.Scheme %></td>
+        <td><%= irrigation7.Financial_Requirement_in_Rs_crores %></td>
+        <td><%= irrigation7.Creation_of_Additional_Irrigation_Potential_in_lakh_ha %></td>
+        <td><%= irrigation7.Restoration_of_Lost_irrigation_Potential_in_lakh_ha %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Irrigation7', new_irrigation7_path %>

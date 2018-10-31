@@ -204,7 +204,7 @@ module Generaldata
                       axisX: {
                         interval:1,
                         labelMaxWidth: 120,
-                        labelAngle: 0,
+                        labelAngle: 90,
                         labelFontFamily:"verdana0"
                         },
                 data: hash_data
@@ -388,7 +388,7 @@ module Generaldata
                       axisX: {
                         interval:1,
                         labelMaxWidth: 120,
-                        labelAngle: 0,
+                        labelAngle: 90,
                         labelFontFamily:"verdana0"
                         },
                 data: hash_data

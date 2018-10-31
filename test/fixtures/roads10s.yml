@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  NH: 1.5
+  SH: 1.5
+  MDR: 1.5
+  Rural_Road: 1.5
+  Year: MyString
+
+two:
+  Districts: MyString
+  NH: 1.5
+  SH: 1.5
+  MDR: 1.5
+  Rural_Road: 1.5
+  Year: MyString

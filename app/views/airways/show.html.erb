@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @airway.Year %>
+</p>
+
+<p>
+  <strong>Number of aircraft movements:</strong>
+  <%= @airway.Number_of_Aircraft_Movements %>
+</p>
+
+<p>
+  <strong>Passengers:</strong>
+  <%= @airway.Passengers %>
+</p>
+
+<p>
+  <strong>Freight:</strong>
+  <%= @airway.Freight %>
+</p>
+
+<%= link_to 'Edit', edit_airway_path(@airway) %> |
+<%= link_to 'Back', airways_path %>

@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Road Transport4s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Truck</th>
+      <th>Bus</th>
+      <th>Car</th>
+      <th>Taxi</th>
+      <th>Jeep</th>
+      <th>Three wheeler</th>
+      <th>Two wheeler</th>
+      <th>Tractor</th>
+      <th>Trailor</th>
+      <th>Other</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @road_transport4s.each do |road_transport4| %>
+      <tr>
+        <td><%= road_transport4.Districts %></td>
+        <td><%= road_transport4.Truck %></td>
+        <td><%= road_transport4.Bus %></td>
+        <td><%= road_transport4.Car %></td>
+        <td><%= road_transport4.Taxi %></td>
+        <td><%= road_transport4.Jeep %></td>
+        <td><%= road_transport4.Three_Wheeler %></td>
+        <td><%= road_transport4.Two_Wheeler %></td>
+        <td><%= road_transport4.Tractor %></td>
+        <td><%= road_transport4.Trailor %></td>
+        <td><%= road_transport4.Other %></td>
+        <td><%= road_transport4.Total %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Road Transport4', new_road_transport4_path %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Railways</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>States</th>
+      <th>Total rail route</th>
+      <th>Total rail track</th>
+      <th>Total rail route per 1000 sq km</th>
+      <th>Total rail route per lakh population</th>
+      <th>Total rail track per 1000 sq km</th>
+      <th>Total rail track per lakh population</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @railways.each do |railway| %>
+      <tr>
+        <td><%= railway.States %></td>
+        <td><%= railway.Total_Rail_Route %></td>
+        <td><%= railway.Total_Rail_Track %></td>
+        <td><%= railway.Total_Rail_Route_Per_1000_sq_km %></td>
+        <td><%= railway.Total_Rail_Route_Per_lakh_Population %></td>
+        <td><%= railway.Total_Rail_Track_Per_1000_sq_km %></td>
+        <td><%= railway.Total_Rail_Track_Per_lakh_Population %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Railway', new_railway_path %>

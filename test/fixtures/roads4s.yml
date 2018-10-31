@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Type_of_Road: MyString
+  Total: 1.5
+  Paved: 1.5
+  Percent_of_Total: 1.5
+  Percent_of_paved: 1.5
+  Year: MyString
+
+two:
+  Type_of_Road: MyString
+  Total: 1.5
+  Paved: 1.5
+  Percent_of_Total: 1.5
+  Percent_of_paved: 1.5
+  Year: MyString

@@ -1,0 +1,57 @@
+<%= form_with(model: bridge_sector2, local: true) do |form| %>
+  <% if bridge_sector2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bridge_sector2.errors.count, "error") %> prohibited this bridge_sector2 from being saved:</h2>
+
+      <ul>
+      <% bridge_sector2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Bridges %>
+    <%= form.text_field :Number_of_Bridges %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Expenditure %>
+    <%= form.text_field :Expenditure %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Turnover %>
+    <%= form.text_field :Turnover %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Revenue %>
+    <%= form.text_field :Total_Revenue %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Administrative_Expenditure %>
+    <%= form.text_field :Administrative_Expenditure %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Gross_Profit %>
+    <%= form.text_field :Gross_Profit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Net_Profit %>
+    <%= form.text_field :Net_Profit %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Roads5s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category of road</th>
+      <th>Length in kms</th>
+      <th>Percentage share</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roads5s.each do |roads5| %>
+      <tr>
+        <td><%= roads5.Category_of_Road %></td>
+        <td><%= roads5.Length_in_kms %></td>
+        <td><%= roads5.Percentage_share %></td>
+        <td><%= roads5.Indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Roads5', new_roads5_path %>

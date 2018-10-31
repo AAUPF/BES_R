@@ -1,0 +1,47 @@
+<%= form_with(model: support_institutions3, local: true) do |form| %>
+  <% if support_institutions3.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(support_institutions3.errors.count, "error") %> prohibited this support_institutions3 from being saved:</h2>
+
+      <ul>
+      <% support_institutions3.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Regional_Office %>
+    <%= form.text_field :Regional_Office %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Working_Units %>
+    <%= form.text_field :Number_of_Working_Units %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Working_Units_under_Construction %>
+    <%= form.text_field :Number_of_Working_Units_under_Construction %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Units_which_have_not_started_Construction %>
+    <%= form.text_field :Number_of_Units_which_have_not_started_Construction %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Units_Closed_in_Cancellation_Process %>
+    <%= form.text_field :Number_of_Units_Closed_in_Cancellation_Process %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_existing_Units %>
+    <%= form.text_field :Total_existing_Units %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

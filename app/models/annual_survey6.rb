@@ -1,4 +1,8 @@
 class AnnualSurvey6 < ApplicationRecord
-  extend Statewithoutyear  
+   extend Statewithoutyear
 
-      end
+  
+    
+
+
+end

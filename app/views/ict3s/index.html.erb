@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ict3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Total</th>
+      <th>Coverage in percentage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ict3s.each do |ict3| %>
+      <tr>
+        <td><%= ict3.Item %></td>
+        <td><%= ict3.Total %></td>
+        <td><%= ict3.Coverage_in_percentage %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ict3', new_ict3_path %>

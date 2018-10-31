@@ -1,0 +1,32 @@
+<%= form_with(model: roads8, local: true) do |form| %>
+  <% if roads8.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(roads8.errors.count, "error") %> prohibited this roads8 from being saved:</h2>
+
+      <ul>
+      <% roads8.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Agency_wise_Road_Bridge %>
+    <%= form.text_field :Agency_wise_Road_Bridge %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Length_in_kms %>
+    <%= form.text_field :Length_in_kms %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Remarks %>
+    <%= form.text_field :Remarks %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

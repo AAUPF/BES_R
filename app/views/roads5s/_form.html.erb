@@ -1,0 +1,37 @@
+<%= form_with(model: roads5, local: true) do |form| %>
+  <% if roads5.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(roads5.errors.count, "error") %> prohibited this roads5 from being saved:</h2>
+
+      <ul>
+      <% roads5.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Category_of_Road %>
+    <%= form.text_field :Category_of_Road %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Length_in_kms %>
+    <%= form.text_field :Length_in_kms %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_share %>
+    <%= form.text_field :Percentage_share %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

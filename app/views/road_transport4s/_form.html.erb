@@ -1,0 +1,77 @@
+<%= form_with(model: road_transport4, local: true) do |form| %>
+  <% if road_transport4.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(road_transport4.errors.count, "error") %> prohibited this road_transport4 from being saved:</h2>
+
+      <ul>
+      <% road_transport4.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Truck %>
+    <%= form.text_field :Truck %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Bus %>
+    <%= form.text_field :Bus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Car %>
+    <%= form.text_field :Car %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Taxi %>
+    <%= form.text_field :Taxi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Jeep %>
+    <%= form.text_field :Jeep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Three_Wheeler %>
+    <%= form.text_field :Three_Wheeler %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Two_Wheeler %>
+    <%= form.text_field :Two_Wheeler %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Tractor %>
+    <%= form.text_field :Tractor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Trailor %>
+    <%= form.text_field :Trailor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Other %>
+    <%= form.text_field :Other %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

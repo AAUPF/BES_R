@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Regional_Office: MyString
+  Number_of_Working_Units: 1.5
+  Number_of_Working_Units_under_Construction: 1.5
+  Number_of_Units_which_have_not_started_Construction: 1.5
+  Number_of_Units_Closed_in_Cancellation_Process: 1.5
+  Total_existing_Units: 1.5
+
+two:
+  Regional_Office: MyString
+  Number_of_Working_Units: 1.5
+  Number_of_Working_Units_under_Construction: 1.5
+  Number_of_Units_which_have_not_started_Construction: 1.5
+  Number_of_Units_Closed_in_Cancellation_Process: 1.5
+  Total_existing_Units: 1.5

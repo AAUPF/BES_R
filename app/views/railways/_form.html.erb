@@ -1,0 +1,52 @@
+<%= form_with(model: railway, local: true) do |form| %>
+  <% if railway.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(railway.errors.count, "error") %> prohibited this railway from being saved:</h2>
+
+      <ul>
+      <% railway.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :States %>
+    <%= form.text_field :States %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Rail_Route %>
+    <%= form.text_field :Total_Rail_Route %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Rail_Track %>
+    <%= form.text_field :Total_Rail_Track %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Rail_Route_Per_1000_sq_km %>
+    <%= form.text_field :Total_Rail_Route_Per_1000_sq_km %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Rail_Route_Per_lakh_Population %>
+    <%= form.text_field :Total_Rail_Route_Per_lakh_Population %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Rail_Track_Per_1000_sq_km %>
+    <%= form.text_field :Total_Rail_Track_Per_1000_sq_km %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Rail_Track_Per_lakh_Population %>
+    <%= form.text_field :Total_Rail_Track_Per_lakh_Population %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

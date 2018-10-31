@@ -1,0 +1,32 @@
+<%= form_with(model: ict3, local: true) do |form| %>
+  <% if ict3.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ict3.errors.count, "error") %> prohibited this ict3 from being saved:</h2>
+
+      <ul>
+      <% ict3.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Item %>
+    <%= form.text_field :Item %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Coverage_in_percentage %>
+    <%= form.text_field :Coverage_in_percentage %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

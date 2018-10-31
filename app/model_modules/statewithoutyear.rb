@@ -18,7 +18,7 @@ module Statewithoutyear
         else
           order("#{rain_fall_type} ")
         end
-      elsif compare == 'Bihar vs District'
+      elsif compare == 'Bihar vs State'
         where('Districts = ? OR Districts = ?', search, 'Bihar').order(:id)
       else
         if rain_fall_type == 'All'
@@ -84,10 +84,12 @@ module Statewithoutyear
       if rain_fall_type == 'All'
         if views
           hash_data = ji.map do |column_name|
-            if compare == 'Bihar vs District'
+            if compare == 'Bihar vs State'
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
@@ -98,9 +100,11 @@ module Statewithoutyear
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
+                dataPoints: b.reject { |x| x['Districts'] == 'India' }.map do |el|
                               { y: el[column_name], z: el[column_name], label: el[d] }
                             end
               }
@@ -134,12 +138,14 @@ module Statewithoutyear
         end
         return title
       else
-        if compare == 'Bihar vs District'
+        if compare == 'Bihar vs State'
           dataset = rain_fall_type.tr('_', ' ')
   
           hash_data =
             [{
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               color: color,
               legendText: dataset,
               showInLegend: true,
@@ -152,13 +158,17 @@ module Statewithoutyear
           hash_data =
             [{
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               color: color,
               legendText: dataset,
               showInLegend: true,
-              dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
+              dataPoints: b.reject { |x| x['Districts'] == 'India' }.map do |el|
                             { y: el[rain_fall_type], label: el['Districts'] }
                           end
             }]
+
+          
         end
         if views == "stackedBar" || views == "stackedBar100"
           title = {

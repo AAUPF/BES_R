@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Agency_wise_Road_Bridge: MyString
+  Length_in_kms: MyString
+  Remarks: MyString
+
+two:
+  Agency_wise_Road_Bridge: MyString
+  Length_in_kms: MyString
+  Remarks: MyString

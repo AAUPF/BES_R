@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bridge Sector2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Number of bridges</th>
+      <th>Expenditure</th>
+      <th>Turnover</th>
+      <th>Total revenue</th>
+      <th>Administrative expenditure</th>
+      <th>Gross profit</th>
+      <th>Net profit</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bridge_sector2s.each do |bridge_sector2| %>
+      <tr>
+        <td><%= bridge_sector2.Year %></td>
+        <td><%= bridge_sector2.Number_of_Bridges %></td>
+        <td><%= bridge_sector2.Expenditure %></td>
+        <td><%= bridge_sector2.Turnover %></td>
+        <td><%= bridge_sector2.Total_Revenue %></td>
+        <td><%= bridge_sector2.Administrative_Expenditure %></td>
+        <td><%= bridge_sector2.Gross_Profit %></td>
+        <td><%= bridge_sector2.Net_Profit %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bridge Sector2', new_bridge_sector2_path %>

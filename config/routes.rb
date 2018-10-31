@@ -1,4 +1,84 @@
 Rails.application.routes.draw do
+  resources :road_transport4s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :roads10s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :ict3s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :airways do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :railways do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :road_transport3s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :bridge_sector2s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :bridge_sector1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :roads9s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :roads6s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :roads5s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :roads4s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :roads8s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :support_institutions3s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :roads7s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :irrigation7s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
     resources :annual_survey3s do 
         collection { post :import }
         collection { get :dropdown }

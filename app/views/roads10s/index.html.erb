@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Roads10s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Nh</th>
+      <th>Sh</th>
+      <th>Mdr</th>
+      <th>Rural road</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roads10s.each do |roads10| %>
+      <tr>
+        <td><%= roads10.Districts %></td>
+        <td><%= roads10.NH %></td>
+        <td><%= roads10.SH %></td>
+        <td><%= roads10.MDR %></td>
+        <td><%= roads10.Rural_Road %></td>
+        <td><%= roads10.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Roads10', new_roads10_path %>

@@ -1,0 +1,32 @@
+<%= form_with(model: bridge_sector1, local: true) do |form| %>
+  <% if bridge_sector1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bridge_sector1.errors.count, "error") %> prohibited this bridge_sector1 from being saved:</h2>
+
+      <ul>
+      <% bridge_sector1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Division %>
+    <%= form.text_field :Division %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Projects %>
+    <%= form.text_field :Number_of_Projects %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cost %>
+    <%= form.text_field :Cost %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

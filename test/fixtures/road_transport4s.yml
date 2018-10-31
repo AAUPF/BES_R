@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Truck: 1.5
+  Bus: 1.5
+  Car: 1.5
+  Taxi: 1.5
+  Jeep: 1.5
+  Three_Wheeler: 1.5
+  Two_Wheeler: 1.5
+  Tractor: 1.5
+  Trailor: 1.5
+  Other: 1.5
+  Total: 1.5
+
+two:
+  Districts: MyString
+  Truck: 1.5
+  Bus: 1.5
+  Car: 1.5
+  Taxi: 1.5
+  Jeep: 1.5
+  Three_Wheeler: 1.5
+  Two_Wheeler: 1.5
+  Tractor: 1.5
+  Trailor: 1.5
+  Other: 1.5
+  Total: 1.5

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Division: MyString
+  Number_of_Projects: 1.5
+  Cost: 1.5
+
+two:
+  Division: MyString
+  Number_of_Projects: 1.5
+  Cost: 1.5
