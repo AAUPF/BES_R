@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 15, 2018 at 12:08 PM
+-- Generation Time: Nov 01, 2018 at 04:58 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -991,6 +991,36 @@ INSERT INTO `agro_based_industries5s` (`id`, `Sector`, `2012-13`, `2013-14`, `20
 (18, 'De-worming (lakh)', 12.92, 11.67, 12.92, 16.46, 14.3, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
 (19, 'Seed Distribution (tonnes)', 757.14, 885.61, 930.93, 1016.79, 1279.53, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
 (20, 'Cattle Feed Distribution (tonnes)', 61273, 54707, 56143, 62130, 53810, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `airways`
+--
+
+DROP TABLE IF EXISTS `airways`;
+CREATE TABLE `airways` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Number_of_Aircraft_Movements` float DEFAULT NULL,
+  `Passengers` float DEFAULT NULL,
+  `Freight` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `airways`
+--
+
+INSERT INTO `airways` (`id`, `Year`, `Number_of_Aircraft_Movements`, `Passengers`, `Freight`, `created_at`, `updated_at`) VALUES
+(1, '2004-05', 3844, 1.76, 1.035, '2018-10-30 07:44:18', '2018-10-30 07:44:18'),
+(2, '2009-10', 10734, 5.53, 2.532, '2018-10-30 07:44:18', '2018-10-30 07:44:18'),
+(3, '2014-15', 11060, 11.97, 5.198, '2018-10-30 07:44:18', '2018-10-30 07:44:18'),
+(4, '2015-16', 13947, 15.84, 4.414, '2018-10-30 07:44:18', '2018-10-30 07:44:18'),
+(5, '2016-17', 15508, 21.12, 6.591, '2018-10-30 07:44:18', '2018-10-30 07:44:18'),
+(6, '2017-18(upto Sept. 17)', 14320, 17.34, 4.612, '2018-10-30 07:44:18', '2018-10-30 07:44:18'),
+(7, 'CAGR(2012-17)', 13, 21, 22.8, '2018-10-30 07:44:18', '2018-10-30 07:44:18');
 
 -- --------------------------------------------------------
 
@@ -2513,6 +2543,70 @@ INSERT INTO `bihar_start_up_policies` (`id`, `Incubators`, `Number_of_Startups`,
 (18, 'Sanjay Gandhi Institute of Dairy Technology (SGIDT)', 4, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
 (19, 'Central Institute of Plastic Engineering & Technology, Hajipur ', 2, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
 (20, 'Total', 856, '2018-10-12 10:31:43', '2018-10-12 10:31:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bridge_sector1s`
+--
+
+DROP TABLE IF EXISTS `bridge_sector1s`;
+CREATE TABLE `bridge_sector1s` (
+  `id` bigint(20) NOT NULL,
+  `Division` varchar(255) DEFAULT NULL,
+  `Number_of_Projects` float DEFAULT NULL,
+  `Cost` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bridge_sector1s`
+--
+
+INSERT INTO `bridge_sector1s` (`id`, `Division`, `Number_of_Projects`, `Cost`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 4, 14.17, '2018-10-29 07:56:12', '2018-10-29 07:56:12'),
+(2, 'Bhagalpur', 1, 1.42, '2018-10-29 07:56:12', '2018-10-29 07:56:12'),
+(3, 'Darbhanga', 9, 33.84, '2018-10-29 07:56:12', '2018-10-29 07:56:12'),
+(4, 'Kosi', 4, 12.13, '2018-10-29 07:56:12', '2018-10-29 07:56:12'),
+(5, 'Magadh', 9, 27.16, '2018-10-29 07:56:12', '2018-10-29 07:56:12'),
+(6, 'Munger', 7, 16.09, '2018-10-29 07:56:12', '2018-10-29 07:56:12'),
+(7, 'Purnea', 10, 30.81, '2018-10-29 07:56:12', '2018-10-29 07:56:12'),
+(8, 'Saran', 3, 7.26, '2018-10-29 07:56:12', '2018-10-29 07:56:12'),
+(9, 'Tirhut', 13, 39.74, '2018-10-29 07:56:12', '2018-10-29 07:56:12'),
+(10, 'Total', 60, 182.62, '2018-10-29 07:56:12', '2018-10-29 07:56:12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bridge_sector2s`
+--
+
+DROP TABLE IF EXISTS `bridge_sector2s`;
+CREATE TABLE `bridge_sector2s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Number_of_Bridges` float DEFAULT NULL,
+  `Expenditure` float DEFAULT NULL,
+  `Turnover` float DEFAULT NULL,
+  `Total_Revenue` float DEFAULT NULL,
+  `Administrative_Expenditure` float DEFAULT NULL,
+  `Gross_Profit` float DEFAULT NULL,
+  `Net_Profit` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bridge_sector2s`
+--
+
+INSERT INTO `bridge_sector2s` (`id`, `Year`, `Number_of_Bridges`, `Expenditure`, `Turnover`, `Total_Revenue`, `Administrative_Expenditure`, `Gross_Profit`, `Net_Profit`, `created_at`, `updated_at`) VALUES
+(1, '2012-13', 136, 788, 1273, 142, 35, 107, 63.8, '2018-10-29 08:13:10', '2018-10-29 08:13:10'),
+(2, '2013-14', 119, 1152, 1481, 159, 39, 120.1, 72.5, '2018-10-29 08:13:10', '2018-10-29 08:13:10'),
+(3, '2014-15', 179, 730, 1739, 183, 44, 139.1, 80.9, '2018-10-29 08:13:10', '2018-10-29 08:13:10'),
+(4, '2015-16 ', 176, 2839, 1699, 151, 43, 107.7, 70.3, '2018-10-29 08:13:10', '2018-10-29 08:13:10'),
+(5, '2016-17', 103, 1188, 1840, 147, 39, 108.2, 68.8, '2018-10-29 08:13:10', '2018-10-29 08:13:10');
 
 -- --------------------------------------------------------
 
@@ -5408,6 +5502,37 @@ CREATE TABLE `hhs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ict3s`
+--
+
+DROP TABLE IF EXISTS `ict3s`;
+CREATE TABLE `ict3s` (
+  `id` bigint(20) NOT NULL,
+  `Item` varchar(255) DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `Coverage_in_percentage` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ict3s`
+--
+
+INSERT INTO `ict3s` (`id`, `Item`, `Total`, `Coverage_in_percentage`, `created_at`, `updated_at`) VALUES
+(1, 'Area (sq. km)', 94613, 66, '2018-10-30 08:27:58', '2018-10-30 08:27:58'),
+(2, 'Population (Crore)', 10.41, 84.7, '2018-10-30 08:27:58', '2018-10-30 08:27:58'),
+(3, 'Revenue District', 38, 100, '2018-10-30 08:27:58', '2018-10-30 08:27:58'),
+(4, 'Revenue Sub-Division', 102, 100, '2018-10-30 08:27:58', '2018-10-30 08:27:58'),
+(5, 'Block HQ', 534, 100, '2018-10-30 08:27:58', '2018-10-30 08:27:58'),
+(6, 'Total  Villages', 44874, 62.5, '2018-10-30 08:27:58', '2018-10-30 08:27:58'),
+(7, 'National Highway (km)', 3734, 100, '2018-10-30 08:27:58', '2018-10-30 08:27:58'),
+(8, 'State Highway (km)', 4857, 100, '2018-10-30 08:27:58', '2018-10-30 08:27:58'),
+(9, 'Total Railway Route (km)', 3515, 100, '2018-10-30 08:27:58', '2018-10-30 08:27:58');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `inflation_rates`
 --
 
@@ -5658,6 +5783,32 @@ INSERT INTO `irrigation6s` (`id`, `Year`, `Surface_Canal`, `Tanks_including_Ahar
 (3, 2014, 9310, 10934, 15610, 2564, 38418, '2018-07-18 05:58:17', '2018-07-18 05:58:17'),
 (4, 2015, 0, 28631, 38440, 5055, 72126, '2018-07-18 05:58:17', '2018-07-18 05:58:17'),
 (5, 2016, 2600, 20500, 86200, 18000, 127300, '2018-07-18 05:58:17', '2018-07-18 05:58:17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `irrigation7s`
+--
+
+DROP TABLE IF EXISTS `irrigation7s`;
+CREATE TABLE `irrigation7s` (
+  `id` bigint(20) NOT NULL,
+  `Scheme` varchar(255) DEFAULT NULL,
+  `Financial_Requirement_in_Rs_crores` float DEFAULT NULL,
+  `Creation_of_Additional_Irrigation_Potential_in_lakh_ha` float DEFAULT NULL,
+  `Restoration_of_Lost_irrigation_Potential_in_lakh_ha` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `irrigation7s`
+--
+
+INSERT INTO `irrigation7s` (`id`, `Scheme`, `Financial_Requirement_in_Rs_crores`, `Creation_of_Additional_Irrigation_Potential_in_lakh_ha`, `Restoration_of_Lost_irrigation_Potential_in_lakh_ha`, `created_at`, `updated_at`) VALUES
+(1, 'Kosi Mechi Link Canal Scheme for transfer of Kosi river water to Mahananda Basin', 4900, 2.1, NULL, '2018-10-22 08:24:33', '2018-10-22 08:24:33'),
+(3, 'Baksoti Barrage Canal Scheme on Sakri river and linking of Sakri river with Nata River', 1300, 0.2, 0.48, '2018-10-22 08:24:33', '2018-10-22 08:24:33'),
+(5, 'Total', 6200, 2.3, 0.48, '2018-10-22 08:24:33', '2018-10-22 08:24:33');
 
 -- --------------------------------------------------------
 
@@ -7180,6 +7331,49 @@ INSERT INTO `qualityofexpenditures` (`id`, `Sector`, `2012-13`, `2013-14`, `2014
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `railways`
+--
+
+DROP TABLE IF EXISTS `railways`;
+CREATE TABLE `railways` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Total_Rail_Route` float DEFAULT NULL,
+  `Total_Rail_Track` float DEFAULT NULL,
+  `Total_Rail_Route_Per_1000_sq_km` float DEFAULT NULL,
+  `Total_Rail_Route_Per_lakh_Population` float DEFAULT NULL,
+  `Total_Rail_Track_Per_1000_sq_km` float DEFAULT NULL,
+  `Total_Rail_Track_Per_lakh_Population` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `railways`
+--
+
+INSERT INTO `railways` (`id`, `Districts`, `Total_Rail_Route`, `Total_Rail_Track`, `Total_Rail_Route_Per_1000_sq_km`, `Total_Rail_Route_Per_lakh_Population`, `Total_Rail_Track_Per_1000_sq_km`, `Total_Rail_Track_Per_lakh_Population`, `created_at`, `updated_at`) VALUES
+(1, 'Andhra Pradesh', 3703, 7132, 13.5, 6.6, 25.9, 8.4, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(2, 'Bihar', 3731, 6870, 39.6, 4.9, 73, 6.6, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(3, 'Chhattisgarh', 1213, 2676, 9, 7.4, 19.8, 10.5, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(4, 'Gujarat', 5259, 7691, 26.8, 10.4, 39.2, 12.7, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(5, 'Haryana', 1711, 3110, 38.7, 9.4, 70.3, 12.3, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(6, 'Jharkhand', 2394, 5968, 30, 11.7, 74.9, 18.1, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(7, 'Karnataka', 3281, 5140, 17.1, 6.7, 26.8, 8.4, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(8, 'Kerala', 1045, 2042, 26.9, 5, 52.5, 6.1, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(9, 'Madhya Pradesh', 5000, 9337, 16.2, 10.3, 30.3, 12.9, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(10, 'Maharashtra', 5745, 11053, 18.7, 7.3, 35.9, 9.8, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(11, 'Odisha', 2572, 5038, 16.5, 9.2, 32.4, 12, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(12, 'Punjab', 2269, 3579, 45.1, 9.8, 71.1, 12.9, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(13, 'Rajasthan', 5893, 8579, 17.2, 11.1, 25.1, 12.5, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(14, 'Tamil Nadu', 4027, 6453, 31, 7.2, 49.6, 8.9, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(15, 'Uttar Pradesh', 9077, 15291, 37.7, 6.1, 63.5, 7.7, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(16, 'West Bengal', 4135, 10604, 46.6, 7.9, 119.5, 11.6, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
+(17, 'India', 66687, 119630, 20.3, 7.6, 36.4, 9.9, '2018-10-30 07:24:20', '2018-10-30 07:24:20');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `rainfall1s`
 --
 
@@ -8642,6 +8836,420 @@ INSERT INTO `revenue_expenditures` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `roads4s`
+--
+
+DROP TABLE IF EXISTS `roads4s`;
+CREATE TABLE `roads4s` (
+  `id` bigint(20) NOT NULL,
+  `Type_of_Road` varchar(255) DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `Paved` float DEFAULT NULL,
+  `Percent_of_Total` float DEFAULT NULL,
+  `Percent_of_paved` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `roads4s`
+--
+
+INSERT INTO `roads4s` (`id`, `Type_of_Road`, `Total`, `Paved`, `Percent_of_Total`, `Percent_of_paved`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'National Highway (NH)', 3537, 3537, 2.9, 6.1, '2005', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(2, 'State Highway (SH)', 3767, 3767, 3.1, 6.5, '2005', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(3, 'Other PWD Road', 74672, 37673, 62.2, 65, '2005', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(4, 'Rural Road', 25864, 7843, 21.6, 13.5, '2005', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(5, 'Urban Road', 9790, 4428, 8.2, 7.6, '2005', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(6, 'Project Road', 2328, 719, 1.9, 1.2, '2005', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(7, 'Total', 119958, 57967, 100, 100, '2005', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(8, 'National Highway (NH)', 3642, 3642, 2.8, 6.7, '2010', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(9, 'State Highway (SH)', 3989, 3989, 3.1, 7.3, '2010', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(10, 'Other PWD Road', 8966, 8966, 7, 16.4, '2010', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(11, 'Rural Road', 98704, 32692, 77.1, 59.9, '2010', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(12, 'Urban Road', 9883, 4514, 7.7, 8.3, '2010', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(13, 'Project Road', 2850, 798, 2.2, 1.5, '2010', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(14, 'Total', 128034, 54601, 100, 100, '2010', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(15, 'National Highway (NH)', 4701, 4701, 2.3, 4.3, '2015', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(16, 'State Highway (SH)', 4426, 4426, 2.1, 4.1, '2015', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(17, 'Other PWD Road', 10128, 10128, 4.9, 9.4, '2015', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(18, 'Rural Road', 175373, 84794, 85.1, 78.3, '2015', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(19, 'Urban Road', 8823, 3699, 4.3, 3.4, '2015', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(20, 'Project Road', 2559, 508, 1.2, 0.5, '2015', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
+(21, 'Total', 206010, 108256, 100, 100, '2015', '2018-10-25 06:30:39', '2018-10-25 06:30:39');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roads5s`
+--
+
+DROP TABLE IF EXISTS `roads5s`;
+CREATE TABLE `roads5s` (
+  `id` bigint(20) NOT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `Length` float DEFAULT NULL,
+  `Percentage` float DEFAULT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `roads5s`
+--
+
+INSERT INTO `roads5s` (`id`, `Indicator`, `Length`, `Percentage`, `Sector`, `created_at`, `updated_at`) VALUES
+(1, 'Single Lane (3.75m width)', 689, 14, 'National Highways', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(2, 'Intermediate Lane (5.50m width)', 689.8, 14, 'National Highways', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(3, 'Double Lane (7.0m width)', 2090.9, 42.5, 'National Highways', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(4, 'Multiple Lane (More than 7.00m width)', 1414, 28.8, 'National Highways', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(5, 'Missing Link', 33.5, 0.7, 'National Highways', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(6, 'Total', 4917.2, 100, 'National Highways', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(7, 'Single Lane (3.75m width)', 775.3, 19.4, 'State Highways', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(8, 'Intermediate Lane (5.50m width)', 573, 14.3, 'State Highways', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(9, 'Double Lane (7.0m width)', 2633.6, 65.8, 'State Highways', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(10, 'Multiple Lane (More than 7.00m width)', 23.6, 0.6, 'State Highways', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(11, 'Missing Link', 0, 0, 'State Highways', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(12, 'Total', 4005.6, 100, 'State Highways', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(13, 'Single Lane (3.75m width)', 6023.4, 54, 'Major District Roads', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(14, 'Intermediate Lane (5.50m width)', 3413.2, 30.6, 'Major District Roads', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(15, 'Double Lane (7.0m width)', 1542.7, 13.8, 'Major District Roads', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(16, 'Multiple Lane (More than 7.00m width)', 165.9, 1.5, 'Major District Roads', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(17, 'Missing Link', 0, 0, 'Major District Roads', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
+(18, 'Total', 11145.3, 100, 'Major District Roads', '2018-10-25 07:43:10', '2018-10-25 07:43:10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roads6s`
+--
+
+DROP TABLE IF EXISTS `roads6s`;
+CREATE TABLE `roads6s` (
+  `id` bigint(20) NOT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `NH_in_kms` float DEFAULT NULL,
+  `Expenditure_on_NH_Development` float DEFAULT NULL,
+  `Expenditure_on_NH_Maintenance` float DEFAULT NULL,
+  `Total_Expenditure_on_NH` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `roads6s`
+--
+
+INSERT INTO `roads6s` (`id`, `Indicator`, `NH_in_kms`, `Expenditure_on_NH_Development`, `Expenditure_on_NH_Maintenance`, `Total_Expenditure_on_NH`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Bihar', 3642, 199, 37, 236, '2010-11', '2018-10-29 05:55:06', '2018-10-29 05:55:06'),
+(2, 'India', 70934, 16869, 1488, 18357, '2010-11', '2018-10-29 05:55:06', '2018-10-29 05:55:06'),
+(3, 'Bihar’s share in India', 5.1, 1.2, 2.5, 1.3, '2010-11', '2018-10-29 05:55:06', '2018-10-29 05:55:06'),
+(4, 'Bihar', 4913, 708, 107, 815, '2015-16', '2018-10-29 05:55:06', '2018-10-29 05:55:06'),
+(5, 'India', 101009, 40317, 2525, 42842, '2015-16', '2018-10-29 05:55:06', '2018-10-29 05:55:06'),
+(6, 'Bihar’s share in India', 4.9, 1.8, 4.2, 1.9, '2015-16', '2018-10-29 05:55:06', '2018-10-29 05:55:06');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roads7s`
+--
+
+DROP TABLE IF EXISTS `roads7s`;
+CREATE TABLE `roads7s` (
+  `id` bigint(20) NOT NULL,
+  `Project` varchar(255) DEFAULT NULL,
+  `Length_in_kms` float DEFAULT NULL,
+  `Remarks` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `roads7s`
+--
+
+INSERT INTO `roads7s` (`id`, `Project`, `Length_in_kms`, `Remarks`, `created_at`, `updated_at`) VALUES
+(1, 'Golden Quadrilateral - I', 206, '206  km  Completed', '2018-10-22 09:00:41', '2018-10-22 09:00:41'),
+(2, 'East-West Corridor - II', 487, '473  km  Completed', '2018-10-22 09:00:41', '2018-10-22 09:00:41'),
+(3, 'NHD Project - III', 1015, '452  km  Completed', '2018-10-22 09:00:41', '2018-10-22 09:00:41'),
+(4, 'NHD Project - IV', 527, '116  km  Completed', '2018-10-22 09:00:41', '2018-10-22 09:00:41'),
+(5, 'NHD Project Bordering UP/ Jharkhand - V', 206, '51  km  Completed', '2018-10-22 09:00:41', '2018-10-22 09:00:41'),
+(6, 'NHD Project - VI', 65, NULL, '2018-10-22 09:00:41', '2018-10-22 09:00:41'),
+(7, 'NHD Project – VII (Patna Ring Road)', NULL, NULL, '2018-10-22 09:00:41', '2018-10-22 09:00:41'),
+(8, 'Total', 2506, NULL, '2018-10-22 09:00:41', '2018-10-22 09:00:41'),
+(9, 'Under Budgetary Outlays of MoRT&H (2-lane)', 453, 'Rs. 2055 crore', '2018-10-22 09:00:41', '2018-10-22 09:00:41'),
+(10, 'Under World Bank Aided Scheme', 512, 'Rs. 3207 crore', '2018-10-22 09:00:41', '2018-10-22 09:00:41'),
+(11, 'LWE Road Development Scheme (2-lane)', 32, 'Work Completed (Bridge under progress)', '2018-10-22 09:00:41', '2018-10-22 09:00:41'),
+(12, 'Under Public-Private Partnership (4-lane)', 190, 'Rs. 5840.5 crore', '2018-10-22 09:00:41', '2018-10-22 09:00:41');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roads8s`
+--
+
+DROP TABLE IF EXISTS `roads8s`;
+CREATE TABLE `roads8s` (
+  `id` bigint(20) NOT NULL,
+  `Agency_wise_Road_Bridge` varchar(255) DEFAULT NULL,
+  `Length_in_kms` varchar(255) DEFAULT NULL,
+  `Remarks` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `roads8s`
+--
+
+INSERT INTO `roads8s` (`id`, `Agency_wise_Road_Bridge`, `Length_in_kms`, `Remarks`, `created_at`, `updated_at`) VALUES
+(1, 'BRGF (Ganga Bridge) between Digha and Sonepur and approach road', 'Bridge on the Ganga River ', 'Bridge completed and approach road in progress (cost of Rs. 2921 crore)', '2018-10-25 05:36:46', '2018-10-25 05:36:46'),
+(2, 'BRGF (AIIMS, Patna to Digha Ghat)', '11.9', 'cost of Rs. 1289.25 crore (80 % work completed)', '2018-10-25 05:36:46', '2018-10-25 05:36:46'),
+(3, 'ADB (BSHP-I) upgradation of 2-lane of 9 SH', '824.2', 'cost of Rs. 2629.86 crore (work completed)', '2018-10-25 05:36:46', '2018-10-25 05:36:46'),
+(4, 'ADB (BSHP-II) upgradation of 2-lane of 5 SH', '387.5', 'cost of Rs. 2547.02 crore (work under progress)', '2018-10-25 05:36:46', '2018-10-25 05:36:46'),
+(5, 'ADB (Additional Financing for BSHP-II) upgradation of 2-lane of 4 SH', '254.5', 'cost of Rs. 1658.69 crore (work under progress)', '2018-10-25 05:36:46', '2018-10-25 05:36:46'),
+(6, 'ADB (6-lane Ganga Bridge and Road Project)', 'Bridge (9.8 kms) Road (13.0 kms)', 'cost of Rs. 4988.40 crore (work under progress)', '2018-10-25 05:36:46', '2018-10-25 05:36:46'),
+(7, 'JICA (4-laning of NH-82) Gaya – Hisua – Rajgir – Nalanda – Biharsharif Section', '92.9', 'Rs. 1408 crore', '2018-10-25 05:36:46', '2018-10-25 05:36:46'),
+(8, 'PPP Mode (Greenfield Bridge on River Ganga -Bakhtiyarpur on NH31 to Tajpur  NH28)', 'Bridge (5.5 kms) and Road (40.2 kms)', 'cost of Rs. 1602.74 crore (40 % work completed)', '2018-10-25 05:36:46', '2018-10-25 05:36:46'),
+(9, 'HUDCO (Road) ', 'Ganga Path (21.5 kms) elevated corridor (7.6 kms)', 'cost of Rs. 3160.00 crore (work under progress) ', '2018-10-25 05:36:46', '2018-10-25 05:36:46');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roads9s`
+--
+
+DROP TABLE IF EXISTS `roads9s`;
+CREATE TABLE `roads9s` (
+  `id` bigint(20) NOT NULL,
+  `Name_of_the_Scheme` varchar(255) DEFAULT NULL,
+  `Road_Constructed` float DEFAULT NULL,
+  `Bridge_Constructed` float DEFAULT NULL,
+  `Expenditure` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `roads9s`
+--
+
+INSERT INTO `roads9s` (`id`, `Name_of_the_Scheme`, `Road_Constructed`, `Bridge_Constructed`, `Expenditure`, `created_at`, `updated_at`) VALUES
+(1, 'Gramin Tola Sampark Nischay Yojana (GTSNY)', 8, NULL, 6, '2018-10-29 07:16:57', '2018-10-29 07:16:57'),
+(2, 'R.I.D.F Scheme (NABARD)', 2739, 201, 2576, '2018-10-29 07:16:57', '2018-10-29 07:16:57'),
+(3, 'World Bank (Kosi)', 256, NULL, 228, '2018-10-29 07:16:57', '2018-10-29 07:16:57'),
+(4, 'Pradhan Mantri Gram Sadak Yojana', 45865, 118, 21019, '2018-10-29 07:16:57', '2018-10-29 07:16:57'),
+(5, 'Mukhya Mantri Gram Sampark Yojana', 6837, NULL, 4665, '2018-10-29 07:16:57', '2018-10-29 07:16:57'),
+(6, 'Other State Plan Schemes (Discontinued)', 13242, 39, 5674, '2018-10-29 07:16:57', '2018-10-29 07:16:57'),
+(7, 'Total', 68948, 358, 34169, '2018-10-29 07:16:57', '2018-10-29 07:16:57');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roads10s`
+--
+
+DROP TABLE IF EXISTS `roads10s`;
+CREATE TABLE `roads10s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `NH` float DEFAULT NULL,
+  `SH` float DEFAULT NULL,
+  `MDR` float DEFAULT NULL,
+  `Rural_Road` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `roads10s`
+--
+
+INSERT INTO `roads10s` (`id`, `Districts`, `NH`, `SH`, `MDR`, `Rural_Road`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 395, 151, 422, 2043, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(2, 'Nalanda', 177, 157, 179, 1165, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(3, 'Bhojpur', 85, 94, 290, 894, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(4, 'Buxar', 55, 79, 108, 1018, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(5, 'Rohtas', 145, 235, 408, 1545, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(6, 'Kaimur', 52, 99, 211, 1272, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(7, 'Gaya', 120, 227, 255, 1836, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(8, 'Arwal', 134, 46, 185, 134, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(9, 'Jehanabad', NULL, NULL, NULL, 830, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(10, 'Nawada', 84, 141, 102, 862, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(11, 'Aurangabad', 137, 89, 222, 1455, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(12, 'Saran', 181, 117, 185, 2023, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(13, 'Siwan', 54, 125, 231, 913, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(14, 'Gopalganj', 96, 50, 311, 1063, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(15, 'WestChamparan', 112, 47, 317, 1862, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(16, 'EastChamparan', 94, 100, 285, 2256, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(17, 'Muzaffarpur', 229, 70, 359, 2087, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(18, 'Sitamarhi', 102, 53, 200, 1228, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(19, 'Sheohar', 22, 14, 33, 470, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(20, 'Vaishali', 128, 81, 188, 1552, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(21, 'Darbhanga', 49, 106, 262, 1158, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(22, 'Madhubani', 208, 213, 312, 1486, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(23, 'Samastipur', 66, 137, 393, 1524, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(24, 'Begusarai', 96, 42, 199, 661, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(25, 'Munger', 39, 35, 45, 426, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(26, 'Sheikhpura', 12, 52, 92, 427, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(27, 'Lakhisarai', 45, 59, 33, 306, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(28, 'Jamui', NULL, 220, 184, 1222, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(29, 'Khagaria', 92, 0, 130, 339, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(30, 'Bhagalpur', 146, 81, 213, 1087, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(31, 'Banka', NULL, 175, 254, 1268, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(32, 'Saharsa', 60, 58, 311, 477, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(33, 'Supaul', 133, 165, 480, 485, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(34, 'Madhepura', 109, 97, 100, 505, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(35, 'Purnia', 103, 129, 290, 1589, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(36, 'Kishanganj', 0, 79, 425, 947, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(37, 'Araria', 85, 112, 266, 1459, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(38, 'Katihar', 90, 52, 487, 1007, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(39, 'Total', 3734, 3787, 8965, 42883, '2010', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(40, 'Patna', 395, 208, 562, 3768, '2017 upto Sept', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(41, 'Nalanda', 177, 192, 448, 3207, '2017 upto Sept', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(42, 'Bhojpur', 85, 167, 282, 2638, '2017 upto Sept', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(43, 'Buxar', 81, 52, 127, 2282, '2017 upto Sept', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(44, 'Rohtas', 183, 193, 404, 3356, '2017 upto Sept', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(45, 'Kaimur', 99, 85, 269, 2683, '2017 upto Sept', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(46, 'Gaya', 155, 210, 627, 4931, '2017 upto Sept', '2018-10-30 10:30:01', '2018-10-30 10:30:01'),
+(47, 'Arwal', 134, 39, 65, 520, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(48, 'Jehanabad', NULL, 33, 289, 1242, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(49, 'Nawada', 84, 186, 151, 2493, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(50, 'Aurangabad', 186, 124, 256, 3644, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(51, 'Saran', 227, 166, 365, 5089, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(52, 'Siwan', 131, 86, 306, 3669, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(53, 'Gopalganj', 96, 53, 353, 3281, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(54, 'WestChamparan', 112, 115, 302, 4286, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(55, 'EastChamparan', 126, 128, 462, 6409, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(56, 'Muzaffarpur', 259, 76, 467, 6764, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(57, 'Sitamarhi', 168, 94, 214, 2773, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(58, 'Sheohar', 22, 12, 101, 818, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(59, 'Vaishali', 128, 113, 347, 4895, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(60, 'Darbhanga', 50, 224, 475, 5071, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(61, 'Madhubani', 236, 98, 380, 7858, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(62, 'Samastipur', 66, 194, 429, 4801, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(63, 'Begusarai', 102, 43, 209, 2161, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(64, 'Munger', 85, 34, 46, 819, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(65, 'Sheikhpura', 46, 22, 137, 1102, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(66, 'Lakhisarai', 51, 49, 93, 840, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(67, 'Jamui', 197, 63, 239, 2898, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(68, 'Khagaria', 92, 21, 243, 1465, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(69, 'Bhagalpur', 146, 72, 280, 2778, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(70, 'Banka', 86, 169, 200, 3629, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(71, 'Saharsa', 93, 91, 279, 2636, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(72, 'Supaul', 216, 134, 505, 3580, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(73, 'Madhepura', 109, 99, 103, 3220, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(74, 'Purnia', 116, 141, 227, 5185, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(75, 'Kishanganj', 68, 49, 221, 3179, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(76, 'Araria', 154, 69, 408, 4977, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(77, 'Katihar', 158, 103, 275, 4531, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
+(78, 'Total', 4917, 4006, 11145, 129473, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `road_transport3s`
+--
+
+DROP TABLE IF EXISTS `road_transport3s`;
+CREATE TABLE `road_transport3s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `CAGR` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `road_transport3s`
+--
+
+INSERT INTO `road_transport3s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `CAGR`, `created_at`, `updated_at`) VALUES
+(1, 'Revenue Collection ', 26, 21.1, 21.6, 24.9, 61.4, 20.7, '2018-10-29 08:50:22', '2018-10-29 08:50:22'),
+(2, 'No. of Passengers Carried', 146.6, 152.3, 110.6, 126.6, 184.5, 2.8, '2018-10-29 08:50:22', '2018-10-29 08:50:22');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `road_transport4s`
+--
+
+DROP TABLE IF EXISTS `road_transport4s`;
+CREATE TABLE `road_transport4s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Truck` float DEFAULT NULL,
+  `Bus` float DEFAULT NULL,
+  `Car` float DEFAULT NULL,
+  `Taxi` float DEFAULT NULL,
+  `Jeep` float DEFAULT NULL,
+  `Three_Wheeler` float DEFAULT NULL,
+  `Two_Wheeler` float DEFAULT NULL,
+  `Tractor` float DEFAULT NULL,
+  `Trailor` float DEFAULT NULL,
+  `Other` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `road_transport4s`
+--
+
+INSERT INTO `road_transport4s` (`id`, `Districts`, `Truck`, `Bus`, `Car`, `Taxi`, `Jeep`, `Three_Wheeler`, `Two_Wheeler`, `Tractor`, `Trailor`, `Other`, `Total`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 3872, 595, 18113, 1358, 1967, 6429, 84008, 3355, 2134, 14, 121845, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(2, 'Nalanda', 538, 58, 307, 164, 256, 872, 15179, 1290, 578, 27, 19269, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(3, 'Bhojpur', 188, 36, 213, 122, 486, 953, 16083, 990, 956, NULL, 20027, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(4, 'Buxar', 111, 22, 143, 64, 172, 342, 6587, 697, 701, NULL, 8839, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(5, 'Rohtas', 275, 84, 527, 91, 97, 1014, 10783, 1284, 1220, NULL, 15375, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(6, 'Kaimur', 81, 38, 108, 36, 114, 201, 10128, 962, 670, 4, 12342, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(7, 'Gaya', 658, 123, 754, 275, 470, 2670, 20653, 1169, 880, NULL, 27652, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(8, 'Jehanabad', 410, 20, 31, 19, 40, 453, 4945, 606, 590, NULL, 7114, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(9, 'Arwal', 34, 3, 121, 17, 16, 170, 2674, 298, 285, 122, 3740, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(10, 'Nawada', 81, 17, 118, 51, 164, 195, 9620, 866, 694, 167, 11973, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(11, 'Aurangabad', 498, 42, 138, 114, 374, 1460, 10148, 1051, 978, 62, 14865, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(12, 'Saran', 594, 40, 295, 171, 561, 609, 17169, 796, 149, NULL, 20384, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(13, 'Siwan', 511, 84, 759, 240, 569, 688, 14562, 1047, 18, NULL, 18478, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(14, 'Gopalganj', 203, 26, 487, 44, 543, 147, 18636, 752, 114, NULL, 20952, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(15, 'WestChamparan ', 87, 11, 191, 10, 116, 628, 1840, 1400, 91, NULL, 4374, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(16, 'EastChamparan', 470, 38, 338, 204, 633, 1020, 6610, 1753, 124, NULL, 11190, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(17, 'Muzaffarpur', 5545, 1006, 2933, 459, NULL, 3196, 68825, 2627, 361, NULL, 84952, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(18, 'Sitamarhi', 46, 6, 64, 31, 72, 1135, 13293, 1142, 407, NULL, 16196, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(19, 'Sheohar', 6, 1, 9, 5, 13, 44, 2169, 105, 23, 1, 2376, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(20, 'Vaishali', 486, 48, 973, 45, 178, 897, 25604, 876, 585, 42, 29734, '2018-10-30 11:06:17', '2018-10-30 11:06:17'),
+(21, 'Darbhanga', 710, 40, 926, 406, 639, 2410, 24748, 1045, 391, 3, 31318, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(22, 'Madhubani', 154, 75, 221, 121, 272, 3421, 19963, 1351, 767, NULL, 26345, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(23, 'Samastipur', 184, 12, 119, 54, 128, 1324, 20721, 1106, 972, 13, 24633, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(24, 'Begusarai', 517, 28, 1108, 143, 161, 959, 19095, 765, 621, 45, 23442, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(25, 'Munger', 75, 2, 37, 75, 62, 308, 6780, 91, 91, 93, 7614, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(26, 'Sheikhpura', 88, 5, 16, 15, 33, 69, 2536, 345, 331, NULL, 3438, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(27, 'Lakhisarai', 186, 5, 43, 45, 41, 89, 1474, 189, 114, NULL, 2186, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(28, 'Jamui', 119, 5, 17, 33, 59, 649, 6278, 452, 454, NULL, 8066, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(29, 'Khagaria', 60, 4, 56, 19, 27, 347, 7662, 643, 517, NULL, 9335, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(30, 'Bhagalpur', 630, 17, 1056, 145, 173, 1476, 9815, 650, 679, 135, 14776, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(31, 'Banka', 118, 13, 32, 11, 39, 162, 5397, 739, 709, NULL, 7220, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(32, 'Saharsa', 98, 20, 250, 33, 102, 651, 10788, 738, 259, NULL, 12939, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(33, 'Supaul', 92, 13, 151, 44, 36, 153, 15465, 1035, 295, NULL, 17284, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(34, 'Madhepura', 22, 13, 199, 8, 27, 842, 9942, 907, 442, NULL, 12402, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(35, 'Purnia', 1744, 92, 1672, 292, 2, 4356, 14113, 2243, 662, NULL, 25176, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(36, 'Kishanganj', 52, 14, 366, 6, 31, 436, 23733, 518, 65, 4, 25225, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(37, 'Araria', 61, 17, 414, 20, 73, 687, 12848, 1069, 722, 289, 16200, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(38, 'Katihar', 42, 3, 265, 43, 4, 415, 21871, 1124, 575, NULL, 24342, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
+(39, 'Total', 19646, 2676, 33570, 5033, 8750, 41877, 592745, 38076, 20224, 1021, 763618, '2018-10-30 11:06:18', '2018-10-30 11:06:18');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `schema_migrations`
 --
 
@@ -8896,7 +9504,24 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20181012100118'),
 ('20181012100818'),
 ('20181012104359'),
-('20181012115935');
+('20181012115935'),
+('20181022082303'),
+('20181022085921'),
+('20181025050706'),
+('20181025051451'),
+('20181025053514'),
+('20181025062949'),
+('20181025074214'),
+('20181029055348'),
+('20181029065018'),
+('20181029073738'),
+('20181029081207'),
+('20181029083517'),
+('20181030070612'),
+('20181030074330'),
+('20181030082713'),
+('20181030085714'),
+('20181030110448');
 
 -- --------------------------------------------------------
 
@@ -9688,201 +10313,201 @@ CREATE TABLE `state_domestic_product9s` (
 --
 
 INSERT INTO `state_domestic_product9s` (`id`, `Districts`, `Per_Capita_GDP`, `Year`, `created_at`, `updated_at`) VALUES
-(1, 'Patna', 43448, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(2, 'Nalanda', 8219, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(3, 'Bhojpur', 8775, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(4, 'Buxar', 8368, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(5, 'Rohtas', 9544, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(6, 'Kaimur', 7564, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(7, 'Gaya', 8660, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(8, 'Jehanabad', 7490, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(9, 'Arwal', 6475, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(10, 'Nawada', 6739, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(11, 'Aurangabad', 7575, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(12, 'Saran', 7522, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(13, 'Siwan', 7377, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(14, 'Gopalganj', 7646, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(15, 'WestChamparan', 8476, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(16, 'EastChamparan', 6223, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(17, 'Muzaffarpur', 9814, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(18, 'Sitamarhi', 6180, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(19, 'Sheohar', 5541, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(20, 'Vaishali', 7728, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(21, 'Darbhanga', 7614, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(22, 'Madhubani', 6216, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(23, 'Samastipur', 7559, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(24, 'Begusarai', 12419, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(25, 'Munger', 15791, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(26, 'Sheikhpura', 7209, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(27, 'Lakhisarai', 9549, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(28, 'Jamui', 7584, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(29, 'Khagaria', 8517, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(30, 'Bhagalpur', 12097, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(31, 'Banka', 6882, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(32, 'Saharsa', 8164, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(33, 'Supaul', 6382, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(34, 'Madhepura', 6920, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(35, 'Purnia', 7419, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(36, 'Kishanganj', 7312, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(37, 'Araria', 6635, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(38, 'Katihar', 8267, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(39, 'Bihar', 10076, 2007, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(40, 'Patna', 48719, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(41, 'Nalanda', 9152, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(42, 'Bhojpur', 10146, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(43, 'Buxar', 8992, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(44, 'Rohtas', 10950, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(45, 'Kaimur', 8441, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(46, 'Gaya', 9135, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(47, 'Jehanabad', 8588, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(48, 'Arwal', 7028, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(49, 'Nawada', 7409, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(50, 'Aurangabad', 7922, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(51, 'Saran', 7938, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(52, 'Siwan', 8864, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(53, 'Gopalganj', 8059, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(54, 'WestChamparan', 9484, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(55, 'EastChamparan', 8457, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(56, 'Muzaffarpur', 11602, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(57, 'Sitamarhi', 7301, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(58, 'Sheohar', 6128, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(59, 'Vaishali', 9604, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(60, 'Darbhanga', 8516, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(61, 'Madhubani', 7643, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(62, 'Samastipur', 8729, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(63, 'Begusarai', 15001, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(64, 'Munger', 17034, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(65, 'Sheikhpura', 8105, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(66, 'Lakhisarai', 10209, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(67, 'Jamui', 8028, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(68, 'Khagaria', 9111, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(69, 'Bhagalpur', 13351, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(70, 'Banka', 7596, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(71, 'Saharsa', 8744, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(72, 'Supaul', 6790, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(73, 'Madhepura', 6602, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(74, 'Purnia', 8228, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(75, 'Kishanganj', 8120, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(76, 'Araria', 7251, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(77, 'Katihar', 9060, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(78, 'Bihar', 11369, 2008, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(79, 'Patna', 53428, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(80, 'Nalanda', 9787, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(81, 'Bhojpur', 10134, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(82, 'Buxar', 8812, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(83, 'Rohtas', 10908, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(84, 'Kaimur', 7785, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(85, 'Gaya', 9519, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(86, 'Jehanabad', 8478, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(87, 'Arwal', 7283, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(88, 'Nawada', 7602, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(89, 'Aurangabad', 8189, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(90, 'Saran', 8559, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(91, 'Siwan', 8042, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(92, 'Gopalganj', 8543, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(93, 'WestChamparan', 9706, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(94, 'EastChamparan', 7571, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(95, 'Muzaffarpur', 12159, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(96, 'Sitamarhi', 7456, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(97, 'Sheohar', 5438, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(98, 'Vaishali', 9937, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(99, 'Darbhanga', 9036, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(100, 'Madhubani', 7455, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(101, 'Samastipur', 8843, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(102, 'Begusarai', 14235, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(103, 'Munger', 18554, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(104, 'Sheikhpura', 7775, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(105, 'Lakhisarai', 10950, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(106, 'Jamui', 8186, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(107, 'Khagaria', 9642, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(108, 'Bhagalpur', 14253, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(109, 'Banka', 7724, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(110, 'Saharsa', 9591, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(111, 'Supaul', 7043, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(112, 'Madhepura', 6979, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(113, 'Purnia', 8743, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(114, 'Kishanganj', 8085, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(115, 'Araria', 7376, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(116, 'Katihar', 9594, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(117, 'Bihar', 11806, 2009, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(118, 'Patna', 57823, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(119, 'Nalanda', 10971, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(120, 'Bhojpur', 11537, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(121, 'Buxar', 9732, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(122, 'Rohtas', 12265, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(123, 'Kaimur', 9539, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(124, 'Gaya', 10504, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(125, 'Jehanabad', 9322, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(126, 'Arwal', 8133, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(127, 'Nawada', 8437, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(128, 'Aurangabad', 9293, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(129, 'Saran', 9576, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(130, 'Siwan', 9192, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(131, 'Gopalganj', 10386, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(132, 'WestChamparan', 10577, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(133, 'EastChamparan', 8790, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(134, 'Muzaffarpur', 14082, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(135, 'Sitamarhi', 8274, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(136, 'Sheohar', 6208, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(137, 'Vaishali', 11591, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(138, 'Darbhanga', 10798, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(139, 'Madhubani', 10607, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(140, 'Samastipur', 10705, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(141, 'Begusarai', 18433, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(142, 'Munger', 21011, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(143, 'Sheikhpura', 8377, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(144, 'Lakhisarai', 11870, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(145, 'Jamui', 8944, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(146, 'Khagaria', 10603, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(147, 'Bhagalpur', 15870, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(148, 'Banka', 7756, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(149, 'Saharsa', 11268, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(150, 'Supaul', 8193, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(151, 'Madhepura', 8096, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(152, 'Purnia', 9357, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(153, 'Kishanganj', 9126, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(154, 'Araria', 8534, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(155, 'Katihar', 10721, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(156, 'Bihar', 13393, 2010, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(157, 'Patna', 63063, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(158, 'Nalanda', 12561, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(159, 'Bhojpur', 12459, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(160, 'Buxar', 11289, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(161, 'Rohtas', 13909, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(162, 'Kaimur', 10412, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(163, 'Gaya', 11897, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(164, 'Jehanabad', 11182, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(165, 'Arwal', 9125, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(166, 'Nawada', 9560, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(167, 'Aurangabad', 11012, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(168, 'Saran', 10615, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(169, 'Siwan', 10685, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(170, 'Gopalganj', 12129, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(171, 'WestChamparan', 9971, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(172, 'EastChamparan', 10735, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(173, 'Muzaffarpur', 15402, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(174, 'Sitamarhi', 9538, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(175, 'Sheohar', 7092, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(176, 'Vaishali', 12490, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(177, 'Darbhanga', 10932, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(178, 'Madhubani', 9241, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(179, 'Samastipur', 10762, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(180, 'Begusarai', 17587, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(181, 'Munger', 22051, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(182, 'Sheikhpura', 9687, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(183, 'Lakhisarai', 13073, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(184, 'Jamui', 10166, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(185, 'Khagaria', 11515, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(186, 'Bhagalpur', 17324, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(187, 'Banka', 9269, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(188, 'Saharsa', 12197, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(189, 'Supaul', 8492, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(190, 'Madhepura', 8609, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(191, 'Purnia', 10099, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(192, 'Kishanganj', 9928, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(193, 'Araria', 8776, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(194, 'Katihar', 11278, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18'),
-(195, 'Bihar', 14574, 2011, '2018-08-17 11:40:18', '2018-08-17 11:40:18');
+(1, 'Patna', 43448, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(2, 'Nalanda', 8219, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(3, 'Bhojpur', 8775, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(4, 'Buxar', 8368, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(5, 'Rohtas', 9544, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(6, 'Kaimur', 7564, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(7, 'Gaya', 8660, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(8, 'Jehanabad', 7490, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(9, 'Arwal', 6475, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(10, 'Nawada', 6739, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(11, 'Aurangabad', 7575, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(12, 'Saran', 7522, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(13, 'Siwan', 7377, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(14, 'Gopalganj', 7646, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(15, 'WestChamparan', 8476, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(16, 'EastChamparan', 6223, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(17, 'Muzaffarpur', 9814, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(18, 'Sitamarhi', 6180, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(19, 'Sheohar', 5541, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(20, 'Vaishali', 7728, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(21, 'Darbhanga', 7614, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(22, 'Madhubani', 6216, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(23, 'Samastipur', 7559, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(24, 'Begusarai', 12419, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(25, 'Munger', 15791, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(26, 'Sheikhpura', 7209, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(27, 'Lakhisarai', 9549, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(28, 'Jamui', 7584, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(29, 'Khagaria', 8517, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(30, 'Bhagalpur', 12097, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(31, 'Banka', 6882, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(32, 'Saharsa', 8164, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(33, 'Supaul', 6382, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(34, 'Madhepura', 6920, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(35, 'Purnia', 7419, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(36, 'Kishanganj', 7312, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(37, 'Araria', 6635, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(38, 'Katihar', 8267, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(39, 'Bihar', 10076, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(40, 'Patna', 48719, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(41, 'Nalanda', 9152, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(42, 'Bhojpur', 10146, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(43, 'Buxar', 8992, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(44, 'Rohtas', 10950, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(45, 'Kaimur', 8441, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(46, 'Gaya', 9135, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(47, 'Jehanabad', 8588, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(48, 'Arwal', 7028, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(49, 'Nawada', 7409, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(50, 'Aurangabad', 7922, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(51, 'Saran', 7938, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(52, 'Siwan', 8864, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(53, 'Gopalganj', 8059, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(54, 'WestChamparan', 9484, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(55, 'EastChamparan', 8457, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(56, 'Muzaffarpur', 11602, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(57, 'Sitamarhi', 7301, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(58, 'Sheohar', 6128, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(59, 'Vaishali', 9604, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(60, 'Darbhanga', 8516, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(61, 'Madhubani', 7643, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(62, 'Samastipur', 8729, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(63, 'Begusarai', 15001, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(64, 'Munger', 17034, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(65, 'Sheikhpura', 8105, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(66, 'Lakhisarai', 10209, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(67, 'Jamui', 8028, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(68, 'Khagaria', 9111, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(69, 'Bhagalpur', 13351, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(70, 'Banka', 7596, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(71, 'Saharsa', 8744, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(72, 'Supaul', 6790, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(73, 'Madhepura', 6602, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(74, 'Purnia', 8228, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(75, 'Kishanganj', 8120, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(76, 'Araria', 7251, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(77, 'Katihar', 9060, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(78, 'Bihar', 11369, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(79, 'Patna', 53428, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(80, 'Nalanda', 9787, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(81, 'Bhojpur', 10134, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(82, 'Buxar', 8812, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(83, 'Rohtas', 10908, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(84, 'Kaimur', 7785, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(85, 'Gaya', 9519, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(86, 'Jehanabad', 8478, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(87, 'Arwal', 7283, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(88, 'Nawada', 7602, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(89, 'Aurangabad', 8189, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(90, 'Saran', 8559, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(91, 'Siwan', 8042, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(92, 'Gopalganj', 8543, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(93, 'WestChamparan', 9706, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(94, 'EastChamparan', 7571, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(95, 'Muzaffarpur', 12159, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(96, 'Sitamarhi', 7456, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(97, 'Sheohar', 5438, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(98, 'Vaishali', 9937, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(99, 'Darbhanga', 9036, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(100, 'Madhubani', 7455, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(101, 'Samastipur', 8843, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(102, 'Begusarai', 14235, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(103, 'Munger', 18554, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(104, 'Sheikhpura', 7775, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(105, 'Lakhisarai', 10950, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(106, 'Jamui', 8186, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(107, 'Khagaria', 9642, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(108, 'Bhagalpur', 14253, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(109, 'Banka', 7724, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(110, 'Saharsa', 9591, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(111, 'Supaul', 7043, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(112, 'Madhepura', 6979, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(113, 'Purnia', 8743, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(114, 'Kishanganj', 8085, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(115, 'Araria', 7376, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(116, 'Katihar', 9594, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(117, 'Bihar', 11806, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(118, 'Patna', 57823, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(119, 'Nalanda', 10971, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(120, 'Bhojpur', 11537, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(121, 'Buxar', 9732, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(122, 'Rohtas', 12265, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(123, 'Kaimur', 9539, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(124, 'Gaya', 10504, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(125, 'Jehanabad', 9322, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(126, 'Arwal', 8133, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(127, 'Nawada', 8437, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(128, 'Aurangabad', 9293, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(129, 'Saran', 9576, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(130, 'Siwan', 9192, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(131, 'Gopalganj', 10386, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(132, 'WestChamparan', 10577, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(133, 'EastChamparan', 8790, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(134, 'Muzaffarpur', 14082, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(135, 'Sitamarhi', 8274, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(136, 'Sheohar', 6208, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(137, 'Vaishali', 11591, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(138, 'Darbhanga', 10798, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(139, 'Madhubani', 10607, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(140, 'Samastipur', 10705, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(141, 'Begusarai', 18433, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(142, 'Munger', 21011, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(143, 'Sheikhpura', 8377, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(144, 'Lakhisarai', 11870, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(145, 'Jamui', 8944, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(146, 'Khagaria', 10603, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(147, 'Bhagalpur', 15870, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(148, 'Banka', 7756, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(149, 'Saharsa', 11268, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(150, 'Supaul', 8193, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(151, 'Madhepura', 8096, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(152, 'Purnia', 9357, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(153, 'Kishanganj', 9126, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(154, 'Araria', 8534, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(155, 'Katihar', 10721, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(156, 'Bihar', 13393, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(157, 'Patna', 63063, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(158, 'Nalanda', 12561, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(159, 'Bhojpur', 12459, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(160, 'Buxar', 11289, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(161, 'Rohtas', 13909, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(162, 'Kaimur', 10412, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(163, 'Gaya', 11897, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(164, 'Jehanabad', 11182, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(165, 'Arwal', 9125, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(166, 'Nawada', 9560, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(167, 'Aurangabad', 11012, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(168, 'Saran', 10615, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(169, 'Siwan', 10685, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(170, 'Gopalganj', 12129, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(171, 'WestChamparan', 9971, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(172, 'EastChamparan', 10735, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(173, 'Muzaffarpur', 15402, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(174, 'Sitamarhi', 9538, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(175, 'Sheohar', 7092, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(176, 'Vaishali', 12490, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(177, 'Darbhanga', 10932, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(178, 'Madhubani', 9241, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(179, 'Samastipur', 10762, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(180, 'Begusarai', 17587, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(181, 'Munger', 22051, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(182, 'Sheikhpura', 9687, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(183, 'Lakhisarai', 13073, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(184, 'Jamui', 10166, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(185, 'Khagaria', 11515, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(186, 'Bhagalpur', 17324, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(187, 'Banka', 9269, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(188, 'Saharsa', 12197, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(189, 'Supaul', 8492, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(190, 'Madhepura', 8609, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(191, 'Purnia', 10099, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(192, 'Kishanganj', 9928, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(193, 'Araria', 8776, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(194, 'Katihar', 11278, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(195, 'Bihar', 14574, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19');
 
 -- --------------------------------------------------------
 
@@ -10362,6 +10987,36 @@ INSERT INTO `support_institutions2s` (`id`, `Year`, `Amount_Allotted_Rs_lakh`, `
 (4, '2014-15', 98.6, 88.94, 664, 90.2, '2018-09-09 09:21:11', '2018-09-09 09:21:11'),
 (5, '2015-16', 110.29, 92.37, 906, 83.8, '2018-09-09 09:21:11', '2018-09-09 09:21:11'),
 (6, '2016-17', 110, 110, 1098, 100, '2018-09-09 09:21:11', '2018-09-09 09:21:11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `support_institutions3s`
+--
+
+DROP TABLE IF EXISTS `support_institutions3s`;
+CREATE TABLE `support_institutions3s` (
+  `id` bigint(20) NOT NULL,
+  `Regional_Office` varchar(255) DEFAULT NULL,
+  `Number_of_Working_Units` float DEFAULT NULL,
+  `Number_of_Working_Units_under_Construction` float DEFAULT NULL,
+  `Number_of_Units_which_have_not_started_Construction` float DEFAULT NULL,
+  `Number_of_Units_Closed_in_Cancellation_Process` float DEFAULT NULL,
+  `Total_existing_Units` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `support_institutions3s`
+--
+
+INSERT INTO `support_institutions3s` (`id`, `Regional_Office`, `Number_of_Working_Units`, `Number_of_Working_Units_under_Construction`, `Number_of_Units_which_have_not_started_Construction`, `Number_of_Units_Closed_in_Cancellation_Process`, `Total_existing_Units`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 666, 152, 26, 337, 1181, '2018-10-25 05:15:32', '2018-10-25 05:15:32'),
+(2, 'Bhagalpur', 284, 41, 18, 32, 375, '2018-10-25 05:15:32', '2018-10-25 05:15:32'),
+(3, 'Dharbhanga', 292, 34, 4, 49, 379, '2018-10-25 05:15:32', '2018-10-25 05:15:32'),
+(4, 'Muzaffarpur', 364, 75, 19, 104, 562, '2018-10-25 05:15:32', '2018-10-25 05:15:32'),
+(5, 'Total', 1606, 302, 67, 522, 2497, '2018-10-25 05:15:32', '2018-10-25 05:15:32');
 
 -- --------------------------------------------------------
 
@@ -11161,6 +11816,12 @@ ALTER TABLE `agro_based_industries5s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `airways`
+--
+ALTER TABLE `airways`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `animal_husbandry1s`
 --
 ALTER TABLE `animal_husbandry1s`
@@ -11266,6 +11927,18 @@ ALTER TABLE `bihar_industrial_investment2s`
 -- Indexes for table `bihar_start_up_policies`
 --
 ALTER TABLE `bihar_start_up_policies`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bridge_sector1s`
+--
+ALTER TABLE `bridge_sector1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bridge_sector2s`
+--
+ALTER TABLE `bridge_sector2s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -11533,6 +12206,12 @@ ALTER TABLE `hhs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `ict3s`
+--
+ALTER TABLE `ict3s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `inflation_rates`
 --
 ALTER TABLE `inflation_rates`
@@ -11572,6 +12251,12 @@ ALTER TABLE `irrigation5s`
 -- Indexes for table `irrigation6s`
 --
 ALTER TABLE `irrigation6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `irrigation7s`
+--
+ALTER TABLE `irrigation7s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -11698,6 +12383,12 @@ ALTER TABLE `production_productivity12s`
 -- Indexes for table `qualityofexpenditures`
 --
 ALTER TABLE `qualityofexpenditures`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `railways`
+--
+ALTER TABLE `railways`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -11845,6 +12536,60 @@ ALTER TABLE `revenue_expenditures`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `roads4s`
+--
+ALTER TABLE `roads4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads5s`
+--
+ALTER TABLE `roads5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads6s`
+--
+ALTER TABLE `roads6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads7s`
+--
+ALTER TABLE `roads7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads8s`
+--
+ALTER TABLE `roads8s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads9s`
+--
+ALTER TABLE `roads9s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads10s`
+--
+ALTER TABLE `roads10s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `road_transport3s`
+--
+ALTER TABLE `road_transport3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `road_transport4s`
+--
+ALTER TABLE `road_transport4s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `schema_migrations`
 --
 ALTER TABLE `schema_migrations`
@@ -11971,6 +12716,12 @@ ALTER TABLE `support_institutions2s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `support_institutions3s`
+--
+ALTER TABLE `support_institutions3s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `support_institutions4s`
 --
 ALTER TABLE `support_institutions4s`
@@ -12065,10 +12816,40 @@ ALTER TABLE `agricultural_credit1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `airways`
+--
+ALTER TABLE `airways`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `annual_survey3s`
 --
 ALTER TABLE `annual_survey3s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `bridge_sector1s`
+--
+ALTER TABLE `bridge_sector1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `bridge_sector2s`
+--
+ALTER TABLE `bridge_sector2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `ict3s`
+--
+ALTER TABLE `ict3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `irrigation7s`
+--
+ALTER TABLE `irrigation7s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `non_agro_based_industries1s`
@@ -12089,10 +12870,82 @@ ALTER TABLE `non_agro_based_industries4s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT for table `railways`
+--
+ALTER TABLE `railways`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `roads4s`
+--
+ALTER TABLE `roads4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `roads5s`
+--
+ALTER TABLE `roads5s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `roads6s`
+--
+ALTER TABLE `roads6s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `roads7s`
+--
+ALTER TABLE `roads7s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `roads8s`
+--
+ALTER TABLE `roads8s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `roads9s`
+--
+ALTER TABLE `roads9s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `roads10s`
+--
+ALTER TABLE `roads10s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
+--
+-- AUTO_INCREMENT for table `road_transport3s`
+--
+ALTER TABLE `road_transport3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `road_transport4s`
+--
+ALTER TABLE `road_transport4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `state_domestic_product9s`
+--
+ALTER TABLE `state_domestic_product9s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=196;
+
+--
 -- AUTO_INCREMENT for table `support_institutions1s`
 --
 ALTER TABLE `support_institutions1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `support_institutions3s`
+--
+ALTER TABLE `support_institutions3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `support_institutions4s`
