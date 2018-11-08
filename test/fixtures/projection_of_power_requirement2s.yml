@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Indicators: MyString
+  2017-18: 1.5
+  2018-19: 1.5
+
+two:
+  Indicators: MyString
+  2017-18: 1.5
+  2018-19: 1.5

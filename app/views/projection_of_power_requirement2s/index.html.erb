@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Projection Of Power Requirement2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Indicators</th>
+      <th>2017-18</th>
+      <th>2018-19</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projection_of_power_requirement2s.each do |projection_of_power_requirement2| %>
+      <tr>
+        <td><%= projection_of_power_requirement2.Indicators %></td>
+        <td><%= projection_of_power_requirement2.2017-18 %></td>
+        <td><%= projection_of_power_requirement2.2018-19 %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Projection Of Power Requirement2', new_projection_of_power_requirement2_path %>

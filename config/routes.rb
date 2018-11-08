@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :projection_of_power_requirement2s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :projection_of_power_requirement1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
     resources :availablility_of_power2s do 
         collection { post :import }
         collection { get :dropdown }

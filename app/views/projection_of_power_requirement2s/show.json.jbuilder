@@ -1,0 +1,1 @@
+json.partial! "projection_of_power_requirement2s/projection_of_power_requirement2", projection_of_power_requirement2: @projection_of_power_requirement2
