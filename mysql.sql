@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Nov 01, 2018 at 04:58 AM
+-- Host: localhost
+-- Generation Time: Nov 08, 2018 at 05:54 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `bihar_survey`
+-- Database: `newdata`
 --
 
 -- --------------------------------------------------------
@@ -991,6 +991,65 @@ INSERT INTO `agro_based_industries5s` (`id`, `Sector`, `2012-13`, `2013-14`, `20
 (18, 'De-worming (lakh)', 12.92, 11.67, 12.92, 16.46, 14.3, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
 (19, 'Seed Distribution (tonnes)', 757.14, 885.61, 930.93, 1016.79, 1279.53, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
 (20, 'Cattle Feed Distribution (tonnes)', 61273, 54707, 56143, 62130, 53810, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `agro_based_industries6s`
+--
+
+DROP TABLE IF EXISTS `agro_based_industries6s`;
+CREATE TABLE `agro_based_industries6s` (
+  `id` bigint(20) NOT NULL,
+  `Industrial_Group` varchar(255) DEFAULT NULL,
+  `India` float DEFAULT NULL,
+  `Bihar` float DEFAULT NULL,
+  `Bihar_Percentage_Share` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `Indicator1` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `agro_based_industries6s`
+--
+
+INSERT INTO `agro_based_industries6s` (`id`, `Industrial_Group`, `India`, `Bihar`, `Bihar_Percentage_Share`, `Indicator`, `Indicator1`, `created_at`, `updated_at`) VALUES
+(1, 'Food Products/Beverages/ Tobacco Products', 974924, 15763.8, 1.62, 'Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(2, 'Textiles/Wearing Apparel', 483893, 141.81, 0.03, 'Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(3, 'Leather and Leather Products', 50957.7, 76.85, 0.15, 'Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(4, 'Wood and Wood Products / Furniture', 36203, 180.64, 0.5, 'Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(5, 'Paper and Paper Products/ printing and Reproduction of Recorded Media/Publishing Activities', 142702, 699.65, 0.49, 'Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(6, 'Sub Total', 1688680, 16862.8, 1, 'Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(7, 'Food Products/Beverages/ Tobacco Products', 89460.3, 3972.76, 4.44, 'Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(8, 'Textiles/Wearing Apparel', 67120.6, 28.45, 0.04, 'Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(9, 'Leather and Leather Products', 6465.19, 13.77, 0.21, 'Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(10, 'Wood and Wood Products / Furniture', 5972.61, 27.63, 0.46, 'Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(11, 'Paper and Paper Products/ printing and Reproduction of Recorded Media/Publishing Activities', 22957.8, 169.85, 0.74, 'Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(12, 'Sub Total', 191976, 4212.46, 2.19, 'Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(13, 'Coke and Refined Petroleum Products', 1032780, 31143.9, 3.02, 'Non- Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(14, 'Chemicals and Chemical products', 557244, 452.52, 0.08, 'Non- Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(15, 'Basic Pharmaceutical Products', 231834, 153.98, 0.07, 'Non- Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(16, 'Rubber and Plastic Products', 238953, 141.88, 0.06, 'Non- Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(17, 'Non-Metallic Mineral Products', 231178, 2162.87, 0.94, 'Non- Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(18, 'Metals/ Fabricated Metal Products Except Machinery and Equipment', 1025730, 2143.28, 0.21, 'Non- Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(19, 'Electrical Equipment/ Machinery and Equipment NEC/Repair and Installation of machinery equipment', 514040, 184.05, 0.04, 'Non- Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(20, 'Motor vehicle, Trailer, Semi-Trailer/ Other Transport Equipment', 617380, 13.1, 0, 'Non- Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(21, 'Others ( including 32 other manufacturing)', 539202, 5500.83, 1.02, 'Non- Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(22, 'Sub-Total', 4988340, 41896.4, 0.84, 'Non- Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(23, 'Grand Total', 6677020, 58759.1, 0.88, 'Non- Agro Based', 'Value of Output', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(24, 'Coke and Refined Petroleum Products', 1032780, 31143.9, 3.02, 'Non- Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(25, 'Chemicals and Chemical products', 557244, 452.52, 0.08, 'Non- Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(26, 'Basic Pharmaceutical Products', 231834, 153.98, 0.07, 'Non- Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(27, 'Rubber and Plastic Products', 238953, 141.88, 0.06, 'Non- Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(28, 'Non-Metallic Mineral Products', 231178, 2162.87, 0.94, 'Non- Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(29, 'Metals/ Fabricated Metal Products Except Machinery and Equipment', 1025730, 2143.28, 0.21, 'Non- Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(30, 'Electrical Equipment/ Machinery and Equipment NEC/Repair and Installation of machinery equipment', 514040, 184.05, 0.04, 'Non- Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(31, 'Motor vehicle, Trailer, Semi-Trailer/ Other Transport Equipment', 617380, 13.1, 0, 'Non- Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(32, 'Others ( including 32 other manufacturing)', 539202, 5500.83, 1.02, 'Non- Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(33, 'Sub-Total', 4988340, 41896.4, 0.84, 'Non- Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
+(34, 'Grand Total', 6677020, 58759.1, 0.88, 'Non- Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24');
 
 -- --------------------------------------------------------
 
@@ -2416,6 +2475,98 @@ INSERT INTO `annual_survey6s` (`id`, `Districts`, `Number_of_Factories_in_Operat
 (15, 'Uttar Pradesh', 12327, 423098, 53056, 4.6, 12.54, 883331, 6.4, 72, 204453, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
 (16, 'West Bengal', 7878, 263802, 24965, 2.1, 9.46, 632470, 4.6, 80, 185085, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
 (17, 'India', 189468, 6883810, 1164700, 100, 16.92, 13881400, 100, 73, 222629, '2018-10-08 09:12:59', '2018-10-08 09:12:59');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `annual_survey7s`
+--
+
+DROP TABLE IF EXISTS `annual_survey7s`;
+CREATE TABLE `annual_survey7s` (
+  `id` bigint(20) NOT NULL,
+  `Industrial_Group` varchar(255) DEFAULT NULL,
+  `India` float DEFAULT NULL,
+  `Bihar` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `Indicator1` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `annual_survey7s`
+--
+
+INSERT INTO `annual_survey7s` (`id`, `Industrial_Group`, `India`, `Bihar`, `Indicator`, `Indicator1`, `created_at`, `updated_at`) VALUES
+(1, 'Food Products/ Beverages/ Tobacco Products', 41922, 904, 'Agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(2, 'Textiles/Wearing Apparel', 28600, 25, 'Agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(3, 'Leather and Leather Products', 4341, 8, 'Agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(4, 'Wood and Wood Products / Furniture', 5944, 213, 'Agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(5, 'Paper and Paper Products/ printing and Reproduction of Recorded Media/Publishing Activities', 11634, 82, 'Agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(6, 'Sub Total', 92441, 1232, 'Agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(7, 'Coke and Refined Petroleum Products', 1622, 69, 'Non-agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(8, 'Chemicals and Chemical products', 11715, 48, 'Non-agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(9, 'Basic Pharmaceutical Products', 4908, 29, 'Non-agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(10, 'Rubber and Plastic Products', 13548, 78, 'Non-agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(11, 'Non-Metallic Mineral Products', 27206, 1612, 'Non-agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(12, 'Metals/ Fabricated Metal Products Except Machinery and Equipment', 28286, 152, 'Non-agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(13, 'Electrical Equipment/ Machinery and Equipment NEC/Repair and Installation of machinery equipment', 20642, 53, 'Non-agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(14, 'Motor vehicle, Trailer, Semi-Trailer/ Other Transport Equipment', 8178, 13, 'Non-agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(15, 'Others (including 32 other manufacturing)', 15562, 244, 'Non-agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(16, 'Sub-Total', 131667, 2298, 'Non-agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(17, 'Grand Total', 224108, 3530, 'Non-agro based', 'Number of Factories', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(18, 'Food Products/ Beverages/ Tobacco Products', 35641, 804, 'Agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(19, 'Textiles/Wearing Apparel', 20204, 24, 'Agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(20, 'Leather and Leather Products', 3403, 8, 'Agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(21, 'Wood and Wood Products / Furniture', 5085, 213, 'Agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(22, 'Paper and Paper Products/ printing and Reproduction of Recorded Media/Publishing Activities', 9545, 80, 'Agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(23, 'Sub Total', 73878, 1129, 'Agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(24, 'Coke and Refined Petroleum Products', 1447, 61, 'Non-agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(25, 'Chemicals and Chemical products', 10105, 46, 'Non-agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(26, 'Basic Pharmaceutical Products', 4298, 28, 'Non-agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(27, 'Rubber and Plastic Products', 11051, 78, 'Non-agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(28, 'Non-Metallic Mineral Products', 23084, 1152, 'Non-agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(29, 'Metals/ Fabricated Metal Products Except Machinery and Equipment', 23374, 152, 'Non-agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(30, 'Electrical Equipment/ Machinery and Equipment NEC/Repair and Installation of machinery equipment', 17444, 53, 'Non-agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(31, 'Motor vehicle, Trailer, Semi-Trailer/ Other Transport Equipment', 6965, 13, 'Non-agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(32, 'Others (including 32 other manufacturing)', 12330, 230, 'Non-agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(33, 'Sub-Total', 110098, 1813, 'Non-agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(34, 'Grand Total', 183976, 2942, 'Non-agro based', 'Factories in operation', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(35, 'Food Products/ Beverages/ Tobacco Products', 198339, 4437, 'Agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(36, 'Textiles/Wearing Apparel', 149838, 45, 'Agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(37, 'Leather and Leather Products', 8476.34, 23, 'Agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(38, 'Wood and Wood Products / Furniture', 8982.86, 41, 'Agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(39, 'Paper and Paper Products/ printing and Reproduction of Recorded Media/Publishing Activities', 68999.6, 238, 'Agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(40, 'Sub Total', 434635, 4783, 'Agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(41, 'Coke and Refined Petroleum Products', 235686, 2711, 'Non-agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(42, 'Chemicals and Chemical products', 175644, 48, 'Non-agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(43, 'Basic Pharmaceutical Products', 86934.9, 30, 'Non-agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(44, 'Rubber and Plastic Products', 75856.7, 82, 'Non-agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(45, 'Non-Metallic Mineral Products', 177270, 1325, 'Non-agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(46, 'Metals/ Fabricated Metal Products Except Machinery and Equipment', 611898, 210, 'Non-agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(47, 'Electrical Equipment/ Machinery and Equipment NEC/Repair and Installation of machinery equipment', 127697, 24, 'Non-agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(48, 'Motor vehicle, Trailer, Semi-Trailer/ Other Transport Equipment', 187433, 50, 'Non-agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(49, 'Others (including 32 other manufacturing)', 318325, 680, 'Non-agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(50, 'Sub-Total', 1996740, 5161, 'Non-agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(51, 'Grand Total', 2431380, 9945, 'Non-agro based', 'Fixed Capital (Rs.Crore)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(52, 'Food Products/ Beverages/ Tobacco Products', 2212460, 37604, 'Agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(53, 'Textiles/Wearing Apparel', 2526610, 3145, 'Agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(54, 'Leather and Leather Products', 327143, 652, 'Agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(55, 'Wood and Wood Products / Furniture', 142828, 2450, 'Agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(56, 'Paper and Paper Products/ printing and Reproduction of Recorded Media/Publishing Activities', 438667, 2407, 'Agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(57, 'Sub Total', 5647710, 46258, 'Agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(58, 'Coke and Refined Petroleum Products', 122731, 3227, 'Non-agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(59, 'Chemicals and Chemical products', 712994, 1512, 'Non-agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(60, 'Basic Pharmaceutical Products', 610250, 811, 'Non-agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(61, 'Rubber and Plastic Products', 597032, 833, 'Non-agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(62, 'Non-Metallic Mineral Products', 996507, 78849, 'Non-agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(63, 'Metals/ Fabricated Metal Products Except Machinery and Equipment', 1632110, 3194, 'Non-agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(64, 'Electrical Equipment/ Machinery and Equipment NEC/Repair and Installation of machinery equipment', 1262150, 955, 'Non-agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(65, 'Motor vehicle, Trailer, Semi-Trailer/ Other Transport Equipment', 1195320, 662, 'Non-agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(66, 'Others (including 32 other manufacturing)', 781370, 9811, 'Non-agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(67, 'Sub-Total', 7910460, 99854, 'Non-agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
+(68, 'Grand Total', 13558200, 146112, 'Non-agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08');
 
 -- --------------------------------------------------------
 
@@ -5502,6 +5653,120 @@ CREATE TABLE `hhs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ict2s`
+--
+
+DROP TABLE IF EXISTS `ict2s`;
+CREATE TABLE `ict2s` (
+  `id` bigint(20) NOT NULL,
+  `State` varchar(255) DEFAULT NULL,
+  `Rural` float DEFAULT NULL,
+  `Urban` float DEFAULT NULL,
+  `All` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ict2s`
+--
+
+INSERT INTO `ict2s` (`id`, `State`, `Rural`, `Urban`, `All`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Andhra Pradesh', NULL, NULL, 4.1, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(2, 'Bihar', NULL, NULL, 1.2, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(3, 'Gujarat', NULL, NULL, 5.4, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(4, 'Haryana', NULL, NULL, 4.3, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(5, 'Karnataka', NULL, NULL, 4.7, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(6, 'Kerala', NULL, NULL, 7.5, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(7, 'Madhya Pradesh', NULL, NULL, 1.8, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(8, 'Maharashtra', NULL, NULL, 6.6, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(9, 'Odisha', NULL, NULL, 1.5, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(10, 'Punjab', NULL, NULL, 7, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(11, 'Rajasthan', NULL, NULL, 2.6, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(12, 'Tamil Nadu', NULL, NULL, 5.9, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(13, 'Uttar Pradesh', NULL, NULL, 1.7, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(14, 'West Bengal', NULL, NULL, 2.7, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(15, 'All-India', NULL, NULL, 3.5, '2001', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(16, 'Andhra Pradesh', NULL, NULL, 9.5, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(17, 'Bihar', NULL, NULL, 2.4, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(18, 'Gujarat', NULL, NULL, 12.7, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(19, 'Haryana', NULL, NULL, 10.8, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(20, 'Karnataka', NULL, NULL, 12.2, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(21, 'Kerala', NULL, NULL, 18.8, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(22, 'Madhya Pradesh', NULL, NULL, 5.2, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(23, 'Maharashtra', NULL, NULL, 10, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(24, 'Odisha', NULL, NULL, 4, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(25, 'Punjab', NULL, NULL, 21.9, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(26, 'Rajasthan', NULL, NULL, 6.1, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(27, 'Tamil Nadu', NULL, NULL, 11.4, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(28, 'Uttar Pradesh', NULL, NULL, 4.1, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(29, 'West Bengal', NULL, NULL, 3, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(30, 'All-India', NULL, NULL, 9, '2005', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(31, 'Andhra Pradesh', NULL, NULL, 57.2, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(32, 'Bihar', NULL, NULL, 38, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(33, 'Gujarat', NULL, NULL, 58.5, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(34, 'Haryana', NULL, NULL, 59.7, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(35, 'Karnataka', NULL, NULL, 67.8, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(36, 'Kerala', NULL, NULL, 80.4, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(37, 'Madhya Pradesh', NULL, NULL, 45.2, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(38, 'Maharashtra', NULL, NULL, 50.3, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(39, 'Odisha', NULL, NULL, 39.3, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(40, 'Punjab', NULL, NULL, 75.4, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(41, 'Rajasthan', NULL, NULL, 52.8, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(42, 'Tamil Nadu', NULL, NULL, 74.3, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(43, 'Uttar Pradesh', NULL, NULL, 38.5, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(44, 'West Bengal', NULL, NULL, 34.8, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(45, 'All-India', NULL, NULL, 52.7, '2010', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(46, 'Andhra Pradesh', NULL, NULL, 84.2, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(47, 'Bihar', NULL, NULL, 51.2, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(48, 'Gujarat', NULL, NULL, 95.6, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(49, 'Haryana', NULL, NULL, 82.7, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(50, 'Karnataka', NULL, NULL, 97.5, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(51, 'Kerala', NULL, NULL, 95.6, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(52, 'Madhya Pradesh', NULL, NULL, 60.4, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(53, 'Maharashtra', NULL, NULL, 93.4, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(54, 'Odisha', NULL, NULL, 66.9, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(55, 'Punjab', NULL, NULL, 103.8, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(56, 'Rajasthan', NULL, NULL, 77.8, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(57, 'Tamil Nadu', NULL, NULL, 117.5, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(58, 'Uttar Pradesh', NULL, NULL, 60.5, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(59, 'West Bengal', NULL, NULL, 76.1, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(60, 'All-India', NULL, NULL, 79.4, '2015', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(61, 'Andhra Pradesh', 51.4, 176.8, 86.4, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(62, 'Bihar', 36.4, 166.2, 54.3, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(63, 'Gujarat', 67.4, 145.4, 100.1, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(64, 'Haryana', 64.9, 122.9, 85.9, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(65, 'Karnataka', 53, 178.8, 101.9, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(66, 'Kerala', 62.2, 220.3, 102.3, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(67, 'Madhya Pradesh', 41.5, 124.3, 64.2, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(68, 'Maharashtra', 65.4, 134.7, 99, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(69, 'Odisha', 49.6, 159.8, 69.1, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(70, 'Punjab', 72, 149.8, 106.1, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(71, 'Rajasthan', 58.2, 162, 83.3, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(72, 'Tamil Nadu', 85, 140.4, 118.1, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(73, 'Uttar Pradesh', 42.2, 145.4, 65.8, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(74, 'West Bengal', 53.4, 145.3, 79.8, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(75, 'All-India', 51.4, 154, 83.4, '2016', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(76, 'Andhra Pradesh', 60.4, 192, 97.2, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(77, 'Bihar', 40.7, 186.9, 61, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(78, 'Gujarat', 75.5, 165.9, 113.7, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(79, 'Haryana', 64.8, 136.3, 91, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(80, 'Karnataka', 58.8, 198, 113.4, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(81, 'Kerala', 69.5, 248.4, 114.8, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(82, 'Madhya Pradesh', 43.5, 128.8, 67, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(83, 'Maharashtra', 70.4, 150.5, 109.5, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(84, 'Odisha', 58.2, 183.9, 80.7, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(85, 'Punjab', 80.5, 165.5, 118.3, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(86, 'Rajasthan', 61.7, 186.8, 92, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(87, 'Tamil Nadu', 93.9, 150.6, 128.4, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(88, 'Uttar Pradesh', 46.1, 167.6, 74, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(89, 'West Bengal', 61.9, 168.8, 92.7, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
+(90, 'All-India', 56.9, 171.8, 93, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `ict3s`
 --
 
@@ -5529,6 +5794,129 @@ INSERT INTO `ict3s` (`id`, `Item`, `Total`, `Coverage_in_percentage`, `created_a
 (7, 'National Highway (km)', 3734, 100, '2018-10-30 08:27:58', '2018-10-30 08:27:58'),
 (8, 'State Highway (km)', 4857, 100, '2018-10-30 08:27:58', '2018-10-30 08:27:58'),
 (9, 'Total Railway Route (km)', 3515, 100, '2018-10-30 08:27:58', '2018-10-30 08:27:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ict4s`
+--
+
+DROP TABLE IF EXISTS `ict4s`;
+CREATE TABLE `ict4s` (
+  `id` bigint(20) NOT NULL,
+  `State` varchar(255) DEFAULT NULL,
+  `Rural` float DEFAULT NULL,
+  `Urban` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `Rural_Percentage` float DEFAULT NULL,
+  `Urban_Percentage` float DEFAULT NULL,
+  `Share_in_all_India` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ict4s`
+--
+
+INSERT INTO `ict4s` (`id`, `State`, `Rural`, `Urban`, `Total`, `Rural_Percentage`, `Urban_Percentage`, `Share_in_all_India`, `Indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Andhra Pradesh', 9542, 780, 10322, 92.4, 7.6, 6.7, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(2, 'Bihar ', 8573, 464, 9037, 94.9, 5.1, 5.8, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(3, 'Chhattisgarh', 2888, 269, 3157, 91.5, 8.5, 2, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(4, 'Gujarat', 8168, 815, 8983, 90.9, 9.1, 5.8, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(5, 'Haryana', 2315, 369, 2684, 86.3, 13.7, 1.7, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(6, 'Jharkhand', 2839, 270, 3109, 91.3, 8.7, 2, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(7, 'Karnataka', 8609, 1054, 9663, 89.1, 10.9, 6.2, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(8, 'Kerala', 4207, 860, 5067, 83, 17, 3.3, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(9, 'Madhya Pradesh', 7475, 811, 8286, 90.2, 9.8, 5.3, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(10, 'Maharashtra', 11570, 1289, 12859, 90, 10, 8.3, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(11, 'Odisha', 7573, 596, 8169, 92.7, 7.3, 5.3, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(12, 'Punjab', 3409, 452, 3861, 88.3, 11.7, 2.5, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(13, 'Rajasthan', 9675, 643, 10318, 93.8, 6.2, 6.7, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(14, 'Tamil Nadu', 10275, 1856, 12131, 84.7, 15.3, 7.8, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(15, 'Uttar Pradesh', 15729, 1933, 17662, 89.1, 10.9, 11.4, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(16, 'West Bengal', 7777, 1294, 9071, 85.7, 14.3, 5.9, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(17, 'All States', 138955, 15955, 154910, 89.7, 10.3, 100, 'Post Offices', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(18, 'Andhra Pradesh', 4636, 25568, 30204, 15.3, 84.7, 6.1, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(19, 'Bihar ', 3000, 18033, 21033, 14.3, 85.7, 4.2, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(20, 'Chhattisgarh', 2715, 12273, 14988, 18.1, 81.9, 3, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(21, 'Gujarat', 5419, 19920, 25339, 21.4, 78.6, 5.1, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(22, 'Haryana', 1285, 6486, 7771, 16.5, 83.5, 1.6, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(23, 'Jharkhand', 1274, 11901, 13175, 9.7, 90.3, 2.6, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(24, 'Karnataka', 5738, 23808, 29546, 19.4, 80.6, 5.9, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(25, 'Kerala', 3385, 12127, 15512, 21.8, 78.2, 3.1, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(26, 'Madhya Pradesh', 4272, 33896, 38168, 11.2, 88.8, 7.7, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(27, 'Maharashtra', 7871, 41347, 49218, 16, 84, 9.9, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(28, 'Odisha', 2595, 18325, 20920, 12.4, 87.6, 4.2, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(29, 'Punjab', 2718, 12008, 14726, 18.5, 81.5, 3, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(30, 'Rajasthan', 3814, 23992, 27806, 13.7, 86.3, 5.6, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(31, 'Tamil Nadu', 9762, 31643, 41405, 23.6, 76.4, 8.3, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(32, 'Uttar Pradesh', 7924, 57450, 65374, 12.1, 87.9, 13.1, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(33, 'West Bengal', 4416, 22615, 27031, 16.3, 83.7, 5.4, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
+(34, 'All States', 79890, 418411, 498301, 16, 84, 100, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ict5s`
+--
+
+DROP TABLE IF EXISTS `ict5s`;
+CREATE TABLE `ict5s` (
+  `id` bigint(20) NOT NULL,
+  `State` varchar(255) DEFAULT NULL,
+  `Rural` float DEFAULT NULL,
+  `Deposits` float DEFAULT NULL,
+  `Investment` float DEFAULT NULL,
+  `MIS` float DEFAULT NULL,
+  `Sukanya_Samridhi_Account` float DEFAULT NULL,
+  `MG_NREGA` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ict5s`
+--
+
+INSERT INTO `ict5s` (`id`, `State`, `Rural`, `Deposits`, `Investment`, `MIS`, `Sukanya_Samridhi_Account`, `MG_NREGA`, `Total`, `Indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Andhra Pradesh', NULL, 354, 1, 10, 7, 259, 631, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(2, 'Bihar', NULL, 187, 1, 14, 3, 67, 271, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(3, 'Chhattisgarh', NULL, 39, 0, 1, 1, 55, 97, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(4, 'Gujarat', NULL, 147, 2, 18, 2, 23, 192, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(5, 'Haryana', NULL, 61, 1, 4, 3, 1, 70, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(6, 'Jharkhand', NULL, 95, 0, 4, 4, 40, 143, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(7, 'Karnataka', NULL, 151, 1, 6, 9, 7, 173, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(8, 'Kerala', NULL, 116, 0, 4, 3, 5, 128, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(9, 'Madhya Pradesh', NULL, 215, 1, 6, 14, 20, 255, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(10, 'Maharashtra', NULL, 307, 6, 19, 4, 36, 371, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(11, 'Orissa', NULL, 119, 0, 5, 3, 17, 144, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(12, 'Punjab', NULL, 64, 2, 7, 2, 2, 78, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(13, 'Rajasthan', NULL, 164, 2, 7, 4, 20, 197, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(14, 'Tamil Nadu', NULL, 237, 2, 7, 12, 0, 258, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(15, 'Uttar Pradesh', NULL, 319, 2, 16, 12, 4, 353, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(16, 'West Bengal', NULL, 213, 2, 55, 6, 70, 346, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(17, 'Total', NULL, 3032, 28, 195, 98, 648, 4001, 'Number of Accounts', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(18, 'Andhra Pradesh', NULL, 10301, 1797, 10419, 637, NULL, 23154, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(19, 'Bihar', NULL, 13232, 2018, 7556, 116, NULL, 22923, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(20, 'Chhattisgarh', NULL, 3799, 694, 1839, 62, NULL, 6393, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(21, 'Gujarat', NULL, 14607, 6985, 16327, 164, NULL, 38083, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(22, 'Haryana', NULL, 7721, 2329, 3403, 264, NULL, 13717, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(23, 'Jharkhand', NULL, 2728, 132, 5437, 136, NULL, 8433, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(24, 'Karnataka', NULL, 10754, 3146, 6238, 911, NULL, 21049, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(25, 'Kerala', NULL, 9046, 619, 2493, 282, NULL, 12439, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(26, 'Madhya Pradesh', NULL, 9548, 1241, 4102, 166, NULL, 15057, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(27, 'Maharashtra', NULL, 14491, 8464, 27993, 589, NULL, 51538, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(28, 'Orissa', NULL, 6546, 401, 3462, 193, NULL, 10602, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(29, 'Punjab', NULL, 13532, 5963, 6357, 206, NULL, 26058, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(30, 'Rajasthan', NULL, 9914, 3955, 5643, 198, NULL, 19710, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(31, 'Tamil Nadu', NULL, 12304, 3546, 10219, 1017, NULL, 27086, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(32, 'Uttar Pradesh', NULL, 28380, 4525, 16986, 621, NULL, 50512, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(33, 'West Bengal', NULL, 27998, 3320, 47665, 277, NULL, 79259, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
+(34, 'Total', NULL, 224805, 61225, 193806, 6426, NULL, 486262, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35');
 
 -- --------------------------------------------------------
 
@@ -8836,6 +9224,139 @@ INSERT INTO `revenue_expenditures` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `roads1s`
+--
+
+DROP TABLE IF EXISTS `roads1s`;
+CREATE TABLE `roads1s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2011-12` float DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16_P` float DEFAULT NULL,
+  `2016-17_Q` float DEFAULT NULL,
+  `CAGR_2011-16` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `roads1s`
+--
+
+INSERT INTO `roads1s` (`id`, `Sector`, `2011-12`, `2012-13`, `2013-14`, `2014-15`, `2015-16_P`, `2016-17_Q`, `CAGR_2011-16`, `created_at`, `updated_at`) VALUES
+(1, 'Transport', 4.65, 5.32, 5.9, 6.25, 6.41, 6.41, 13, '2018-11-01 05:45:47', '2018-11-01 05:45:47'),
+(2, 'Railways', 1.14, 1.33, 1.52, 1.52, 1.45, 1.35, 10.9, '2018-11-01 05:45:47', '2018-11-01 05:45:47'),
+(3, 'Road Transport', 3.48, 3.96, 4.36, 4.71, 4.91, 5, 13.7, '2018-11-01 05:45:47', '2018-11-01 05:45:47'),
+(4, 'Water Transport', 0.02, 0.01, 0.01, 0.01, 0, 0, -25.4, '2018-11-01 05:45:47', '2018-11-01 05:45:47'),
+(5, 'Air Transport', 0.01, 0.02, 0.01, 0.02, 0.04, 0.05, 34.2, '2018-11-01 05:45:47', '2018-11-01 05:45:47'),
+(6, 'Communication', 2.21, 2.33, 2.61, 2.89, 3.18, 3.2, 14.6, '2018-11-01 05:45:47', '2018-11-01 05:45:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roads2s`
+--
+
+DROP TABLE IF EXISTS `roads2s`;
+CREATE TABLE `roads2s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2007-08` float DEFAULT NULL,
+  `2011-12` float DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18` float DEFAULT NULL,
+  `CAGR_2014-18` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `roads2s`
+--
+
+INSERT INTO `roads2s` (`id`, `Sector`, `2007-08`, `2011-12`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18`, `CAGR_2014-18`, `Indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Total Expenditure on Road and Bridges', 2696, 4842, 4114, 5458, 5168, 6112, 7696, 7522, 11, 'Public Investment in Road and Bridges', '2018-11-01 06:16:27', '2018-11-01 06:16:27'),
+(2, 'Revenue Expenditure on Road and Bridges', 404, 786, 823, 1375, 991, 1709, 2045, 2016, 16.1, 'Public Investment in Road and Bridges', '2018-11-01 06:16:27', '2018-11-01 06:16:27'),
+(3, 'Capital Expenditure on Road and Bridges', 2292, 4056, 3291, 4083, 4177, 4403, 5651, 5506, 9.4, 'Public Investment in Road and Bridges', '2018-11-01 06:16:27', '2018-11-01 06:16:27'),
+(4, 'Expenditure on Economic Services', 9520, 17475, 20246, 24871, 29173, 37305, 51996, 51332, 22.5, 'Public Investment in Road and Bridges', '2018-11-01 06:16:27', '2018-11-01 06:16:27'),
+(5, 'Development Expenditure', 20410, 37619, 45402, 54456, 64308, 79605, 112681, 113190, 22.4, 'Public Investment in Road and Bridges', '2018-11-01 06:16:27', '2018-11-01 06:16:27'),
+(6, 'Total Budget', 31571, 60182, 69207, 80405, 94698, 112328, 154327, 160086, 20.5, 'Public Investment in Road and Bridges', '2018-11-01 06:16:27', '2018-11-01 06:16:27'),
+(7, 'GSDP', 113680, 247144, 282368, 317101, 342951, 381501, 438030, 488861, 11.7, 'Public Investment in Road and Bridges', '2018-11-01 06:16:27', '2018-11-01 06:16:27'),
+(8, 'Economic Services', 28.3, 27.7, 20.3, 21.9, 17.7, 16.4, 14.8, 14.7, NULL, 'Public Investment in Road and Bridges as percentage', '2018-11-01 06:16:27', '2018-11-01 06:16:27'),
+(9, 'Development Expenditure', 13.2, 12.9, 9.1, 10, 8, 7.7, 6.8, 6.6, NULL, 'Public Investment in Road and Bridges as percentage', '2018-11-01 06:16:27', '2018-11-01 06:16:27'),
+(10, 'Total Budget', 8.5, 8, 5.9, 6.8, 5.5, 5.4, 5, 4.7, NULL, 'Public Investment in Road and Bridges as percentage', '2018-11-01 06:16:27', '2018-11-01 06:16:27'),
+(11, 'GSDP', 2.4, 2, 1.5, 1.7, 1.5, 1.6, 1.8, 1.5, NULL, 'Public Investment in Road and Bridges as percentage', '2018-11-01 06:16:27', '2018-11-01 06:16:27');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roads3s`
+--
+
+DROP TABLE IF EXISTS `roads3s`;
+CREATE TABLE `roads3s` (
+  `id` bigint(20) NOT NULL,
+  `State` varchar(255) DEFAULT NULL,
+  `NH` float DEFAULT NULL,
+  `SH` float DEFAULT NULL,
+  `Other` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `roads3s`
+--
+
+INSERT INTO `roads3s` (`id`, `State`, `NH`, `SH`, `Other`, `Total`, `Indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Andhra Pradesh', 4670, 6485, 167867, 179022, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(2, 'Bihar', 4701, 4426, 196883, 206010, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(3, 'Chhattisgarh', 3079, 4374, 90081, 97534, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(4, 'Gujarat', 4971, 18017, 159299, 182287, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(5, 'Haryana', 2307, 2128, 41852, 46287, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(6, 'Jharkhand', 2632, 1358, 38715, 42705, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(7, 'Karnataka', 6432, 19721, 295655, 321808, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(8, 'Kerala', 1811, 4341, 188702, 194854, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(9, 'Madhya Pradesh', 5184, 10934, 272813, 288931, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(10, 'Maharashtra', 7048, 40144, 560948, 608140, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(11, 'Odisha', 4645, 4109, 274938, 283692, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(12, 'Punjab', 2239, 1133, 101996, 105368, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(13, 'Rajasthan', 7886, 10941, 229329, 248156, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(14, 'Tamil Nadu', 5006, 11752, 244342, 261100, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(15, 'Uttar Pradesh', 8483, 7543, 399357, 415383, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(16, 'West Bengal', 2910, 3697, 289390, 295997, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(17, 'All-India', 97991, 167109, 4307040, 4572140, 'Road Network (km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(18, 'Andhra Pradesh', 1.7, 2.4, 61, 65.1, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(19, 'Bihar', 5, 4.7, 209.1, 218.8, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(20, 'Chhattisgarh', 2.3, 3.2, 66.6, 72.1, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(21, 'Gujarat', 2.5, 9.2, 81.2, 92.9, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(22, 'Haryana', 5.2, 4.8, 94.7, 104.7, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(23, 'Jharkhand', 3.3, 1.7, 48.6, 53.6, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(24, 'Karnataka', 3.4, 10.3, 154.2, 167.8, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(25, 'Kerala', 4.7, 11.2, 485.7, 501.5, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(26, 'Madhya Pradesh', 1.7, 3.5, 88.5, 93.7, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(27, 'Maharashtra', 2.3, 13, 182.3, 197.6, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(28, 'Odisha', 3, 2.6, 176.6, 182.2, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(29, 'Punjab', 4.4, 2.2, 202.5, 209.2, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(30, 'Rajasthan', 2.3, 3.2, 67, 72.5, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(31, 'Tamil Nadu', 3.8, 9, 187.9, 200.8, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(32, 'Uttar Pradesh', 3.5, 3.1, 165.8, 172.4, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(33, 'West Bengal', 3.3, 4.2, 326.1, 333.5, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
+(34, 'All-India', 3, 5.1, 131, 139.1, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `roads4s`
 --
 
@@ -9148,6 +9669,127 @@ INSERT INTO `roads10s` (`id`, `Districts`, `NH`, `SH`, `MDR`, `Rural_Road`, `Yea
 (76, 'Araria', 154, 69, 408, 4977, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
 (77, 'Katihar', 158, 103, 275, 4531, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
 (78, 'Total', 4917, 4006, 11145, 129473, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `road_transport1_part1s`
+--
+
+DROP TABLE IF EXISTS `road_transport1_part1s`;
+CREATE TABLE `road_transport1_part1s` (
+  `id` bigint(20) NOT NULL,
+  `State` varchar(255) DEFAULT NULL,
+  `Two_Wheeler` float DEFAULT NULL,
+  `Cars` float DEFAULT NULL,
+  `Jeeps` float DEFAULT NULL,
+  `Miscellaneous` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `road_transport1_part1s`
+--
+
+INSERT INTO `road_transport1_part1s` (`id`, `State`, `Two_Wheeler`, `Cars`, `Jeeps`, `Miscellaneous`, `created_at`, `updated_at`) VALUES
+(1, 'Andhra Pradesh', 6148, 454, 11, 256, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(2, 'Bihar', 3490, 236, 113, 498, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(3, 'Chhattisgarh', 3472, 226, 20, 302, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(4, 'Gujarat', 13705, 2009, 181, 1021, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(5, 'Haryana', 4989, 1421, 148, 618, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(6, 'Jharkhand', 1522, 191, 62, 71, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(7, 'Karnataka', 10644, 1742, 45, 949, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(8, 'Kerala', 5722, 1691, 138, 185, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(9, 'Madhya Pradesh', 8832, 638, 59, 973, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(10, 'Maharashtra', 18604, 3114, 496, 1008, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(11, 'Orissa', 4126, 273, 47, 246, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(12, 'Punjab', 4730, 617, 64, 536, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(13, 'Rajasthan', 9272, 814, 357, 983, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(14, 'TamilNadu', 18098, 1972, 60, 560, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(15, 'UttarPradesh', 17398, 1572, 491, 1259, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(16, 'WestBengal', 5280, 1002, 10, 349, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
+(17, 'All-India', 154298, 23808, 2547, 10475, '2018-11-06 06:45:40', '2018-11-06 06:45:40');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `road_transport1_part2s`
+--
+
+DROP TABLE IF EXISTS `road_transport1_part2s`;
+CREATE TABLE `road_transport1_part2s` (
+  `id` bigint(20) NOT NULL,
+  `State` varchar(255) DEFAULT NULL,
+  `Buses` float DEFAULT NULL,
+  `Taxis` float DEFAULT NULL,
+  `Light_Motor_Vehicles_Passengers` float DEFAULT NULL,
+  `Goods_Carrier_Vehicles` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `road_transport1_part2s`
+--
+
+INSERT INTO `road_transport1_part2s` (`id`, `State`, `Buses`, `Taxis`, `Light_Motor_Vehicles_Passengers`, `Goods_Carrier_Vehicles`, `created_at`, `updated_at`) VALUES
+(1, 'Andhra Pradesh', 38, 73, 397, 313, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(2, 'Bihar', 29, 85, 202, 124, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(3, 'Chhattisgarh', 53, 21, 33, 187, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(4, 'Gujarat', 76, 108, 678, 942, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(5, 'Haryana', 50, 40, 144, 517, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(6, 'Jharkhand', 8, 30, 64, 118, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(7, 'Karnataka', 81, 205, 381, 606, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(8, 'Kerala', 415, 150, 731, 499, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(9, 'Madhya Pradesh', 46, 175, 122, 297, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(10, 'Maharashtra', 121, 163, 696, 1360, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(11, 'Orissa', 25, 92, 106, 303, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(12, 'Punjab', 30, 19, 67, 202, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(13, 'Rajasthan', 98, 123, 168, 564, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(14, 'TamilNadu', 172, 349, 361, 946, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(15, 'UttarPradesh', 52, 98, 253, 512, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(16, 'WestBengal', 57, 125, 84, 496, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
+(17, 'All-India', 1527, 2257, 5028, 9344, '2018-11-06 07:04:39', '2018-11-06 07:04:39');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `road_transport2s`
+--
+
+DROP TABLE IF EXISTS `road_transport2s`;
+CREATE TABLE `road_transport2s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2011-12` float DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `CAGR_2011-17` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `road_transport2s`
+--
+
+INSERT INTO `road_transport2s` (`id`, `Sector`, `2011-12`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `CAGR_2011-17`, `created_at`, `updated_at`) VALUES
+(1, 'Truck', 10, 10, 11, 13, 14, 20, 14.2, '2018-11-05 06:48:10', '2018-11-05 06:48:10'),
+(2, 'Bus', 1, 2, 2, 2, 2, 3, 17, '2018-11-05 06:48:10', '2018-11-05 06:48:10'),
+(3, 'Car', 23, 24, 23, 28, 31, 34, 8.7, '2018-11-05 06:48:10', '2018-11-05 06:48:10'),
+(4, 'Taxi', 9, 14, 12, 7, 6, 5, -15.8, '2018-11-05 06:48:10', '2018-11-05 06:48:10'),
+(5, 'Jeep', 9, 10, 9, 9, 12, 9, 1.6, '2018-11-05 06:48:10', '2018-11-05 06:48:10'),
+(6, 'Auto', 21, 30, 35, 31, 37, 42, 12, '2018-11-05 06:48:10', '2018-11-05 06:48:10'),
+(7, 'Two-Wheeler', 331, 362, 420, 477, 549, 593, 13, '2018-11-05 06:48:10', '2018-11-05 06:48:10'),
+(8, 'Tractor', 23, 30, 31, 34, 35, 38, 9.2, '2018-11-05 06:48:10', '2018-11-05 06:48:10'),
+(9, 'Trailer', 11, 11, 8, 12, 18, 20, 14.9, '2018-11-05 06:48:10', '2018-11-05 06:48:10'),
+(10, 'Others', 1, 2, 2, 2, 2, 1, 0, '2018-11-05 06:48:10', '2018-11-05 06:48:10'),
+(11, 'Total', 439, 496, 553, 615, 704, 764, 11.9, '2018-11-05 06:48:10', '2018-11-05 06:48:10'),
+(12, 'Revenue Collection (Rs. crore)', 558, 669, 835, 967, 1071, 1250, 17.3, '2018-11-05 06:48:10', '2018-11-05 06:48:10');
 
 -- --------------------------------------------------------
 
@@ -9505,6 +10147,9 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20181012100818'),
 ('20181012104359'),
 ('20181012115935'),
+('20181015062536'),
+('20181015095355'),
+('20181015120335'),
 ('20181022082303'),
 ('20181022085921'),
 ('20181025050706'),
@@ -9521,7 +10166,16 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20181030074330'),
 ('20181030082713'),
 ('20181030085714'),
-('20181030110448');
+('20181030110448'),
+('20181101053622'),
+('20181101060907'),
+('20181101070732'),
+('20181105064345'),
+('20181105092647'),
+('20181105113556'),
+('20181106054241'),
+('20181106070216'),
+('20181106074513');
 
 -- --------------------------------------------------------
 
@@ -11715,6 +12369,64 @@ INSERT INTO `tourism2s` (`id`, `Year`, `Domestic_tourists`, `Foreign_tourists`, 
 (7, '2017', 32414, 1083, 33497, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
 (8, 'CAGR', 9.5, 1.3, 9.1, '2018-10-12 09:17:39', '2018-10-12 09:17:39');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tourism3s`
+--
+
+DROP TABLE IF EXISTS `tourism3s`;
+CREATE TABLE `tourism3s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `2012` float DEFAULT NULL,
+  `2013` float DEFAULT NULL,
+  `2014` float DEFAULT NULL,
+  `2015` float DEFAULT NULL,
+  `2016` float DEFAULT NULL,
+  `2017` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tourism3s`
+--
+
+INSERT INTO `tourism3s` (`id`, `Sector`, `Indicator`, `2012`, `2013`, `2014`, `2015`, `2016`, `2017`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 'Domestic', 5091, 1459, 1033, 2823, 3973, 7530, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(2, 'Gaya', 'Domestic', 5063, 12544, 4547, 3701, 2890, 3640, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(3, 'Bodh Gaya', 'Domestic', 933, 399, 1506, 1752, 1694, 1758, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(4, 'Rajgir', 'Domestic', 3700, 1381, 1105, 4381, 1568, 1514, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(5, 'Nalanda', 'Domestic', 934, 502, 735, 927, 1041, 962, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(6, 'Raxual', 'Domestic', 81, 14, 44, 533, 737, 882, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(7, 'Munger', 'Domestic', 101, 81, 84, 106, 113, 121, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(8, 'Vaishali', 'Domestic', 53, 90, 116, 776, 918, 916, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(9, 'Muzaffarpur', 'Domestic', 362, 235, 442, 842, 994, 943, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(10, 'Bhagalpur', 'Domestic', 1997, 758, 878, 1036, 1193, 1068, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(11, 'Sonepur Fair', 'Domestic', 0, 2495, 4654, 4732, 3837, 3853, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(12, 'Pitrapaksha Mela, Gaya', 'Domestic', 0, 0, NULL, 145, 831, 3125, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(13, 'Shrawani Mela Sultanganj (Bhagalpur)', 'Domestic', 3112, 1624, 2564, 2864, 2873, 791, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(14, 'Other', 'Domestic', 19, 5, 4, 3411, 5698, 5314, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(15, 'Total', 'Domestic', 21446, 21587, 17712, 28029, 28362, 32414, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(16, 'Patna', 'Foreign', 16, 10, 8, 13, 23, 14, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(17, 'Gaya', 'Foreign', 269, 248, 203, 239, 289, 314, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(18, 'Bodh Gaya', 'Foreign', 208, 140, 196, 237, 242, 283, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(19, 'Rajgir', 'Foreign', 373, 162, 141, 167, 170, 169, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(20, 'Nalanda', 'Foreign', 190, 105, 104, 139, 145, 163, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(21, 'Raxual', 'Foreign', 3, 2, 23, 2, 1, 1, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(22, 'Munger', 'Foreign', 0, 2, 0, 0, 0, 0, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(23, 'Vaishali', 'Foreign', 38, 72, 41, 89, 100, 91, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(24, 'Muzaffarpur', 'Foreign', 0, 0, 0, 0, 0, 0, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(25, 'Bhagalpur', 'Foreign', 0, 0, 0, 0, 0, 0, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(26, 'Sonepur Fair', 'Foreign', 0, 0, 0, 0, 0, 0, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(27, 'Pitrapaksha Mela, Gaya', 'Foreign', 0, 0, NULL, 0, 4, 43, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(28, 'Shrawani Mela Sultanganj (Bhagalpur)', 'Foreign', 0, 26, 32, 34, 35, 3, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(29, 'Other', 'Foreign', 0, 0, 0, 4, 0, 0, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(30, 'Total', 'Foreign', 1097, 767, 748, 924, 1010, 1083, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(31, 'Grand Total', NULL, 22543, 22354, 18460, 28953, 29372, 33497, '2018-10-16 06:37:49', '2018-10-16 06:37:49');
+
 --
 -- Indexes for dumped tables
 --
@@ -11816,6 +12528,12 @@ ALTER TABLE `agro_based_industries5s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `agro_based_industries6s`
+--
+ALTER TABLE `agro_based_industries6s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `airways`
 --
 ALTER TABLE `airways`
@@ -11903,6 +12621,12 @@ ALTER TABLE `annual_survey5s`
 -- Indexes for table `annual_survey6s`
 --
 ALTER TABLE `annual_survey6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `annual_survey7s`
+--
+ALTER TABLE `annual_survey7s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12206,9 +12930,27 @@ ALTER TABLE `hhs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `ict2s`
+--
+ALTER TABLE `ict2s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `ict3s`
 --
 ALTER TABLE `ict3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ict4s`
+--
+ALTER TABLE `ict4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ict5s`
+--
+ALTER TABLE `ict5s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12536,6 +13278,24 @@ ALTER TABLE `revenue_expenditures`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `roads1s`
+--
+ALTER TABLE `roads1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads2s`
+--
+ALTER TABLE `roads2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads3s`
+--
+ALTER TABLE `roads3s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `roads4s`
 --
 ALTER TABLE `roads4s`
@@ -12575,6 +13335,24 @@ ALTER TABLE `roads9s`
 -- Indexes for table `roads10s`
 --
 ALTER TABLE `roads10s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `road_transport1_part1s`
+--
+ALTER TABLE `road_transport1_part1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `road_transport1_part2s`
+--
+ALTER TABLE `road_transport1_part2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `road_transport2s`
+--
+ALTER TABLE `road_transport2s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -12806,6 +13584,12 @@ ALTER TABLE `tourism2s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tourism3s`
+--
+ALTER TABLE `tourism3s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -12814,6 +13598,12 @@ ALTER TABLE `tourism2s`
 --
 ALTER TABLE `agricultural_credit1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `agro_based_industries6s`
+--
+ALTER TABLE `agro_based_industries6s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `airways`
@@ -12828,6 +13618,12 @@ ALTER TABLE `annual_survey3s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
+-- AUTO_INCREMENT for table `annual_survey7s`
+--
+ALTER TABLE `annual_survey7s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+
+--
 -- AUTO_INCREMENT for table `bridge_sector1s`
 --
 ALTER TABLE `bridge_sector1s`
@@ -12840,10 +13636,28 @@ ALTER TABLE `bridge_sector2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `ict2s`
+--
+ALTER TABLE `ict2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+
+--
 -- AUTO_INCREMENT for table `ict3s`
 --
 ALTER TABLE `ict3s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `ict4s`
+--
+ALTER TABLE `ict4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `ict5s`
+--
+ALTER TABLE `ict5s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `irrigation7s`
@@ -12874,6 +13688,24 @@ ALTER TABLE `non_agro_based_industries4s`
 --
 ALTER TABLE `railways`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `roads1s`
+--
+ALTER TABLE `roads1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `roads2s`
+--
+ALTER TABLE `roads2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `roads3s`
+--
+ALTER TABLE `roads3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `roads4s`
@@ -12916,6 +13748,24 @@ ALTER TABLE `roads9s`
 --
 ALTER TABLE `roads10s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
+--
+-- AUTO_INCREMENT for table `road_transport1_part1s`
+--
+ALTER TABLE `road_transport1_part1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `road_transport1_part2s`
+--
+ALTER TABLE `road_transport1_part2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `road_transport2s`
+--
+ALTER TABLE `road_transport2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `road_transport3s`
@@ -12964,3 +13814,9 @@ ALTER TABLE `tourism1s`
 --
 ALTER TABLE `tourism2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `tourism3s`
+--
+ALTER TABLE `tourism3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
