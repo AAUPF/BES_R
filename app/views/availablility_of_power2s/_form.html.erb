@@ -1,0 +1,32 @@
+<%= form_with(model: availablility_of_power2, local: true) do |form| %>
+  <% if availablility_of_power2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(availablility_of_power2.errors.count, "error") %> prohibited this availablility_of_power2 from being saved:</h2>
+
+      <ul>
+      <% availablility_of_power2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Consumption %>
+    <%= form.text_field :Consumption %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

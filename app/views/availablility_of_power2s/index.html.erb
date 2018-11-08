@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Availablility Of Power2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Consumption</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @availablility_of_power2s.each do |availablility_of_power2| %>
+      <tr>
+        <td><%= availablility_of_power2.Districts %></td>
+        <td><%= availablility_of_power2.Consumption %></td>
+        <td><%= availablility_of_power2.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Availablility Of Power2', new_availablility_of_power2_path %>
