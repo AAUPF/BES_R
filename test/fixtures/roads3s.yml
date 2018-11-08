@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  NH: 1.5
+  SH: 1.5
+  Other: 1.5
+  Total: 1.5
+  Indicator: MyString
+
+two:
+  State: MyString
+  NH: 1.5
+  SH: 1.5
+  Other: 1.5
+  Total: 1.5
+  Indicator: MyString

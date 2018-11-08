@@ -1,0 +1,6 @@
+<h3>Import a CSV File</h3>
+  <%= form_tag import_road_transport1_part1s_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+     <% end %>
+<%= link_to 'Back', road_transport1_part1s_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  Buses: 1.5
+  Taxis: 1.5
+  Light_Motor_Vehicles_Passengers: 1.5
+  Goods_Carrier_Vehicles: 1.5
+
+two:
+  State: MyString
+  Buses: 1.5
+  Taxis: 1.5
+  Light_Motor_Vehicles_Passengers: 1.5
+  Goods_Carrier_Vehicles: 1.5

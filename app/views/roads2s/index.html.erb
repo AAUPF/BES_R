@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Roads2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>2007-08</th>
+      <th>2011-12</th>
+      <th>2012-13</th>
+      <th>2013-14</th>
+      <th>2014-15</th>
+      <th>2015-16</th>
+      <th>2016-17</th>
+      <th>2017-18</th>
+      <th>Cagr (2014-18)</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roads2s.each do |roads2| %>
+      <tr>
+        <td><%= roads2.Sector %></td>
+        <td><%= roads2.2007-08 %></td>
+        <td><%= roads2.2011-12 %></td>
+        <td><%= roads2.2012-13 %></td>
+        <td><%= roads2.2013-14 %></td>
+        <td><%= roads2.2014-15 %></td>
+        <td><%= roads2.2015-16 %></td>
+        <td><%= roads2.2016-17 %></td>
+        <td><%= roads2.2017-18 %></td>
+        <td><%= roads2.CAGR (2014-18) %></td>
+        <td><%= roads2.Indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Roads2', new_roads2_path %>

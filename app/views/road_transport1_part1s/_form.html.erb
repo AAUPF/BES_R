@@ -1,0 +1,42 @@
+<%= form_with(model: road_transport1_part1, local: true) do |form| %>
+  <% if road_transport1_part1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(road_transport1_part1.errors.count, "error") %> prohibited this road_transport1_part1 from being saved:</h2>
+
+      <ul>
+      <% road_transport1_part1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :State %>
+    <%= form.text_field :State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Two_Wheeler %>
+    <%= form.text_field :Two_Wheeler %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cars %>
+    <%= form.text_field :Cars %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Jeeps %>
+    <%= form.text_field :Jeeps %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Miscellaneous %>
+    <%= form.text_field :Miscellaneous %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

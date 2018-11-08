@@ -1,0 +1,42 @@
+<%= form_with(model: ict2, local: true) do |form| %>
+  <% if ict2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ict2.errors.count, "error") %> prohibited this ict2 from being saved:</h2>
+
+      <ul>
+      <% ict2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :State %>
+    <%= form.text_field :State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Rural %>
+    <%= form.text_field :Rural %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Urban %>
+    <%= form.text_field :Urban %>
+  </div>
+
+  <div class="field">
+    <%= form.label :All %>
+    <%= form.text_field :All %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

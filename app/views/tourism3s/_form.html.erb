@@ -1,0 +1,57 @@
+<%= form_with(model: tourism3, local: true) do |form| %>
+  <% if tourism3.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tourism3.errors.count, "error") %> prohibited this tourism3 from being saved:</h2>
+
+      <ul>
+      <% tourism3.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sector %>
+    <%= form.text_field :Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Tourist %>
+    <%= form.text_field :Tourist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2012 %>
+    <%= form.text_field :2012 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2013 %>
+    <%= form.text_field :2013 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2014 %>
+    <%= form.text_field :2014 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2015 %>
+    <%= form.text_field :2015 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2016 %>
+    <%= form.text_field :2016 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2017 %>
+    <%= form.text_field :2017 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

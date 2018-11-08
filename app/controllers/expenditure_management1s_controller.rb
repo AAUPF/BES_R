@@ -35,12 +35,12 @@ def test
 
 
     data = [
-      "General Services ",
-      "Social Services ",
-      "Economic Services ",
-      "Capital Outlay",
-      "Discharge of Public Debt ",
-      "Loans and Advances ",
+      "Transport",
+      "Railways",
+      "Road Transport",
+      "Water Transport",
+      "Air Transport",
+      "Communication",
 
   
     ]
@@ -49,13 +49,12 @@ def test
   else
 
     data = [
-     "General Services ",
-      "Social Services ",
-      "Economic Services ",
-      "Capital Outlay",
-      "Discharge of Public Debt ",
-      "Loans and Advances ",
-      "Total",
+      "Transport",
+      "Railways",
+      "Road Transport",
+      "Water Transport",
+      "Air Transport",
+      "Communication",
     ]
 
     

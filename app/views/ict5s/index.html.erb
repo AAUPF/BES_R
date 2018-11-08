@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ict5s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Rural</th>
+      <th>Deposits</th>
+      <th>Investment</th>
+      <th>Mis</th>
+      <th>Sukanya samridhi account</th>
+      <th>Mg nrega</th>
+      <th>Total</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ict5s.each do |ict5| %>
+      <tr>
+        <td><%= ict5.State %></td>
+        <td><%= ict5.Rural %></td>
+        <td><%= ict5.Deposits %></td>
+        <td><%= ict5.Investment %></td>
+        <td><%= ict5.MIS %></td>
+        <td><%= ict5.Sukanya_Samridhi_Account %></td>
+        <td><%= ict5.MG_NREGA %></td>
+        <td><%= ict5.Total %></td>
+        <td><%= ict5.Indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ict5', new_ict5_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Industrial_Group: MyString
+  India: 1.5
+  Bihar: 1.5
+  Bihar_Percentage_Share: 1.5
+  Indicator: MyString
+  Indicator1: MyString
+
+two:
+  Industrial_Group: MyString
+  India: 1.5
+  Bihar: 1.5
+  Bihar_Percentage_Share: 1.5
+  Indicator: MyString
+  Indicator1: MyString

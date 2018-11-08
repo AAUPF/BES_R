@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ict2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Rural</th>
+      <th>Urban</th>
+      <th>All</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ict2s.each do |ict2| %>
+      <tr>
+        <td><%= ict2.State %></td>
+        <td><%= ict2.Rural %></td>
+        <td><%= ict2.Urban %></td>
+        <td><%= ict2.All %></td>
+        <td><%= ict2.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ict2', new_ict2_path %>

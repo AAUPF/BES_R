@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  Rural: 1.5
+  Urban: 1.5
+  Total: 1.5
+  Rural_Percentage: 1.5
+  Urban_Percentage: 1.5
+  Share_in_all_India: 1.5
+  Indicator: MyString
+
+two:
+  State: MyString
+  Rural: 1.5
+  Urban: 1.5
+  Total: 1.5
+  Rural_Percentage: 1.5
+  Urban_Percentage: 1.5
+  Share_in_all_India: 1.5
+  Indicator: MyString

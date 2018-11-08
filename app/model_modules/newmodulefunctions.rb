@@ -47,7 +47,6 @@ module Newmodulefunctions
 
 
       def self.year_all(b,data,views,_year,jip)
-
         result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
 
         hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
@@ -71,7 +70,6 @@ end
 def self.no_year(b,rain_fall_type,_year,color,views,compare)
 
 
-
   if compare != "None"
 
     if views !="column" && views!="line"
@@ -81,7 +79,7 @@ def self.no_year(b,rain_fall_type,_year,color,views,compare)
 
           {
             type: views,
-            legendText: _year,
+            legendText: el['Sector'],
             showInLegend: true,
             dataPoints: [{ y: el[_year], label: el['Sector'] }]
           }
@@ -1325,7 +1323,6 @@ end
         }]
       end 
   end
-
   def self.search_elese_all(b,views,legend,remove,rain_fall_type,color)
 
     dataset = rain_fall_type.tr('_', ' ')
@@ -1339,6 +1336,21 @@ end
                       dataPoints: [{ y: el[rain_fall_type], label:  el["Year"] }]
                   }
   end
+end
+
+def self.search_elese_all_two(b,views,legend,remove,rain_fall_type,color)
+
+  dataset = rain_fall_type.tr('_', ' ')
+                hash_data =  b.map do |el|
+                  {
+                    type:views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:"#{el["#{legend}"]}",
+                    legendText:"#{el["#{legend}"]}",
+                    showInLegend: true,
+                    dataPoints: [{ y: el[rain_fall_type], label:  rain_fall_type }]
+                }
+end
 end
 
 

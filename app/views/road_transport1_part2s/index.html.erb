@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Road Transport1 Part2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Buses</th>
+      <th>Taxis</th>
+      <th>Light motor vehicles passengers</th>
+      <th>Goods carrier vehicles</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @road_transport1_part2s.each do |road_transport1_part2| %>
+      <tr>
+        <td><%= road_transport1_part2.State %></td>
+        <td><%= road_transport1_part2.Buses %></td>
+        <td><%= road_transport1_part2.Taxis %></td>
+        <td><%= road_transport1_part2.Light_Motor_Vehicles_Passengers %></td>
+        <td><%= road_transport1_part2.Goods_Carrier_Vehicles %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Road Transport1 Part2', new_road_transport1_part2_path %>

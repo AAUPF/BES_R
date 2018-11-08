@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  Two_Wheeler: 1.5
+  Cars: 1.5
+  Jeeps: 1.5
+  Miscellaneous: 1.5
+
+two:
+  State: MyString
+  Two_Wheeler: 1.5
+  Cars: 1.5
+  Jeeps: 1.5
+  Miscellaneous: 1.5

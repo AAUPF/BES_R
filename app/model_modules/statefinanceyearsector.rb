@@ -1,5 +1,4 @@
 include Newmodulefunctions
-
 module Statefinanceyearsector
   def import1(file)
     spreadsheet = Roo::Spreadsheet.open(file.path)
@@ -44,7 +43,6 @@ module Statefinanceyearsector
         where('Sector = ? OR Sector = ?', rain_fall_type, compare).order(:id)
       end
     else
-
       if rain_fall_type == 'All'
         all.order('id')
       else
@@ -153,6 +151,115 @@ module Statefinanceyearsector
                                   [
                                     # {title:compare, field:compare, sorter:"string", },
                                     { title: 'Sector', field: 'Sector', headerFilter: true },
+                                    { title: years, field: _year }
+                                  ]
+                    end
+                  end
+      end
+
+    j = if rain_fall_type == 'Productivity'
+          b.each { |item| item[:Productivity] = item[:Productivity] / 100 }
+        else
+          b
+        end
+    if search == 'C. Vulnerability'
+      ji1 = []
+      b.each do |el|
+        data.each do |el1|
+          ji1.push(el) if el.Sector == el1
+        end
+      end
+      data = { column: hash_data, data: ji1 }
+    elsif search == 'B. Flexibility'
+      ji1 = []
+      b.each do |el|
+        data.each do |el1|
+          ji1.push(el) if el.Sector == el1
+        end
+      end
+      data = { column: hash_data, data: ji1 }
+    elsif search == 'A. Sustainability'
+      ji1 = []
+      b.each do |el|
+        data.each do |el1|
+          ji1.push(el) if el.Sector == el1
+        end
+      end
+      data = { column: hash_data, data: ji1 }
+    elsif search == 'All'
+      ji1 = []
+      b.each do |el|
+        data.each do |el1|
+          ji1.push(el) if el.Sector == el1
+        end
+      end
+
+      data = { column: hash_data, data: ji1 }
+
+    else
+
+      ji1 = []
+      b.each do |el|
+        data.each do |el1|
+          ji1.push(el) if el.Sector == el1
+        end
+      end
+      data = { column: hash_data, data: ji1 }
+    end
+  end
+
+
+
+  def new_table(b, rain_fall_type, _year, ji, compare, search, data,legend)
+    dataset = rain_fall_type.tr('_', ' ')
+
+    years = if _year == '2011-16'
+              'CAGR(2011-16)'
+            else
+              _year
+            end
+    hash_data = if rain_fall_type == 'All'
+                  if _year == 'All'
+                    ji.map do |el|
+                      if el.to_s == 'Sector'
+                        { title: legend, field: el, headerFilter: true }
+
+                      elsif el.to_s == '2011-16'
+                        { title: 'CAGR(2011-16)', field: el }
+                      else
+
+                        { title: el.to_s.tr('_', ' '), field: el }
+
+                      end
+                    end
+
+                  else
+                    [
+                      { title: legend, field: 'Sector', headerFilter: true },
+                      { title: years, field: _year }
+                    ]
+                  end
+                else
+
+                  if _year == 'All'
+                    hash_data = ji.map do |el|
+                      if el.to_s == '2011-16'
+                        { title: 'CAGR(2011-16)', field: el }
+                      else
+                        { title: el, field: el }
+                  end
+                    end
+                  else
+                    hash_data = if compare == 'None'
+                                  [
+                                    { title: legend, field: 'Sector', headerFilter: true },
+                                    { title: years, field: _year }
+                                  ]
+                                else
+
+                                  [
+                                    # {title:compare, field:compare, sorter:"string", },
+                                    { title: legend, field: 'Sector', headerFilter: true },
                                     { title: years, field: _year }
                                   ]
                     end

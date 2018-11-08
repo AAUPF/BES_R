@@ -1,0 +1,57 @@
+<%= form_with(model: ict4, local: true) do |form| %>
+  <% if ict4.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ict4.errors.count, "error") %> prohibited this ict4 from being saved:</h2>
+
+      <ul>
+      <% ict4.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :State %>
+    <%= form.text_field :State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Rural %>
+    <%= form.text_field :Rural %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Urban %>
+    <%= form.text_field :Urban %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Rural_Percentage %>
+    <%= form.text_field :Rural_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Urban_Percentage %>
+    <%= form.text_field :Urban_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Share_in_all_India %>
+    <%= form.text_field :Share_in_all_India %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

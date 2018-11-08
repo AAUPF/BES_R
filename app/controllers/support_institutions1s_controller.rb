@@ -25,15 +25,14 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-data = [
-"Expenditure on Industries",
-"(a)  Revenue",
-"(b)  Capital",
-"(c)  Total",
-"Expenditure on Economic Services",
-"Expenditure on Industries as a percentage of Expenditure on Economic Services",
- ]
-
+    data = [
+      "Expenditure on Industries",
+      "(a)  Revenue",
+      "(b)  Capital",
+      "(c)  Total",
+      "Expenditure on Economic Services",
+      "Expenditure on Industries as a percentage of Expenditure on Economic Services",
+    ]
 
  search = rain_fall_type
 

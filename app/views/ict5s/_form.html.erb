@@ -1,0 +1,62 @@
+<%= form_with(model: ict5, local: true) do |form| %>
+  <% if ict5.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ict5.errors.count, "error") %> prohibited this ict5 from being saved:</h2>
+
+      <ul>
+      <% ict5.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :State %>
+    <%= form.text_field :State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Rural %>
+    <%= form.text_field :Rural %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Deposits %>
+    <%= form.text_field :Deposits %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Investment %>
+    <%= form.text_field :Investment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :MIS %>
+    <%= form.text_field :MIS %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Sukanya_Samridhi_Account %>
+    <%= form.text_field :Sukanya_Samridhi_Account %>
+  </div>
+
+  <div class="field">
+    <%= form.label :MG_NREGA %>
+    <%= form.text_field :MG_NREGA %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Sector: MyString
+  2011-12: 1.5
+  2012-13: 1.5
+  2013-14: 1.5
+  2014-15: 1.5
+  2015-16_P: 1.5
+  2016-17_Q: 1.5
+  CAGR_2011-16: 1.5
+
+two:
+  Sector: MyString
+  2011-12: 1.5
+  2012-13: 1.5
+  2013-14: 1.5
+  2014-15: 1.5
+  2015-16_P: 1.5
+  2016-17_Q: 1.5
+  CAGR_2011-16: 1.5

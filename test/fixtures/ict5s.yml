@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  Rural: 1.5
+  Deposits: 1.5
+  Investment: 1.5
+  MIS: 1.5
+  Sukanya_Samridhi_Account: 1.5
+  MG_NREGA: 1.5
+  Total: 1.5
+  Indicator: MyString
+
+two:
+  State: MyString
+  Rural: 1.5
+  Deposits: 1.5
+  Investment: 1.5
+  MIS: 1.5
+  Sukanya_Samridhi_Account: 1.5
+  MG_NREGA: 1.5
+  Total: 1.5
+  Indicator: MyString

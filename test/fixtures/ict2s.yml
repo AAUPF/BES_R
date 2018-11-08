@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  Rural: 1.5
+  Urban: 1.5
+  All: 1.5
+  Year: MyString
+
+two:
+  State: MyString
+  Rural: 1.5
+  Urban: 1.5
+  All: 1.5
+  Year: MyString
