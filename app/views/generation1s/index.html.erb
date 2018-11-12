@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Generation1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>Thermal coal</th>
+      <th>Thermal gas</th>
+      <th>Thermal diesel</th>
+      <th>Thermal total</th>
+      <th>Nuclear</th>
+      <th>Hydro renewable</th>
+      <th>Res mnre</th>
+      <th>Grand total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @generation1s.each do |generation1| %>
+      <tr>
+        <td><%= generation1.Sector %></td>
+        <td><%= generation1.Thermal_Coal %></td>
+        <td><%= generation1.Thermal_Gas %></td>
+        <td><%= generation1.Thermal_Diesel %></td>
+        <td><%= generation1.Thermal_Total %></td>
+        <td><%= generation1.Nuclear %></td>
+        <td><%= generation1.Hydro_Renewable %></td>
+        <td><%= generation1.RES_MNRE %></td>
+        <td><%= generation1.Grand_Total %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Generation1', new_generation1_path %>

@@ -144,6 +144,7 @@ module Sectorwithoutyear
 
       else
         if search == 'All'
+          
           if views == 'line' || views == 'scatter' || views == 'column'
             dataset = rain_fall_type.tr('_', ' ')
             hash_data =

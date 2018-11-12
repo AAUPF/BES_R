@@ -67,6 +67,7 @@ def test
      
    end
 
+   legend = "Items"
   if rain_fall_type || views
 
       if views == "Map View"
@@ -81,7 +82,7 @@ def test
          end
       elsif views == "Table"  
         b = Roads1.search(params[:search],compare,year,rain_fall_type)
-        a = Roads1.table(b, rain_fall_type, year, ji1, compare, search, data)
+        a = Roads1.new_table(b, rain_fall_type, year, ji1, compare, search, data,legend)
       else
         @Roads1s = Roads1.search(params[:search],compare,year,rain_fall_type)
         a = Roads1.query(@Roads1s, params[:year], rain_fall_type, views, ji, compare, search, data, jip)

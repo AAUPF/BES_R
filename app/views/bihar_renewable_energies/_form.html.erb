@@ -1,0 +1,42 @@
+<%= form_with(model: bihar_renewable_energy, local: true) do |form| %>
+  <% if bihar_renewable_energy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bihar_renewable_energy.errors.count, "error") %> prohibited this bihar_renewable_energy from being saved:</h2>
+
+      <ul>
+      <% bihar_renewable_energy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Schemes %>
+    <%= form.text_field :Schemes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Physical_Achievement %>
+    <%= form.text_field :Physical_Achievement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Financial_Outlay %>
+    <%= form.text_field :Financial_Outlay %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

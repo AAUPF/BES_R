@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Nos_of_New_Grid_Sub_Stations: MyString
+  New_Transmission_Lines_Circuit_km: MyString
+
+two:
+  Year: MyString
+  Nos_of_New_Grid_Sub_Stations: MyString
+  New_Transmission_Lines_Circuit_km: MyString

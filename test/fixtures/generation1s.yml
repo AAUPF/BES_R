@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Sector: MyString
+  Thermal_Coal: 1.5
+  Thermal_Gas: 1.5
+  Thermal_Diesel: 1.5
+  Thermal_Total: 1.5
+  Nuclear: 1.5
+  Hydro_Renewable: 1.5
+  RES_MNRE: 1.5
+  Grand_Total: 1.5
+
+two:
+  Sector: MyString
+  Thermal_Coal: 1.5
+  Thermal_Gas: 1.5
+  Thermal_Diesel: 1.5
+  Thermal_Total: 1.5
+  Nuclear: 1.5
+  Hydro_Renewable: 1.5
+  RES_MNRE: 1.5
+  Grand_Total: 1.5

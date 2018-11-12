@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Sector: MyString
+  2017-18: 1.5
+  2018-19: 1.5
+  2019-20: 1.5
+
+two:
+  Sector: MyString
+  2017-18: 1.5
+  2018-19: 1.5
+  2019-20: 1.5

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bihar Renewable Energies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Schemes</th>
+      <th>Physical achievement</th>
+      <th>Financial outlay</th>
+      <th>Year</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bihar_renewable_energies.each do |bihar_renewable_energy| %>
+      <tr>
+        <td><%= bihar_renewable_energy.Schemes %></td>
+        <td><%= bihar_renewable_energy.Physical_Achievement %></td>
+        <td><%= bihar_renewable_energy.Financial_Outlay %></td>
+        <td><%= bihar_renewable_energy.Year %></td>
+        <td><%= bihar_renewable_energy.Indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bihar Renewable Energy', new_bihar_renewable_energy_path %>

@@ -111,32 +111,7 @@ module Statewithoutyeartwovariable
             end
           end
         end
-        if views == "stackedBar" || views == "stackedBar100"
-          title = {
-            animationEnabled: true,
-            exportEnabled: true,
-            title: {
-              text: rain_fall_type.to_s.tr('_', ' ').to_s
-            },
-            data: hash_data
-          }
-        else
-          title = {
-            animationEnabled: true,
-            exportEnabled: true,
-            title: {
-              text: rain_fall_type.to_s.tr('_', ' ').to_s
-            },
-            axisX: {
-              interval:1,
-              labelMaxWidth: 180,
-              labelAngle: 90,
-              labelFontFamily:"verdana0"
-          },
-            data: hash_data
-          }
-        end
-        return title
+
       else
         if compare == 'Bihar vs State'
           dataset = rain_fall_type.tr('_', ' ')
@@ -154,49 +129,81 @@ module Statewithoutyeartwovariable
                           end
             }]
         else
-          dataset = rain_fall_type.tr('_', ' ')
-          hash_data =
-            [{
-              type: views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-              name:dataset,
-              color: color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.reject { |x| x['State'] == 'India' }.map do |el|
-                            { y: el[rain_fall_type], label: el['State'] }
-                          end
-            }]
+          # dataset = rain_fall_type.tr('_', ' ')
+          # hash_data =
+          #   [{
+          #     type: views,
+          #     toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+          #     name:dataset,
+          #     color: color,
+          #     legendText: dataset,
+          #     showInLegend: true,
+          #     dataPoints: b.reject { |x| x['State'] == 'India' }.map do |el|
+          #                   { y: el[rain_fall_type], label: el['State'] }
+          #                 end
+          #   }]
 
-          
+          legend = ""
+
+          if views == 'line' || views == 'scatter' || views == 'column'
+            dataset = rain_fall_type.tr('_', ' ')
+            hash_data =
+              [{
+                type: views,
+                toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
+                name: dataset,
+                color: color,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: b.reject { |x| x[legend.to_s] == 'Total' }.map do |el|
+                              { y: el[rain_fall_type], label: el[legend.to_s] }
+                            end
+              }]
+          else
+            dataset = rain_fall_type.tr('_', ' ')
+            hash_data = b.reject { |x| x[legend.to_s] == 'Total' }.map do |el|
+              {
+                type: views,
+                toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
+                name: (el[legend.to_s]).to_s,
+                legendText: (el[legend.to_s]).to_s,
+                showInLegend: true,
+                dataPoints: [{ y: el[rain_fall_type], label: dataset }]
+              }
+            end
+          end
+
+       
         end
-        if views == "stackedBar" || views == "stackedBar100"
-          title = {
-            animationEnabled: true,
-            exportEnabled: true,
-            title: {
-              text: rain_fall_type.to_s.tr('_', ' ').to_s
-            },
-            data: hash_data
-          }
-        else
-          title = {
-            animationEnabled: true,
-            exportEnabled: true,
-            title: {
-              text: rain_fall_type.to_s.tr('_', ' ').to_s
-            },
-            axisX: {
-              interval:1,
-              labelMaxWidth: 180,
-              labelAngle: 90,
-              labelFontFamily:"verdana0"
-          },
-            data: hash_data
-          }
-        end
-        return title
+
+
       end
+      if views == "stackedBar" || views == "stackedBar100"
+        title = {
+          animationEnabled: true,
+          exportEnabled: true,
+          title: {
+            text: rain_fall_type.to_s.tr('_', ' ').to_s
+          },
+          data: hash_data
+        }
+      else
+        title = {
+          animationEnabled: true,
+          exportEnabled: true,
+          title: {
+            text: rain_fall_type.to_s.tr('_', ' ').to_s
+          },
+          axisX: {
+            interval:1,
+            labelMaxWidth: 180,
+            labelAngle: 90,
+            labelFontFamily:"verdana0"
+        },
+          data: hash_data
+        }
+      end
+      return title
     end
   
     def map1(b, rain_fall_type, _views, _ji, unit1,ranges)

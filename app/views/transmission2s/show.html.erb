@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @transmission2.Year %>
+</p>
+
+<p>
+  <strong>Nos of new grid sub stations:</strong>
+  <%= @transmission2.Nos_of_New_Grid_Sub_Stations %>
+</p>
+
+<p>
+  <strong>New transmission lines circuit km:</strong>
+  <%= @transmission2.New_Transmission_Lines_Circuit_km %>
+</p>
+
+<%= link_to 'Edit', edit_transmission2_path(@transmission2) %> |
+<%= link_to 'Back', transmission2s_path %>

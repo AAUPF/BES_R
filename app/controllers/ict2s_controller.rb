@@ -77,7 +77,13 @@ def test
 
    if year == "2016" || year == "2017"
     ji = [ :Rural, :Urban, :All]
-    ji1 = [:State, :Rural, :Urban, :All, :Year]
+    # ji1 = [:State, :Rural, :Urban, :All, :Year]
+    if rain_fall_type != "All"
+      ji1 = [:State, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:State, :Rural, :Urban, :All, :Year]
+    end
    else
     ji = [:All]
     ji1 = [:State,:All, :Year]

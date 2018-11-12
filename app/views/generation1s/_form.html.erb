@@ -1,0 +1,62 @@
+<%= form_with(model: generation1, local: true) do |form| %>
+  <% if generation1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(generation1.errors.count, "error") %> prohibited this generation1 from being saved:</h2>
+
+      <ul>
+      <% generation1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sector %>
+    <%= form.text_field :Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Thermal_Coal %>
+    <%= form.text_field :Thermal_Coal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Thermal_Gas %>
+    <%= form.text_field :Thermal_Gas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Thermal_Diesel %>
+    <%= form.text_field :Thermal_Diesel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Thermal_Total %>
+    <%= form.text_field :Thermal_Total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Nuclear %>
+    <%= form.text_field :Nuclear %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Hydro_Renewable %>
+    <%= form.text_field :Hydro_Renewable %>
+  </div>
+
+  <div class="field">
+    <%= form.label :RES_MNRE %>
+    <%= form.text_field :RES_MNRE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Grand_Total %>
+    <%= form.text_field :Grand_Total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

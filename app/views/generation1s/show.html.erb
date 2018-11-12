@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sector:</strong>
+  <%= @generation1.Sector %>
+</p>
+
+<p>
+  <strong>Thermal coal:</strong>
+  <%= @generation1.Thermal_Coal %>
+</p>
+
+<p>
+  <strong>Thermal gas:</strong>
+  <%= @generation1.Thermal_Gas %>
+</p>
+
+<p>
+  <strong>Thermal diesel:</strong>
+  <%= @generation1.Thermal_Diesel %>
+</p>
+
+<p>
+  <strong>Thermal total:</strong>
+  <%= @generation1.Thermal_Total %>
+</p>
+
+<p>
+  <strong>Nuclear:</strong>
+  <%= @generation1.Nuclear %>
+</p>
+
+<p>
+  <strong>Hydro renewable:</strong>
+  <%= @generation1.Hydro_Renewable %>
+</p>
+
+<p>
+  <strong>Res mnre:</strong>
+  <%= @generation1.RES_MNRE %>
+</p>
+
+<p>
+  <strong>Grand total:</strong>
+  <%= @generation1.Grand_Total %>
+</p>
+
+<%= link_to 'Edit', edit_generation1_path(@generation1) %> |
+<%= link_to 'Back', generation1s_path %>

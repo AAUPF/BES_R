@@ -1,1 +1,1 @@
-rails g scaffold ICT2 State:string Rural:float 	Urban:float 	All:float	Year:string
+rails g scaffold BiharRenewableEnergy Schemes:string	Physical_Achievement:string	Financial_Outlay:string	Year:string	Indicator:string

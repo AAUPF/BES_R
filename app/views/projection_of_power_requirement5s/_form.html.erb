@@ -1,0 +1,37 @@
+<%= form_with(model: projection_of_power_requirement5, local: true) do |form| %>
+  <% if projection_of_power_requirement5.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(projection_of_power_requirement5.errors.count, "error") %> prohibited this projection_of_power_requirement5 from being saved:</h2>
+
+      <ul>
+      <% projection_of_power_requirement5.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sector %>
+    <%= form.text_field :Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2017-18 %>
+    <%= form.text_field :2017-18 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2018-19 %>
+    <%= form.text_field :2018-19 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2019-20 %>
+    <%= form.text_field :2019-20 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

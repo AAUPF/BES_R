@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Transmission2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Nos of new grid sub stations</th>
+      <th>New transmission lines circuit km</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transmission2s.each do |transmission2| %>
+      <tr>
+        <td><%= transmission2.Year %></td>
+        <td><%= transmission2.Nos_of_New_Grid_Sub_Stations %></td>
+        <td><%= transmission2.New_Transmission_Lines_Circuit_km %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transmission2', new_transmission2_path %>

@@ -1,0 +1,32 @@
+<%= form_with(model: transmission2, local: true) do |form| %>
+  <% if transmission2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(transmission2.errors.count, "error") %> prohibited this transmission2 from being saved:</h2>
+
+      <ul>
+      <% transmission2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Nos_of_New_Grid_Sub_Stations %>
+    <%= form.text_field :Nos_of_New_Grid_Sub_Stations %>
+  </div>
+
+  <div class="field">
+    <%= form.label :New_Transmission_Lines_Circuit_km %>
+    <%= form.text_field :New_Transmission_Lines_Circuit_km %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Agencies: MyString
+  Tenth_Plan: 1.5
+  Eleventh_Plan: 1.5
+  Total: 1.5
+  Eleventh_Plan_Phase_II: 1.5
+  Twelfth_Plan: 1.5
+  Under_DDG: 1.5
+  DDG_converted_into_UEV: 1.5
+  Total: 1.5
+  Indicator: MyString
+  Indicator1: MyString
+
+two:
+  Agencies: MyString
+  Tenth_Plan: 1.5
+  Eleventh_Plan: 1.5
+  Total: 1.5
+  Eleventh_Plan_Phase_II: 1.5
+  Twelfth_Plan: 1.5
+  Under_DDG: 1.5
+  DDG_converted_into_UEV: 1.5
+  Total: 1.5
+  Indicator: MyString
+  Indicator1: MyString

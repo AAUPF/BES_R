@@ -1,4 +1,44 @@
 Rails.application.routes.draw do
+    resources :bihar_renewable_energies do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :transmission2s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :programmes_for_electrification2s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :generation1s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :projection_of_power_requirement5s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :projection_of_power_requirement4s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :projection_of_power_requirement3s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :availablility_of_power1s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
   resources :generation2s do 
                       collection { post :import }
                       collection { get :dropdown }

@@ -1,0 +1,72 @@
+<%= form_with(model: programmes_for_electrification2, local: true) do |form| %>
+  <% if programmes_for_electrification2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(programmes_for_electrification2.errors.count, "error") %> prohibited this programmes_for_electrification2 from being saved:</h2>
+
+      <ul>
+      <% programmes_for_electrification2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Agencies %>
+    <%= form.text_field :Agencies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Tenth_Plan %>
+    <%= form.text_field :Tenth_Plan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Eleventh_Plan %>
+    <%= form.text_field :Eleventh_Plan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Eleventh_Plan_Phase_II %>
+    <%= form.text_field :Eleventh_Plan_Phase_II %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Twelfth_Plan %>
+    <%= form.text_field :Twelfth_Plan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Under_DDG %>
+    <%= form.text_field :Under_DDG %>
+  </div>
+
+  <div class="field">
+    <%= form.label :DDG_converted_into_UEV %>
+    <%= form.text_field :DDG_converted_into_UEV %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator1 %>
+    <%= form.text_field :Indicator1 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

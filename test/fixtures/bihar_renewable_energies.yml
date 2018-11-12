@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Schemes: MyString
+  Physical_Achievement: MyString
+  Financial_Outlay: MyString
+  Year: MyString
+  Indicator: MyString
+
+two:
+  Schemes: MyString
+  Physical_Achievement: MyString
+  Financial_Outlay: MyString
+  Year: MyString
+  Indicator: MyString
