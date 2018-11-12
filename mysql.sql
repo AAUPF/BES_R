@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 08, 2018 at 06:03 AM
+-- Generation Time: Nov 12, 2018 at 10:56 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -3561,6 +3561,48 @@ INSERT INTO `demographic_profile2s` (`id`, `Districts`, `Population`, `Sex_Ratio
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `distributions`
+--
+
+DROP TABLE IF EXISTS `distributions`;
+CREATE TABLE `distributions` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Domestic_Consumer` float DEFAULT NULL,
+  `Commercial_Consumer` float DEFAULT NULL,
+  `Industrial_LT_Consumer` float DEFAULT NULL,
+  `Industrial_HT_Consumer` float DEFAULT NULL,
+  `Public_Lighting_Consumer` float DEFAULT NULL,
+  `Traction_Consumer` float DEFAULT NULL,
+  `Agriculture_Consumer` float DEFAULT NULL,
+  `Public_Water_Works_Consumer` float DEFAULT NULL,
+  `Total_Consumer` float DEFAULT NULL,
+  `Percentage_of_Domestic_Consumer` float DEFAULT NULL,
+  `Percentage_of_Commercial_Consumer` float DEFAULT NULL,
+  `Percentage_of_Industrial_LT_Consumer` float DEFAULT NULL,
+  `Percentage_of_Industrial_HT_Consumer` float DEFAULT NULL,
+  `Percentage_of_Public_Lighting_Consumer` float DEFAULT NULL,
+  `Percentage_of_Agriculture_Consumer` float DEFAULT NULL,
+  `Percentage_of_Public_Water_Works_Consumer` float DEFAULT NULL,
+  `Percentage_of_Total_Consumer` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `distributions`
+--
+
+INSERT INTO `distributions` (`id`, `Year`, `Domestic_Consumer`, `Commercial_Consumer`, `Industrial_LT_Consumer`, `Industrial_HT_Consumer`, `Public_Lighting_Consumer`, `Traction_Consumer`, `Agriculture_Consumer`, `Public_Water_Works_Consumer`, `Total_Consumer`, `Percentage_of_Domestic_Consumer`, `Percentage_of_Commercial_Consumer`, `Percentage_of_Industrial_LT_Consumer`, `Percentage_of_Industrial_HT_Consumer`, `Percentage_of_Public_Lighting_Consumer`, `Percentage_of_Agriculture_Consumer`, `Percentage_of_Public_Water_Works_Consumer`, `Percentage_of_Total_Consumer`, `created_at`, `updated_at`) VALUES
+(1, '2012-13', 3773080, 279879, 18816, 1317, 399, 17, 57838, 1098, 4132440, 91.3, 6.8, 0.5, 0.03, 0.01, 1.4, 0.03, 100, '2018-11-09 06:03:30', '2018-11-09 06:03:30'),
+(2, '2013-14', 3900730, 273466, 15851, 1422, 389, 19, 51989, 1192, 4245060, 91.9, 6.4, 0.4, 0.03, 0.01, 1.2, 0.03, 100, '2018-11-09 06:03:30', '2018-11-09 06:03:30'),
+(3, '2014-15', 5174580, 346375, 19599, 1582, 511, 19, 52980, 1302, 5596950, 92.5, 6.2, 0.4, 0.03, 0.01, 0.9, 0.02, 100, '2018-11-09 06:03:30', '2018-11-09 06:03:30'),
+(4, '2015-16', 7407610, 488690, 31405, 1922, 1237, 19, 75087, 1760, 8007730, 92.5, 6.1, 0.4, 0.03, 0.02, 0.9, 0.02, 100, '2018-11-09 06:03:30', '2018-11-09 06:03:30'),
+(5, '2016-17', 9499940, 616512, 57433, 2050, 679, 22, 162188, 2030, 10340900, 91.87, 5.96, 0.56, 0.02, 0.01, 1.57, 0.02, 100, '2018-11-09 06:03:30', '2018-11-09 06:03:30');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `expenditure_management1s`
 --
 
@@ -3952,6 +3994,38 @@ INSERT INTO `fiscal_performance2s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-
 (17, 'Primary Deficit (Rs. crore)', 2117, 2893, 5050, 4964, 8289, 8521, 'C. Vulnerability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
 (18, 'Primary Deficit / Fiscal Deficit (Percentage)', 32.3, 34.6, 45.2, 41.2, 50.3, 47, 'C. Vulnerability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
 (19, 'Revenue Deficit / Fiscal Deficit (Percentage)', -77.9, -77.1, -52.3, -103.7, -65.7, -80.4, 'C. Vulnerability', '2018-09-09 14:07:27', '2018-09-09 14:07:27');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `generation2s`
+--
+
+DROP TABLE IF EXISTS `generation2s`;
+CREATE TABLE `generation2s` (
+  `id` bigint(20) NOT NULL,
+  `Thermal_Plan` varchar(255) DEFAULT NULL,
+  `2015-16` varchar(255) DEFAULT NULL,
+  `2016-17` varchar(255) DEFAULT NULL,
+  `Under_Progress_2017_18` varchar(255) DEFAULT NULL,
+  `2018-19` varchar(255) DEFAULT NULL,
+  `By_2022_Upcoming_Projects` varchar(255) DEFAULT NULL,
+  `Beyond_2022` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `generation2s`
+--
+
+INSERT INTO `generation2s` (`id`, `Thermal_Plan`, `2015-16`, `2016-17`, `Under_Progress_2017_18`, `2018-19`, `By_2022_Upcoming_Projects`, `Beyond_2022`, `created_at`, `updated_at`) VALUES
+(1, 'KANTI TPP(2x110 MW)(2x195 MW)', '220 MW', '195 MW Unit 3', '195 MW Unit 4  Completed', NULL, NULL, NULL, '2018-11-09 12:00:12', '2018-11-09 12:00:12'),
+(3, 'BARAUNI TPP(2x110 MW)(2x250 MW)', NULL, '110 MW Unit 7, Nov. 16', '500 MW Unit 8, Jan 18  Unit 9, Feb. 18 (250 MW each) Unit 6, Jan. 18 (110 MW)', NULL, NULL, NULL, '2018-11-09 12:00:12', '2018-11-09 12:00:12'),
+(4, 'NABINAGAR TPP(3x660 MW)1980 MW', NULL, NULL, NULL, '1320 MW Unit 1: May-18 Unit 2: Nov-18 (660 MW each)', '660 MW Unit 3: May-19', NULL, '2018-11-09 12:00:12', '2018-11-09 12:00:12'),
+(5, 'BUXAR TPP(2x660 MW)SJVNL', NULL, NULL, NULL, NULL, 'MoU signed on 20.11.15 1320 MW', NULL, '2018-11-09 12:00:12', '2018-11-09 12:00:12'),
+(6, 'BANKA UMPP(4000 MW)', NULL, NULL, NULL, NULL, NULL, '4000 MW', '2018-11-09 12:00:12', '2018-11-09 12:00:12'),
+(7, 'Total Installed Capacity', '220 MW', '525 MW', '1330 MW', '2650 MW', '4630 MW', '8,630 MW', '2018-11-09 12:00:12', '2018-11-09 12:00:12');
 
 -- --------------------------------------------------------
 
@@ -6096,6 +6170,42 @@ INSERT INTO `inflation_rates` (`id`, `State`, `Sector`, `Oct_16_Index_Final`, `O
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `institutional_structure_of_power_sectors`
+--
+
+DROP TABLE IF EXISTS `institutional_structure_of_power_sectors`;
+CREATE TABLE `institutional_structure_of_power_sectors` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `BRGF` float DEFAULT NULL,
+  `State_Plan_BSPHCL` float DEFAULT NULL,
+  `State_Plan_Generation` float DEFAULT NULL,
+  `State_Plan_Transmission` float DEFAULT NULL,
+  `State_Plan_Distribution` float DEFAULT NULL,
+  `State_Plan_BREDA` float DEFAULT NULL,
+  `State_Plan_BSHPC` float DEFAULT NULL,
+  `BSHPC_RIDF` float DEFAULT NULL,
+  `EAP` float DEFAULT NULL,
+  `Mukhya_Mantri_Vidyut_Sambandh_Nishchay_Yojna` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `institutional_structure_of_power_sectors`
+--
+
+INSERT INTO `institutional_structure_of_power_sectors` (`id`, `Year`, `BRGF`, `State_Plan_BSPHCL`, `State_Plan_Generation`, `State_Plan_Transmission`, `State_Plan_Distribution`, `State_Plan_BREDA`, `State_Plan_BSHPC`, `BSHPC_RIDF`, `EAP`, `Mukhya_Mantri_Vidyut_Sambandh_Nishchay_Yojna`, `Total`, `created_at`, `updated_at`) VALUES
+(1, '2013-14', 2125, 367.346, 25, 25, 215, 50, 15, 63.57, 225, NULL, 3110.92, '2018-11-09 05:35:07', '2018-11-09 05:35:07'),
+(2, '2014-15', 1650, 369.214, 61.68, 661, 1099.18, 20, 38.93, 69.92, 220, NULL, 4189.92, '2018-11-09 05:35:07', '2018-11-09 05:35:07'),
+(3, '2015-16', 2274, 64.43, 181.01, 448.99, 486, 60, 15, 67.8, 66.26, NULL, 3663.49, '2018-11-09 05:35:07', '2018-11-09 05:35:07'),
+(4, '2016-17', 1329.4, 127.51, 1155, 700, 3126.65, 150, 10, 67.8, 260.91, 587.38, 7514.64, '2018-11-09 05:35:07', '2018-11-09 05:35:07'),
+(5, '2017-18', 2600, 1576.1, 592.5, 510, 1680, 249.9, 10, 67.8, 235.29, 750, 8271.59, '2018-11-09 05:35:07', '2018-11-09 05:35:07');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `irrigation1s`
 --
 
@@ -6736,6 +6846,92 @@ INSERT INTO `non_agro_based_industries5s` (`id`, `Agencies`, `Indicators`, `KVIC
 (10, 'Target/Margin Money', 'Financial (Rs. lakh)', 2244, 2248, 3008, 7500, '2016-17', 29.4, 30, 40.1, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
 (11, 'Margin Money disbursed by Nodal banks', 'Physical (Nos.)', 532, 313, 2389, 3234, '2016-17', 16.5, 9.7, 73.9, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
 (12, 'Margin Money disbursed by Nodal banks', 'Financial (Rs. lakh)', 810.33, 995.34, 6530.83, 8336.5, '2016-17', 9.7, 11.9, 78.3, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `operational_and_financial_status1s`
+--
+
+DROP TABLE IF EXISTS `operational_and_financial_status1s`;
+CREATE TABLE `operational_and_financial_status1s` (
+  `id` bigint(20) NOT NULL,
+  `Item` varchar(255) DEFAULT NULL,
+  `NBPDCL` float DEFAULT NULL,
+  `SBPDCL` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `operational_and_financial_status1s`
+--
+
+INSERT INTO `operational_and_financial_status1s` (`id`, `Item`, `NBPDCL`, `SBPDCL`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Generation and Purchase (MU)', 5381, 8621, '2013-14', '2018-11-09 07:40:40', '2018-11-09 07:40:40'),
+(2, 'Sales (MU)', 3605, 4637, '2013-14', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(3, 'Losses (Percentage)', 33, 46.2, '2013-14', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(4, 'Average Revenue (Rs./Unit)', 4.17, 4.86, '2013-14', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(5, 'Sale of Power (Rs. crore)', 1503.66, 2254.77, '2013-14', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(6, 'Total Income (including subsidies) (Rs. crore)', 2723.69, 4190.81, '2013-14', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(7, 'Total Cost (Rs. crore)', 2797.95, 4459.5, '2013-14', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(8, 'Cost Coverage (Total Income/Total cost) (Percentage)', 97.4, 94, '2013-14', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(9, 'Financial Loss (Percentage)', 2.6, 6, '2013-14', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(10, 'Generation and Purchase (MU)', 7029, 10388, '2014-15', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(11, 'Sales (MU)', 5004, 5814, '2014-15', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(12, 'Losses (Percentage)', 28.8, 44, '2014-15', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(13, 'Average Revenue (Rs./Unit)', 4.19, 4.37, '2014-15', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(14, 'Sale of Power (Rs. crore)', 2095, 2540.28, '2014-15', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(15, 'Total Income (including subsidies) (Rs. crore)', 3559.74, 4610.37, '2014-15', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(16, 'Total Cost (Rs. crore)', 3856.53, 5357.92, '2014-15', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(17, 'Cost Coverage (Total Income/Total cost) (Percentage)', 92.3, 86, '2014-15', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(18, 'Financial Loss (Percentage)', 7.7, 14, '2014-15', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(19, 'Generation and Purchase (MU)', 8929, 12748, '2015-16', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(20, 'Sales (MU)', 6505, 7199, '2015-16', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(21, 'Losses (Percentage)', 27.4, 43.5, '2015-16', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(22, 'Average Revenue (Rs./Unit)', 4.14, 4.45, '2015-16', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(23, 'Sale of Power (Rs. crore)', 2696.24, 3202.37, '2015-16', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(24, 'Total Income (including subsidies) (Rs. crore)', 4475.11, 6309.15, '2015-16', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(25, 'Total Cost (Rs. crore)', 4814.55, 7043.32, '2015-16', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(26, 'Cost Coverage (Total Income/Total cost) (Percentage)', 92.9, 89.6, '2015-16', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(27, 'Financial Loss (Percentage)', 7.1, 10.4, '2015-16', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(28, 'Generation and Purchase (MU)', 9647, 13380, '2016-17', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(29, 'Sales (MU)', 7195, 8661, '2016-17', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(30, 'Losses (Percentage)', 25.6, 35.6, '2016-17', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(31, 'Average Revenue (Rs./Unit)', 4.02, 4.58, '2016-17', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(32, 'Sale of Power (Rs. crore)', 2890.8, 3971.21, '2016-17', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(33, 'Total Income (including subsidies) (Rs. crore)', 4620.48, 6621.72, '2016-17', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(34, 'Total Cost (Rs. crore)', 5133.91, 7527.08, '2016-17', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(35, 'Cost Coverage (Total Income/Total cost) (Percentage)', 90, 88, '2016-17', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
+(36, 'Financial Loss (Percentage)', 10, 12, '2016-17', '2018-11-09 07:40:41', '2018-11-09 07:40:41');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `operational_and_financial_status2s`
+--
+
+DROP TABLE IF EXISTS `operational_and_financial_status2s`;
+CREATE TABLE `operational_and_financial_status2s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2011-12` float DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `operational_and_financial_status2s`
+--
+
+INSERT INTO `operational_and_financial_status2s` (`id`, `Sector`, `2011-12`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `created_at`, `updated_at`) VALUES
+(1, 'AT and C Loss', 52.9, 54.6, 46.3, 43.8, 43.5, 40.6, '2018-11-09 08:41:38', '2018-11-09 08:41:38');
 
 -- --------------------------------------------------------
 
@@ -7778,6 +7974,88 @@ INSERT INTO `production_productivity12s` (`id`, `Districts`, `Area`, `Production
 (76, 'Supaul', 0, 0, 0, 2016, 0, 0, '2018-08-14 12:37:03', '2018-08-14 12:37:03'),
 (77, 'Vaishali', 1.23, 80.18, 65.27, 2016, 0.5, 0.4, '2018-08-14 12:37:03', '2018-08-14 12:37:03'),
 (78, 'WestChamparan', 132.86, 9252.17, 69.64, 2016, 50.3, 50.7, '2018-08-14 12:37:03', '2018-08-14 12:37:03');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `programmes_for_electrification1s`
+--
+
+DROP TABLE IF EXISTS `programmes_for_electrification1s`;
+CREATE TABLE `programmes_for_electrification1s` (
+  `id` bigint(20) NOT NULL,
+  `Project_Component_under_R_APDRP` varchar(255) DEFAULT NULL,
+  `Outlay` float DEFAULT NULL,
+  `Expenditure_incurred` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `programmes_for_electrification1s`
+--
+
+INSERT INTO `programmes_for_electrification1s` (`id`, `Project_Component_under_R_APDRP`, `Outlay`, `Expenditure_incurred`, `created_at`, `updated_at`) VALUES
+(1, 'R-APDRP - Part A', 253.68, 103.11, '2018-11-09 10:01:45', '2018-11-09 10:01:45'),
+(2, 'R-APDRP - Part B', 1155.21, 995.94, '2018-11-09 10:01:45', '2018-11-09 10:01:45'),
+(3, 'R-APDRP - SCADA', 38, 9.59, '2018-11-09 10:01:45', '2018-11-09 10:01:45'),
+(4, 'Total', 1446.89, 1108.64, '2018-11-09 10:01:45', '2018-11-09 10:01:45');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projection_of_power_requirement1s`
+--
+
+DROP TABLE IF EXISTS `projection_of_power_requirement1s`;
+CREATE TABLE `projection_of_power_requirement1s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2017-18` float DEFAULT NULL,
+  `2018-19` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `projection_of_power_requirement1s`
+--
+
+INSERT INTO `projection_of_power_requirement1s` (`id`, `Sector`, `2017-18`, `2018-19`, `created_at`, `updated_at`) VALUES
+(1, 'Existing Electrified Households', 7874.45, 10345, '2018-11-08 08:16:13', '2018-11-08 08:16:13'),
+(2, 'Unelectrified/ New Households when Electrified', 2470.55, 1834, '2018-11-08 08:16:13', '2018-11-08 08:16:13'),
+(3, 'Total Domestic Requirement', 10345, 12179, '2018-11-08 08:16:13', '2018-11-08 08:16:13'),
+(4, 'Consumers other than Domestic', 7859, 9942, '2018-11-08 08:16:13', '2018-11-08 08:16:13'),
+(5, 'New Agricultural  Connections', 1242, 30, '2018-11-08 08:16:13', '2018-11-08 08:16:13'),
+(6, 'Total', 19446, 22151, '2018-11-08 08:16:13', '2018-11-08 08:16:13');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projection_of_power_requirement2s`
+--
+
+DROP TABLE IF EXISTS `projection_of_power_requirement2s`;
+CREATE TABLE `projection_of_power_requirement2s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2017-18` float DEFAULT NULL,
+  `2018-19` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `projection_of_power_requirement2s`
+--
+
+INSERT INTO `projection_of_power_requirement2s` (`id`, `Sector`, `2017-18`, `2018-19`, `created_at`, `updated_at`) VALUES
+(1, 'Energy requirement as per demand projections (MU)', 19446, 22151, '2018-11-08 11:06:11', '2018-11-08 11:06:11'),
+(2, 'Distribution losses (Percentage)', 28, 20, '2018-11-08 11:06:11', '2018-11-08 11:06:11'),
+(3, 'Intra-state transmission losses (Percentage)', 3.92, 3.92, '2018-11-08 11:06:11', '2018-11-08 11:06:11'),
+(4, 'Energy requirement at state periphery (MU)', 26809, 28069, '2018-11-08 11:06:11', '2018-11-08 11:06:11'),
+(5, 'Peak demand at 0.734 Load Factor (MW)', 4733, 5200, '2018-11-08 11:06:11', '2018-11-08 11:06:11'),
+(6, 'Peak demand at 0.734 Load Factor (MW) (Including Agricultural load upto 50 percent only) (MW)', 4268, 4689, '2018-11-08 11:06:11', '2018-11-08 11:06:11');
 
 -- --------------------------------------------------------
 
@@ -10276,7 +10554,17 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20181106054241'),
 ('20181106070148'),
 ('20181106070216'),
-('20181106074513');
+('20181106074513'),
+('20181108081346'),
+('20181108110337'),
+('20181109053033'),
+('20181109060238'),
+('20181109073956'),
+('20181109083802'),
+('20181109100028'),
+('20181109102222'),
+('20181109105721'),
+('20181109115252');
 
 -- --------------------------------------------------------
 
@@ -12528,6 +12816,33 @@ INSERT INTO `tourism3s` (`id`, `Sector`, `Indicator`, `2012`, `2013`, `2014`, `2
 (30, 'Total', 'Foreign', 1097, 767, 748, 924, 1010, 1083, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
 (31, 'Grand Total', NULL, 22543, 22354, 18460, 28953, 29372, 33497, '2018-10-16 06:37:49', '2018-10-16 06:37:49');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transmission1s`
+--
+
+DROP TABLE IF EXISTS `transmission1s`;
+CREATE TABLE `transmission1s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2017-18` float DEFAULT NULL,
+  `2018-19` float DEFAULT NULL,
+  `2019-20` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `transmission1s`
+--
+
+INSERT INTO `transmission1s` (`id`, `Sector`, `2017-18`, `2018-19`, `2019-20`, `created_at`, `updated_at`) VALUES
+(1, 'Peak Demand (MW)', 4733, 4904, 5308, '2018-11-09 10:35:06', '2018-11-09 10:35:06'),
+(2, 'Transformation  Capacity needed to meet Peak Demand (MW)', 8874, 9195, 9953, '2018-11-09 10:35:06', '2018-11-09 10:35:06'),
+(3, 'Available Capacity MVA at 220/132 KV level', 9370, 11090, 14510, '2018-11-09 10:35:06', '2018-11-09 10:35:06'),
+(4, 'Available Capacity MVA at  132/33 KV level', 12540, 14450, 15290, '2018-11-09 10:35:06', '2018-11-09 10:35:06');
+
 --
 -- Indexes for dumped tables
 --
@@ -12851,6 +13166,12 @@ ALTER TABLE `demographic_profile2s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `distributions`
+--
+ALTER TABLE `distributions`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `expenditure_management1s`
 --
 ALTER TABLE `expenditure_management1s`
@@ -12896,6 +13217,12 @@ ALTER TABLE `fiscal_performance1s`
 -- Indexes for table `fiscal_performance2s`
 --
 ALTER TABLE `fiscal_performance2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `generation2s`
+--
+ALTER TABLE `generation2s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -13067,6 +13394,12 @@ ALTER TABLE `inflation_rates`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `institutional_structure_of_power_sectors`
+--
+ALTER TABLE `institutional_structure_of_power_sectors`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `irrigation1s`
 --
 ALTER TABLE `irrigation1s`
@@ -13163,6 +13496,18 @@ ALTER TABLE `non_agro_based_industries5s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `operational_and_financial_status1s`
+--
+ALTER TABLE `operational_and_financial_status1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `operational_and_financial_status2s`
+--
+ALTER TABLE `operational_and_financial_status2s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `production_and_productivity_of_rices`
 --
 ALTER TABLE `production_and_productivity_of_rices`
@@ -13226,6 +13571,24 @@ ALTER TABLE `production_productivity11s`
 -- Indexes for table `production_productivity12s`
 --
 ALTER TABLE `production_productivity12s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `programmes_for_electrification1s`
+--
+ALTER TABLE `programmes_for_electrification1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `projection_of_power_requirement1s`
+--
+ALTER TABLE `projection_of_power_requirement1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `projection_of_power_requirement2s`
+--
+ALTER TABLE `projection_of_power_requirement2s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -13697,6 +14060,12 @@ ALTER TABLE `tourism3s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `transmission1s`
+--
+ALTER TABLE `transmission1s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -13749,6 +14118,18 @@ ALTER TABLE `bridge_sector2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `distributions`
+--
+ALTER TABLE `distributions`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `generation2s`
+--
+ALTER TABLE `generation2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `ict2s`
 --
 ALTER TABLE `ict2s`
@@ -13773,6 +14154,12 @@ ALTER TABLE `ict5s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
+-- AUTO_INCREMENT for table `institutional_structure_of_power_sectors`
+--
+ALTER TABLE `institutional_structure_of_power_sectors`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `irrigation7s`
 --
 ALTER TABLE `irrigation7s`
@@ -13795,6 +14182,36 @@ ALTER TABLE `non_agro_based_industries2s`
 --
 ALTER TABLE `non_agro_based_industries4s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `operational_and_financial_status1s`
+--
+ALTER TABLE `operational_and_financial_status1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- AUTO_INCREMENT for table `operational_and_financial_status2s`
+--
+ALTER TABLE `operational_and_financial_status2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `programmes_for_electrification1s`
+--
+ALTER TABLE `programmes_for_electrification1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `projection_of_power_requirement1s`
+--
+ALTER TABLE `projection_of_power_requirement1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `projection_of_power_requirement2s`
+--
+ALTER TABLE `projection_of_power_requirement2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `railways`
@@ -13933,3 +14350,9 @@ ALTER TABLE `tourism2s`
 --
 ALTER TABLE `tourism3s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT for table `transmission1s`
+--
+ALTER TABLE `transmission1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
