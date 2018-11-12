@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Programmes For Electrification1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project component under r apdrp</th>
+      <th>Outlay</th>
+      <th>Expenditure incurred</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @programmes_for_electrification1s.each do |programmes_for_electrification1| %>
+      <tr>
+        <td><%= programmes_for_electrification1.Project_Component_under_R_APDRP %></td>
+        <td><%= programmes_for_electrification1.Outlay %></td>
+        <td><%= programmes_for_electrification1.Expenditure_incurred %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Programmes For Electrification1', new_programmes_for_electrification1_path %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Operational And Financial Status2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Losses</th>
+      <th>2011-12</th>
+      <th>2012-13</th>
+      <th>2013-14</th>
+      <th>2014-15</th>
+      <th>2015-16</th>
+      <th>2016-17</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @operational_and_financial_status2s.each do |operational_and_financial_status2| %>
+      <tr>
+        <td><%= operational_and_financial_status2.Losses %></td>
+        <td><%= operational_and_financial_status2.2011-12 %></td>
+        <td><%= operational_and_financial_status2.2012-13 %></td>
+        <td><%= operational_and_financial_status2.2013-14 %></td>
+        <td><%= operational_and_financial_status2.2014-15 %></td>
+        <td><%= operational_and_financial_status2.2015-16 %></td>
+        <td><%= operational_and_financial_status2.2016-17 %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Operational And Financial Status2', new_operational_and_financial_status2_path %>

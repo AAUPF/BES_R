@@ -1,0 +1,37 @@
+<%= form_with(model: transmission1, local: true) do |form| %>
+  <% if transmission1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(transmission1.errors.count, "error") %> prohibited this transmission1 from being saved:</h2>
+
+      <ul>
+      <% transmission1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Demand_Capacity %>
+    <%= form.text_field :Demand_Capacity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2017-18 %>
+    <%= form.text_field :2017-18 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2018-19 %>
+    <%= form.text_field :2018-19 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2019-20 %>
+    <%= form.text_field :2019-20 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

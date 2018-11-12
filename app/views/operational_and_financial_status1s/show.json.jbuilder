@@ -1,0 +1,1 @@
+json.partial! "operational_and_financial_status1s/operational_and_financial_status1", operational_and_financial_status1: @operational_and_financial_status1

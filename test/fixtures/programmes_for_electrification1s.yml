@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Project_Component_under_R_APDRP: MyString
+  Outlay: 1.5
+  Expenditure_incurred: 1.5
+
+two:
+  Project_Component_under_R_APDRP: MyString
+  Outlay: 1.5
+  Expenditure_incurred: 1.5

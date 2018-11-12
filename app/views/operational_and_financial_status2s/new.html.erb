@@ -1,0 +1,6 @@
+<h3>Import a CSV File</h3>
+  <%= form_tag import_operational_and_financial_status2s_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+     <% end %>
+<%= link_to 'Back', operational_and_financial_status2s_path %>

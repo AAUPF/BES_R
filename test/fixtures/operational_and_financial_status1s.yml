@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Item: MyString
+  NBPDCL: 1.5
+  SBPDCL: 1.5
+  Year: MyString
+
+two:
+  Item: MyString
+  NBPDCL: 1.5
+  SBPDCL: 1.5
+  Year: MyString

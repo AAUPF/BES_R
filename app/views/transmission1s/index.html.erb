@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Transmission1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Demand capacity</th>
+      <th>2017-18</th>
+      <th>2018-19</th>
+      <th>2019-20</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transmission1s.each do |transmission1| %>
+      <tr>
+        <td><%= transmission1.Demand_Capacity %></td>
+        <td><%= transmission1.2017-18 %></td>
+        <td><%= transmission1.2018-19 %></td>
+        <td><%= transmission1.2019-20 %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transmission1', new_transmission1_path %>

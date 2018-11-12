@@ -1,0 +1,52 @@
+<%= form_with(model: generation2, local: true) do |form| %>
+  <% if generation2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(generation2.errors.count, "error") %> prohibited this generation2 from being saved:</h2>
+
+      <ul>
+      <% generation2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Thermal_Plan %>
+    <%= form.text_field :Thermal_Plan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2015-16 %>
+    <%= form.text_field :2015-16 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2016-17 %>
+    <%= form.text_field :2016-17 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2017-18_Under_Progress %>
+    <%= form.text_field :2017-18_Under_Progress %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2018-19 %>
+    <%= form.text_field :2018-19 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :By_2022_Upcoming_Projects %>
+    <%= form.text_field :By_2022_Upcoming_Projects %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Beyond_2022 %>
+    <%= form.text_field :Beyond_2022 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Thermal_Plan: MyString
+  2015-16: MyString
+  2016-17: MyString
+  2017-18_Under_Progress: MyString
+  2018-19: MyString
+  By_2022_Upcoming_Projects: MyString
+  Beyond_2022: MyString
+
+two:
+  Thermal_Plan: MyString
+  2015-16: MyString
+  2016-17: MyString
+  2017-18_Under_Progress: MyString
+  2018-19: MyString
+  By_2022_Upcoming_Projects: MyString
+  Beyond_2022: MyString

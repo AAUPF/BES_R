@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Years: MyString
+  BRGF: 1.5
+  State_Plan_BSPHCL: 1.5
+  State_Plan_Generation: 1.5
+  State_Plan_Transmission: 1.5
+  State_Plan_Distribution: 1.5
+  State_Plan_BREDA: 1.5
+  State_Plan_BSHPC: 1.5
+  BSHPC_RIDF: 1.5
+  EAP: 1.5
+  Mukhya_Mantri_Vidyut_Sambandh_Nishchay_Yojna: 1.5
+  Total: 1.5
+
+two:
+  Years: MyString
+  BRGF: 1.5
+  State_Plan_BSPHCL: 1.5
+  State_Plan_Generation: 1.5
+  State_Plan_Transmission: 1.5
+  State_Plan_Distribution: 1.5
+  State_Plan_BREDA: 1.5
+  State_Plan_BSHPC: 1.5
+  BSHPC_RIDF: 1.5
+  EAP: 1.5
+  Mukhya_Mantri_Vidyut_Sambandh_Nishchay_Yojna: 1.5
+  Total: 1.5

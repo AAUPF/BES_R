@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Distributions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Domestic consumer</th>
+      <th>Commercial consumer</th>
+      <th>Industrial lt consumer</th>
+      <th>Industrial ht consumer</th>
+      <th>Public lighting consumer</th>
+      <th>Traction consumer</th>
+      <th>Agriculture consumer</th>
+      <th>Public water works consumer</th>
+      <th>Total consumer</th>
+      <th>Percentage of domestic consumer</th>
+      <th>Percentage of commercial consumer</th>
+      <th>Percentage of industrial lt consumer</th>
+      <th>Percentage of industrial ht consumer</th>
+      <th>Percentage of public lighting consumer</th>
+      <th>Percentage of agriculture consumer</th>
+      <th>Percentage of public water works consumer</th>
+      <th>Percentage of total consumer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @distributions.each do |distribution| %>
+      <tr>
+        <td><%= distribution.Year %></td>
+        <td><%= distribution.Domestic_Consumer %></td>
+        <td><%= distribution.Commercial_Consumer %></td>
+        <td><%= distribution.Industrial_LT_Consumer %></td>
+        <td><%= distribution.Industrial_HT_Consumer %></td>
+        <td><%= distribution.Public_Lighting_Consumer %></td>
+        <td><%= distribution.Traction_Consumer %></td>
+        <td><%= distribution.Agriculture_Consumer %></td>
+        <td><%= distribution.Public_Water_Works_Consumer %></td>
+        <td><%= distribution.Total_Consumer %></td>
+        <td><%= distribution.Percentage_of_Domestic_Consumer %></td>
+        <td><%= distribution.Percentage_of_Commercial_Consumer %></td>
+        <td><%= distribution.Percentage_of_Industrial_LT_Consumer %></td>
+        <td><%= distribution.Percentage_of_Industrial_HT_Consumer %></td>
+        <td><%= distribution.Percentage_of_Public_Lighting_Consumer %></td>
+        <td><%= distribution.Percentage_of_Agriculture_Consumer %></td>
+        <td><%= distribution.Percentage_of_Public_Water_Works_Consumer %></td>
+        <td><%= distribution.Percentage_of_Total_Consumer %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Distribution', new_distribution_path %>

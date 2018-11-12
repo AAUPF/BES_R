@@ -1,0 +1,1 @@
+json.array! @institutional_structure_of_power_sectors, partial: 'institutional_structure_of_power_sectors/institutional_structure_of_power_sector', as: :institutional_structure_of_power_sector

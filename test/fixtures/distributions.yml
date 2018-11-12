@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Domestic_Consumer: 1.5
+  Commercial_Consumer: 1.5
+  Industrial_LT_Consumer: 1.5
+  Industrial_HT_Consumer: 1.5
+  Public_Lighting_Consumer: 1.5
+  Traction_Consumer: 1.5
+  Agriculture_Consumer: 1.5
+  Public_Water_Works_Consumer: 1.5
+  Total_Consumer: 1.5
+  Percentage_of_Domestic_Consumer: 1.5
+  Percentage_of_Commercial_Consumer: 1.5
+  Percentage_of_Industrial_LT_Consumer: 1.5
+  Percentage_of_Industrial_HT_Consumer: 1.5
+  Percentage_of_Public_Lighting_Consumer: 1.5
+  Percentage_of_Agriculture_Consumer: 1.5
+  Percentage_of_Public_Water_Works_Consumer: 1.5
+  Percentage_of_Total_Consumer: 1.5
+
+two:
+  Year: MyString
+  Domestic_Consumer: 1.5
+  Commercial_Consumer: 1.5
+  Industrial_LT_Consumer: 1.5
+  Industrial_HT_Consumer: 1.5
+  Public_Lighting_Consumer: 1.5
+  Traction_Consumer: 1.5
+  Agriculture_Consumer: 1.5
+  Public_Water_Works_Consumer: 1.5
+  Total_Consumer: 1.5
+  Percentage_of_Domestic_Consumer: 1.5
+  Percentage_of_Commercial_Consumer: 1.5
+  Percentage_of_Industrial_LT_Consumer: 1.5
+  Percentage_of_Industrial_HT_Consumer: 1.5
+  Percentage_of_Public_Lighting_Consumer: 1.5
+  Percentage_of_Agriculture_Consumer: 1.5
+  Percentage_of_Public_Water_Works_Consumer: 1.5
+  Percentage_of_Total_Consumer: 1.5

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Generation2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Thermal plan</th>
+      <th>2015-16</th>
+      <th>2016-17</th>
+      <th>2017-18 under progress</th>
+      <th>2018-19</th>
+      <th>By 2022 upcoming projects</th>
+      <th>Beyond 2022</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @generation2s.each do |generation2| %>
+      <tr>
+        <td><%= generation2.Thermal_Plan %></td>
+        <td><%= generation2.2015-16 %></td>
+        <td><%= generation2.2016-17 %></td>
+        <td><%= generation2.2017-18_Under_Progress %></td>
+        <td><%= generation2.2018-19 %></td>
+        <td><%= generation2.By_2022_Upcoming_Projects %></td>
+        <td><%= generation2.Beyond_2022 %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Generation2', new_generation2_path %>

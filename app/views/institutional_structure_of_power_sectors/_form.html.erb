@@ -1,0 +1,77 @@
+<%= form_with(model: institutional_structure_of_power_sector, local: true) do |form| %>
+  <% if institutional_structure_of_power_sector.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(institutional_structure_of_power_sector.errors.count, "error") %> prohibited this institutional_structure_of_power_sector from being saved:</h2>
+
+      <ul>
+      <% institutional_structure_of_power_sector.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Years %>
+    <%= form.text_field :Years %>
+  </div>
+
+  <div class="field">
+    <%= form.label :BRGF %>
+    <%= form.text_field :BRGF %>
+  </div>
+
+  <div class="field">
+    <%= form.label :State_Plan_BSPHCL %>
+    <%= form.text_field :State_Plan_BSPHCL %>
+  </div>
+
+  <div class="field">
+    <%= form.label :State_Plan_Generation %>
+    <%= form.text_field :State_Plan_Generation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :State_Plan_Transmission %>
+    <%= form.text_field :State_Plan_Transmission %>
+  </div>
+
+  <div class="field">
+    <%= form.label :State_Plan_Distribution %>
+    <%= form.text_field :State_Plan_Distribution %>
+  </div>
+
+  <div class="field">
+    <%= form.label :State_Plan_BREDA %>
+    <%= form.text_field :State_Plan_BREDA %>
+  </div>
+
+  <div class="field">
+    <%= form.label :State_Plan_BSHPC %>
+    <%= form.text_field :State_Plan_BSHPC %>
+  </div>
+
+  <div class="field">
+    <%= form.label :BSHPC_RIDF %>
+    <%= form.text_field :BSHPC_RIDF %>
+  </div>
+
+  <div class="field">
+    <%= form.label :EAP %>
+    <%= form.text_field :EAP %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mukhya_Mantri_Vidyut_Sambandh_Nishchay_Yojna %>
+    <%= form.text_field :Mukhya_Mantri_Vidyut_Sambandh_Nishchay_Yojna %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

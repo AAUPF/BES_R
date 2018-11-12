@@ -1,0 +1,32 @@
+<%= form_with(model: programmes_for_electrification1, local: true) do |form| %>
+  <% if programmes_for_electrification1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(programmes_for_electrification1.errors.count, "error") %> prohibited this programmes_for_electrification1 from being saved:</h2>
+
+      <ul>
+      <% programmes_for_electrification1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Project_Component_under_R_APDRP %>
+    <%= form.text_field :Project_Component_under_R_APDRP %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Outlay %>
+    <%= form.text_field :Outlay %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Expenditure_incurred %>
+    <%= form.text_field :Expenditure_incurred %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

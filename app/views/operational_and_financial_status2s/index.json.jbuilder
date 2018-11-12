@@ -1,0 +1,1 @@
+json.array! @operational_and_financial_status2s, partial: 'operational_and_financial_status2s/operational_and_financial_status2', as: :operational_and_financial_status2

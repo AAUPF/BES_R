@@ -1,0 +1,1 @@
+json.partial! "institutional_structure_of_power_sectors/institutional_structure_of_power_sector", institutional_structure_of_power_sector: @institutional_structure_of_power_sector

@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Institutional Structure Of Power Sectors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Years</th>
+      <th>Brgf</th>
+      <th>State plan bsphcl</th>
+      <th>State plan generation</th>
+      <th>State plan transmission</th>
+      <th>State plan distribution</th>
+      <th>State plan breda</th>
+      <th>State plan bshpc</th>
+      <th>Bshpc ridf</th>
+      <th>Eap</th>
+      <th>Mukhya mantri vidyut sambandh nishchay yojna</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @institutional_structure_of_power_sectors.each do |institutional_structure_of_power_sector| %>
+      <tr>
+        <td><%= institutional_structure_of_power_sector.Years %></td>
+        <td><%= institutional_structure_of_power_sector.BRGF %></td>
+        <td><%= institutional_structure_of_power_sector.State_Plan_BSPHCL %></td>
+        <td><%= institutional_structure_of_power_sector.State_Plan_Generation %></td>
+        <td><%= institutional_structure_of_power_sector.State_Plan_Transmission %></td>
+        <td><%= institutional_structure_of_power_sector.State_Plan_Distribution %></td>
+        <td><%= institutional_structure_of_power_sector.State_Plan_BREDA %></td>
+        <td><%= institutional_structure_of_power_sector.State_Plan_BSHPC %></td>
+        <td><%= institutional_structure_of_power_sector.BSHPC_RIDF %></td>
+        <td><%= institutional_structure_of_power_sector.EAP %></td>
+        <td><%= institutional_structure_of_power_sector.Mukhya_Mantri_Vidyut_Sambandh_Nishchay_Yojna %></td>
+        <td><%= institutional_structure_of_power_sector.Total %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Institutional Structure Of Power Sector', new_institutional_structure_of_power_sector_path %>

@@ -1,0 +1,2 @@
+json.extract! institutional_structure_of_power_sector, :id, :Years, :BRGF, :State_Plan_BSPHCL, :State_Plan_Generation, :State_Plan_Transmission, :State_Plan_Distribution, :State_Plan_BREDA, :State_Plan_BSHPC, :BSHPC_RIDF, :EAP, :Mukhya_Mantri_Vidyut_Sambandh_Nishchay_Yojna, :Total, :created_at, :updated_at
+json.url institutional_structure_of_power_sector_url(institutional_structure_of_power_sector, format: :json)
