@@ -1,0 +1,62 @@
+<%= form_with(model: poverty1, local: true) do |form| %>
+  <% if poverty1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(poverty1.errors.count, "error") %> prohibited this poverty1 from being saved:</h2>
+
+      <ul>
+      <% poverty1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Sector %>
+    <%= form.text_field :Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :1993-94 %>
+    <%= form.text_field :1993-94 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :1999-00 %>
+    <%= form.text_field :1999-00 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2004-05 %>
+    <%= form.text_field :2004-05 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2011-12 %>
+    <%= form.text_field :2011-12 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Reduction_in_Poverty_between _2004_05_and_2011_12 %>
+    <%= form.text_field :Reduction_in_Poverty_between _2004_05_and_2011_12 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Poverty_Line_2004_05 %>
+    <%= form.text_field :Poverty_Line_2004_05 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Poverty_Line_2011_12 %>
+    <%= form.text_field :Poverty_Line_2011_12 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

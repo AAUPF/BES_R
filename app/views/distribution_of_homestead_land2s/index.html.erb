@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Distribution Of Homestead Land2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>2005-06</th>
+      <th>2010-11</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @distribution_of_homestead_land2s.each do |distribution_of_homestead_land2| %>
+      <tr>
+        <td><%= distribution_of_homestead_land2.Sector %></td>
+        <td><%= distribution_of_homestead_land2.2005-06 %></td>
+        <td><%= distribution_of_homestead_land2.2010-11 %></td>
+        <td><%= distribution_of_homestead_land2.Indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Distribution Of Homestead Land2', new_distribution_of_homestead_land2_path %>

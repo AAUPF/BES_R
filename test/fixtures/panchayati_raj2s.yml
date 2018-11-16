@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Sector: MyString
+  2013_14_Actual: 1.5
+  2014_15_Actual: 1.5
+  2015_16_Actual: 1.5
+  2016_17_BE: 1.5
+  Indicatorstring: MyString
+
+two:
+  Sector: MyString
+  2013_14_Actual: 1.5
+  2014_15_Actual: 1.5
+  2015_16_Actual: 1.5
+  2016_17_BE: 1.5
+  Indicatorstring: MyString

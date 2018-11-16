@@ -57,7 +57,7 @@ module Newmodulefunctions
             legendText: col[:Sector],
             showInLegend: true,
             dataPoints: jip.map do |el|
-                 { y: col[el], label: el }
+                 { y: col[el], label: el.to_s.tr('_', ' ') }
             end
           }
         end

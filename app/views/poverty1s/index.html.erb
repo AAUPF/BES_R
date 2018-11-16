@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Poverty1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Indicator</th>
+      <th>Sector</th>
+      <th>1993-94</th>
+      <th>1999-00</th>
+      <th>2004-05</th>
+      <th>2011-12</th>
+      <th>Reduction in poverty between  2004 05 and 2011 12</th>
+      <th>Poverty line 2004 05</th>
+      <th>Poverty line 2011 12</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @poverty1s.each do |poverty1| %>
+      <tr>
+        <td><%= poverty1.Indicator %></td>
+        <td><%= poverty1.Sector %></td>
+        <td><%= poverty1.1993-94 %></td>
+        <td><%= poverty1.1999-00 %></td>
+        <td><%= poverty1.2004-05 %></td>
+        <td><%= poverty1.2011-12 %></td>
+        <td><%= poverty1.Reduction_in_Poverty_between _2004_05_and_2011_12 %></td>
+        <td><%= poverty1.Poverty_Line_2004_05 %></td>
+        <td><%= poverty1.Poverty_Line_2011_12 %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Poverty1', new_poverty1_path %>

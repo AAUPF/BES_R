@@ -1,0 +1,1 @@
+json.partial! "distribution_of_homestead_land2s/distribution_of_homestead_land2", distribution_of_homestead_land2: @distribution_of_homestead_land2

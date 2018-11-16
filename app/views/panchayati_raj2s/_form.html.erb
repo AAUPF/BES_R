@@ -1,0 +1,47 @@
+<%= form_with(model: panchayati_raj2, local: true) do |form| %>
+  <% if panchayati_raj2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(panchayati_raj2.errors.count, "error") %> prohibited this panchayati_raj2 from being saved:</h2>
+
+      <ul>
+      <% panchayati_raj2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sector %>
+    <%= form.text_field :Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2013_14_Actual %>
+    <%= form.text_field :2013_14_Actual %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2014_15_Actual %>
+    <%= form.text_field :2014_15_Actual %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2015_16_Actual %>
+    <%= form.text_field :2015_16_Actual %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2016_17_BE %>
+    <%= form.text_field :2016_17_BE %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicatorstring %>
+    <%= form.text_field :Indicatorstring %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

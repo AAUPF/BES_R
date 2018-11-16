@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Panchayati Raj2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>2013 14 actual</th>
+      <th>2014 15 actual</th>
+      <th>2015 16 actual</th>
+      <th>2016 17 be</th>
+      <th>Indicatorstring</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @panchayati_raj2s.each do |panchayati_raj2| %>
+      <tr>
+        <td><%= panchayati_raj2.Sector %></td>
+        <td><%= panchayati_raj2.2013_14_Actual %></td>
+        <td><%= panchayati_raj2.2014_15_Actual %></td>
+        <td><%= panchayati_raj2.2015_16_Actual %></td>
+        <td><%= panchayati_raj2.2016_17_BE %></td>
+        <td><%= panchayati_raj2.Indicatorstring %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Panchayati Raj2', new_panchayati_raj2_path %>

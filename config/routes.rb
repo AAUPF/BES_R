@@ -1,5 +1,41 @@
 Rails.application.routes.draw do
-  resources :rural_development_programmes9s do 
+resources :rural_development_programmes6s do 
+                collection { post :import }
+                collection { get :dropdown }
+                collection { get :test }
+                end 
+resources :rural_development_programmes7s do 
+                collection { post :import }
+                collection { get :dropdown }
+                collection { get :test }
+                end 
+resources :disaster_management1s do 
+                collection { post :import }
+                collection { get :dropdown }
+                collection { get :test }
+                end 
+resources :distribution_of_homestead_land2s do 
+                collection { post :import }
+                collection { get :dropdown }
+                collection { get :test }
+                end 
+resources :panchayati_raj2s do 
+                collection { post :import }
+                collection { get :dropdown }
+                collection { get :test }
+                end 
+resources :rural_development_programmes3s do 
+                collection { post :import }
+                collection { get :dropdown }
+                collection { get :test }
+                end 
+resources :poverty1s do 
+                collection { post :import }
+                collection { get :dropdown }
+                collection { get :test }
+                end 
+        
+resources :rural_development_programmes9s do 
                       collection { post :import }
                       collection { get :dropdown }
                       collection { get :test }
