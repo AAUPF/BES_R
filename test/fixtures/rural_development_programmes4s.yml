@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Annual_Physical_Target: 1.5
+  Total_Houses_Completed: 1.5
+  Houses_Completed_for_SC_and_ST: 1.5
+  Percentage_of_Fund_Utilisation: 1.5
+
+two:
+  Year: MyString
+  Annual_Physical_Target: 1.5
+  Total_Houses_Completed: 1.5
+  Houses_Completed_for_SC_and_ST: 1.5
+  Percentage_of_Fund_Utilisation: 1.5

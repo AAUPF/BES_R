@@ -1,0 +1,37 @@
+<%= form_with(model: poverty2, local: true) do |form| %>
+  <% if poverty2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(poverty2.errors.count, "error") %> prohibited this poverty2 from being saved:</h2>
+
+      <ul>
+      <% poverty2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Population_below_poverty_line_in_Percentages %>
+    <%= form.text_field :Population_below_poverty_line_in_Percentages %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Rural_poverty %>
+    <%= form.text_field :Rural_poverty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Urban_poverty %>
+    <%= form.text_field :Urban_poverty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_poverty %>
+    <%= form.text_field :Total_poverty %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

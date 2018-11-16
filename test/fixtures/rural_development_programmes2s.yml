@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Performance: MyString
+  2011-12: MyString
+  2012-13: MyString
+  2013-14: MyString
+  2014-15: MyString
+  2015-16: MyString
+  2016-17: MyString
+
+two:
+  Performance: MyString
+  2011-12: MyString
+  2012-13: MyString
+  2013-14: MyString
+  2014-15: MyString
+  2015-16: MyString
+  2016-17: MyString

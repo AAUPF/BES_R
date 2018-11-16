@@ -1,4 +1,5 @@
-class RoadTransport4 < ApplicationRecord
+class RuralDevelopmentProgrammes9 < ApplicationRecord
+
   def self.import1(file)
     spreadsheet = Roo::Spreadsheet.open(file.path)
     header = spreadsheet.row(1)
@@ -447,4 +448,4 @@ class RoadTransport4 < ApplicationRecord
 
   end
 
-      end
+end

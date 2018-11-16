@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rural Development Programmes9s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Number of dealers</th>
+      <th>Dealers belonging to sc or st</th>
+      <th>Dealers belonging to bc or ebc</th>
+      <th>Dealers belonging to minority</th>
+      <th>Dealers belonging to women</th>
+      <th>Dealers belonging to women or other shg</th>
+      <th>Dealers from helper samiti or pacs or samiti of exarmy personnel</th>
+      <th>Dealers belonging to general</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rural_development_programmes9s.each do |rural_development_programmes9| %>
+      <tr>
+        <td><%= rural_development_programmes9.Districts %></td>
+        <td><%= rural_development_programmes9.Number_of_Dealers %></td>
+        <td><%= rural_development_programmes9.Dealers_belonging_to_SC_or_ST %></td>
+        <td><%= rural_development_programmes9.Dealers_belonging_to_BC_or_EBC %></td>
+        <td><%= rural_development_programmes9.Dealers_belonging_to_Minority %></td>
+        <td><%= rural_development_programmes9.Dealers_belonging_to_Women %></td>
+        <td><%= rural_development_programmes9.Dealers_belonging_to_Women_or_Other_SHG %></td>
+        <td><%= rural_development_programmes9.Dealers_from_Helper_Samiti_or_PACS_or_Samiti_of_ExArmy_Personnel %></td>
+        <td><%= rural_development_programmes9.Dealers_belonging_to_General %></td>
+        <td><%= rural_development_programmes9.Total %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rural Development Programmes9', new_rural_development_programmes9_path %>

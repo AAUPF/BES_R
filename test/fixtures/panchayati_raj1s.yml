@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Item: MyString
+  Number: 1.5
+  Number_of_Members_or_Functionaries: 1.5
+  Average_Number_of_Members_per_Panchayat: 1.5
+
+two:
+  Item: MyString
+  Number: 1.5
+  Number_of_Members_or_Functionaries: 1.5
+  Average_Number_of_Members_per_Panchayat: 1.5

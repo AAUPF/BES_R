@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Distribution Of Homestead Land1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Mahadalit</th>
+      <th>Sc</th>
+      <th>St</th>
+      <th>Bc schedule 1</th>
+      <th>Bc schedule 2</th>
+      <th>Total</th>
+      <th>Percentage of mahadalit</th>
+      <th>Percentage of sc</th>
+      <th>Percentage of st</th>
+      <th>Percentage of bc schedule 1</th>
+      <th>Percentage of bc schedule 2</th>
+      <th>Total percentage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @distribution_of_homestead_land1s.each do |distribution_of_homestead_land1| %>
+      <tr>
+        <td><%= distribution_of_homestead_land1.Item %></td>
+        <td><%= distribution_of_homestead_land1.Mahadalit %></td>
+        <td><%= distribution_of_homestead_land1.SC %></td>
+        <td><%= distribution_of_homestead_land1.ST %></td>
+        <td><%= distribution_of_homestead_land1.BC_Schedule_1 %></td>
+        <td><%= distribution_of_homestead_land1.BC_Schedule_2 %></td>
+        <td><%= distribution_of_homestead_land1.Total %></td>
+        <td><%= distribution_of_homestead_land1.Percentage_of_Mahadalit %></td>
+        <td><%= distribution_of_homestead_land1.Percentage_of_SC %></td>
+        <td><%= distribution_of_homestead_land1.Percentage_of_ST %></td>
+        <td><%= distribution_of_homestead_land1.Percentage_of_BC_Schedule_1 %></td>
+        <td><%= distribution_of_homestead_land1.Percentage_of_BC_Schedule_2 %></td>
+        <td><%= distribution_of_homestead_land1.Total_Percentage %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Distribution Of Homestead Land1', new_distribution_of_homestead_land1_path %>

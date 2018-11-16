@@ -1,0 +1,67 @@
+<%= form_with(model: rural_development_programmes9, local: true) do |form| %>
+  <% if rural_development_programmes9.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rural_development_programmes9.errors.count, "error") %> prohibited this rural_development_programmes9 from being saved:</h2>
+
+      <ul>
+      <% rural_development_programmes9.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Dealers %>
+    <%= form.text_field :Number_of_Dealers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Dealers_belonging_to_SC_or_ST %>
+    <%= form.text_field :Dealers_belonging_to_SC_or_ST %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Dealers_belonging_to_BC_or_EBC %>
+    <%= form.text_field :Dealers_belonging_to_BC_or_EBC %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Dealers_belonging_to_Minority %>
+    <%= form.text_field :Dealers_belonging_to_Minority %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Dealers_belonging_to_Women %>
+    <%= form.text_field :Dealers_belonging_to_Women %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Dealers_belonging_to_Women_or_Other_SHG %>
+    <%= form.text_field :Dealers_belonging_to_Women_or_Other_SHG %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Dealers_from_Helper_Samiti_or_PACS_or_Samiti_of_ExArmy_Personnel %>
+    <%= form.text_field :Dealers_from_Helper_Samiti_or_PACS_or_Samiti_of_ExArmy_Personnel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Dealers_belonging_to_General %>
+    <%= form.text_field :Dealers_belonging_to_General %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

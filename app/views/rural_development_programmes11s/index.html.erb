@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rural Development Programmes11s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Programme</th>
+      <th>Trained</th>
+      <th>Placed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rural_development_programmes11s.each do |rural_development_programmes11| %>
+      <tr>
+        <td><%= rural_development_programmes11.Programme %></td>
+        <td><%= rural_development_programmes11.Trained %></td>
+        <td><%= rural_development_programmes11.Placed %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rural Development Programmes11', new_rural_development_programmes11_path %>

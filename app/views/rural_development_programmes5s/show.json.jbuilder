@@ -1,0 +1,1 @@
+json.partial! "rural_development_programmes5s/rural_development_programmes5", rural_development_programmes5: @rural_development_programmes5

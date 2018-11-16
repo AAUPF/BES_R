@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Social_Background_of_PDS_Dealers: MyString
+  No_of_PDS_Outlets: 1.5
+  Percentage_Share: 1.5
+  Year: MyString
+
+two:
+  Social_Background_of_PDS_Dealers: MyString
+  No_of_PDS_Outlets: 1.5
+  Percentage_Share: 1.5
+  Year: MyString

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Population below poverty line in percentages:</strong>
+  <%= @poverty2.Population_below_poverty_line_in_Percentages %>
+</p>
+
+<p>
+  <strong>Rural poverty:</strong>
+  <%= @poverty2.Rural_poverty %>
+</p>
+
+<p>
+  <strong>Urban poverty:</strong>
+  <%= @poverty2.Urban_poverty %>
+</p>
+
+<p>
+  <strong>Total poverty:</strong>
+  <%= @poverty2.Total_poverty %>
+</p>
+
+<%= link_to 'Edit', edit_poverty2_path(@poverty2) %> |
+<%= link_to 'Back', poverty2s_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rural Development Programmes4s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Annual physical target</th>
+      <th>Total houses completed</th>
+      <th>Houses completed for sc and st</th>
+      <th>Percentage of fund utilisation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rural_development_programmes4s.each do |rural_development_programmes4| %>
+      <tr>
+        <td><%= rural_development_programmes4.Year %></td>
+        <td><%= rural_development_programmes4.Annual_Physical_Target %></td>
+        <td><%= rural_development_programmes4.Total_Houses_Completed %></td>
+        <td><%= rural_development_programmes4.Houses_Completed_for_SC_and_ST %></td>
+        <td><%= rural_development_programmes4.Percentage_of_Fund_Utilisation %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rural Development Programmes4', new_rural_development_programmes4_path %>

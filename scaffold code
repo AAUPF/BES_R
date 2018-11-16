@@ -1,1 +1,1 @@
-rails g scaffold Roads5 Category_of_Road:string Length_in_kms:float Percentage_share:float Indicator:string
+rails g scaffold Generation2 Thermal_Plan:string '2015-16':string '2016-17':string '2017-18_Under_Progress':string '2018-19':string 'By_2022_Upcoming_Projects':string 'Beyond_2022':string

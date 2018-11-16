@@ -1,1 +1,1 @@
-rails g scaffold BiharRenewableEnergy Schemes:string	Physical_Achievement:string	Financial_Outlay:string	Year:string	Indicator:string
+rails g scaffold ProgrammesForElectrification1 Project_Component_under_R_APDRP:string Outlay:float Expenditure_incurred:float

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Fund_available: 1.5
+  Fund_utilised: 1.5
+  Percentage_of_utilisation: 1.5
+  Year: MyString
+
+two:
+  Districts: MyString
+  Fund_available: 1.5
+  Fund_utilised: 1.5
+  Percentage_of_utilisation: 1.5
+  Year: MyString

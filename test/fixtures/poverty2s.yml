@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Population_below_poverty_line_in_Percentages: MyString
+  Rural_poverty: MyString
+  Urban_poverty: MyString
+  Total_poverty: MyString
+
+two:
+  Population_below_poverty_line_in_Percentages: MyString
+  Rural_poverty: MyString
+  Urban_poverty: MyString
+  Total_poverty: MyString

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Number_of_Dealers: 1.5
+  Dealers_belonging_to_SC_or_ST: 1.5
+  Dealers_belonging_to_BC_or_EBC: 1.5
+  Dealers_belonging_to_Minority: 1.5
+  Dealers_belonging_to_Women: 1.5
+  Dealers_belonging_to_Women_or_Other_SHG: 1.5
+  Dealers_from_Helper_Samiti_or_PACS_or_Samiti_of_ExArmy_Personnel: 1.5
+  Dealers_belonging_to_General: 1.5
+  Total: 1.5
+
+two:
+  Districts: MyString
+  Number_of_Dealers: 1.5
+  Dealers_belonging_to_SC_or_ST: 1.5
+  Dealers_belonging_to_BC_or_EBC: 1.5
+  Dealers_belonging_to_Minority: 1.5
+  Dealers_belonging_to_Women: 1.5
+  Dealers_belonging_to_Women_or_Other_SHG: 1.5
+  Dealers_from_Helper_Samiti_or_PACS_or_Samiti_of_ExArmy_Personnel: 1.5
+  Dealers_belonging_to_General: 1.5
+  Total: 1.5

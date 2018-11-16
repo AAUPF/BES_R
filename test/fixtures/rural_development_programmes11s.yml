@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Programme: MyString
+  Trained: 1.5
+  Placed: 1.5
+
+two:
+  Programme: MyString
+  Trained: 1.5
+  Placed: 1.5

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Panchayati Raj1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Number</th>
+      <th>Number of members or functionaries</th>
+      <th>Average number of members per panchayat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @panchayati_raj1s.each do |panchayati_raj1| %>
+      <tr>
+        <td><%= panchayati_raj1.Item %></td>
+        <td><%= panchayati_raj1.Number %></td>
+        <td><%= panchayati_raj1.Number_of_Members_or_Functionaries %></td>
+        <td><%= panchayati_raj1.Average_Number_of_Members_per_Panchayat %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Panchayati Raj1', new_panchayati_raj1_path %>

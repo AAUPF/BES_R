@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Item: MyString
+  Mahadalit: 1.5
+  SC: 1.5
+  ST: 1.5
+  BC_Schedule_1: 1.5
+  BC_Schedule_2: 1.5
+  Total: 1.5
+  Percentage_of_Mahadalit: 1.5
+  Percentage_of_SC: 1.5
+  Percentage_of_ST: 1.5
+  Percentage_of_BC_Schedule_1: 1.5
+  Percentage_of_BC_Schedule_2: 1.5
+  Total_Percentage: 1.5
+
+two:
+  Item: MyString
+  Mahadalit: 1.5
+  SC: 1.5
+  ST: 1.5
+  BC_Schedule_1: 1.5
+  BC_Schedule_2: 1.5
+  Total: 1.5
+  Percentage_of_Mahadalit: 1.5
+  Percentage_of_SC: 1.5
+  Percentage_of_ST: 1.5
+  Percentage_of_BC_Schedule_1: 1.5
+  Percentage_of_BC_Schedule_2: 1.5
+  Total_Percentage: 1.5

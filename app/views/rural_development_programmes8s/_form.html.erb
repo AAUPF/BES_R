@@ -1,0 +1,42 @@
+<%= form_with(model: rural_development_programmes8, local: true) do |form| %>
+  <% if rural_development_programmes8.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rural_development_programmes8.errors.count, "error") %> prohibited this rural_development_programmes8 from being saved:</h2>
+
+      <ul>
+      <% rural_development_programmes8.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Fund_available %>
+    <%= form.text_field :Fund_available %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Fund_utilised %>
+    <%= form.text_field :Fund_utilised %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_of_utilisation %>
+    <%= form.text_field :Percentage_of_utilisation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
