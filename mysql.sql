@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 16, 2018 at 10:21 AM
+-- Generation Time: Nov 19, 2018 at 05:23 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11131,4 +11131,4877 @@ INSERT INTO `rural_development_programmes7s` (`id`, `Sector`, `2014-15`, `2015-1
 (46, 'Gaya', 57.07, 15.84, 55.06, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
 (47, 'Jehanabad', 32.18, 13.45, 30.3, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
 (48, 'Arwal', 33.24, 13.99, 27.71, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
-(49, 'Nawada', 30.86, 12.77, 30.37, 'Percentag
+(49, 'Nawada', 30.86, 12.77, 30.37, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(50, 'Aurangabad', 42.77, 13.93, 41.42, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(51, 'Saran', 24.08, 10.59, 24.82, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(52, 'Siwan', 19.04, 9.64, 18.74, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(53, 'Gopalganj', 20.23, 10.76, 19.46, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(54, 'WestChamparan', 19.04, 7.56, 18.02, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(55, 'EastChamparan', 19.68, 7.85, 18.9, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(56, 'Muzaffarpur', 23.98, 7.82, 22.96, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(57, 'Sitamarhi', 18.23, 18.72, 21.52, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(58, 'Sheohar', 22.46, 16.05, 19.82, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(59, 'Vaishali', 33.73, 5.24, 32.41, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(60, 'Darbhanga', 27.42, 9.79, 26.06, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(61, 'Madhubani', 22.91, 14.39, 21.45, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(62, 'Samastipur', 30.95, 11.06, 29.37, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(63, 'Begusarai', 23.48, 12.52, 22.36, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(64, 'Munger', 17.02, 7.36, 16.35, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(65, 'Sheikhpura', 38.7, 12.92, 36.23, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(66, 'Lakhisarai', 23.86, 11.42, 23.18, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(67, 'Jamui', 26.78, 17.21, 24.67, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(68, 'Khagaria', 26.09, 15.86, 24.73, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(69, 'Bhagalpur', 13.7, 9.53, 13.2, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(70, 'Banka', 16.9, 13.66, 15.83, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(71, 'Saharsa', 23.3, 13.47, 21.08, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(72, 'Supaul', 23.32, 11.59, 21.28, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(73, 'Madhepura', 26.79, 14.11, 24.24, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(74, 'Purnia', 17.89, 11.54, 17.55, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(75, 'Kishanganj', 10.63, 13.11, 9.74, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(76, 'Araria', 18.04, 11.94, 16.68, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(77, 'Katihar', 16.18, 21.49, 15.28, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(78, 'Bihar', 33.53, 26.25, 25.19, 'Percentage share of SC households among households with jobcards', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(79, 'Patna', 0, 0, 16.94, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(80, 'Nalanda', 10.5, 12.24, 20.67, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(81, 'Bhojpur', 9.84, 9.6, 26.48, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(82, 'Buxar', 15.27, 26.37, 27.84, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(83, 'Rohtas', 5.87, 13.05, 26.11, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(84, 'Kaimur', 15.82, 17.88, 27.74, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(85, 'Gaya', 15.84, 8.61, 18.84, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(86, 'Jehanabad', 13.45, 23.56, 49.97, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(87, 'Arwal', 13.99, 22.47, 52.41, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(88, 'Nawada', 2.77, 18.66, 23.52, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(89, 'Aurangabad', 13.93, 15.82, 28.98, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(90, 'Saran', 10.59, 12.87, 21.89, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(91, 'Siwan', 9.64, 12.26, 19.1, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(92, 'Gopalganj', 10.76, 11.7, 20.55, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(93, 'WestChamparan', 7.56, 11.7, 27.16, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(94, 'EastChamparan', 7.85, 14.14, 20.29, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(95, 'Muzaffarpur', 7.82, 6.65, 17.38, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(96, 'Sitamarhi', 18.72, 17.53, 28.78, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(97, 'Sheohar', 16.05, 36.93, 60.1, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(98, 'Vaishali', 5.24, 9.19, 16.19, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(99, 'Darbhanga', 9.79, 11.58, 26.7, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(100, 'Madhubani', 14.39, 12.59, 21.24, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(101, 'Samastipur', 11.06, 15.52, 29.75, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(102, 'Begusarai', 23.09, 11.05, 19.66, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(103, 'Munger', 16.64, 13.11, 25.72, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(104, 'Sheikhpura', 37.3, 18.45, 30.94, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(105, 'Lakhisarai', 23.56, 18.03, 29.36, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(106, 'Jamui', 25.57, 26.71, 34.11, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(107, 'Khagaria', 25.28, 11.56, 21.15, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(108, 'Bhagalpur', 9.53, 13.19, 24.84, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(109, 'Banka', 13.66, 21.3, 34.49, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(110, 'Saharsa', 13.47, 26.58, 41.09, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(111, 'Supaul', 11.59, 17.33, 29.91, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(112, 'Madhepura', 14.11, 25.67, 44.98, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(113, 'Purnia', 11.54, 16.75, 25.16, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(114, 'Kishanganj', 13.11, 13.73, 32.09, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(115, 'Araria', 11.94, 19.92, 35.12, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(116, 'Katihar', 21.49, 18.66, 29.86, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(117, 'Bihar', 17.67, 11.65, 26.23, 'Percentage of households with jobcards demanding employment', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(118, 'Patna', 0, 0, 0.79, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(119, 'Nalanda', 9.28, 5.17, 0.88, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(120, 'Bhojpur', 4.97, 3.64, 0.51, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(121, 'Buxar', 4.46, 8.71, 0.46, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(122, 'Rohtas', 1.76, 2.19, 0.15, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(123, 'Kaimur', 7.31, 2.66, 0.76, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(124, 'Gaya', 3.59, 0.31, 0.22, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(125, 'Jehanabad', 5.68, 12.01, 1.55, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(126, 'Arwal', 1.19, 2.43, 0.71, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(127, 'Nawada', 1.28, 3.47, 0.32, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(128, 'Aurangabad', 4.76, 4.54, 1.61, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(129, 'Saran', 1.96, 5.64, 2.12, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(130, 'Siwan', 0.91, 5.76, 1.02, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(131, 'Gopalganj', 2.14, 2.2, 0.66, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(132, 'WestChamparan', 6.18, 2.15, 0.38, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(133, 'EastChamparan', 5.25, 3.81, 0.34, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(134, 'Muzaffarpur', 1.98, 2.25, 0.3, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(135, 'Sitamarhi', 0.62, 2.16, 0.16, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(136, 'Sheohar', 1.28, 5.52, 0.2, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(137, 'Vaishali', 2.11, 2.98, 0.24, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(138, 'Darbhanga', 2.29, 3.81, 0.28, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(139, 'Madhubani', 2.01, 2.21, NULL, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(140, 'Samastipur', 4.51, 4.77, 0.96, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(141, 'Begusarai', 3.95, 2.62, 1.02, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(142, 'Munger', 0.99, 5.79, 0.5, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(143, 'Sheikhpura', 1.55, 4.29, 0.58, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(144, 'Lakhisarai', 6.17, 5.19, 0.2, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(145, 'Jamui', 3.24, 5.1, 0.14, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(146, 'Khagaria', 0.59, 0.31, 0.15, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(147, 'Bhagalpur', 6.3, 4.85, 0.43, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(148, 'Banka', 2.53, 4.02, 0.2, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(149, 'Saharsa', 0.72, 3.7, 0.24, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(150, 'Supaul', 1.87, 3.46, 0.26, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(151, 'Madhepura', 1.62, 5.24, 0.47, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(152, 'Purnia', 0.57, 1.95, 0.09, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(153, 'Kishanganj', 0.94, 2.98, 0.99, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(154, 'Araria', 0.78, 3.3, 0.21, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(155, 'Katihar', 1.53, 2.36, 0.17, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(156, 'Bihar', 2.98, 3.9, 0.52, 'Household getting 100 days of employment  as percentage those obtaining', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(157, 'Patna', 0, 0, 24.64, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(158, 'Nalanda', 17.93, 18.44, 25.46, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(159, 'Bhojpur', 8.66, 8.19, 17.05, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(160, 'Buxar', 10.08, 29.68, 18.92, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(161, 'Rohtas', 13.41, 11.63, 18.48, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(162, 'Kaimur', 10.61, 11.92, 14.97, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(163, 'Gaya', 24.47, 10.16, 28.66, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(164, 'Jehanabad', 5.22, 15.35, 18.21, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(165, 'Arwal', 2.33, 6.45, 12.49, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(166, 'Nawada', 10.68, 26.67, 25.23, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(167, 'Aurangabad', 14.14, 21.01, 31.4, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(168, 'Saran', 9.49, 25.11, 39.3, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(169, 'Siwan', 5.25, 11.71, 15.07, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(170, 'Gopalganj', 8.92, 12.31, 22.96, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(171, 'WestChamparan', 11.94, 18.09, 30.36, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(172, 'EastChamparan', 16.69, 34.3, 38.3, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(173, 'Muzaffarpur', 11.22, 12.3, 23.2, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(174, 'Sitamarhi', 12.64, 20.53, 26.16, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(175, 'Sheohar', 3.32, 15.32, 11.07, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(176, 'Vaishali', 6.21, 16.09, 26.38, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(177, 'Darbhanga', 12.55, 18.84, 30.04, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(178, 'Madhubani', 14.11, 21.47, 26.06, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(179, 'Samastipur', 13.27, 26.9, 36.37, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(180, 'Begusarai', 10.45, 9.36, 13.93, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(181, 'Munger', 2.23, 8.19, 12.21, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(182, 'Sheikhpura', 2.79, 7.01, 8.7, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(183, 'Lakhisarai', 5.17, 11.92, 14.89, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(184, 'Jamui', 13.69, 26.05, 20.57, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(185, 'Khagaria', 3.21, 4.16, 7.42, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(186, 'Bhagalpur', 9.59, 17.44, 22.06, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(187, 'Banka', 6.39, 19.26, 23.55, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(188, 'Saharsa', 10.98, 39.04, 39.14, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(189, 'Supaul', 6.81, 18.98, 19.34, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(190, 'Madhepura', 9.34, 34.79, 36.74, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(191, 'Purnia', 6.56, 24.49, 24.46, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(192, 'Kishanganj', 4.03, 11.5, 22.08, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(193, 'Araria', 5.9, 21.62, 22.57, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(194, 'Katihar', 12.32, 25.51, 24.94, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(195, 'Bihar', 352.6, 671.78, 873.37, 'Person days of employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(196, 'Patna', 0, 0, 48.73, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(197, 'Nalanda', 43.69, 45.81, 50.55, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(198, 'Bhojpur', 26.34, 30.63, 34.45, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(199, 'Buxar', 29.38, 29.7, 34.65, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(200, 'Rohtas', 21.02, 25.19, 30.41, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(201, 'Kaimur', 23.76, 29.4, 33.96, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(202, 'Gaya', 46.22, 53.6, 55.19, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(203, 'Jehanabad', 41.91, 43.4, 44.76, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(204, 'Arwal', 33.79, 40.5, 40.28, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(205, 'Nawada', 46.62, 50.4, 53.11, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(206, 'Aurangabad', 29.38, 32.32, 35.62, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(207, 'Saran', 26.9, 21.21, 29.17, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(208, 'Siwan', 24.51, 26.44, 30.54, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(209, 'Gopalganj', 33.87, 27.76, 31.41, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(210, 'WestChamparan', 30.23, 32.19, 34.85, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(211, 'EastChamparan', 30.75, 32.79, 35.82, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(212, 'Muzaffarpur', 34.05, 36.64, 41.15, 'Percentage share of women in total employment generated', '2018-11-15 11:23:57', '2018-11-15 11:23:57'),
+(213, 'Sitamarhi', 38.59, 41.76, 44.43, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(214, 'Sheohar', 46.36, 46.13, 44.71, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(215, 'Vaishali', 35.18, 43.85, 45.16, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(216, 'Darbhanga', 47.35, 47.58, 49.9, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(217, 'Madhubani', 42.55, 48.48, 50.61, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(218, 'Samastipur', 42.43, 45.76, 48.46, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(219, 'Begusarai', 57.92, 53.78, 58.57, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(220, 'Munger', 32.17, 39.27, 44.43, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(221, 'Sheikhpura', 41.91, 45.23, 54.1, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(222, 'Lakhisarai', 42.13, 43.9, 49.61, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(223, 'Jamui', 40.54, 43.75, 47.11, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(224, 'Khagaria', 44.59, 53.49, 57.87, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(225, 'Bhagalpur', 32.66, 39.25, 39.18, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(226, 'Banka', 33.07, 42.25, 48.79, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(227, 'Saharsa', 46.66, 48.05, 50.42, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(228, 'Supaul', 36.31, 42.85, 47.24, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(229, 'Madhepura', 41.33, 48.57, 49.96, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(230, 'Purnia', 37.23, 46.69, 49.19, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(231, 'Kishanganj', 29.05, 39.06, 43.06, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(232, 'Araria', 32.1, 41.08, 43.48, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(233, 'Katihar', 39.47, 45.73, 48.06, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
+(234, 'Bihar', 37.32, 40.84, 43.89, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rural_development_programmes8s`
+--
+
+DROP TABLE IF EXISTS `rural_development_programmes8s`;
+CREATE TABLE `rural_development_programmes8s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Fund_available` float DEFAULT NULL,
+  `Fund_utilised` float DEFAULT NULL,
+  `Percentage_of_utilisation` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `rural_development_programmes8s`
+--
+
+INSERT INTO `rural_development_programmes8s` (`id`, `Districts`, `Fund_available`, `Fund_utilised`, `Percentage_of_utilisation`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 9202.19, 4749.13, 51.61, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(2, 'Nalanda', 4179.27, 3697.54, 88.47, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(3, 'Bhojpur', 3314.39, 2669.81, 80.55, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(4, 'Buxar', 3579.49, 3037.28, 84.85, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(5, 'Rohtas', 3827.8, 2961.3, 77.36, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(6, 'Kaimur', 2485.55, 2049.17, 82.44, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(7, 'Gaya', 8826.93, 6733.37, 76.28, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(8, 'Jehanabad', 2014.53, 1751.1, 86.92, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(9, 'Arwal', 755.25, 613.47, 81.23, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(10, 'Nawada', 3553.89, 3407, 95.87, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(11, 'Aurangabad', 4737.02, 3879.2, 81.89, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(12, 'Saran', 3732.36, 2776.46, 74.39, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(13, 'Siwan', 3367.79, 2308.76, 68.55, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(14, 'Gopalganj', 3487.48, 2443.22, 70.06, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(15, 'WestChamparan', 4264.73, 3274.29, 76.78, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(16, 'EastChamparan', 7282.04, 6155.51, 84.53, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(17, 'Muzaffarpur', 6028.22, 3504.54, 58.14, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(18, 'Sitamarhi', 5569.45, 4384.22, 78.72, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(19, 'Sheohar', 1774.1, 1289.89, 72.71, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(20, 'Vaishali', 3179.57, 2324.94, 73.12, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(21, 'Darbhanga', 5090.59, 3793.71, 74.52, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(22, 'Madhubani', 3604.73, 2824.22, 78.35, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(23, 'Samastipur', 4913.36, 3675.71, 74.81, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(24, 'Begusarai', 5540.03, 4638.19, 83.72, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(25, 'Munger', 1295.68, 945.36, 72.96, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(26, 'Sheikhpura', 887.17, 808.08, 91.09, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(27, 'Lakhisarai', 1970.27, 1784.81, 90.59, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(28, 'Jamui', 3162.38, 3029.62, 95.8, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(29, 'Khagaria', 1653.59, 1394.54, 84.33, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(30, 'Bhagalpur', 4075.77, 3446.07, 84.55, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(31, 'Banka', 2735.15, 2216.97, 81.05, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(32, 'Saharsa', 4660.39, 4347.44, 93.28, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(33, 'Supaul', 4666.8, 2497.91, 53.53, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(34, 'Madhepura', 2701.95, 2396.64, 88.7, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(35, 'Purnia', 4411.22, 3377.9, 76.58, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(36, 'Kishanganj', 2213.29, 1683.09, 76.04, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(37, 'Araria', 4100.05, 2773.44, 67.64, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(38, 'Katihar', 4797.88, 4452.59, 92.8, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(39, 'State Fund', 41551.7, 995.04, 2.39, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(40, 'Bihar', 189194, 115092, 60.83, '2014-15', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(41, 'Patna', 4457.27, 2009.1, 45.07, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(42, 'Nalanda', 4961.62, 4481.63, 90.33, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(43, 'Bhojpur', 3122, 2717.44, 87.04, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(44, 'Buxar', 8217.59, 7703.5, 93.74, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(45, 'Rohtas', 3475.44, 2807.62, 80.78, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(46, 'Kaimur', 3306.56, 2882.12, 87.16, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(47, 'Gaya', 3991.61, 1988.99, 49.83, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(48, 'Jehanabad', 4027.96, 3759.45, 93.33, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(49, 'Arwal', 1237.38, 988.65, 79.9, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(50, 'Nawada', 7403.77, 7260.47, 98.06, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(51, 'Aurangabad', 5602.5, 5207.79, 92.95, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(52, 'Saran', 7484.76, 6819.38, 91.11, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(53, 'Siwan', 3580.19, 2517.24, 70.31, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(54, 'Gopalganj', 3350.8, 2309.34, 68.92, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(55, 'WestChamparan', 4771.12, 4078.71, 85.49, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(56, 'EastChamparan', 9562.33, 8500.29, 88.89, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(57, 'Muzaffarpur', 5042.78, 2518.3, 49.94, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(58, 'Sitamarhi', 5816.75, 4622.41, 79.47, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(59, 'Sheohar', 9745.48, 3107.54, 31.89, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(60, 'Vaishali', 3955.96, 3295.94, 83.32, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(61, 'Darbhanga', 5089.24, 3792.42, 74.52, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(62, 'Madhubani', 5203.86, 4730.53, 90.9, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(63, 'Samastipur', 8306.25, 7159.95, 86.2, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(64, 'Begusarai', 6557.46, 6003.66, 91.55, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(65, 'Munger', 2619.51, 2469.06, 94.26, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(66, 'Sheikhpura', 1683.04, 1649.57, 98.01, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(67, 'Lakhisarai', 3436.04, 3274.4, 95.3, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(68, 'Jamui', 6803.48, 6676.5, 98.13, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(69, 'Khagaria', 1019.56, 811.82, 79.62, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(70, 'Bhagalpur', 4892.61, 4535.23, 92.7, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(71, 'Banka', 4375.11, 3903.19, 89.21, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(72, 'Saharsa', 6654.82, 6377, 95.83, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(73, 'Supaul', 5805.13, 3750.25, 64.6, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(74, 'Madhepura', 8226.88, 7894.32, 95.96, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(75, 'Purnia', 6131.96, 5116.32, 83.44, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(76, 'Kishanganj', 2380.07, 1896.88, 79.7, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(77, 'Araria', 6280.66, 5023.71, 79.99, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(78, 'Katihar', 7483.49, 6762.6, 90.37, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(79, 'State Fund', 1947.57, 1035.79, 53.18, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(80, 'Bihar', 198011, 162439, 82.04, '2015-16', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(81, 'Patna', 6764.57, 3075.28, 45.46, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(82, 'Nalanda', 6544.12, 6050.44, 92.46, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(83, 'Bhojpur', 4381.31, 3949.04, 90.13, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(84, 'Buxar', 8805.11, 8311.4, 94.39, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(85, 'Rohtas', 4946.89, 4007.58, 81.01, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(86, 'Kaimur', 4181.48, 3828.55, 91.56, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(87, 'Gaya', 8078.05, 6304.45, 78.04, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(88, 'Jehanabad', 5010.88, 4844.11, 96.67, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(89, 'Arwal', 3322.04, 3282.04, 98.8, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(90, 'Nawada', 6599.45, 6407.76, 97.1, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(91, 'Aurangabad', 8563.49, 7771.32, 90.75, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(92, 'Saran', 10545.1, 9796.72, 92.9, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(93, 'Siwan', 4367.2, 3709.54, 84.94, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(94, 'Gopalganj', 6720.01, 6218.53, 92.54, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(95, 'WestChamparan', 6937.29, 6244.06, 90.01, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(96, 'EastChamparan', 10682.6, 9939.05, 93.04, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(97, 'Muzaffarpur', 6058.38, 4316.55, 71.25, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(98, 'Sitamarhi', 7165.58, 6101.56, 85.15, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(99, 'Sheohar', 4193.74, 3709.52, 88.45, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(100, 'Vaishali', 6101.28, 5506.69, 90.25, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(101, 'Darbhanga', 8123.02, 6949.67, 85.56, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(102, 'Madhubani', 7625.99, 7108.55, 93.21, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(103, 'Samastipur', 11260.6, 10141.2, 90.06, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(104, 'Begusarai', 6668.73, 6153.76, 92.28, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(105, 'Munger', 3148.09, 2790.41, 88.64, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(106, 'Sheikhpura', 2214.96, 2160.28, 97.53, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(107, 'Lakhisarai', 3269.52, 3121.13, 95.46, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(108, 'Jamui', 6301.91, 6137.45, 97.39, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(109, 'Khagaria', 1937.98, 1822.53, 94.04, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(110, 'Bhagalpur', 5773.65, 5310.45, 91.98, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(111, 'Banka', 5893.21, 5492.13, 93.19, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(112, 'Saharsa', 12280.9, 11942.1, 97.24, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(113, 'Supaul', 7173, 5311.01, 74.04, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(114, 'Madhepura', 7558.83, 7224.32, 95.57, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(115, 'Purnia', 7598.91, 6483.5, 85.32, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(116, 'Kishanganj', 3953.35, 3644.37, 92.18, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(117, 'Araria', 6570.39, 5385.28, 81.96, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(118, 'Katihar', 6438.66, 5996.41, 93.13, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(119, 'State Fund', 4275.1, 569.44, 13.32, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
+(120, 'Bihar', 248035, 219211, 88.39, '2016-17', '2018-11-16 06:33:16', '2018-11-16 06:33:16');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rural_development_programmes9s`
+--
+
+DROP TABLE IF EXISTS `rural_development_programmes9s`;
+CREATE TABLE `rural_development_programmes9s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Number_of_Dealers` float DEFAULT NULL,
+  `Dealers_belonging_to_SC_or_ST` float DEFAULT NULL,
+  `Dealers_belonging_to_BC_or_EBC` float DEFAULT NULL,
+  `Dealers_belonging_to_Minority` float DEFAULT NULL,
+  `Dealers_belonging_to_Women` float DEFAULT NULL,
+  `Dealers_belonging_to_Women_or_Other_SHG` float DEFAULT NULL,
+  `Dealers_from_Helper_Samiti_or_PACS_or_Samiti_of_ExArmy_Personnel` float DEFAULT NULL,
+  `Dealers_belonging_to_General` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `rural_development_programmes9s`
+--
+
+INSERT INTO `rural_development_programmes9s` (`id`, `Districts`, `Number_of_Dealers`, `Dealers_belonging_to_SC_or_ST`, `Dealers_belonging_to_BC_or_EBC`, `Dealers_belonging_to_Minority`, `Dealers_belonging_to_Women`, `Dealers_belonging_to_Women_or_Other_SHG`, `Dealers_from_Helper_Samiti_or_PACS_or_Samiti_of_ExArmy_Personnel`, `Dealers_belonging_to_General`, `Total`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 2439, 17.3, 47.1, 2.7, 9.9, 0.1, 7.6, 15.3, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(2, 'Nalanda', 1196, 14.7, 41.7, 4, 9.7, 1.8, 16.1, 12, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(3, 'Bhojpur', 1239, 13.7, 36.1, 4.1, 10.7, 0, 11, 24.4, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(4, 'Buxar', 752, 19.4, 33.5, 2.8, 5.5, 1.5, 14.1, 23.3, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(5, 'Rohtas', 927, 23.2, 34.7, 6.3, 5.8, 1.1, 12, 16.9, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(6, 'Kaimur', 615, 24.1, 39.7, 6.8, 8.6, 0, 4.4, 16.4, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(7, 'Gaya', 1849, 31.2, 32, 5.1, 5.8, 1.5, 10.2, 14.2, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(8, 'Jehanabad', 483, 17.6, 29.8, 4.3, 8.7, 0, 15.5, 24, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(9, 'Arwal', 328, 27.4, 29, 4.3, 5.2, 0.3, 20.1, 13.7, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(10, 'Nawada', 902, 15.4, 34.1, 4.5, 10.8, 0.4, 13.7, 21, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(11, 'Aurangabad', 1144, 17.7, 36.6, 3.8, 3.8, 0.2, 9.3, 28.8, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(12, 'Saran', 2337, 11.3, 31.8, 2.4, 16.1, 0, 11, 27.2, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(13, 'Siwan', 1477, 13.3, 37.5, 7, 5.9, 0.4, 6.9, 29, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(14, 'Gopalganj', 1171, 13.5, 29.6, 2.6, 7, 0, 17.1, 30.1, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(15, 'WestChamparan', 1945, 20.4, 31.3, 12, 6.3, 0.1, 13.1, 16.9, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(16, 'EastChamparan', 2169, 13.2, 38.1, 9, 5.1, 0.6, 10, 24, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(17, 'Muzaffarpur', 1916, 18.4, 31.9, 4, 8.9, 1.1, 11.6, 24.1, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(18, 'Sitamarhi', 975, 17.6, 41.5, 6.7, 6.7, 1.1, 12.3, 14.1, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(19, 'Sheohar', 294, 13.6, 30.3, 4.8, 7.1, 1, 14.6, 28.6, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(20, 'Vaishali', 1451, 15.5, 38.7, 1.7, 6.9, 0.9, 15, 21.4, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(21, 'Darbhanga', 1231, 11, 31.8, 11.1, 9.6, 0.6, 8.4, 27.5, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(22, 'Madhubani', 1481, 19.5, 36.1, 7.6, 5.7, 1.3, 11.3, 18.6, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(23, 'Samastipur', 1462, 20.6, 35.2, 2.5, 5.3, 0.7, 13.9, 22, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(24, 'Begusarai', 1021, 27.3, 27.3, 4.3, 11.9, 0, 4.6, 24.5, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(25, 'Munger', 576, 8.5, 47.6, 5.7, 9.9, 0, 12.5, 15.8, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(26, 'Sheikhpura', 289, 16.6, 36.3, 2.4, 6.6, 0, 12.5, 25.6, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(27, 'Lakhisarai', 371, 11.3, 34, 2.4, 9.7, 2.2, 11.1, 29.4, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(28, 'Jamui', 756, 19.7, 34.4, 3.6, 4.4, 0, 13.6, 24.3, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(29, 'Khagaria', 593, 14, 49.7, 2.7, 13.3, 3.4, 5.6, 11.3, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(30, 'Bhagalpur', 1320, 15, 46.1, 10.4, 7.3, 0, 10.4, 10.8, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(31, 'Banka', 792, 15.3, 46.2, 7.8, 8.7, 3.9, 4.7, 13.4, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(32, 'Saharsa', 702, 17.4, 39.9, 9, 4.7, 1.4, 15.7, 12, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(33, 'Supaul', 714, 11.8, 46.8, 8.8, 4.2, 0, 15.1, 13.3, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(34, 'Madhepura', 573, 14.1, 46.6, 4.9, 8.2, 0.3, 16.9, 8.9, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(35, 'Purnia', 1154, 18.6, 36.1, 16.2, 9.7, 2.8, 6.2, 10.3, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(36, 'Kishanganj', 587, 14.7, 25.4, 0, 4.1, 0.3, 8.2, 47.4, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(37, 'Araria', 1230, 14.5, 31.6, 23.4, 15.1, 0, 7.2, 8.1, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(38, 'Katihar', 1022, 18.5, 38.3, 10.7, 3.6, 0, 13.1, 15.9, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
+(39, 'Bihar', 41483, 17.1, 36.7, 6.4, 8.1, 0.7, 11, 20, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rural_development_programmes11s`
+--
+
+DROP TABLE IF EXISTS `rural_development_programmes11s`;
+CREATE TABLE `rural_development_programmes11s` (
+  `id` bigint(20) NOT NULL,
+  `Programme` varchar(255) DEFAULT NULL,
+  `Trained` float DEFAULT NULL,
+  `Placed` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `rural_development_programmes11s`
+--
+
+INSERT INTO `rural_development_programmes11s` (`id`, `Programme`, `Trained`, `Placed`, `created_at`, `updated_at`) VALUES
+(1, 'DDUGKY', 38608, 23252, '2018-11-15 09:06:20', '2018-11-15 09:06:20'),
+(2, 'RSETI', 131838, 65580, '2018-11-15 09:06:20', '2018-11-15 09:06:20'),
+(3, 'Others', NULL, 98554, '2018-11-15 09:06:20', '2018-11-15 09:06:20'),
+(4, 'Total', 170446, 187386, '2018-11-15 09:06:20', '2018-11-15 09:06:20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `schema_migrations`
+--
+
+DROP TABLE IF EXISTS `schema_migrations`;
+CREATE TABLE `schema_migrations` (
+  `version` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `schema_migrations`
+--
+
+INSERT INTO `schema_migrations` (`version`) VALUES
+('20180530121358'),
+('20180530125025'),
+('20180607104248'),
+('20180620074357'),
+('20180704063516'),
+('20180705044630'),
+('20180706071813'),
+('20180706115241'),
+('20180706150150'),
+('20180706151416'),
+('20180706152304'),
+('20180707112020'),
+('20180707113804'),
+('20180708142911'),
+('20180709072122'),
+('20180709075532'),
+('20180709083253'),
+('20180709084113'),
+('20180709101654'),
+('20180709102136'),
+('20180709102822'),
+('20180709103457'),
+('20180710103500'),
+('20180710113758'),
+('20180710143011'),
+('20180710143758'),
+('20180710150334'),
+('20180711054916'),
+('20180711064241'),
+('20180711065204'),
+('20180711085818'),
+('20180711092323'),
+('20180711112703'),
+('20180711120543'),
+('20180711121052'),
+('20180712083615'),
+('20180712101337'),
+('20180712104830'),
+('20180712105700'),
+('20180713065205'),
+('20180713065426'),
+('20180713151755'),
+('20180713152050'),
+('20180716080201'),
+('20180716090710'),
+('20180716104647'),
+('20180716111815'),
+('20180716113436'),
+('20180717042230'),
+('20180717061522'),
+('20180717065132'),
+('20180717065712'),
+('20180717075911'),
+('20180717081022'),
+('20180717091656'),
+('20180717103019'),
+('20180717103322'),
+('20180717110138'),
+('20180717112504'),
+('20180717142120'),
+('20180718042916'),
+('20180718055651'),
+('20180718061839'),
+('20180718062211'),
+('20180723092851'),
+('20180724065643'),
+('20180726061831'),
+('20180726062849'),
+('20180726081852'),
+('20180726093132'),
+('20180726093307'),
+('20180726100048'),
+('20180726101907'),
+('20180726122302'),
+('20180727041246'),
+('20180727051521'),
+('20180727062031'),
+('20180727064016'),
+('20180727064620'),
+('20180727070111'),
+('20180727071435'),
+('20180727073928'),
+('20180727074914'),
+('20180727075741'),
+('20180727080611'),
+('20180727081533'),
+('20180727082359'),
+('20180803053246'),
+('20180803072359'),
+('20180803073914'),
+('20180803075630'),
+('20180803102611'),
+('20180803103123'),
+('20180806084101'),
+('20180806103432'),
+('20180806121547'),
+('20180807074129'),
+('20180807105025'),
+('20180807112025'),
+('20180807114928'),
+('20180807120109'),
+('20180808052216'),
+('20180808061410'),
+('20180808063509'),
+('20180808070433'),
+('20180808072408'),
+('20180808084719'),
+('20180808103908'),
+('20180808112526'),
+('20180808123145'),
+('20180808124143'),
+('20180808125133'),
+('20180808130204'),
+('20180808131745'),
+('20180809054138'),
+('20180809054459'),
+('20180809061017'),
+('20180809061153'),
+('20180809070514'),
+('20180809080222'),
+('20180809081734'),
+('20180813051301'),
+('20180813051924'),
+('20180814095851'),
+('20180814102013'),
+('20180814103834'),
+('20180814110222'),
+('20180814112339'),
+('20180814113618'),
+('20180814120839'),
+('20180814123207'),
+('20180816042136'),
+('20180816051613'),
+('20180816053524'),
+('20180816065459'),
+('20180816070151'),
+('20180817084114'),
+('20180817092424'),
+('20180817105300'),
+('20180817113923'),
+('20180817115454'),
+('20180820055341'),
+('20180820064832'),
+('20180820065043'),
+('20180820070516'),
+('20180820071710'),
+('20180820074440'),
+('20180820100631'),
+('20180821061401'),
+('20180821062913'),
+('20180821075300'),
+('20180821081102'),
+('20180821082939'),
+('20180821110740'),
+('20180821120258'),
+('20180821120902'),
+('20180823062912'),
+('20180828092459'),
+('20180828104657'),
+('20180828111239'),
+('20180828114215'),
+('20180828120634'),
+('20180830044733'),
+('20180830105313'),
+('20180830110244'),
+('20180830110831'),
+('20180830114900'),
+('20180831054959'),
+('20180901090744'),
+('20180903082419'),
+('20180903083149'),
+('20180905120528'),
+('20180905123853'),
+('20180905130130'),
+('20180905131807'),
+('20180906053734'),
+('20180906062154'),
+('20180906064223'),
+('20180906070911'),
+('20180906072726'),
+('20180906075118'),
+('20180906122134'),
+('20180907055304'),
+('20180907060842'),
+('20180908141851'),
+('20180908150245'),
+('20180909044218'),
+('20180909052208'),
+('20180909054655'),
+('20180909061750'),
+('20180909073428'),
+('20180909083847'),
+('20180909085954'),
+('20180909092024'),
+('20180909111907'),
+('20180909162046'),
+('20180910045939'),
+('20180910081251'),
+('20180910114200'),
+('20180910123231'),
+('20180911085726'),
+('20180911101136'),
+('20180911111155'),
+('20180911124824'),
+('20180911130638'),
+('20180912063537'),
+('20180912121935'),
+('20180912123018'),
+('20180913095424'),
+('20180913101027'),
+('20180913112235'),
+('20180913114123'),
+('20180914075251'),
+('20180914122349'),
+('20180914141703'),
+('20180915101059'),
+('20180916061054'),
+('20180916180542'),
+('20180916183504'),
+('20180916184652'),
+('20180917062638'),
+('20180917075421'),
+('20180926075549'),
+('20180927072143'),
+('20181003093812'),
+('20181008061122'),
+('20181008061636'),
+('20181008091131'),
+('20181008103136'),
+('20181008110736'),
+('20181009095714'),
+('20181009112156'),
+('20181009112346'),
+('20181012064702'),
+('20181012065103'),
+('20181012080429'),
+('20181012091630'),
+('20181012091641'),
+('20181012100118'),
+('20181012100818'),
+('20181012104359'),
+('20181012115935'),
+('20181015062536'),
+('20181015095355'),
+('20181015120335'),
+('20181022082303'),
+('20181022085921'),
+('20181025050706'),
+('20181025051451'),
+('20181025053514'),
+('20181025062949'),
+('20181025074214'),
+('20181029055348'),
+('20181029065018'),
+('20181029073738'),
+('20181029081207'),
+('20181029083517'),
+('20181030070612'),
+('20181030074330'),
+('20181030082713'),
+('20181030085714'),
+('20181030110448'),
+('20181101053622'),
+('20181101060907'),
+('20181101070732'),
+('20181105064345'),
+('20181105092647'),
+('20181105113556'),
+('20181106054241'),
+('20181106070148'),
+('20181106070216'),
+('20181106074513'),
+('20181108081346'),
+('20181108110337'),
+('20181109053033'),
+('20181109060238'),
+('20181109073956'),
+('20181109083802'),
+('20181109083803'),
+('20181109093350'),
+('20181109100028'),
+('20181109102222'),
+('20181109105917'),
+('20181109110434'),
+('20181109112851'),
+('20181109115252'),
+('20181109120722'),
+('20181112082936'),
+('20181112083643'),
+('20181112100311'),
+('20181112100414'),
+('20181112103403'),
+('20181115071332'),
+('20181115073058'),
+('20181115090522'),
+('20181115092749'),
+('20181115095049'),
+('20181115101154'),
+('20181115103737'),
+('20181115105342'),
+('20181115105614'),
+('20181115110948'),
+('20181115111339'),
+('20181116054011'),
+('20181116055544'),
+('20181116061405'),
+('20181116063224'),
+('20181116070443'),
+('20181116084257');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sectoral_expenditure1s`
+--
+
+DROP TABLE IF EXISTS `sectoral_expenditure1s`;
+CREATE TABLE `sectoral_expenditure1s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sectoral_expenditure1s`
+--
+
+INSERT INTO `sectoral_expenditure1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Total Expenditure (Rs. crore)', 3262, 3670, 3615, 4120, 2414, 4376, 'Agriculture and Allied Activities', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(2, 'Revenue Expenditure (Rs. crore)', 3170, 3193, 3431, 3515, 2287, 4066, 'Agriculture and Allied Activities', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(3, '(a) Salary component (Percentage)', 14.8, 14.7, 13.9, 14.6, 22.7, 15, 'Agriculture and Allied Activities', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(4, '(b) Non-salary component (Percentage)', 85.2, 85.3, 86.1, 85.4, 77.3, 85, 'Agriculture and Allied Activities', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(5, 'Capital Outlay (Rs. crore)', 92, 477, 185, 605, 128, 310, 'Agriculture and Allied Activities', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(6, 'Capital Outlay (Percentage)', 2.8, 13, 5.1, 14.7, 5.3, 7.1, 'Agriculture and Allied Activities', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(7, 'Total Expenditure (Rs. crore)', 2854, 2838, 2444, 2836, 2844, 4388, 'Irrigation and Flood Control', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(8, 'Revenue Expenditure (Rs. crore)', 914, 1039, 1020, 1151, 1048, 1290, 'Irrigation and Flood Control', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(9, '(a) Salary component (Percentage)', 65.9, 56.3, 58, 57, 56.9, 54.6, 'Irrigation and Flood Control', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(10, '(b) Non-salary component (Percentage)', 34.1, 43.7, 42, 43, 43.1, 45.4, 'Irrigation and Flood Control', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(11, 'Capital Outlay (Rs. crore) ', 1940, 1799, 1424, 1685, 1796, 3098, 'Irrigation and Flood Control', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(12, 'Capital Outlay (Percentage)', 68, 63.4, 58.3, 59.4, 63.1, 70.6, 'Irrigation and Flood Control', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(13, 'Total Expenditure (Rs. crore)', 3374, 5133, 7948, 8945, 13437, 10575, 'Energy and Power', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(14, 'Revenue Expenditure (Rs. crore)', 3200, 3236, 3773, 6151, 7698, 5092, 'Energy and Power', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(15, '(a) Salary component (Percentage)', 0, 0, 0, 0, 0, 0, 'Energy and Power', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(16, '(b) Non-salary component (Percentage)', 100, 100, 100, 100, 100, 100, 'Energy and Power', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(17, 'Capital Outlay (Rs. crore) ', 174, 1897, 4175, 2794, 5739, 5483, 'Energy and Power', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(18, 'Capital Outlay (Percentage)', 5.1, 37, 52.5, 31.2, 42.7, 51.8, 'Energy and Power', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(19, 'Total Expenditure (Rs. crore)', 4138, 5471, 5194, 6130, 7388, 7556, 'Transport', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(20, 'Revenue Expenditure (Rs. crore)', 826, 1381, 996, 1712, 1787, 2023, 'Transport', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(21, '(a) Salary component (Percentage)', 24.6, 15.4, 21.7, 13.9, 13, 14.4, 'Transport', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(22, '(b) Non-salary component (Percentage)', 75.4, 84.6, 78.3, 86.1, 87, 85.6, 'Transport', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(23, 'Capital Outlay (Rs. crore) ', 3313, 4090, 4198, 4417, 5601, 5534, 'Transport', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(24, 'Capital Outlay (Percentage)', 80.1, 74.8, 80.8, 72.1, 75.8, 73.2, 'Transport', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(25, 'Total Expenditure (Rs. crore)', 583, 1115, 564, 1230, 1116, 1126, 'Industry and Minerals', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(26, 'Revenue Expenditure (Rs. crore)', 534, 580, 561, 1201, 888, 936, 'Industry and Minerals', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(27, '(a) Salary component (Percentage)', 15.6, 11, 11.5, 5.2, 7, 8.7, 'Industry and Minerals', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(28, '(b) Non-salary component (Percentage)', 84.4, 89, 88.5, 94.8, 93, 91.3, 'Industry and Minerals', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(29, 'Capital Outlay (Rs. crore) ', 49, 535, 3, 29, 228, 190, 'Industry and Minerals', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(30, 'Capital Outlay (Percentage)', 8.4, 48, 0.5, 2.4, 20.4, 16.9, 'Industry and Minerals', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(31, 'Total Expenditure (Rs. crore)', 20246, 24871, 29173, 37305, 44943, 51332, 'Total (Economic Services)', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(32, 'Revenue Expenditure (Rs. crore)', 12710, 14060, 14445, 19696, 23417, 27688, 'Total (Economic Services)', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(33, '(a) Salary component (Percentage)', 15.2, 14.6, 14.4, 11.2, 9.2, 8.7, 'Total (Economic Services)', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(34, '(b) Non-salary component (Percentage)', 84.8, 85.4, 85.6, 88.8, 90.8, 91.3, 'Total (Economic Services)', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(35, 'Capital Outlay (Rs. crore)', 7536, 10811, 14728, 17609, 21526, 23643, 'Total (Economic Services)', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
+(36, 'Capital Outlay (Percentage)', 37.2, 43.5, 50.5, 47.2, 47.9, 46.1, 'Total (Economic Services)', '2018-09-13 10:14:49', '2018-09-13 10:14:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sectoral_expenditure2s`
+--
+
+DROP TABLE IF EXISTS `sectoral_expenditure2s`;
+CREATE TABLE `sectoral_expenditure2s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sectoral_expenditure2s`
+--
+
+INSERT INTO `sectoral_expenditure2s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Estimated Population (crore)', 10.6, 10.9, 11.1, 11.4, 11.6, 11.9, 'Estimated Population (crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(2, 'Education, Sports and Culture', 14445, 15047, 16531, 19155, 20226, 26394, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(3, 'Medical and Public Health', 2398, 2574, 3604, 4571, 5493, 6535, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(4, 'Water Supply and Sanitation', 2587, 3605, 4542, 4518, 8786, 13148, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(5, 'Social Services', 24438, 28253, 33386, 38684, 44329, 58492, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(6, 'Economic Services', 20246, 24871, 29173, 37305, 44943, 51332, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(7, 'Capital Outlay ', 9585, 14001, 18150, 23966, 27208, 32196, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(8, 'General Services', 19362, 23351, 28157, 31589, 32697, 44970, 'Total Expenditure (Rs. crore)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(9, 'Education, Sports and Culture', 1358, 1383, 1485, 1682, 1737, 2215, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(10, 'Medical and Public Health', 225, 237, 324, 401, 472, 549, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(11, 'Water Supply and Sanitation', 243, 331, 408, 397, 754, 1104, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(12, 'Social Services', 2297, 2596, 2999, 3397, 3806, 4910, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(13, 'Economic Services', 1903, 2286, 2621, 3276, 3859, 4309, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(14, 'Capital Outlay ', 901, 1287, 1631, 2105, 2336, 2702, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
+(15, 'General Services', 1820, 2146, 2530, 2774, 2807, 3775, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sectoral_expenditures`
+--
+
+DROP TABLE IF EXISTS `sectoral_expenditures`;
+CREATE TABLE `sectoral_expenditures` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sectoral_expenditures`
+--
+
+INSERT INTO `sectoral_expenditures` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Total Expenditure (Rs. crore)', 14445, 15047, 16531, 19155, 20226, 26394, 'Education, Sports, Arts and Culture ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(2, 'Revenue Expenditure (Rs. crore)', 14080, 14344, 16267, 18605, 19152, 24696, 'Education, Sports, Arts and Culture ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(3, '(a)  Salary component (Percentage)', 44.5, 33.7, 30, 24, 22.8, 19.5, 'Education, Sports, Arts and Culture ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(4, '(b)  Non-salary component (Percentage)', 55.5, 66.3, 70, 76, 77.2, 80.5, 'Education, Sports, Arts and Culture ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(5, 'Capital Outlay (Rs. crore)', 364, 704, 263, 550, 1074, 1698, 'Education, Sports, Arts and Culture ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(6, 'Capital Outlay (Percentage)', 2.5, 4.7, 1.6, 2.9, 5.3, 6.4, 'Education, Sports, Arts and Culture ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(7, 'Total Expenditure (Rs. crore)', 2398, 2574, 3604, 4571, 5493, 6535, 'Health and Family Welfare ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(8, 'Revenue Expenditure (Rs. crore)', 1836, 2113, 3288, 3481, 4622, 5711, 'Health and Family Welfare ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(9, '(a)  Salary component (Percentage)', 79.6, 74.8, 48.6, 52.6, 48.3, 37.2, 'Health and Family Welfare ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(10, '(b)  Non-salary component (Percentage)', 20.4, 25.2, 51.4, 47.4, 51.7, 62.8, 'Health and Family Welfare ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(11, 'Capital Outlay (Rs. crore)', 563, 460, 316, 1091, 870, 824, 'Health and Family Welfare ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(12, 'Capital Outlay (Percentage)', 23.5, 17.9, 8.8, 23.9, 15.8, 12.6, 'Health and Family Welfare ', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(13, 'Total Expenditure (Rs. crore)', 2587, 3605, 4542, 4518, 8786, 13148, 'Water Supply, Sanitation, Housing and Urban Development', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(14, 'Revenue Expenditure (Rs. crore)', 2304, 2967, 3639, 3694, 7463, 11099, 'Water Supply, Sanitation, Housing and Urban Development', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(15, '(a)  Salary component (Percentage)', 8.9, 8, 6.4, 6.4, 3.1, 2.1, 'Water Supply, Sanitation, Housing and Urban Development', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(16, '(b)  Non-salary component (Percentage)', 91.1, 92, 93.6, 93.6, 96.9, 97.9, 'Water Supply, Sanitation, Housing and Urban Development', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(17, 'Capital Outlay (Rs. crore)', 282, 638, 903, 824, 1323, 2049, 'Water Supply, Sanitation, Housing and Urban Development', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(18, 'Capital Outlay (Percentage)', 10.9, 17.7, 19.9, 18.2, 15.1, 15.6, 'Water Supply, Sanitation, Housing and Urban Development', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(19, 'Total Expenditure (Rs. crore)', 24438, 28253, 33386, 38684, 44329, 58492, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(20, 'Revenue Expenditure (Rs. crore)', 23107, 26395, 31713, 35943, 40737, 53306, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(21, '(a)  Salary component (Percentage)', 30.7, 26.6, 22.4, 19.2, 17.7, 14.2, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(22, '(b)  Non-salary component (Percentage)', 69.3, 73.4, 77.6, 80.8, 82.3, 85.8, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(23, 'Capital Outlay (Rs. crore)', 1331, 1858, 1674, 2740, 3592, 5186, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
+(24, 'Capital Outlay (Percentage)', 5.4, 6.6, 5, 7.1, 8.1, 8.9, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sixth_economic_census1s`
+--
+
+DROP TABLE IF EXISTS `sixth_economic_census1s`;
+CREATE TABLE `sixth_economic_census1s` (
+  `id` bigint(20) NOT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `Number_2005` float DEFAULT NULL,
+  `Number_2013` float DEFAULT NULL,
+  `Percentage_Increase` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sixth_economic_census1s`
+--
+
+INSERT INTO `sixth_economic_census1s` (`id`, `Indicator`, `Sector`, `Number_2005`, `Number_2013`, `Percentage_Increase`, `created_at`, `updated_at`) VALUES
+(1, 'Number of Enterprises', 'Rural', 835, 1200, 43.7, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(2, 'Number of Enterprises', 'Urban', 389, 507, 30.3, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(3, 'Number of Enterprises', 'Total', 1225, 1707, 39.4, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(4, 'Own Account Enterprises', 'Rural', 751, 850, 13.2, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(5, 'Own Account Enterprises', 'Urban', 280, 309, 10.3, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(6, 'Own Account Enterprises', 'Total', 1031, 1159, 12.4, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(7, 'Enterprises with Hired Workers', 'Rural', 240, 350, 46.1, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(8, 'Enterprises with Hired Workers', 'Urban', 164, 198, 20.9, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(9, 'Enterprises with Hired Workers', 'Total', 404, 549, 35.9, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(10, 'Agriculture Enterprises', 'Rural', 30, 77, 159.2, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(11, 'Agriculture Enterprises', 'Urban', 5, 8, 57, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(12, 'Agriculture Enterprises', 'Total', 35, 85, 144, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(13, 'Non-Agriculture Enterprises', 'Rural', 806, 1123, 39.4, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(14, 'Non-Agriculture Enterprises', 'Urban', 384, 499, 29.9, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(15, 'Non-Agriculture Enterprises', 'Total', 1190, 1622, 36.3, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(16, 'No. of Persons Employed', 'Rural', 1405, 2171, 54.6, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(17, 'No. of Persons Employed', 'Urban', 865, 1073, 24, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
+(18, 'No. of Persons Employed', 'Total', 2270, 3244, 42.9, '2018-10-08 11:08:21', '2018-10-08 11:08:21');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sixth_economic_census2s`
+--
+
+DROP TABLE IF EXISTS `sixth_economic_census2s`;
+CREATE TABLE `sixth_economic_census2s` (
+  `id` bigint(20) NOT NULL,
+  `District` varchar(255) DEFAULT NULL,
+  `Number_of_Establishments_Rural` float DEFAULT NULL,
+  `Number_of_Establishments_Urban` float DEFAULT NULL,
+  `Total_Number_of_Establishments` float DEFAULT NULL,
+  `Percentage_Share_Establishments` float DEFAULT NULL,
+  `Percentage_Share_Population` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sixth_economic_census2s`
+--
+
+INSERT INTO `sixth_economic_census2s` (`id`, `District`, `Number_of_Establishments_Rural`, `Number_of_Establishments_Urban`, `Total_Number_of_Establishments`, `Percentage_Share_Establishments`, `Percentage_Share_Population`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 54678, 93294, 147972, 8.7, 5.6, '2018-09-09 05:28:54', '2018-09-09 05:28:54'),
+(2, 'Nalanda', 35508, 24972, 60480, 3.5, 2.8, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(3, 'Bhojpur', 25118, 15690, 40808, 2.4, 2.6, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(4, 'Buxar', 23026, 7953, 30979, 1.8, 1.6, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(5, 'Rohtas', 35299, 17520, 52819, 3.1, 2.9, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(6, 'Kaimur', 18656, 3893, 22549, 1.3, 1.6, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(7, 'Gaya ', 41582, 18413, 59995, 3.5, 4.2, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(8, 'Jehanabad ', 9766, 5455, 15221, 0.9, 1.1, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(9, 'Arwal', 8743, 1676, 10419, 0.6, 0.7, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(10, 'Nawada', 36643, 11557, 48200, 2.8, 2.1, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(11, 'Aurangabad', 27383, 7891, 35274, 2.1, 2.4, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(12, 'Saran ', 38613, 13785, 52398, 3.1, 3.8, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(13, 'Siwan', 36443, 8280, 44723, 2.6, 3.2, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(14, 'Gopalganj', 26548, 8184, 34732, 2, 2.5, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(15, 'WestChamparan', 42325, 20451, 62776, 3.7, 3.8, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(16, 'EastChamparan', 43569, 20008, 63577, 3.7, 4.9, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(17, 'Muzaffarpur', 49340, 19823, 69163, 4.1, 4.6, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(18, 'Sitamarhi', 32829, 7806, 40635, 2.4, 3.3, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(19, 'Sheohar ', 7899, 1841, 9740, 0.6, 0.6, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(20, 'Vaishali', 47796, 8298, 56094, 3.3, 3.4, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(21, 'Darbhanga', 49274, 24154, 73428, 4.3, 3.8, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(22, 'Madhubani ', 50781, 7922, 58703, 3.4, 4.3, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(23, 'Samastipur', 76246, 11020, 87266, 5.1, 4.1, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(24, 'Begusarai', 40111, 16218, 56329, 3.3, 2.8, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(25, 'Munger ', 12888, 13399, 26287, 1.5, 1.3, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(26, 'Sheikhpura', 5704, 5832, 11536, 0.7, 0.6, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(27, 'Lakhisarai', 13300, 7790, 21090, 1.2, 1, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(28, 'Jamui', 22286, 6175, 28461, 1.7, 1.7, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(29, 'Khagaria', 28597, 5765, 34362, 2, 1.6, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(30, 'Bhagalpur', 26396, 28876, 55272, 3.2, 2.9, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(31, 'Banka', 29153, 4340, 33493, 2, 2, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(32, 'Saharsa', 18023, 6347, 24370, 1.4, 1.8, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(33, 'Supaul', 26263, 5209, 31472, 1.8, 2.1, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(34, 'Madhepura', 29164, 5483, 34647, 2, 1.9, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(35, 'Purnia', 38651, 14253, 52904, 3.1, 3.2, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(36, 'Kishanganj', 19908, 6719, 26627, 1.6, 1.6, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(37, 'Araria', 34910, 8281, 43191, 2.5, 2.7, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(38, 'Katihar', 37090, 12316, 49406, 2.9, 3, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
+(39, 'Bihar', 1200510, 506889, 1707400, 100, 100, '2018-09-09 05:28:55', '2018-09-09 05:28:55');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `state_domestic_product1s`
+--
+
+DROP TABLE IF EXISTS `state_domestic_product1s`;
+CREATE TABLE `state_domestic_product1s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2011-12_to_2015-16` float DEFAULT NULL,
+  `Reference` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_domestic_product1s`
+--
+
+INSERT INTO `state_domestic_product1s` (`id`, `Sector`, `2015-16`, `2016-17`, `2011-12_to_2015-16`, `Reference`, `created_at`, `updated_at`) VALUES
+(1, 'Agriculture, Forestry and Fishing', 7.3, 14.3, 6.6, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(2, 'Crops', 6.3, 16.9, 1.4, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(3, 'Livestock', 10, 12.5, 17.3, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(4, 'Forestry and Logging', 9.9, 9.1, 8.2, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(5, 'Fishing and Aquaculture', 4, 5.8, 21.9, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(6, 'Mining and Quarrying', 192.4, 2.5, 88.6, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(7, 'Total Primary Sector', 9.3, 13.9, 7.2, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(8, 'Manufacturing', 6.8, 0.3, 30, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(9, 'Electricity, gas, water supply and other utility services', 41.2, 16.2, 2, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(10, 'Construction', 1.1, 6.9, 5.8, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(11, 'Total Secondary Sector', 5.7, 4.5, 13.9, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(12, 'Trade and Hospitality', 22.4, 30.6, 8.6, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(13, 'Trade and Repair Services', 23, 32, 8.7, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(14, 'Hotels and Restaurants', 12.8, 8.5, 8, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(15, 'Transport and Communication', 13.7, 11.5, 20.2, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(16, 'Railways', 6.9, 6.9, 16.9, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(17, 'Road Transport', 12.9, 12.9, 20.7, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(18, 'Water Transport', -20.6, 0, -20.8, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(19, 'Air Transport', 95, 42.4, 42.4, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(20, 'Services incidental to transport', 12.9, 12.9, 20.8, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(21, 'Storage', 13.1, 13, 8.4, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(22, 'Communication and Broadcasting', 17.9, 10.8, 21.2, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(23, 'Financial Services', 14.3, 14.3, 12, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(24, 'Real Estate Services', 2.2, 2.9, 7.7, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(25, 'Public Administration', 4.1, 37.2, 7.3, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(26, 'Other Services', 18, 14.5, 19, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(27, 'Total Tertiary Sector', 13.9, 18.7, 12.1, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(28, 'Total Gross State Value Added at basic prices', 11.2, 15, 11.2, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(29, 'Taxes on Products', 28.2, 28.2, 17.9, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(30, 'Subsidies on products', 34.7, 34.7, 19.8, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(31, 'Gross State Domestic Product', 11.2, 14.8, 11.2, 'Current Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(32, 'Agriculture, Forestry and Fishing', 2.7, 6.9, -1.7, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(33, 'Crops', 0.8, 8.2, -6.4, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(34, 'Livestock', 6, 6.8, 8.4, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(35, 'Forestry and Logging', 3.2, 3.2, 0.7, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(36, 'Fishing and Aquaculture', 5.6, 0.4, 10, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(37, 'Mining and Quarrying', 177.9, -5.9, 67.5, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(38, 'Total Primary Sector', 4.4, 6.6, -1.2, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(39, 'Manufacturing', 9.3, -1.3, 25.9, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(40, 'Electricity, gas, water supply and other utility services', -2.6, 6.4, 3.2, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(41, 'Construction', -5.4, -0.1, -1.7, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(42, 'Total Secondary Sector', 1.6, -0.2, 8.5, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(43, 'Trade and Hospitality', 17.2, 25.1, 1.7, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(44, 'Trade and Repair Services', 17.8, 26.4, 1.7, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(45, 'Hotels and Restaurants', 8, 3.9, 1.1, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(46, 'Transport and Communication', 12.2, 10.2, 13.5, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(47, 'Railways', 2.2, 2.2, 10.9, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(48, 'Road Transport', 11.7, 11.8, 13.7, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(49, 'Water Transport', -21.5, -1, -25.4, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(50, 'Air Transport', 93, 40.9, 34.2, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(51, 'Services incidental to transport', 11.7, 11.7, 13.8, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(52, 'Storage', 8.1, 7.9, 1.4, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(53, 'Communication and Broadcasting', 17.7, 10.8, 14.6, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(54, 'Financial Services', 11.4, 11.4, 10.1, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(55, 'Real Estate Services', 0.4, 0.7, 2.7, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(56, 'Public Administration', -2.2, 31.4, -1.2, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(57, 'Other Services', 12.9, 9.6, 9.6, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(58, 'Total Tertiary Sector', 10.1, 14.5, 5.3, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(59, 'Total Gross State Value Added at basic prices', 7, 9.8, 4.3, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(60, 'Taxes on Products', 21.9, 21.9, 17.4, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(61, 'Subsidies on products', 22.2, 22.2, 13.5, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
+(62, 'Gross State Domestic Product', 7.5, 10.3, 4.9, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `state_domestic_product2s`
+--
+
+DROP TABLE IF EXISTS `state_domestic_product2s`;
+CREATE TABLE `state_domestic_product2s` (
+  `id` bigint(20) NOT NULL,
+  `State` varchar(255) DEFAULT NULL,
+  `Per_Capita_Income` float DEFAULT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_domestic_product2s`
+--
+
+INSERT INTO `state_domestic_product2s` (`id`, `State`, `Per_Capita_Income`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Andhra Pradesh', 69000, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(2, 'Bihar', 21750, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(3, 'Chhattisgarh', 55177, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(4, 'Gujarat', 87481, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(5, 'Haryana', 106085, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(6, 'Jharkhand', 41254, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(7, 'Karnataka', 90263, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(8, 'Kerala', 97912, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(9, 'Madhya Pradesh', 38550, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(10, 'Maharashtra', 99173, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(11, 'Odisha', 47632, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(12, 'Punjab', 85577, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(13, 'Rajasthan', 57391, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(14, 'Tamil Nadu', 92984, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(15, 'Uttar Pradesh', 32002, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(16, 'India', 63462, 2011, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(17, 'Andhra Pradesh', 68865, 2012, '2018-08-17 10:54:16', '2018-08-17 10:54:16'),
+(18, 'Bihar', 22201, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(19, 'Chhattisgarh', 56761, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(20, 'Gujarat', 96683, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(21, 'Haryana', 111648, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(22, 'Jharkhand', 44176, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(23, 'Karnataka', 94417, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(24, 'Kerala', 103551, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(25, 'Madhya Pradesh', 41257, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(26, 'Maharashtra', 103426, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(27, 'Odisha', 49543, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(28, 'Punjab', 88915, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(29, 'Rajasthan', 58526, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(30, 'Tamil Nadu', 96937, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(31, 'Uttar Pradesh', 32908, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(32, 'India', 65538, 2012, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(33, 'Andhra Pradesh', 72254, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(34, 'Bihar', 22776, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(35, 'Chhattisgarh', 61293, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(36, 'Gujarat', 102589, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(37, 'Haryana', 119522, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(38, 'Jharkhand', 43779, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(39, 'Karnataka', 101918, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(40, 'Kerala', 107846, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(41, 'Madhya Pradesh', 42654, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(42, 'Maharashtra', 109364, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(43, 'Odisha', 52551, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(44, 'Punjab', 93238, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(45, 'Rajasthan', 60315, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(46, 'Tamil Nadu', 101591, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(47, 'Uttar Pradesh', 34044, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(48, 'India', 68572, 2013, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(49, 'Andhra Pradesh', 78039, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(50, 'Bihar', 23223, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(51, 'Chhattisgarh', 64841, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(52, 'Gujarat', 111370, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(53, 'Haryana', 124302, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(54, 'Jharkhand', 48781, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(55, 'Karnataka', 106245, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(56, 'Kerala', 112444, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(57, 'Madhya Pradesh', 44110, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(58, 'Maharashtra', 113629, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(59, 'Odisha', 54926, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(60, 'Punjab', 95546, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(61, 'Rajasthan', 63123, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(62, 'Tamil Nadu', 106186, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(63, 'Uttar Pradesh', 34583, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(64, 'India', 72862, 2014, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(65, 'Andhra Pradesh', 86118, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(66, 'Bihar', 24572, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(67, 'Chhattisgarh', 67185, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(68, 'Gujarat', 122502, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(69, 'Haryana', 133591, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(70, 'Jharkhand', 50817, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(71, 'Karnataka', 113506, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(72, 'Kerala', 119763, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(73, 'Madhya Pradesh', 46783, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(74, 'Maharashtra', 121514, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(75, 'Odisha', 57616, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(76, 'Punjab', 99372, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(77, 'Rajasthan', 66342, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(78, 'Tamil Nadu', 111454, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(79, 'Uttar Pradesh', 36883, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(80, 'India', 77803, 2015, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(81, 'Andhra Pradesh', 95566, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(82, 'Bihar', 26693, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(83, 'Chhattisgarh', 71214, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(84, 'Gujarat', NULL, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(85, 'Haryana', 143211, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(86, 'Jharkhand', 54201, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(87, 'Karnataka', 120403, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(88, 'Kerala', NULL, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(89, 'Madhya Pradesh', 51852, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(90, 'Maharashtra', NULL, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(91, 'Odisha', 61678, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(92, 'Punjab', 103726, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(93, 'Rajasthan', NULL, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(94, 'Tamil Nadu', 118915, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(95, 'Uttar Pradesh', 39028, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
+(96, 'India', 82269, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `state_domestic_product4s`
+--
+
+DROP TABLE IF EXISTS `state_domestic_product4s`;
+CREATE TABLE `state_domestic_product4s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `GSDP` float DEFAULT NULL,
+  `NSDP` float DEFAULT NULL,
+  `Per_Capita_GSDP` float DEFAULT NULL,
+  `Reference` varchar(255) DEFAULT NULL,
+  `Factor_Cost` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_domestic_product4s`
+--
+
+INSERT INTO `state_domestic_product4s` (`id`, `Year`, `GSDP`, `NSDP`, `Per_Capita_GSDP`, `Reference`, `Factor_Cost`, `created_at`, `updated_at`) VALUES
+(1, '2004-05', 77781, 70167, 8773, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(2, '2005-06', 82490, 74144, 9149, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(3, '2006-07', 100737, 91331, 10994, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(4, '2007-08', 113680, 102853, 12215, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(5, '2008-09', 142279, 129690, 15060, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(6, '2009-10', 162923, 148151, 16998, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(7, '2010-11', 203555, 185745, 20944, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(8, '2011-12', 243269, 222442, 24696, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(9, '2012-13', 293616, 268902, 29425, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(10, '2013-14 (P)', 343663, 315225, 34014, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(11, '2014-15 (Q)', 402283, 369576, 39341, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(12, 'CAGR (2004-15)', 18.9, 19.1, 17.2, 'At current prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(13, '2004-05', 77781, 70167, 8773, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(14, '2005-06', 76466, 68419, 8481, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(15, '2006-07', 88840, 80260, 9695, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(16, '2007-08', 93774, 84415, 10076, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(17, '2008-09', 107412, 97284, 11369, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(18, '2009-10', 113158, 101938, 11806, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(19, '2010-11', 130171, 117503, 13393, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(20, '2011-12', 143560, 129521, 14574, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(21, '2012-13', 158909, 143250, 15925, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(22, '2013-14 (P)', 173409, 156671, 17163, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(23, '2014-15 (Q)', 189789, 171802, 18560, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(24, 'CAGR (2004-15)', 10, 10.1, 8.5, 'At constant (2004-05) prices', 'Base Year 2004-05 at Factor Cost', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(25, '2011-12', 247144, 228497, 23525, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(26, '2012-13', 282368, 261327, 26459, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(27, '2013-14', 317101, 292143, 29251, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(28, '2014-15', 342951, 315732, 31142, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(29, '2015-16 (P)', 381501, 351871, 34103, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(30, '2016-17 (Q)', 438030, 404438, 38546, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(31, 'CAGR (2011-17)', 11.6, 11.5, 9.9, 'At current prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(32, '2011-12', 247144, 228497, 23525, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(33, '2012-13', 256851, 236933, 24068, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(34, '2013-14', 269650, 246915, 24874, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(35, '2014-15', 279482, 255739, 25379, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(36, '2015-16 (P)', 300566, 274882, 26868, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(37, '2016-17 (Q)', 331572, 303333, 29178, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
+(38, 'CAGR (2011-17)', 5.8, 5.6, 4.2, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `state_domestic_product5s`
+--
+
+DROP TABLE IF EXISTS `state_domestic_product5s`;
+CREATE TABLE `state_domestic_product5s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2011-12` float DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2011-16` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_domestic_product5s`
+--
+
+INSERT INTO `state_domestic_product5s` (`id`, `Sector`, `2011-12`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2011-16`, `created_at`, `updated_at`) VALUES
+(1, 'Agriculture, Forestry and Fishing', 62067, 76700, 73719, 78632, 84377, 96423, 6.6, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(2, 'Crops', 42608, 53365, 45223, 46222, 49129, 57410, 1.4, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(3, 'Livestock', 12028, 14811, 18316, 20621, 22676, 25521, 17.3, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(4, 'Forestry and Logging', 4187, 4571, 5010, 5258, 5777, 6303, 8.2, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(5, 'Fishing and Aquaculture', 3244, 3953, 5170, 6532, 6795, 7189, 21.9, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(6, 'Mining and Quarrying', 199, 234, 1508, 851, 2487, 2551, 88.6, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(7, 'Primary', 62265, 76934, 75227, 79483, 86864, 98974, 7.2, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(8, 'Manufacturing', 14666, 10351, 21209, 29978, 32027, 32128, 30, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(9, 'Electricity and Utilitiy Services', 3659, 4422, 3859, 3313, 4678, 5438, 2, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(10, 'Construction', 27017, 27810, 31848, 32678, 33028, 35303, 5.8, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(11, 'Secondary', 45341, 42583, 56916, 65968, 69733, 72869, 13.9, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(12, 'Trade and Hospitality', 43904, 51755, 52051, 53410, 65355, 85369, 8.6, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(13, 'Trade and Repair Services', 41109, 48672, 48735, 49959, 61463, 81146, 8.7, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(14, 'Hotels and Restaurants', 2796, 3083, 3316, 3451, 3892, 4224, 8, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(15, 'Transport and Communication', 17545, 21616, 26850, 31889, 36253, 40434, 20.2, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(16, 'Railways', 2751, 3348, 3957, 4725, 5051, 5400, 16.9, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(17, 'Road Transport', 8405, 10697, 13479, 15723, 17750, 20041, 20.7, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(18, 'Water Transport', 49, 26, 17, 21, 17, 17, -20.8, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(19, 'Air Transport', 31, 58, 46, 79, 155, 220, 42.4, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(20, 'Services incidental to transport', 893, 1120, 1425, 1666, 1881, 2123, 20.8, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(21, 'Storage', 74, 84, 85, 93, 105, 119, 8.4, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(22, 'Communication and Broadcasting', 5342, 6282, 7842, 9582, 11294, 12515, 21.2, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(23, 'Financial Services', 8839, 9774, 11223, 12188, 13932, 15925, 12, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(24, 'Real Estate Services', 28023, 31217, 34604, 36675, 37475, 38550, 7.7, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(25, 'Public Administration', 13587, 14777, 15768, 17203, 17906, 24569, 7.3, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(26, 'Other Services', 22193, 28043, 34046, 38383, 45289, 51869, 19, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(27, 'Tertiary', 134092, 157182, 174542, 189748, 216209, 256716, 12.1, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(28, 'Total GSVA at basic prices', 241698, 276699, 306685, 335199, 372806, 428559, 11.2, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(29, 'Taxes on Products', 17169, 21185, 26236, 27007, 34623, 44387, 17.9, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(30, 'Subsidies on Products', 11724, 15517, 15820, 19255, 25929, 34916, 19.8, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(31, 'Gross State Domestic Product', 247144, 282368, 317101, 342951, 381501, 438030, 11.2, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(32, 'Population (crore)', 10.5, 10.6, 10.8, 11, 11.1, 11.4, 1.6, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
+(33, 'Per Capita GSDP (Rs.)', 23525, 26459, 29251, 31142, 34103, 38546, 9.5, '2018-08-29 05:40:34', '2018-08-29 05:40:34');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `state_domestic_product6s`
+--
+
+DROP TABLE IF EXISTS `state_domestic_product6s`;
+CREATE TABLE `state_domestic_product6s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2011-12` float DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2011-16` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_domestic_product6s`
+--
+
+INSERT INTO `state_domestic_product6s` (`id`, `Sector`, `2011-12`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2011-16`, `created_at`, `updated_at`) VALUES
+(1, 'Agriculture, Forestry and Fishing', 62067, 68040, 59516, 59349, 60935, 65136, -1.7, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(2, 'Crops', 42608, 47493, 37107, 35254, 35530, 38461, -6.4, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(3, 'Livestock', 12028, 12525, 14008, 15359, 16281, 17394, 8.4, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(4, 'Forestry and Logging', 4187, 4253, 4330, 4218, 4353, 4490, 0.7, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(5, 'Fishing and Aquaculture', 3244, 3768, 4071, 4518, 4771, 4792, 10, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(6, 'Mining and Quarrying', 199, 216, 1386, 577, 1604, 1509, 67.5, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(7, 'Primary', 62265, 68256, 60902, 59926, 62539, 66645, -1.2, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(8, 'Manufacturing', 14666, 9714, 18893, 25958, 28381, 28024, 25.9, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(9, 'Electricity and Utilitiy Services', 3659, 4017, 4128, 4270, 4158, 4426, 3.2, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(10, 'Construction', 27017, 25608, 27261, 26019, 24608, 24575, -1.7, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(11, 'Secondary', 45341, 39339, 50282, 56247, 57147, 57025, 8.5, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(12, 'Trade and Hospitality', 43904, 46729, 45683, 42626, 49953, 62486, 1.7, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(13, 'Trade and Repair Services', 41109, 43945, 42775, 39877, 46986, 59404, 1.7, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(14, 'Hotels and Restaurants', 2796, 2784, 2908, 2749, 2968, 3083, 1.1, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(15, 'Transport and Communication', 17545, 20372, 23473, 26054, 29227, 32202, 13.5, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(16, 'Railways', 2751, 3346, 3965, 4092, 4181, 4271, 10.9, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(17, 'Road Transport', 8405, 9962, 11373, 12678, 14166, 15830, 13.7, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(18, 'Water Transport', 49, 24, 15, 17, 13, 13, -25.4, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(19, 'Air Transport', 31, 54, 38, 64, 124, 174, 34.2, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(20, 'Services incidental to transport', 893, 1043, 1202, 1344, 1501, 1677, 13.8, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(21, 'Storage', 74, 79, 71, 75, 81, 88, 1.4, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(22, 'Communication and Broadcasting', 5342, 5863, 6808, 7785, 9162, 10148, 14.6, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(23, 'Financial Services', 8839, 9580, 10273, 11653, 12981, 14460, 10.1, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(24, 'Real Estate Services', 28023, 28686, 29819, 30739, 30862, 31093, 2.7, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(25, 'Public Administration', 13587, 13350, 12752, 13171, 12880, 16918, -1.2, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(26, 'Other Services', 22193, 25297, 27478, 29002, 32748, 35883, 9.6, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(27, 'Tertiary', 134092, 144015, 149478, 153245, 168651, 193042, 5.3, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(28, 'Total GSVA at basic prices', 241698, 251609, 260662, 269418, 288337, 316712, 4.3, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(29, 'Taxes on Products', 17169, 19588, 22638, 26793, 32672, 39841, 17.4, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(30, 'Subsidies on Products', 11724, 14347, 13650, 16729, 20443, 24981, 13.5, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(31, 'Gross State Domestic Product', 247144, 256851, 269650, 279482, 300566, 331572, 4.9, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(32, 'Population (crore)', 10.5, 10.6, 10.8, 11, 11.1, 11.4, 1.6, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
+(33, 'Per Capita GSDP (Rs.)', 23525, 24068, 24874, 25379, 26868, 29178, 3.2, '2018-08-29 07:12:10', '2018-08-29 07:12:10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `state_domestic_product7s`
+--
+
+DROP TABLE IF EXISTS `state_domestic_product7s`;
+CREATE TABLE `state_domestic_product7s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2011-12` float DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2011-16` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_domestic_product7s`
+--
+
+INSERT INTO `state_domestic_product7s` (`id`, `Sector`, `2011-12`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2011-16`, `created_at`, `updated_at`) VALUES
+(1, 'Agriculture, Forestry and Fishing', 57852, 71802, 67874, 72063, 77242, 88222, 6, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(2, 'Crops', 39053, 49248, 40320, 40687, 43034, 50405, 0, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(3, 'Livestock', 11795, 14525, 17975, 20253, 22308, 25098, 17.4, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(4, 'Forestry and Logging', 4141, 4520, 4953, 5206, 5722, 6239, 8.2, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(5, 'Fishing and Aquaculture', 2862, 3509, 4625, 5917, 6178, 6480, 22.9, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(6, 'Mining and Quarrying', 174, 203, 1291, 724, 2075, 2077, 86.5, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(7, 'Primary', 58025, 72005, 69166, 72786, 79317, 90298, 6.6, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(8, 'Manufacturing', 12681, 8450, 19073, 27523, 29509, 29233, 33.2, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(9, 'Electricity and Utilitiy Services', 2431, 2892, 2554, 2145, 3132, 3661, 2.1, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(10, 'Construction', 25764, 26372, 29909, 30757, 31117, 33106, 5.5, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(11, 'Secondary', 40876, 37713, 51536, 60426, 63758, 66000, 14.6, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(12, 'Trade and Hospitality', 43256, 50952, 51087, 52321, 64138, 83971, 8.5, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(13, 'Trade and Repair Services', 40564, 47998, 47926, 49031, 60433, 79962, 8.5, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(14, 'Hotels and Restaurants', 2692, 2955, 3161, 3290, 3705, 4009, 7.7, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(15, 'Transport and Communication', 14845, 18612, 22530, 26925, 30980, 34374, 20.2, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(16, 'Railways', 2022, 2558, 2996, 3516, 3649, 3789, 16.2, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(17, 'Road Transport', 7582, 9771, 12282, 14474, 16439, 18534, 21.4, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(18, 'Water Transport', 44, 20, 10, 13, 10, 9, -28.9, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(19, 'Air Transport', 15, 40, 22, 53, 129, 191, 58.6, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(20, 'Services incidental to transport', 761, 971, 1233, 1469, 1673, 1884, 22, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(21, 'Storage', 63, 74, 72, 78, 88, 99, 7.5, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(22, 'Communication and Broadcasting', 4359, 5178, 5916, 7323, 8992, 9868, 19.7, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(23, 'Financial Services', 8700, 9601, 11035, 11963, 13668, 15622, 11.9, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(24, 'Real Estate Services', 25298, 28025, 30922, 32624, 33266, 34178, 7.2, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(25, 'Public Administration', 10485, 11490, 12339, 13598, 13891, 19954, 7.6, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(26, 'Other Services', 21567, 27259, 33112, 37338, 44158, 50570, 19.1, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(27, 'Tertiary', 124151, 145940, 161025, 174769, 200102, 238668, 12, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(28, 'Total NSVA at basic prices', 223052, 255658, 281727, 307980, 343177, 394967, 11, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(29, 'Taxes on Products', 17169, 21185, 26236, 27007, 34623, 44387, 17.9, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(30, 'Subsidies on Products', 11724, 15517, 15820, 19255, 25929, 34916, 19.8, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(31, 'Net State Domestic Product', 228497, 261327, 292143, 315732, 351871, 404438, 11.1, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(32, 'Population (crore)', 10.5, 10.6, 10.8, 11, 11.1, 11.4, 1.6, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
+(33, 'Per Capita NSDP (Rs.)', 21750, 24487, 26948, 28671, 31454, 35590, 9.4, '2018-08-29 07:16:23', '2018-08-29 07:16:23');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `state_domestic_product8s`
+--
+
+DROP TABLE IF EXISTS `state_domestic_product8s`;
+CREATE TABLE `state_domestic_product8s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2011-12` float DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2011-16` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_domestic_product8s`
+--
+
+INSERT INTO `state_domestic_product8s` (`id`, `Sector`, `2011-12`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2011-16`, `created_at`, `updated_at`) VALUES
+(1, 'Agriculture, Forestry and Fishing', 57852, 63491, 54487, 53929, 55261, 58897, -2.5, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(2, 'Crops', 39053, 43675, 32908, 30738, 30771, 33228, -7.9, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(3, 'Livestock', 11795, 12260, 13706, 15042, 15954, 17034, 8.4, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(4, 'Forestry and Logging', 4141, 4206, 4280, 4173, 4304, 4437, 0.7, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(5, 'Fishing and Aquaculture', 2862, 3350, 3593, 3975, 4232, 4199, 10, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(6, 'Mining and Quarrying', 174, 187, 1187, 468, 1257, 1127, 62.8, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(7, 'Primary', 58025, 63678, 55674, 54396, 56517, 60024, -2.1, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(8, 'Manufacturing', 12681, 7896, 16913, 23761, 26115, 25534, 29, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(9, 'Electricity and Utilitiy Services', 2431, 2542, 2904, 3226, 2771, 2901, 5.1, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(10, 'Construction', 25764, 24235, 25437, 24238, 22825, 22615, -2.4, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(11, 'Secondary', 40876, 34674, 45253, 51225, 51712, 51050, 9, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(12, 'Trade and Hospitality', 43256, 45972, 44805, 41669, 48864, 61288, 1.5, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(13, 'Trade and Repair Services', 40564, 43309, 42038, 39062, 46063, 58389, 1.5, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(14, 'Hotels and Restaurants', 2692, 2663, 2767, 2607, 2801, 2899, 0.6, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(15, 'Transport and Communication', 14845, 17490, 19386, 21654, 24588, 27102, 13, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(16, 'Railways', 2022, 2605, 3088, 3040, 2970, 2941, 9.7, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(17, 'Road Transport', 7582, 9077, 10265, 11514, 12940, 14483, 14, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(18, 'Water Transport', 44, 18, 7, 10, 7, 6, -35.4, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(19, 'Air Transport', 15, 37, 17, 39, 100, 148, 47.4, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(20, 'Services incidental to transport', 761, 899, 1021, 1169, 1317, 1474, 14.6, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(21, 'Storage', 63, 68, 60, 62, 66, 71, -0.2, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(22, 'Communication and Broadcasting', 4359, 4785, 4927, 5819, 7189, 7980, 12.7, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(23, 'Financial Services', 8700, 9412, 10095, 11454, 12748, 14204, 10.1, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(24, 'Real Estate Services', 25298, 25724, 26548, 27285, 27259, 27131, 2.1, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(25, 'Public Administration', 10485, 10191, 9553, 9910, 9226, 12901, -2.8, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(26, 'Other Services', 21567, 24550, 26613, 28082, 31739, 34774, 9.5, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(27, 'Tertiary', 124151, 133339, 137000, 140053, 154423, 177400, 5, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(28, 'Total NSVA at basic prices', 223052, 231691, 237927, 245674, 262652, 288473, 3.9, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(29, 'Taxes on Products', 17169, 19588, 22638, 26793, 32672, 39841, 17.4, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(30, 'Subsidies on Products', 11724, 14347, 13650, 16729, 20443, 24981, 13.5, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(31, 'Net State Domestic Product', 228497, 236933, 246915, 255739, 274882, 303333, 4.6, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(32, 'Population (crore)', 10.5, 10.6, 10.8, 11, 11.1, 11.4, 1.6, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
+(33, 'Per Capita NSDP (Rs.)', 21750, 22201, 22776, 23223, 24572, 26693, 2.9, '2018-08-29 07:22:02', '2018-08-29 07:22:02');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `state_domestic_product9s`
+--
+
+DROP TABLE IF EXISTS `state_domestic_product9s`;
+CREATE TABLE `state_domestic_product9s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Per_Capita_GDP` float DEFAULT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_domestic_product9s`
+--
+
+INSERT INTO `state_domestic_product9s` (`id`, `Districts`, `Per_Capita_GDP`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 43448, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(2, 'Nalanda', 8219, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(3, 'Bhojpur', 8775, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(4, 'Buxar', 8368, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(5, 'Rohtas', 9544, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(6, 'Kaimur', 7564, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(7, 'Gaya', 8660, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(8, 'Jehanabad', 7490, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(9, 'Arwal', 6475, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(10, 'Nawada', 6739, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(11, 'Aurangabad', 7575, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(12, 'Saran', 7522, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(13, 'Siwan', 7377, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(14, 'Gopalganj', 7646, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(15, 'WestChamparan', 8476, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(16, 'EastChamparan', 6223, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(17, 'Muzaffarpur', 9814, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(18, 'Sitamarhi', 6180, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(19, 'Sheohar', 5541, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(20, 'Vaishali', 7728, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(21, 'Darbhanga', 7614, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(22, 'Madhubani', 6216, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(23, 'Samastipur', 7559, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(24, 'Begusarai', 12419, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(25, 'Munger', 15791, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(26, 'Sheikhpura', 7209, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(27, 'Lakhisarai', 9549, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(28, 'Jamui', 7584, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(29, 'Khagaria', 8517, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(30, 'Bhagalpur', 12097, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(31, 'Banka', 6882, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(32, 'Saharsa', 8164, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(33, 'Supaul', 6382, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(34, 'Madhepura', 6920, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(35, 'Purnia', 7419, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(36, 'Kishanganj', 7312, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(37, 'Araria', 6635, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(38, 'Katihar', 8267, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(39, 'Bihar', 10076, 2007, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(40, 'Patna', 48719, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(41, 'Nalanda', 9152, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(42, 'Bhojpur', 10146, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(43, 'Buxar', 8992, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(44, 'Rohtas', 10950, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(45, 'Kaimur', 8441, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(46, 'Gaya', 9135, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(47, 'Jehanabad', 8588, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(48, 'Arwal', 7028, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(49, 'Nawada', 7409, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(50, 'Aurangabad', 7922, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(51, 'Saran', 7938, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(52, 'Siwan', 8864, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(53, 'Gopalganj', 8059, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(54, 'WestChamparan', 9484, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(55, 'EastChamparan', 8457, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(56, 'Muzaffarpur', 11602, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(57, 'Sitamarhi', 7301, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(58, 'Sheohar', 6128, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(59, 'Vaishali', 9604, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(60, 'Darbhanga', 8516, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(61, 'Madhubani', 7643, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(62, 'Samastipur', 8729, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(63, 'Begusarai', 15001, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(64, 'Munger', 17034, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(65, 'Sheikhpura', 8105, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(66, 'Lakhisarai', 10209, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(67, 'Jamui', 8028, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(68, 'Khagaria', 9111, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(69, 'Bhagalpur', 13351, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(70, 'Banka', 7596, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(71, 'Saharsa', 8744, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(72, 'Supaul', 6790, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(73, 'Madhepura', 6602, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(74, 'Purnia', 8228, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(75, 'Kishanganj', 8120, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(76, 'Araria', 7251, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(77, 'Katihar', 9060, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(78, 'Bihar', 11369, 2008, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(79, 'Patna', 53428, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(80, 'Nalanda', 9787, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(81, 'Bhojpur', 10134, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(82, 'Buxar', 8812, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(83, 'Rohtas', 10908, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(84, 'Kaimur', 7785, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(85, 'Gaya', 9519, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(86, 'Jehanabad', 8478, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(87, 'Arwal', 7283, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(88, 'Nawada', 7602, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(89, 'Aurangabad', 8189, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(90, 'Saran', 8559, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(91, 'Siwan', 8042, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(92, 'Gopalganj', 8543, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(93, 'WestChamparan', 9706, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(94, 'EastChamparan', 7571, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(95, 'Muzaffarpur', 12159, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(96, 'Sitamarhi', 7456, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(97, 'Sheohar', 5438, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(98, 'Vaishali', 9937, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(99, 'Darbhanga', 9036, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(100, 'Madhubani', 7455, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(101, 'Samastipur', 8843, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(102, 'Begusarai', 14235, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(103, 'Munger', 18554, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(104, 'Sheikhpura', 7775, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(105, 'Lakhisarai', 10950, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(106, 'Jamui', 8186, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(107, 'Khagaria', 9642, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(108, 'Bhagalpur', 14253, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(109, 'Banka', 7724, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(110, 'Saharsa', 9591, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(111, 'Supaul', 7043, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(112, 'Madhepura', 6979, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(113, 'Purnia', 8743, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(114, 'Kishanganj', 8085, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(115, 'Araria', 7376, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(116, 'Katihar', 9594, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(117, 'Bihar', 11806, 2009, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(118, 'Patna', 57823, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(119, 'Nalanda', 10971, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(120, 'Bhojpur', 11537, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(121, 'Buxar', 9732, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(122, 'Rohtas', 12265, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(123, 'Kaimur', 9539, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(124, 'Gaya', 10504, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(125, 'Jehanabad', 9322, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(126, 'Arwal', 8133, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(127, 'Nawada', 8437, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(128, 'Aurangabad', 9293, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(129, 'Saran', 9576, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(130, 'Siwan', 9192, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(131, 'Gopalganj', 10386, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(132, 'WestChamparan', 10577, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(133, 'EastChamparan', 8790, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(134, 'Muzaffarpur', 14082, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(135, 'Sitamarhi', 8274, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(136, 'Sheohar', 6208, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(137, 'Vaishali', 11591, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(138, 'Darbhanga', 10798, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(139, 'Madhubani', 10607, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(140, 'Samastipur', 10705, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(141, 'Begusarai', 18433, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(142, 'Munger', 21011, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(143, 'Sheikhpura', 8377, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(144, 'Lakhisarai', 11870, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(145, 'Jamui', 8944, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(146, 'Khagaria', 10603, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(147, 'Bhagalpur', 15870, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(148, 'Banka', 7756, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(149, 'Saharsa', 11268, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(150, 'Supaul', 8193, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(151, 'Madhepura', 8096, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(152, 'Purnia', 9357, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(153, 'Kishanganj', 9126, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(154, 'Araria', 8534, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(155, 'Katihar', 10721, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(156, 'Bihar', 13393, 2010, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(157, 'Patna', 63063, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(158, 'Nalanda', 12561, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(159, 'Bhojpur', 12459, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(160, 'Buxar', 11289, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(161, 'Rohtas', 13909, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(162, 'Kaimur', 10412, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(163, 'Gaya', 11897, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(164, 'Jehanabad', 11182, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(165, 'Arwal', 9125, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(166, 'Nawada', 9560, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(167, 'Aurangabad', 11012, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(168, 'Saran', 10615, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(169, 'Siwan', 10685, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(170, 'Gopalganj', 12129, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(171, 'WestChamparan', 9971, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(172, 'EastChamparan', 10735, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(173, 'Muzaffarpur', 15402, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(174, 'Sitamarhi', 9538, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(175, 'Sheohar', 7092, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(176, 'Vaishali', 12490, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(177, 'Darbhanga', 10932, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(178, 'Madhubani', 9241, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(179, 'Samastipur', 10762, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(180, 'Begusarai', 17587, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(181, 'Munger', 22051, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(182, 'Sheikhpura', 9687, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(183, 'Lakhisarai', 13073, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(184, 'Jamui', 10166, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(185, 'Khagaria', 11515, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(186, 'Bhagalpur', 17324, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(187, 'Banka', 9269, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(188, 'Saharsa', 12197, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(189, 'Supaul', 8492, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(190, 'Madhepura', 8609, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(191, 'Purnia', 10099, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(192, 'Kishanganj', 9928, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(193, 'Araria', 8776, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(194, 'Katihar', 11278, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
+(195, 'Bihar', 14574, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `state_domestic_product10s`
+--
+
+DROP TABLE IF EXISTS `state_domestic_product10s`;
+CREATE TABLE `state_domestic_product10s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Share_of_Population` float DEFAULT NULL,
+  `Petrol` float DEFAULT NULL,
+  `Diesel` float DEFAULT NULL,
+  `LPG` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Percentage_Share_of_Petrol` float DEFAULT NULL,
+  `Percentage_Share_of_Diesel` float DEFAULT NULL,
+  `Percentage_Share_of_LPG` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_domestic_product10s`
+--
+
+INSERT INTO `state_domestic_product10s` (`id`, `Districts`, `Share_of_Population`, `Petrol`, `Diesel`, `LPG`, `Year`, `Percentage_Share_of_Petrol`, `Percentage_Share_of_Diesel`, `Percentage_Share_of_LPG`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 5.6, 71473, 219783, 115764, '2015-16', 13.1, 9.7, 15.1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(2, 'Nalanda', 2.8, 10646, 52341, 21006, '2015-16', 2, 2.3, 2.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(3, 'Bhojpur', 2.6, 12421, 54627, 24031, '2015-16', 2.3, 2.4, 3.1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(4, 'Buxar', 1.6, 8010, 36878, 12440, '2015-16', 1.5, 1.6, 1.6, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(5, 'Rohtas', 2.9, 15185, 81668, 22216, '2015-16', 2.8, 3.6, 2.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(6, 'Kaimur', 1.6, 6660, 37446, 7334, '2015-16', 1.2, 1.7, 1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(7, 'Gaya', 4.2, 18916, 81045, 27770, '2015-16', 3.5, 3.6, 3.6, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(8, 'Jehanabad', 1.1, 3605, 17174, 9015, '2015-16', 0.7, 0.8, 1.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(9, 'Arwal', 0.7, 2274, 10663, 4107, '2015-16', 0.4, 0.5, 0.5, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(10, 'Nawada', 2.1, 6168, 34500, 13872, '2015-16', 1.1, 1.5, 1.8, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(11, 'Aurangabad', 2.4, 10459, 62765, 13844, '2015-16', 1.9, 2.8, 1.8, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(12, 'Saran', 3.8, 20195, 96639, 29924, '2015-16', 3.7, 4.3, 3.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(13, 'Siwan', 3.2, 20748, 58584, 27880, '2015-16', 3.8, 2.6, 3.6, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(14, 'Gopalganj', 2.5, 17437, 52984, 24565, '2015-16', 3.2, 2.3, 3.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(15, 'EastChamparan', 4.9, 30327, 121313, 36269, '2015-16', 5.6, 5.4, 4.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(16, 'WestChamparan', 3.8, 23406, 80103, 25188, '2015-16', 4.3, 3.6, 3.3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(17, 'Muzaffarpur', 4.6, 32024, 136414, 45636, '2015-16', 5.9, 6, 5.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(18, 'Sitamarhi', 3.3, 15632, 49322, 22824, '2015-16', 2.9, 2.2, 3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(19, 'Sheohar', 0.6, 1600, 5509, 4103, '2015-16', 0.3, 0.2, 0.5, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(20, 'Vaishali', 3.4, 22562, 82551, 32958, '2015-16', 4.1, 3.7, 4.3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(21, 'Darbhanga', 3.8, 17427, 60474, 31306, '2015-16', 3.2, 2.7, 4.1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(22, 'Madhubani', 4.3, 24286, 57595, 27616, '2015-16', 4.5, 2.6, 3.6, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(23, 'Samastipur', 4.1, 18911, 80369, 24385, '2015-16', 3.5, 3.6, 3.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(24, 'Begusarai', 2.8, 13108, 112076, 24760, '2015-16', 2.4, 5, 3.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(25, 'Munger', 1.3, 5369, 32866, 13527, '2015-16', 1, 1.5, 1.8, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(26, 'Sheikhpura', 0.6, 2081, 12889, 3468, '2015-16', 0.4, 0.6, 0.5, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(27, 'Lakhisarai', 1, 2634, 18171, 5688, '2015-16', 0.5, 0.8, 0.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(28, 'Jamui', 1.7, 5097, 21956, 7062, '2015-16', 0.9, 1, 0.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(29, 'Khagaria', 1.6, 4898, 32874, 7516, '2015-16', 0.9, 1.5, 1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(30, 'Bhagalpur', 2.9, 14574, 75498, 24365, '2015-16', 2.7, 3.3, 3.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(31, 'Banka', 2, 5528, 24931, 7412, '2015-16', 1, 1.1, 1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(32, 'Saharsa', 1.8, 7293, 38524, 9993, '2015-16', 1.3, 1.7, 1.3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(33, 'Supaul', 2.1, 11774, 39873, 8074, '2015-16', 2.2, 1.8, 1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(34, 'Madhepura', 1.9, 8157, 32632, 8919, '2015-16', 1.5, 1.4, 1.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(35, 'Purnia', 3.2, 16661, 81925, 14630, '2015-16', 3.1, 3.6, 1.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(36, 'Kishanganj', 1.6, 8716, 23721, 5713, '2015-16', 1.6, 1.1, 0.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(37, 'Araria', 2.7, 17568, 65489, 10335, '2015-16', 3.2, 2.9, 1.3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(38, 'Katihar', 3, 11526, 70625, 13437, '2015-16', 2.1, 3.1, 1.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(39, 'Bihar', 100, 545355, 2254800, 768953, '2015-16', 100, 100, 100, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(40, 'Patna', 5.6, 79724, 231606, 127894, '2016-17', 13.1, 10.6, 13.6, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(41, 'Nalanda', 2.8, 12622, 57836, 25361, '2016-17', 2.1, 2.7, 2.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(42, 'Bhojpur', 2.6, 13959, 51208, 28241, '2016-17', 2.3, 2.3, 3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(43, 'Buxar', 1.6, 9568, 32888, 15091, '2016-17', 1.6, 1.5, 1.6, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(44, 'Rohtas', 2.9, 17530, 74905, 27375, '2016-17', 2.9, 3.4, 2.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(45, 'Kaimur', 1.6, 7897, 31845, 9666, '2016-17', 1.3, 1.5, 1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(46, 'Gaya', 4.2, 23505, 89813, 33541, '2016-17', 3.9, 4.1, 3.6, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(47, 'Jehanabad', 1.1, 4602, 20464, 10875, '2016-17', 0.8, 0.9, 1.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(48, 'Arwal', 0.7, 2872, 11107, 5296, '2016-17', 0.5, 0.5, 0.6, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(49, 'Nawada', 2.1, 7803, 36952, 17328, '2016-17', 1.3, 1.7, 1.8, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(50, 'Aurangabad', 2.4, 12646, 64705, 17548, '2016-17', 2.1, 3, 1.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(51, 'Saran', 3.8, 23475, 92447, 36434, '2016-17', 3.8, 4.2, 3.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(52, 'Siwan', 3.2, 23427, 54783, 33601, '2016-17', 3.8, 2.5, 3.6, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(53, 'Gopalganj', 2.5, 20295, 50347, 29641, '2016-17', 3.3, 2.3, 3.1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(54, 'EastChamparan', 4.9, 30605, 103412, 44492, '2016-17', 5, 4.7, 4.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(55, 'WestChamparan', 3.8, 21573, 65796, 31570, '2016-17', 3.5, 3, 3.3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(56, 'Muzaffarpur', 4.6, 37547, 138283, 55442, '2016-17', 6.2, 6.3, 5.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(57, 'Sitamarhi', 3.3, 13976, 45000, 29003, '2016-17', 2.3, 2.1, 3.1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(58, 'Sheohar', 0.6, 1864, 5142, 5414, '2016-17', 0.3, 0.2, 0.6, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(59, 'Vaishali', 3.4, 26212, 78057, 39748, '2016-17', 4.3, 3.6, 4.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(60, 'Darbhanga', 3.8, 20907, 61244, 40493, '2016-17', 3.4, 2.8, 4.3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(61, 'Madhubani', 4.3, 22048, 51918, 37027, '2016-17', 3.6, 2.4, 3.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(62, 'Samastipur', 4.1, 22484, 82347, 32232, '2016-17', 3.7, 3.8, 3.4, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(63, 'Begusarai', 2.8, 15252, 106910, 33027, '2016-17', 2.5, 4.9, 3.5, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(64, 'Munger', 1.3, 6096, 29223, 15744, '2016-17', 1, 1.3, 1.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(65, 'Sheikhpura', 0.6, 2498, 17690, 4544, '2016-17', 0.4, 0.8, 0.5, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(66, 'Lakhisarai', 1, 3136, 17129, 6940, '2016-17', 0.5, 0.8, 0.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(67, 'Jamui', 1.7, 6492, 22948, 10082, '2016-17', 1.1, 1.1, 1.1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(68, 'Khagaria', 1.6, 5798, 31932, 10058, '2016-17', 1, 1.5, 1.1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(69, 'Bhagalpur', 2.9, 17032, 74985, 29541, '2016-17', 2.8, 3.4, 3.1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(70, 'Banka', 2, 7352, 26101, 9978, '2016-17', 1.2, 1.2, 1.1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(71, 'Saharsa', 1.8, 8507, 35724, 12720, '2016-17', 1.4, 1.6, 1.3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(72, 'Supaul', 2.1, 10931, 34527, 11941, '2016-17', 1.8, 1.6, 1.3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(73, 'Madhepura', 1.9, 10106, 34195, 11328, '2016-17', 1.7, 1.6, 1.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(74, 'Purnia', 3.2, 20711, 81178, 18069, '2016-17', 3.4, 3.7, 1.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(75, 'Kishanganj', 1.6, 9328, 20164, 7536, '2016-17', 1.5, 0.9, 0.8, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(76, 'Araria', 2.7, 16009, 48074, 12750, '2016-17', 2.6, 2.2, 1.4, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(77, 'Katihar', 3, 13753, 68380, 16261, '2016-17', 2.3, 3.1, 1.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(78, 'Bihar', 100, 610140, 2181270, 943832, '2016-17', 100, 100, 100, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(79, 'Patna', 5.6, 75599, 225695, 121829, 'Avg of 2015-17', 13.1, 10.2, 14.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(80, 'Nalanda', 2.8, 11634, 55089, 23184, 'Avg of 2015-17', 2, 2.5, 2.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(81, 'Bhojpur', 2.6, 13190, 52918, 26136, 'Avg of 2015-17', 2.3, 2.4, 3.1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(82, 'Buxar', 1.6, 8789, 34883, 13766, 'Avg of 2015-17', 1.5, 1.6, 1.6, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(83, 'Rohtas', 2.9, 16358, 78287, 24796, 'Avg of 2015-17', 2.8, 3.5, 2.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(84, 'Kaimur', 1.6, 7279, 34646, 8500, 'Avg of 2015-17', 1.3, 1.6, 1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(85, 'Gaya', 4.2, 21211, 85429, 30656, 'Avg of 2015-17', 3.7, 3.9, 3.6, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(86, 'Jehanabad', 1.1, 4104, 18819, 9945, 'Avg of 2015-17', 0.7, 0.8, 1.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(87, 'Arwal', 0.7, 2573, 10885, 4702, 'Avg of 2015-17', 0.4, 0.5, 0.5, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(88, 'Nawada', 2.1, 6986, 35726, 15600, 'Avg of 2015-17', 1.2, 1.6, 1.8, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(89, 'Aurangabad', 2.4, 11553, 63735, 15696, 'Avg of 2015-17', 2, 2.9, 1.8, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(90, 'Saran', 3.8, 21835, 94543, 33179, 'Avg of 2015-17', 3.8, 4.3, 3.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(91, 'Siwan', 3.2, 22088, 56684, 30741, 'Avg of 2015-17', 3.8, 2.6, 3.6, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(92, 'Gopalganj', 2.5, 18866, 51666, 27103, 'Avg of 2015-17', 3.3, 2.3, 3.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(93, 'EastChamparan', 4.9, 30466, 112363, 40381, 'Avg of 2015-17', 5.3, 5.1, 4.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(94, 'WestChamparan', 3.8, 22490, 72950, 28379, 'Avg of 2015-17', 3.9, 3.3, 3.3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(95, 'Muzaffarpur', 4.6, 34786, 137349, 50539, 'Avg of 2015-17', 6, 6.2, 5.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(96, 'Sitamarhi', 3.3, 14804, 47161, 25914, 'Avg of 2015-17', 2.6, 2.1, 3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(97, 'Sheohar', 0.6, 1732, 5326, 4759, 'Avg of 2015-17', 0.3, 0.2, 0.6, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(98, 'Vaishali', 3.4, 24387, 80304, 36353, 'Avg of 2015-17', 4.2, 3.6, 4.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(99, 'Darbhanga', 3.8, 19167, 60859, 35900, 'Avg of 2015-17', 3.3, 2.7, 4.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(100, 'Madhubani', 4.3, 23167, 54757, 32322, 'Avg of 2015-17', 4, 2.5, 3.8, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(101, 'Samastipur', 4.1, 20698, 81358, 28309, 'Avg of 2015-17', 3.6, 3.7, 3.3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(102, 'Begusarai', 2.8, 14180, 109493, 28894, 'Avg of 2015-17', 2.5, 4.9, 3.4, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(103, 'Munger', 1.3, 5733, 31045, 14636, 'Avg of 2015-17', 1, 1.4, 1.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(104, 'Sheikhpura', 0.6, 2290, 15290, 4006, 'Avg of 2015-17', 0.4, 0.7, 0.5, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(105, 'Lakhisarai', 1, 2885, 17650, 6314, 'Avg of 2015-17', 0.5, 0.8, 0.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(106, 'Jamui', 1.7, 5795, 22452, 8572, 'Avg of 2015-17', 1, 1, 1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(107, 'Khagaria', 1.6, 5348, 32403, 8787, 'Avg of 2015-17', 0.9, 1.5, 1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(108, 'Bhagalpur', 2.9, 15803, 75242, 26953, 'Avg of 2015-17', 2.7, 3.4, 3.1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(109, 'Banka', 2, 6440, 25516, 8695, 'Avg of 2015-17', 1.1, 1.2, 1, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(110, 'Saharsa', 1.8, 7900, 37124, 11357, 'Avg of 2015-17', 1.4, 1.7, 1.3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(111, 'Supaul', 2.1, 11353, 37200, 10008, 'Avg of 2015-17', 2, 1.7, 1.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(112, 'Madhepura', 1.9, 9132, 33414, 10124, 'Avg of 2015-17', 1.6, 1.5, 1.2, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(113, 'Purnia', 3.2, 18686, 81552, 16350, 'Avg of 2015-17', 3.2, 3.7, 1.9, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(114, 'Kishanganj', 1.6, 9022, 21943, 6625, 'Avg of 2015-17', 1.6, 1, 0.8, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(115, 'Araria', 2.7, 16789, 56782, 11543, 'Avg of 2015-17', 2.9, 2.6, 1.3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(116, 'Katihar', 3, 12640, 69503, 14849, 'Avg of 2015-17', 2.2, 3.1, 1.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
+(117, 'Bihar', 100, 577748, 2218030, 856393, 'Avg of 2015-17', 100, 100, 100, '2018-08-31 08:22:01', '2018-08-31 08:22:01');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `state_domestic_product11s`
+--
+
+DROP TABLE IF EXISTS `state_domestic_product11s`;
+CREATE TABLE `state_domestic_product11s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Target` float DEFAULT NULL,
+  `Achievement` float DEFAULT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_domestic_product11s`
+--
+
+INSERT INTO `state_domestic_product11s` (`id`, `Districts`, `Target`, `Achievement`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 96, 210, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(2, 'Nalanda', 66, 126, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(3, 'Bhojpur', 73, 156, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(4, 'Buxar', 20, 37, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(5, 'Rohtas', 23, 32, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(6, 'Kaimur', 10, 15, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(7, 'Gaya', 30, 29, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(8, 'Jehanabad', 10, 18, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(9, 'Arwal', 8, 12, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(10, 'Nawada', 48, 70, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(11, 'Aurangabad', 15, 12, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(12, 'Saran', 84, 147, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(13, 'Siwan', 50, 59, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(14, 'Gopalganj', 40, 69, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(15, 'EastChamparan', 23, 30, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(16, 'WestChamparan', 20, 27, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(17, 'Muzaffarpur', 47, 54, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(18, 'Sitamarhi', 8, 15, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(19, 'Sheohar', 2, 4, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(20, 'Vaishali', 40, 78, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(21, 'Darbhanga', 39, 62, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(22, 'Madhubani', 26, 42, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(23, 'Samastipur', 23, 58, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(24, 'Begusarai', 26, 39, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(25, 'Munger', 18, 31, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(26, 'Sheikhpura', 6, 10, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(27, 'Lakhisarai', 6, 10, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(28, 'Jamui', 10, 22, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(29, 'Khagaria', 6, 9, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(30, 'Bhagalpur', 49, 75, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(31, 'Banka', 3, 10, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(32, 'Saharsa', 14, 29, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(33, 'Supaul', 11, 21, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(34, 'Madhepura', 11, 22, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(35, 'Purnia', 16, 23, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(36, 'Kishanganj', 4, 8, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(37, 'Araria', 6, 9, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(38, 'Katihar', 13, 27, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(39, 'Bihar', 1000, 1707, 2013, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(40, 'Patna', 175, 301.42, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(41, 'Nalanda', 115, 152.11, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(42, 'Bhojpur', 140, 153.48, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(43, 'Buxar', 30, 51, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(44, 'Rohtas', 34, 47.03, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(45, 'Kaimur', 15, 19.77, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(46, 'Gaya', 25, 41.07, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(47, 'Jehanabad', 15, 16.78, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(48, 'Arwal', 10, 10.9, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(49, 'Nawada', 67, 93.38, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(50, 'Aurangabad', 10, 18.81, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(51, 'Saran', 140, 169.95, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(52, 'Siwan', 50, 71.04, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(53, 'Gopalganj', 62, 75.7, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(54, 'EastChamparan', 25, 39.2, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(55, 'WestChamparan', 25, 26.91, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(56, 'Muzaffarpur', 48, 64.62, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(57, 'Sitamarhi', 12, 19.26, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(58, 'Sheohar', 3, 4.81, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(59, 'Vaishali', 65, 72.01, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(60, 'Darbhanga', 58, 65.49, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(61, 'Madhubani', 39, 52, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(62, 'Samastipur', 50, 47.49, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(63, 'Begusarai', 35, 40.03, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(64, 'Munger', 27, 26.1, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(65, 'Sheikhpura', 9, 6.96, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(66, 'Lakhisarai', 9, 6.96, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(67, 'Jamui', 15, 21.05, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(68, 'Khagaria', 7, 8.76, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(69, 'Bhagalpur', 70, 67.12, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(70, 'Banka', 5, 8.66, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(71, 'Saharsa', 23, 35.51, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(72, 'Supaul', 17, 26.51, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(73, 'Madhepura', 17, 26.73, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(74, 'Purnia', 20, 16.31, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(75, 'Kishanganj', 6, 7.15, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(76, 'Araria', 7, 5.87, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(77, 'Katihar', 20, 22.9, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(78, 'Bihar', 1500, 1940.85, 2014, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(79, 'Patna', 300, 466.11, 2015, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(80, 'Nalanda', 180, 248.51, 2015, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(81, 'Bhojpur', 200, 176.27, 2015, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(82, 'Buxar', 50, 79.27, 2015, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(83, 'Rohtas', 60, 116.35, 2015, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(84, 'Kaimur', 24, 44.85, 2015, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(85, 'Gaya', 70, 72.69, 2015, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(86, 'Jehanabad', 24, 35.27, 2015, '2018-08-17 11:55:41', '2018-08-17 11:55:41'),
+(87, 'Arwal', 16, 18.82, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(88, 'Nawada', 105, 106.57, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(89, 'Aurangabad', 25, 64.2, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(90, 'Saran', 190, 241.05, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(91, 'Siwan', 90, 126.68, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(92, 'Gopalganj', 85, 96.81, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(93, 'EastChamparan', 45, 57.56, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(94, 'WestChamparan', 40, 41.71, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(95, 'Muzaffarpur', 80, 93.98, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(96, 'Sitamarhi', 30, 39.02, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(97, 'Sheohar', 5, 9.22, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(98, 'Vaishali', 100, 97.91, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(99, 'Darbhanga', 90, 100.3, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(100, 'Madhubani', 62, 69.09, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(101, 'Samastipur', 75, 81.28, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(102, 'Begusarai', 55, 51.24, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(103, 'Munger', 40, 66.77, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(104, 'Sheikhpura', 12, 21.61, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(105, 'Lakhisarai', 15, 21.61, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(106, 'Jamui', 24, 22.68, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(107, 'Khagaria', 15, 12.75, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(108, 'Bhagalpur', 100, 93.84, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(109, 'Banka', 12, 20.58, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(110, 'Saharsa', 37, 35.35, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(111, 'Supaul', 27, 28.87, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(112, 'Madhepura', 27, 25.34, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(113, 'Purnia', 35, 30.68, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(114, 'Kishanganj', 10, 7.62, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(115, 'Araria', 10, 9.56, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(116, 'Katihar', 35, 24.56, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(117, 'Bihar', 2400, 2956.58, 2015, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(118, 'Patna', 500, 525.83, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(119, 'Nalanda', 270, 244.12, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(120, 'Bhojpur', 195, 88.73, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(121, 'Buxar', 85, 86.48, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(122, 'Rohtas', 125, 125.03, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(123, 'Kaimur', 50, 51.36, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(124, 'Gaya', 80, 94.94, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(125, 'Jehanabad', 40, 47.79, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(126, 'Arwal', 20, 22.13, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(127, 'Nawada', 120, 125.98, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(128, 'Aurangabad', 70, 59.35, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(129, 'Saran', 260, 265.49, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(130, 'Siwan', 140, 121.4, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(131, 'Gopalganj', 110, 78.61, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(132, 'EastChamparan', 65, 66.84, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(133, 'WestChamparan', 50, 46.36, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(134, 'Muzaffarpur', 110, 112.67, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(135, 'Sitamarhi', 45, 34.85, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(136, 'Sheohar', 10, 9.18, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(137, 'Vaishali', 120, 111.56, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(138, 'Darbhanga', 115, 115.64, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(139, 'Madhubani', 80, 59.29, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(140, 'Samastipur', 90, 74.96, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(141, 'Begusarai', 60, 49.16, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(142, 'Munger', 75, 62.4, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(143, 'Sheikhpura', 25, 20.21, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(144, 'Lakhisarai', 25, 20.21, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(145, 'Jamui', 25, 26.17, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(146, 'Khagaria', 15, 12.04, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(147, 'Bhagalpur', 105, 79.83, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(148, 'Banka', 25, 21.52, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(149, 'Saharsa', 40, 33.67, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(150, 'Supaul', 35, 37.66, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(151, 'Madhepura', 30, 22.73, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(152, 'Purnia', 35, 49.78, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(153, 'Kishanganj', 10, 11.78, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(154, 'Araria', 10, 15.73, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(155, 'Katihar', 35, 41.57, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
+(156, 'Bihar', 3300, 3073.05, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `state_public_sector1s`
+--
+
+DROP TABLE IF EXISTS `state_public_sector1s`;
+CREATE TABLE `state_public_sector1s` (
+  `id` bigint(20) NOT NULL,
+  `Year_as_on_31st_March` varchar(255) DEFAULT NULL,
+  `Number_of_Working_PSUs` float DEFAULT NULL,
+  `Number_of_Non_Working_PSUs` float DEFAULT NULL,
+  `Statutory_Corporations` float DEFAULT NULL,
+  `Public_Sector_Companies` varchar(255) DEFAULT NULL,
+  `Equity` float DEFAULT NULL,
+  `Loans` float DEFAULT NULL,
+  `Investment` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_public_sector1s`
+--
+
+INSERT INTO `state_public_sector1s` (`id`, `Year_as_on_31st_March`, `Number_of_Working_PSUs`, `Number_of_Non_Working_PSUs`, `Statutory_Corporations`, `Public_Sector_Companies`, `Equity`, `Loans`, `Investment`, `created_at`, `updated_at`) VALUES
+(1, '2012', 22, 40, 4, '66.0', 633, 11741, 12374, '2018-09-26 07:57:47', '2018-09-26 07:57:47'),
+(2, '2013', 28, 40, 3, '71.0', 3743, 4579, 8322, '2018-09-26 07:57:47', '2018-09-26 07:57:47'),
+(3, '2014', 30, 40, 3, '73.0', 18323, 9898, 28221, '2018-09-26 07:57:47', '2018-09-26 07:57:47'),
+(4, '2015', 30, 40, 3, '73.0', 21542, 12242, 33783, '2018-09-26 07:57:47', '2018-09-26 07:57:47'),
+(5, '2016', 31, 40, 3, '74.0', 31394, 15299, 46694, '2018-09-26 07:57:47', '2018-09-26 07:57:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `state_public_sector2s`
+--
+
+DROP TABLE IF EXISTS `state_public_sector2s`;
+CREATE TABLE `state_public_sector2s` (
+  `id` bigint(20) NOT NULL,
+  `Type_of_Company_or_corporation` varchar(255) DEFAULT NULL,
+  `Government_Companies_Capital` float DEFAULT NULL,
+  `Government_Companies_Long_Term_Loans` float DEFAULT NULL,
+  `Total_Government_Companies` float DEFAULT NULL,
+  `Statutory_Corporations_Capital` float DEFAULT NULL,
+  `Statutory_Corporations_Long_Term_Loans` float DEFAULT NULL,
+  `Total_Statutory_Corporations` float DEFAULT NULL,
+  `Grand_Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_public_sector2s`
+--
+
+INSERT INTO `state_public_sector2s` (`id`, `Type_of_Company_or_corporation`, `Government_Companies_Capital`, `Government_Companies_Long_Term_Loans`, `Total_Government_Companies`, `Statutory_Corporations_Capital`, `Statutory_Corporations_Long_Term_Loans`, `Total_Statutory_Corporations`, `Grand_Total`, `created_at`, `updated_at`) VALUES
+(1, 'Working', 31028, 13657, 44685, 186, 1095, 1280, 45965, '2018-09-12 12:20:36', '2018-09-12 12:20:36'),
+(2, 'Non-Working', 181, 548, 729, NULL, NULL, NULL, 729, '2018-09-12 12:20:36', '2018-09-12 12:20:36'),
+(3, 'Total', 31209, 14205, 45414, 186, 1095, 1280, 46694, '2018-09-12 12:20:36', '2018-09-12 12:20:36');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `state_public_sector3s`
+--
+
+DROP TABLE IF EXISTS `state_public_sector3s`;
+CREATE TABLE `state_public_sector3s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `Number_of_Statutory_Corporations` float DEFAULT NULL,
+  `Number_of_Working_Companies` float DEFAULT NULL,
+  `Number_of_NonWorking_Companies` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `state_public_sector3s`
+--
+
+INSERT INTO `state_public_sector3s` (`id`, `Sector`, `Number_of_Statutory_Corporations`, `Number_of_Working_Companies`, `Number_of_NonWorking_Companies`, `created_at`, `updated_at`) VALUES
+(1, 'Agriculture', 0, 3, 0, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
+(2, 'Power', 0, 9, 0, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
+(3, 'Infrastructure ', 0, 6, 1, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
+(4, 'Manufacturing', 0, 3, 12, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
+(5, 'Services', 2, 3, 1, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
+(6, 'Finance', 1, 4, 4, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
+(7, 'Others', 0, 3, 10, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
+(8, 'Total', 3, 31, 40, '2018-09-13 09:54:53', '2018-09-13 09:54:53');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `support_institutions1s`
+--
+
+DROP TABLE IF EXISTS `support_institutions1s`;
+CREATE TABLE `support_institutions1s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `CAGR` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `support_institutions1s`
+--
+
+INSERT INTO `support_institutions1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `CAGR`, `created_at`, `updated_at`) VALUES
+(1, 'Expenditure on Industries', NULL, NULL, NULL, NULL, NULL, NULL, '2018-10-12 12:05:20', '2018-10-12 12:05:20'),
+(2, '(a)  Revenue', 534, 580, 561, 1201, 888, 19.1, '2018-10-12 12:05:20', '2018-10-12 12:05:20'),
+(3, '(b)  Capital', 49, 535, 3, 29, 228, 1.6, '2018-10-12 12:05:20', '2018-10-12 12:05:20'),
+(4, '(c)  Total', 583, 1115, 564, 1230, 1116, 15, '2018-10-12 12:05:20', '2018-10-12 12:05:20'),
+(5, 'Expenditure on Economic Services', 20246, 24871, 29173, 37305, 44943, 22.1, '2018-10-12 12:05:20', '2018-10-12 12:05:20'),
+(6, 'Expenditure on Industries as a percentage of Expenditure on Economic Services', 2.9, 4.5, 1.9, 3.3, 2.5, NULL, '2018-10-12 12:05:20', '2018-10-12 12:05:20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `support_institutions2s`
+--
+
+DROP TABLE IF EXISTS `support_institutions2s`;
+CREATE TABLE `support_institutions2s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Amount_Allotted_Rs_lakh` float DEFAULT NULL,
+  `Amount_spent_Rs_lakh` float DEFAULT NULL,
+  `Number_of_Entrepreneurs_benefited` float DEFAULT NULL,
+  `Amount_Spent_in_Percentage` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `support_institutions2s`
+--
+
+INSERT INTO `support_institutions2s` (`id`, `Year`, `Amount_Allotted_Rs_lakh`, `Amount_spent_Rs_lakh`, `Number_of_Entrepreneurs_benefited`, `Amount_Spent_in_Percentage`, `created_at`, `updated_at`) VALUES
+(1, '2011-12', 100, 67.48, 753, 67.5, '2018-09-09 09:21:11', '2018-09-09 09:21:11'),
+(2, '2012-13', 104, 78.73, 596, 75.7, '2018-09-09 09:21:11', '2018-09-09 09:21:11'),
+(3, '2013-14', 120, 101.13, 583, 84.3, '2018-09-09 09:21:11', '2018-09-09 09:21:11'),
+(4, '2014-15', 98.6, 88.94, 664, 90.2, '2018-09-09 09:21:11', '2018-09-09 09:21:11'),
+(5, '2015-16', 110.29, 92.37, 906, 83.8, '2018-09-09 09:21:11', '2018-09-09 09:21:11'),
+(6, '2016-17', 110, 110, 1098, 100, '2018-09-09 09:21:11', '2018-09-09 09:21:11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `support_institutions3s`
+--
+
+DROP TABLE IF EXISTS `support_institutions3s`;
+CREATE TABLE `support_institutions3s` (
+  `id` bigint(20) NOT NULL,
+  `Regional_Office` varchar(255) DEFAULT NULL,
+  `Number_of_Working_Units` float DEFAULT NULL,
+  `Number_of_Working_Units_under_Construction` float DEFAULT NULL,
+  `Number_of_Units_which_have_not_started_Construction` float DEFAULT NULL,
+  `Number_of_Units_Closed_in_Cancellation_Process` float DEFAULT NULL,
+  `Total_existing_Units` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `support_institutions3s`
+--
+
+INSERT INTO `support_institutions3s` (`id`, `Regional_Office`, `Number_of_Working_Units`, `Number_of_Working_Units_under_Construction`, `Number_of_Units_which_have_not_started_Construction`, `Number_of_Units_Closed_in_Cancellation_Process`, `Total_existing_Units`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 666, 152, 26, 337, 1181, '2018-10-25 05:15:32', '2018-10-25 05:15:32'),
+(2, 'Bhagalpur', 284, 41, 18, 32, 375, '2018-10-25 05:15:32', '2018-10-25 05:15:32'),
+(3, 'Dharbhanga', 292, 34, 4, 49, 379, '2018-10-25 05:15:32', '2018-10-25 05:15:32'),
+(4, 'Muzaffarpur', 364, 75, 19, 104, 562, '2018-10-25 05:15:32', '2018-10-25 05:15:32'),
+(5, 'Total', 1606, 302, 67, 522, 2497, '2018-10-25 05:15:32', '2018-10-25 05:15:32');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `support_institutions4s`
+--
+
+DROP TABLE IF EXISTS `support_institutions4s`;
+CREATE TABLE `support_institutions4s` (
+  `id` bigint(20) NOT NULL,
+  `Regional_Office` varchar(255) DEFAULT NULL,
+  `Total_Acquired_Land` float DEFAULT NULL,
+  `Total_Acquired_Constructed_Sheds` float DEFAULT NULL,
+  `Land_Reserved_for_Infrastructure_Administrative_Blocks_Roads_etc` float DEFAULT NULL,
+  `Total_Allotted_Land` float DEFAULT NULL,
+  `Total_Allotted_Constructed_Sheds` float DEFAULT NULL,
+  `Litigated_land` float DEFAULT NULL,
+  `Total_Vacant_Land_Allottable` float DEFAULT NULL,
+  `Total_Vacant_Constructed_Sheds_Allottable` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `support_institutions4s`
+--
+
+INSERT INTO `support_institutions4s` (`id`, `Regional_Office`, `Total_Acquired_Land`, `Total_Acquired_Constructed_Sheds`, `Land_Reserved_for_Infrastructure_Administrative_Blocks_Roads_etc`, `Total_Allotted_Land`, `Total_Allotted_Constructed_Sheds`, `Litigated_land`, `Total_Vacant_Land_Allottable`, `Total_Vacant_Constructed_Sheds_Allottable`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 2700.38, 230, 269.86, 2294.83, 215, 81.38, 51.59, 15, '2018-10-12 10:02:22', '2018-10-12 10:02:22'),
+(2, 'Bhagalpur', 1347.29, 148, 105.2, 374.15, 143, 836.14, 31.8, 5, '2018-10-12 10:02:22', '2018-10-12 10:02:22'),
+(3, 'Dharbhanga', 725.61, 158, 156.86, 441.79, 133, 61.1, 28.61, 23, '2018-10-12 10:02:22', '2018-10-12 10:02:22'),
+(4, 'Muzaffarpur', 411.96, 144, 55.16, 327.23, 131, 49.94, 29.51, 13, '2018-10-12 10:02:22', '2018-10-12 10:02:22'),
+(5, 'Total', 5185.24, 680, 587.08, 3438, 622, 1028.56, 141.51, 56, '2018-10-12 10:02:22', '2018-10-12 10:02:22');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tax_department1s`
+--
+
+DROP TABLE IF EXISTS `tax_department1s`;
+CREATE TABLE `tax_department1s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `BST/VAT` float DEFAULT NULL,
+  `CST` float DEFAULT NULL,
+  `ENT` float DEFAULT NULL,
+  `ED` float DEFAULT NULL,
+  `ADV` float DEFAULT NULL,
+  `HLT` float DEFAULT NULL,
+  `ET` float DEFAULT NULL,
+  `PT` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tax_department1s`
+--
+
+INSERT INTO `tax_department1s` (`id`, `Year`, `BST/VAT`, `CST`, `ENT`, `ED`, `ADV`, `HLT`, `ET`, `PT`, `Total`, `created_at`, `updated_at`) VALUES
+(1, '2012', 7391, 74, 28, 102, 1, 8, 3268, 40, 10911, '2018-09-06 12:23:21', '2018-09-06 12:23:21'),
+(2, '2013', 8546, 83, 39, 141, 1, 10, 4283, 53, 13156, '2018-09-06 12:23:21', '2018-09-06 12:23:21'),
+(3, '2014', 8796, 71, 46, 373, 1, 11, 4406, 55, 13758, '2018-09-06 12:23:21', '2018-09-06 12:23:21'),
+(4, '2015', 10726, 60, 55, 297, 1, 11, 6162, 66, 17378, '2018-09-06 12:23:21', '2018-09-06 12:23:21'),
+(5, '2016', 11908, 70, 70, 226, 1, 11, 6389, 77, 18751, '2018-09-06 12:23:21', '2018-09-06 12:23:21');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tax_department2s`
+--
+
+DROP TABLE IF EXISTS `tax_department2s`;
+CREATE TABLE `tax_department2s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18_BE` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tax_department2s`
+--
+
+INSERT INTO `tax_department2s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `2017-18_BE`, `created_at`, `updated_at`) VALUES
+(1, 'Total Revenue of State (Rs. crore)', 59567, 68919, 78417, 96123, 105585, 137158, '2018-09-10 11:50:44', '2018-09-10 11:50:44'),
+(2, 'State’s Own Tax Revenues (Rs. crore)', 16253, 19961, 20750, 25449, 23742, 32001, '2018-09-10 11:50:44', '2018-09-10 11:50:44'),
+(3, 'Revenue from Commercial Taxes (Rs. crore)', 10911, 13156, 13758, 17378, 18751, 25000, '2018-09-10 11:50:44', '2018-09-10 11:50:44'),
+(4, 'Share of Commercial Taxes in Total Revenue (Percentage)', 18.3, 19.1, 17.5, 18.1, 17.8, 18.2, '2018-09-10 11:50:44', '2018-09-10 11:50:44'),
+(5, 'Share of Commercial Taxes in State’s Own Taxes (Percentage)', 67.1, 65.9, 66.3, 68.3, 79, 78.1, '2018-09-10 11:50:44', '2018-09-10 11:50:44');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tax_department3s`
+--
+
+DROP TABLE IF EXISTS `tax_department3s`;
+CREATE TABLE `tax_department3s` (
+  `id` bigint(20) NOT NULL,
+  `Name_of_Commodity` varchar(255) DEFAULT NULL,
+  `Collection` float DEFAULT NULL,
+  `Rate_of_Growth` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tax_department3s`
+--
+
+INSERT INTO `tax_department3s` (`id`, `Name_of_Commodity`, `Collection`, `Rate_of_Growth`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Petro Products', 2912, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(2, 'Electrical Goods', 341, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(3, 'Cement', 800, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(4, 'Unregistered Dealer Works Contractor', 490, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(5, 'FMCG', 414, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(6, 'Four Wheelers and Chassis of Automobile', 515, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(7, 'Crude Oil', 315, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(8, 'Works Contract and TDS', 369, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(9, 'Two and Three Wheelers', 272, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(10, 'Drugs and Medicines', 357, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(11, 'Others', 4122, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(12, 'Total', 10907, NULL, '2012-13', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(13, 'Petro Products', 3152, 8.3, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(14, 'Electrical Goods', 546, 60.5, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(15, 'Cement', 929, 16.1, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(16, 'Unregistered Dealer Works Contractor', 659, 34.7, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(17, 'FMCG', 492, 18.9, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(18, 'Four Wheelers & Chassis of Automobile', 491, -4.7, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(19, 'Crude Oil', 817, 159.4, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(20, 'Works Contract and TDS', 334, -9.5, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(21, 'Two and Three Wheelers', 336, 23.4, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(22, 'Drugs and Medicines', 408, 14.1, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(23, 'Others', 4991, 21.1, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(24, 'Total', 13156, 20.6, '2013-14', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(25, 'Petro Products', 3284, 4.2, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(26, 'Electrical Goods', 787, 44, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(27, 'Cement', 920, -0.9, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(28, 'Unregistered Dealer Works Contractor', 750, 13.8, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(29, 'FMCG', 523, 6.2, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(30, 'Four Wheelers and Chassis of Automobile', 528, 7.5, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(31, 'Crude Oil', 635, -22.2, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(32, 'Works Contract and TDS', 248, -25.6, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(33, 'Two and Three Wheelers', 378, 12.5, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(34, 'Drugs and Medicines', 459, 12.7, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(35, 'Others', 5237, 4.9, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(36, 'Total', 13750, 4.5, '2014-15', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(37, 'Petro Products', 4385, 33.5, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(38, 'Electrical Goods', 1093, 38.9, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(39, 'Cement', 1005, 9.2, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(40, 'Unregistered Dealer Works Contractor', 912, 21.5, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(41, 'FMCG', 615, 17.6, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(42, 'Four Wheelers and Chassis of Automobile', 596, 12.9, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(43, 'Crude Oil', 1350, 112.5, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(44, 'Works Contract and TDS', 371, 49.4, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(45, 'Two and Three Wheelers', 452, 19.5, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(46, 'Drugs and Medicines', 469, 2.1, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(47, 'Others', 6133, 17.1, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(48, 'Total', 17378, 26.4, '2015-16', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(49, 'Petro Products', 5118, 16.7, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(50, 'Electrical Goods', 1374, 25.7, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(51, 'Cement', 1165, 16, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(52, 'Unregistered Dealer Works Contractor', 1118, 22.6, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(53, 'FMCG', 820, 33.5, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(54, 'Four Wheelers and Chassis of Automobile', 747, 25.4, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(55, 'Crude Oil', 702, -48, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(56, 'Works Contract and TDS', 605, 63.1, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(57, 'Two and Three Wheelers', 584, 29.1, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(58, 'Drugs and Medicines', 544, 16.1, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(59, 'Others', 5974, -2.6, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
+(60, 'Total', 18751, 7.9, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tax_department4s`
+--
+
+DROP TABLE IF EXISTS `tax_department4s`;
+CREATE TABLE `tax_department4s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tax_department4s`
+--
+
+INSERT INTO `tax_department4s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `created_at`, `updated_at`) VALUES
+(1, 'From Printed Non-judicial stamps', 369, 320, 330, 391, 339, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(2, 'From Non-judicial stamp duty deposited through Bank challan', 1340, 1856, 1750, 2024, 2064, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(3, 'Non-Judicial adhesive stamps', 13, 28, 30, 32, 26, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(4, 'Non Judicial special adhesive stamp –  through  Franking machines', 24, 16, 18, 20, 17, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(5, 'Revenue Stamps', 3, 2, 2, 2, 2, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(6, 'Judicial Stamps', 12, 36, 37, 40, 37, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(7, 'Sub-Total', 1761, 2257, 2167, 2509, 2485, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(8, 'Fees on registration of instruments', 522, 668, 646, 741, 730, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(9, 'Landlord’s Registration fee', 27, 32, 31, 34, 31, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(10, 'Landlord’s Process fee', 4, 4, 4, 5, 4, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(11, 'Fee from searches of records & Non-Encumbrances', 2, 4, 5, 5, 5, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(12, 'Fee from certified copies', 3, 2, 2, 2, 2, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(13, 'Sub-Total', 558, 711, 688, 787, 772, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
+(14, 'Total', 2319, 2968, 2855, 3296, 3257, '2018-09-14 12:40:05', '2018-09-14 12:40:05');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tax_department5s`
+--
+
+DROP TABLE IF EXISTS `tax_department5s`;
+CREATE TABLE `tax_department5s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Number_of_Document` float DEFAULT NULL,
+  `Total_Receipt` float DEFAULT NULL,
+  `Target` float DEFAULT NULL,
+  `Percentage_receipt_against_target` float DEFAULT NULL,
+  `Receipt_per_Document` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tax_department5s`
+--
+
+INSERT INTO `tax_department5s` (`id`, `Districts`, `Number_of_Document`, `Total_Receipt`, `Target`, `Percentage_receipt_against_target`, `Receipt_per_Document`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 36608, 318.88, 397.29, 80.3, 87107, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(2, 'Nalanda', 14411, 45.13, 50.54, 89.3, 31316, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(3, 'Bhojpur', 14435, 44.8, 51.96, 86.2, 31036, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(4, 'Buxar', 7913, 25.1, 28.72, 87.4, 31720, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(5, 'Rohtas', 14616, 52.36, 54.5, 96.1, 35824, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(6, 'Kaimur', 8606, 19.71, 20.48, 96.2, 22903, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(7, 'Gaya', 18819, 63.75, 83.9, 76, 33875, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(8, 'Jehanabad', 5248, 16.69, 19.57, 85.3, 31803, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(9, 'Arwal', 3396, 8.12, 8.61, 94.3, 23910, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(10, 'Nawada', 11020, 24, 29.26, 82, 21779, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(11, 'Aurangabad', 13012, 45.55, 44.83, 101.6, 35006, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(12, 'Saran', 19368, 47.69, 60.26, 79.1, 24623, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(13, 'Siwan', 17562, 45.95, 58.57, 78.5, 26164, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(14, 'Gopalganj', 14894, 42.36, 53, 79.9, 28441, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(15, 'EastChamparan', 32255, 85.98, 100.11, 85.9, 26656, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(16, 'WestChamparan ', 24195, 44.91, 50.22, 89.4, 18562, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(17, 'Muzaffarpur ', 26408, 94.96, 117.96, 80.5, 35959, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(18, 'Sitamarhi', 19927, 43.62, 55.71, 78.3, 21890, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(19, 'Sheohar', 3941, 6.76, 8.96, 75.4, 17153, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(20, 'Vaishali ', 19105, 58.69, 69.26, 84.7, 30720, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(21, 'Darbhanga', 17896, 50.12, 60.62, 82.7, 28006, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(22, 'Madhubani', 26183, 48.15, 58.2, 82.7, 18390, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(23, 'Samastipur', 26146, 50.65, 62.05, 81.6, 19372, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(24, 'Begusarai', 13736, 48.64, 53.76, 90.5, 35411, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(25, 'Munger', 4135, 17.7, 21.98, 80.5, 42805, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(26, 'Sheikhpura', 4212, 7.57, 8.99, 84.2, 17972, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(27, 'Lakhisarai', 4770, 14.56, 16.6, 87.7, 30524, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(28, 'Jamui', 8435, 16.27, 18.37, 88.6, 19289, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(29, 'Khagaria ', 6463, 15.52, 17.2, 90.2, 24014, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(30, 'Bhagalpur', 11878, 70, 68.31, 102.5, 58932, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(31, 'Banka', 9562, 19.5, 22.18, 87.9, 20393, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(32, 'Saharsa ', 9821, 26.52, 33.2, 79.9, 27003, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(33, 'Supaul ', 11977, 22.48, 26.89, 83.6, 18769, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(34, 'Madhepura', 10307, 24.01, 28.9, 83.1, 23295, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(35, 'Purnia', 18105, 47.89, 60.34, 79.4, 26451, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(36, 'Kishanganj', 14604, 21.3, 24.6, 86.6, 14585, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(37, 'Araria', 17379, 28.72, 35.17, 81.7, 16526, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(38, 'Katihar', 17449, 37.53, 43.68, 85.9, 21508, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
+(39, 'Total', 558797, 1702.14, 2024.75, 84.1, 30461, '2018-09-07 05:53:46', '2018-09-07 05:53:46');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tax_department6s`
+--
+
+DROP TABLE IF EXISTS `tax_department6s`;
+CREATE TABLE `tax_department6s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Number_of_Document` float DEFAULT NULL,
+  `Registration_Fees` float DEFAULT NULL,
+  `Stamp_Fee` float DEFAULT NULL,
+  `Total_Receipt` float DEFAULT NULL,
+  `Target` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tax_department6s`
+--
+
+INSERT INTO `tax_department6s` (`id`, `Districts`, `Number_of_Document`, `Registration_Fees`, `Stamp_Fee`, `Total_Receipt`, `Target`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 79112, 142, 488, 631, 677, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(2, 'Nalanda', 29250, 18, 59, 78, 89, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(3, 'Bhojpur', 27709, 19, 60, 80, 91, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(4, 'Buxar', 14426, 11, 33, 44, 53, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(5, 'Rohtas', 26480, 21, 62, 83, 87, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(6, 'Kaimur', 14156, 8, 23, 31, 39, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(7, 'Gaya', 38711, 34, 104, 138, 147, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(8, 'Jehanabad', 10194, 7, 23, 30, 32, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(9, 'Arwal', 5673, 3, 10, 13, 15, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(10, 'Nawadah', 18682, 11, 34, 45, 45, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(11, 'Aurangabad', 25048, 17, 51, 68, 75, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(12, 'Saran', 36704, 23, 67, 90, 95, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(13, 'Siwan', 35244, 23, 66, 89, 97, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(14, 'Gopalganj', 30793, 21, 61, 81, 86, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(15, 'WestChamparan', 45640, 20, 58, 78, 86, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(16, 'EastChamparan', 63728, 40, 114, 153, 155, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(17, 'Muzaffarpur', 58102, 48, 137, 185, 204, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(18, 'Sitamarhi', 39375, 23, 66, 89, 101, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(19, 'Sheohar', 7508, 3, 10, 14, 16, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(20, 'Vaishali', 36740, 28, 82, 110, 115, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(21, 'Darbhanga', 36876, 25, 75, 100, 110, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(22, 'Madhubani', 48077, 24, 67, 91, 99, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(23, 'Samastipur', 50032, 25, 72, 97, 108, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(24, 'Begusarai', 28037, 22, 69, 91, 102, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(25, 'Munger', 8438, 8, 26, 34, 34, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(26, 'Sheikhpura', 8340, 3, 11, 14, 15, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(27, 'Lakhisarai', 9575, 6, 19, 25, 28, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(28, 'Jamui', 15372, 7, 21, 28, 30, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(29, 'Khagaria', 12443, 7, 21, 28, 33, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(30, 'Bhagalpur', 27039, 26, 80, 106, 110, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(31, 'Banka', 17015, 10, 26, 35, 40, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(32, 'Saharsha', 19559, 12, 38, 50, 56, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(33, 'Supaul', 24527, 11, 31, 42, 41, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(34, 'Madhepura', 19179, 11, 33, 44, 45, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(35, 'Purnia', 33895, 23, 71, 95, 100, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(36, 'Kishanganj', 26915, 9, 29, 38, 45, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(37, 'Araria', 35906, 15, 42, 57, 66, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(38, 'Katihar', 38674, 18, 51, 69, 85, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(39, 'Total', 1103170, 784, 2391, 3175, 3450, '2015', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(40, 'Patna', 69684, 137, 483, 620, 756, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(41, 'Nalanda', 25808, 20, 63, 83, 91, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(42, 'Bhojpur', 24680, 27, 79, 106, 95, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(43, 'Buxar', 12392, 10, 31, 41, 53, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(44, 'Rohtas', 23482, 22, 68, 91, 99, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(45, 'Kaimur', 13530, 8, 23, 31, 37, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(46, 'Gaya', 36673, 32, 103, 135, 165, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(47, 'Jehanabad', 9189, 8, 26, 33, 35, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(48, 'Arwal', 5121, 3, 10, 14, 16, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(49, 'Nawadah', 16647, 9, 29, 38, 54, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(50, 'Aurangabad', 20493, 18, 54, 71, 82, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(51, 'Saran', 32485, 21, 62, 83, 108, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(52, 'Siwan', 30849, 21, 62, 84, 106, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(53, 'Gopalganj', 26461, 19, 55, 75, 97, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(54, 'WestChamparan', 38500, 20, 58, 78, 93, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(55, 'EastChamparan', 51988, 36, 103, 139, 184, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(56, 'Muzaffarpur', 49459, 44, 128, 172, 221, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(57, 'Sitamarhi', 32094, 36, 103, 140, 107, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(58, 'Sheohar', 6587, 3, 9, 12, 16, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(59, 'Vaishali', 30809, 25, 74, 99, 132, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(60, 'Darbhanga', 31175, 23, 67, 90, 119, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(61, 'Madhubani', 40771, 21, 59, 80, 107, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(62, 'Samastipur', 42282, 23, 67, 90, 115, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(63, 'Begusarai', 23687, 21, 63, 84, 109, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(64, 'Munger', 7320, 8, 25, 33, 41, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(65, 'Sheikhpura', 7445, 3, 10, 13, 17, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(66, 'Lakhisarai', 8149, 6, 18, 24, 30, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(67, 'Jamui', 13664, 7, 19, 26, 34, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(68, 'Khagaria', 11041, 7, 21, 28, 34, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(69, 'Bhagalpur', 22073, 31, 97, 129, 127, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(70, 'Banka', 15559, 9, 24, 33, 42, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(71, 'Saharsha', 15647, 11, 34, 45, 60, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(72, 'Supaul', 19962, 10, 27, 37, 51, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(73, 'Madhepura', 16444, 11, 33, 44, 53, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(74, 'Purnia', 29501, 21, 66, 88, 114, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(75, 'Kishanganj', 23457, 10, 29, 39, 47, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(76, 'Araria', 29243, 13, 38, 52, 69, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(77, 'Katihar', 31550, 17, 50.75, 68, 82, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
+(78, 'Total', 945901, 773, 2321, 3145, 3800, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tax_department7s`
+--
+
+DROP TABLE IF EXISTS `tax_department7s`;
+CREATE TABLE `tax_department7s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `VAT` float DEFAULT NULL,
+  `CST` float DEFAULT NULL,
+  `ENT_Tax` float DEFAULT NULL,
+  `ED` float DEFAULT NULL,
+  `ADV_Tax` float DEFAULT NULL,
+  `LUX_Tax` float DEFAULT NULL,
+  `Entry_Tax` float DEFAULT NULL,
+  `Professional_Tax` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `Target` float DEFAULT NULL,
+  `Indicator` varchar(255) NOT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tax_department7s`
+--
+
+INSERT INTO `tax_department7s` (`id`, `Districts`, `VAT`, `CST`, `ENT_Tax`, `ED`, `ADV_Tax`, `LUX_Tax`, `Entry_Tax`, `Professional_Tax`, `Total`, `Target`, `Indicator`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Patna Special ', 506187, 1716, 0, 29669, 0, 0, 231818, 241, 769631, 927746, 'Central Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(2, 'Patliputra ', 156711, 833, 4203, 0, 0, 0, 73267, 121, 235135, 294171, 'Central Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(3, 'Central Division', 662898, 2548, 4203, 29669, 0, 0, 305085, 362, 1004760, 1221920, 'Central Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(4, 'Patna West ', 17448, 83, 198, 0, 24, 309, 2816, 588, 21465, 29487, 'Patna Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(5, 'Patna Central', 13807, 175, 3, 0, 18, 39, 6171, 210, 20424, 24013, 'Patna Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(6, 'Patna North ', 14792, 92, 165, 0, 2, 69, 4329, 310, 19759, 27805, 'Patna Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(7, 'Gandhi Madan', 9194, 159, 123, 0, 23, 154, 3756, 153, 13564, 15974, 'Patna Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(8, 'Patna South', 18916, 108, 1, 0, 3, 7, 8726, 84, 27845, 36650, 'Patna Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(9, 'Kadam Kuan', 11495, 49, 0, 0, 0, 11, 2283, 25, 13863, 15612, 'Patna Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(10, 'Patna City East ', 20702, 109, 1, 0, 0, 0, 10115, 16, 30942, 36229, 'Patna Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(11, 'Patna City West ', 20218, 260, 18, 0, 0, 7, 5077, 50, 25630, 28294, 'Patna Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(12, 'Danapur ', 38118, 164, 19, 0, 0, 8, 4871, 177, 43357, 51316, 'Patna Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(13, 'Barh ', 5962, 66, 10, 0, 0, 1, 11740, 49, 17827, 30958, 'Patna Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(14, 'Shahabad ', 7482, 39, 16, 0, 0, 13, 1541, 135, 9226, 9506, 'Patna Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(15, 'Buxar ', 2209, 19, 18, 0, 0, 1, 330, 109, 2686, 3918, 'Patna Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(16, 'Biharshariff ', 7995, 25, 35, 0, 0, 38, 1072, 161, 9327, 10390, 'Patna Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(17, 'Patna Division', 188336, 1349, 609, 0, 69, 657, 62829, 2066, 255914, 320151, 'Patna Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(18, 'Sasaram ', 10898, 71, 14, 0, 0, 4, 1996, 142, 13124, 17910, 'Gaya Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(19, 'Bhabhua ', 5953, 272, 5, 0, 0, 3, 1053, 67, 7352, 11420, 'Gaya Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(20, 'Gaya ', 13980, 168, 56, 0, 0, 231, 4309, 239, 18983, 24061, 'Gaya Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(21, 'Jehanabad ', 2813, 1, 0, 0, 0, 0, 155, 99, 3068, 4151, 'Gaya Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(22, 'Nawada ', 4592, 5, 16, 7, 1, 1, 853, 84, 5559, 6122, 'Gaya Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(23, 'Aurangabad ', 5591, 54, 20, 0, 0, 7, 22369, 120, 28161, 27717, 'Gaya Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(24, 'Gaya Division', 43826, 571, 111, 7, 1, 247, 30734, 751, 76247, 91382, 'Gaya Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(25, 'Saran ', 5029, 6, 25, 0, 0, 4, 2975, 267, 8306, 8181, 'Saran Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(26, 'Siwan ', 8171, 19, 14, 0, 0, 13, 1564, 87, 9868, 10485, 'Saran Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(27, 'Gopalganj ', 5166, 7, 14, 0, 0, 2, 1354, 84, 6627, 9530, 'Saran Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(28, 'Hajipur ', 19748, 271, 54, 0, 0, 1, 3970, 151, 24195, 28844, 'Saran Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(29, 'Saran Division', 38114, 304, 107, 0, 0, 19, 9863, 590, 48997, 57040, 'Saran Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(30, 'Muzaffarpur West', 13615, 66, 24, 2, 0, 18, 9026, 190, 22942, 29097, 'Tirhut Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(31, 'Muzaffarpur East', 8828, 88, 27, 1, 0, 9, 3101, 118, 12171, 13731, 'Tirhut Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(32, 'Sitamarhi ', 6633, 16, 58, 0, 0, 3, 1165, 129, 8004, 9533, 'Tirhut Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(33, 'Motihari ', 8928, 27, 37, 0, 0, 5, 3899, 141, 13036, 12794, 'Tirhut Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(34, 'Raxaul ', 1324, 21, 12, 0, 0, 0, 288, 19, 1665, 1998, 'Tirhut Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(35, 'Bettiah ', 4496, 27, 33, 4, 0, 8, 1013, 97, 5677, 9389, 'Tirhut Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(36, 'Bagaha ', 1820, 22, 8, 0, 0, 0, 35, 36, 1922, 1960, 'Tirhut Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(37, 'Tirhut Division', 45644, 266, 199, 7, 0, 43, 18528, 730, 65417, 78502, 'Tirhut Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(38, 'Darbhanga ', 10827, 18, 34, 0, 0, 11, 3846, 179, 14914, 16714, 'Darbhanga Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(39, 'Samastipur ', 7150, 303, 26, 8, 1, 1, 4656, 248, 12394, 14020, 'Darbhanga Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(40, 'Madhubani ', 6697, 5, 24, 0, 0, 4, 814, 93, 7637, 7390, 'Darbhanga Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(41, 'Janjharpur ', 1313, 1, 0, 0, 0, 0, 41, 38, 1393, 1685, 'Darbhanga Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(42, 'Begusarai ', 7389, 83, 24, 1, 0, 5, 140093, 137, 147733, 207508, 'Darbhanga Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(43, 'Teghara ', 962, 75, 4, 0, 0, 2, 293, 20, 1356, 1736, 'Darbhanga Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(44, 'Darbhanga Division', 34339, 485, 112, 9, 1, 23, 149742, 716, 185427, 249052, 'Darbhanga Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(45, 'Saharsa ', 5907, 7, 23, 0, 0, 6, 3664, 105, 9711, 9464, 'Purnea Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(46, 'Madhepura ', 3204, 5, 6, 0, 0, 3, 730, 65, 4012, 4801, 'Purnea Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(47, 'Purnea ', 12074, 173, 43, 0, 0, 22, 6372, 101, 18787, 20195, 'Purnea Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(48, 'Katihar ', 6528, 57, 27, 0, 0, 14, 1525, 161, 8311, 12001, 'Purnea Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(49, 'Forbesganj ', 4115, 50, 17, 0, 0, 4, 838, 77, 5101, 6110, 'Purnea Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(50, 'Kishanganj ', 3412, 47, 7, 0, 0, 2, 1344, 53, 4865, 6233, 'Purnea Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(51, 'Khagaria ', 2787, 11, 6, 0, 0, 1, 352, 85, 3241, 4094, 'Purnea Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(52, 'Supaul', 1788, 1, 8, 0, 0, 0, 29, 51, 1878, 0, 'Purnea Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(53, 'Purnea Division', 39814, 350, 137, 0, 0, 51, 14853, 699, 55905, 62898, 'Purnea Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(54, 'Bhagalpur ', 11283, 72, 50, 2, 0, 24, 21214, 322, 32966, 40533, 'Bhagalpur Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(55, 'Lakhisarai ', 2279, 29, 5, 0, 0, 1, 435, 78, 2826, 3669, 'Bhagalpur Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(56, 'Munger ', 3038, 14, 1, 39, 0, 2, 2639, 200, 5935, 8242, 'Bhagalpur Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(57, 'Jamui ', 3038, 36, 3, 0, 0, 2, 284, 60, 3423, 4114, 'Bhagalpur Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(58, 'Bhagalpur Division', 19638, 152, 59, 41, 0, 29, 24572, 659, 45150, 56558, 'Bhagalpur Division', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(59, 'State', 1072610, 6024, 5537, 29733, 71, 1070, 616205, 6573, 1737820, 2137500, 'State', 2015, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(60, 'Patna Special ', 629093, 1975, 0, 22398, 0, 0, 254143, 396, 908005, 1104660, 'Central Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(61, 'Patliputra ', 138105, 839, 4479, 0, 0, 0, 84571, 120, 228114, 262902, 'Central Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(62, 'Central Division', 767198, 2814, 4479, 22398, 0, 0, 338714, 516, 1136120, 1367560, 'Central Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(63, 'Patna West ', 20109, 160, 610, 0, 19, 250, 3608, 718, 25474, 29760, 'Patna Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(64, 'Patna Central', 21333, 208, 379, 0, 17, 37, 7546, 237, 29755, 28356, 'Patna Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(65, 'Patna North ', 19382, 143, 475, 0, 2, 46, 5329, 365, 25743, 34036, 'Patna Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(66, 'Gandhi Madan', 11035, 168, 191, 0, 16, 158, 6408, 57, 18033, 19184, 'Patna Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(67, 'Patna South', 25594, 112, 1, 0, 8, 11, 13969, 106, 39801, 38732, 'Patna Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(68, 'Kadam Kuan', 12267, 91, 0, 0, 0, 9, 3367, 30, 15764, 19156, 'Patna Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(69, 'Patna City East ', 14621, 161, 1, 0, 0, 0, 11025, 21, 25828, 28172, 'Patna Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(70, 'Patna City West ', 21206, 291, 18, 0, 0, 9, 6495, 53, 28072, 26131, 'Patna Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(71, 'Danapur ', 7934, 207, 17, 0, 0, 12, 5268, 280, 13717, 13170, 'Patna Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(72, 'Barh ', 2012, 52, 11, 0, 0, 1, 23414, 60, 25550, 20913, 'Patna Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(73, 'Shahabad ', 6664, 79, 13, 0, 0, 10, 2469, 148, 9382, 11425, 'Patna Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(74, 'Buxar ', 2724, 26, 17, 0, 0, 2, 445, 108, 3321, 3820, 'Patna Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(75, 'Biharshariff ', 6893, 31, 32, 0, 0, 40, 1614, 175, 8783, 10451, 'Patna Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(76, 'Patna Division', 171772, 1728, 1764, 0, 63, 584, 90955, 2357, 269223, 283306, 'Patna Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(77, 'Sasaram ', 11497, 124, 10, 0, 0, 12, 3788, 171, 15602, 19440, 'Gaya Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(78, 'Bhabhua ', 6228, 97, 4, 0, 0, 4, 855, 76, 7263, 10413, 'Gaya Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(79, 'Gaya ', 16495, 308, 59, 0, 0, 336, 5047, 284, 22530, 24288, 'Gaya Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(80, 'Jehanabad ', 3577, 0, 1, 0, 0, 0, 324, 101, 4004, 4396, 'Gaya Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(81, 'Nawada ', 4289, 12, 18, 4, 0, 2, 1312, 92, 5729, 5866, 'Gaya Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(82, 'Aurangabad ', 9620, 42, 23, 2, 0, 3, 23243, 120, 33052, 52153, 'Gaya Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(83, 'Gaya Division', 51706, 584, 114, 5, 0, 357, 34569, 845, 88181, 116556, 'Gaya Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(84, 'Saran ', 8410, 9, 21, 0, 0, 6, 4289, 269, 13004, 15428, 'Saran Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(85, 'Siwan ', 7173, 28, 10, 0, 0, 9, 1967, 123, 9310, 9633, 'Saran Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(86, 'Gopalganj ', 6113, 32, 12, 0, 0, 3, 1655, 97, 7912, 9443, 'Saran Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(87, 'Hajipur ', 21420, 318, 36, 0, 0, 1, 5303, 203, 27281, 29145, 'Saran Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(88, 'Saran Division', 43116, 388, 79, 0, 0, 19, 13213, 692, 57507, 63648, 'Saran Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(89, 'Muzaffarpur West', 17950, 118, 61, 3, 0, 15, 9860, 272, 28278, 42137, 'Tirhut Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(90, 'Muzaffarpur East', 7756, 109, 93, 1, 0, 9, 4710, 117, 12794, 14051, 'Tirhut Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(91, 'Sitamarhi ', 6730, 23, 54, 1, 0, 4, 1407, 148, 8368, 10299, 'Tirhut Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(92, 'Motihari ', 6820, 26, 38, 0, 0, 8, 5579, 159, 12631, 17447, 'Tirhut Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(93, 'Raxaul ', 1601, 35, 11, 0, 0, 0, 432, 14, 2092, 2543, 'Tirhut Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(94, 'Bettiah ', 5443, 36, 13, 23, 0, 6, 1388, 93, 7003, 8275, 'Tirhut Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(95, 'Bagaha ', 1697, 83, 8, 0, 0, 0, 57, 39, 1884, 2894, 'Tirhut Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(96, 'Tirhut Division', 47996, 429, 278, 27, 0, 43, 23434, 842, 73050, 97645, 'Tirhut Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(97, 'Darbhanga ', 12892, 27, 34, 0, 0, 15, 5226, 199, 18393, 20835, 'Darbhanga Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(98, 'Samastipur ', 10444, 184, 23, 12, 2, 1, 4224, 293, 15183, 20624, 'Darbhanga Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(99, 'Madhubani ', 4873, 5, 16, 0, 0, 4, 1141, 121, 6160, 6910, 'Darbhanga Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(100, 'Janjharpur ', 1628, 3, 0, 0, 0, 0, 181, 41, 1854, 1990, 'Darbhanga Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(101, 'Begusarai ', 6232, 93, 25, 0, 0, 5, 75545, 149, 82051, 65436, 'Darbhanga Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(102, 'Teghara ', 891, 88, 7, 0, 0, 2, 502, 21, 1511, 2080, 'Darbhanga Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(103, 'Darbhanga Division', 36960, 400, 105, 13, 3, 28, 86819, 825, 125153, 117876, 'Darbhanga Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(104, 'Saharsa ', 4543, 2, 19, 0, 0, 5, 5411, 98, 10078, 15816, 'Purnea Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(105, 'Madhepura ', 3871, 5, 5, 0, 0, 5, 797, 70, 4752, 5703, 'Purnea Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(106, 'Purnea ', 13344, 187, 44, 0, 0, 14, 7844, 161, 21594, 23741, 'Purnea Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(107, 'Katihar ', 6997, 157, 21, 37, 1, 14, 1664, 180, 9070, 12011, 'Purnea Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(108, 'Forbesganj ', 5308, 74, 19, 0, 0, 5, 1007, 95, 6507, 7231, 'Purnea Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(109, 'Kishanganj ', 4955, 75, 7, 0, 0, 2, 1473, 58, 6570, 6832, 'Purnea Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(110, 'Khagaria ', 4297, 18, 4, 0, 0, 4, 486, 106, 4915, 4463, 'Purnea Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(111, 'Supaul', 3815, 15, 13, 0, 0, 0, 129, 72, 4044, 3652, 'Purnea Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(112, 'Purnea Division', 47130, 532, 132, 37, 1, 49, 18812, 839, 67532, 79448, 'Purnea Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(113, 'Bhagalpur ', 14497, 64, 48, 0, 0, 24, 23835, 351, 38820, 54053, 'Bhagalpur Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(114, 'Lakhisarai ', 3384, 35, 5, 0, 0, 2, 505, 79, 4011, 4654, 'Bhagalpur Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(115, 'Munger ', 3920, 18, 1, 73, 0, 2, 7361, 245, 11621, 9778, 'Bhagalpur Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(116, 'Jamui ', 3121, 36, 2, 0, 0, 2, 691, 64, 3917, 5470, 'Bhagalpur Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(117, 'Bhagalpur Division', 24923, 154, 57, 73, 0, 30, 32392, 740, 58368, 73956, 'Bhagalpur Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
+(118, 'State', 1190800, 7029, 7009, 22553, 67, 1109, 638908, 7656, 1875130, 2200000, 'State', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tax_gsdp_ratios`
+--
+
+DROP TABLE IF EXISTS `tax_gsdp_ratios`;
+CREATE TABLE `tax_gsdp_ratios` (
+  `id` bigint(20) NOT NULL,
+  `State` varchar(255) DEFAULT NULL,
+  `Revenue_Receipts` float DEFAULT NULL,
+  `States_Own_Tax` float DEFAULT NULL,
+  `GSDP` float DEFAULT NULL,
+  `Ratio_of_SOT_and_RR` float DEFAULT NULL,
+  `Ratio_of_SOT_and_GSDP` float DEFAULT NULL,
+  `Ratio_of_Total_Revenue_and_GSDP` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tax_gsdp_ratios`
+--
+
+INSERT INTO `tax_gsdp_ratios` (`id`, `State`, `Revenue_Receipts`, `States_Own_Tax`, `GSDP`, `Ratio_of_SOT_and_RR`, `Ratio_of_SOT_and_GSDP`, `Ratio_of_Total_Revenue_and_GSDP`, `created_at`, `updated_at`) VALUES
+(1, 'Bihar', 96123, 25449, 381501, 26.5, 6.7, 25.2, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(2, 'Jharkhand', 40638, 11489, 231294, 28.3, 5, 17.6, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(3, 'West Bengal', 109732, 42519, 921769, 38.7, 4.6, 11.9, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(4, 'Odisha', 83071, 22527, 341887, 27.1, 6.6, 24.3, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(5, 'Uttar Pradesh', 227076, 81107, 1120840, 35.7, 7.2, 20.3, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(6, 'Madhya Pradesh', 105511, 40240, 543975, 38.1, 7.4, 19.4, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(7, 'Rajasthan', 100285, 42713, 672707, 42.6, 6.3, 14.9, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(8, 'Maharashtra', 185036, 126628, 2001220, 68.4, 6.3, 9.2, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(9, 'Gujarat', 97483, 62661, 1033790, 64.3, 6.1, 9.4, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(10, 'Punjab', 41517, 26689, 391543, 64.3, 6.8, 10.6, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(11, 'Haryana', 47557, 30933, 399646, 65, 7.7, 11.9, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(12, 'Karnataka', 118817, 75566, 1016910, 63.6, 7.4, 11.7, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(13, 'Andhra Pradesh', 88648, 39922, 609934, 45, 6.5, 14.5, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(14, 'Kerala', 69033, 39004, 556616, 56.5, 7, 12.4, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(15, 'Tamil Nadu', 129008, 80476, 1161960, 62.4, 6.9, 11.1, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(16, 'Himachal Pradesh', 23440, 6699, 112852, 28.6, 5.9, 20.8, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
+(17, 'Chhatisgarh', 46068, 17084, 260776, 37.1, 6.6, 17.7, '2018-08-20 10:07:22', '2018-08-20 10:07:22');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `test1s`
+--
+
+DROP TABLE IF EXISTS `test1s`;
+CREATE TABLE `test1s` (
+  `id` bigint(20) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testies`
+--
+
+DROP TABLE IF EXISTS `testies`;
+CREATE TABLE `testies` (
+  `id` bigint(20) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `number` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `testies`
+--
+
+INSERT INTO `testies` (`id`, `name`, `number`, `created_at`, `updated_at`) VALUES
+(1, 'dd', 2, '2018-08-13 05:21:52', '2018-08-13 05:21:52'),
+(2, 'ww', 0, '2018-08-13 05:21:52', '2018-08-13 05:21:52'),
+(3, 'dd', 2, '2018-08-13 05:22:43', '2018-08-13 05:22:43'),
+(4, 'ww', 0, '2018-08-13 05:22:43', '2018-08-13 05:22:43'),
+(5, 'dd', NULL, '2018-08-13 05:22:43', '2018-08-13 05:22:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tests`
+--
+
+DROP TABLE IF EXISTS `tests`;
+CREATE TABLE `tests` (
+  `id` bigint(20) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `number` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tourism1s`
+--
+
+DROP TABLE IF EXISTS `tourism1s`;
+CREATE TABLE `tourism1s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Budget_Estimate` float DEFAULT NULL,
+  `Expenditure` float DEFAULT NULL,
+  `Expenditure_as_percentage_of_Budget` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tourism1s`
+--
+
+INSERT INTO `tourism1s` (`id`, `Year`, `Budget_Estimate`, `Expenditure`, `Expenditure_as_percentage_of_Budget`, `created_at`, `updated_at`) VALUES
+(1, '2011-12', 34.45, 34.85, 101.2, '2018-10-12 08:06:59', '2018-10-12 08:06:59'),
+(2, '2012-13', 41.81, 103.69, 248, '2018-10-12 08:06:59', '2018-10-12 08:06:59'),
+(3, '2013-14', 105.85, 67.37, 63.6, '2018-10-12 08:06:59', '2018-10-12 08:06:59'),
+(4, '2014-15', 152.41, 84, 55.1, '2018-10-12 08:06:59', '2018-10-12 08:06:59'),
+(5, '2015-16', 57.01, 61.57, 108, '2018-10-12 08:06:59', '2018-10-12 08:06:59'),
+(6, '2016-17', 67.02, 143.05, 213.4, '2018-10-12 08:06:59', '2018-10-12 08:06:59');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tourism2s`
+--
+
+DROP TABLE IF EXISTS `tourism2s`;
+CREATE TABLE `tourism2s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Domestic_tourists` float DEFAULT NULL,
+  `Foreign_tourists` float DEFAULT NULL,
+  `Total_tourists` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tourism2s`
+--
+
+INSERT INTO `tourism2s` (`id`, `Year`, `Domestic_tourists`, `Foreign_tourists`, `Total_tourists`, `created_at`, `updated_at`) VALUES
+(1, '2011', 18396, 972, 19368, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
+(2, '2012', 21446, 1097, 22543, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
+(3, '2013', 21588, 765, 22353, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
+(4, '2014', 22544, 829, 23373, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
+(5, '2015', 28029, 923, 28952, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
+(6, '2016', 28516, 1011, 29527, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
+(7, '2017', 32414, 1083, 33497, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
+(8, 'CAGR', 9.5, 1.3, 9.1, '2018-10-12 09:17:39', '2018-10-12 09:17:39');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tourism3s`
+--
+
+DROP TABLE IF EXISTS `tourism3s`;
+CREATE TABLE `tourism3s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `2012` float DEFAULT NULL,
+  `2013` float DEFAULT NULL,
+  `2014` float DEFAULT NULL,
+  `2015` float DEFAULT NULL,
+  `2016` float DEFAULT NULL,
+  `2017` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tourism3s`
+--
+
+INSERT INTO `tourism3s` (`id`, `Sector`, `Indicator`, `2012`, `2013`, `2014`, `2015`, `2016`, `2017`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 'Domestic', 5091, 1459, 1033, 2823, 3973, 7530, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(2, 'Gaya', 'Domestic', 5063, 12544, 4547, 3701, 2890, 3640, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(3, 'Bodh Gaya', 'Domestic', 933, 399, 1506, 1752, 1694, 1758, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(4, 'Rajgir', 'Domestic', 3700, 1381, 1105, 4381, 1568, 1514, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(5, 'Nalanda', 'Domestic', 934, 502, 735, 927, 1041, 962, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(6, 'Raxual', 'Domestic', 81, 14, 44, 533, 737, 882, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(7, 'Munger', 'Domestic', 101, 81, 84, 106, 113, 121, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(8, 'Vaishali', 'Domestic', 53, 90, 116, 776, 918, 916, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(9, 'Muzaffarpur', 'Domestic', 362, 235, 442, 842, 994, 943, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(10, 'Bhagalpur', 'Domestic', 1997, 758, 878, 1036, 1193, 1068, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(11, 'Sonepur Fair', 'Domestic', 0, 2495, 4654, 4732, 3837, 3853, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(12, 'Pitrapaksha Mela, Gaya', 'Domestic', 0, 0, NULL, 145, 831, 3125, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(13, 'Shrawani Mela Sultanganj (Bhagalpur)', 'Domestic', 3112, 1624, 2564, 2864, 2873, 791, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(14, 'Other', 'Domestic', 19, 5, 4, 3411, 5698, 5314, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(15, 'Total', 'Domestic', 21446, 21587, 17712, 28029, 28362, 32414, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(16, 'Patna', 'Foreign', 16, 10, 8, 13, 23, 14, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(17, 'Gaya', 'Foreign', 269, 248, 203, 239, 289, 314, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(18, 'Bodh Gaya', 'Foreign', 208, 140, 196, 237, 242, 283, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(19, 'Rajgir', 'Foreign', 373, 162, 141, 167, 170, 169, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(20, 'Nalanda', 'Foreign', 190, 105, 104, 139, 145, 163, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(21, 'Raxual', 'Foreign', 3, 2, 23, 2, 1, 1, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(22, 'Munger', 'Foreign', 0, 2, 0, 0, 0, 0, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(23, 'Vaishali', 'Foreign', 38, 72, 41, 89, 100, 91, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(24, 'Muzaffarpur', 'Foreign', 0, 0, 0, 0, 0, 0, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(25, 'Bhagalpur', 'Foreign', 0, 0, 0, 0, 0, 0, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(26, 'Sonepur Fair', 'Foreign', 0, 0, 0, 0, 0, 0, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(27, 'Pitrapaksha Mela, Gaya', 'Foreign', 0, 0, NULL, 0, 4, 43, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(28, 'Shrawani Mela Sultanganj (Bhagalpur)', 'Foreign', 0, 26, 32, 34, 35, 3, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(29, 'Other', 'Foreign', 0, 0, 0, 4, 0, 0, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(30, 'Total', 'Foreign', 1097, 767, 748, 924, 1010, 1083, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
+(31, 'Grand Total', NULL, 22543, 22354, 18460, 28953, 29372, 33497, '2018-10-16 06:37:49', '2018-10-16 06:37:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transmission1s`
+--
+
+DROP TABLE IF EXISTS `transmission1s`;
+CREATE TABLE `transmission1s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2017-18` float DEFAULT NULL,
+  `2018-19` float DEFAULT NULL,
+  `2019-20` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `transmission1s`
+--
+
+INSERT INTO `transmission1s` (`id`, `Sector`, `2017-18`, `2018-19`, `2019-20`, `created_at`, `updated_at`) VALUES
+(1, 'Peak Demand (MW)', 4733, 4904, 5308, '2018-11-09 10:35:06', '2018-11-09 10:35:06'),
+(2, 'Transformation  Capacity needed to meet Peak Demand (MW)', 8874, 9195, 9953, '2018-11-09 10:35:06', '2018-11-09 10:35:06'),
+(3, 'Available Capacity MVA at 220/132 KV level', 9370, 11090, 14510, '2018-11-09 10:35:06', '2018-11-09 10:35:06'),
+(4, 'Available Capacity MVA at  132/33 KV level', 12540, 14450, 15290, '2018-11-09 10:35:06', '2018-11-09 10:35:06');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transmission2s`
+--
+
+DROP TABLE IF EXISTS `transmission2s`;
+CREATE TABLE `transmission2s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Nos_of_New_Grid_Sub_Stations` varchar(255) DEFAULT NULL,
+  `New_Transmission_Lines_Circuit_km` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `transmission2s`
+--
+
+INSERT INTO `transmission2s` (`id`, `Year`, `Nos_of_New_Grid_Sub_Stations`, `New_Transmission_Lines_Circuit_km`, `created_at`, `updated_at`) VALUES
+(1, '2017-18', '§  400/220 kv-0 No.', '§  400 kv-0', '2018-11-12 10:05:34', '2018-11-12 10:05:34'),
+(2, '2017-18', '§  220/132/33kv-06 Nos.', '§  220 kv-240', '2018-11-12 10:05:34', '2018-11-12 10:05:34'),
+(3, '2017-18', '§  132/33 kv 07 Nos. ', '§  132 kv-330 ', '2018-11-12 10:05:34', '2018-11-12 10:05:34'),
+(4, '2018-19', '§  400/220/132/33 kv-00 Nos.', '§  400 kv-00', '2018-11-12 10:05:34', '2018-11-12 10:05:34'),
+(5, '2018-19', '§  400/220/132 kv-1 No.', '§  220 kv-132', '2018-11-12 10:05:34', '2018-11-12 10:05:34'),
+(6, '2018-19', '§  220/132/33 kv-3 Nos.', '§  132 kv-405 ', '2018-11-12 10:05:34', '2018-11-12 10:05:34'),
+(7, '2018-19', '§  132/33 kv - 16 Nos.', NULL, '2018-11-12 10:05:34', '2018-11-12 10:05:34'),
+(8, '2019-20', '§  400/220/132kv-04 Nos.', '§  400 kv-390', '2018-11-12 10:05:34', '2018-11-12 10:05:34'),
+(9, '2019-20', '§  400/220/132/33kv – 02 Nos.', '§  220 kv-500', '2018-11-12 10:05:34', '2018-11-12 10:05:34'),
+(10, '2019-20', '§  220/132/33 kv-3 Nos.', '§  132 kv-231', '2018-11-12 10:05:34', '2018-11-12 10:05:34'),
+(11, '2019-20', '§  132/33 kv - 5 Nos.', NULL, '2018-11-12 10:05:34', '2018-11-12 10:05:34');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `agricultural_credit1s`
+--
+ALTER TABLE `agricultural_credit1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agricultural_credit2s`
+--
+ALTER TABLE `agricultural_credit2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agricultural_inputs1_part1s`
+--
+ALTER TABLE `agricultural_inputs1_part1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agricultural_inputs1_part2s`
+--
+ALTER TABLE `agricultural_inputs1_part2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agricultural_inputs2s`
+--
+ALTER TABLE `agricultural_inputs2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agricultural_inputs3s`
+--
+ALTER TABLE `agricultural_inputs3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agricultural_inputs4s`
+--
+ALTER TABLE `agricultural_inputs4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agricultural_inputs5s`
+--
+ALTER TABLE `agricultural_inputs5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agricultural_inputs6s`
+--
+ALTER TABLE `agricultural_inputs6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agricultural_inputs7s`
+--
+ALTER TABLE `agricultural_inputs7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agricultural_inputs8s`
+--
+ALTER TABLE `agricultural_inputs8s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agro_based_industries1s`
+--
+ALTER TABLE `agro_based_industries1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agro_based_industries2s`
+--
+ALTER TABLE `agro_based_industries2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agro_based_industries3s`
+--
+ALTER TABLE `agro_based_industries3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agro_based_industries4s`
+--
+ALTER TABLE `agro_based_industries4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agro_based_industries5s`
+--
+ALTER TABLE `agro_based_industries5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `agro_based_industries6s`
+--
+ALTER TABLE `agro_based_industries6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `airways`
+--
+ALTER TABLE `airways`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `animal_husbandry1s`
+--
+ALTER TABLE `animal_husbandry1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `animal_husbandry2s`
+--
+ALTER TABLE `animal_husbandry2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `animal_husbandry3s`
+--
+ALTER TABLE `animal_husbandry3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `animal_husbandry4s`
+--
+ALTER TABLE `animal_husbandry4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `animal_husbandry5s`
+--
+ALTER TABLE `animal_husbandry5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `animal_husbandry6s`
+--
+ALTER TABLE `animal_husbandry6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `annual_rainfalls`
+--
+ALTER TABLE `annual_rainfalls`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `annual_state_domestic_product3s`
+--
+ALTER TABLE `annual_state_domestic_product3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `annual_survey1s`
+--
+ALTER TABLE `annual_survey1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `annual_survey2s`
+--
+ALTER TABLE `annual_survey2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `annual_survey3s`
+--
+ALTER TABLE `annual_survey3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `annual_survey4s`
+--
+ALTER TABLE `annual_survey4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `annual_survey5s`
+--
+ALTER TABLE `annual_survey5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `annual_survey6s`
+--
+ALTER TABLE `annual_survey6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `annual_survey7s`
+--
+ALTER TABLE `annual_survey7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ar_internal_metadata`
+--
+ALTER TABLE `ar_internal_metadata`
+  ADD PRIMARY KEY (`key`);
+
+--
+-- Indexes for table `availablility_of_power1s`
+--
+ALTER TABLE `availablility_of_power1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `availablility_of_power2s`
+--
+ALTER TABLE `availablility_of_power2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bihar_industrial_investment1s`
+--
+ALTER TABLE `bihar_industrial_investment1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bihar_industrial_investment2s`
+--
+ALTER TABLE `bihar_industrial_investment2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bihar_renewable_energies`
+--
+ALTER TABLE `bihar_renewable_energies`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bihar_start_up_policies`
+--
+ALTER TABLE `bihar_start_up_policies`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bridge_sector1s`
+--
+ALTER TABLE `bridge_sector1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bridge_sector2s`
+--
+ALTER TABLE `bridge_sector2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `comparison_of_budget1s`
+--
+ALTER TABLE `comparison_of_budget1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `comparison_of_budgets`
+--
+ALTER TABLE `comparison_of_budgets`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cropping_patterns`
+--
+ALTER TABLE `cropping_patterns`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `debt_management1s`
+--
+ALTER TABLE `debt_management1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `debt_management2s`
+--
+ALTER TABLE `debt_management2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `debt_management3s`
+--
+ALTER TABLE `debt_management3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `debt_management4s`
+--
+ALTER TABLE `debt_management4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `deficit_management1s`
+--
+ALTER TABLE `deficit_management1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `deficit_management2s`
+--
+ALTER TABLE `deficit_management2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `deficit_management3s`
+--
+ALTER TABLE `deficit_management3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `deficit_management4s`
+--
+ALTER TABLE `deficit_management4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `demographic_profile1s`
+--
+ALTER TABLE `demographic_profile1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `demographic_profile2s`
+--
+ALTER TABLE `demographic_profile2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `disaster_management1s`
+--
+ALTER TABLE `disaster_management1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `distributions`
+--
+ALTER TABLE `distributions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `distribution_of_homestead_land1s`
+--
+ALTER TABLE `distribution_of_homestead_land1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `distribution_of_homestead_land2s`
+--
+ALTER TABLE `distribution_of_homestead_land2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `expenditure_management1s`
+--
+ALTER TABLE `expenditure_management1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `expenditure_management2s`
+--
+ALTER TABLE `expenditure_management2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `expenditure_management3s`
+--
+ALTER TABLE `expenditure_management3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `expenditure_managements`
+--
+ALTER TABLE `expenditure_managements`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `expenditure_on_salary_and_pensions`
+--
+ALTER TABLE `expenditure_on_salary_and_pensions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `financial_position1s`
+--
+ALTER TABLE `financial_position1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `fiscal_performance1s`
+--
+ALTER TABLE `fiscal_performance1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `fiscal_performance2s`
+--
+ALTER TABLE `fiscal_performance2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `generation1s`
+--
+ALTER TABLE `generation1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `generation2s`
+--
+ALTER TABLE `generation2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health1s`
+--
+ALTER TABLE `health1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health2s`
+--
+ALTER TABLE `health2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health3s`
+--
+ALTER TABLE `health3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health4s`
+--
+ALTER TABLE `health4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health5s`
+--
+ALTER TABLE `health5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health6s`
+--
+ALTER TABLE `health6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health7s`
+--
+ALTER TABLE `health7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health8s`
+--
+ALTER TABLE `health8s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health9s`
+--
+ALTER TABLE `health9s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health10s`
+--
+ALTER TABLE `health10s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health11s`
+--
+ALTER TABLE `health11s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health12s`
+--
+ALTER TABLE `health12s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health13s`
+--
+ALTER TABLE `health13s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health14s`
+--
+ALTER TABLE `health14s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health15s`
+--
+ALTER TABLE `health15s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health16s`
+--
+ALTER TABLE `health16s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health17s`
+--
+ALTER TABLE `health17s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health18s`
+--
+ALTER TABLE `health18s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health19s`
+--
+ALTER TABLE `health19s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health20s`
+--
+ALTER TABLE `health20s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health21s`
+--
+ALTER TABLE `health21s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `health22s`
+--
+ALTER TABLE `health22s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `hhs`
+--
+ALTER TABLE `hhs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ict2s`
+--
+ALTER TABLE `ict2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ict3s`
+--
+ALTER TABLE `ict3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ict4s`
+--
+ALTER TABLE `ict4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ict5s`
+--
+ALTER TABLE `ict5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `inflation_rates`
+--
+ALTER TABLE `inflation_rates`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `institutional_structure_of_power_sectors`
+--
+ALTER TABLE `institutional_structure_of_power_sectors`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `irrigation1s`
+--
+ALTER TABLE `irrigation1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `irrigation2s`
+--
+ALTER TABLE `irrigation2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `irrigation3s`
+--
+ALTER TABLE `irrigation3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `irrigation4s`
+--
+ALTER TABLE `irrigation4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `irrigation5s`
+--
+ALTER TABLE `irrigation5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `irrigation6s`
+--
+ALTER TABLE `irrigation6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `irrigation7s`
+--
+ALTER TABLE `irrigation7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `land1s`
+--
+ALTER TABLE `land1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `lands`
+--
+ALTER TABLE `lands`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mininngs`
+--
+ALTER TABLE `mininngs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `newrices`
+--
+ALTER TABLE `newrices`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `non_agro_based_industries1s`
+--
+ALTER TABLE `non_agro_based_industries1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `non_agro_based_industries2s`
+--
+ALTER TABLE `non_agro_based_industries2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `non_agro_based_industries3s`
+--
+ALTER TABLE `non_agro_based_industries3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `non_agro_based_industries4s`
+--
+ALTER TABLE `non_agro_based_industries4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `non_agro_based_industries5s`
+--
+ALTER TABLE `non_agro_based_industries5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `operational_and_financial_status1s`
+--
+ALTER TABLE `operational_and_financial_status1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `operational_and_financial_status2s`
+--
+ALTER TABLE `operational_and_financial_status2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `panchayati_raj1s`
+--
+ALTER TABLE `panchayati_raj1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `panchayati_raj2s`
+--
+ALTER TABLE `panchayati_raj2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `poverty1s`
+--
+ALTER TABLE `poverty1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `poverty2s`
+--
+ALTER TABLE `poverty2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `production_and_productivity_of_rices`
+--
+ALTER TABLE `production_and_productivity_of_rices`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `production_productivity1s`
+--
+ALTER TABLE `production_productivity1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `production_productivity2s`
+--
+ALTER TABLE `production_productivity2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `production_productivity4s`
+--
+ALTER TABLE `production_productivity4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `production_productivity5s`
+--
+ALTER TABLE `production_productivity5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `production_productivity7s`
+--
+ALTER TABLE `production_productivity7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `production_productivity8s`
+--
+ALTER TABLE `production_productivity8s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `production_productivity9s`
+--
+ALTER TABLE `production_productivity9s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `production_productivity10s`
+--
+ALTER TABLE `production_productivity10s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `production_productivity11s`
+--
+ALTER TABLE `production_productivity11s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `production_productivity12s`
+--
+ALTER TABLE `production_productivity12s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `programmes_for_electrification1s`
+--
+ALTER TABLE `programmes_for_electrification1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `programmes_for_electrification2s`
+--
+ALTER TABLE `programmes_for_electrification2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `projection_of_power_requirement1s`
+--
+ALTER TABLE `projection_of_power_requirement1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `projection_of_power_requirement2s`
+--
+ALTER TABLE `projection_of_power_requirement2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `projection_of_power_requirement3s`
+--
+ALTER TABLE `projection_of_power_requirement3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `projection_of_power_requirement4s`
+--
+ALTER TABLE `projection_of_power_requirement4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `projection_of_power_requirement5s`
+--
+ALTER TABLE `projection_of_power_requirement5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `qualityofexpenditures`
+--
+ALTER TABLE `qualityofexpenditures`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `railways`
+--
+ALTER TABLE `railways`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rainfall1s`
+--
+ALTER TABLE `rainfall1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rainfall2s`
+--
+ALTER TABLE `rainfall2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rainfalls`
+--
+ALTER TABLE `rainfalls`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `regional_disparities`
+--
+ALTER TABLE `regional_disparities`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management1s`
+--
+ALTER TABLE `resource_management1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management2s`
+--
+ALTER TABLE `resource_management2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management3s`
+--
+ALTER TABLE `resource_management3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management4s`
+--
+ALTER TABLE `resource_management4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management5s`
+--
+ALTER TABLE `resource_management5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management6s`
+--
+ALTER TABLE `resource_management6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management7s`
+--
+ALTER TABLE `resource_management7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management8s`
+--
+ALTER TABLE `resource_management8s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management9s`
+--
+ALTER TABLE `resource_management9s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management10s`
+--
+ALTER TABLE `resource_management10s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management11s`
+--
+ALTER TABLE `resource_management11s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management12s`
+--
+ALTER TABLE `resource_management12s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management13s`
+--
+ALTER TABLE `resource_management13s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `resource_management14s`
+--
+ALTER TABLE `resource_management14s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `revenue_account1s`
+--
+ALTER TABLE `revenue_account1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `revenue_account2s`
+--
+ALTER TABLE `revenue_account2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `revenue_account3s`
+--
+ALTER TABLE `revenue_account3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `revenue_account4s`
+--
+ALTER TABLE `revenue_account4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `revenue_account5s`
+--
+ALTER TABLE `revenue_account5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `revenue_expenditures`
+--
+ALTER TABLE `revenue_expenditures`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads1s`
+--
+ALTER TABLE `roads1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads2s`
+--
+ALTER TABLE `roads2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads3s`
+--
+ALTER TABLE `roads3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads4s`
+--
+ALTER TABLE `roads4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads5s`
+--
+ALTER TABLE `roads5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads6s`
+--
+ALTER TABLE `roads6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads7s`
+--
+ALTER TABLE `roads7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads8s`
+--
+ALTER TABLE `roads8s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads9s`
+--
+ALTER TABLE `roads9s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roads10s`
+--
+ALTER TABLE `roads10s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `road_transport1_part1s`
+--
+ALTER TABLE `road_transport1_part1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `road_transport1_part2s`
+--
+ALTER TABLE `road_transport1_part2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `road_transport2s`
+--
+ALTER TABLE `road_transport2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `road_transport3s`
+--
+ALTER TABLE `road_transport3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `road_transport4s`
+--
+ALTER TABLE `road_transport4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rural_development_programmes1s`
+--
+ALTER TABLE `rural_development_programmes1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rural_development_programmes2s`
+--
+ALTER TABLE `rural_development_programmes2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rural_development_programmes3s`
+--
+ALTER TABLE `rural_development_programmes3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rural_development_programmes4s`
+--
+ALTER TABLE `rural_development_programmes4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rural_development_programmes5s`
+--
+ALTER TABLE `rural_development_programmes5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rural_development_programmes6s`
+--
+ALTER TABLE `rural_development_programmes6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rural_development_programmes7s`
+--
+ALTER TABLE `rural_development_programmes7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rural_development_programmes8s`
+--
+ALTER TABLE `rural_development_programmes8s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rural_development_programmes9s`
+--
+ALTER TABLE `rural_development_programmes9s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rural_development_programmes11s`
+--
+ALTER TABLE `rural_development_programmes11s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `schema_migrations`
+--
+ALTER TABLE `schema_migrations`
+  ADD PRIMARY KEY (`version`);
+
+--
+-- Indexes for table `sectoral_expenditure1s`
+--
+ALTER TABLE `sectoral_expenditure1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sectoral_expenditure2s`
+--
+ALTER TABLE `sectoral_expenditure2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sectoral_expenditures`
+--
+ALTER TABLE `sectoral_expenditures`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sixth_economic_census1s`
+--
+ALTER TABLE `sixth_economic_census1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sixth_economic_census2s`
+--
+ALTER TABLE `sixth_economic_census2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `state_domestic_product1s`
+--
+ALTER TABLE `state_domestic_product1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `state_domestic_product2s`
+--
+ALTER TABLE `state_domestic_product2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `state_domestic_product4s`
+--
+ALTER TABLE `state_domestic_product4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `state_domestic_product5s`
+--
+ALTER TABLE `state_domestic_product5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `state_domestic_product6s`
+--
+ALTER TABLE `state_domestic_product6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `state_domestic_product7s`
+--
+ALTER TABLE `state_domestic_product7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `state_domestic_product8s`
+--
+ALTER TABLE `state_domestic_product8s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `state_domestic_product9s`
+--
+ALTER TABLE `state_domestic_product9s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `state_domestic_product10s`
+--
+ALTER TABLE `state_domestic_product10s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `state_domestic_product11s`
+--
+ALTER TABLE `state_domestic_product11s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `state_public_sector1s`
+--
+ALTER TABLE `state_public_sector1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `state_public_sector2s`
+--
+ALTER TABLE `state_public_sector2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `state_public_sector3s`
+--
+ALTER TABLE `state_public_sector3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `support_institutions1s`
+--
+ALTER TABLE `support_institutions1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `support_institutions2s`
+--
+ALTER TABLE `support_institutions2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `support_institutions3s`
+--
+ALTER TABLE `support_institutions3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `support_institutions4s`
+--
+ALTER TABLE `support_institutions4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tax_department1s`
+--
+ALTER TABLE `tax_department1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tax_department2s`
+--
+ALTER TABLE `tax_department2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tax_department3s`
+--
+ALTER TABLE `tax_department3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tax_department4s`
+--
+ALTER TABLE `tax_department4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tax_department5s`
+--
+ALTER TABLE `tax_department5s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tax_department6s`
+--
+ALTER TABLE `tax_department6s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tax_department7s`
+--
+ALTER TABLE `tax_department7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tax_gsdp_ratios`
+--
+ALTER TABLE `tax_gsdp_ratios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `test1s`
+--
+ALTER TABLE `test1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `testies`
+--
+ALTER TABLE `testies`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tests`
+--
+ALTER TABLE `tests`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tourism1s`
+--
+ALTER TABLE `tourism1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tourism2s`
+--
+ALTER TABLE `tourism2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tourism3s`
+--
+ALTER TABLE `tourism3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `transmission1s`
+--
+ALTER TABLE `transmission1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `transmission2s`
+--
+ALTER TABLE `transmission2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `agricultural_credit1s`
+--
+ALTER TABLE `agricultural_credit1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `agro_based_industries6s`
+--
+ALTER TABLE `agro_based_industries6s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `airways`
+--
+ALTER TABLE `airways`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `annual_survey3s`
+--
+ALTER TABLE `annual_survey3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `annual_survey7s`
+--
+ALTER TABLE `annual_survey7s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+
+--
+-- AUTO_INCREMENT for table `availablility_of_power1s`
+--
+ALTER TABLE `availablility_of_power1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `availablility_of_power2s`
+--
+ALTER TABLE `availablility_of_power2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
+--
+-- AUTO_INCREMENT for table `bihar_renewable_energies`
+--
+ALTER TABLE `bihar_renewable_energies`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `bridge_sector1s`
+--
+ALTER TABLE `bridge_sector1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `bridge_sector2s`
+--
+ALTER TABLE `bridge_sector2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `disaster_management1s`
+--
+ALTER TABLE `disaster_management1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `distributions`
+--
+ALTER TABLE `distributions`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `distribution_of_homestead_land1s`
+--
+ALTER TABLE `distribution_of_homestead_land1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `distribution_of_homestead_land2s`
+--
+ALTER TABLE `distribution_of_homestead_land2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `generation1s`
+--
+ALTER TABLE `generation1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `generation2s`
+--
+ALTER TABLE `generation2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `ict2s`
+--
+ALTER TABLE `ict2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+
+--
+-- AUTO_INCREMENT for table `ict3s`
+--
+ALTER TABLE `ict3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `ict4s`
+--
+ALTER TABLE `ict4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `ict5s`
+--
+ALTER TABLE `ict5s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `institutional_structure_of_power_sectors`
+--
+ALTER TABLE `institutional_structure_of_power_sectors`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `irrigation7s`
+--
+ALTER TABLE `irrigation7s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `non_agro_based_industries1s`
+--
+ALTER TABLE `non_agro_based_industries1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `non_agro_based_industries2s`
+--
+ALTER TABLE `non_agro_based_industries2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `non_agro_based_industries4s`
+--
+ALTER TABLE `non_agro_based_industries4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `operational_and_financial_status1s`
+--
+ALTER TABLE `operational_and_financial_status1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- AUTO_INCREMENT for table `operational_and_financial_status2s`
+--
+ALTER TABLE `operational_and_financial_status2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `panchayati_raj1s`
+--
+ALTER TABLE `panchayati_raj1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `panchayati_raj2s`
+--
+ALTER TABLE `panchayati_raj2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT for table `poverty1s`
+--
+ALTER TABLE `poverty1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `poverty2s`
+--
+ALTER TABLE `poverty2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `programmes_for_electrification1s`
+--
+ALTER TABLE `programmes_for_electrification1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `programmes_for_electrification2s`
+--
+ALTER TABLE `programmes_for_electrification2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `projection_of_power_requirement1s`
+--
+ALTER TABLE `projection_of_power_requirement1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `projection_of_power_requirement2s`
+--
+ALTER TABLE `projection_of_power_requirement2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `projection_of_power_requirement3s`
+--
+ALTER TABLE `projection_of_power_requirement3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `projection_of_power_requirement4s`
+--
+ALTER TABLE `projection_of_power_requirement4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `projection_of_power_requirement5s`
+--
+ALTER TABLE `projection_of_power_requirement5s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `railways`
+--
+ALTER TABLE `railways`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `roads1s`
+--
+ALTER TABLE `roads1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `roads2s`
+--
+ALTER TABLE `roads2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `roads3s`
+--
+ALTER TABLE `roads3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `roads4s`
+--
+ALTER TABLE `roads4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `roads5s`
+--
+ALTER TABLE `roads5s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `roads6s`
+--
+ALTER TABLE `roads6s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `roads7s`
+--
+ALTER TABLE `roads7s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `roads8s`
+--
+ALTER TABLE `roads8s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `roads9s`
+--
+ALTER TABLE `roads9s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `roads10s`
+--
+ALTER TABLE `roads10s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
+--
+-- AUTO_INCREMENT for table `road_transport1_part1s`
+--
+ALTER TABLE `road_transport1_part1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `road_transport1_part2s`
+--
+ALTER TABLE `road_transport1_part2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `road_transport2s`
+--
+ALTER TABLE `road_transport2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `road_transport3s`
+--
+ALTER TABLE `road_transport3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `road_transport4s`
+--
+ALTER TABLE `road_transport4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `rural_development_programmes1s`
+--
+ALTER TABLE `rural_development_programmes1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `rural_development_programmes2s`
+--
+ALTER TABLE `rural_development_programmes2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `rural_development_programmes3s`
+--
+ALTER TABLE `rural_development_programmes3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `rural_development_programmes4s`
+--
+ALTER TABLE `rural_development_programmes4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `rural_development_programmes5s`
+--
+ALTER TABLE `rural_development_programmes5s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+
+--
+-- AUTO_INCREMENT for table `rural_development_programmes6s`
+--
+ALTER TABLE `rural_development_programmes6s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `rural_development_programmes7s`
+--
+ALTER TABLE `rural_development_programmes7s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=235;
+
+--
+-- AUTO_INCREMENT for table `rural_development_programmes8s`
+--
+ALTER TABLE `rural_development_programmes8s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
+
+--
+-- AUTO_INCREMENT for table `rural_development_programmes9s`
+--
+ALTER TABLE `rural_development_programmes9s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `rural_development_programmes11s`
+--
+ALTER TABLE `rural_development_programmes11s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `state_domestic_product9s`
+--
+ALTER TABLE `state_domestic_product9s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=196;
+
+--
+-- AUTO_INCREMENT for table `support_institutions1s`
+--
+ALTER TABLE `support_institutions1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `support_institutions3s`
+--
+ALTER TABLE `support_institutions3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `support_institutions4s`
+--
+ALTER TABLE `support_institutions4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tourism1s`
+--
+ALTER TABLE `tourism1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `tourism2s`
+--
+ALTER TABLE `tourism2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `tourism3s`
+--
+ALTER TABLE `tourism3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT for table `transmission1s`
+--
+ALTER TABLE `transmission1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `transmission2s`
+--
+ALTER TABLE `transmission2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
