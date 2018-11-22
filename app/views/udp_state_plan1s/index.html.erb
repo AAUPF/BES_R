@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Udp State Plan1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Indicators</th>
+      <th>No of households</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @udp_state_plan1s.each do |udp_state_plan1| %>
+      <tr>
+        <td><%= udp_state_plan1.Indicators %></td>
+        <td><%= udp_state_plan1.No_of_households %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Udp State Plan1', new_udp_state_plan1_path %>

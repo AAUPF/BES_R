@@ -1,0 +1,1 @@
+json.partial! "expenditure_on_urban_developments/expenditure_on_urban_development", expenditure_on_urban_development: @expenditure_on_urban_development

@@ -1,0 +1,37 @@
+<%= form_with(model: municipal_finance, local: true) do |form| %>
+  <% if municipal_finance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(municipal_finance.errors.count, "error") %> prohibited this municipal_finance from being saved:</h2>
+
+      <ul>
+      <% municipal_finance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Indicators %>
+    <%= form.text_field :Indicators %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2014-15 %>
+    <%= form.text_field :2014-15 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2015-16 %>
+    <%= form.text_field :2015-16 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Municipal Finances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Indicators</th>
+      <th>2014-15</th>
+      <th>2015-16</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @municipal_finances.each do |municipal_finance| %>
+      <tr>
+        <td><%= municipal_finance.Indicators %></td>
+        <td><%= municipal_finance.2014-15 %></td>
+        <td><%= municipal_finance.2015-16 %></td>
+        <td><%= municipal_finance.Indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Municipal Finance', new_municipal_finance_path %>

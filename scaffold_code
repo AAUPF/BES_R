@@ -1,1 +1,1 @@
-rails g scaffold ProgrammesForElectrification1 Project_Component_under_R_APDRP:string Outlay:float Expenditure_incurred:float
+rails g scaffold Municipal_Finances Indicators:string	2014-15:float	2015-16:float	Indicator:string

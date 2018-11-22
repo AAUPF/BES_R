@@ -1,0 +1,37 @@
+<%= form_with(model: udp_jointly_funded5, local: true) do |form| %>
+  <% if udp_jointly_funded5.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(udp_jointly_funded5.errors.count, "error") %> prohibited this udp_jointly_funded5 from being saved:</h2>
+
+      <ul>
+      <% udp_jointly_funded5.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Program_or_Monitoring_Parameter %>
+    <%= form.text_field :Program_or_Monitoring_Parameter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Annual_Target %>
+    <%= form.text_field :Annual_Target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Progress %>
+    <%= form.text_field :Progress %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

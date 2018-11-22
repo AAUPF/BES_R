@@ -1,4 +1,64 @@
 Rails.application.routes.draw do
+  resources :municipal_finances do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :udp_jointly_funded12s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :udp_jointly_funded11s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :udp_jointly_funded9s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :udp_jointly_funded5s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :udp_jointly_funded7s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :udp_state_plan4s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :udp_state_plan1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :expenditure_on_urban_developments do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :level_of_urbanisation6s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :level_of_urbanisation1s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
+  resources :rural_development_programmes10s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
 resources :rural_development_programmes6s do 
                 collection { post :import }
                 collection { get :dropdown }

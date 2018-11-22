@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Udp Jointly Funded7s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shelters sanctioned planned</th>
+      <th>Operational</th>
+      <th>Already constructed refurbished and under process</th>
+      <th>Under process of construction refurbishment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @udp_jointly_funded7s.each do |udp_jointly_funded7| %>
+      <tr>
+        <td><%= udp_jointly_funded7.Shelters_Sanctioned_Planned %></td>
+        <td><%= udp_jointly_funded7.Operational %></td>
+        <td><%= udp_jointly_funded7.Already_constructed_refurbished_and_under_process %></td>
+        <td><%= udp_jointly_funded7.Under_process_of_construction_refurbishment %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Udp Jointly Funded7', new_udp_jointly_funded7_path %>

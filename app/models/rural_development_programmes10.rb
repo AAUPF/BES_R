@@ -1,0 +1,3 @@
+class RuralDevelopmentProgrammes10 < ApplicationRecord
+extend   Districtcomparedistrictwihtoutyeartwovariable
+end

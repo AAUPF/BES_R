@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name_of_the_Project: MyString
+  Activities: MyString
+  Approved_Project_Cost: 1.5
+  Amount_released: 1.5
+  Status: MyString
+
+two:
+  Name_of_the_Project: MyString
+  Activities: MyString
+  Approved_Project_Cost: 1.5
+  Amount_released: 1.5
+  Status: MyString

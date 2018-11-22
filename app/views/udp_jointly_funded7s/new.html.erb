@@ -1,0 +1,6 @@
+<h3>Import a CSV File</h3>
+  <%= form_tag import_udp_jointly_funded7s_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+     <% end %>
+<%= link_to 'Back', udp_jointly_funded7s_path %>

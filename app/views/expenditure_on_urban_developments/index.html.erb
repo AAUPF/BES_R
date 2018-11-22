@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Expenditure On Urban Developments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Housing</th>
+      <th>Urban development</th>
+      <th>Total</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expenditure_on_urban_developments.each do |expenditure_on_urban_development| %>
+      <tr>
+        <td><%= expenditure_on_urban_development.Year %></td>
+        <td><%= expenditure_on_urban_development.Housing %></td>
+        <td><%= expenditure_on_urban_development.Urban_Development %></td>
+        <td><%= expenditure_on_urban_development.Total %></td>
+        <td><%= expenditure_on_urban_development.Indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Expenditure On Urban Development', new_expenditure_on_urban_development_path %>

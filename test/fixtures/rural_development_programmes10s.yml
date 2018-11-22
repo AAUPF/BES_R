@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Allotment: 1.5
+  Lifting: 1.5
+  Lifting_Percentage: 1.5
+  Crops: MyString
+
+two:
+  Districts: MyString
+  Allotment: 1.5
+  Lifting: 1.5
+  Lifting_Percentage: 1.5
+  Crops: MyString

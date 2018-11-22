@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Level Of Urbanisation1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>India</th>
+      <th>Bihar</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @level_of_urbanisation1s.each do |level_of_urbanisation1| %>
+      <tr>
+        <td><%= level_of_urbanisation1.Year %></td>
+        <td><%= level_of_urbanisation1.India %></td>
+        <td><%= level_of_urbanisation1.Bihar %></td>
+        <td><%= level_of_urbanisation1.Indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Level Of Urbanisation1', new_level_of_urbanisation1_path %>

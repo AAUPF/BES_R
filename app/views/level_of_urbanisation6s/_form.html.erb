@@ -1,0 +1,47 @@
+<%= form_with(model: level_of_urbanisation6, local: true) do |form| %>
+  <% if level_of_urbanisation6.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(level_of_urbanisation6.errors.count, "error") %> prohibited this level_of_urbanisation6 from being saved:</h2>
+
+      <ul>
+      <% level_of_urbanisation6.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Municipal_Corporations %>
+    <%= form.text_field :Municipal_Corporations %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Municipal_Councils %>
+    <%= form.text_field :Municipal_Councils %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Nagar_Panchayats %>
+    <%= form.text_field :Nagar_Panchayats %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

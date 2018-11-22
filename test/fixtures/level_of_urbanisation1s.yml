@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  India: 1.5
+  Bihar: 1.5
+  Indicator: MyString
+
+two:
+  Year: MyString
+  India: 1.5
+  Bihar: 1.5
+  Indicator: MyString

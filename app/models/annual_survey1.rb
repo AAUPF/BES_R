@@ -1,10 +1,6 @@
 
-      class AnnualSurvey1 < ApplicationRecord
-  
-            extend Newenterprisesector
+class AnnualSurvey1 < ApplicationRecord
+      extend Newenterprisesector
+end
 
-      
-      
-      end
-          
       

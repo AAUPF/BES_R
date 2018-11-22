@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Indicators:</strong>
+  <%= @municipal_finance.Indicators %>
+</p>
+
+<p>
+  <strong>2014-15:</strong>
+  <%= @municipal_finance.2014-15 %>
+</p>
+
+<p>
+  <strong>2015-16:</strong>
+  <%= @municipal_finance.2015-16 %>
+</p>
+
+<p>
+  <strong>Indicator:</strong>
+  <%= @municipal_finance.Indicator %>
+</p>
+
+<%= link_to 'Edit', edit_municipal_finance_path(@municipal_finance) %> |
+<%= link_to 'Back', municipal_finances_path %>

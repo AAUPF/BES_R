@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Municipal_Corporations: 1.5
+  Municipal_Councils: 1.5
+  Nagar_Panchayats: 1.5
+  Total: 1.5
+  Indicator: MyString
+
+two:
+  Year: MyString
+  Municipal_Corporations: 1.5
+  Municipal_Councils: 1.5
+  Nagar_Panchayats: 1.5
+  Total: 1.5
+  Indicator: MyString
