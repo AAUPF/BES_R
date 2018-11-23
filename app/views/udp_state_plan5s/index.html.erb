@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Udp State Plan5s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Total number of urban households</th>
+      <th>Total number of urban wards</th>
+      <th>Number of households to be covered</th>
+      <th>Number of household covered</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @udp_state_plan5s.each do |udp_state_plan5| %>
+      <tr>
+        <td><%= udp_state_plan5.Districts %></td>
+        <td><%= udp_state_plan5.Total_Number_of_Urban_Households %></td>
+        <td><%= udp_state_plan5.Total_Number_of_Urban_Wards %></td>
+        <td><%= udp_state_plan5.Number_of_Households_to_be_covered %></td>
+        <td><%= udp_state_plan5.Number_of_Household_covered %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Udp State Plan5', new_udp_state_plan5_path %>

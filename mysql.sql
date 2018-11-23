@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 22, 2018 at 08:33 AM
+-- Host: localhost:3306
+-- Generation Time: Nov 23, 2018 at 05:22 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `newdata`
+-- Database: `bihar_survey`
 --
 
 -- --------------------------------------------------------
@@ -6866,6 +6866,164 @@ INSERT INTO `level_of_urbanisation1s` (`id`, `Year`, `India`, `Bihar`, `Indicato
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `level_of_urbanisation3s`
+--
+
+DROP TABLE IF EXISTS `level_of_urbanisation3s`;
+CREATE TABLE `level_of_urbanisation3s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Urbanisation` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `level_of_urbanisation3s`
+--
+
+INSERT INTO `level_of_urbanisation3s` (`id`, `Districts`, `Urbanisation`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Patna ', 41.6, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(2, 'Nalanda', 14.9, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(3, 'Bhojpur', 13.9, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(4, 'Buxar', 9.2, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(5, 'Rohtas', 13.3, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(6, 'Kaimur', 3.3, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(7, 'Gaya', 13.7, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(8, 'Jehanabad', 12.1, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(9, 'Arwal', NULL, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(10, 'Nawada', 7.7, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(11, 'Aurangabad', 8.4, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(12, 'Saran', 9.2, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(13, 'Siwan', 5.5, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(14, 'Gopalganj', 6.1, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(15, 'WestChamparan', 10.2, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(16, 'EastChamparan', 6.4, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(17, 'Muzaffarpur', 9.3, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(18, 'Sitamarhi', 5.7, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(19, 'Sheohar', 4.1, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(20, 'Darbhanga', 8.1, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(21, 'Madhubani', 3.5, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(22, 'Samastipur', 3.7, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(23, 'Begusarai', 4.6, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(24, 'Munger', 27.9, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(25, 'Sheikhpura', 15.6, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(26, 'Lakhisarai', 14.7, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(27, 'Jamui', 7.4, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(28, 'Khagaria', 5.9, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(29, 'Bhagalpur', 18.7, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(30, 'Banka', 3.5, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(31, 'Saharsa', 8.3, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(32, 'Supaul', 5.1, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(33, 'Madhepura', 4.5, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(34, 'Purnia', 8.7, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(35, 'Kishanganj', 10, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(36, 'Araria', 6.2, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(37, 'Katihar', 9.2, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(38, 'Vaishali ', 6.8, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(39, 'Bihar', 10.5, '2001', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(40, 'Patna ', 43.1, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(41, 'Nalanda', 15.9, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(42, 'Bhojpur', 14.3, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(43, 'Buxar', 9.6, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(44, 'Rohtas', 14.5, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(45, 'Kaimur', 4, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(46, 'Gaya', 13.2, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(47, 'Jehanabad', 12, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(48, 'Arwal', 7.4, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(49, 'Nawada', 9.7, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(50, 'Aurangabad', 9.3, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(51, 'Saran', 8.9, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(52, 'Siwan', 5.5, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(53, 'Gopalganj', 6.4, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(54, 'WestChamparan', 10, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(55, 'EastChamparan', 7.9, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(56, 'Muzaffarpur', 9.9, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(57, 'Sitamarhi', 5.6, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(58, 'Sheohar', 4.3, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(59, 'Darbhanga', 9.7, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(60, 'Madhubani', 3.6, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(61, 'Samastipur', 3.5, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(62, 'Begusarai', 19.2, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(63, 'Munger', 27.8, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(64, 'Sheikhpura', 17.1, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(65, 'Lakhisarai', 14.3, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(66, 'Jamui', 8.3, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(67, 'Khagaria', 5.2, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(68, 'Bhagalpur', 19.8, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(69, 'Banka', 3.5, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(70, 'Saharsa', 8.2, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(71, 'Supaul', 4.7, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(72, 'Madhepura', 4.4, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(73, 'Purnia', 10.5, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(74, 'Kishanganj', 9.5, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(75, 'Araria', 6, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(76, 'Katihar', 8.9, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(77, 'Vaishali ', 6.7, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
+(78, 'Bihar', 11.3, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `level_of_urbanisation4s`
+--
+
+DROP TABLE IF EXISTS `level_of_urbanisation4s`;
+CREATE TABLE `level_of_urbanisation4s` (
+  `id` bigint(20) NOT NULL,
+  `City_Size` varchar(255) DEFAULT NULL,
+  `Households_with_tap_water_within_premises` float DEFAULT NULL,
+  `Households_with_access_to_piped_sewer_connected_to_latrines` float DEFAULT NULL,
+  `Households_connected_to_covered_drainage` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `level_of_urbanisation4s`
+--
+
+INSERT INTO `level_of_urbanisation4s` (`id`, `City_Size`, `Households_with_tap_water_within_premises`, `Households_with_access_to_piped_sewer_connected_to_latrines`, `Households_connected_to_covered_drainage`, `created_at`, `updated_at`) VALUES
+(1, '>1 million', 50.8, 19.6, 61.3, '2018-11-20 08:18:00', '2018-11-20 08:18:00'),
+(2, '100,000 – 1 million', 13.1, 6.1, 29.2, '2018-11-20 08:18:00', '2018-11-20 08:18:00'),
+(3, '50,000 – 100,000', 8.7, 3.3, 18.8, '2018-11-20 08:18:00', '2018-11-20 08:18:00'),
+(4, '20,000 – 50,000', 4.1, 3, 16.3, '2018-11-20 08:18:00', '2018-11-20 08:18:00'),
+(5, '10,000 – 20,000', 5.1, 2.9, 13.1, '2018-11-20 08:18:00', '2018-11-20 08:18:00'),
+(6, '5000 – 10,000', 3.1, 3.4, 17.3, '2018-11-20 08:18:00', '2018-11-20 08:18:00'),
+(7, '<5000', 5.1, 2.1, 12.9, '2018-11-20 08:18:00', '2018-11-20 08:18:00'),
+(8, 'Bihar Urban', 16.7, 7.2, 29.9, '2018-11-20 08:18:00', '2018-11-20 08:18:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `level_of_urbanisation5s`
+--
+
+DROP TABLE IF EXISTS `level_of_urbanisation5s`;
+CREATE TABLE `level_of_urbanisation5s` (
+  `id` bigint(20) NOT NULL,
+  `Particulars` varchar(255) DEFAULT NULL,
+  `Municipal_Corporations` float DEFAULT NULL,
+  `Municipal_Councils` float DEFAULT NULL,
+  `Nagar_Panchayats` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `level_of_urbanisation5s`
+--
+
+INSERT INTO `level_of_urbanisation5s` (`id`, `Particulars`, `Municipal_Corporations`, `Municipal_Councils`, `Nagar_Panchayats`, `Total`, `created_at`, `updated_at`) VALUES
+(1, 'No. of households surveyed (thousand)', 727.2, 652.4, 528.6, 1908.2, '2018-11-20 08:32:11', '2018-11-20 08:32:11'),
+(2, 'Percentage of households with piped water', 33.7, 10.9, 3.8, 17.6, '2018-11-20 08:32:11', '2018-11-20 08:32:11'),
+(3, 'Percentage of households with toilets', 76.7, 57.8, 34.1, 58.4, '2018-11-20 08:32:11', '2018-11-20 08:32:11');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `level_of_urbanisation6s`
 --
 
@@ -12134,18 +12292,29 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20181116070443'),
 ('20181116084257'),
 ('20181119064824'),
+('20181120070115'),
+('20181120073540'),
 ('20181120082033'),
+('20181120083046'),
 ('20181120091532'),
+('20181120104431'),
 ('20181120105438'),
+('20181120110924'),
+('20181120113537'),
 ('20181121062559'),
 ('20181121064334'),
-('20181121071100'),
 ('20181121081704'),
 ('20181121100127'),
 ('20181121103120'),
 ('20181121110246'),
 ('20181121112645'),
-('20181122061433');
+('20181122060734'),
+('20181122061433'),
+('20181122065038'),
+('20181122070607'),
+('20181122072131'),
+('20181122073224'),
+('20181122074423');
 
 -- --------------------------------------------------------
 
@@ -14460,6 +14629,130 @@ INSERT INTO `transmission2s` (`id`, `Year`, `Nos_of_New_Grid_Sub_Stations`, `New
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `udp_jointly_funded1s`
+--
+
+DROP TABLE IF EXISTS `udp_jointly_funded1s`;
+CREATE TABLE `udp_jointly_funded1s` (
+  `id` bigint(20) NOT NULL,
+  `Components_Categories` varchar(255) DEFAULT NULL,
+  `SubProject_cost_sanctioned` float DEFAULT NULL,
+  `Total_Expenditure_till_Nov_2017` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `udp_jointly_funded1s`
+--
+
+INSERT INTO `udp_jointly_funded1s` (`id`, `Components_Categories`, `SubProject_cost_sanctioned`, `Total_Expenditure_till_Nov_2017`, `created_at`, `updated_at`) VALUES
+(1, 'Ganga River Front Development (GRFD) Patna', 26273.2, 19724.1, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(2, 'Saidpur Sewer network for Patna', 42671.3, 4000, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(3, 'Saidpur STP and Adjoining Network for Patna', 20, 4556.34, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(4, 'Karmalichak Sewerage Scheme for Patna', 27742.1, 2500, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(5, 'Sewerage & Sewage Treatment Plant at Begusarai*', 21946, 1094.32, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(6, 'Sewerage & Sewage Treatment Plant at Buxar', 7494.87, 2027.54, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(7, 'Sewerage & Sewage Treatment Plant at Hajipur*', 36720, 3391.84, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(8, 'Sewerage & Sewage Treatment Plant at Munger*', 38435, 324.72, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(9, 'Sewerage Treatment Plant, Karmalichak (Patna)', 8397.36, 1375, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(10, 'Sewerage Treatment Plant, Beur (Patna)', 7429.44, 1407.75, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(11, 'Sewerage scheme Pahari Zone V \"for Patna', 21431, 1500, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(12, 'Sewerage System in Sewerage Zone IV A (South) Pahari', 13364, 900, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(13, 'Sewage Treatment Plant (60 MLD), Pahari for Patna', 12730, 900, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(14, 'Beur sewerage Network for Patna in Bihar', 39489.3, 9166.02, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(15, 'Mokama Sewerage Project', 5381, 400, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(16, 'Barh  Sewerage Project', 5827, 400, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(17, 'Navgachiya Sewerage Project', 6079, 400, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(18, 'Sultanganj Sewerage Project', 6022, 400, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(19, 'Bhagalpur Sewerage Project', 26849, NULL, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(20, 'Digha Sewerage Project', 82400, NULL, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(21, 'Kankarbagh Sewerage Project', 57889, NULL, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
+(22, 'Total', 514728, 54468.4, '2018-11-22 06:08:20', '2018-11-22 06:08:20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `udp_jointly_funded2s`
+--
+
+DROP TABLE IF EXISTS `udp_jointly_funded2s`;
+CREATE TABLE `udp_jointly_funded2s` (
+  `id` bigint(20) NOT NULL,
+  `Program_Monitoring_Parameter` varchar(255) DEFAULT NULL,
+  `Annual_Target` float DEFAULT NULL,
+  `Achievement` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `udp_jointly_funded2s`
+--
+
+INSERT INTO `udp_jointly_funded2s` (`id`, `Program_Monitoring_Parameter`, `Annual_Target`, `Achievement`, `created_at`, `updated_at`) VALUES
+(1, 'No. of Self-Help Groups (SHGs) formed under NULM', 6500, 3319, '2018-11-22 07:00:21', '2018-11-22 07:00:21'),
+(2, 'No. of members in the SHGs under NULM', 65000, 31189, '2018-11-22 07:00:21', '2018-11-22 07:00:21'),
+(3, 'Area-Level Federations (ALFs) formed under NULM', 250, 107, '2018-11-22 07:00:21', '2018-11-22 07:00:21'),
+(4, 'No. of City-Level Federations formed under NULM', 30, 21, '2018-11-22 07:00:22', '2018-11-22 07:00:22'),
+(5, 'Revolving Fund (RF) Support', 4400, 2247, '2018-11-22 07:00:22', '2018-11-22 07:00:22');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `udp_jointly_funded3s`
+--
+
+DROP TABLE IF EXISTS `udp_jointly_funded3s`;
+CREATE TABLE `udp_jointly_funded3s` (
+  `id` bigint(20) NOT NULL,
+  `Category` varchar(255) DEFAULT NULL,
+  `Annual_Target` float DEFAULT NULL,
+  `Number_of_Persons_Undergoing_Training` float DEFAULT NULL,
+  `Number_of_Persons_Completed_Training` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `udp_jointly_funded3s`
+--
+
+INSERT INTO `udp_jointly_funded3s` (`id`, `Category`, `Annual_Target`, `Number_of_Persons_Undergoing_Training`, `Number_of_Persons_Completed_Training`, `created_at`, `updated_at`) VALUES
+(1, 'SC', 6516, 216, 2650, '2018-11-22 07:07:11', '2018-11-22 07:07:11'),
+(2, 'ST', 420, 121, 361, '2018-11-22 07:07:11', '2018-11-22 07:07:11'),
+(3, 'Others', 62064, 1253, 11299, '2018-11-22 07:07:11', '2018-11-22 07:07:11'),
+(4, 'Total', 69000, 1590, 14310, '2018-11-22 07:07:11', '2018-11-22 07:07:11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `udp_jointly_funded4s`
+--
+
+DROP TABLE IF EXISTS `udp_jointly_funded4s`;
+CREATE TABLE `udp_jointly_funded4s` (
+  `id` bigint(20) NOT NULL,
+  `Program_Monitoring_Parameter` varchar(255) DEFAULT NULL,
+  `Annual_Target` float DEFAULT NULL,
+  `Achievement` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `udp_jointly_funded4s`
+--
+
+INSERT INTO `udp_jointly_funded4s` (`id`, `Program_Monitoring_Parameter`, `Annual_Target`, `Achievement`, `created_at`, `updated_at`) VALUES
+(1, 'SEP-I individual', 10000, 1229, '2018-11-22 07:27:21', '2018-11-22 07:27:21'),
+(2, 'SEP- Group', 500, 10, '2018-11-22 07:27:21', '2018-11-22 07:27:21'),
+(3, 'SHG Credit Linkage', 1000, 238, '2018-11-22 07:27:21', '2018-11-22 07:27:21'),
+(4, 'Total', 11500, 1477, '2018-11-22 07:27:21', '2018-11-22 07:27:21');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `udp_jointly_funded5s`
 --
 
@@ -14494,6 +14787,33 @@ INSERT INTO `udp_jointly_funded5s` (`id`, `Program_or_Monitoring_Parameter`, `An
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `udp_jointly_funded6s`
+--
+
+DROP TABLE IF EXISTS `udp_jointly_funded6s`;
+CREATE TABLE `udp_jointly_funded6s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `DAY_NULM` float DEFAULT NULL,
+  `State_Plan_Head_Nagrik_Suvidha` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `udp_jointly_funded6s`
+--
+
+INSERT INTO `udp_jointly_funded6s` (`id`, `Year`, `DAY_NULM`, `State_Plan_Head_Nagrik_Suvidha`, `Total`, `created_at`, `updated_at`) VALUES
+(1, '2014-15', 14.07, 3.7, 17.77, '2018-11-22 07:45:12', '2018-11-22 07:45:12'),
+(2, '2015-16', 3.96, 0, 3.96, '2018-11-22 07:45:12', '2018-11-22 07:45:12'),
+(3, '2016-17', 0, 0, 0, '2018-11-22 07:45:12', '2018-11-22 07:45:12'),
+(4, '2017-18', 2.99, 0, 2.99, '2018-11-22 07:45:12', '2018-11-22 07:45:12');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `udp_jointly_funded7s`
 --
 
@@ -14516,6 +14836,31 @@ INSERT INTO `udp_jointly_funded7s` (`id`, `Shelters_Sanctioned_Planned`, `Operat
 (1, '48 (New Construction)', 1, 18, 29, '2018-11-21 08:17:31', '2018-11-21 08:17:31'),
 (2, '66 (Refurbishment along with O and M)', 31, 13, 22, '2018-11-21 08:17:31', '2018-11-21 08:17:31'),
 (3, 'Total (114)', 32, 31, 51, '2018-11-21 08:17:31', '2018-11-21 08:17:31');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `udp_jointly_funded8s`
+--
+
+DROP TABLE IF EXISTS `udp_jointly_funded8s`;
+CREATE TABLE `udp_jointly_funded8s` (
+  `id` bigint(20) NOT NULL,
+  `Particulars` varchar(255) DEFAULT NULL,
+  `Constructed` float DEFAULT NULL,
+  `Under_Construction` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `udp_jointly_funded8s`
+--
+
+INSERT INTO `udp_jointly_funded8s` (`id`, `Particulars`, `Constructed`, `Under_Construction`, `created_at`, `updated_at`) VALUES
+(1, 'Individual Toilet', 145995, 156521, '2018-11-22 07:33:52', '2018-11-22 07:33:52'),
+(2, 'Community toilets', 672, 1140, '2018-11-22 07:33:52', '2018-11-22 07:33:52'),
+(3, 'Public toilets', 75, 22, '2018-11-22 07:33:52', '2018-11-22 07:33:52');
 
 -- --------------------------------------------------------
 
@@ -14645,6 +14990,98 @@ INSERT INTO `udp_state_plan1s` (`id`, `Indicators`, `No_of_households`, `created
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `udp_state_plan2s`
+--
+
+DROP TABLE IF EXISTS `udp_state_plan2s`;
+CREATE TABLE `udp_state_plan2s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Total_Number_of_Urban_Ward` float DEFAULT NULL,
+  `Total_Number_of_Urban_Households` float DEFAULT NULL,
+  `Number_of_Households_Having_Piped_Water_Supply` float DEFAULT NULL,
+  `Number_of_Households_Having_Access_to_Tap_Water_2016_17` float DEFAULT NULL,
+  `Number_of_Households_Having_Access_to_Tap_Water_2017_18` float DEFAULT NULL,
+  `Number_of_Households_Having_Access_to_Tap_Water_2016_18` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `udp_state_plan2s`
+--
+
+INSERT INTO `udp_state_plan2s` (`id`, `Districts`, `Total_Number_of_Urban_Ward`, `Total_Number_of_Urban_Households`, `Number_of_Households_Having_Piped_Water_Supply`, `Number_of_Households_Having_Access_to_Tap_Water_2016_17`, `Number_of_Households_Having_Access_to_Tap_Water_2017_18`, `Number_of_Households_Having_Access_to_Tap_Water_2016_18`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 363, 333594, 159448, 18131, 9981, 28112, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(2, 'Nalanda', 143, 71349, 21542, 1908, 1753, 3661, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(3, 'Bhojpur ', 119, 57265, 4551, 2667, 1110, 3777, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(4, 'Buxar', 60, 21875, 2261, 584, 1037, 1621, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(5, 'Rohtas ', 159, 66905, 12625, 771, 609, 1380, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(6, 'Kaimur ', 41, 12796, 1663, 0, 0, 0, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(7, 'Gaya', 105, 86716, 36897, 4550, 100, 4650, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(8, 'Jehanabad', 52, 27040, 1718, 3437, 2054, 5491, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(9, 'Arwal ', 25, 8685, 0, 0, 500, 500, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(10, 'Nawada', 70, 31374, 2458, 944, 2968, 3912, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(11, 'Aurangabad ', 86, 33738, 261, 0, 615, 615, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(12, 'Saran', 162, 72218, 7889, 1, 0, 1, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(13, 'Siwan ', 65, 30883, 76, 35, 1053, 1088, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(14, 'Gopalganj ', 78, 26014, 0, 85, 167, 252, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(15, 'EastChamparan', 170, 69525, 582, 1917, 1467, 3384, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(16, 'WestChamparan', 137, 67884, 217, 1015, 1955, 2970, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(17, 'Muzaffarpur ', 91, 84836, 24251, 0, 1980, 1980, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(18, 'Sitamarhi', 103, 36389, 1088, 670, 1715, 2385, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(19, 'Sheohar', 15, 6344, 36, 36, 755, 791, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(20, 'Vaishali', 97, 36207, 4473, 2110, 100, 2210, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(21, 'Darbhanga ', 77, 75852, 5182, 505, 0, 505, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(22, 'Madhubani', 71, 30899, 425, 0, 0, 0, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(23, 'Samastipur', 61, 23375, 1671, 0, 0, 0, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(24, 'Begusarai', 144, 87882, 2426, 100, 0, 100, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(25, 'Munger ', 99, 54716, 6370, 0, 0, 0, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(26, 'Sheikhpura', 53, 19977, 3252, 0, 0, 0, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(27, 'Lakhisarai ', 57, 28459, 6896, 1183, 0, 1183, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(28, 'Jamui', 52, 25497, 0, 0, 0, 0, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(29, 'Khagaria', 46, 18426, 338, 0, 0, 0, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(30, 'Bhagalpur', 116, 87368, 27241, 451, 934, 1385, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(31, 'Banka', 36, 12851, 49, 0, 0, 0, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(32, 'Saharsa', 55, 40032, 62, 510, 970, 1480, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(33, 'Supaul ', 53, 22731, 91, 586, 1151, 1737, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(34, 'Madhepura', 41, 20293, 6, 163, 623, 786, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(35, 'Purnia', 80, 68697, 373, 0, 0, 0, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(36, 'Kishanganj ', 64, 33896, 0, 0, 350, 350, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(37, 'Araria', 73, 34201, 103, 1154, 973, 2127, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(38, 'Katihar', 77, 41375, 0, 0, 0, 0, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
+(39, 'Bihar', 3396, 1908160, 336521, 43513, 34920, 78433, '2018-11-20 10:45:34', '2018-11-20 10:45:34');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `udp_state_plan3s`
+--
+
+DROP TABLE IF EXISTS `udp_state_plan3s`;
+CREATE TABLE `udp_state_plan3s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `2017-18` float DEFAULT NULL,
+  `2018-19` float DEFAULT NULL,
+  `2019-20` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `udp_state_plan3s`
+--
+
+INSERT INTO `udp_state_plan3s` (`id`, `Sector`, `2016-17`, `2017-18`, `2018-19`, `2019-20`, `Total`, `created_at`, `updated_at`) VALUES
+(1, 'Target (No. of households)', 73098, 109647, 109647, 73098, 365490, '2018-11-20 11:11:34', '2018-11-20 11:11:34'),
+(2, 'Target Percentage', 20, 30, 30, 20, 100, '2018-11-20 11:11:34', '2018-11-20 11:11:34');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `udp_state_plan4s`
 --
 
@@ -14672,6 +15109,69 @@ INSERT INTO `udp_state_plan4s` (`id`, `Indicators`, `No_of_households`, `created
 (8, 'No. of schemes completed', '1786.0', '2018-11-21 06:45:32', '2018-11-21 06:45:32'),
 (9, 'Length of Gali completed', '423.040 (Km.) ', '2018-11-21 06:45:32', '2018-11-21 06:45:32'),
 (10, 'Length of Nali completed', '323.501 (Km.)', '2018-11-21 06:45:32', '2018-11-21 06:45:32');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `udp_state_plan5s`
+--
+
+DROP TABLE IF EXISTS `udp_state_plan5s`;
+CREATE TABLE `udp_state_plan5s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Total_Number_of_Urban_Households` float DEFAULT NULL,
+  `Total_Number_of_Urban_Wards` float DEFAULT NULL,
+  `Number_of_Households_to_be_covered` float DEFAULT NULL,
+  `Number_of_Household_covered` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `udp_state_plan5s`
+--
+
+INSERT INTO `udp_state_plan5s` (`id`, `Districts`, `Total_Number_of_Urban_Households`, `Total_Number_of_Urban_Wards`, `Number_of_Households_to_be_covered`, `Number_of_Household_covered`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 333594, 363, 51911, 3662, '2018-11-20 11:36:31', '2018-11-20 11:36:31'),
+(2, 'Nalanda', 71349, 143, 11306, 8610, '2018-11-20 11:36:31', '2018-11-20 11:36:31'),
+(3, 'Bhojpur ', 57265, 119, 8948, 7003, '2018-11-20 11:36:31', '2018-11-20 11:36:31'),
+(4, 'Bauxar', 21875, 60, 5469, 885, '2018-11-20 11:36:31', '2018-11-20 11:36:31'),
+(5, 'Rohtas ', 66905, 159, 16223, 4612, '2018-11-20 11:36:31', '2018-11-20 11:36:31'),
+(6, 'Kaimur ', 12796, 41, 3103, 1243, '2018-11-20 11:36:31', '2018-11-20 11:36:31'),
+(7, 'Gaya', 86716, 105, 11591, 4396, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(8, 'Jehanabad', 27040, 52, 6627, 483, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(9, 'Arwal ', 8685, 25, 2171, 825, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(10, 'Nawada', 31374, 70, 7586, 785, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(11, 'Aurangabad ', 33738, 86, 8219, 1753, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(12, 'Saran', 72218, 162, 12700, 2715, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(13, 'Siwan ', 30883, 65, 7553, 178, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(14, 'Gopalganj ', 26014, 78, 6177, 1520, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(15, 'WestChamparan', 67884, 137, 16633, 3441, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(16, 'EastChamparan', 69525, 170, 16619, 5265, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(17, 'Muzaffarpur ', 84836, 91, 11226, 844, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(18, 'Sitamarhi', 36389, 103, 8680, 1611, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(19, 'Sheohar', 6344, 15, 1459, 275, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(20, 'Vaishali', 36207, 97, 8840, 1069, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(21, 'Darbhanga ', 75852, 77, 11226, 3096, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(22, 'Madhubani', 30899, 71, 7431, 5473, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(23, 'Samastipur', 23375, 61, 5609, 330, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(24, 'Begusarai', 87882, 144, 14368, 11909, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(25, 'Munger ', 54716, 99, 8931, 5766, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(26, 'Sheikhpura', 19977, 53, 4994, 268, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(27, 'Lakhisarai ', 28459, 57, 6959, 2850, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(28, 'Jamui', 25497, 52, 6232, 7015, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(29, 'Khagaria', 18426, 46, 4442, 602, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(30, 'Bhagalpur', 87368, 116, 13336, 5301, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(31, 'Banka', 12851, 36, 2956, 3626, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(32, 'Saharsa', 40032, 55, 9870, 0, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(33, 'Sapaul ', 22731, 53, 5516, 2299, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(34, 'Madhepura', 20293, 41, 4932, 1584, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(35, 'Purnia', 68697, 80, 9200, 3292, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(36, 'Kishanganj ', 33896, 64, 8221, 2366, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(37, 'Araria', 34201, 73, 8398, 1996, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(38, 'Katihar', 41375, 77, 5276, 897, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(39, 'Bihar', 1908160, 3396, 360938, 109845, '2018-11-20 11:36:32', '2018-11-20 11:36:32');
 
 --
 -- Indexes for dumped tables
@@ -15329,6 +15829,24 @@ ALTER TABLE `lands`
 -- Indexes for table `level_of_urbanisation1s`
 --
 ALTER TABLE `level_of_urbanisation1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `level_of_urbanisation3s`
+--
+ALTER TABLE `level_of_urbanisation3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `level_of_urbanisation4s`
+--
+ALTER TABLE `level_of_urbanisation4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `level_of_urbanisation5s`
+--
+ALTER TABLE `level_of_urbanisation5s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -16076,15 +16594,51 @@ ALTER TABLE `transmission2s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `udp_jointly_funded1s`
+--
+ALTER TABLE `udp_jointly_funded1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `udp_jointly_funded2s`
+--
+ALTER TABLE `udp_jointly_funded2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `udp_jointly_funded3s`
+--
+ALTER TABLE `udp_jointly_funded3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `udp_jointly_funded4s`
+--
+ALTER TABLE `udp_jointly_funded4s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `udp_jointly_funded5s`
 --
 ALTER TABLE `udp_jointly_funded5s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `udp_jointly_funded6s`
+--
+ALTER TABLE `udp_jointly_funded6s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `udp_jointly_funded7s`
 --
 ALTER TABLE `udp_jointly_funded7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `udp_jointly_funded8s`
+--
+ALTER TABLE `udp_jointly_funded8s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -16112,9 +16666,27 @@ ALTER TABLE `udp_state_plan1s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `udp_state_plan2s`
+--
+ALTER TABLE `udp_state_plan2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `udp_state_plan3s`
+--
+ALTER TABLE `udp_state_plan3s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `udp_state_plan4s`
 --
 ALTER TABLE `udp_state_plan4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `udp_state_plan5s`
+--
+ALTER TABLE `udp_state_plan5s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -16264,6 +16836,24 @@ ALTER TABLE `irrigation7s`
 --
 ALTER TABLE `level_of_urbanisation1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `level_of_urbanisation3s`
+--
+ALTER TABLE `level_of_urbanisation3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
+--
+-- AUTO_INCREMENT for table `level_of_urbanisation4s`
+--
+ALTER TABLE `level_of_urbanisation4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `level_of_urbanisation5s`
+--
+ALTER TABLE `level_of_urbanisation5s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `level_of_urbanisation6s`
@@ -16590,15 +17180,51 @@ ALTER TABLE `transmission2s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT for table `udp_jointly_funded1s`
+--
+ALTER TABLE `udp_jointly_funded1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `udp_jointly_funded2s`
+--
+ALTER TABLE `udp_jointly_funded2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `udp_jointly_funded3s`
+--
+ALTER TABLE `udp_jointly_funded3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `udp_jointly_funded4s`
+--
+ALTER TABLE `udp_jointly_funded4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `udp_jointly_funded5s`
 --
 ALTER TABLE `udp_jointly_funded5s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT for table `udp_jointly_funded6s`
+--
+ALTER TABLE `udp_jointly_funded6s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `udp_jointly_funded7s`
 --
 ALTER TABLE `udp_jointly_funded7s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `udp_jointly_funded8s`
+--
+ALTER TABLE `udp_jointly_funded8s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
@@ -16626,7 +17252,25 @@ ALTER TABLE `udp_state_plan1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT for table `udp_state_plan2s`
+--
+ALTER TABLE `udp_state_plan2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `udp_state_plan3s`
+--
+ALTER TABLE `udp_state_plan3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `udp_state_plan4s`
 --
 ALTER TABLE `udp_state_plan4s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `udp_state_plan5s`
+--
+ALTER TABLE `udp_state_plan5s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;

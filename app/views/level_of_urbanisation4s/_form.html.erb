@@ -1,0 +1,37 @@
+<%= form_with(model: level_of_urbanisation4, local: true) do |form| %>
+  <% if level_of_urbanisation4.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(level_of_urbanisation4.errors.count, "error") %> prohibited this level_of_urbanisation4 from being saved:</h2>
+
+      <ul>
+      <% level_of_urbanisation4.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :City_Size %>
+    <%= form.text_field :City_Size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Households_with_tap_water_within_premises %>
+    <%= form.text_field :Households_with_tap_water_within_premises %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Households_with_access_to_piped_sewer_connected_to_latrines %>
+    <%= form.text_field :Households_with_access_to_piped_sewer_connected_to_latrines %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Households_connected_to_covered_drainage %>
+    <%= form.text_field :Households_connected_to_covered_drainage %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

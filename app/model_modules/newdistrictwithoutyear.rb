@@ -88,6 +88,8 @@ module Newdistrictwithoutyear
             dataset = column_name.to_s.tr('_', ' ')
             {
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               legendText: dataset,
               showInLegend: true,
               dataPoints: b.map do |el|
@@ -98,6 +100,8 @@ module Newdistrictwithoutyear
             dataset = column_name.to_s.tr('_', ' ')
             {
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               legendText: dataset,
               showInLegend: true,
               dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
@@ -107,7 +111,7 @@ module Newdistrictwithoutyear
           end
         end
       end
-      if views == "stackedBar" || views == "stackedBar100"
+      if views == "stackedBar" || views == "stackedBar100"|| views == "stackedColumn100" || views == "stackedColumn"
         title = {
           animationEnabled: true,
           exportEnabled: true,
@@ -141,6 +145,8 @@ module Newdistrictwithoutyear
           [{
             type: views,
             color: color,
+            toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+            name:dataset,
             legendText: dataset,
             showInLegend: true,
             dataPoints: b.map do |el|
@@ -148,25 +154,46 @@ module Newdistrictwithoutyear
                         end
           }]
       else
-        dataset = rain_fall_type.tr('_', ' ')
+
+        if views != "column" && views != "line" && views != "scatter"
+          dataset = rain_fall_type.tr('_', ' ')
+          hash_data =  b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
+            {
+              type:views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:"#{el["Districts"]}",
+              legendText:"#{el["Districts"]}",
+              showInLegend: true,
+              dataPoints: [{ y: el[rain_fall_type], label:  dataset }]
+          }
+
+          end
+        else
+          dataset = rain_fall_type.tr('_', ' ')
         hash_data =
           [{
             type: views,
             color: color,
+            toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+            name:dataset,
             legendText: dataset,
             showInLegend: true,
             dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
                           { y: el[rain_fall_type], label: el['Districts'] }
                         end
           }]
+        end
+
+        
       end
-      if views == "stackedBar" || views == "stackedBar100"
+      if views == "stackedBar" || views == "stackedBar100" || views == "stackedColumn100" || views == "stackedColumn"
         title = {
           animationEnabled: true,
           exportEnabled: true,
           title: {
             text: rain_fall_type.to_s.tr('_', ' ').to_s
           },
+          
           data: hash_data
         }
       else

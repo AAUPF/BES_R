@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  City_Size: MyString
+  Households_with_tap_water_within_premises: 1.5
+  Households_with_access_to_piped_sewer_connected_to_latrines: 1.5
+  Households_connected_to_covered_drainage: 1.5
+
+two:
+  City_Size: MyString
+  Households_with_tap_water_within_premises: 1.5
+  Households_with_access_to_piped_sewer_connected_to_latrines: 1.5
+  Households_connected_to_covered_drainage: 1.5

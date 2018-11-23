@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Particulars: MyString
+  Constructed: 1.5
+  Under_Construction: 1.5
+
+two:
+  Particulars: MyString
+  Constructed: 1.5
+  Under_Construction: 1.5

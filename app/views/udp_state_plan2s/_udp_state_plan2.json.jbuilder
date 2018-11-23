@@ -1,0 +1,2 @@
+json.extract! udp_state_plan2, :id, :Districts, :Total_Number_of_Urban_Ward, :Total_Number_of_Urban_Households, :Number_of_Households_Having_Piped_Water_Supply, :Number_of_Households_Having_Access_to_Tap_Water_2016_17, :Number_of_Households_Having_Access_to_Tap_Water_2017_18, :Number_of_Households_Having_Access_to_Tap_Water_2016_18, :created_at, :updated_at
+json.url udp_state_plan2_url(udp_state_plan2, format: :json)

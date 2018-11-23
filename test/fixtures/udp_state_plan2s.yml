@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Total_Number_of_Urban_Ward: 1.5
+  Total_Number_of_Urban_Households: 1.5
+  Number_of_Households_Having_Piped_Water_Supply: 1.5
+  Number_of_Households_Having_Access_to_Tap_Water_2016_17: 1.5
+  Number_of_Households_Having_Access_to_Tap_Water_2017_18: 1.5
+  Number_of_Households_Having_Access_to_Tap_Water_2016_18: 1.5
+
+two:
+  Districts: MyString
+  Total_Number_of_Urban_Ward: 1.5
+  Total_Number_of_Urban_Households: 1.5
+  Number_of_Households_Having_Piped_Water_Supply: 1.5
+  Number_of_Households_Having_Access_to_Tap_Water_2016_17: 1.5
+  Number_of_Households_Having_Access_to_Tap_Water_2017_18: 1.5
+  Number_of_Households_Having_Access_to_Tap_Water_2016_18: 1.5

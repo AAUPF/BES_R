@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Urbanisation: 1.5
+  Year: MyString
+
+two:
+  Districts: MyString
+  Urbanisation: 1.5
+  Year: MyString

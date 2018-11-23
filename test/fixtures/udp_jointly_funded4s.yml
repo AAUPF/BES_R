@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Program_Monitoring_Parameter: MyString
+  Annual_Target: 1.5
+  Achievement: 1.5
+
+two:
+  Program_Monitoring_Parameter: MyString
+  Annual_Target: 1.5
+  Achievement: 1.5

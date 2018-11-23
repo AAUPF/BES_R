@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Level Of Urbanisation5s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Particulars</th>
+      <th>Municipal corporations</th>
+      <th>Municipal councils</th>
+      <th>Nagar panchayats</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @level_of_urbanisation5s.each do |level_of_urbanisation5| %>
+      <tr>
+        <td><%= level_of_urbanisation5.Particulars %></td>
+        <td><%= level_of_urbanisation5.Municipal_Corporations %></td>
+        <td><%= level_of_urbanisation5.Municipal_Councils %></td>
+        <td><%= level_of_urbanisation5.Nagar_Panchayats %></td>
+        <td><%= level_of_urbanisation5.Total %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Level Of Urbanisation5', new_level_of_urbanisation5_path %>

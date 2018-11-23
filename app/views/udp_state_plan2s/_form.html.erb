@@ -1,0 +1,52 @@
+<%= form_with(model: udp_state_plan2, local: true) do |form| %>
+  <% if udp_state_plan2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(udp_state_plan2.errors.count, "error") %> prohibited this udp_state_plan2 from being saved:</h2>
+
+      <ul>
+      <% udp_state_plan2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Number_of_Urban_Ward %>
+    <%= form.text_field :Total_Number_of_Urban_Ward %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Number_of_Urban_Households %>
+    <%= form.text_field :Total_Number_of_Urban_Households %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Households_Having_Piped_Water_Supply %>
+    <%= form.text_field :Number_of_Households_Having_Piped_Water_Supply %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Households_Having_Access_to_Tap_Water_2016_17 %>
+    <%= form.text_field :Number_of_Households_Having_Access_to_Tap_Water_2016_17 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Households_Having_Access_to_Tap_Water_2017_18 %>
+    <%= form.text_field :Number_of_Households_Having_Access_to_Tap_Water_2017_18 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Households_Having_Access_to_Tap_Water_2016_18 %>
+    <%= form.text_field :Number_of_Households_Having_Access_to_Tap_Water_2016_18 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

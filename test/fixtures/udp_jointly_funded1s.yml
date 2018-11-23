@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Components_Categories: MyString
+  SubProject_cost_sanctioned: 1.5
+  Total_Expenditure_till_Nov_2017: 1.5
+
+two:
+  Components_Categories: MyString
+  SubProject_cost_sanctioned: 1.5
+  Total_Expenditure_till_Nov_2017: 1.5

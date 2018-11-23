@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Udp Jointly Funded3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Annual target</th>
+      <th>Number of persons undergoing training</th>
+      <th>Number of persons completed training</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @udp_jointly_funded3s.each do |udp_jointly_funded3| %>
+      <tr>
+        <td><%= udp_jointly_funded3.Category %></td>
+        <td><%= udp_jointly_funded3.Annual_Target %></td>
+        <td><%= udp_jointly_funded3.Number_of_Persons_Undergoing_Training %></td>
+        <td><%= udp_jointly_funded3.Number_of_Persons_Completed_Training %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Udp Jointly Funded3', new_udp_jointly_funded3_path %>

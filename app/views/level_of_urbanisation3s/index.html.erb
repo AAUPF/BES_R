@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Level Of Urbanisation3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Urbanisation</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @level_of_urbanisation3s.each do |level_of_urbanisation3| %>
+      <tr>
+        <td><%= level_of_urbanisation3.Districts %></td>
+        <td><%= level_of_urbanisation3.Urbanisation %></td>
+        <td><%= level_of_urbanisation3.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Level Of Urbanisation3', new_level_of_urbanisation3_path %>

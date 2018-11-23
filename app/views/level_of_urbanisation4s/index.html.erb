@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Level Of Urbanisation4s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>City size</th>
+      <th>Households with tap water within premises</th>
+      <th>Households with access to piped sewer connected to latrines</th>
+      <th>Households connected to covered drainage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @level_of_urbanisation4s.each do |level_of_urbanisation4| %>
+      <tr>
+        <td><%= level_of_urbanisation4.City_Size %></td>
+        <td><%= level_of_urbanisation4.Households_with_tap_water_within_premises %></td>
+        <td><%= level_of_urbanisation4.Households_with_access_to_piped_sewer_connected_to_latrines %></td>
+        <td><%= level_of_urbanisation4.Households_connected_to_covered_drainage %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Level Of Urbanisation4', new_level_of_urbanisation4_path %>

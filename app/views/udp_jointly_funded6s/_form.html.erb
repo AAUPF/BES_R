@@ -1,0 +1,37 @@
+<%= form_with(model: udp_jointly_funded6, local: true) do |form| %>
+  <% if udp_jointly_funded6.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(udp_jointly_funded6.errors.count, "error") %> prohibited this udp_jointly_funded6 from being saved:</h2>
+
+      <ul>
+      <% udp_jointly_funded6.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :DAY_NULM %>
+    <%= form.text_field :DAY_NULM %>
+  </div>
+
+  <div class="field">
+    <%= form.label :State_Plan_Head_Nagrik_Suvidha %>
+    <%= form.text_field :State_Plan_Head_Nagrik_Suvidha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

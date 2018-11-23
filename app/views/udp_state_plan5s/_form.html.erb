@@ -1,0 +1,42 @@
+<%= form_with(model: udp_state_plan5, local: true) do |form| %>
+  <% if udp_state_plan5.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(udp_state_plan5.errors.count, "error") %> prohibited this udp_state_plan5 from being saved:</h2>
+
+      <ul>
+      <% udp_state_plan5.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Number_of_Urban_Households %>
+    <%= form.text_field :Total_Number_of_Urban_Households %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Number_of_Urban_Wards %>
+    <%= form.text_field :Total_Number_of_Urban_Wards %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Households_to_be_covered %>
+    <%= form.text_field :Number_of_Households_to_be_covered %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Household_covered %>
+    <%= form.text_field :Number_of_Household_covered %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

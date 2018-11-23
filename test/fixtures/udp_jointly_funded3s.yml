@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Category: MyString
+  Annual_Target: 1.5
+  Number_of_Persons_Undergoing_Training: 1.5
+  Number_of_Persons_Completed_Training: 1.5
+
+two:
+  Category: MyString
+  Annual_Target: 1.5
+  Number_of_Persons_Undergoing_Training: 1.5
+  Number_of_Persons_Completed_Training: 1.5

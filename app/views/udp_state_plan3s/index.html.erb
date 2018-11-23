@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Udp State Plan3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Coverage</th>
+      <th>2016-17</th>
+      <th>2017-18</th>
+      <th>2018-19</th>
+      <th>2019-20</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @udp_state_plan3s.each do |udp_state_plan3| %>
+      <tr>
+        <td><%= udp_state_plan3.Coverage %></td>
+        <td><%= udp_state_plan3.2016-17 %></td>
+        <td><%= udp_state_plan3.2017-18 %></td>
+        <td><%= udp_state_plan3.2018-19 %></td>
+        <td><%= udp_state_plan3.2019-20 %></td>
+        <td><%= udp_state_plan3.Total %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Udp State Plan3', new_udp_state_plan3_path %>

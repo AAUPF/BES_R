@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Coverage: MyString
+  2016-17: 1.5
+  2017-18: 1.5
+  2018-19: 1.5
+  2019-20: 1.5
+  Total: 1.5
+
+two:
+  Coverage: MyString
+  2016-17: 1.5
+  2017-18: 1.5
+  2018-19: 1.5
+  2019-20: 1.5
+  Total: 1.5
