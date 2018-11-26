@@ -81,6 +81,7 @@ module Statedata
   
     def query(b, _year, rain_fall_type, views, ji, compare)
       d = 'State'
+      color  = "#4f81bc"
       if rain_fall_type == 'All'
         if views
           hash_data = ji.map do |column_name|
@@ -88,6 +89,8 @@ module Statedata
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
@@ -98,6 +101,8 @@ module Statedata
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
                 legendText: dataset,
                 showInLegend: true,
                 dataPoints: b.map do |el|
@@ -142,6 +147,8 @@ module Statedata
               type: views,
   
               legendText: dataset,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               showInLegend: true,
               dataPoints: b.map do |el|
                             { y: el[rain_fall_type], label: el['State'] }
@@ -152,7 +159,9 @@ module Statedata
           hash_data =
             [{
               type: views,
-  
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
+              color:color,
               legendText: dataset,
               showInLegend: true,
               dataPoints: b.map do |el|
