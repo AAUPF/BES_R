@@ -18,8 +18,14 @@ module Statewithoutyear
         else
           order("#{rain_fall_type} ")
         end
-      elsif compare == 'Bihar vs State'
-        where('Districts = ? OR Districts = ?', search, 'Bihar').order(:id)
+      elsif compare != 'None'
+        if compare == "Bihar vs State"
+          where('Districts = ? OR Districts = ?', search, 'Bihar').order(:id)
+        else
+          where('Districts = ? OR Districts = ?', search, compare).order(:id)
+        end
+        
+        
       else
         if rain_fall_type == 'All'
           where('Districts = ? ', search).order(:id)
@@ -78,13 +84,21 @@ module Statewithoutyear
       end
     end
   
-    def query(b, _year, rain_fall_type, views, ji, compare)
+    def query(b, _year, rain_fall_type, views, ji, compare,search)
       d = 'Districts'
       color  = "#4f81bc"
+          if compare == "None"
+            name =  "#{rain_fall_type.to_s.gsub("_"," ")}"
+        elsif compare == "Bihar vs State"
+
+            name =  "#{search.to_s.gsub("_"," ")} vs. Bihar"
+        else
+      name =  "#{search.to_s.gsub("_"," ")} vs. #{compare.to_s.gsub("_"," ")}"
+    end
       if rain_fall_type == 'All'
         if views
           hash_data = ji.map do |column_name|
-            if compare == 'Bihar vs State'
+            if compare != 'None'
               dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
@@ -97,17 +111,33 @@ module Statewithoutyear
                             end
               }
             else
+              
               dataset = column_name.to_s.tr('_', ' ')
-              {
-                type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:dataset,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: b.reject { |x| x['Districts'] == 'India' }.map do |el|
-                              { y: el[column_name], z: el[column_name], label: el[d] }
-                            end
-              }
+                  if search == "All"
+                    
+                  {
+                    type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:dataset,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: b.reject { |x| x['Districts'] == 'India' || x['Districts'] == 'Total' }.map do |el|
+                                  { y: el[column_name], z: el[column_name], label: el[d] }
+                                end
+                  }
+                  else
+                    {
+                      type: views,
+                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                      name:dataset,
+                      legendText: dataset,
+                      showInLegend: true,
+                      dataPoints: b.map do |el|
+                          { y: el[column_name], z: el[column_name], label: el[d] }
+                                  end
+                    }
+                  end
+              
             end
           end
         end
@@ -116,29 +146,40 @@ module Statewithoutyear
             animationEnabled: true,
             exportEnabled: true,
             title: {
-              text: rain_fall_type.to_s.tr('_', ' ').to_s
+              text: name
             },
             data: hash_data
           }
         else
-          title = {
-            animationEnabled: true,
-            exportEnabled: true,
-            title: {
-              text: rain_fall_type.to_s.tr('_', ' ').to_s
-            },
-            axisX: {
-              interval:1,
-              labelMaxWidth: 180,
-              labelAngle: 90,
-              labelFontFamily:"verdana0"
-          },
-            data: hash_data
+          if search == "All"
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                text: name
+                    },
+                    axisX: {
+                      interval:1,
+                      labelMaxWidth: 120,
+                      labelAngle: 90,
+                      labelFontFamily:"verdana0"
+                      },
+              data: hash_data
           }
+          else
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                text: name
+              },
+              data: hash_data
+          }
+          end
         end
         return title
       else
-        if compare == 'Bihar vs State'
+        if compare != 'None'
           dataset = rain_fall_type.tr('_', ' ')
   
           hash_data =
@@ -154,46 +195,71 @@ module Statewithoutyear
                           end
             }]
         else
-          dataset = rain_fall_type.tr('_', ' ')
-          hash_data =
-            [{
-              type: views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-              name:dataset,
-              color: color,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.reject { |x| x['Districts'] == 'India' }.map do |el|
-                            { y: el[rain_fall_type], label: el['Districts'] }
-                          end
-            }]
 
-          
+          if views != "column" && views != "line" && views != "scatter"
+            hash_data = b.reject{ |x| x['Districts'] == 'India'|| x['Districts'] == 'Total' }.map do |col|
+              {
+                type:views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:col["Districts"],
+                legendText: col["Districts"],
+                showInLegend: true,
+                dataPoints: [{ y: col[rain_fall_type], label: search }]
+              }
+            end
+          else
+            dataset = rain_fall_type.tr('_', ' ')
+            hash_data =
+              [{
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
+                color: color,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: b.reject { |x| x['Districts'] == 'India'|| x['Districts'] == 'Total' }.map do |el|
+                              { y: el[rain_fall_type], label: el['Districts'] }
+                            end
+              }]
+          end
+
         end
-        if views == "stackedBar" || views == "stackedBar100"
+                
+        if views == "stackedBar" || views == "stackedBar100" || views == "stackedColumn" || views == "stackedColumn100"
           title = {
             animationEnabled: true,
             exportEnabled: true,
             title: {
-              text: rain_fall_type.to_s.tr('_', ' ').to_s
+              text: name
             },
             data: hash_data
           }
         else
-          title = {
-            animationEnabled: true,
-            exportEnabled: true,
-            title: {
-              text: rain_fall_type.to_s.tr('_', ' ').to_s
-            },
-            axisX: {
-              interval:1,
-              labelMaxWidth: 180,
-              labelAngle: 90,
-              labelFontFamily:"verdana0"
-          },
-            data: hash_data
+          if search == "All"
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                text: name
+                    },
+                    axisX: {
+                      interval:1,
+                      labelMaxWidth: 120,
+                      labelAngle: 90,
+                      labelFontFamily:"verdana0"
+                      },
+              data: hash_data
           }
+          else
+            title = {
+              animationEnabled: true,
+              exportEnabled: true,
+              title:{
+                text: name
+              },
+              data: hash_data
+          }
+          end
         end
         return title
       end
