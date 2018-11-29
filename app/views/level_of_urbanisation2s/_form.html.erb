@@ -1,0 +1,47 @@
+<%= form_with(model: level_of_urbanisation2, local: true) do |form| %>
+  <% if level_of_urbanisation2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(level_of_urbanisation2.errors.count, "error") %> prohibited this level_of_urbanisation2 from being saved:</h2>
+
+      <ul>
+      <% level_of_urbanisation2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Size_Class %>
+    <%= form.text_field :Size_Class %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_2001 %>
+    <%= form.text_field :Number_2001 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_2011 %>
+    <%= form.text_field :Number_2011 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Population_million_2001 %>
+    <%= form.text_field :Population_million_2001 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Population_million_2011 %>
+    <%= form.text_field :Population_million_2011 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Growth_Rate_of_Population %>
+    <%= form.text_field :Growth_Rate_of_Population %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

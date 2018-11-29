@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  As_per_Sanction: 1.5
+  As_per_Utilization: 1.5
+  Year: MyString
+
+two:
+  State: MyString
+  As_per_Sanction: 1.5
+  As_per_Utilization: 1.5
+  Year: MyString

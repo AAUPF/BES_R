@@ -1,0 +1,67 @@
+<%= form_with(model: banking_infrastructure5, local: true) do |form| %>
+  <% if banking_infrastructure5.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(banking_infrastructure5.errors.count, "error") %> prohibited this banking_infrastructure5 from being saved:</h2>
+
+      <ul>
+      <% banking_infrastructure5.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :State %>
+    <%= form.text_field :State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :No_of_Branches %>
+    <%= form.text_field :No_of_Branches %>
+  </div>
+
+  <div class="field">
+    <%= form.label :No_of_Current_Accounts %>
+    <%= form.text_field :No_of_Current_Accounts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Current_Amount %>
+    <%= form.text_field :Current_Amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :No_of_Savings_Accounts %>
+    <%= form.text_field :No_of_Savings_Accounts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Savings_Amount %>
+    <%= form.text_field :Savings_Amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :No_of_Term_Accounts %>
+    <%= form.text_field :No_of_Term_Accounts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Term_Amount %>
+    <%= form.text_field :Term_Amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :No_of_Total_Accounts %>
+    <%= form.text_field :No_of_Total_Accounts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Amount %>
+    <%= form.text_field :Total_Amount %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

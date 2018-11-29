@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Shelters_Sanctioned_Planned: MyString
+  Officers: 1.5
+  Clerks: 1.5
+  Sub_ordinates: 1.5
+  Total: 1.5
+  Number_of_Female_Employees: 1.5
+  Percentage_of_Officers: 1.5
+  Percentage_of_Clerks: 1.5
+  Percentage_of_Sub_ordinates: 1.5
+  Total_Percentage: 1.5
+  Percentage_of_Female_Employees: 1.5
+
+two:
+  Shelters_Sanctioned_Planned: MyString
+  Officers: 1.5
+  Clerks: 1.5
+  Sub_ordinates: 1.5
+  Total: 1.5
+  Number_of_Female_Employees: 1.5
+  Percentage_of_Officers: 1.5
+  Percentage_of_Clerks: 1.5
+  Percentage_of_Sub_ordinates: 1.5
+  Total_Percentage: 1.5
+  Percentage_of_Female_Employees: 1.5

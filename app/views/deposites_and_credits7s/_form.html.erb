@@ -1,0 +1,47 @@
+<%= form_with(model: deposites_and_credits7, local: true) do |form| %>
+  <% if deposites_and_credits7.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(deposites_and_credits7.errors.count, "error") %> prohibited this deposites_and_credits7 from being saved:</h2>
+
+      <ul>
+      <% deposites_and_credits7.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Banks %>
+    <%= form.text_field :Banks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_branches %>
+    <%= form.text_field :Number_of_branches %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Deposit %>
+    <%= form.text_field :Deposit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Advance %>
+    <%= form.text_field :Advance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CD_Ratio %>
+    <%= form.text_field :CD_Ratio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Sector: MyString
+  Number_of_Branches: 1.5
+  2013-14: 1.5
+  2014-15: 1.5
+  2015-16: 1.5
+  2016-17: 1.5
+  2017_18_upto_Sep_2017: 1.5
+  Indicator: MyString
+
+two:
+  Sector: MyString
+  Number_of_Branches: 1.5
+  2013-14: 1.5
+  2014-15: 1.5
+  2015-16: 1.5
+  2016-17: 1.5
+  2017_18_upto_Sep_2017: 1.5
+  Indicator: MyString

@@ -1,0 +1,37 @@
+<%= form_with(model: deposites_and_credits4, local: true) do |form| %>
+  <% if deposites_and_credits4.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(deposites_and_credits4.errors.count, "error") %> prohibited this deposites_and_credits4 from being saved:</h2>
+
+      <ul>
+      <% deposites_and_credits4.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :State %>
+    <%= form.text_field :State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :As_per_Sanction %>
+    <%= form.text_field :As_per_Sanction %>
+  </div>
+
+  <div class="field">
+    <%= form.label :As_per_Utilization %>
+    <%= form.text_field :As_per_Utilization %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

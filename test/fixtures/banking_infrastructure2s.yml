@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  States: MyString
+  Number_of_Branches: 1.5
+  Percentage_share_in_all_India_branches: 1.5
+  Percentage_share_in_all_India_population: 1.5
+
+two:
+  States: MyString
+  Number_of_Branches: 1.5
+  Percentage_share_in_all_India_branches: 1.5
+  Percentage_share_in_all_India_population: 1.5

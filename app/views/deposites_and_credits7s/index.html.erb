@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Deposites And Credits7s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Banks</th>
+      <th>Number of branches</th>
+      <th>Deposit</th>
+      <th>Advance</th>
+      <th>Cd ratio</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deposites_and_credits7s.each do |deposites_and_credits7| %>
+      <tr>
+        <td><%= deposites_and_credits7.Banks %></td>
+        <td><%= deposites_and_credits7.Number_of_branches %></td>
+        <td><%= deposites_and_credits7.Deposit %></td>
+        <td><%= deposites_and_credits7.Advance %></td>
+        <td><%= deposites_and_credits7.CD_Ratio %></td>
+        <td><%= deposites_and_credits7.Indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Deposites And Credits7', new_deposites_and_credits7_path %>

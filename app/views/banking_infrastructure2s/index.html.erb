@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Banking Infrastructure2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>States</th>
+      <th>Number of branches</th>
+      <th>Percentage share in all india branches</th>
+      <th>Percentage share in all india population</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @banking_infrastructure2s.each do |banking_infrastructure2| %>
+      <tr>
+        <td><%= banking_infrastructure2.States %></td>
+        <td><%= banking_infrastructure2.Number_of_Branches %></td>
+        <td><%= banking_infrastructure2.Percentage_share_in_all_India_branches %></td>
+        <td><%= banking_infrastructure2.Percentage_share_in_all_India_population %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Banking Infrastructure2', new_banking_infrastructure2_path %>

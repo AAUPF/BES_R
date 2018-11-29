@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Deposites And Credits2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Year</th>
+      <th>Deposit</th>
+      <th>Credit</th>
+      <th>Cd ratio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deposites_and_credits2s.each do |deposites_and_credits2| %>
+      <tr>
+        <td><%= deposites_and_credits2.state %></td>
+        <td><%= deposites_and_credits2.Year %></td>
+        <td><%= deposites_and_credits2.Deposit %></td>
+        <td><%= deposites_and_credits2.Credit %></td>
+        <td><%= deposites_and_credits2.CD_Ratio %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Deposites And Credits2', new_deposites_and_credits2_path %>

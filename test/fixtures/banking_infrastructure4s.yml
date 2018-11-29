@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  RRB_Branch: MyString
+  Rural: 1.5
+  Semi_Urban: 1.5
+  Urban: 1.5
+  Total: 1.5
+
+two:
+  RRB_Branch: MyString
+  Rural: 1.5
+  Semi_Urban: 1.5
+  Urban: 1.5
+  Total: 1.5

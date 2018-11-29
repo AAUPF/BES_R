@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Deposites And Credits4s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>As per sanction</th>
+      <th>As per utilization</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deposites_and_credits4s.each do |deposites_and_credits4| %>
+      <tr>
+        <td><%= deposites_and_credits4.State %></td>
+        <td><%= deposites_and_credits4.As_per_Sanction %></td>
+        <td><%= deposites_and_credits4.As_per_Utilization %></td>
+        <td><%= deposites_and_credits4.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Deposites And Credits4', new_deposites_and_credits4_path %>

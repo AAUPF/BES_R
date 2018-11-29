@@ -1,1 +1,1 @@
-rails g scaffold Municipal_Finances Indicators:string	2014-15:float	2015-16:float	Indicator:string
+rails g scaffold Deposites_And_Credits7 Banks:string	Number_of_branches:float	Deposit:float	Advance:float	CD_Ratio:float	Indicator:string																				

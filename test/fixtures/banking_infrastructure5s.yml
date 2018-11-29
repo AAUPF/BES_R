@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  No_of_Branches: 1.5
+  No_of_Current_Accounts: 1.5
+  Current_Amount: 1.5
+  No_of_Savings_Accounts: 1.5
+  Savings_Amount: 1.5
+  No_of_Term_Accounts: 1.5
+  Term_Amount: 1.5
+  No_of_Total_Accounts: 1.5
+  Total_Amount: 1.5
+
+two:
+  State: MyString
+  No_of_Branches: 1.5
+  No_of_Current_Accounts: 1.5
+  Current_Amount: 1.5
+  No_of_Savings_Accounts: 1.5
+  Savings_Amount: 1.5
+  No_of_Term_Accounts: 1.5
+  Term_Amount: 1.5
+  No_of_Total_Accounts: 1.5
+  Total_Amount: 1.5

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Banking Infrastructure5s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>No of branches</th>
+      <th>No of current accounts</th>
+      <th>Current amount</th>
+      <th>No of savings accounts</th>
+      <th>Savings amount</th>
+      <th>No of term accounts</th>
+      <th>Term amount</th>
+      <th>No of total accounts</th>
+      <th>Total amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @banking_infrastructure5s.each do |banking_infrastructure5| %>
+      <tr>
+        <td><%= banking_infrastructure5.State %></td>
+        <td><%= banking_infrastructure5.No_of_Branches %></td>
+        <td><%= banking_infrastructure5.No_of_Current_Accounts %></td>
+        <td><%= banking_infrastructure5.Current_Amount %></td>
+        <td><%= banking_infrastructure5.No_of_Savings_Accounts %></td>
+        <td><%= banking_infrastructure5.Savings_Amount %></td>
+        <td><%= banking_infrastructure5.No_of_Term_Accounts %></td>
+        <td><%= banking_infrastructure5.Term_Amount %></td>
+        <td><%= banking_infrastructure5.No_of_Total_Accounts %></td>
+        <td><%= banking_infrastructure5.Total_Amount %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Banking Infrastructure5', new_banking_infrastructure5_path %>

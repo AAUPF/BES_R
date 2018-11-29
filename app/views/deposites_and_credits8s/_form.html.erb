@@ -1,0 +1,47 @@
+<%= form_with(model: deposites_and_credits8, local: true) do |form| %>
+  <% if deposites_and_credits8.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(deposites_and_credits8.errors.count, "error") %> prohibited this deposites_and_credits8 from being saved:</h2>
+
+      <ul>
+      <% deposites_and_credits8.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sector %>
+    <%= form.text_field :Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2014-15 %>
+    <%= form.text_field :2014-15 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2015-16 %>
+    <%= form.text_field :2015-16 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2016-17 %>
+    <%= form.text_field :2016-17 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2017_18_upto_Sep_2017 %>
+    <%= form.text_field :2017_18_upto_Sep_2017 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,74 @@
 Rails.application.routes.draw do
+  resources :deposites_and_credits7s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :deposites_and_credits3s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :deposites_and_credits1s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :banking_infrastructure5s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :deposites_and_credits8s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :deposites_and_credits6s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :deposites_and_credits5s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :deposites_and_credits4s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :deposites_and_credits2s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :banking_infrastructure6s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :banking_infrastructure4s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :banking_infrastructure3s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :banking_infrastructure2s do 
+    collection { post :import }
+    collection { get :dropdown }
+    collection { get :test }
+    end 
+resources :level_of_urbanisation2s do 
+collection { post :import }
+collection { get :dropdown }
+collection { get :test }
+end 
   resources :micro_finance2s do 
                       collection { post :import }
                       collection { get :dropdown }

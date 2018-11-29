@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Level Of Urbanisation2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Size class</th>
+      <th>Number 2001</th>
+      <th>Number 2011</th>
+      <th>Population million 2001</th>
+      <th>Population million 2011</th>
+      <th>Growth rate of population</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @level_of_urbanisation2s.each do |level_of_urbanisation2| %>
+      <tr>
+        <td><%= level_of_urbanisation2.Size_Class %></td>
+        <td><%= level_of_urbanisation2.Number_2001 %></td>
+        <td><%= level_of_urbanisation2.Number_2011 %></td>
+        <td><%= level_of_urbanisation2.Population_million_2001 %></td>
+        <td><%= level_of_urbanisation2.Population_million_2011 %></td>
+        <td><%= level_of_urbanisation2.Growth_Rate_of_Population %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Level Of Urbanisation2', new_level_of_urbanisation2_path %>

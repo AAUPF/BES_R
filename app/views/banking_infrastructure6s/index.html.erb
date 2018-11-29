@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Banking Infrastructure6s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shelters sanctioned planned</th>
+      <th>Officers</th>
+      <th>Clerks</th>
+      <th>Sub ordinates</th>
+      <th>Total</th>
+      <th>Number of female employees</th>
+      <th>Percentage of officers</th>
+      <th>Percentage of clerks</th>
+      <th>Percentage of sub ordinates</th>
+      <th>Total percentage</th>
+      <th>Percentage of female employees</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @banking_infrastructure6s.each do |banking_infrastructure6| %>
+      <tr>
+        <td><%= banking_infrastructure6.Shelters_Sanctioned_Planned %></td>
+        <td><%= banking_infrastructure6.Officers %></td>
+        <td><%= banking_infrastructure6.Clerks %></td>
+        <td><%= banking_infrastructure6.Sub_ordinates %></td>
+        <td><%= banking_infrastructure6.Total %></td>
+        <td><%= banking_infrastructure6.Number_of_Female_Employees %></td>
+        <td><%= banking_infrastructure6.Percentage_of_Officers %></td>
+        <td><%= banking_infrastructure6.Percentage_of_Clerks %></td>
+        <td><%= banking_infrastructure6.Percentage_of_Sub_ordinates %></td>
+        <td><%= banking_infrastructure6.Total_Percentage %></td>
+        <td><%= banking_infrastructure6.Percentage_of_Female_Employees %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Banking Infrastructure6', new_banking_infrastructure6_path %>

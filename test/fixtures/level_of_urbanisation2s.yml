@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Size_Class: MyString
+  Number_2001: 1.5
+  Number_2011: 1.5
+  Population_million_2001: 1.5
+  Population_million_2011: 1.5
+  Growth_Rate_of_Population: 1.5
+
+two:
+  Size_Class: MyString
+  Number_2001: 1.5
+  Number_2011: 1.5
+  Population_million_2001: 1.5
+  Population_million_2011: 1.5
+  Growth_Rate_of_Population: 1.5

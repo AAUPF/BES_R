@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Banking Infrastructure4s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rrb branch</th>
+      <th>Rural</th>
+      <th>Semi urban</th>
+      <th>Urban</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @banking_infrastructure4s.each do |banking_infrastructure4| %>
+      <tr>
+        <td><%= banking_infrastructure4.RRB_Branch %></td>
+        <td><%= banking_infrastructure4.Rural %></td>
+        <td><%= banking_infrastructure4.Semi_Urban %></td>
+        <td><%= banking_infrastructure4.Urban %></td>
+        <td><%= banking_infrastructure4.Total %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Banking Infrastructure4', new_banking_infrastructure4_path %>

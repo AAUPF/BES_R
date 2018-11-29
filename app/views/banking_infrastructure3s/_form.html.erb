@@ -1,0 +1,42 @@
+<%= form_with(model: banking_infrastructure3, local: true) do |form| %>
+  <% if banking_infrastructure3.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(banking_infrastructure3.errors.count, "error") %> prohibited this banking_infrastructure3 from being saved:</h2>
+
+      <ul>
+      <% banking_infrastructure3.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :State %>
+    <%= form.text_field :State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :State_Cooperative_Banks %>
+    <%= form.text_field :State_Cooperative_Banks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :District_Central_Cooperative_Banks %>
+    <%= form.text_field :District_Central_Cooperative_Banks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
