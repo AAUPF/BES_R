@@ -21,6 +21,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
 
    ji1 = [:Districts, :Number_of_Factories_in_Operation, :Gross_Value_of_Output_GVO_Rs_crore, :Gross_Value_Added_GVA_Rs_crore, :GVA_Percentage_Share_in_India, :GVA_as_Percentage_of_GVO, :Number_of_Persons_Engaged, :Percentage_Share_in_India, :Employment_per_Factory, :Wages_Salaries_and_Bonus_per_Person_annually_Rs]
 
@@ -41,7 +42,7 @@ def test
         a = AnnualSurvey6.table(b,rain_fall_type,year,ji1,compare)
       else
         @AnnualSurvey6s = AnnualSurvey6.search(params[:search],compare,year,rain_fall_type)
-        a = AnnualSurvey6.query(@AnnualSurvey6s,params[:year],rain_fall_type,views,ji,compare)
+        a = AnnualSurvey6.query(@AnnualSurvey6s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

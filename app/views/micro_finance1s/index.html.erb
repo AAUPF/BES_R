@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Micro Finance1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Number of shgs with bank linkage</th>
+      <th>Savings of shgs with banks</th>
+      <th>Bank loans disbursed during the year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @micro_finance1s.each do |micro_finance1| %>
+      <tr>
+        <td><%= micro_finance1.State %></td>
+        <td><%= micro_finance1.Number_of_SHGs_with_Bank_Linkage %></td>
+        <td><%= micro_finance1.Savings_of_SHGs_with_Banks %></td>
+        <td><%= micro_finance1.Bank_loans_disbursed_during_the_year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Micro Finance1', new_micro_finance1_path %>

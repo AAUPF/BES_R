@@ -6,6 +6,8 @@ module Newmodulefunctions
     hash_data = result.reject{|x| x["Sector"].include? "Total"}.map do |col|
       {
         type:views,
+        toolTipContent: "{label}<br/>{name}: <strong>{y}</strong>",
+        name:col[:Sector],
         legendText: col[:Sector],
         showInLegend: true,
         dataPoints: [{ y: col[_year], label: _year }]
@@ -245,7 +247,7 @@ def self.title_return(views,search,hash_data,compare)
   end
 
 
-    title = if (views == 'stackedBar100') || (views == 'stackedBar')
+    title = if (views == 'stackedBar100' || views == 'stackedBar' || views == 'stackedColumn' || views == 'stackedColumn100')
       {
         animationEnabled: true,
         exportEnabled: true,
@@ -262,12 +264,12 @@ def self.title_return(views,search,hash_data,compare)
         title: {
           text: newname.to_s.tr('_', ' ').to_s
         },
-        # axisX: {
-        #   interval:1,
-        #   labelMaxWidth: 180,
-        #   labelAngle: 90,
-        #   labelFontFamily:"verdana0"
-        #   },
+        axisX: {
+          interval:1,
+          labelMaxWidth: 180,
+          labelAngle: 90,
+          labelFontFamily:"verdana0"
+          },
         data: hash_data
       }
 

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Financial Institutions1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Crop loan refinance</th>
+      <th>Investment credit refinancing</th>
+      <th>Ridf plus wif plus fpf loan sanctioned</th>
+      <th>Total financial support</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @financial_institutions1s.each do |financial_institutions1| %>
+      <tr>
+        <td><%= financial_institutions1.Year %></td>
+        <td><%= financial_institutions1.Crop_Loan_Refinance %></td>
+        <td><%= financial_institutions1.Investment_Credit_Refinancing %></td>
+        <td><%= financial_institutions1.RIDF_plus_WIF_plus_FPF_Loan_sanctioned %></td>
+        <td><%= financial_institutions1.Total_Financial_Support %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Financial Institutions1', new_financial_institutions1_path %>

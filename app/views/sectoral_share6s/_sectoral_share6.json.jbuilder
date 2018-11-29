@@ -1,0 +1,2 @@
+json.extract! sectoral_share6, :id, :State, :No_of_PACS, :Deposits_Rs_crore, :Borrowings_Rs_crore, :Loans_and_Advances_Outstanding_for_Agriculture_Rs_crore, :Loans_and_Advances_Outstanding_for_Non_Agriculture_Rs_crore, :No_of_Societies_in_Profit, :Amount_of_Societies_in_Profit_Rs_lakh, :No_of_Societies_in_Loss, :Amount_of_Societies_in_Loss_Rs_lakh, :created_at, :updated_at
+json.url sectoral_share6_url(sectoral_share6, format: :json)

@@ -1,0 +1,1 @@
+json.array! @rural_infrastructure_development_funds, partial: 'rural_infrastructure_development_funds/rural_infrastructure_development_fund', as: :rural_infrastructure_development_fund

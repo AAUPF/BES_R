@@ -1,0 +1,47 @@
+<%= form_with(model: banking_infrastructure1, local: true) do |form| %>
+  <% if banking_infrastructure1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(banking_infrastructure1.errors.count, "error") %> prohibited this banking_infrastructure1 from being saved:</h2>
+
+      <ul>
+      <% banking_infrastructure1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Years_End_March %>
+    <%= form.text_field :Years_End_March %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Growth_Rate %>
+    <%= form.text_field :Growth_Rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_distribution_of_Rural_branches %>
+    <%= form.text_field :Percentage_distribution_of_Rural_branches %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_distribution_of_Semiurban_Branches %>
+    <%= form.text_field :Percentage_distribution_of_Semiurban_Branches %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_distribution_of_Urban_branches %>
+    <%= form.text_field :Percentage_distribution_of_Urban_branches %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

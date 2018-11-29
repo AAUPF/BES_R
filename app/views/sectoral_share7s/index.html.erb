@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sectoral Share7s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>2013-14</th>
+      <th>2014-15</th>
+      <th>2015-16</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sectoral_share7s.each do |sectoral_share7| %>
+      <tr>
+        <td><%= sectoral_share7.State %></td>
+        <td><%= sectoral_share7.2013-14 %></td>
+        <td><%= sectoral_share7.2014-15 %></td>
+        <td><%= sectoral_share7.2015-16 %></td>
+        <td><%= sectoral_share7.Indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sectoral Share7', new_sectoral_share7_path %>

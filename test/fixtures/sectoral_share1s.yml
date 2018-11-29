@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Sector: MyString
+  ACP_Target: 1.5
+  Achievement: 1.5
+  Achievement_Percentage: 1.5
+  Percentage_of_Share_in_Advances: 1.5
+  Year: MyString
+
+two:
+  Sector: MyString
+  ACP_Target: 1.5
+  Achievement: 1.5
+  Achievement_Percentage: 1.5
+  Percentage_of_Share_in_Advances: 1.5
+  Year: MyString

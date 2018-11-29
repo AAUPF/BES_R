@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sectoral Share9s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Target</th>
+      <th>Achievement</th>
+      <th>Achievement percentage</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sectoral_share9s.each do |sectoral_share9| %>
+      <tr>
+        <td><%= sectoral_share9.Year %></td>
+        <td><%= sectoral_share9.Target %></td>
+        <td><%= sectoral_share9.Achievement %></td>
+        <td><%= sectoral_share9.Achievement_Percentage %></td>
+        <td><%= sectoral_share9.Indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sectoral Share9', new_sectoral_share9_path %>

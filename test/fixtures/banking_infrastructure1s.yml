@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Years_End_March: MyString
+  Total: 1.5
+  Growth_Rate: 1.5
+  Percentage_distribution_of_Rural_branches: 1.5
+  Percentage_distribution_of_Semiurban_Branches: 1.5
+  Percentage_distribution_of_Urban_branches: 1.5
+
+two:
+  Years_End_March: MyString
+  Total: 1.5
+  Growth_Rate: 1.5
+  Percentage_distribution_of_Rural_branches: 1.5
+  Percentage_distribution_of_Semiurban_Branches: 1.5
+  Percentage_distribution_of_Urban_branches: 1.5

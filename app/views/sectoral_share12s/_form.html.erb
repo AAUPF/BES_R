@@ -1,0 +1,42 @@
+<%= form_with(model: sectoral_share12, local: true) do |form| %>
+  <% if sectoral_share12.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sectoral_share12.errors.count, "error") %> prohibited this sectoral_share12 from being saved:</h2>
+
+      <ul>
+      <% sectoral_share12.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Target %>
+    <%= form.text_field :Target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Achievement %>
+    <%= form.text_field :Achievement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Achievement_Percentage %>
+    <%= form.text_field :Achievement_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

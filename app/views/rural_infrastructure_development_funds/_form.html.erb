@@ -1,0 +1,37 @@
+<%= form_with(model: rural_infrastructure_development_fund, local: true) do |form| %>
+  <% if rural_infrastructure_development_fund.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rural_infrastructure_development_fund.errors.count, "error") %> prohibited this rural_infrastructure_development_fund from being saved:</h2>
+
+      <ul>
+      <% rural_infrastructure_development_fund.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :RIDF_Tranche %>
+    <%= form.text_field :RIDF_Tranche %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Sanction %>
+    <%= form.text_field :Sanction %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Disbursement %>
+    <%= form.text_field :Disbursement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Disbursement_Percentage %>
+    <%= form.text_field :Disbursement_Percentage %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

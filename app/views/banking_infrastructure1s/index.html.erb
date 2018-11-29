@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Banking Infrastructure1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Years end march</th>
+      <th>Total</th>
+      <th>Growth rate</th>
+      <th>Percentage distribution of rural branches</th>
+      <th>Percentage distribution of semiurban branches</th>
+      <th>Percentage distribution of urban branches</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @banking_infrastructure1s.each do |banking_infrastructure1| %>
+      <tr>
+        <td><%= banking_infrastructure1.Years_End_March %></td>
+        <td><%= banking_infrastructure1.Total %></td>
+        <td><%= banking_infrastructure1.Growth_Rate %></td>
+        <td><%= banking_infrastructure1.Percentage_distribution_of_Rural_branches %></td>
+        <td><%= banking_infrastructure1.Percentage_distribution_of_Semiurban_Branches %></td>
+        <td><%= banking_infrastructure1.Percentage_distribution_of_Urban_branches %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Banking Infrastructure1', new_banking_infrastructure1_path %>

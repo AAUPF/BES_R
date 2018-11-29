@@ -21,6 +21,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
 ji1 = [:Districts, :Total_Rail_Route, :Total_Rail_Track, :Total_Rail_Route_Per_1000_sq_km, :Total_Rail_Route_Per_lakh_Population, :Total_Rail_Track_Per_1000_sq_km, :Total_Rail_Track_Per_lakh_Population]
   if rain_fall_type || views
 
@@ -39,7 +40,7 @@ ji1 = [:Districts, :Total_Rail_Route, :Total_Rail_Track, :Total_Rail_Route_Per_1
         a = Railway.table(b,rain_fall_type,year,ji1,compare)
       else
         @Railways = Railway.search(params[:search],compare,year,rain_fall_type)
-        a = Railway.query(@Railways,params[:year],rain_fall_type,views,ji,compare)
+        a = Railway.query(@Railways,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

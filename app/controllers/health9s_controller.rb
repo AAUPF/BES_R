@@ -21,7 +21,8 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:State, :Percentage_of_children_fully_immunized_NFHS_3_2005_06, :Percentage_of_children_fully_immunized_NFHS_4_2015_16, :Percentage_Point_Increase, :Rank_by_percentage_increase]
+   search  = params[:search]
+ji1 = [:Districts, :Percentage_of_children_fully_immunized_NFHS_3_2005_06, :Percentage_of_children_fully_immunized_NFHS_4_2015_16, :Percentage_Point_Increase, :Rank_by_percentage_increase]
   if rain_fall_type || views
 
       if views == "Map View"
@@ -39,7 +40,7 @@ ji1 = [:State, :Percentage_of_children_fully_immunized_NFHS_3_2005_06, :Percenta
         a = Health9.table(b,rain_fall_type,year,ji1,compare)
       else
         @Health9s = Health9.search(params[:search],compare,year,rain_fall_type)
-        a = Health9.query(@Health9s,params[:year],rain_fall_type,views,ji,compare)
+        a = Health9.query(@Health9s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

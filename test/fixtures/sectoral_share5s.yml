@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Commercial_Banks: 1.5
+  RRBs: 1.5
+  Cooperative_and_LDBs: 1.5
+  Total: 1.5
+  Annual_Growth_Rate: 1.5
+
+two:
+  Year: MyString
+  Commercial_Banks: 1.5
+  RRBs: 1.5
+  Cooperative_and_LDBs: 1.5
+  Total: 1.5
+  Annual_Growth_Rate: 1.5

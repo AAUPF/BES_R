@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rural Infrastructure Development Funds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ridf tranche</th>
+      <th>Sanction</th>
+      <th>Disbursement</th>
+      <th>Disbursement percentage</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rural_infrastructure_development_funds.each do |rural_infrastructure_development_fund| %>
+      <tr>
+        <td><%= rural_infrastructure_development_fund.RIDF_Tranche %></td>
+        <td><%= rural_infrastructure_development_fund.Sanction %></td>
+        <td><%= rural_infrastructure_development_fund.Disbursement %></td>
+        <td><%= rural_infrastructure_development_fund.Disbursement_Percentage %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rural Infrastructure Development Fund', new_rural_infrastructure_development_fund_path %>

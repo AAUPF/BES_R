@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sectoral Share1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>Acp target</th>
+      <th>Achievement</th>
+      <th>Achievement percentage</th>
+      <th>Percentage of share in advances</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sectoral_share1s.each do |sectoral_share1| %>
+      <tr>
+        <td><%= sectoral_share1.Sector %></td>
+        <td><%= sectoral_share1.ACP_Target %></td>
+        <td><%= sectoral_share1.Achievement %></td>
+        <td><%= sectoral_share1.Achievement_Percentage %></td>
+        <td><%= sectoral_share1.Percentage_of_Share_in_Advances %></td>
+        <td><%= sectoral_share1.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sectoral Share1', new_sectoral_share1_path %>

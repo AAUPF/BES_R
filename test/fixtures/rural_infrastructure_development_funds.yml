@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  RIDF_Tranche: MyString
+  Sanction: 1.5
+  Disbursement: 1.5
+  Disbursement_Percentage: 1.5
+
+two:
+  RIDF_Tranche: MyString
+  Sanction: 1.5
+  Disbursement: 1.5
+  Disbursement_Percentage: 1.5

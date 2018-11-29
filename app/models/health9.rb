@@ -1,4 +1,4 @@
 class Health9 < ApplicationRecord
-  extend Statedata  
+  extend Statewithoutyear  
 
       end

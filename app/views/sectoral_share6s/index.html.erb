@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sectoral Share6s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>No of pacs</th>
+      <th>Deposits rs crore</th>
+      <th>Borrowings rs crore</th>
+      <th>Loans and advances outstanding for agriculture rs crore</th>
+      <th>Loans and advances outstanding for non agriculture rs crore</th>
+      <th>No of societies in profit</th>
+      <th>Amount of societies in profit rs lakh</th>
+      <th>No of societies in loss</th>
+      <th>Amount of societies in loss rs lakh</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sectoral_share6s.each do |sectoral_share6| %>
+      <tr>
+        <td><%= sectoral_share6.State %></td>
+        <td><%= sectoral_share6.No_of_PACS %></td>
+        <td><%= sectoral_share6.Deposits_Rs_crore %></td>
+        <td><%= sectoral_share6.Borrowings_Rs_crore %></td>
+        <td><%= sectoral_share6.Loans_and_Advances_Outstanding_for_Agriculture_Rs_crore %></td>
+        <td><%= sectoral_share6.Loans_and_Advances_Outstanding_for_Non_Agriculture_Rs_crore %></td>
+        <td><%= sectoral_share6.No_of_Societies_in_Profit %></td>
+        <td><%= sectoral_share6.Amount_of_Societies_in_Profit_Rs_lakh %></td>
+        <td><%= sectoral_share6.No_of_Societies_in_Loss %></td>
+        <td><%= sectoral_share6.Amount_of_Societies_in_Loss_Rs_lakh %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sectoral Share6', new_sectoral_share6_path %>

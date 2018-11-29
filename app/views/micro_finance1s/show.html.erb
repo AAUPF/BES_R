@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>State:</strong>
+  <%= @micro_finance1.State %>
+</p>
+
+<p>
+  <strong>Number of shgs with bank linkage:</strong>
+  <%= @micro_finance1.Number_of_SHGs_with_Bank_Linkage %>
+</p>
+
+<p>
+  <strong>Savings of shgs with banks:</strong>
+  <%= @micro_finance1.Savings_of_SHGs_with_Banks %>
+</p>
+
+<p>
+  <strong>Bank loans disbursed during the year:</strong>
+  <%= @micro_finance1.Bank_loans_disbursed_during_the_year %>
+</p>
+
+<%= link_to 'Edit', edit_micro_finance1_path(@micro_finance1) %> |
+<%= link_to 'Back', micro_finance1s_path %>

@@ -1,0 +1,42 @@
+<%= form_with(model: micro_finance2, local: true) do |form| %>
+  <% if micro_finance2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(micro_finance2.errors.count, "error") %> prohibited this micro_finance2 from being saved:</h2>
+
+      <ul>
+      <% micro_finance2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Indicators %>
+    <%= form.text_field :Indicators %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mar-14 %>
+    <%= form.text_field :Mar-14 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mar-15 %>
+    <%= form.text_field :Mar-15 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mar-16 %>
+    <%= form.text_field :Mar-16 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mar-17 %>
+    <%= form.text_field :Mar-17 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,67 @@
+<%= form_with(model: sectoral_share6, local: true) do |form| %>
+  <% if sectoral_share6.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sectoral_share6.errors.count, "error") %> prohibited this sectoral_share6 from being saved:</h2>
+
+      <ul>
+      <% sectoral_share6.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :State %>
+    <%= form.text_field :State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :No_of_PACS %>
+    <%= form.text_field :No_of_PACS %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Deposits_Rs_crore %>
+    <%= form.text_field :Deposits_Rs_crore %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Borrowings_Rs_crore %>
+    <%= form.text_field :Borrowings_Rs_crore %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Loans_and_Advances_Outstanding_for_Agriculture_Rs_crore %>
+    <%= form.text_field :Loans_and_Advances_Outstanding_for_Agriculture_Rs_crore %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Loans_and_Advances_Outstanding_for_Non_Agriculture_Rs_crore %>
+    <%= form.text_field :Loans_and_Advances_Outstanding_for_Non_Agriculture_Rs_crore %>
+  </div>
+
+  <div class="field">
+    <%= form.label :No_of_Societies_in_Profit %>
+    <%= form.text_field :No_of_Societies_in_Profit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Amount_of_Societies_in_Profit_Rs_lakh %>
+    <%= form.text_field :Amount_of_Societies_in_Profit_Rs_lakh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :No_of_Societies_in_Loss %>
+    <%= form.text_field :No_of_Societies_in_Loss %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Amount_of_Societies_in_Loss_Rs_lakh %>
+    <%= form.text_field :Amount_of_Societies_in_Loss_Rs_lakh %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

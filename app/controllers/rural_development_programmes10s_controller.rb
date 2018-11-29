@@ -75,11 +75,11 @@ remove = "Bihar"
       if views == "Map View"
         l =  rain_fall_type.gsub(" ","")           
          if rain_fall_type  ==  "All"
-          b = RuralDevelopmentProgrammes10.map_search("All",compare,year,rain_fall_type)
+          b = RuralDevelopmentProgrammes10.search(params[:search],compare,year,rain_fall_type,legend)
           u = "Total"
           a = RuralDevelopmentProgrammes10.map(b,params[:year],rain_fall_type,views)
          else
-          b = RuralDevelopmentProgrammes10.map_search(params[:search],compare,year,rain_fall_type)
+          b = RuralDevelopmentProgrammes10.search(params[:search],compare,year,rain_fall_type,legend)
           a = RuralDevelopmentProgrammes10.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  

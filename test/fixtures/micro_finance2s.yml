@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Indicators: MyString
+  Mar-14: 1.5
+  Mar-15: 1.5
+  Mar-16: 1.5
+  Mar-17: 1.5
+
+two:
+  Indicators: MyString
+  Mar-14: 1.5
+  Mar-15: 1.5
+  Mar-16: 1.5
+  Mar-17: 1.5

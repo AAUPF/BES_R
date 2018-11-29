@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Crop_Loan_Refinance: 1.5
+  Investment_Credit_Refinancing: 1.5
+  RIDF_plus_WIF_plus_FPF_Loan_sanctioned: 1.5
+  Total_Financial_Support: 1.5
+
+two:
+  Year: MyString
+  Crop_Loan_Refinance: 1.5
+  Investment_Credit_Refinancing: 1.5
+  RIDF_plus_WIF_plus_FPF_Loan_sanctioned: 1.5
+  Total_Financial_Support: 1.5

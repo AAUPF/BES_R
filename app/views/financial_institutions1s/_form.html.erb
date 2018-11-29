@@ -1,0 +1,42 @@
+<%= form_with(model: financial_institutions1, local: true) do |form| %>
+  <% if financial_institutions1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(financial_institutions1.errors.count, "error") %> prohibited this financial_institutions1 from being saved:</h2>
+
+      <ul>
+      <% financial_institutions1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Crop_Loan_Refinance %>
+    <%= form.text_field :Crop_Loan_Refinance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Investment_Credit_Refinancing %>
+    <%= form.text_field :Investment_Credit_Refinancing %>
+  </div>
+
+  <div class="field">
+    <%= form.label :RIDF_plus_WIF_plus_FPF_Loan_sanctioned %>
+    <%= form.text_field :RIDF_plus_WIF_plus_FPF_Loan_sanctioned %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Financial_Support %>
+    <%= form.text_field :Total_Financial_Support %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

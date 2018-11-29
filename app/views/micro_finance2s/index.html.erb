@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Micro Finance2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Indicators</th>
+      <th>Mar-14</th>
+      <th>Mar-15</th>
+      <th>Mar-16</th>
+      <th>Mar-17</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @micro_finance2s.each do |micro_finance2| %>
+      <tr>
+        <td><%= micro_finance2.Indicators %></td>
+        <td><%= micro_finance2.Mar-14 %></td>
+        <td><%= micro_finance2.Mar-15 %></td>
+        <td><%= micro_finance2.Mar-16 %></td>
+        <td><%= micro_finance2.Mar-17 %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Micro Finance2', new_micro_finance2_path %>
