@@ -56,7 +56,7 @@ class BankingInfrastructure4sController < ApplicationController
 
 
 def test
-  ji = [:Rural, :Semi_Urban, :Urban, :Total]
+  ji = [:Rural, :Semi_Urban, :Urban]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]

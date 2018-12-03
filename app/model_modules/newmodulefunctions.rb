@@ -278,7 +278,28 @@ return title
     
   end
 
+  def self.title_return_new(views,search,hash_data,compare,_year,legend)
+    if compare != "None"
+      newname = "#{search} vs #{compare}"
+    else
+      newname = search
+    end
+  
+  
+      title = 
+        {
+          animationEnabled: true,
+          exportEnabled: true,
+          title: {
+            text: newname.to_s.tr('_', ' ').to_s
+          },
+          data: hash_data
+        }
+  
+      
+  return title
 
+  end
 
 
   def self.title_return_two(views,search,hash_data,compare)

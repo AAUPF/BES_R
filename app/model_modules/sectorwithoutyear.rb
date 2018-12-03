@@ -189,7 +189,8 @@ module Sectorwithoutyear
         end
       end
     end
-    Newmodulefunctions.title_return(views, search, hash_data, compare)
+    # Newmodulefunctions.title_return(views, search, hash_data, compare)
+    Newmodulefunctions.title_return_new(views, search, hash_data, compare,_year,legend)
 
   end
     end
