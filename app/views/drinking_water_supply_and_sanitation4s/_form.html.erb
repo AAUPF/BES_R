@@ -1,0 +1,42 @@
+<%= form_with(model: drinking_water_supply_and_sanitation4, local: true) do |form| %>
+  <% if drinking_water_supply_and_sanitation4.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(drinking_water_supply_and_sanitation4.errors.count, "error") %> prohibited this drinking_water_supply_and_sanitation4 from being saved:</h2>
+
+      <ul>
+      <% drinking_water_supply_and_sanitation4.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sector %>
+    <%= form.text_field :Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Target %>
+    <%= form.text_field :Target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Achievement %>
+    <%= form.text_field :Achievement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Achievement_Percentage %>
+    <%= form.text_field :Achievement_Percentage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

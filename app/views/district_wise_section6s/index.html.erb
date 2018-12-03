@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>District Wise Section6s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Total</th>
+      <th>Enrolment</th>
+      <th>Number of children availing mdm per day</th>
+      <th>Coverage in percentage</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @district_wise_section6s.each do |district_wise_section6| %>
+      <tr>
+        <td><%= district_wise_section6.Districts %></td>
+        <td><%= district_wise_section6.Total %></td>
+        <td><%= district_wise_section6._Enrolment %></td>
+        <td><%= district_wise_section6.Number_of_Children_Availing_MDM_per_day %></td>
+        <td><%= district_wise_section6.Coverage_in_percentage %></td>
+        <td><%= district_wise_section6.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New District Wise Section6', new_district_wise_section6_path %>

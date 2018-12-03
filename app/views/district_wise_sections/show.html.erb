@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Districts:</strong>
+  <%= @district_wise_section.Districts %>
+</p>
+
+<p>
+  <strong>Number of handpumps installed:</strong>
+  <%= @district_wise_section.Number_of_Handpumps_Installed %>
+</p>
+
+<p>
+  <strong>Slipped back habitations or water quality problems covered:</strong>
+  <%= @district_wise_section.Slipped_back_Habitations_or_Water_quality_Problems_Covered %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @district_wise_section.Year %>
+</p>
+
+<%= link_to 'Edit', edit_district_wise_section_path(@district_wise_section) %> |
+<%= link_to 'Back', district_wise_sections_path %>

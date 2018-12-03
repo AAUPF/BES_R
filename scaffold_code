@@ -1,1 +1,1 @@
-rails g scaffold Deposites_And_Credits7 Banks:string	Number_of_branches:float	Deposit:float	Advance:float	CD_Ratio:float	Indicator:string																				
+rails g scaffold DistrictWiseSection9 Districts:string	Districts:string	Constituent_College:float	Total:float	Science_Arts_Commerce_College:float	Engineering :float	Medical:float	B_Ed:float	Others:float	All_Colleges:float

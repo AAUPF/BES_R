@@ -426,7 +426,7 @@ module Generaldata
         above_extreme = []
     
         b.map.with_index do |el, _i|
-          dist = el['Characteristics']
+          dist = el['Districts']
     
           colour = "#{rain_fall_type}_Colour"
           if el[colour] == 'Red'
@@ -545,7 +545,7 @@ module Generaldata
       
           b.map.with_index do |el,i|
       
-              dist = el["Characteristics"]
+              dist = el["Districts"]
       
             if (0..6) === i
               hash1 = { y: el[rain_fall_type], label: dist, color: "Red" }
@@ -665,7 +665,7 @@ module Generaldata
     
         b.map.with_index do |el,i|
     
-            dist = el["Characteristics"]
+            dist = el["Districts"]
     
           if (0..6) === i
             hash1 = { y: el[rain_fall_type], label: dist, color: "Red" }

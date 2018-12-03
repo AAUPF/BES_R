@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Total_Enrolment: 1.5
+  Number_of_Children_Availing_MDM_per_day: 1.5
+  Coverage_in_percentage: 1.5
+  Year: MyString
+
+two:
+  Districts: MyString
+  Total_Enrolment: 1.5
+  Number_of_Children_Availing_MDM_per_day: 1.5
+  Coverage_in_percentage: 1.5
+  Year: MyString

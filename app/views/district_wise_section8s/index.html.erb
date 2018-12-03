@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>District Wise Section8s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Affiliated college</th>
+      <th>Constituent college</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @district_wise_section8s.each do |district_wise_section8| %>
+      <tr>
+        <td><%= district_wise_section8.Districts %></td>
+        <td><%= district_wise_section8.Affiliated_College %></td>
+        <td><%= district_wise_section8.Constituent_College %></td>
+        <td><%= district_wise_section8.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New District Wise Section8', new_district_wise_section8_path %>

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Districts: MyString
+  Constituent_College: 1.5
+  Total: 1.5
+  Science_Arts_Commerce_College: 1.5
+  Engineering: 1.5
+  Medical: 1.5
+  B_Ed: 1.5
+  Others: 1.5
+  All_Colleges: 1.5
+
+two:
+  Districts: MyString
+  Districts: MyString
+  Constituent_College: 1.5
+  Total: 1.5
+  Science_Arts_Commerce_College: 1.5
+  Engineering: 1.5
+  Medical: 1.5
+  B_Ed: 1.5
+  Others: 1.5
+  All_Colleges: 1.5

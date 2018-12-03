@@ -1,0 +1,1 @@
+json.partial! "drinking_water_supply_and_sanitation2s/drinking_water_supply_and_sanitation2", drinking_water_supply_and_sanitation2: @drinking_water_supply_and_sanitation2

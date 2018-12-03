@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Handpumps_Installed: 1.5
+  Slipped_back_Habitations_or_Water_quality_problems_covered: 1.5
+  IHHL_constructed_under_APL: 1.5
+  IHHL_constructed_under_BPL: 1.5
+  Total_IHHL_constructed: 1.5
+
+two:
+  Year: MyString
+  Handpumps_Installed: 1.5
+  Slipped_back_Habitations_or_Water_quality_problems_covered: 1.5
+  IHHL_constructed_under_APL: 1.5
+  IHHL_constructed_under_BPL: 1.5
+  Total_IHHL_constructed: 1.5

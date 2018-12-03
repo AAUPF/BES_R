@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Outlay: 1.5
+  Expenditure: 1.5
+  Percentage_of_Utilisation: 1.5
+
+two:
+  Year: MyString
+  Outlay: 1.5
+  Expenditure: 1.5
+  Percentage_of_Utilisation: 1.5

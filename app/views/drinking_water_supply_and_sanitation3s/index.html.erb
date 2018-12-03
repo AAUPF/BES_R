@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Drinking Water Supply And Sanitation3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Outlay</th>
+      <th>Expenditure</th>
+      <th>Outlay as percent of expenditure</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drinking_water_supply_and_sanitation3s.each do |drinking_water_supply_and_sanitation3| %>
+      <tr>
+        <td><%= drinking_water_supply_and_sanitation3.Year %></td>
+        <td><%= drinking_water_supply_and_sanitation3.Outlay %></td>
+        <td><%= drinking_water_supply_and_sanitation3.Expenditure %></td>
+        <td><%= drinking_water_supply_and_sanitation3.Outlay_as_Percent_of_Expenditure %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Drinking Water Supply And Sanitation3', new_drinking_water_supply_and_sanitation3_path %>

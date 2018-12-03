@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Drinking Water Supply And Sanitation1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Handpumps installed</th>
+      <th>Slipped back habitations or water quality problems covered</th>
+      <th>Ihhl constructed under apl</th>
+      <th>Ihhl constructed under bpl</th>
+      <th>Total ihhl constructed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drinking_water_supply_and_sanitation1s.each do |drinking_water_supply_and_sanitation1| %>
+      <tr>
+        <td><%= drinking_water_supply_and_sanitation1.Year %></td>
+        <td><%= drinking_water_supply_and_sanitation1.Handpumps_Installed %></td>
+        <td><%= drinking_water_supply_and_sanitation1.Slipped_back_Habitations_or_Water_quality_problems_covered %></td>
+        <td><%= drinking_water_supply_and_sanitation1.IHHL_constructed_under_APL %></td>
+        <td><%= drinking_water_supply_and_sanitation1.IHHL_constructed_under_BPL %></td>
+        <td><%= drinking_water_supply_and_sanitation1.Total_IHHL_constructed %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Drinking Water Supply And Sanitation1', new_drinking_water_supply_and_sanitation1_path %>

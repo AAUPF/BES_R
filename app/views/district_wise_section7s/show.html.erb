@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Districts:</strong>
+  <%= @district_wise_section7.Districts %>
+</p>
+
+<p>
+  <strong>Total enrolment:</strong>
+  <%= @district_wise_section7.Total_Enrolment %>
+</p>
+
+<p>
+  <strong>Number of children availing mdm per day:</strong>
+  <%= @district_wise_section7.Number_of_Children_Availing_MDM_per_day %>
+</p>
+
+<p>
+  <strong>Coverage in percentage:</strong>
+  <%= @district_wise_section7.Coverage_in_percentage %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @district_wise_section7.Year %>
+</p>
+
+<%= link_to 'Edit', edit_district_wise_section7_path(@district_wise_section7) %> |
+<%= link_to 'Back', district_wise_section7s_path %>

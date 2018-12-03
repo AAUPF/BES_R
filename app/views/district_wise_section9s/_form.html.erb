@@ -1,0 +1,67 @@
+<%= form_with(model: district_wise_section9, local: true) do |form| %>
+  <% if district_wise_section9.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(district_wise_section9.errors.count, "error") %> prohibited this district_wise_section9 from being saved:</h2>
+
+      <ul>
+      <% district_wise_section9.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Constituent_College %>
+    <%= form.text_field :Constituent_College %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Science_Arts_Commerce_College %>
+    <%= form.text_field :Science_Arts_Commerce_College %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Engineering %>
+    <%= form.text_field :Engineering %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Medical %>
+    <%= form.text_field :Medical %>
+  </div>
+
+  <div class="field">
+    <%= form.label :B_Ed %>
+    <%= form.text_field :B_Ed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Others %>
+    <%= form.text_field :Others %>
+  </div>
+
+  <div class="field">
+    <%= form.label :All_Colleges %>
+    <%= form.text_field :All_Colleges %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

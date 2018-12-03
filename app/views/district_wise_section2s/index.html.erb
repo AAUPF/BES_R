@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>District Wise Section2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Primary</th>
+      <th>Upper primary</th>
+      <th>Total</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @district_wise_section2s.each do |district_wise_section2| %>
+      <tr>
+        <td><%= district_wise_section2.Districts %></td>
+        <td><%= district_wise_section2.Primary %></td>
+        <td><%= district_wise_section2.Upper_Primary %></td>
+        <td><%= district_wise_section2.Total %></td>
+        <td><%= district_wise_section2.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New District Wise Section2', new_district_wise_section2_path %>

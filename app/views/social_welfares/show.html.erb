@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sector:</strong>
+  <%= @social_welfare.Sector %>
+</p>
+
+<p>
+  <strong>Budget:</strong>
+  <%= @social_welfare.Budget %>
+</p>
+
+<p>
+  <strong>Actual expenditure:</strong>
+  <%= @social_welfare.Actual_Expenditure %>
+</p>
+
+<p>
+  <strong>Utilisation percentage:</strong>
+  <%= @social_welfare.Utilisation_Percentage %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @social_welfare.Year %>
+</p>
+
+<%= link_to 'Edit', edit_social_welfare_path(@social_welfare) %> |
+<%= link_to 'Back', social_welfares_path %>

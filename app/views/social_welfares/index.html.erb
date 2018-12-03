@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Social Welfares</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>Budget</th>
+      <th>Actual expenditure</th>
+      <th>Utilisation percentage</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @social_welfares.each do |social_welfare| %>
+      <tr>
+        <td><%= social_welfare.Sector %></td>
+        <td><%= social_welfare.Budget %></td>
+        <td><%= social_welfare.Actual_Expenditure %></td>
+        <td><%= social_welfare.Utilisation_Percentage %></td>
+        <td><%= social_welfare.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Social Welfare', new_social_welfare_path %>

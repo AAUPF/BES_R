@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Drinking Water Supply And Sanitation4s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>Target</th>
+      <th>Achievement</th>
+      <th>Achievement percentage</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drinking_water_supply_and_sanitation4s.each do |drinking_water_supply_and_sanitation4| %>
+      <tr>
+        <td><%= drinking_water_supply_and_sanitation4.Sector %></td>
+        <td><%= drinking_water_supply_and_sanitation4.Target %></td>
+        <td><%= drinking_water_supply_and_sanitation4.Achievement %></td>
+        <td><%= drinking_water_supply_and_sanitation4.Achievement_Percentage %></td>
+        <td><%= drinking_water_supply_and_sanitation4.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Drinking Water Supply And Sanitation4', new_drinking_water_supply_and_sanitation4_path %>

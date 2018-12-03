@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Sector: MyString
+  Budget: 1.5
+  Actual_Expenditure: 1.5
+  Utilisation_Percentage: 1.5
+  Year: MyString
+
+two:
+  Sector: MyString
+  Budget: 1.5
+  Actual_Expenditure: 1.5
+  Utilisation_Percentage: 1.5
+  Year: MyString

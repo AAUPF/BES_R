@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>District Wise Sections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Districts</th>
+      <th>Number of handpumps installed</th>
+      <th>Slipped back habitations or water quality problems covered</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @district_wise_sections.each do |district_wise_section| %>
+      <tr>
+        <td><%= district_wise_section.Districts %></td>
+        <td><%= district_wise_section.Number_of_Handpumps_Installed %></td>
+        <td><%= district_wise_section.Slipped_back_Habitations_or_Water_quality_Problems_Covered %></td>
+        <td><%= district_wise_section.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New District Wise Section', new_district_wise_section_path %>

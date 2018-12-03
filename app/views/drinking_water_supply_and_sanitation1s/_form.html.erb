@@ -1,0 +1,47 @@
+<%= form_with(model: drinking_water_supply_and_sanitation1, local: true) do |form| %>
+  <% if drinking_water_supply_and_sanitation1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(drinking_water_supply_and_sanitation1.errors.count, "error") %> prohibited this drinking_water_supply_and_sanitation1 from being saved:</h2>
+
+      <ul>
+      <% drinking_water_supply_and_sanitation1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Handpumps_Installed %>
+    <%= form.text_field :Handpumps_Installed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Slipped_back_Habitations_or_Water_quality_problems_covered %>
+    <%= form.text_field :Slipped_back_Habitations_or_Water_quality_problems_covered %>
+  </div>
+
+  <div class="field">
+    <%= form.label :IHHL_constructed_under_APL %>
+    <%= form.text_field :IHHL_constructed_under_APL %>
+  </div>
+
+  <div class="field">
+    <%= form.label :IHHL_constructed_under_BPL %>
+    <%= form.text_field :IHHL_constructed_under_BPL %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_IHHL_constructed %>
+    <%= form.text_field :Total_IHHL_constructed %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
