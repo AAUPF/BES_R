@@ -1,4 +1,34 @@
 Rails.application.routes.draw do
+    resources :women_empowerment2s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :education_art_culture3s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :education_art_culture6s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :education_art_culture2s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :education_art_culture4s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
+resources :education_art_culture1s do 
+        collection { post :import }
+        collection { get :dropdown }
+        collection { get :test }
+        end 
   resources :district_wise_section5s do 
                       collection { post :import }
                       collection { get :dropdown }

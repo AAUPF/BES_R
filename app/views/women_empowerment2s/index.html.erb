@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Women Empowerment2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>Total budget</th>
+      <th>Under category i</th>
+      <th>Under category ii</th>
+      <th>Total</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @women_empowerment2s.each do |women_empowerment2| %>
+      <tr>
+        <td><%= women_empowerment2.Sector %></td>
+        <td><%= women_empowerment2.Total_Budget %></td>
+        <td><%= women_empowerment2.Under_Category_I %></td>
+        <td><%= women_empowerment2.Under_Category_II %></td>
+        <td><%= women_empowerment2.Total %></td>
+        <td><%= women_empowerment2.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Women Empowerment2', new_women_empowerment2_path %>

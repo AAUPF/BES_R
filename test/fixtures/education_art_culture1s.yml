@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Male: 1.5
+  Female: 1.5
+  Persons: 1.5
+  Indicator: MyString
+  Indicator1: MyString
+
+two:
+  Year: MyString
+  Male: 1.5
+  Female: 1.5
+  Persons: 1.5
+  Indicator: MyString
+  Indicator1: MyString

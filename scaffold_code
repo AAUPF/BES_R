@@ -1,1 +1,1 @@
-rails g scaffold DistrictWiseSection9 Districts:string	Districts:string	Constituent_College:float	Total:float	Science_Arts_Commerce_College:float	Engineering :float	Medical:float	B_Ed:float	Others:float	All_Colleges:float
+rails g scaffold Women_Empowerment2   Sector:string	Total_Budget:float	Under_Category_I:float	Under_Category_II:float	Total:float	Year:string

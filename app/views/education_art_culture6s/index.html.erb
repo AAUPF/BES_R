@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Education Art Culture6s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th>2012-13</th>
+      <th>2013-14</th>
+      <th>2014-15</th>
+      <th>2015-16</th>
+      <th>Cagr</th>
+      <th>Indicator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @education_art_culture6s.each do |education_art_culture6| %>
+      <tr>
+        <td><%= education_art_culture6.Sector %></td>
+        <td><%= education_art_culture6.2012-13 %></td>
+        <td><%= education_art_culture6.2013-14 %></td>
+        <td><%= education_art_culture6.2014-15 %></td>
+        <td><%= education_art_culture6.2015-16 %></td>
+        <td><%= education_art_culture6.CAGR %></td>
+        <td><%= education_art_culture6.Indicator %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Education Art Culture6', new_education_art_culture6_path %>

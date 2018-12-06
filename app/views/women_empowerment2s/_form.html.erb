@@ -1,0 +1,47 @@
+<%= form_with(model: women_empowerment2, local: true) do |form| %>
+  <% if women_empowerment2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(women_empowerment2.errors.count, "error") %> prohibited this women_empowerment2 from being saved:</h2>
+
+      <ul>
+      <% women_empowerment2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sector %>
+    <%= form.text_field :Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Budget %>
+    <%= form.text_field :Total_Budget %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Under_Category_I %>
+    <%= form.text_field :Under_Category_I %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Under_Category_II %>
+    <%= form.text_field :Under_Category_II %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

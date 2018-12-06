@@ -2,16 +2,15 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Dec 06, 2018 at 07:31 AM
+-- Host: localhost
+-- Generation Time: Dec 06, 2018 at 07:45 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
 
 --
--- Database: `bihar_survey`
+-- Database: `newdata`
 --
 
 -- --------------------------------------------------------
@@ -1886,8 +1885,7 @@ INSERT INTO `annual_rainfalls` (`id`, `Districts`, `January`, `February`, `March
 (352, 'EastChamparan', 11.9, 32, 7.1, 0, 102.3, 131.4, 170.2, 383.7, 181.1, 94.6, 0, 4.2, 2014, '2018-08-09 10:43:18', '2018-08-09 10:43:18'),
 (353, 'Gaya', 38.6, 20.1, 7.8, 0, 84.4, 56.4, 247.9, 313.5, 132, 8.8, 0, 2.7, 2014, '2018-08-09 10:43:18', '2018-08-09 10:43:18'),
 (354, 'Gopalganj', 12.4, 21, 9.7, 0, 16.6, 77.6, 121.8, 281.5, 110.3, 83, 0, 5.3, 2014, '2018-08-09 10:43:18', '2018-08-09 10:43:18'),
-(355, 'Jamui', 18.8, 94.2, 0.7, 0, 96.6, 90.5, 445.5, 191.4, 161.2, 24.7, 0, 0, 2014, '2018-08-09 10:43:18', '2018-08-09 10:43:18');
-INSERT INTO `annual_rainfalls` (`id`, `Districts`, `January`, `February`, `March`, `April`, `May`, `June`, `July`, `August`, `September`, `October`, `November`, `December`, `Year`, `created_at`, `updated_at`) VALUES
+(355, 'Jamui', 18.8, 94.2, 0.7, 0, 96.6, 90.5, 445.5, 191.4, 161.2, 24.7, 0, 0, 2014, '2018-08-09 10:43:18', '2018-08-09 10:43:18'),
 (356, 'Jehanabad', 17.2, 21.1, 5.9, 0, 40.6, 37.4, 247.8, 371.3, 117.1, 14.4, 0, 1.2, 2014, '2018-08-09 10:43:18', '2018-08-09 10:43:18'),
 (357, 'Kaimur', 14.2, 31, 11, 0, 8, 19.5, 213, 291.6, 150, 35.5, 0, 0, 2014, '2018-08-09 10:43:18', '2018-08-09 10:43:18'),
 (358, 'Katihar', 5.8, 28.5, 4.5, 0, 249.1, 164.5, 215.4, 276.7, 114.3, 30.4, 0, 0, 2014, '2018-08-09 10:43:18', '2018-08-09 10:43:18'),
@@ -5840,6 +5838,236 @@ INSERT INTO `drinking_water_supply_and_sanitation4s` (`id`, `Sector`, `Target`, 
 (13, 'Rural Piped Water Supply Scheme', 11, 2, 18.2, '2016-17', '2018-11-30 06:42:14', '2018-11-30 06:42:14'),
 (14, 'Installation of New instead of Old Hand Pumps', 72012, 33820, 47, '2016-17', '2018-11-30 06:42:14', '2018-11-30 06:42:14'),
 (15, 'Uncovered Tolas', 7777, 1289, 16.6, '2016-17', '2018-11-30 06:42:14', '2018-11-30 06:42:14');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `education_art_culture1s`
+--
+
+DROP TABLE IF EXISTS `education_art_culture1s`;
+CREATE TABLE `education_art_culture1s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Male` float DEFAULT NULL,
+  `Female` float DEFAULT NULL,
+  `Persons` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `Indicator1` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `education_art_culture1s`
+--
+
+INSERT INTO `education_art_culture1s` (`id`, `Year`, `Male`, `Female`, `Persons`, `Indicator`, `Indicator1`, `created_at`, `updated_at`) VALUES
+(1, '1961', 40.4, 15.4, 28.3, 'Literacy Rates', 'India', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(2, '1971', 46, 22, 34.5, 'Literacy Rates', 'India', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(3, '1981', 56.4, 29.8, 43.6, 'Literacy Rates', 'India', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(4, '1991', 64.1, 39.3, 52.2, 'Literacy Rates', 'India', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(5, '2001', 75.3, 53.7, 64.8, 'Literacy Rates', 'India', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(6, '2011', 80.9, 64.6, 72.9, 'Literacy Rates', 'India', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(7, '1961-71', 5.6, 6.6, 6.2, 'Decadal Increase', 'India', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(8, '1971-81', 10.4, 7.8, 9.1, 'Decadal Increase', 'India', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(9, '1981-91', 7.7, 9.5, 8.6, 'Decadal Increase', 'India', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(10, '1991-01', 11.2, 14.4, 12.6, 'Decadal Increase', 'India', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(11, '2001-11', 5.6, 10.9, 8.1, 'Decadal Increase', 'India', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(12, '1961', 35.2, 8.2, 22, 'Literacy Rates', 'Bihar', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(13, '1971', 35.8, 10.2, 23.2, 'Literacy Rates', 'Bihar', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(14, '1981', 43.8, 15.8, 32.3, 'Literacy Rates', 'Bihar', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(15, '1991', 52.5, 22.9, 37.5, 'Literacy Rates', 'Bihar', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(16, '2001', 60.3, 33.6, 47, 'Literacy Rates', 'Bihar', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(17, '2011', 71.2, 51.5, 61.8, 'Literacy Rates', 'Bihar', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(18, '1961-71', 0.6, 2, 1.2, 'Decadal Increase', 'Bihar', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(19, '1971-81', 8, 5.6, 9.1, 'Decadal Increase', 'Bihar', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(20, '1981-91', 8.7, 7.1, 5.2, 'Decadal Increase', 'Bihar', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(21, '1991-01', 7.8, 10.7, 9.5, 'Decadal Increase', 'Bihar', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
+(22, '2001-11', 10.9, 17.9, 14.8, 'Decadal Increase', 'Bihar', '2018-12-03 08:30:54', '2018-12-03 08:30:54');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `education_art_culture2s`
+--
+
+DROP TABLE IF EXISTS `education_art_culture2s`;
+CREATE TABLE `education_art_culture2s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2011-12` float DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `CAGR` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `Indicator1` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `education_art_culture2s`
+--
+
+INSERT INTO `education_art_culture2s` (`id`, `Sector`, `2011-12`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `CAGR`, `Indicator`, `Indicator1`, `created_at`, `updated_at`) VALUES
+(1, 'Boys', 82.29, 79.74, 83.34, 83.72, 84.4, 1, 'Primary', 'Combined', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(2, 'Boys', 16.1, 14.5, 15.81, 15.58, 16.01, 0.6, 'Primary', 'SC', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(3, 'Boys', 1.34, 1.59, 1.64, 1.7, 1.81, 6.9, 'Primary', 'ST', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(4, 'Girls', 74.21, 74.77, 77.86, 77.63, 78.96, 1.6, 'Primary', 'Combined', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(5, 'Girls', 13.29, 13.21, 14.47, 14.39, 14.8, 3.1, 'Primary', 'SC', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(6, 'Girls', 1.14, 1.33, 1.36, 1.4, 1.5, 6.2, 'Primary', 'ST', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(7, 'Boys plus Girls', 156.5, 154.51, 161.2, 161.35, 163.36, 1.3, 'Primary', 'Combined', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(8, 'Boys plus Girls', 29.39, 27.71, 30.29, 29.97, 30.81, 1.7, 'Primary', 'SC', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(9, 'Boys plus Girls', 2.48, 2.92, 3.01, 3.11, 3.31, 6.6, 'Primary', 'ST', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(10, 'Boys', 27.04, 31.34, 33.66, 34.77, 37.08, 7.6, 'Upper Primary', 'Combined', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(11, 'Boys', 4.26, 4.81, 5.59, 6.12, 6.47, 11.4, 'Upper Primary', 'SC', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(12, 'Boys', 0.36, 0.55, 0.58, 0.61, 0.72, 16.1, 'Upper Primary', 'ST', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(13, 'Girls', 23.51, 29.02, 31.75, 33.14, 35.23, 9.9, 'Upper Primary', 'Combined', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(14, 'Girls', 3.37, 4.23, 5.11, 5.47, 5.92, 14.8, 'Upper Primary', 'SC', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(15, 'Girls', 0.3, 0.46, 0.48, 0.53, 0.64, 18, 'Upper Primary', 'ST', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(16, 'Boys plus Girls', 50.55, 60.36, 65.41, 67.91, 72.31, 8.7, 'Upper Primary', 'Combined', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(17, 'Boys plus Girls', 7.63, 9.04, 10.71, 11.59, 12.39, 13, 'Upper Primary', 'SC', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(18, 'Boys plus Girls', 0.66, 1.01, 1.07, 1.15, 1.36, 17.1, 'Upper Primary', 'ST', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(19, 'Boys', 109.33, 111.08, 117, 118.49, 121.48, 2.8, 'Total', 'Combined', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(20, 'Boys', 20.36, 19.31, 21.4, 21.7, 22.48, 3.2, 'Total', 'SC', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(21, 'Boys', 1.7, 2.14, 2.22, 2.31, 2.53, 9.1, 'Total', 'ST', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(22, 'Girls', 97.92, 103.79, 109.61, 110.77, 114.19, 3.8, 'Total', 'Combined', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(23, 'Girls', 16.66, 17.44, 19.58, 19.86, 20.72, 5.8, 'Total', 'SC', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(24, 'Girls', 1.44, 1.79, 1.84, 1.93, 2.14, 9.1, 'Total', 'ST', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(25, 'Boys plus Girls', 207.25, 214.87, 226.62, 229.26, 235.67, 3.3, 'Total', 'Combined', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(26, 'Boys plus Girls', 37.02, 36.75, 41.01, 41.56, 43.2, 4.4, 'Total', 'SC', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
+(27, 'Boys plus Girls', 3.14, 3.93, 4.08, 4.26, 4.67, 9.1, 'Total', 'ST', '2018-12-03 10:41:51', '2018-12-03 10:41:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `education_art_culture3s`
+--
+
+DROP TABLE IF EXISTS `education_art_culture3s`;
+CREATE TABLE `education_art_culture3s` (
+  `id` bigint(20) NOT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2011-12` float DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `education_art_culture3s`
+--
+
+INSERT INTO `education_art_culture3s` (`id`, `Indicator`, `Sector`, `2011-12`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `created_at`, `updated_at`) VALUES
+(1, 'Primary', 'Girls', 30.7, 26.3, 23.6, 24, 24.2, '2018-12-04 06:39:53', '2018-12-04 06:39:53'),
+(2, 'Primary', 'Boys', 38, 36, 33.6, 29.2, 25.6, '2018-12-04 06:39:53', '2018-12-04 06:39:53'),
+(3, 'Primary', 'Combined', 34.8, 31.7, 29.1, 26.8, 25, '2018-12-04 06:39:53', '2018-12-04 06:39:53'),
+(4, 'Upper Primary', 'Girls', 51.1, 38.7, 34.7, 38.9, 36.3, '2018-12-04 06:39:53', '2018-12-04 06:39:53'),
+(5, 'Upper Primary', 'Boys', 58.6, 52.4, 52.4, 49.9, 47, '2018-12-04 06:39:53', '2018-12-04 06:39:53'),
+(6, 'Upper Primary', 'Combined', 55.5, 46.7, 46.5, 45.1, 42.2, '2018-12-04 06:39:53', '2018-12-04 06:39:53'),
+(7, 'Secondary', 'Girls', 62.7, 59.5, 57.6, 53.9, 52.5, '2018-12-04 06:39:53', '2018-12-04 06:39:53'),
+(8, 'Secondary', 'Boys', 66.9, 65.2, 64.7, 61.2, 61.5, '2018-12-04 06:39:53', '2018-12-04 06:39:53'),
+(9, 'Secondary', 'Combined', 65.2, 62.8, 61.8, 58.2, 57.7, '2018-12-04 06:39:53', '2018-12-04 06:39:53'),
+(10, 'Higher Secondary', 'Girls', 64.7, NULL, NULL, NULL, NULL, '2018-12-04 06:39:53', '2018-12-04 06:39:53'),
+(11, 'Higher Secondary', 'Boys', 68.4, NULL, NULL, NULL, NULL, '2018-12-04 06:39:53', '2018-12-04 06:39:53'),
+(12, 'Higher Secondary', 'Combined', 67, NULL, NULL, NULL, NULL, '2018-12-04 06:39:53', '2018-12-04 06:39:53');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `education_art_culture4s`
+--
+
+DROP TABLE IF EXISTS `education_art_culture4s`;
+CREATE TABLE `education_art_culture4s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Girls` float DEFAULT NULL,
+  `Boys` float DEFAULT NULL,
+  `Combined` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `Indicator1` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `education_art_culture4s`
+--
+
+INSERT INTO `education_art_culture4s` (`id`, `Year`, `Girls`, `Boys`, `Combined`, `Indicator`, `Indicator1`, `created_at`, `updated_at`) VALUES
+(1, '2011-12', 30.6, 36.7, 34.1, 'Scheduled Caste', 'Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(2, '2012-13', 24.3, 36.3, 31.2, 'Scheduled Caste', 'Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(3, '2013-14', 13.3, 30.4, 23.2, 'Scheduled Caste', 'Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(4, '2014-15', 25.5, 32.9, 29.6, 'Scheduled Caste', 'Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(5, '2015-16', 25.3, 28, 26.7, 'Scheduled Caste', 'Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(6, '2011-12', NULL, 14.4, NULL, 'Scheduled Tribe', 'Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(7, '2012-13', NULL, NULL, NULL, 'Scheduled Tribe', 'Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(8, '2013-14', NULL, 23.8, 10, 'Scheduled Tribe', 'Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(9, '2013-14', 15.1, 23.8, 10, 'Scheduled Tribe', 'Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(10, '2014-15', 21.2, 0.9, 8.3, 'Scheduled Tribe', 'Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(11, '2015-16', 2.8, 2.3, 2.6, 'Scheduled Tribe', 'Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(12, '2011-12', 60.5, 67.2, 64.6, 'Scheduled Caste', 'Upper Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(13, '2012-13', 49, 61.4, 56.5, 'Scheduled Caste', 'Upper Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(14, '2013-14', 40.5, 54.7, 48.9, 'Scheduled Caste', 'Upper Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(15, '2014-15', 39.7, 47.1, 44, 'Scheduled Caste', 'Upper Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(16, '2015-16', 38.5, 50.1, 45.2, 'Scheduled Caste', 'Upper Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(17, '2011-12', 22.7, 43.5, 35.7, 'Scheduled Tribe', 'Upper Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(18, '2012-13', NULL, 23.8, 13.1, 'Scheduled Tribe', 'Upper Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(19, '2013-14', NULL, 21.7, 12.7, 'Scheduled Tribe', 'Upper Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(20, '2013-14', 2, 21.7, 12.7, 'Scheduled Tribe', 'Upper Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(21, '2014-15', 3.2, 27.8, 18, 'Scheduled Tribe', 'Upper Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(22, '2015-16', NULL, 19.9, 19.9, 'Scheduled Tribe', 'Upper Primary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(23, '2011-12', 72.7, 75.9, 74.7, 'Scheduled Caste', 'Secondary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(24, '2012-13', 65.1, 70.6, 68.4, 'Scheduled Caste', 'Secondary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(25, '2013-14', 64.3, 69.8, 67.7, 'Scheduled Caste', 'Secondary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(26, '2014-15', 61.5, 67.8, 65.3, 'Scheduled Caste', 'Secondary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(27, '2015-16', 53.4, 62.9, 59.1, 'Scheduled Caste', 'Secondary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(28, '2011-12', 32.6, 49.3, 43.5, 'Scheduled Tribe', 'Secondary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(29, '2012-13', 26.6, 38.2, 33.9, 'Scheduled Tribe', 'Secondary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(30, '2013-14', 23.5, 37.6, 32.3, 'Scheduled Tribe', 'Secondary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(31, '2013-14', 23.5, 37.6, 32.3, 'Scheduled Tribe', 'Secondary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(32, '2014-15', 31.8, 45.7, 40.5, 'Scheduled Tribe', 'Secondary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
+(33, '2015-16', 22.7, 41.1, 34.1, 'Scheduled Tribe', 'Secondary', '2018-12-03 09:29:24', '2018-12-03 09:29:24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `education_art_culture6s`
+--
+
+DROP TABLE IF EXISTS `education_art_culture6s`;
+CREATE TABLE `education_art_culture6s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `education_art_culture6s`
+--
+
+INSERT INTO `education_art_culture6s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `Indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Total Enrolment (in lakhs)', 147.7, 141.62, 143.18, 144.68, 141.7, 'Class I-V', '2018-12-03 11:15:40', '2018-12-03 11:15:40'),
+(2, 'No. of Children Availing MDMs (per day) (in lakhs)', 85.22, 94.89, 94.35, 99.28, 89.7, 'Class I-V', '2018-12-03 11:15:40', '2018-12-03 11:15:40'),
+(3, 'Coverage Percentage', 57.7, 67, 65.9, 68.6, 63.3, 'Class I-V', '2018-12-03 11:15:40', '2018-12-03 11:15:40'),
+(4, 'Total Enrolment (in lakhs)', 52.87, 57.57, 60.58, 62.67, 66.27, 'Class VI-VIII', '2018-12-03 11:15:40', '2018-12-03 11:15:40'),
+(5, 'No. of Children Availing MDMs (per day) (in lakhs)', 30.32, 38.57, 36.99, 40.02, 37.8, 'Class VI-VIII', '2018-12-03 11:15:40', '2018-12-03 11:15:40'),
+(6, 'Coverage Percentage', 57.3, 67, 61, 63.9, 57, 'Class VI-VIII', '2018-12-03 11:15:40', '2018-12-03 11:15:40');
 
 -- --------------------------------------------------------
 
@@ -14757,15 +14985,19 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20181130111702'),
 ('20181130113745'),
 ('20181203062040'),
-('20181203080948'),
+('20181203080236'),
 ('20181203081901'),
+('20181203092805'),
 ('20181203093814'),
+('20181203100139'),
 ('20181203102342'),
 ('20181203104215'),
+('20181203105119'),
 ('20181203110013'),
 ('20181203113347'),
 ('20181203114709'),
-('20181206061603'),
+('20181204063513'),
+('20181204092549'),
 ('20181206061941'),
 ('20181206064933'),
 ('20181206070655');
@@ -18594,6 +18826,71 @@ INSERT INTO `women_empowerment1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-1
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `women_empowerment2s`
+--
+
+DROP TABLE IF EXISTS `women_empowerment2s`;
+CREATE TABLE `women_empowerment2s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `Total_Budget` float DEFAULT NULL,
+  `Under_Category_I` float DEFAULT NULL,
+  `Under_Category_II` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `women_empowerment2s`
+--
+
+INSERT INTO `women_empowerment2s` (`id`, `Sector`, `Total_Budget`, `Under_Category_I`, `Under_Category_II`, `Total`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Social Welfare', 4780.85, 436.1, 1925.83, 2361.93, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(2, 'SC and ST welfare ', 1568.8, 0, 465.51, 465.51, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(3, 'Public Health Engineering ', 1326.37, 0, 397.91, 397.91, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(4, 'Minority Welfare', 56.21, 2, 16.26, 18.26, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(5, 'Education Department', 15809.6, 309.36, 4436.7, 4746.06, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(6, 'Health ', 2176.63, 1890.14, 0, 1890.14, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(7, 'Rural Development', 5059.42, 2889.82, 650.88, 3540.7, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(8, 'Urban Development and Housing', 12.15, 0, 6.08, 6.08, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(9, 'Panchayati  Raj ', 335, 0, 167.5, 167.5, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(10, 'Labor Resource', 11.8, 5.5, 0.12, 5.62, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(11, 'BC and EBC Welfare', 1954.19, 10.16, 583.43, 593.59, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(12, 'Revenue and Land Reforms ', 20.75, 20.75, 0, 20.75, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(13, 'Art, Culture and Youth', 38.75, 0, 11.62, 11.62, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(14, 'Industry Department', 582.09, 0, 63.87, 63.87, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(15, 'Agriculture Department', 2179.81, 0, 646.92, 646.92, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(16, 'Information & Technology ', 2.1, 0.99, 0.89, 1.88, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(17, 'Building Construction ', 317.44, 0, 77.23, 77.23, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(18, 'Home Department', 151.99, 0, 61.48, 61.48, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(19, 'Tourism Department', 27.51, 0, 0, 0, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(20, 'Total', 36411.5, 5564.82, 9512.22, 15077, '2016-17', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(21, 'Social Welfare', 5591.17, 280.77, 2697.21, 2977.98, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(22, 'SC and ST welfare ', 1181.69, 0, 364.55, 364.55, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(23, 'Public Health Engineering ', 2001.39, 0, 600.42, 600.42, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(24, 'Minority Welfare', 116.03, 22, 28.21, 50.21, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(25, 'Education Department', 17681.5, 283.04, 5325.1, 5608.14, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(26, 'Health ', 1457.68, 1332.36, 14.93, 1347.29, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(27, 'Rural Development', 9272.97, 6377.64, 868.6, 7246.24, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(28, 'Urban Development and Housing', 8, 0, 4, 4, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(29, 'Panchayati  Raj ', 375, 0, 187.5, 187.5, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(30, 'Labor Resource', 10.43, 4.5, 0, 4.5, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(31, 'BC and EBC Welfare', 1493.24, 10.73, 445.95, 456.68, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(32, 'Revenue and Land Reforms ', 26.07, 26.07, 0, 26.07, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(33, 'Art, Culture and Youth', 48.45, 0, 14.54, 14.54, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(34, 'Industry Department', 572.64, 0, 171.49, 171.49, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(35, 'Agriculture Department', 2207.12, 0, 662.14, 662.14, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(36, 'Information & Technology ', 4.01, 0.99, 2.42, 3.4, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(37, 'Building Construction ', 592, 0, 193, 193, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(38, 'Home Department', 141.53, 0, 57.25, 57.25, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(39, 'Tourism Department', 71.47, 0, 21.44, 21.44, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
+(40, 'Total', 42852.4, 8338.1, 11658.7, 19996.8, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `women_empowerment3s`
 --
 
@@ -19183,6 +19480,36 @@ ALTER TABLE `drinking_water_supply_and_sanitation3s`
 -- Indexes for table `drinking_water_supply_and_sanitation4s`
 --
 ALTER TABLE `drinking_water_supply_and_sanitation4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `education_art_culture1s`
+--
+ALTER TABLE `education_art_culture1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `education_art_culture2s`
+--
+ALTER TABLE `education_art_culture2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `education_art_culture3s`
+--
+ALTER TABLE `education_art_culture3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `education_art_culture4s`
+--
+ALTER TABLE `education_art_culture4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `education_art_culture6s`
+--
+ALTER TABLE `education_art_culture6s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -20506,6 +20833,12 @@ ALTER TABLE `women_empowerment1s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `women_empowerment2s`
+--
+ALTER TABLE `women_empowerment2s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `women_empowerment3s`
 --
 ALTER TABLE `women_empowerment3s`
@@ -20766,6 +21099,36 @@ ALTER TABLE `drinking_water_supply_and_sanitation3s`
 --
 ALTER TABLE `drinking_water_supply_and_sanitation4s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `education_art_culture1s`
+--
+ALTER TABLE `education_art_culture1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `education_art_culture2s`
+--
+ALTER TABLE `education_art_culture2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT for table `education_art_culture3s`
+--
+ALTER TABLE `education_art_culture3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `education_art_culture4s`
+--
+ALTER TABLE `education_art_culture4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `education_art_culture6s`
+--
+ALTER TABLE `education_art_culture6s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `education_art_culture7s`
@@ -21426,6 +21789,12 @@ ALTER TABLE `udp_state_plan5s`
 --
 ALTER TABLE `women_empowerment1s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `women_empowerment2s`
+--
+ALTER TABLE `women_empowerment2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `women_empowerment3s`

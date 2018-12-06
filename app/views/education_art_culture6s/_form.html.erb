@@ -1,0 +1,52 @@
+<%= form_with(model: education_art_culture6, local: true) do |form| %>
+  <% if education_art_culture6.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(education_art_culture6.errors.count, "error") %> prohibited this education_art_culture6 from being saved:</h2>
+
+      <ul>
+      <% education_art_culture6.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Sector %>
+    <%= form.text_field :Sector %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2012-13 %>
+    <%= form.text_field :2012-13 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2013-14 %>
+    <%= form.text_field :2013-14 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2014-15 %>
+    <%= form.text_field :2014-15 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2015-16 %>
+    <%= form.text_field :2015-16 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CAGR %>
+    <%= form.text_field :CAGR %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
