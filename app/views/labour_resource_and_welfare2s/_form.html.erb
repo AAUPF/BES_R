@@ -1,0 +1,37 @@
+<%= form_with(model: labour_resource_and_welfare2, local: true) do |form| %>
+  <% if labour_resource_and_welfare2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(labour_resource_and_welfare2.errors.count, "error") %> prohibited this labour_resource_and_welfare2 from being saved:</h2>
+
+      <ul>
+      <% labour_resource_and_welfare2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Programme %>
+    <%= form.text_field :Programme %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Budget_outlay %>
+    <%= form.text_field :Budget_outlay %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Financial_Achievement %>
+    <%= form.text_field :Financial_Achievement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

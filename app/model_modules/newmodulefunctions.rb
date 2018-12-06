@@ -247,7 +247,7 @@ def self.title_return(views,search,hash_data,compare)
   end
 
 
-    title = if (views == 'stackedBar100' || views == 'stackedBar' || views == 'stackedColumn' || views == 'stackedColumn100')
+    title = if (views == 'stackedBar100' || views == 'stackedBar' || views == 'stackedColumn' || views == 'stackedColumn100' || views == 'stackedArea')
       {
         animationEnabled: true,
         exportEnabled: true,
@@ -1318,7 +1318,7 @@ end
   end
 
   def self.search_all(b,views,legend,remove,rain_fall_type,color)
-    if views != "column" && views != "line" && views != "scatter"
+    if views != "column" && views != "line" && views != "bubble"
       hash_data = b.reject{|x| x["#{legend}"]== "#{remove}"}.map do |col|
         {
           type:views,
@@ -1399,7 +1399,7 @@ end
             else
 
 
-                  if views != "column" && views != "line" && views != "scatter"
+                  if views != "column" && views != "line" && views != "bubble"
 
                     hash_data1 =[]
                        grouped_data.map{ |vegetable, values| 

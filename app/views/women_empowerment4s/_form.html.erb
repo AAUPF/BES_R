@@ -1,0 +1,42 @@
+<%= form_with(model: women_empowerment4, local: true) do |form| %>
+  <% if women_empowerment4.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(women_empowerment4.errors.count, "error") %> prohibited this women_empowerment4 from being saved:</h2>
+
+      <ul>
+      <% women_empowerment4.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Types_of_Cases %>
+    <%= form.text_field :Types_of_Cases %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Registered %>
+    <%= form.text_field :Registered %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Disposed %>
+    <%= form.text_field :Disposed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Percentage_of_Case_Disposed %>
+    <%= form.text_field :Percentage_of_Case_Disposed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

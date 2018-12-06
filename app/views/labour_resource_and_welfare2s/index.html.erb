@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Labour Resource And Welfare2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Programme</th>
+      <th>Budget outlay</th>
+      <th>Financial achievement</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @labour_resource_and_welfare2s.each do |labour_resource_and_welfare2| %>
+      <tr>
+        <td><%= labour_resource_and_welfare2.Programme %></td>
+        <td><%= labour_resource_and_welfare2.Budget_outlay %></td>
+        <td><%= labour_resource_and_welfare2.Financial_Achievement %></td>
+        <td><%= labour_resource_and_welfare2.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Labour Resource And Welfare2', new_labour_resource_and_welfare2_path %>

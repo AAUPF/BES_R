@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Districts:</strong>
+  <%= @district_wise_section5.Districts %>
+</p>
+
+<p>
+  <strong>Primary schools:</strong>
+  <%= @district_wise_section5.Primary_Schools %>
+</p>
+
+<p>
+  <strong>Upper primary schools:</strong>
+  <%= @district_wise_section5.Upper_Primary_Schools %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @district_wise_section5.Total %>
+</p>
+
+<%= link_to 'Edit', edit_district_wise_section5_path(@district_wise_section5) %> |
+<%= link_to 'Back', district_wise_section5s_path %>

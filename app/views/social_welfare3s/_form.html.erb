@@ -1,0 +1,37 @@
+<%= form_with(model: social_welfare3, local: true) do |form| %>
+  <% if social_welfare3.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(social_welfare3.errors.count, "error") %> prohibited this social_welfare3 from being saved:</h2>
+
+      <ul>
+      <% social_welfare3.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Beneficiaries %>
+    <%= form.text_field :Number_of_Beneficiaries %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Fund_Allocation %>
+    <%= form.text_field :Fund_Allocation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

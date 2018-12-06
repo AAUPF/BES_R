@@ -1,0 +1,52 @@
+<%= form_with(model: labour_resource_and_welfare1, local: true) do |form| %>
+  <% if labour_resource_and_welfare1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(labour_resource_and_welfare1.errors.count, "error") %> prohibited this labour_resource_and_welfare1 from being saved:</h2>
+
+      <ul>
+      <% labour_resource_and_welfare1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :State %>
+    <%= form.text_field :State %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Number_of_Workers %>
+    <%= form.text_field :Total_Number_of_Workers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cultivators %>
+    <%= form.text_field :Cultivators %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Agricultural_Labourers %>
+    <%= form.text_field :Agricultural_Labourers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Household_Industry_Workers %>
+    <%= form.text_field :Household_Industry_Workers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Other_Workers %>
+    <%= form.text_field :Other_Workers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

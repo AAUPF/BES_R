@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Types_of_Cases: MyString
+  Registered: 1.5
+  Disposed: 1.5
+  Percentage_of_Case_Disposed: 1.5
+  Year: MyString
+
+two:
+  Types_of_Cases: MyString
+  Registered: 1.5
+  Disposed: 1.5
+  Percentage_of_Case_Disposed: 1.5
+  Year: MyString

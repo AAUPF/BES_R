@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  Primary_Schools: 1.5
+  Upper_Primary_Schools: 1.5
+  Total: 1.5
+
+two:
+  Districts: MyString
+  Primary_Schools: 1.5
+  Upper_Primary_Schools: 1.5
+  Total: 1.5

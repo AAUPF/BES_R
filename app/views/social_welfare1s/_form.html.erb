@@ -1,0 +1,52 @@
+<%= form_with(model: social_welfare1, local: true) do |form| %>
+  <% if social_welfare1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(social_welfare1.errors.count, "error") %> prohibited this social_welfare1 from being saved:</h2>
+
+      <ul>
+      <% social_welfare1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Scheme %>
+    <%= form.text_field :Scheme %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_of_Beneficiaries %>
+    <%= form.text_field :Number_of_Beneficiaries %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Term_Loan %>
+    <%= form.text_field :Term_Loan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Bank_Loan %>
+    <%= form.text_field :Bank_Loan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Margin_Money %>
+    <%= form.text_field :Margin_Money %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Subsidy %>
+    <%= form.text_field :Subsidy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

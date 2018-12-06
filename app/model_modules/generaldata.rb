@@ -273,7 +273,7 @@ module Generaldata
                                   }
                                   }
                           else
-                            if views != "column" && views != "line" && views != "scatter"
+                            if views != "column" && views != "line" && views != "bubble"
                               hash_data =[]
                                  grouped_data.map{ |vegetable, values| 
                                   values.map do |value|
@@ -315,7 +315,7 @@ module Generaldata
               else
                   if search == "All"
                     
-                    if views != "column" && views != "line" && views != "scatter"
+                    if views != "column" && views != "line" && views != "bubble"
                       hash_data = b.reject{|x| x["#{legend}"]== "#{remove}"}.map do |col|
                         {
                           type:views,

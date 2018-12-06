@@ -208,7 +208,7 @@ module Yearwithtwovariable
     
               else
     
-                if views != "column" && views!="line" && views!="scatter"
+                if views != "column" && views!="line" && views!="bubble"
                   dataset = rain_fall_type.tr('_', ' ')
                         hash_data =  b.map do |el|
                         {

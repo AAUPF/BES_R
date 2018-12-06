@@ -18,8 +18,14 @@ module Statewithoutyearwithlegend
         else
           order("#{rain_fall_type} ")
         end
-      elsif compare == 'Bihar vs State'
-        where("#{legend} = ? OR #{legend} = ?", search, 'Bihar').order(:id)
+      # elsif compare == 'Bihar vs State'
+      #   where("#{legend} = ? OR #{legend} = ?", search, 'Bihar').order(:id)
+      elsif compare != 'None'
+        if compare == "Bihar vs State"
+          where("#{legend} = ? OR #{legend} = ?", search, 'Bihar').order(:id)
+        else
+          where("#{legend} = ? OR #{legend} = ?", search, compare).order(:id)
+        end
       else
         if rain_fall_type == 'All'
           where("#{legend} = ? ", search).order(:id)

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Education Art Culture7s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Programmes</th>
+      <th>Approved awp and b</th>
+      <th>Fund released by goi</th>
+      <th>Fund released by gob</th>
+      <th>Total fund released</th>
+      <th>Total expenditure</th>
+      <th>Expenditure as percentage of awp and b</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @education_art_culture7s.each do |education_art_culture7| %>
+      <tr>
+        <td><%= education_art_culture7.Programmes %></td>
+        <td><%= education_art_culture7.APPROVED_AWP_and_B %></td>
+        <td><%= education_art_culture7.Fund_Released_by_GOI %></td>
+        <td><%= education_art_culture7.Fund_Released_by_GOB %></td>
+        <td><%= education_art_culture7.Total_Fund_Released %></td>
+        <td><%= education_art_culture7.Total_Expenditure %></td>
+        <td><%= education_art_culture7.Expenditure_as_Percentage_of_AWP_and_B %></td>
+        <td><%= education_art_culture7.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Education Art Culture7', new_education_art_culture7_path %>

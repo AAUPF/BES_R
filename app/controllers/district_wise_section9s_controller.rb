@@ -57,12 +57,12 @@ class DistrictWiseSection9sController < ApplicationController
 
 
 def test
-  ji = [:Constituent_College, :Total, :Science_Arts_Commerce_College, :Engineering, :Medical, :B_Ed, :Others, :All_Colleges]
+  ji = [:Constituent_College,:Science_Arts_Commerce_College, :Engineering, :Medical, :B_Ed, :Others]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:Districts, :Districts, :Constituent_College, :Total, :Science_Arts_Commerce_College, :Engineering, :Medical, :B_Ed, :Others, :All_Colleges]
+ji1 = [:Districts, :Constituent_College, :Total, :Science_Arts_Commerce_College, :Engineering, :Medical, :B_Ed, :Others, :All_Colleges]
   if rain_fall_type || views
 
       if views == "Map View"

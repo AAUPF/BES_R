@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyString
+  Total_Number_of_Workers: 1.5
+  Cultivators: 1.5
+  Agricultural_Labourers: 1.5
+  Household_Industry_Workers: 1.5
+  Other_Workers: 1.5
+  Total: 1.5
+
+two:
+  State: MyString
+  Total_Number_of_Workers: 1.5
+  Cultivators: 1.5
+  Agricultural_Labourers: 1.5
+  Household_Industry_Workers: 1.5
+  Other_Workers: 1.5
+  Total: 1.5

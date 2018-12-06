@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Number_of_Beneficiaries: 1.5
+  Fund_Allocation: 1.5
+  Indicator: MyString
+
+two:
+  Year: MyString
+  Number_of_Beneficiaries: 1.5
+  Fund_Allocation: 1.5
+  Indicator: MyString

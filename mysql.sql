@@ -2,8 +2,8 @@
 -- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Dec 03, 2018 at 05:25 AM
+-- Host: localhost:3306
+-- Generation Time: Dec 06, 2018 at 07:31 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `newdata`
+-- Database: `bihar_survey`
 --
 
 -- --------------------------------------------------------
@@ -4908,6 +4908,68 @@ INSERT INTO `district_wise_section4s` (`id`, `Districts`, `Primary1`, `Upper_Pri
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `district_wise_section5s`
+--
+
+DROP TABLE IF EXISTS `district_wise_section5s`;
+CREATE TABLE `district_wise_section5s` (
+  `id` bigint(20) NOT NULL,
+  `Districts` varchar(255) DEFAULT NULL,
+  `Primary_Schools` float DEFAULT NULL,
+  `Upper_Primary_Schools` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `district_wise_section5s`
+--
+
+INSERT INTO `district_wise_section5s` (`id`, `Districts`, `Primary_Schools`, `Upper_Primary_Schools`, `Total`, `created_at`, `updated_at`) VALUES
+(1, 'Patna', 2189, 1176, 3365, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(2, 'Nalanda', 1368, 803, 2171, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(3, 'Bhojpur', 1208, 840, 2048, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(4, 'Buxar', 772, 472, 1244, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(5, 'Rohtas', 1324, 556, 1880, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(6, 'Kaimur', 614, 625, 1239, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(7, 'Gaya', 1703, 1411, 3114, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(8, 'Jehanabad', 557, 358, 915, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(9, 'Arwal', 333, 193, 526, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(10, 'Nawada', 996, 697, 1693, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(11, 'Aurangabad', 961, 960, 1921, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(12, 'Saran', 1555, 1156, 2711, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(13, 'Siwan', 1300, 1130, 2430, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(14, 'Gopalganj', 1140, 811, 1951, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(15, 'WestChamparan', 1694, 1092, 2786, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(16, 'EastChamparan', 1962, 1427, 3389, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(17, 'Muzaffarpur', 1790, 1569, 3359, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(18, 'Sitamarhi', 1204, 867, 2071, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(19, 'Sheohar', 233, 184, 417, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(20, 'Vaishali', 1085, 951, 2036, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(21, 'Darbhanga', 1512, 909, 2421, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(22, 'Madhubani', 1962, 1005, 2967, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(23, 'Samastipur', 1740, 1041, 2781, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(24, 'Begusarai', 851, 767, 1618, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(25, 'Munger', 639, 489, 1128, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(26, 'Sheikhpura', 293, 287, 580, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(27, 'Lakhisarai', 486, 291, 777, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(28, 'Jamui', 856, 848, 1704, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(29, 'Khagaria', 538, 515, 1053, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(30, 'Bhagalpur', 961, 841, 1802, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(31, 'Banka', 1228, 887, 2115, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(32, 'Saharsa', 767, 531, 1298, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(33, 'Supaul', 1111, 707, 1818, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(34, 'Madhepura', 903, 744, 1647, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(35, 'Purnia', 1484, 958, 2442, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(36, 'Kishanganj', 823, 487, 1310, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(37, 'Araria', 1327, 562, 1889, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(38, 'Katihar', 1195, 719, 1914, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
+(39, 'Bihar', 42664, 29866, 72530, '2018-12-06 07:08:01', '2018-12-06 07:08:01');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `district_wise_section6s`
 --
 
@@ -5778,6 +5840,84 @@ INSERT INTO `drinking_water_supply_and_sanitation4s` (`id`, `Sector`, `Target`, 
 (13, 'Rural Piped Water Supply Scheme', 11, 2, 18.2, '2016-17', '2018-11-30 06:42:14', '2018-11-30 06:42:14'),
 (14, 'Installation of New instead of Old Hand Pumps', 72012, 33820, 47, '2016-17', '2018-11-30 06:42:14', '2018-11-30 06:42:14'),
 (15, 'Uncovered Tolas', 7777, 1289, 16.6, '2016-17', '2018-11-30 06:42:14', '2018-11-30 06:42:14');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `education_art_culture7s`
+--
+
+DROP TABLE IF EXISTS `education_art_culture7s`;
+CREATE TABLE `education_art_culture7s` (
+  `id` bigint(20) NOT NULL,
+  `Programmes` varchar(255) DEFAULT NULL,
+  `APPROVED_AWP_and_B` float DEFAULT NULL,
+  `Fund_Released_by_GOI` float DEFAULT NULL,
+  `Fund_Released_by_GOB` float DEFAULT NULL,
+  `Total_Fund_Released` float DEFAULT NULL,
+  `Total_Expenditure` float DEFAULT NULL,
+  `Expenditure_as_Percentage_of_AWP_and_B` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `education_art_culture7s`
+--
+
+INSERT INTO `education_art_culture7s` (`id`, `Programmes`, `APPROVED_AWP_and_B`, `Fund_Released_by_GOI`, `Fund_Released_by_GOB`, `Total_Fund_Released`, `Total_Expenditure`, `Expenditure_as_Percentage_of_AWP_and_B`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'RUSA', 144.1, 22.2, 14.8, 37, 37, 25.7, '2015-16', '2018-12-03 06:21:48', '2018-12-03 06:21:48'),
+(2, 'RMSA', 125.8, 36, 23.5, 59.5, 34.7, 27.6, '2015-16', '2018-12-03 06:21:48', '2018-12-03 06:21:48'),
+(3, 'SSA', 7155.6, 2436.7, 2839.3, 5276, 5619, 78.5, '2015-16', '2018-12-03 06:21:48', '2018-12-03 06:21:48'),
+(4, 'KGBV', 231.6, 78.9, 52.2, 131.1, 135.5, 58.5, '2015-16', '2018-12-03 06:21:48', '2018-12-03 06:21:48'),
+(5, 'Total', 7657, 2573.8, 2929.8, 5503.6, 5825.7, 76.1, '2015-16', '2018-12-03 06:21:48', '2018-12-03 06:21:48'),
+(6, 'RUSA', 120, 6.6, 4.4, 11, 11, 9.2, '2016-17', '2018-12-03 06:21:48', '2018-12-03 06:21:48'),
+(7, 'RMSA', 1523.2, 200.7, 123.3, 323.9, 171.3, 11.3, '2016-17', '2018-12-03 06:21:48', '2018-12-03 06:21:48'),
+(8, 'SSA', 9445.1, 2649.1, 3866.8, 6515.9, 6504.5, 68.9, '2016-17', '2018-12-03 06:21:48', '2018-12-03 06:21:48'),
+(9, 'KGBV', 220.2, 57.8, 37.8, 95.6, 78, 35.5, '2016-17', '2018-12-03 06:21:48', '2018-12-03 06:21:48'),
+(10, 'Total', 11308.4, 2914.1, 4032.3, 6946.4, 6764.9, 60.4, '2016-17', '2018-12-03 06:21:48', '2018-12-03 06:21:48');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `education_art_culture9s`
+--
+
+DROP TABLE IF EXISTS `education_art_culture9s`;
+CREATE TABLE `education_art_culture9s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2013` float DEFAULT NULL,
+  `2014` float DEFAULT NULL,
+  `2015` float DEFAULT NULL,
+  `2016` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `education_art_culture9s`
+--
+
+INSERT INTO `education_art_culture9s` (`id`, `Sector`, `2013`, `2014`, `2015`, `2016`, `Indicator`, `created_at`, `updated_at`) VALUES
+(1, 'Central University', 1, 2, 2, 4, 'Universities', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(2, 'State Public University', 14, 14, 14, 13, 'Universities', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(3, 'Institute of National Importance ', 3, 3, 3, 3, 'Universities', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(4, 'State Open University', 1, 1, 1, 1, 'Universities', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(5, 'Institute Under State Legislative Act', 1, 1, 1, 1, 'Universities', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(6, 'Deemed University', 1, 1, 1, 1, 'Universities', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(7, 'Total Universities', 21, 22, 22, 23, 'Universities', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(8, 'Research Institute', 15, 15, 15, 15, 'Universities', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(9, 'Government Colleges/ Constituent College', 278, 278, 276, 276, 'Colleges', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(10, 'Local Body Colleges/ Affiliated College', 387, 416, 468, 478, 'Colleges', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(11, 'P.G Center/Off-Campus Center', 9, 9, 9, 9, 'Colleges', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(12, 'Recognized Centre', 13, 13, 16, 18, 'Colleges', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(13, 'Total Colleges', 687, 716, 769, 781, 'Colleges', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(14, 'Education/ Teacher Training Centre (Primary)', 42, 43, 60, 60, 'Teacher Training Centre / Engineering Colleges', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(15, 'Engineering College', 10, 24, 23, 28, 'Teacher Training Centre / Engineering Colleges', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
+(16, 'Total Teacher Training Centre / Engineering Colleges', 52, 67, 83, 88, 'Teacher Training Centre / Engineering Colleges', '2018-12-03 08:23:08', '2018-12-03 08:23:08');
 
 -- --------------------------------------------------------
 
@@ -8721,6 +8861,89 @@ INSERT INTO `irrigation7s` (`id`, `Scheme`, `Financial_Requirement_in_Rs_crores`
 (1, 'Kosi Mechi Link Canal Scheme for transfer of Kosi river water to Mahananda Basin', 4900, 2.1, NULL, '2018-10-22 08:24:33', '2018-10-22 08:24:33'),
 (3, 'Baksoti Barrage Canal Scheme on Sakri river and linking of Sakri river with Nata River', 1300, 0.2, 0.48, '2018-10-22 08:24:33', '2018-10-22 08:24:33'),
 (5, 'Total', 6200, 2.3, 0.48, '2018-10-22 08:24:33', '2018-10-22 08:24:33');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `labour_resource_and_welfare1s`
+--
+
+DROP TABLE IF EXISTS `labour_resource_and_welfare1s`;
+CREATE TABLE `labour_resource_and_welfare1s` (
+  `id` bigint(20) NOT NULL,
+  `State` varchar(255) DEFAULT NULL,
+  `Total_Number_of_Workers` float DEFAULT NULL,
+  `Cultivators` float DEFAULT NULL,
+  `Agricultural_Labourers` float DEFAULT NULL,
+  `Household_Industry_Workers` float DEFAULT NULL,
+  `Other_Workers` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `labour_resource_and_welfare1s`
+--
+
+INSERT INTO `labour_resource_and_welfare1s` (`id`, `State`, `Total_Number_of_Workers`, `Cultivators`, `Agricultural_Labourers`, `Household_Industry_Workers`, `Other_Workers`, `Total`, `created_at`, `updated_at`) VALUES
+(1, 'Andhra Pradesh', 330.4, 18.4, 40, 3.5, 38.1, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(2, 'Bihar (2011)', 213.6, 25.3, 44.7, 3.6, 26.4, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(3, 'Bihar (2001)', 210.5, 32.2, 42.8, 3.6, 21.4, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(4, 'Chhattisgarh', 82.4, 36.9, 30.4, 1.7, 31.1, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(5, 'Gujarat', 203.7, 23.3, 22.1, 1.2, 53.4, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(6, 'Haryana', 70.2, 28, 12.7, 2.9, 56.4, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(7, 'Jharkhand', 68.2, 29.4, 18.2, 3.7, 48.8, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(8, 'Karnataka', 234, 25.8, 21.9, 3, 49.3, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(9, 'Kerala', 93.3, 5.8, 9.9, 2.1, 82.2, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(10, 'Madhya Pradesh', 227, 36.2, 29.2, 2.9, 31.8, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(11, 'Maharashtra', 437.6, 26.2, 25.3, 2.3, 46.2, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(12, 'Odisha', 107.1, 30.6, 22.6, 4.1, 42.6, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(13, 'Punjab', 84.5, 21.3, 13.8, 3.6, 61.3, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(14, 'Rajasthan', 210.6, 46.8, 10.4, 2.4, 40.4, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(15, 'Tamil Nadu', 279.4, 13.8, 25.9, 4, 56.3, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(16, 'Uttar Pradesh', 446.4, 34.9, 21.8, 5.4, 37.9, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(17, 'West Bengal', 256.9, 16.4, 22.9, 5.9, 54.9, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
+(18, 'India', 3624.5, 26.4, 23.8, 3.4, 46.4, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `labour_resource_and_welfare2s`
+--
+
+DROP TABLE IF EXISTS `labour_resource_and_welfare2s`;
+CREATE TABLE `labour_resource_and_welfare2s` (
+  `id` bigint(20) NOT NULL,
+  `Programme` varchar(255) DEFAULT NULL,
+  `Budget_outlay` float DEFAULT NULL,
+  `Financial_Achievement` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `labour_resource_and_welfare2s`
+--
+
+INSERT INTO `labour_resource_and_welfare2s` (`id`, `Programme`, `Budget_outlay`, `Financial_Achievement`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Expansion of Employment services', 90, 43.8, '2015-16', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(2, 'E Process of Employment Services operation', 150, 103.5, '2015-16', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(3, 'Strengthening of vocational guidance programme', 185, 110.8, '2015-16', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(4, 'Establishment of Overseas Bureau', 3000, 0, '2015-16', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(5, 'Scheme for development of weaker section', 15, 13.4, '2015-16', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(6, 'Sub Total', 3440, 271.5, '2015-16', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(7, 'Construction of combined labour buildings', 1000, 283.4, '2015-16', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(8, 'Total', 4440, 554.9, '2015-16', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(9, 'Expansion of Employment services', 250, 143.8, '2016-17', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(10, 'E Process of Employment Services operation', 50, 17.2, '2016-17', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(11, 'Strengthening of vocational guidance programme', 100, 92.2, '2016-17', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(12, 'Establishment of Overseas Bureau', 400, NULL, '2016-17', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(13, 'Scheme for development of weaker section', 40, 23.1, '2016-17', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(14, 'Sub Total', 840, 276.3, '2016-17', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(15, 'Construction of combined labour buildings', 1000, 84.2, '2016-17', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
+(16, 'Total', 1840, 360.5, '2016-17', '2018-12-06 06:50:13', '2018-12-06 06:50:13');
 
 -- --------------------------------------------------------
 
@@ -14532,7 +14755,20 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20181130105033'),
 ('20181130110836'),
 ('20181130111702'),
-('20181130113745');
+('20181130113745'),
+('20181203062040'),
+('20181203080948'),
+('20181203081901'),
+('20181203093814'),
+('20181203102342'),
+('20181203104215'),
+('20181203110013'),
+('20181203113347'),
+('20181203114709'),
+('20181206061603'),
+('20181206061941'),
+('20181206064933'),
+('20181206070655');
 
 -- --------------------------------------------------------
 
@@ -15565,6 +15801,130 @@ INSERT INTO `sixth_economic_census2s` (`id`, `District`, `Number_of_Establishmen
 (37, 'Araria', 34910, 8281, 43191, 2.5, 2.7, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
 (38, 'Katihar', 37090, 12316, 49406, 2.9, 3, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
 (39, 'Bihar', 1200510, 506889, 1707400, 100, 100, '2018-09-09 05:28:55', '2018-09-09 05:28:55');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `social_welfare1s`
+--
+
+DROP TABLE IF EXISTS `social_welfare1s`;
+CREATE TABLE `social_welfare1s` (
+  `id` bigint(20) NOT NULL,
+  `Scheme` varchar(255) DEFAULT NULL,
+  `Number_of_Beneficiaries` float DEFAULT NULL,
+  `Term_Loan` float DEFAULT NULL,
+  `Bank_Loan` float DEFAULT NULL,
+  `Margin_Money` float DEFAULT NULL,
+  `Subsidy` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `social_welfare1s`
+--
+
+INSERT INTO `social_welfare1s` (`id`, `Scheme`, `Number_of_Beneficiaries`, `Term_Loan`, `Bank_Loan`, `Margin_Money`, `Subsidy`, `Total`, `created_at`, `updated_at`) VALUES
+(1, 'Mahila Samridhi Scheme (0.30) (NSFDC)', 16, 3.2, NULL, NULL, 1.6, 4.8, '2018-12-03 09:43:00', '2018-12-03 09:43:00'),
+(2, 'Small Business (0.50) (NSFDC)', 8, 3.04, NULL, 0.16, 0.8, 4, '2018-12-03 09:43:00', '2018-12-03 09:43:00'),
+(3, 'Mahila Samridhi Scheme (0.30) (NSKFDC)', 227, 45.4, NULL, NULL, 22.7, 68.1, '2018-12-03 09:43:00', '2018-12-03 09:43:00'),
+(4, 'MahilaSamridhi Scheme (0.50) (NSKFDC)', 5, 2, NULL, NULL, 0.5, 2.5, '2018-12-03 09:43:00', '2018-12-03 09:43:00'),
+(5, 'Micro Credit Finance Scheme (0.30) (NSKFDC)', 240, 48, NULL, NULL, 24, 72, '2018-12-03 09:43:00', '2018-12-03 09:43:00'),
+(6, 'Micro Credit Finance Scheme (0.50) (NSKFDC)', 19, 7.6, NULL, NULL, 1.9, 9.5, '2018-12-03 09:43:00', '2018-12-03 09:43:00'),
+(7, 'Term Loan Scheme (0.50) (NSKFDC)', 10, 4, NULL, NULL, 1, 5, '2018-12-03 09:43:00', '2018-12-03 09:43:00'),
+(8, 'Term Loan Scheme (1.00) (NSKFDC)', 4, 3.1, NULL, 0.3, 0.4, 3.8, '2018-12-03 09:43:00', '2018-12-03 09:43:00'),
+(9, 'Subsidy Scheme (executed through Bank)', 2827, NULL, 537.75, NULL, 282.7, 820.45, '2018-12-03 09:43:00', '2018-12-03 09:43:00'),
+(10, 'Total', 3356, 116.34, 537.75, 0.46, 335.6, 990.15, '2018-12-03 09:43:00', '2018-12-03 09:43:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `social_welfare2s`
+--
+
+DROP TABLE IF EXISTS `social_welfare2s`;
+CREATE TABLE `social_welfare2s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Total_Outlay` float DEFAULT NULL,
+  `Total_Approved_Amount` float DEFAULT NULL,
+  `Total_Expenditure` float DEFAULT NULL,
+  `Utilisation_percentage` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `social_welfare2s`
+--
+
+INSERT INTO `social_welfare2s` (`id`, `Year`, `Total_Outlay`, `Total_Approved_Amount`, `Total_Expenditure`, `Utilisation_percentage`, `created_at`, `updated_at`) VALUES
+(1, '2012-13', 825.92, 825.92, 817.48, 99, '2018-12-03 10:24:10', '2018-12-03 10:24:10'),
+(2, '2013-14', 1375.79, 1193.1, 1193.1, 86.7, '2018-12-03 10:24:10', '2018-12-03 10:24:10'),
+(3, '2014-15', 1477.97, 1477.97, 1445.4, 97.8, '2018-12-03 10:24:10', '2018-12-03 10:24:10'),
+(4, '2015-16', 2975.3, 2781.45, 2695.07, 90.6, '2018-12-03 10:24:10', '2018-12-03 10:24:10'),
+(5, '2016-17', 1927.8, 1680, 1459.6, 75.7, '2018-12-03 10:24:10', '2018-12-03 10:24:10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `social_welfare3s`
+--
+
+DROP TABLE IF EXISTS `social_welfare3s`;
+CREATE TABLE `social_welfare3s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Number_of_Beneficiaries` float DEFAULT NULL,
+  `Fund_Allocation` float DEFAULT NULL,
+  `Indicator` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `social_welfare3s`
+--
+
+INSERT INTO `social_welfare3s` (`id`, `Year`, `Number_of_Beneficiaries`, `Fund_Allocation`, `Indicator`, `created_at`, `updated_at`) VALUES
+(1, '2011-12', 323313, 2517, 'Stipend for students of primary, middle and high school', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(2, '2012-13', 4300000, 58696, 'Stipend for students of primary, middle and high school', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(3, '2013-14', 9800000, 116824, 'Stipend for students of primary, middle and high school', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(4, '2014-15', 12200000, 105470, 'Stipend for students of primary, middle and high school', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(5, '2015-16', 20227800, 223376, 'Stipend for students of primary, middle and high school', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(6, '2016-17', 7662260, 128653, 'Stipend for students of primary, middle and high school', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(7, '2011-12', 126938, 15206.9, 'Post-Matric Scholarship', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(8, '2012-13', 225000, 24628.2, 'Post-Matric Scholarship', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(9, '2013-14', 36368, 5815, 'Post-Matric Scholarship', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(10, '2014-15', 244121, 36997, 'Post-Matric Scholarship', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(11, '2015-16', 25098, 1055, 'Post-Matric Scholarship', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(12, '2016-17', NULL, 22100, 'Post-Matric Scholarship', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(13, '2011-12', 3080, 485, 'OBC Girls’ Higher Secondary Residential School (12 nos.)', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(14, '2012-13', 800, 100, 'OBC Girls’ Higher Secondary Residential School (12 nos.)', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(15, '2013-14', 2019, 585, 'OBC Girls’ Higher Secondary Residential School (12 nos.)', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(16, '2014-15', 2499, 726, 'OBC Girls’ Higher Secondary Residential School (12 nos.)', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(17, '2015-16', 2642, 977, 'OBC Girls’ Higher Secondary Residential School (12 nos.)', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(18, '2016-17', 2642, 1216, 'OBC Girls’ Higher Secondary Residential School (12 nos.)', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(19, '2011-12', 53000, 5300, 'Mukhyamantri Medhavriti Yojana for EBC students', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(20, '2012-13', 42000, 4200, 'Mukhyamantri Medhavriti Yojana for EBC students', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(21, '2013-14', 35000, 3500, 'Mukhyamantri Medhavriti Yojana for EBC students', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(22, '2014-15', 40000, 4000, 'Mukhyamantri Medhavriti Yojana for EBC students', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(23, '2015-16', 68020, 6802, 'Mukhyamantri Medhavriti Yojana for EBC students', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(24, '2016-17', 26967, 8725, 'Mukhyamantri Medhavriti Yojana for EBC students', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(25, '2011-12', 850, 17, 'Stipend for students in technical courses', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(26, '2012-13', 1650, 30, 'Stipend for students in technical courses', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(27, '2013-14', 1500, 30, 'Stipend for students in technical courses', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(28, '2014-15', 1500, 30, 'Stipend for students in technical courses', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(29, '2015-16', 3750, 75, 'Stipend for students in technical courses', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(30, '2016-17', NULL, NULL, 'Stipend for students in technical courses', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(31, '2011-12', NULL, 160, 'Construction of 38 Jannayak Karpuri Thakur Hostels for EBC Students', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(32, '2012-13', NULL, 187, 'Construction of 38 Jannayak Karpuri Thakur Hostels for EBC Students', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(33, '2013-14', NULL, 935, 'Construction of 38 Jannayak Karpuri Thakur Hostels for EBC Students', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(34, '2014-15', NULL, NULL, 'Construction of 38 Jannayak Karpuri Thakur Hostels for EBC Students', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(35, '2015-16', NULL, 500, 'Construction of 38 Jannayak Karpuri Thakur Hostels for EBC Students', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
+(36, '2016-17', NULL, 1000, 'Construction of 38 Jannayak Karpuri Thakur Hostels for EBC Students', '2018-12-03 10:45:13', '2018-12-03 10:45:13');
 
 -- --------------------------------------------------------
 
@@ -18160,7 +18520,7 @@ INSERT INTO `udp_state_plan5s` (`id`, `Districts`, `Total_Number_of_Urban_Househ
 (1, 'Patna', 333594, 363, 51911, 3662, '2018-11-20 11:36:31', '2018-11-20 11:36:31'),
 (2, 'Nalanda', 71349, 143, 11306, 8610, '2018-11-20 11:36:31', '2018-11-20 11:36:31'),
 (3, 'Bhojpur ', 57265, 119, 8948, 7003, '2018-11-20 11:36:31', '2018-11-20 11:36:31'),
-(4, 'Bauxar', 21875, 60, 5469, 885, '2018-11-20 11:36:31', '2018-11-20 11:36:31'),
+(4, 'Buxar', 21875, 60, 5469, 885, '2018-11-20 11:36:31', '2018-11-20 11:36:31'),
 (5, 'Rohtas ', 66905, 159, 16223, 4612, '2018-11-20 11:36:31', '2018-11-20 11:36:31'),
 (6, 'Kaimur ', 12796, 41, 3103, 1243, '2018-11-20 11:36:31', '2018-11-20 11:36:31'),
 (7, 'Gaya', 86716, 105, 11591, 4396, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
@@ -18189,13 +18549,120 @@ INSERT INTO `udp_state_plan5s` (`id`, `Districts`, `Total_Number_of_Urban_Househ
 (30, 'Bhagalpur', 87368, 116, 13336, 5301, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
 (31, 'Banka', 12851, 36, 2956, 3626, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
 (32, 'Saharsa', 40032, 55, 9870, 0, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
-(33, 'Sapaul ', 22731, 53, 5516, 2299, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
+(33, 'Supaul', 22731, 53, 5516, 2299, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
 (34, 'Madhepura', 20293, 41, 4932, 1584, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
 (35, 'Purnia', 68697, 80, 9200, 3292, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
 (36, 'Kishanganj ', 33896, 64, 8221, 2366, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
 (37, 'Araria', 34201, 73, 8398, 1996, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
 (38, 'Katihar', 41375, 77, 5276, 897, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
 (39, 'Bihar', 1908160, 3396, 360938, 109845, '2018-11-20 11:36:32', '2018-11-20 11:36:32');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `women_empowerment1s`
+--
+
+DROP TABLE IF EXISTS `women_empowerment1s`;
+CREATE TABLE `women_empowerment1s` (
+  `id` bigint(20) NOT NULL,
+  `Sector` varchar(255) DEFAULT NULL,
+  `2012-13` float DEFAULT NULL,
+  `2013-14` float DEFAULT NULL,
+  `2014-15` float DEFAULT NULL,
+  `2015-16` float DEFAULT NULL,
+  `2016-17` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `women_empowerment1s`
+--
+
+INSERT INTO `women_empowerment1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `created_at`, `updated_at`) VALUES
+(1, 'Category I schemes for Women (100 percent beneficiaries)', 2293.8, 2740.2, 3920.1, 2996.1, 5564.8, '2018-12-03 11:02:10', '2018-12-03 11:02:10'),
+(2, 'Category II schemes for Women  (30 percent beneficiaries)', 5541.8, 7008, 8658.3, 8130.9, 9512.22, '2018-12-03 11:02:10', '2018-12-03 11:02:10'),
+(3, 'Total outlays for women', 7835.6, 9748.2, 12578.3, 11127, 15077, '2018-12-03 11:02:10', '2018-12-03 11:02:10'),
+(4, 'Total Outlays for related Departments', 34615.4, 19003.5, 33703.7, 31010.8, 36411.5, '2018-12-03 11:02:10', '2018-12-03 11:02:10'),
+(5, 'Outlays for women as a percent of total outlays of related Departments', 22.6, 51, 37.2, 35.9, 41.4, '2018-12-03 11:02:10', '2018-12-03 11:02:10'),
+(6, 'Total size of the state budget', 69206.6, 80405.3, 94698, 112328, 126302, '2018-12-03 11:02:10', '2018-12-03 11:02:10'),
+(7, 'Share of outlays in the state budget (percent)', 11.3, 12.1, 13.3, 9.9, 11.9, '2018-12-03 11:02:10', '2018-12-03 11:02:10'),
+(8, 'GSDP', 282368, 317101, 342951, 381501, 438030, '2018-12-03 11:02:10', '2018-12-03 11:02:10'),
+(9, 'Outlays for women as percent of GSDP ', 2.8, 3.1, 3.7, 2.9, 3.4, '2018-12-03 11:02:10', '2018-12-03 11:02:10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `women_empowerment3s`
+--
+
+DROP TABLE IF EXISTS `women_empowerment3s`;
+CREATE TABLE `women_empowerment3s` (
+  `id` bigint(20) NOT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `Lakshmibai_Social_Security_Pension_Scheme` float DEFAULT NULL,
+  `Nari_Shakti_Yojana` float DEFAULT NULL,
+  `Mukhyamantri_Kanya_Vivah_Yojana` float DEFAULT NULL,
+  `Mukhyamantri_Kanya_Suraksha_Yojana` float DEFAULT NULL,
+  `Total` float DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `women_empowerment3s`
+--
+
+INSERT INTO `women_empowerment3s` (`id`, `Year`, `Lakshmibai_Social_Security_Pension_Scheme`, `Nari_Shakti_Yojana`, `Mukhyamantri_Kanya_Vivah_Yojana`, `Mukhyamantri_Kanya_Suraksha_Yojana`, `Total`, `created_at`, `updated_at`) VALUES
+(1, '2011-12', 106.43, 30, 59.88, 100, 296.31, '2018-12-03 11:34:41', '2018-12-03 11:34:41'),
+(2, '2012-13', 41.06, 0, 82.43, 6.56, 130.05, '2018-12-03 11:34:41', '2018-12-03 11:34:41'),
+(3, '2013-14', 32.51, 0, 108.83, 0, 141.34, '2018-12-03 11:34:41', '2018-12-03 11:34:41'),
+(4, '2014-15', 39.9, 0, 134.91, 89.99, 264.8, '2018-12-03 11:34:41', '2018-12-03 11:34:41'),
+(5, '2015-16', 85.48, 0, 18.88, 0, 104.36, '2018-12-03 11:34:41', '2018-12-03 11:34:41'),
+(6, '2016-17 (BE)', 30, 14, 20.19, 6.15, 70.34, '2018-12-03 11:34:41', '2018-12-03 11:34:41');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `women_empowerment4s`
+--
+
+DROP TABLE IF EXISTS `women_empowerment4s`;
+CREATE TABLE `women_empowerment4s` (
+  `id` bigint(20) NOT NULL,
+  `Types_of_Cases` varchar(255) DEFAULT NULL,
+  `Registered` float DEFAULT NULL,
+  `Disposed` float DEFAULT NULL,
+  `Percentage_of_Case_Disposed` float DEFAULT NULL,
+  `Year` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `women_empowerment4s`
+--
+
+INSERT INTO `women_empowerment4s` (`id`, `Types_of_Cases`, `Registered`, `Disposed`, `Percentage_of_Case_Disposed`, `Year`, `created_at`, `updated_at`) VALUES
+(1, 'Domestic Violence', 4090, 3370, 82.4, '2015-16', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(2, 'Dowry Abused', 578, 459, 79.4, '2015-16', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(3, 'Dowry Death', 55, 53, 96.4, '2015-16', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(4, 'Second Marriage', 118, 114, 96.6, '2015-16', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(5, 'Assets Related', 95, 102, 107.4, '2015-16', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(6, 'Rape & Trafficking Cases', 44, 44, 100, '2015-16', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(7, 'Sexual abuse at  office or other places', 86, 85, 98.8, '2015-16', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(8, 'Others', 1773, 1586, 89.5, '2015-16', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(9, 'Total Cases', 6839, 5813, 85, '2015-16', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(10, 'Domestic Violence', 3990, 3284, 82.3, '2016-17', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(11, 'Dowry Abused', 629, 469, 74.6, '2016-17', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(12, 'Dowry Death', 6, 5, 83.3, '2016-17', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(13, 'Second Marriage', 88, 92, 104.5, '2016-17', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(14, 'Assets Related', 10, 26, 260, '2016-17', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(15, 'Rape & Trafficking Cases', 23, 15, 65.2, '2016-17', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(16, 'Sexual abuse at  office or other places', 98, 72, 73.5, '2016-17', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(17, 'Others', 1339, 1152, 86, '2016-17', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
+(18, 'Total Cases', 6183, 5115, 82.7, '2016-17', '2018-12-03 11:48:02', '2018-12-03 11:48:02');
 
 --
 -- Indexes for dumped tables
@@ -18659,6 +19126,12 @@ ALTER TABLE `district_wise_section4s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `district_wise_section5s`
+--
+ALTER TABLE `district_wise_section5s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `district_wise_section6s`
 --
 ALTER TABLE `district_wise_section6s`
@@ -18710,6 +19183,18 @@ ALTER TABLE `drinking_water_supply_and_sanitation3s`
 -- Indexes for table `drinking_water_supply_and_sanitation4s`
 --
 ALTER TABLE `drinking_water_supply_and_sanitation4s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `education_art_culture7s`
+--
+ALTER TABLE `education_art_culture7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `education_art_culture9s`
+--
+ALTER TABLE `education_art_culture9s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -19004,6 +19489,18 @@ ALTER TABLE `irrigation6s`
 -- Indexes for table `irrigation7s`
 --
 ALTER TABLE `irrigation7s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `labour_resource_and_welfare1s`
+--
+ALTER TABLE `labour_resource_and_welfare1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `labour_resource_and_welfare2s`
+--
+ALTER TABLE `labour_resource_and_welfare2s`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -19685,6 +20182,24 @@ ALTER TABLE `sixth_economic_census2s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `social_welfare1s`
+--
+ALTER TABLE `social_welfare1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `social_welfare2s`
+--
+ALTER TABLE `social_welfare2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `social_welfare3s`
+--
+ALTER TABLE `social_welfare3s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `social_welfares`
 --
 ALTER TABLE `social_welfares`
@@ -19985,6 +20500,24 @@ ALTER TABLE `udp_state_plan5s`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `women_empowerment1s`
+--
+ALTER TABLE `women_empowerment1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `women_empowerment3s`
+--
+ALTER TABLE `women_empowerment3s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `women_empowerment4s`
+--
+ALTER TABLE `women_empowerment4s`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -20175,6 +20708,12 @@ ALTER TABLE `district_wise_section4s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
+-- AUTO_INCREMENT for table `district_wise_section5s`
+--
+ALTER TABLE `district_wise_section5s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
 -- AUTO_INCREMENT for table `district_wise_section6s`
 --
 ALTER TABLE `district_wise_section6s`
@@ -20227,6 +20766,18 @@ ALTER TABLE `drinking_water_supply_and_sanitation3s`
 --
 ALTER TABLE `drinking_water_supply_and_sanitation4s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `education_art_culture7s`
+--
+ALTER TABLE `education_art_culture7s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `education_art_culture9s`
+--
+ALTER TABLE `education_art_culture9s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `expenditure_on_urban_developments`
@@ -20293,6 +20844,18 @@ ALTER TABLE `institutional_structure_of_power_sectors`
 --
 ALTER TABLE `irrigation7s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `labour_resource_and_welfare1s`
+--
+ALTER TABLE `labour_resource_and_welfare1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `labour_resource_and_welfare2s`
+--
+ALTER TABLE `labour_resource_and_welfare2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `level_of_urbanisation1s`
@@ -20685,6 +21248,24 @@ ALTER TABLE `sectoral_share12s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
+-- AUTO_INCREMENT for table `social_welfare1s`
+--
+ALTER TABLE `social_welfare1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `social_welfare2s`
+--
+ALTER TABLE `social_welfare2s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `social_welfare3s`
+--
+ALTER TABLE `social_welfare3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
 -- AUTO_INCREMENT for table `social_welfares`
 --
 ALTER TABLE `social_welfares`
@@ -20839,3 +21420,21 @@ ALTER TABLE `udp_state_plan4s`
 --
 ALTER TABLE `udp_state_plan5s`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `women_empowerment1s`
+--
+ALTER TABLE `women_empowerment1s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `women_empowerment3s`
+--
+ALTER TABLE `women_empowerment3s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `women_empowerment4s`
+--
+ALTER TABLE `women_empowerment4s`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;

@@ -1,0 +1,47 @@
+<%= form_with(model: women_empowerment3, local: true) do |form| %>
+  <% if women_empowerment3.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(women_empowerment3.errors.count, "error") %> prohibited this women_empowerment3 from being saved:</h2>
+
+      <ul>
+      <% women_empowerment3.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Lakshmibai_Social_Security_Pension_Scheme %>
+    <%= form.text_field :Lakshmibai_Social_Security_Pension_Scheme %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Nari_Shakti_Yojana %>
+    <%= form.text_field :Nari_Shakti_Yojana %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mukhyamantri_Kanya_Vivah_Yojana %>
+    <%= form.text_field :Mukhyamantri_Kanya_Vivah_Yojana %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mukhyamantri_Kanya_Suraksha_Yojana %>
+    <%= form.text_field :Mukhyamantri_Kanya_Suraksha_Yojana %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total %>
+    <%= form.text_field :Total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

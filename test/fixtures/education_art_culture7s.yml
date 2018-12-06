@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Programmes: MyString
+  APPROVED_AWP_and_B: 1.5
+  Fund_Released_by_GOI: 1.5
+  Fund_Released_by_GOB: 1.5
+  Total_Fund_Released: 1.5
+  Total_Expenditure: 1.5
+  Expenditure_as_Percentage_of_AWP_and_B: 1.5
+  Year: MyString
+
+two:
+  Programmes: MyString
+  APPROVED_AWP_and_B: 1.5
+  Fund_Released_by_GOI: 1.5
+  Fund_Released_by_GOB: 1.5
+  Total_Fund_Released: 1.5
+  Total_Expenditure: 1.5
+  Expenditure_as_Percentage_of_AWP_and_B: 1.5
+  Year: MyString

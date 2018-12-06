@@ -196,7 +196,7 @@ module Statewithoutyear
             }]
         else
 
-          if views != "column" && views != "line" && views != "scatter"
+          if views != "column" && views != "line" && views != "bubble"
             hash_data = b.reject{ |x| x['Districts'] == 'India'|| x['Districts'] == 'Total' }.map do |col|
               {
                 type:views,

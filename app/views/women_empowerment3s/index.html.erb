@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Women Empowerment3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Lakshmibai social security pension scheme</th>
+      <th>Nari shakti yojana</th>
+      <th>Mukhyamantri kanya vivah yojana</th>
+      <th>Mukhyamantri kanya suraksha yojana</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @women_empowerment3s.each do |women_empowerment3| %>
+      <tr>
+        <td><%= women_empowerment3.Year %></td>
+        <td><%= women_empowerment3.Lakshmibai_Social_Security_Pension_Scheme %></td>
+        <td><%= women_empowerment3.Nari_Shakti_Yojana %></td>
+        <td><%= women_empowerment3.Mukhyamantri_Kanya_Vivah_Yojana %></td>
+        <td><%= women_empowerment3.Mukhyamantri_Kanya_Suraksha_Yojana %></td>
+        <td><%= women_empowerment3.Total %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Women Empowerment3', new_women_empowerment3_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Lakshmibai_Social_Security_Pension_Scheme: 1.5
+  Nari_Shakti_Yojana: 1.5
+  Mukhyamantri_Kanya_Vivah_Yojana: 1.5
+  Mukhyamantri_Kanya_Suraksha_Yojana: 1.5
+  Total: 1.5
+
+two:
+  Year: MyString
+  Lakshmibai_Social_Security_Pension_Scheme: 1.5
+  Nari_Shakti_Yojana: 1.5
+  Mukhyamantri_Kanya_Vivah_Yojana: 1.5
+  Mukhyamantri_Kanya_Suraksha_Yojana: 1.5
+  Total: 1.5

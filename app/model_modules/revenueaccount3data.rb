@@ -197,7 +197,7 @@ module Revenueaccount3data
                 }
                 }
             else
-                if views == "line" || views == "scatter" || views == "column"
+                if views == "line" || views == "bubble" || views == "column"
                     h = grouped_data
                             hash_data = h.map{ |vegetable, values| 
                                 dataset = vegetable.to_s.gsub("_"," ")

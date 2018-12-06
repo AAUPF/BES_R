@@ -105,7 +105,7 @@ module Districtcomparedistrictwithoutyear
                   name:dataset,
                   legendText: dataset,
                   showInLegend: true,
-                  dataPoints: b.reject { |x| x['Districts'] == 'Total' }.map do |el|
+                  dataPoints: b.reject { |x| x['Districts'] == 'Total' || x['Districts'] == 'Bihar' }.map do |el|
                                 { y: el[column_name], z: el[column_name], label: el[d] }
                               end
                 }
@@ -164,7 +164,7 @@ module Districtcomparedistrictwithoutyear
                 color: color,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.reject { |x| x['Districts'] == 'Total' }.map do |el|
+                dataPoints: b.reject { |x| x['Districts'] == 'Total'  || x['Districts'] == 'Bihar' }.map do |el|
                               { y: el[rain_fall_type], label: el['Districts'] }
                             end
               }]

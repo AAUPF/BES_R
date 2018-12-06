@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Social Welfare1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scheme</th>
+      <th>Number of beneficiaries</th>
+      <th>Term loan</th>
+      <th>Bank loan</th>
+      <th>Margin money</th>
+      <th>Subsidy</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @social_welfare1s.each do |social_welfare1| %>
+      <tr>
+        <td><%= social_welfare1.Scheme %></td>
+        <td><%= social_welfare1.Number_of_Beneficiaries %></td>
+        <td><%= social_welfare1.Term_Loan %></td>
+        <td><%= social_welfare1.Bank_Loan %></td>
+        <td><%= social_welfare1.Margin_Money %></td>
+        <td><%= social_welfare1.Subsidy %></td>
+        <td><%= social_welfare1.Total %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Social Welfare1', new_social_welfare1_path %>

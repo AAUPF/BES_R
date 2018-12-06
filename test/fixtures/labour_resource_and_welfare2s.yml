@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Programme: MyString
+  Budget_outlay: 1.5
+  Financial_Achievement: 1.5
+  Year: MyString
+
+two:
+  Programme: MyString
+  Budget_outlay: 1.5
+  Financial_Achievement: 1.5
+  Year: MyString

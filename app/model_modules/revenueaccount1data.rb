@@ -215,7 +215,7 @@ end
             else
                 
                 if compare == "None"
-                    if views == "line" || views == "scatter" || views == "column"
+                    if views == "line" || views == "bubble" || views == "column"
                         hash_data = grouped_data.map{ |vegetable, values| 
                             dataset = vegetable.to_s.gsub("_"," ")
                         {

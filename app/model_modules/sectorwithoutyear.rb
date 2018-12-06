@@ -114,7 +114,7 @@ module Sectorwithoutyear
 
     else
       if compare != 'None'
-        if views == 'line' || views == 'scatter' || views == 'column'
+        if views == 'line' || views == 'bubble' || views == 'column'
           dataset = rain_fall_type.tr('_', ' ')
           hash_data =
             [{
@@ -145,7 +145,7 @@ module Sectorwithoutyear
       else
         if search == 'All'
           
-          if views == 'line' || views == 'scatter' || views == 'column'
+          if views == 'line' || views == 'bubble' || views == 'column'
             dataset = rain_fall_type.tr('_', ' ')
             hash_data =
               [{
