@@ -21,7 +21,19 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:Districts, :Regular_Post_sanctioned, :Contractual_Post_sanctioned, :Regular_ANM_Employed, :Contractual_ANM_Employed, :Number_of_ANM_per_lakh_population, :Year]
+search = params[:search]
+legend = "Districts"
+remove = "Bihar"
+if year == "All"
+ ji1 = [:Districts,:"2015",:"2016",:"2017"]
+else
+ if rain_fall_type != "All"
+   ji1 = [:Districts, "#{rain_fall_type}", :Year]
+ else
+  ji1 = [:Districts, :Regular_Post_sanctioned, :Contractual_Post_sanctioned, :Regular_ANM_Employed, :Contractual_ANM_Employed, :Number_of_ANM_per_lakh_population, :Year]
+end
+ 
+end
   if rain_fall_type || views
 
       if views == "Map View"
@@ -35,11 +47,11 @@ ji1 = [:Districts, :Regular_Post_sanctioned, :Contractual_Post_sanctioned, :Regu
           a = Health18.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
-        b = Health18.search(params[:search],compare,year,rain_fall_type)
-        a = Health18.table(b,rain_fall_type,year,ji1,compare)
+        b = Health18.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health18.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @Health18s = Health18.search(params[:search],compare,year,rain_fall_type)
-        a = Health18.query(@Health18s,params[:year],rain_fall_type,views,ji,compare)
+        @Health18s = Health18.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health18.query(@Health18s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

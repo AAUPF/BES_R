@@ -110,6 +110,8 @@ class TaxDepartment7 < ApplicationRecord
             dataset = column_name.to_s.tr('_', ' ')
             {
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               legendText: dataset,
               showInLegend: true,
               dataPoints: b.map do |el|
@@ -125,6 +127,8 @@ class TaxDepartment7 < ApplicationRecord
             dataset = column_name.to_s.tr('_', ' ')
             {
               type: views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:dataset,
               legendText: dataset,
               showInLegend: true,
               dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
@@ -173,6 +177,8 @@ class TaxDepartment7 < ApplicationRecord
           [{
             type: views,
             color: color,
+            toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+            name:dataset,
             legendText: dataset,
             showInLegend: true,
             dataPoints: b.map do |el|
@@ -201,6 +207,8 @@ class TaxDepartment7 < ApplicationRecord
           [{
             type: views,
             color: color,
+            toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+            name:dataset,
             legendText: dataset,
             showInLegend: true,
             dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|

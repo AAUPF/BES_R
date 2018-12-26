@@ -16,23 +16,23 @@ class DistrictWiseSection3sController < ApplicationController
   end
 
   def test
-    ji = [:Primary, :Upper_Primary, :Total]
+    ji = [:Primary1, :Upper_Primary, :Total]
     rain_fall_type = params[:rain_fall_type]
      views  = params[:views]
      year  = params[:year]
      compare = params[:compare]
      search = params[:search]
      legend = "Districts"
-     remove = "Total"
+     remove = "Bihar"
     #  ji1 = [:Characteristics, :India, :Bihar, :Year]
      if year == "All"
-      ji1 = [:Districts, "2014-15","2015-16"]
+      ji1 = [:Districts, :"2014-15",:"2015-16"]
      else
       if rain_fall_type != "All"
         ji1 = [:Districts, "#{rain_fall_type}", :Year]
         
       else
-        ji1 = [:Districts, :Primary, :Upper_Primary, :Total, :Year]
+        ji1 = [:Districts, :Primary1, :Upper_Primary, :Total, :Year]
       end
       
      end

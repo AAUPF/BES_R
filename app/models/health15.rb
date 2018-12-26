@@ -1,4 +1,4 @@
 class Health15 < ApplicationRecord
-  extend Mapyear  
+  extend Districtcomparedistrictwithoutyear
 
       end

@@ -1,4 +1,4 @@
-module Rfallseasonthreevariable
+module Rfallseasontwovariableremove
     # extend Code
   
     def import1(file)
@@ -13,36 +13,36 @@ module Rfallseasonthreevariable
              end
     end
   
-    def search(search,compare,year,rain_fall_type,legend,legend1)
+    def search(search,compare,year,rain_fall_type,legend)
         if year == "All" and rain_fall_type == "All"
-          where("#{legend} = ?", search).where("#{legend1} = ?", compare).order(:year)
+          where("#{legend} = ?", search)
         elsif year == "All" and compare == "None"
           # all
           if compare == "None"
             # abort("error")
             if year == "All"
-              select(rain_fall_type,"Year").where("#{legend} = ?", search).where("#{legend1} = ?", compare).order(:year)
+              select(rain_fall_type,"Year").where("#{legend} = ?", search)
             else
-              select(rain_fall_type).where("Year = ?", year).where("#{legend} = ?", search).where("#{legend1} = ?", compare)
+              select(rain_fall_type).where("Year = ?", year).where("#{legend} = ?", search)
             end
           else
-            select(rain_fall_type,"Year").where("#{legend} = ?", search).where("#{legend1} = ?", compare).order(:year)
+            select(rain_fall_type,"Year").where("#{legend} = ?", search)
           end
         else
              if compare == "None"
               # abort(compare)
               # abort("errror")
               if rain_fall_type == "All"
-                where("Year = ?", year).where("#{legend} = ?", search).where("#{legend1} = ?", compare).order(:year)
+                where("Year = ?", year).where("#{legend} = ?", search)
               else
                 # abort(rain_fall_type)
-                select(rain_fall_type,"Year").where("Year = ?", year).where("#{legend} = ?", search).where("#{legend1} = ?", compare)
+                select(rain_fall_type,"Year").where("Year = ?", year).where("#{legend} = ?", search)
               end
              else
               if year == "All"
-                select(rain_fall_type,"Year").where("#{legend} = ?", search).where("#{legend1} = ?", compare).order(:year)
+                select(rain_fall_type,compare,"Year").where("#{legend} = ?", search)
               else
-                where("Year = ?", year).where("#{legend} = ?", search).where("#{legend1} = ?", compare)
+                where("Year = ?", year).where("#{legend} = ?", search)
               end
              end
         end
@@ -50,8 +50,6 @@ module Rfallseasonthreevariable
   
     # Logic to generate table starts
     def table (b,rain_fall_type,year,ji,compare)
-        compare = "None"
-
       dataset = rain_fall_type.gsub("_"," ");
       dataset_compare = compare.gsub("_"," ");
       if rain_fall_type == "All"
@@ -137,8 +135,6 @@ module Rfallseasonthreevariable
   
   
       def query(b,year,rain_fall_type,views,ji,compare)
-        compare = "None"
-
         
           d = "Districts"
           color = "#4f81bc"
@@ -167,7 +163,7 @@ module Rfallseasonthreevariable
                 name:dataset,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+                dataPoints: b.reject{|x| x["Year"]== "Total"}.map do |el|
                      { y: el[column_name],z:el[column_name], label: el["Year"] }
                 end
               }
@@ -205,7 +201,7 @@ module Rfallseasonthreevariable
                   name:dataset,
                   legendText: dataset,
                   showInLegend: true,
-                  dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+                  dataPoints: b.reject{|x| x["Year"]== "Total"}.map do |el|
                        { y: el[col], label: el["Year"] }
                   end
                 }
@@ -213,7 +209,7 @@ module Rfallseasonthreevariable
   
             else
   
-              if views != "column" && views!="line" && views!="scatter"
+              if views != "column" && views!="line" && views!="bubble"
                 dataset = rain_fall_type.tr('_', ' ')
                       hash_data =  b.map do |el|
                       {
@@ -237,7 +233,7 @@ module Rfallseasonthreevariable
                 color: color,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+                dataPoints: b.reject{|x| x["Year"]== "Total"}.map do |el|
                      { y: el[rain_fall_type], label: el["Year"] }
                 end
               }]
@@ -277,7 +273,7 @@ module Rfallseasonthreevariable
                     name:col.to_s.gsub("_"," "),
                     legendText: col.to_s.gsub("_"," "),
                     showInLegend: true,
-                    dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+                    dataPoints: b.reject{|x| x["Year"]== "Total"}.map do |el|
                          { y: el[col], label: el["Year"] }
                     end
                   }
@@ -305,7 +301,7 @@ module Rfallseasonthreevariable
                             name:col.to_s.gsub("_"," "),
                             legendText: col.to_s.gsub("_"," "),
                             showInLegend: true,
-                            dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+                            dataPoints: b.reject{|x| x["Year"]== "Total"}.map do |el|
                                   { y: el[col], label: el["Year"] }
                             end
                           }
@@ -332,7 +328,7 @@ module Rfallseasonthreevariable
                      name:col.to_s.gsub("_"," "),
                      legendText: col.to_s.gsub("_"," "),
                      showInLegend: true,
-                     dataPoints: b.reject{|x| x["Districts"]== "Bihar"}.map do |el|
+                     dataPoints: b.reject{|x| x["Year"]== "Total"}.map do |el|
                           { y: el[col], label: el["Year"] }
                      end
                    }

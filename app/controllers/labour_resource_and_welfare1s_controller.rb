@@ -16,11 +16,12 @@ class LabourResourceAndWelfare1sController < ApplicationController
   end
 
 def test
-  ji = [:Total_Number_of_Workers, :Cultivators, :Agricultural_Labourers, :Household_Industry_Workers, :Other_Workers]
+  ji = [:Cultivators, :Agricultural_Labourers, :Household_Industry_Workers, :Other_Workers]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
    legend = "State"
    ji1 = [:State, :Total_Number_of_Workers, :Cultivators, :Agricultural_Labourers, :Household_Industry_Workers, :Other_Workers, :Total]
 
@@ -41,7 +42,7 @@ def test
         a = LabourResourceAndWelfare1.table(b,rain_fall_type,year,ji1,compare)
       else
         @LabourResourceAndWelfare1s = LabourResourceAndWelfare1.search(params[:search],compare,year,rain_fall_type,legend)
-        a = LabourResourceAndWelfare1.query(@LabourResourceAndWelfare1s,params[:year],rain_fall_type,views,ji,compare,legend)
+        a = LabourResourceAndWelfare1.query(@LabourResourceAndWelfare1s,params[:year],rain_fall_type,views,ji,compare,search,legend)
       end
       respond_to do |format|
         format.html { render json:a }

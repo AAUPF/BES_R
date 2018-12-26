@@ -21,7 +21,21 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:Region, :Male, :Female, :Total, :Year]
+search = params[:search]
+   legend = "Region"
+   remove = ""
+  #  ji1 = [:Characteristics, :India, :Bihar, :Year]
+   if year == "All"
+    ji1 = [:Region,:"2001-05",:"2011-15"]
+   else
+    if rain_fall_type != "All"
+      ji1 = [:Region, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:Region, :Male, :Female, :Total, :Year]
+    end
+    
+   end
   if rain_fall_type || views
 
       if views == "Map View"
@@ -35,11 +49,11 @@ ji1 = [:Region, :Male, :Female, :Total, :Year]
           a = Health2.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
-        b = Health2.search(params[:search],compare,year,rain_fall_type)
-        a = Health2.table(b,rain_fall_type,year,ji1,compare)
+        b = Health2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health2.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @Health2s = Health2.search(params[:search],compare,year,rain_fall_type)
-        a = Health2.query(@Health2s,params[:year],rain_fall_type,views,ji,compare)
+        @Health2s = Health2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health2.query(@Health2s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

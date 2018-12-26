@@ -15,63 +15,25 @@ class DistrictWiseSection2sController < ApplicationController
     @district_wise_section2 = DistrictWiseSection2.new
   end
 
-# def test
-#   ji = [:Districts, :Primary, :Upper_Primary, :Total, :Year]
-#   rain_fall_type = params[:rain_fall_type]
-#    views  = params[:views]
-#    year  = params[:year]
-#    compare = params[:compare]
-
-#   if rain_fall_type || views
-
-#       if views == "Map View"
-#         l =  rain_fall_type.gsub(" ","")           
-#          if rain_fall_type  ==  "All"
-#           b = DistrictWiseSection2.map_search("All",compare,year,rain_fall_type)
-#           u = "Total"
-#           a = DistrictWiseSection2.map(b,params[:year],rain_fall_type,views)
-#          else
-#           b = DistrictWiseSection2.map_search(params[:search],compare,year,rain_fall_type)
-#           a = DistrictWiseSection2.map(b,rain_fall_type,year,ji)
-#          end
-#       elsif views == "Table"  
-#         b = DistrictWiseSection2.search(params[:search],compare,year,rain_fall_type)
-#         a = DistrictWiseSection2.table(b,rain_fall_type,year,ji1,compare)
-#       else
-#         @DistrictWiseSection2s = DistrictWiseSection2.search(params[:search],compare,year,rain_fall_type)
-#         a = DistrictWiseSection2.query(@DistrictWiseSection2s,params[:year],rain_fall_type,views,ji,compare)
-#       end
-#       respond_to do |format|
-#         format.html { render json:a }
-#     end
-
-#   else
-#     respond_to do |format|
-#       format.html { render json: "error"}
-#   end
-#   end
-
-# end
-
 
 def test
-  ji = [:Primary, :Upper_Primary, :Total]
+  ji = [:Primary1, :Upper_Primary, :Total]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
    legend = "Districts"
-   remove = "Total"
+   remove = "Bihar"
   #  ji1 = [:Characteristics, :India, :Bihar, :Year]
    if year == "All"
-    ji1 = [:Districts, "2014-15","2015-16"]
+    ji1 = [:Districts, :"2014-15",:"2015-16"]
    else
     if rain_fall_type != "All"
       ji1 = [:Districts, "#{rain_fall_type}", :Year]
       
     else
-      ji1 = [:Districts, :Primary, :Upper_Primary, :Total, :Year]
+      ji1 = [:Districts, :Primary1, :Upper_Primary, :Total, :Year]
     end
     
    end

@@ -40,7 +40,7 @@ ji1 = [:Districts, :Truck, :Bus, :Car, :Taxi, :Jeep, :Three_Wheeler, :Two_Wheele
         a = RoadTransport4.table(b,rain_fall_type,year,ji1,compare)
       else
         @RoadTransport4s = RoadTransport4.search(params[:search],compare,year,rain_fall_type)
-        a = RoadTransport4.query(@RoadTransport4s,params[:year],rain_fall_type,views,ji,compare)
+        a = RoadTransport4.query(@RoadTransport4s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

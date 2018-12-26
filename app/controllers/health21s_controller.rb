@@ -16,13 +16,14 @@ class Health21sController < ApplicationController
   end
 
 def test
-  unit1 = "Number"
+  
 
   ji = [:Acute_Diarrheal_Disease, :Bacillary_Dysentery, :Viral_Hepatitis, :Enteric_Fever, :Malaria, :PUO, :Acute_Respiratory_Infection, :Pneumonia, :Dogbite, :Other_State_Specific_Disease, :Unusual_Syndromes_Not_Captured]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
 ji1  = [:Districts, :Acute_Diarrheal_Disease, :Bacillary_Dysentery, :Viral_Hepatitis, :Enteric_Fever, :Malaria, :PUO, :Acute_Respiratory_Infection, :Pneumonia, :Dogbite, :Other_State_Specific_Disease, :Unusual_Syndromes_Not_Captured]
   if rain_fall_type || views
 
@@ -34,14 +35,14 @@ ji1  = [:Districts, :Acute_Diarrheal_Disease, :Bacillary_Dysentery, :Viral_Hepat
           a = Health21.map(b,params[:year],rain_fall_type,views)
          else
           b = Health21.map_search(params[:search],compare,year,rain_fall_type)
-          a = Health21.map(b,rain_fall_type,year,ji,unit1)
+          a = Health21.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
         b = Health21.search(params[:search],compare,year,rain_fall_type)
         a = Health21.table(b,rain_fall_type,year,ji1,compare)
       else
         @Health21s = Health21.search(params[:search],compare,year,rain_fall_type)
-        a = Health21.query(@Health21s,params[:year],rain_fall_type,views,ji,compare)
+        a = Health21.query(@Health21s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

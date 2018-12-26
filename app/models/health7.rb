@@ -1,4 +1,4 @@
 class Health7 < ApplicationRecord
-  extend Doctordata  
+  extend Generaldata  
 
       end

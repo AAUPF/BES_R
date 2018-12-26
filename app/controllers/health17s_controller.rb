@@ -21,7 +21,22 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1  = [:Districts, :Regular_Post_sanctioned, :Contractual_Post_sanctioned, :Regular_Grade_A_Nurses_Employed, :Contractual_Grade_A_Nurses_Employed, :Number_of_Grade_A_Nurses_per_lakh_population, :Year]
+   search = params[:search]
+legend = "Districts"
+remove = "Bihar"
+#  ji1 = [:Characteristics, :India, :Bihar, :Year]
+if year == "All"
+ ji1 = [:Districts,:"2015",:"2016",:"2017"]
+else
+ if rain_fall_type != "All"
+   ji1 = [:Districts, "#{rain_fall_type}", :Year]
+   
+ else
+  ji1  = [:Districts, :Regular_Post_sanctioned, :Contractual_Post_sanctioned, :Regular_Grade_A_Nurses_Employed, :Contractual_Grade_A_Nurses_Employed, :Number_of_Grade_A_Nurses_per_lakh_population, :Year]
+ end
+ 
+end
+
   if rain_fall_type || views
 
       if views == "Map View"
@@ -35,11 +50,11 @@ ji1  = [:Districts, :Regular_Post_sanctioned, :Contractual_Post_sanctioned, :Reg
           a = Health17.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
-        b = Health17.search(params[:search],compare,year,rain_fall_type)
-        a = Health17.table(b,rain_fall_type,year,ji1,compare)
+        b = Health17.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health17.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @Health17s = Health17.search(params[:search],compare,year,rain_fall_type)
-        a = Health17.query(@Health17s,params[:year],rain_fall_type,views,ji,compare)
+        @Health17s = Health17.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health17.query(@Health17s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

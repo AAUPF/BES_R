@@ -1,4 +1,4 @@
 class Health12 < ApplicationRecord
-  extend Fundhealthdata  
+  extend Generaldata  
 
       end

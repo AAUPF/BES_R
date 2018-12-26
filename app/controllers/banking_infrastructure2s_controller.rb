@@ -62,10 +62,10 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+search = params[:search]
+   ji1 = [:State, :Number_of_Branches, :Percentage_share_in_all_India_branches, :Percentage_share_in_all_India_population]
 
-   ji1 = [:States, :Number_of_Branches, :Percentage_share_in_all_India_branches, :Percentage_share_in_all_India_population]
-
-   legend = "States"
+   legend = "State"
   if rain_fall_type || views
 
       if views == "Map View"
@@ -83,7 +83,7 @@ def test
         a = BankingInfrastructure2.table(b,rain_fall_type,year,ji1,compare)
       else
         @BankingInfrastructure2s = BankingInfrastructure2.search(params[:search],compare,year,rain_fall_type,legend)
-        a = BankingInfrastructure2.query(@BankingInfrastructure2s,params[:year],rain_fall_type,views,ji,compare,legend)
+        a = BankingInfrastructure2.query(@BankingInfrastructure2s,params[:year],rain_fall_type,views,ji,compare,search,legend)
       end
       respond_to do |format|
         format.html { render json:a }

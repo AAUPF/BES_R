@@ -16,7 +16,8 @@ module Sectorwithoutyear
       if rain_fall_type == 'All'
         order('id ')
       else
-        order("#{rain_fall_type} ")
+        # order("#{rain_fall_type} ")
+        order('id ')
       end
     elsif compare != 'None'
       where("#{legend} = ? OR #{legend} = ?", search, compare).order(:id)

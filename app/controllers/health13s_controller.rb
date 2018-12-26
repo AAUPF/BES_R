@@ -21,7 +21,18 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:Posts, :No_of_Sanctioned_Posts, :Working, :Percentage_of_Vacant_Post, :Year]
+   search = params[:search]
+   legend = "Posts"
+   remove = ""
+  if year == "All"
+    ji1 = [:Posts,:"2012",:"2013",:"2014",:"2015",:"2016"]
+   else
+    if rain_fall_type != "All"
+      ji1 = [:Posts, "#{rain_fall_type}", :Year]
+    else
+      ji1 = [:Posts, :No_of_Sanctioned_Posts, :Working, :Percentage_of_Vacant_Post, :Year]
+    end
+  end
   if rain_fall_type || views
 
       if views == "Map View"
@@ -35,11 +46,11 @@ ji1 = [:Posts, :No_of_Sanctioned_Posts, :Working, :Percentage_of_Vacant_Post, :Y
           a = Health13.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
-        b = Health13.search(params[:search],compare,year,rain_fall_type)
-        a = Health13.table(b,rain_fall_type,year,ji1,compare)
+        b = Health13.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health13.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @Health13s = Health13.search(params[:search],compare,year,rain_fall_type)
-        a = Health13.query(@Health13s,params[:year],rain_fall_type,views,ji,compare)
+        @Health13s = Health13.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health13.query(@Health13s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

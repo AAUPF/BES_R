@@ -21,6 +21,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
 ji1 = [:Districts, :Number_of_Dealers, :Dealers_belonging_to_SC_or_ST, :Dealers_belonging_to_BC_or_EBC, :Dealers_belonging_to_Minority, :Dealers_belonging_to_Women, :Dealers_belonging_to_Women_or_Other_SHG, :Dealers_from_Helper_Samiti_or_PACS_or_Samiti_of_ExArmy_Personnel, :Dealers_belonging_to_General, :Total]
   if rain_fall_type || views
 
@@ -39,7 +40,7 @@ ji1 = [:Districts, :Number_of_Dealers, :Dealers_belonging_to_SC_or_ST, :Dealers_
         a = RuralDevelopmentProgrammes9.table(b,rain_fall_type,year,ji1,compare)
       else
         @RuralDevelopmentProgrammes9s = RuralDevelopmentProgrammes9.search(params[:search],compare,year,rain_fall_type)
-        a = RuralDevelopmentProgrammes9.query(@RuralDevelopmentProgrammes9s,params[:year],rain_fall_type,views,ji,compare)
+        a = RuralDevelopmentProgrammes9.query(@RuralDevelopmentProgrammes9s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

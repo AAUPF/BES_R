@@ -15,55 +15,14 @@ class BankingInfrastructure6sController < ApplicationController
     @banking_infrastructure6 = BankingInfrastructure6.new
   end
 
-# def test
-#   ji = [:Shelters_Sanctioned_Planned, :Officers, :Clerks, :Sub_ordinates, :Total, :Number_of_Female_Employees, :Percentage_of_Officers, :Percentage_of_Clerks, :Percentage_of_Sub_ordinates, :Total_Percentage, :Percentage_of_Female_Employees]
-#   rain_fall_type = params[:rain_fall_type]
-#    views  = params[:views]
-#    year  = params[:year]
-#    compare = params[:compare]
-
-#   if rain_fall_type || views
-
-#       if views == "Map View"
-#         l =  rain_fall_type.gsub(" ","")           
-#          if rain_fall_type  ==  "All"
-#           b = BankingInfrastructure6.map_search("All",compare,year,rain_fall_type)
-#           u = "Total"
-#           a = BankingInfrastructure6.map(b,params[:year],rain_fall_type,views)
-#          else
-#           b = BankingInfrastructure6.map_search(params[:search],compare,year,rain_fall_type)
-#           a = BankingInfrastructure6.map(b,rain_fall_type,year,ji)
-#          end
-#       elsif views == "Table"  
-#         b = BankingInfrastructure6.search(params[:search],compare,year,rain_fall_type)
-#         a = BankingInfrastructure6.table(b,rain_fall_type,year,ji1,compare)
-#       else
-#         @BankingInfrastructure6s = BankingInfrastructure6.search(params[:search],compare,year,rain_fall_type)
-#         a = BankingInfrastructure6.query(@BankingInfrastructure6s,params[:year],rain_fall_type,views,ji,compare)
-#       end
-#       respond_to do |format|
-#         format.html { render json:a }
-#     end
-
-#   else
-#     respond_to do |format|
-#       format.html { render json: "error"}
-#   end
-#   end
-
-# end
-
-
-
-
 def test
-  ji = [:Officers, :Clerks, :Sub_ordinates, :Total, :Number_of_Female_Employees, :Percentage_of_Officers, :Percentage_of_Clerks, :Percentage_of_Sub_ordinates, :Total_Percentage, :Percentage_of_Female_Employees]
+  ji = [:Officers, :Clerks, :Sub_ordinates,:Number_of_Female_Employees, :Percentage_of_Officers, :Percentage_of_Clerks, :Percentage_of_Sub_ordinates, :Percentage_of_Female_Employees]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-
-   ji1 = [:State,:Shelters_Sanctioned_Planned, :Officers, :Clerks, :Sub_ordinates, :Total, :Number_of_Female_Employees, :Percentage_of_Officers, :Percentage_of_Clerks, :Percentage_of_Sub_ordinates, :Total_Percentage, :Percentage_of_Female_Employees]
+   search = params[:search]
+   ji1 = [:State, :Officers, :Clerks, :Sub_ordinates, :Total, :Number_of_Female_Employees, :Percentage_of_Officers, :Percentage_of_Clerks, :Percentage_of_Sub_ordinates, :Percentage_of_Female_Employees]
    legend = "State"
   if rain_fall_type || views
 
@@ -82,7 +41,7 @@ def test
         a = BankingInfrastructure6.table(b,rain_fall_type,year,ji1,compare)
       else
         @BankingInfrastructure6s = BankingInfrastructure6.search(params[:search],compare,year,rain_fall_type,legend)
-        a = BankingInfrastructure6.query(@BankingInfrastructure6s,params[:year],rain_fall_type,views,ji,compare,legend)
+        a = BankingInfrastructure6.query(@BankingInfrastructure6s,params[:year],rain_fall_type,views,ji,compare,search,legend)
       end
       respond_to do |format|
         format.html { render json:a }

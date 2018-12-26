@@ -1,4 +1,4 @@
 class Health13 < ApplicationRecord
-  extend Staffdatahealth  
+  extend Generaldata  
 
       end

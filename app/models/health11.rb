@@ -1,4 +1,4 @@
 class Health11 < ApplicationRecord
-  extend Diseasedata  
+  extend Generaldata  
 
       end

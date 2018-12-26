@@ -16,12 +16,26 @@ class Health11sController < ApplicationController
   end
 
 def test
-  ji = [:Diseases, :Number_of_Patients, :Year]
+  ji = [:Number_of_Patients]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:Diseases, :Number_of_Patients]
+  search = params[:search]
+   legend = "Diseases"
+   remove = "Total"
+  
+   if year == "All"
+    ji1 = [:Diseases,:"2014",:"2015",:"2016"]
+   else
+    if rain_fall_type != "All"
+      ji1 = [:Diseases, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:Diseases, :Number_of_Patients, :Year]
+    end
+    
+   end
   if rain_fall_type || views
 
       if views == "Map View"
@@ -35,11 +49,11 @@ ji1 = [:Diseases, :Number_of_Patients]
           a = Health11.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
-        b = Health11.search(params[:search],compare,year,rain_fall_type)
-        a = Health11.table(b,rain_fall_type,year,ji1,compare)
+        b = Health11.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health11.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @Health11s = Health11.search(params[:search],compare,year,rain_fall_type)
-        a = Health11.query(@Health11s,params[:year],rain_fall_type,views,ji,compare)
+        @Health11s = Health11.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health11.query(@Health11s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

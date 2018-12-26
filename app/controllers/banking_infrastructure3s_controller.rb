@@ -62,7 +62,7 @@ def test
    compare = params[:compare]
    search = params[:search]
    legend = "State"
-   remove = ""
+   remove = "India"
    if year == "All"
     ji1 = [:State,:"2005",:"2010",:"2015"]
    else

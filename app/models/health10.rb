@@ -1,4 +1,4 @@
 class Health10 < ApplicationRecord
-  extend Antigendata  
+  extend Generaldata
 
-      end
+end

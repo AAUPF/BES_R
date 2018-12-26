@@ -21,13 +21,27 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:Districts, :Regular_Post_sanctioned, :Contractual_Post_sanctioned, :Regular_Doctor_Employed, :Contractual_Doctor_Employed, :Year, :Number_of_doctors_per_lakh_population]
+
+search = params[:search]
+legend = "Districts"
+remove = "Bihar"
+#  ji1 = [:Characteristics, :India, :Bihar, :Year]
+if year == "All"
+ ji1 = [:Districts,:"2015",:"2016",:"2017"]
+else
+ if rain_fall_type != "All"
+   ji1 = [:Districts, "#{rain_fall_type}", :Year]
+   
+ else
+  ji1 = [:Districts, :Regular_Post_sanctioned, :Contractual_Post_sanctioned, :Regular_Doctor_Employed, :Contractual_Doctor_Employed, :Year, :Number_of_doctors_per_lakh_population]
+ end
+ 
+end
   if rain_fall_type || views
 
 
 
-    unit1 = "000";
-      if views == "Map View"
+    if views == "Map View"
         l =  rain_fall_type.gsub(" ","")           
          if rain_fall_type  ==  "All"
           b = Health16.map_search("All",compare,year,rain_fall_type)
@@ -35,14 +49,14 @@ ji1 = [:Districts, :Regular_Post_sanctioned, :Contractual_Post_sanctioned, :Regu
           a = Health16.map(b,params[:year],rain_fall_type,views)
          else
           b = Health16.map_search(params[:search],compare,year,rain_fall_type)
-          a = Health16.map(b,rain_fall_type,year,ji,unit1)
+          a = Health16.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = Health16.search(params[:search],compare,year,rain_fall_type)
-        a = Health16.table(b,rain_fall_type,year,ji1,compare)
+        b = Health16.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health16.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @Health16s = Health16.search(params[:search],compare,year,rain_fall_type)
-        a = Health16.query(@Health16s,params[:year],rain_fall_type,views,ji,compare)
+        @Health16s = Health16.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health16.query(@Health16s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

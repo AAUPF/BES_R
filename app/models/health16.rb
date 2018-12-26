@@ -1,4 +1,4 @@
 class Health16 < ApplicationRecord
-  extend Healthmapyear  
+  extend Generaldata  
 
       end

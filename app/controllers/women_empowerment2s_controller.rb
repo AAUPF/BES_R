@@ -61,7 +61,7 @@ def test
    compare = params[:compare]
    search = params[:search]
    legend = "Sector"
-   remove = ""
+   remove = "Total"
   #  ji1 = [:Characteristics, :India, :Bihar, :Year]
    if year == "All"
     ji1 = [:Sector,:"2016-17",:"2017-18 (BE)"]

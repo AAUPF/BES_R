@@ -56,7 +56,7 @@ class BankingInfrastructure5sController < ApplicationController
 
 
 def test
-  ji = [:No_of_Branches, :No_of_Current_Accounts, :Current_Amount, :No_of_Savings_Accounts, :Savings_Amount, :No_of_Term_Accounts, :Term_Amount, :No_of_Total_Accounts, :Total_Amount]
+  ji = [:No_of_Branches, :No_of_Current_Accounts, :Current_Amount, :No_of_Savings_Accounts, :Savings_Amount, :No_of_Term_Accounts, :Term_Amount]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]

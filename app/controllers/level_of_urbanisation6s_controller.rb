@@ -57,7 +57,7 @@ class LevelOfUrbanisation6sController < ApplicationController
 
 
 def test
-  ji = [:Municipal_Corporations, :Municipal_Councils, :Nagar_Panchayats, :Total]
+  ji = [:Municipal_Corporations, :Municipal_Councils, :Nagar_Panchayats]
   rain_fall_type = params[:rain_fall_type]
   views  = params[:views]
   year  = params[:year]

@@ -1,3 +1,3 @@
 class LevelOfUrbanisation6 < ApplicationRecord
-  extend Rfallseasontwocariable 
+  extend Rfallseasontwovariableremove 
 end

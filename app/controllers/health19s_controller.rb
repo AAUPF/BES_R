@@ -21,7 +21,20 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:Districts, :Target, :Selection, :Year]
+
+search = params[:search]
+legend = "Districts"
+remove = "Bihar"
+if year == "All"
+ ji1 = [:Districts,:"2013",:"2014",:"2015",:"2016"]
+else
+ if rain_fall_type != "All"
+   ji1 = [:Districts, "#{rain_fall_type}", :Year]
+ else
+  ji1 = [:Districts, :Target, :Selection, :Year]
+end
+ 
+end
   if rain_fall_type || views
 
       if views == "Map View"
@@ -35,11 +48,11 @@ ji1 = [:Districts, :Target, :Selection, :Year]
           a = Health19.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
-        b = Health19.search(params[:search],compare,year,rain_fall_type)
-        a = Health19.table(b,rain_fall_type,year,ji1,compare)
+        b = Health19.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health19.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @Health19s = Health19.search(params[:search],compare,year,rain_fall_type)
-        a = Health19.query(@Health19s,params[:year],rain_fall_type,views,ji,compare)
+        @Health19s = Health19.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health19.query(@Health19s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

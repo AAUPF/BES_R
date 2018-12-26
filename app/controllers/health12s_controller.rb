@@ -16,12 +16,26 @@ class Health12sController < ApplicationController
   end
 
 def test
-  ji = [:NRHM, :Fund_Disbursed]
+  ji = [:Fund_Disbursed]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-ji1 = [:NRHM, :Fund_Disbursed, :Year]
+   search = params[:search]
+   legend = "NRHM"
+   remove = ""
+  
+   if year == "All"
+    ji1 = [:NRHM,:"2011",:"2012",:"2013",:"2014",:"2015",:"2016"]
+   else
+    if rain_fall_type != "All"
+      ji1 = [:NRHM, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:NRHM, :Fund_Disbursed, :Year]
+    end
+    
+   end
   if rain_fall_type || views
 
       if views == "Map View"
@@ -35,11 +49,11 @@ ji1 = [:NRHM, :Fund_Disbursed, :Year]
           a = Health12.map(b,rain_fall_type,year,ji,unit1)
          end
       elsif views == "Table"  
-        b = Health12.search(params[:search],compare,year,rain_fall_type)
-        a = Health12.table(b,rain_fall_type,year,ji1,compare)
+        b = Health12.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health12.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @Health12s = Health12.search(params[:search],compare,year,rain_fall_type)
-        a = Health12.query(@Health12s,params[:year],rain_fall_type,views,ji,compare)
+        @Health12s = Health12.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Health12.query(@Health12s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

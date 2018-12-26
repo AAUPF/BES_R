@@ -23,6 +23,9 @@ def test
    compare = params[:compare]
    month = params[:month]
    search = params[:search]
+   legend = "Area"
+  legend1 = "Region"
+  
 ji1 = [:Year, :Area, :Crude_Birth_Rate, :Infant_Mortality_Rate, :Child_Mortality_Rate, :Under_Five_Mortality_Rate, :Neo_Natal_Mortality_Rate, :Total_Fertility_Rate, :Total_Marital_Fertility_Rate, :Region]
   if rain_fall_type || views
 
@@ -37,11 +40,15 @@ ji1 = [:Year, :Area, :Crude_Birth_Rate, :Infant_Mortality_Rate, :Child_Mortality
           a = Health3.map(b,rain_fall_type,year,ji,month)
          end
       elsif views == "Table"
-        b = Health3.search(params[:search],compare,year,rain_fall_type,month)
-        a = Health3.table(b,rain_fall_type,year,ji1,compare,search,month)
+        # b = Health3.search(params[:search],compare,year,rain_fall_type,month)
+        # a = Health3.table(b,rain_fall_type,year,ji1,compare,search,month)
+        b = Health3.search(params[:search],compare,year,rain_fall_type,legend,legend1)
+        a = Health3.table(b,rain_fall_type,year,ji1,compare)
       else
-        @Health3s = Health3.search(params[:search],compare,year,rain_fall_type,month)
-        a = Health3.query(@Health3s,params[:year],rain_fall_type,views,ji,compare,month,search)
+        # @Health3s = Health3.search(params[:search],compare,year,rain_fall_type,month)
+        # a = Health3.query(@Health3s,params[:year],rain_fall_type,views,ji,compare,month,search)
+        @Health3s = Health3.search(params[:search],compare,year,rain_fall_type,legend,legend1)
+        a = Health3.query(@Health3s,params[:year],rain_fall_type,views,ji,compare)
       end
       respond_to do |format|
         format.html { render json: a }

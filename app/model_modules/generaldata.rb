@@ -14,7 +14,6 @@ module Generaldata
     
       def search(search, compare, year, rain_fall_type,legend)
         if search == 'All'
-          
           if rain_fall_type == 'All'
               if year == "All"
                   all.order("id")
@@ -45,7 +44,7 @@ module Generaldata
               end
           else
               if year == "All"
-                  where("#{legend} = ? ", search).order(rain_fall_type)
+               where("#{legend} = ? ", search).order(:id)
               else
                   where("#{legend} = ? ", search).where('year = ?', year).order(rain_fall_type)
               end

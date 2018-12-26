@@ -15,46 +15,6 @@ class DistrictWiseSectionsController < ApplicationController
     @district_wise_section = DistrictWiseSection.new
   end
 
-# def test
-#   ji = [:Districts, :Number_of_Handpumps_Installed, :Slipped_back_Habitations_or_Water_quality_Problems_Covered, :Year]
-#   rain_fall_type = params[:rain_fall_type]
-#    views  = params[:views]
-#    year  = params[:year]
-#    compare = params[:compare]
-
-#   if rain_fall_type || views
-
-#       if views == "Map View"
-#         l =  rain_fall_type.gsub(" ","")           
-#          if rain_fall_type  ==  "All"
-#           b = DistrictWiseSection.map_search("All",compare,year,rain_fall_type)
-#           u = "Total"
-#           a = DistrictWiseSection.map(b,params[:year],rain_fall_type,views)
-#          else
-#           b = DistrictWiseSection.map_search(params[:search],compare,year,rain_fall_type)
-#           a = DistrictWiseSection.map(b,rain_fall_type,year,ji)
-#          end
-#       elsif views == "Table"  
-#         b = DistrictWiseSection.search(params[:search],compare,year,rain_fall_type)
-#         a = DistrictWiseSection.table(b,rain_fall_type,year,ji1,compare)
-#       else
-#         @DistrictWiseSections = DistrictWiseSection.search(params[:search],compare,year,rain_fall_type)
-#         a = DistrictWiseSection.query(@DistrictWiseSections,params[:year],rain_fall_type,views,ji,compare)
-#       end
-#       respond_to do |format|
-#         format.html { render json:a }
-#     end
-
-#   else
-#     respond_to do |format|
-#       format.html { render json: "error"}
-#   end
-#   end
-
-# end
-
-
-
 def test
   ji = [ :Number_of_Handpumps_Installed, :Slipped_back_Habitations_or_Water_quality_Problems_Covered]
   rain_fall_type = params[:rain_fall_type]
@@ -63,7 +23,7 @@ def test
    compare = params[:compare]
    search = params[:search]
    legend = "Districts"
-   remove = "Total"
+   remove = "Bihar "
   #  ji1 = [:Characteristics, :India, :Bihar, :Year]
    if year == "All"
     ji1 = [:Districts,"2012-13", "2014-15","2015-16","2016-17"]

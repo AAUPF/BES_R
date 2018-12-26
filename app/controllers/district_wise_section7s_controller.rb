@@ -23,7 +23,7 @@ class DistrictWiseSection7sController < ApplicationController
      compare = params[:compare]
      search = params[:search]
      legend = "Districts"
-     remove = "Total"
+     remove = "Bihar"
     #  ji1 = [:Characteristics, :India, :Bihar, :Year]
      if year == "All"
       ji1 = [:Districts, "2014-15","2015-16","2016-17"]

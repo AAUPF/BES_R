@@ -16,7 +16,7 @@ class TaxDepartment6sController < ApplicationController
   end
 
 def test
-  ji = [:Number_of_Document, :Registration_Fees, :Stamp_Fee, :Total_Receipt, :Target]
+  ji = [:Registration_Fees, :Stamp_Fee, :Total_Receipt, :Target]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]

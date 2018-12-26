@@ -1,4 +1,4 @@
 class Health2 < ApplicationRecord
-  extend Health2data  
+  extend Generaldata
 
       end
