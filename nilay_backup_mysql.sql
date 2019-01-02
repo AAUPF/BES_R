@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 02, 2019 at 09:27 AM
+-- Generation Time: Jan 02, 2019 at 09:34 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -16,28 +16,6 @@ SET time_zone = "+00:00";
 CREATE DATABASE IF NOT EXISTS `newdata` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `newdata`;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `agricultural_credit1s`
---
-
-DROP TABLE IF EXISTS `agricultural_credit1s`;
-CREATE TABLE `agricultural_credit1s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Commercial_Bank_Target` float DEFAULT NULL,
-  `Commercial_Bank_Achievement` float DEFAULT NULL,
-  `RRBs_Target` float DEFAULT NULL,
-  `RRBs_Achievement` float DEFAULT NULL,
-  `CCBs_Target` float DEFAULT NULL,
-  `CCBs_Achievement` float DEFAULT NULL,
-  `Total_Target` float DEFAULT NULL,
-  `Total_Achievement` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `agricultural_credit1s`
 --
@@ -48,25 +26,6 @@ INSERT INTO `agricultural_credit1s` (`id`, `Year`, `Commercial_Bank_Target`, `Co
 (3, 2014, 22191, 21260, 12809, 13058, 1000, 362, 36000, 34680, '2018-07-13 15:21:44', '2018-07-13 15:21:44'),
 (4, 2015, 26554, 24957, 14946, 15135, 1000, 1258, 42500, 41350, '2018-07-13 15:21:44', '2018-07-13 15:21:44'),
 (5, 2016, 28317, 25004, 18682, 14247, 1000, 1825, 48000, 41076, '2018-07-13 15:21:44', '2018-07-13 15:21:44');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `agricultural_credit2s`
---
-
-DROP TABLE IF EXISTS `agricultural_credit2s`;
-CREATE TABLE `agricultural_credit2s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Achievement` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Percentage_Target` float DEFAULT NULL,
-  `Percentage_Achievement` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `agricultural_credit2s`
@@ -191,27 +150,6 @@ INSERT INTO `agricultural_credit2s` (`id`, `Districts`, `Target`, `Achievement`,
 (116, 'Vaishali', 1862, 6.52, 2016, 1.862, 0, '2018-08-16 05:20:25', '2018-08-16 05:20:25'),
 (117, 'WestChamparan', 2128, 556.63, 2016, 2.128, 1.5, '2018-08-16 05:20:25', '2018-08-16 05:20:25');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `agricultural_inputs1_part1s`
---
-
-DROP TABLE IF EXISTS `agricultural_inputs1_part1s`;
-CREATE TABLE `agricultural_inputs1_part1s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Crops` varchar(255) DEFAULT NULL,
-  `Type_Crops` varchar(255) DEFAULT NULL,
-  `Paddy` float DEFAULT NULL,
-  `Maize` float DEFAULT NULL,
-  `Urad` float DEFAULT NULL,
-  `Arhar` float DEFAULT NULL,
-  `Moong` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `agricultural_inputs1_part1s`
 --
@@ -226,29 +164,6 @@ INSERT INTO `agricultural_inputs1_part1s` (`id`, `Year`, `Crops`, `Type_Crops`, 
 (7, 2016, 'Require-ment', 'Kharif_Crops', 431.25, 90, 1.78, 6.02, 1.65, '2018-08-13 11:12:34', '2018-08-13 11:12:34'),
 (8, 2016, 'Supply', 'Kharif_Crops', 317.54, 11.96, NULL, 1.05, 0.32, '2018-08-13 11:12:34', '2018-08-13 11:12:34'),
 (9, 2016, 'SRR', 'Kharif_Crops', 42.88, 13.82, NULL, 8.72, 13.5, '2018-08-13 11:12:34', '2018-08-13 11:12:34');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `agricultural_inputs1_part2s`
---
-
-DROP TABLE IF EXISTS `agricultural_inputs1_part2s`;
-CREATE TABLE `agricultural_inputs1_part2s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Crops` varchar(255) DEFAULT NULL,
-  `Type_Crops` varchar(255) DEFAULT NULL,
-  `Wheat` float DEFAULT NULL,
-  `Maize` float DEFAULT NULL,
-  `Arhar` float DEFAULT NULL,
-  `Gram` float DEFAULT NULL,
-  `Pea` float DEFAULT NULL,
-  `Masoor` float DEFAULT NULL,
-  `Rapeseed_Mustard` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `agricultural_inputs1_part2s`
@@ -265,34 +180,6 @@ INSERT INTO `agricultural_inputs1_part2s` (`id`, `Year`, `Crops`, `Type_Crops`, 
 (8, 2016, 'Supply', 'Rabi_Crops', 465.16, 108.78, NULL, 2.99, 0.2, 6.24, 4.44, '2018-08-13 11:14:34', '2018-08-13 11:14:34'),
 (9, 2016, 'SRR', 'Rabi_Crops', 20.3, 87.02, NULL, 3.58, 0.76, 7.33, 58.65, '2018-08-13 11:14:34', '2018-08-13 11:14:34');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `agricultural_inputs2s`
---
-
-DROP TABLE IF EXISTS `agricultural_inputs2s`;
-CREATE TABLE `agricultural_inputs2s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Type_of_Fertilizer` varchar(255) DEFAULT NULL,
-  `Urea` float DEFAULT NULL,
-  `DAP` float DEFAULT NULL,
-  `SSP` float DEFAULT NULL,
-  `MOP` float DEFAULT NULL,
-  `Ammonium_Sulphate` float DEFAULT NULL,
-  `Complex` float DEFAULT NULL,
-  `Sub_Total` float DEFAULT NULL,
-  `N` float DEFAULT NULL,
-  `P` float DEFAULT NULL,
-  `K` float DEFAULT NULL,
-  `Total_NPK` float DEFAULT NULL,
-  `Grand_Total` float DEFAULT NULL,
-  `Consumption_of_Fertilizer` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `agricultural_inputs2s`
 --
@@ -308,28 +195,6 @@ INSERT INTO `agricultural_inputs2s` (`id`, `Year`, `Type_of_Fertilizer`, `Urea`,
 (8, 2016, 'Rabi', 1094.8, 383.1, 33.1, 179.2, 21.4, 187.2, 1898.7, 610.8, 223.6, 115, 949.4, 2848.1, 205.29, '2018-07-24 06:59:43', '2018-07-24 06:59:43'),
 (9, 2016, 'Total', 1977.5, 531.7, 66.5, 229.8, 27.4, 240.6, 3073.5, 1054.8, 308.8, 146.7, 1510.4, 4583.9, 173.18, '2018-07-24 06:59:43', '2018-07-24 06:59:43');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `agricultural_inputs3s`
---
-
-DROP TABLE IF EXISTS `agricultural_inputs3s`;
-CREATE TABLE `agricultural_inputs3s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Tractor` float DEFAULT NULL,
-  `Combine_Harvestors` float DEFAULT NULL,
-  `Zero_Tillage` float DEFAULT NULL,
-  `Pumpsets` float DEFAULT NULL,
-  `Power_Tiller` float DEFAULT NULL,
-  `Manually_operated_tools_implements` float DEFAULT NULL,
-  `Threshers` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `agricultural_inputs3s`
 --
@@ -337,40 +202,6 @@ CREATE TABLE `agricultural_inputs3s` (
 INSERT INTO `agricultural_inputs3s` (`id`, `Year`, `Tractor`, `Combine_Harvestors`, `Zero_Tillage`, `Pumpsets`, `Power_Tiller`, `Manually_operated_tools_implements`, `Threshers`, `Total`, `created_at`, `updated_at`) VALUES
 (1, 2015, 4617, 177, 1537, 5788, 1637, 46590, 2314, 62660, '2018-07-17 06:16:28', '2018-07-17 06:16:28'),
 (2, 2016, 0, 158, 833, 5080, 1225, 16583, 2654, 26533, '2018-07-17 06:16:28', '2018-07-17 06:16:28');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `agricultural_inputs4s`
---
-
-DROP TABLE IF EXISTS `agricultural_inputs4s`;
-CREATE TABLE `agricultural_inputs4s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Urea` float DEFAULT NULL,
-  `DAP` float DEFAULT NULL,
-  `SSP` float DEFAULT NULL,
-  `MOP` float DEFAULT NULL,
-  `Ammonium_Sulphate` float DEFAULT NULL,
-  `Complex` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `N` float DEFAULT NULL,
-  `P` float DEFAULT NULL,
-  `K` float DEFAULT NULL,
-  `Total_NPK` float DEFAULT NULL,
-  `Grand_Total` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Percentage_Urea` float DEFAULT NULL,
-  `Percentage_DAP` float DEFAULT NULL,
-  `Percentage_SSP` float DEFAULT NULL,
-  `Percentage_MOP` float DEFAULT NULL,
-  `Percentage_Ammonium_Sulphate` float DEFAULT NULL,
-  `Percentage_Complex` float DEFAULT NULL,
-  `Percentage_Total_NPK` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `agricultural_inputs4s`
@@ -456,50 +287,6 @@ INSERT INTO `agricultural_inputs4s` (`id`, `Districts`, `Urea`, `DAP`, `SSP`, `M
 (77, 'Vaishali', 73.9, 25.6, 1.2, 14.7, 5, 9.8, 130.2, 41.4, 14.2, 9.2, 64.8, 195, 2016, 37.8974, 13.1282, 0.615385, 7.53846, 2.5641, 5.02564, 33.2308, '2018-08-16 04:24:28', '2018-08-16 04:24:28'),
 (78, 'WestChamparan', 90.1, 22.9, 2.4, 12.7, 0.1, 10, 138.2, 47.3, 13.3, 8.1, 68.7, 206.9, 2016, 43.5476, 11.0681, 1.15998, 6.13823, 0.0483325, 4.83325, 33.2044, '2018-08-16 04:24:28', '2018-08-16 04:24:28');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `agricultural_inputs5s`
---
-
-DROP TABLE IF EXISTS `agricultural_inputs5s`;
-CREATE TABLE `agricultural_inputs5s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Target_Physical` float DEFAULT NULL,
-  `Target_Financial` float DEFAULT NULL,
-  `Achievement_Physical` float DEFAULT NULL,
-  `Achievement_Financial` float DEFAULT NULL,
-  `Target_Physical_Colour` varchar(255) DEFAULT NULL,
-  `Target_Financial_Colour` varchar(255) DEFAULT NULL,
-  `Achievement_Physical_Colour` varchar(255) DEFAULT NULL,
-  `Achievement_Financial_Colour` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `agricultural_inputs6s`
---
-
-DROP TABLE IF EXISTS `agricultural_inputs6s`;
-CREATE TABLE `agricultural_inputs6s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Target_Physical` float DEFAULT NULL,
-  `Target_Financial` float DEFAULT NULL,
-  `Achievement_Physical` float DEFAULT NULL,
-  `Achievement_Financial` float DEFAULT NULL,
-  `Target_Physical_Colour` varchar(255) DEFAULT NULL,
-  `Target_Financial_Colour` varchar(255) DEFAULT NULL,
-  `Achievement_Physical_Colour` varchar(255) DEFAULT NULL,
-  `Achievement_Financial_Colour` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `agricultural_inputs6s`
 --
@@ -544,35 +331,6 @@ INSERT INTO `agricultural_inputs6s` (`id`, `Districts`, `Target_Physical`, `Targ
 (37, 'Arwal', 153, 0.77, 0, 0, 'Red', 'Red', 'Red', 'Red', '2018-07-27 06:46:55', '2018-07-27 06:46:55'),
 (38, 'Lakhisarai', 136, 0.68, 0, 0, 'Red', 'Red', 'Red', 'Red', '2018-07-27 06:46:55', '2018-07-27 06:46:55'),
 (39, 'Sheohar', 123, 0.62, 0, 0, 'Red', 'Red', 'Red', 'Red', '2018-07-27 06:46:55', '2018-07-27 06:46:55');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `agricultural_inputs7s`
---
-
-DROP TABLE IF EXISTS `agricultural_inputs7s`;
-CREATE TABLE `agricultural_inputs7s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Tractor` float DEFAULT NULL,
-  `Combine_Harvestor` float DEFAULT NULL,
-  `Zero_Tillage` float DEFAULT NULL,
-  `Pumpset` float DEFAULT NULL,
-  `Power_Tiller` float DEFAULT NULL,
-  `Manually_Operated_Tools` float DEFAULT NULL,
-  `Thresher` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Tractor_Colour` varchar(255) DEFAULT NULL,
-  `Combine_Harvestor_Colour` varchar(255) DEFAULT NULL,
-  `Zero_Tillage_Colour` varchar(255) DEFAULT NULL,
-  `Pumpset_Colour` varchar(255) DEFAULT NULL,
-  `Power_Tiller_Colour` varchar(255) DEFAULT NULL,
-  `Manually_Operated_Tools_Colour` varchar(255) DEFAULT NULL,
-  `Thresher_Colour` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `agricultural_inputs7s`
@@ -658,45 +416,6 @@ INSERT INTO `agricultural_inputs7s` (`id`, `Districts`, `Tractor`, `Combine_Harv
 (77, 'Sheikhpura', NULL, 10, 1, 5, 6, 4, 2, 2016, 'Red', 'Yellow', 'Red', 'Red', 'Red', 'Red', 'Red', '2018-08-13 11:09:30', '2018-08-13 11:09:30'),
 (78, 'Darbhanga', NULL, 0, 10, 16, 0, 4, 2, 2016, 'Red', 'Red', 'Orange', 'Red', 'Red', 'Red', 'Red', '2018-08-13 11:09:30', '2018-08-13 11:09:30');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `agricultural_inputs8s`
---
-
-DROP TABLE IF EXISTS `agricultural_inputs8s`;
-CREATE TABLE `agricultural_inputs8s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Tractor` float DEFAULT NULL,
-  `Combine_Harvestor` float DEFAULT NULL,
-  `Zero_Tillage` float DEFAULT NULL,
-  `Pumpset` float DEFAULT NULL,
-  `Power_Tiller` float DEFAULT NULL,
-  `Manually_Operated_Tools` float DEFAULT NULL,
-  `Thresher` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `agro_based_industries1s`
---
-
-DROP TABLE IF EXISTS `agro_based_industries1s`;
-CREATE TABLE `agro_based_industries1s` (
-  `id` bigint(20) NOT NULL,
-  `Name_of_Sugar_Mill` varchar(255) DEFAULT NULL,
-  `Sugarcane_Crushed` float DEFAULT NULL,
-  `Sugar_Produced` float DEFAULT NULL,
-  `Recovery_Percentage` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `agro_based_industries1s`
 --
@@ -739,24 +458,6 @@ INSERT INTO `agro_based_industries1s` (`id`, `Name_of_Sugar_Mill`, `Sugarcane_Cr
 (35, 'Sugauli', 27.13, 2.57, 9.5, '2016-17', '2018-09-09 05:47:40', '2018-09-09 05:47:40'),
 (36, 'Total', 571.14, 52.48, 9.2, '2016-17', '2018-09-09 05:47:40', '2018-09-09 05:47:40');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `agro_based_industries2s`
---
-
-DROP TABLE IF EXISTS `agro_based_industries2s`;
-CREATE TABLE `agro_based_industries2s` (
-  `id` bigint(20) NOT NULL,
-  `Location_of_Union_or_Project` varchar(255) DEFAULT NULL,
-  `Organised_Societies` float DEFAULT NULL,
-  `Working_Societies` float DEFAULT NULL,
-  `Registered_Societies` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `agro_based_industries2s`
 --
@@ -782,22 +483,6 @@ INSERT INTO `agro_based_industries2s` (`id`, `Location_of_Union_or_Project`, `Or
 (18, 'Kosi Dairy Project, Purnea', 704, 569, 36, '2016-17', '2018-09-09 06:43:56', '2018-09-09 06:43:56'),
 (19, 'Ranchi Dairy Project , Ranchi', 907, 670, 71, '2016-17', '2018-09-09 06:43:56', '2018-09-09 06:43:56'),
 (20, 'Total', 20691, 14785, 6372, '2016-17', '2018-09-09 06:43:56', '2018-09-09 06:43:56');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `agro_based_industries3s`
---
-
-DROP TABLE IF EXISTS `agro_based_industries3s`;
-CREATE TABLE `agro_based_industries3s` (
-  `id` bigint(20) NOT NULL,
-  `Union_Project` varchar(255) DEFAULT NULL,
-  `Daily_Milk_Collection` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `agro_based_industries3s`
@@ -871,22 +556,6 @@ INSERT INTO `agro_based_industries3s` (`id`, `Union_Project`, `Daily_Milk_Collec
 (65, 'Ranchi or Bokaro or Jamshedpur Dairy', 28.8, 'CAGR', '2018-09-09 07:39:40', '2018-09-09 07:39:40'),
 (66, 'Total', 6.7, 'CAGR', '2018-09-09 07:39:40', '2018-09-09 07:39:40');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `agro_based_industries4s`
---
-
-DROP TABLE IF EXISTS `agro_based_industries4s`;
-CREATE TABLE `agro_based_industries4s` (
-  `id` bigint(20) NOT NULL,
-  `Location_of_Project` varchar(255) DEFAULT NULL,
-  `Procurement` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `agro_based_industries4s`
 --
@@ -948,26 +617,6 @@ INSERT INTO `agro_based_industries4s` (`id`, `Location_of_Project`, `Procurement
 (54, 'Ranchi Dairy', 312.98, '2016-17', '2018-09-09 08:51:41', '2018-09-09 08:51:41'),
 (55, 'Total', 108.67, '2016-17', '2018-09-09 08:51:41', '2018-09-09 08:51:41');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `agro_based_industries5s`
---
-
-DROP TABLE IF EXISTS `agro_based_industries5s`;
-CREATE TABLE `agro_based_industries5s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `agro_based_industries5s`
 --
@@ -993,25 +642,6 @@ INSERT INTO `agro_based_industries5s` (`id`, `Sector`, `2012-13`, `2013-14`, `20
 (18, 'De-worming (lakh)', 12.92, 11.67, 12.92, 16.46, 14.3, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
 (19, 'Seed Distribution (tonnes)', 757.14, 885.61, 930.93, 1016.79, 1279.53, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43'),
 (20, 'Cattle Feed Distribution (tonnes)', 61273, 54707, 56143, 62130, 53810, 'Services', '2018-10-03 10:07:43', '2018-10-03 10:07:43');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `agro_based_industries6s`
---
-
-DROP TABLE IF EXISTS `agro_based_industries6s`;
-CREATE TABLE `agro_based_industries6s` (
-  `id` bigint(20) NOT NULL,
-  `Industrial_Group` varchar(255) DEFAULT NULL,
-  `India` float DEFAULT NULL,
-  `Bihar` float DEFAULT NULL,
-  `Bihar_Percentage_Share` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `Indicator1` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `agro_based_industries6s`
@@ -1053,23 +683,6 @@ INSERT INTO `agro_based_industries6s` (`id`, `Industrial_Group`, `India`, `Bihar
 (33, 'Sub-Total', 4988340, 41896.4, 0.84, 'Non- Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24'),
 (34, 'Grand Total', 6677020, 58759.1, 0.88, 'Non- Agro Based', 'Net Value Added', '2018-10-15 09:31:24', '2018-10-15 09:31:24');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `airways`
---
-
-DROP TABLE IF EXISTS `airways`;
-CREATE TABLE `airways` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Number_of_Aircraft_Movements` float DEFAULT NULL,
-  `Passengers` float DEFAULT NULL,
-  `Freight` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `airways`
 --
@@ -1083,32 +696,6 @@ INSERT INTO `airways` (`id`, `Year`, `Number_of_Aircraft_Movements`, `Passengers
 (6, '2017-18(upto Sept. 17)', 14320, 17.34, 4.612, '2018-10-30 07:44:18', '2018-10-30 07:44:18'),
 (7, 'CAGR(2012-17)', 13, 21, 22.8, '2018-10-30 07:44:18', '2018-10-30 07:44:18');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `animal_husbandry1s`
---
-
-DROP TABLE IF EXISTS `animal_husbandry1s`;
-CREATE TABLE `animal_husbandry1s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Cattle` float DEFAULT NULL,
-  `Males_over_3_years` float DEFAULT NULL,
-  `Females_over_3_years` float DEFAULT NULL,
-  `Young_stock` float DEFAULT NULL,
-  `Buffalo` float DEFAULT NULL,
-  `Sheep` float DEFAULT NULL,
-  `Goats` float DEFAULT NULL,
-  `Pigs` float DEFAULT NULL,
-  `Horses_Ponies` float DEFAULT NULL,
-  `Others` float DEFAULT NULL,
-  `Total_Livestock` float DEFAULT NULL,
-  `Total_Poultry` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `animal_husbandry1s`
 --
@@ -1117,25 +704,6 @@ INSERT INTO `animal_husbandry1s` (`id`, `Year`, `Cattle`, `Males_over_3_years`, 
 (1, 2003, 10470, 274, 2901, 2590, 5766, 346, 9606, 627, 115, 0, 26957, 13968, '2018-07-17 06:58:11', '2018-07-17 06:58:11'),
 (2, 2007, 12408, 329, 3546, 2815, 6690, 218, 10167, 632, 51, 0, 30167, 11420, '2018-07-17 06:58:11', '2018-07-17 06:58:11'),
 (3, 2012, 12232, 300, 4017, 3250, 7567, 232, 12154, 650, 49, 55, 32939, 12748, '2018-07-17 06:58:11', '2018-07-17 06:58:11');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `animal_husbandry2s`
---
-
-DROP TABLE IF EXISTS `animal_husbandry2s`;
-CREATE TABLE `animal_husbandry2s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Milk_lakh_tonnes` float DEFAULT NULL,
-  `Egg_crore` float DEFAULT NULL,
-  `Wool_lakh_kgs` float DEFAULT NULL,
-  `Meat_lakh_tonnes` float DEFAULT NULL,
-  `Fish_lakh_tonnes` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `animal_husbandry2s`
@@ -1148,23 +716,6 @@ INSERT INTO `animal_husbandry2s` (`id`, `Year`, `Milk_lakh_tonnes`, `Egg_crore`,
 (4, 2015, 82.88, 100.21, 2.4, 3.02, 5.07, '2018-07-17 08:00:08', '2018-07-17 08:00:08'),
 (5, 2016, 87.1, 111.17, 2.81, 3.26, 5.09, '2018-07-17 08:00:08', '2018-07-17 08:00:08');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `animal_husbandry3s`
---
-
-DROP TABLE IF EXISTS `animal_husbandry3s`;
-CREATE TABLE `animal_husbandry3s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Animals_Treated` float DEFAULT NULL,
-  `Immunization` float DEFAULT NULL,
-  `Artificial_Insemination` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `animal_husbandry3s`
 --
@@ -1175,32 +726,6 @@ INSERT INTO `animal_husbandry3s` (`id`, `Year`, `Animals_Treated`, `Immunization
 (3, 2014, 32.99, 10.87, 3, '2018-07-17 09:18:10', '2018-07-17 09:18:10'),
 (4, 2015, 38.26, 163.31, 26.31, '2018-07-17 09:18:10', '2018-07-17 09:18:10'),
 (5, 2016, 41.03, 296.45, 26.2, '2018-07-17 09:18:10', '2018-07-17 09:18:10');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `animal_husbandry4s`
---
-
-DROP TABLE IF EXISTS `animal_husbandry4s`;
-CREATE TABLE `animal_husbandry4s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Cow` float DEFAULT NULL,
-  `Buffalo` float DEFAULT NULL,
-  `Pig` float DEFAULT NULL,
-  `Sheep` float DEFAULT NULL,
-  `Goat` float DEFAULT NULL,
-  `Poultry` float DEFAULT NULL,
-  `Percentage_Cow` float DEFAULT NULL,
-  `Percentage_Buffalo` float DEFAULT NULL,
-  `Percentage_Pig` float DEFAULT NULL,
-  `Percentage_Sheep` float DEFAULT NULL,
-  `Percentage_Goat` float DEFAULT NULL,
-  `Percentage_Poultry` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `animal_husbandry4s`
@@ -1246,25 +771,6 @@ INSERT INTO `animal_husbandry4s` (`id`, `Districts`, `Cow`, `Buffalo`, `Pig`, `S
 (37, 'Supaul', 475, 313, 11, 16, 448, 176, 3.9, 4.1, 1.7, 7.1, 3.7, 1.4, '2018-08-16 05:39:14', '2018-08-16 05:39:14'),
 (38, 'Vaishali', 213, 169, 2, 2, 299, 756, 1.7, 2.2, 0.3, 0.7, 2.5, 5.9, '2018-08-16 05:39:14', '2018-08-16 05:39:14'),
 (39, 'WestChamparan', 367, 260, 17, 2, 593, 466, 3, 3.4, 2.7, 1, 4.9, 3.7, '2018-08-16 05:39:14', '2018-08-16 05:39:14');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `animal_husbandry5s`
---
-
-DROP TABLE IF EXISTS `animal_husbandry5s`;
-CREATE TABLE `animal_husbandry5s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Fish_Production` float DEFAULT NULL,
-  `Fish_Seeds` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Fish_Production_Colour` varchar(255) DEFAULT NULL,
-  `Fish_Seeds_Colour` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `animal_husbandry5s`
@@ -1389,35 +895,6 @@ INSERT INTO `animal_husbandry5s` (`id`, `Districts`, `Fish_Production`, `Fish_Se
 (116, 'Banka', 9.9, 0, 2016, 'Dark_Yellow', 'Red', '2018-07-26 12:29:26', '2018-07-26 12:29:26'),
 (117, 'Lakhisarai', 7.9, 0, 2016, 'Dark_Yellow', 'Red', '2018-07-26 12:29:26', '2018-07-26 12:29:26');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `animal_husbandry6s`
---
-
-DROP TABLE IF EXISTS `animal_husbandry6s`;
-CREATE TABLE `animal_husbandry6s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Crossbred_Cow` float DEFAULT NULL,
-  `Local_Cow` float DEFAULT NULL,
-  `Total_Cow` float DEFAULT NULL,
-  `Buffalo` float DEFAULT NULL,
-  `Total_Cow_Buffalo` float DEFAULT NULL,
-  `Goat` float DEFAULT NULL,
-  `Total_Production` float DEFAULT NULL,
-  `Year` float DEFAULT NULL,
-  `Percentage_Crossbred_Cow` float DEFAULT NULL,
-  `Percentage_Local_Cow` float DEFAULT NULL,
-  `Percentage_Total_Cow` float DEFAULT NULL,
-  `Percentage_Buffalo` float DEFAULT NULL,
-  `Percentage_Total_Cow_Buffalo` float DEFAULT NULL,
-  `Percentage_Goat` float DEFAULT NULL,
-  `Percentage_Total_Production` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `animal_husbandry6s`
 --
@@ -1501,33 +978,6 @@ INSERT INTO `animal_husbandry6s` (`id`, `Districts`, `Crossbred_Cow`, `Local_Cow
 (76, 'Supaul', 2.46, 116.44, 118.9, 211.19, 330.1, 7.07, 337.17, 2016, 0.1, 4.9, 2.3, 6.3, 3.9, 3.5, 3.9, '2018-08-16 07:04:01', '2018-08-16 07:04:01'),
 (77, 'Vaishali', 161.56, 4.81, 166.36, 74.51, 240.87, 4.52, 245.39, 2016, 5.8, 0.2, 3.2, 2.2, 2.8, 2.2, 2.8, '2018-08-16 07:04:01', '2018-08-16 07:04:01'),
 (78, 'WestChamparan', 60.43, 92.2, 152.63, 97.09, 249.72, 8.71, 258.43, 2016, 2.2, 3.9, 3, 2.9, 2.9, 4.3, 3, '2018-08-16 07:04:01', '2018-08-16 07:04:01');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `annual_rainfalls`
---
-
-DROP TABLE IF EXISTS `annual_rainfalls`;
-CREATE TABLE `annual_rainfalls` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `January` float DEFAULT NULL,
-  `February` float DEFAULT NULL,
-  `March` float DEFAULT NULL,
-  `April` float DEFAULT NULL,
-  `May` float DEFAULT NULL,
-  `June` float DEFAULT NULL,
-  `July` float DEFAULT NULL,
-  `August` float DEFAULT NULL,
-  `September` float DEFAULT NULL,
-  `October` float DEFAULT NULL,
-  `November` float DEFAULT NULL,
-  `December` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `annual_rainfalls`
@@ -2068,26 +1518,6 @@ INSERT INTO `annual_rainfalls` (`id`, `Districts`, `January`, `February`, `March
 (531, 'Vaishali', 7.14214, 8.09941, 7.78686, 9.06441, 28.6533, 105.131, 228.095, 177.305, 137.141, 33.5457, 0.0769231, 0.44359, 1947, '2018-08-09 10:43:19', '2018-08-09 10:43:19'),
 (532, 'WestChamparan', 5.52955, 10.6964, 16.5237, 15.1033, 66.2109, 133.394, 339.71, 330.098, 194.835, 51.7007, 0.326442, 0.379638, 1947, '2018-08-09 10:43:19', '2018-08-09 10:43:19');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `annual_state_domestic_product3s`
---
-
-DROP TABLE IF EXISTS `annual_state_domestic_product3s`;
-CREATE TABLE `annual_state_domestic_product3s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `annual_state_domestic_product3s`
 --
@@ -2121,22 +1551,6 @@ INSERT INTO `annual_state_domestic_product3s` (`id`, `Sector`, `2011-12`, `2012-
 (26, 'Other Services', 9.2, 10.1, 10.5, 10.8, 11.4, 11.3, '2018-08-29 05:26:53', '2018-08-29 05:26:53'),
 (27, 'Tertiary', 55.5, 57.2, 57.3, 56.9, 58.5, 61, '2018-08-29 05:26:53', '2018-08-29 05:26:53'),
 (28, 'Total GSVA at basic prices', 100, 100, 100, 100, 100, 100, '2018-08-29 05:26:53', '2018-08-29 05:26:53');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `annual_survey1s`
---
-
-DROP TABLE IF EXISTS `annual_survey1s`;
-CREATE TABLE `annual_survey1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Annual_Growth_Rate` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `annual_survey1s`
@@ -2173,22 +1587,6 @@ INSERT INTO `annual_survey1s` (`id`, `Sector`, `Annual_Growth_Rate`, `Year`, `cr
 (28, 'Electricity, Gas, Water Supply and Other Utility Services', 6.43, '2016-17', '2018-09-08 14:54:57', '2018-09-08 14:54:57'),
 (29, 'Total Secondary Sector', -0.21, '2016-17', '2018-09-08 14:54:57', '2018-09-08 14:54:57'),
 (30, 'Total GSDP', 10.32, '2016-17', '2018-09-08 14:54:57', '2018-09-08 14:54:57');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `annual_survey2s`
---
-
-DROP TABLE IF EXISTS `annual_survey2s`;
-CREATE TABLE `annual_survey2s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `Contribution` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `annual_survey2s`
@@ -2247,33 +1645,6 @@ INSERT INTO `annual_survey2s` (`id`, `State`, `Contribution`, `Year`, `created_a
 (50, 'West Bengal', NULL, '2016-17', '2018-09-08 15:03:26', '2018-09-08 15:03:26'),
 (51, 'India', 31.2, '2016-17', '2018-09-08 15:03:26', '2018-09-08 15:03:26');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `annual_survey3s`
---
-
-DROP TABLE IF EXISTS `annual_survey3s`;
-CREATE TABLE `annual_survey3s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Number_of_Factories_Agro_based` float DEFAULT NULL,
-  `Number_of_Factories_Non_Agro_based` float DEFAULT NULL,
-  `Total_Number_of_Factories` float DEFAULT NULL,
-  `Number_of_Factories_in_Operation_Agro_based` float DEFAULT NULL,
-  `Number_of_Factories_in_Operation_Non_Agro_Based` float DEFAULT NULL,
-  `Total_Number_of_Factories_in_Operation` float DEFAULT NULL,
-  `Percentage_of_Agro_based` float DEFAULT NULL,
-  `Percentage_of_Non_Agro_based` float DEFAULT NULL,
-  `Percentage_of_Total_Factories` float DEFAULT NULL,
-  `Percentage_of_Operation_Agro_based` float DEFAULT NULL,
-  `Percentage_of_Operation_Non_Agro_Based` float DEFAULT NULL,
-  `Percentage_of_Total_Factories_in_Operation` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `annual_survey3s`
 --
@@ -2301,23 +1672,6 @@ INSERT INTO `annual_survey3s` (`id`, `Year`, `Number_of_Factories_Agro_based`, `
 (20, '2013-14', 87775, 136803, 224578, 70993, 114697, 185690, 39.1, 60.9, 100, 38.2, 61.8, 100, 'India', '2018-10-15 11:59:09', '2018-10-15 11:59:09'),
 (21, '2014-15', 95887, 134546, 230433, 77049, 112417, 189466, 41.6, 58.4, 100, 40.7, 59.3, 100, 'India', '2018-10-15 11:59:09', '2018-10-15 11:59:09'),
 (22, 'CAGR', 6.4, 7.2, 6.8, 3.7, 4.8, 4.3, NULL, NULL, NULL, NULL, NULL, NULL, 'India', '2018-10-15 11:59:09', '2018-10-15 11:59:09');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `annual_survey4s`
---
-
-DROP TABLE IF EXISTS `annual_survey4s`;
-CREATE TABLE `annual_survey4s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `India` float DEFAULT NULL,
-  `Bihar` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `annual_survey4s`
@@ -2391,23 +1745,6 @@ INSERT INTO `annual_survey4s` (`id`, `Year`, `India`, `Bihar`, `Indicator`, `cre
 (65, '2014-15', 975.16, 5.82, 'Net Value Added (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38'),
 (66, 'CAGR', 13.1, 32.2, 'Net Value Added (Rs. ‘000 crore)', '2018-10-08 06:24:38', '2018-10-08 06:24:38');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `annual_survey5s`
---
-
-DROP TABLE IF EXISTS `annual_survey5s`;
-CREATE TABLE `annual_survey5s` (
-  `id` bigint(20) NOT NULL,
-  `Characteristics` varchar(255) DEFAULT NULL,
-  `India` float DEFAULT NULL,
-  `Bihar` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `annual_survey5s`
 --
@@ -2432,29 +1769,6 @@ INSERT INTO `annual_survey5s` (`id`, `Characteristics`, `India`, `Bihar`, `Year`
 (17, 'Net Value Added or Factory  in operation (Rs. lakh)', 515, 197, '2014-15', '2018-09-09 04:42:54', '2018-09-09 04:42:54'),
 (18, 'Net Value Added or Persons Engaged (Rs. lakh)', 7, 4, '2014-15', '2018-09-09 04:42:54', '2018-09-09 04:42:54');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `annual_survey6s`
---
-
-DROP TABLE IF EXISTS `annual_survey6s`;
-CREATE TABLE `annual_survey6s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Number_of_Factories_in_Operation` float DEFAULT NULL,
-  `Gross_Value_of_Output_GVO_Rs_crore` float DEFAULT NULL,
-  `Gross_Value_Added_GVA_Rs_crore` float DEFAULT NULL,
-  `GVA_Percentage_Share_in_India` float DEFAULT NULL,
-  `GVA_as_Percentage_of_GVO` float DEFAULT NULL,
-  `Number_of_Persons_Engaged` float DEFAULT NULL,
-  `Percentage_Share_in_India` float DEFAULT NULL,
-  `Employment_per_Factory` float DEFAULT NULL,
-  `Wages_Salaries_and_Bonus_per_Person_annually_Rs` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `annual_survey6s`
 --
@@ -2477,24 +1791,6 @@ INSERT INTO `annual_survey6s` (`id`, `Districts`, `Number_of_Factories_in_Operat
 (15, 'Uttar Pradesh', 12327, 423098, 53056, 4.6, 12.54, 883331, 6.4, 72, 204453, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
 (16, 'West Bengal', 7878, 263802, 24965, 2.1, 9.46, 632470, 4.6, 80, 185085, '2018-10-08 09:12:59', '2018-10-08 09:12:59'),
 (17, 'India', 189468, 6883810, 1164700, 100, 16.92, 13881400, 100, 73, 222629, '2018-10-08 09:12:59', '2018-10-08 09:12:59');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `annual_survey7s`
---
-
-DROP TABLE IF EXISTS `annual_survey7s`;
-CREATE TABLE `annual_survey7s` (
-  `id` bigint(20) NOT NULL,
-  `Industrial_Group` varchar(255) DEFAULT NULL,
-  `India` float DEFAULT NULL,
-  `Bihar` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `Indicator1` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `annual_survey7s`
@@ -2570,46 +1866,12 @@ INSERT INTO `annual_survey7s` (`id`, `Industrial_Group`, `India`, `Bihar`, `Indi
 (67, 'Sub-Total', 7910460, 99854, 'Non-agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08'),
 (68, 'Grand Total', 13558200, 146112, 'Non-agro based', 'Persons Engaged (No.)', '2018-10-15 09:57:08', '2018-10-15 09:57:08');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `ar_internal_metadata`
---
-
-DROP TABLE IF EXISTS `ar_internal_metadata`;
-CREATE TABLE `ar_internal_metadata` (
-  `key` varchar(255) NOT NULL,
-  `value` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `ar_internal_metadata`
 --
 
 INSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES
 ('environment', 'development', '2018-07-10 04:34:40', '2018-07-10 04:34:40');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `availablility_of_power1s`
---
-
-DROP TABLE IF EXISTS `availablility_of_power1s`;
-CREATE TABLE `availablility_of_power1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `availablility_of_power1s`
@@ -2634,22 +1896,6 @@ INSERT INTO `availablility_of_power1s` (`id`, `Sector`, `2011-12`, `2012-13`, `2
 (16, 'Energy Deficit/ Surplus (MU) (Minus/Plus)', -2309, -2054, -3464, -3495, -3871, -4267, '2018-11-09 08:53:05', '2018-11-09 08:53:05'),
 (17, 'Energy Deficit/ Surplus (Percentage) (Minus/Plus) ', -16, -13.4, -19, -15.7, -15.2, 15.1, '2018-11-09 08:53:05', '2018-11-09 08:53:05'),
 (18, 'Consumption (kwh)', 134, 145, 160, 203, 258, 272, '2018-11-09 08:53:05', '2018-11-09 08:53:05');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `availablility_of_power2s`
---
-
-DROP TABLE IF EXISTS `availablility_of_power2s`;
-CREATE TABLE `availablility_of_power2s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Consumption` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `availablility_of_power2s`
@@ -2735,25 +1981,6 @@ INSERT INTO `availablility_of_power2s` (`id`, `Districts`, `Consumption`, `Year`
 (77, 'Katihar', 255, '2015-16', '2018-11-06 07:17:08', '2018-11-06 07:17:08'),
 (78, 'Bihar', 258, '2015-16', '2018-11-06 07:17:08', '2018-11-06 07:17:08');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `banking_infrastructure1s`
---
-
-DROP TABLE IF EXISTS `banking_infrastructure1s`;
-CREATE TABLE `banking_infrastructure1s` (
-  `id` bigint(20) NOT NULL,
-  `Years_End_March` varchar(255) DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Growth_Rate` float DEFAULT NULL,
-  `Percentage_distribution_of_Rural_branches` float DEFAULT NULL,
-  `Percentage_distribution_of_Semiurban_Branches` float DEFAULT NULL,
-  `Percentage_distribution_of_Urban_branches` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `banking_infrastructure1s`
 --
@@ -2765,23 +1992,6 @@ INSERT INTO `banking_infrastructure1s` (`id`, `Years_End_March`, `Total`, `Growt
 (4, '2015', 6297, 6.6, 57.9, 23.1, 19, '2018-11-26 05:55:25', '2018-11-26 05:55:25'),
 (5, '2016', 6661, 5.8, 55.4, 25.2, 19.4, '2018-11-26 05:55:25', '2018-11-26 05:55:25'),
 (6, '2017', 6844, 2.8, 51, 28.5, 20.5, '2018-11-26 05:55:25', '2018-11-26 05:55:25');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `banking_infrastructure2s`
---
-
-DROP TABLE IF EXISTS `banking_infrastructure2s`;
-CREATE TABLE `banking_infrastructure2s` (
-  `id` bigint(20) NOT NULL,
-  `States` varchar(255) DEFAULT NULL,
-  `Number_of_Branches` float DEFAULT NULL,
-  `Percentage_share_in_all_India_branches` float DEFAULT NULL,
-  `Percentage_share_in_all_India_population` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `banking_infrastructure2s`
@@ -2807,24 +2017,6 @@ INSERT INTO `banking_infrastructure2s` (`id`, `States`, `Number_of_Branches`, `P
 (17, 'Uttarakhand', 2010, 1.5, 0.8, '2018-11-26 07:03:00', '2018-11-26 07:03:00'),
 (18, 'West Bengal', 7822, 5.7, 3.5, '2018-11-26 07:03:00', '2018-11-26 07:03:00'),
 (19, 'India', 137770, 100, 100, '2018-11-26 07:03:00', '2018-11-26 07:03:00');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `banking_infrastructure3s`
---
-
-DROP TABLE IF EXISTS `banking_infrastructure3s`;
-CREATE TABLE `banking_infrastructure3s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `State_Cooperative_Banks` float DEFAULT NULL,
-  `District_Central_Cooperative_Banks` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `banking_infrastructure3s`
@@ -2886,24 +2078,6 @@ INSERT INTO `banking_infrastructure3s` (`id`, `State`, `State_Cooperative_Banks`
 (53, 'West Bengal ', 48, 313, 361, '2016', '2018-11-26 07:33:29', '2018-11-26 07:33:29'),
 (54, 'India', 1168, 14241, 15409, '2016', '2018-11-26 07:33:29', '2018-11-26 07:33:29');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `banking_infrastructure4s`
---
-
-DROP TABLE IF EXISTS `banking_infrastructure4s`;
-CREATE TABLE `banking_infrastructure4s` (
-  `id` bigint(20) NOT NULL,
-  `RRB_Branch` varchar(255) DEFAULT NULL,
-  `Rural` float DEFAULT NULL,
-  `Semi_Urban` float DEFAULT NULL,
-  `Urban` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `banking_infrastructure4s`
 --
@@ -2913,29 +2087,6 @@ INSERT INTO `banking_infrastructure4s` (`id`, `RRB_Branch`, `Rural`, `Semi_Urban
 (2, 'Bihar Kshetriya Gramin Bank', 263, 98, 15, 376, '2018-11-26 07:57:20', '2018-11-26 07:57:20'),
 (3, 'Uttar Bihar Kshetriya Gramin Bank', 639, 349, 44, 1032, '2018-11-26 07:57:20', '2018-11-26 07:57:20'),
 (4, 'Total', 1449, 552, 105, 2106, '2018-11-26 07:57:20', '2018-11-26 07:57:20');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `banking_infrastructure5s`
---
-
-DROP TABLE IF EXISTS `banking_infrastructure5s`;
-CREATE TABLE `banking_infrastructure5s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `No_of_Branches` float DEFAULT NULL,
-  `No_of_Current_Accounts` float DEFAULT NULL,
-  `Current_Amount` float DEFAULT NULL,
-  `No_of_Savings_Accounts` float DEFAULT NULL,
-  `Savings_Amount` float DEFAULT NULL,
-  `No_of_Term_Accounts` float DEFAULT NULL,
-  `Term_Amount` float DEFAULT NULL,
-  `No_of_Total_Accounts` float DEFAULT NULL,
-  `Total_Amount` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `banking_infrastructure5s`
@@ -2962,31 +2113,6 @@ INSERT INTO `banking_infrastructure5s` (`id`, `Districts`, `No_of_Branches`, `No
 (18, 'West Bengal', 3162, 8.29, 2765, 495.43, 43507, 62.9, 49568, 566.62, 95840, '2018-11-28 08:36:17', '2018-11-28 08:36:17'),
 (19, 'India', 50102, 131.68, 41565, 5146.81, 496171, 483.22, 471205, 5761.71, 1008940, '2018-11-28 08:36:17', '2018-11-28 08:36:17');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `banking_infrastructure6s`
---
-
-DROP TABLE IF EXISTS `banking_infrastructure6s`;
-CREATE TABLE `banking_infrastructure6s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) NOT NULL,
-  `Shelters_Sanctioned_Planned` float DEFAULT NULL,
-  `Officers` float DEFAULT NULL,
-  `Clerks` float DEFAULT NULL,
-  `Sub_ordinates` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Number_of_Female_Employees` float DEFAULT NULL,
-  `Percentage_of_Officers` float DEFAULT NULL,
-  `Percentage_of_Clerks` float DEFAULT NULL,
-  `Percentage_of_Sub_ordinates` float DEFAULT NULL,
-  `Total_Percentage` float DEFAULT NULL,
-  `Percentage_of_Female_Employees` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `banking_infrastructure6s`
 --
@@ -3012,22 +2138,6 @@ INSERT INTO `banking_infrastructure6s` (`id`, `State`, `Shelters_Sanctioned_Plan
 (18, 'West Bengal', NULL, 44.1, 21.4, 12.8, 78.3, 12.2, 56.3, 27.3, 16.3, 100, 15.6, '2018-11-26 08:18:36', '2018-11-26 08:18:36'),
 (19, 'India', NULL, 771.1, 361.5, 168.3, 1300.9, 286.9, 59.3, 27.8, 12.9, 100, 22.1, '2018-11-26 08:18:36', '2018-11-26 08:18:36');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bihar_industrial_investment1s`
---
-
-DROP TABLE IF EXISTS `bihar_industrial_investment1s`;
-CREATE TABLE `bihar_industrial_investment1s` (
-  `id` bigint(20) NOT NULL,
-  `Sectors` varchar(255) DEFAULT NULL,
-  `Number_of_Proposed_Units` float DEFAULT NULL,
-  `Proposed_Investment` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `bihar_industrial_investment1s`
 --
@@ -3047,21 +2157,6 @@ INSERT INTO `bihar_industrial_investment1s` (`id`, `Sectors`, `Number_of_Propose
 (12, 'Others', 119, 1817.65, '2018-10-12 06:52:07', '2018-10-12 06:52:07'),
 (13, 'Total', 596, 8848.86, '2018-10-12 06:52:07', '2018-10-12 06:52:07');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bihar_industrial_investment2s`
---
-
-DROP TABLE IF EXISTS `bihar_industrial_investment2s`;
-CREATE TABLE `bihar_industrial_investment2s` (
-  `id` bigint(20) NOT NULL,
-  `Sectors` varchar(255) DEFAULT NULL,
-  `Number_of_Units` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `bihar_industrial_investment2s`
 --
@@ -3076,24 +2171,6 @@ INSERT INTO `bihar_industrial_investment2s` (`id`, `Sectors`, `Number_of_Units`,
 (7, 'Solar Power', 1, '2018-10-12 09:22:23', '2018-10-12 09:22:23'),
 (8, 'Others', 23, '2018-10-12 09:22:23', '2018-10-12 09:22:23'),
 (9, 'Total', 72, '2018-10-12 09:22:23', '2018-10-12 09:22:23');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `bihar_renewable_energies`
---
-
-DROP TABLE IF EXISTS `bihar_renewable_energies`;
-CREATE TABLE `bihar_renewable_energies` (
-  `id` bigint(20) NOT NULL,
-  `Schemes` varchar(255) DEFAULT NULL,
-  `Physical_Achievement` varchar(255) DEFAULT NULL,
-  `Financial_Outlay` varchar(255) DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `bihar_renewable_energies`
@@ -3140,21 +2217,6 @@ INSERT INTO `bihar_renewable_energies` (`id`, `Schemes`, `Physical_Achievement`,
 (38, 'Distribution of LED bulbs in selected 8 villages of Samastipur and Saran district', '8 nos.', '0.059', 'BEE (Bureau of Energy Efficiency) Schemes', '2016-17 and 2017-18 (upto October 2017) Achievements of BREDA', '2018-11-12 10:36:47', '2018-11-12 10:36:47'),
 (39, 'Model Energy Efficient Village Project', '1 nos.', '0.055', 'BEE (Bureau of Energy Efficiency) Schemes', '2016-17 and 2017-18 (upto October 2017) Achievements of BREDA', '2018-11-12 10:36:47', '2018-11-12 10:36:47');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bihar_start_up_policies`
---
-
-DROP TABLE IF EXISTS `bihar_start_up_policies`;
-CREATE TABLE `bihar_start_up_policies` (
-  `id` bigint(20) NOT NULL,
-  `Incubators` varchar(255) DEFAULT NULL,
-  `Number_of_Startups` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `bihar_start_up_policies`
 --
@@ -3181,22 +2243,6 @@ INSERT INTO `bihar_start_up_policies` (`id`, `Incubators`, `Number_of_Startups`,
 (19, 'Central Institute of Plastic Engineering & Technology, Hajipur ', 2, '2018-10-12 10:31:43', '2018-10-12 10:31:43'),
 (20, 'Total', 856, '2018-10-12 10:31:43', '2018-10-12 10:31:43');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bridge_sector1s`
---
-
-DROP TABLE IF EXISTS `bridge_sector1s`;
-CREATE TABLE `bridge_sector1s` (
-  `id` bigint(20) NOT NULL,
-  `Division` varchar(255) DEFAULT NULL,
-  `Number_of_Projects` float DEFAULT NULL,
-  `Cost` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `bridge_sector1s`
 --
@@ -3213,27 +2259,6 @@ INSERT INTO `bridge_sector1s` (`id`, `Division`, `Number_of_Projects`, `Cost`, `
 (9, 'Tirhut', 13, 39.74, '2018-10-29 07:56:12', '2018-10-29 07:56:12'),
 (10, 'Total', 60, 182.62, '2018-10-29 07:56:12', '2018-10-29 07:56:12');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bridge_sector2s`
---
-
-DROP TABLE IF EXISTS `bridge_sector2s`;
-CREATE TABLE `bridge_sector2s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Number_of_Bridges` float DEFAULT NULL,
-  `Expenditure` float DEFAULT NULL,
-  `Turnover` float DEFAULT NULL,
-  `Total_Revenue` float DEFAULT NULL,
-  `Administrative_Expenditure` float DEFAULT NULL,
-  `Gross_Profit` float DEFAULT NULL,
-  `Net_Profit` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `bridge_sector2s`
 --
@@ -3244,24 +2269,6 @@ INSERT INTO `bridge_sector2s` (`id`, `Year`, `Number_of_Bridges`, `Expenditure`,
 (3, '2014-15', 179, 730, 1739, 183, 44, 139.1, 80.9, '2018-10-29 08:13:10', '2018-10-29 08:13:10'),
 (4, '2015-16 ', 176, 2839, 1699, 151, 43, 107.7, 70.3, '2018-10-29 08:13:10', '2018-10-29 08:13:10'),
 (5, '2016-17', 103, 1188, 1840, 147, 39, 108.2, 68.8, '2018-10-29 08:13:10', '2018-10-29 08:13:10');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `comparison_of_budget1s`
---
-
-DROP TABLE IF EXISTS `comparison_of_budget1s`;
-CREATE TABLE `comparison_of_budget1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `Sub_sector` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `comparison_of_budget1s`
@@ -3282,22 +2289,6 @@ INSERT INTO `comparison_of_budget1s` (`id`, `Sector`, `2016-17`, `2017-18_BE`, `
 (12, 'Loans and Advances', 3.5, 3.3, 'Expenditure', 'Capital Account', '2018-09-15 11:29:57', '2018-09-15 11:29:57'),
 (13, 'Capital Outlay', 21.5, 20.1, 'Expenditure', 'Capital Account', '2018-09-15 11:29:57', '2018-09-15 11:29:57'),
 (14, 'Total', 100, 100, 'Expenditure', 'Capital Account', '2018-09-15 11:29:57', '2018-09-15 11:29:57');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `comparison_of_budgets`
---
-
-DROP TABLE IF EXISTS `comparison_of_budgets`;
-CREATE TABLE `comparison_of_budgets` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `comparison_of_budgets`
@@ -3355,27 +2346,6 @@ INSERT INTO `comparison_of_budgets` (`id`, `Sector`, `2016-17`, `2017-18_BE`, `c
 (49, 'Remittances', 9543, 0, '2018-09-15 11:29:17', '2018-09-15 11:29:17'),
 (50, 'Total Disbursements Public Account', 455264, 32027, '2018-09-15 11:29:17', '2018-09-15 11:29:17');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `cropping_patterns`
---
-
-DROP TABLE IF EXISTS `cropping_patterns`;
-CREATE TABLE `cropping_patterns` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Total_food_grains` float DEFAULT NULL,
-  `Cereals(food_grain)` float DEFAULT NULL,
-  `Pulses(food_grain)` float DEFAULT NULL,
-  `Oil_seeds` float DEFAULT NULL,
-  `Fibre_Crops` float DEFAULT NULL,
-  `Sugarcane` float DEFAULT NULL,
-  `Total_Area` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `cropping_patterns`
 --
@@ -3386,27 +2356,6 @@ INSERT INTO `cropping_patterns` (`id`, `Year`, `Total_food_grains`, `Cereals(foo
 (3, 2014, 93.25, 86.14, 7.09, 1.63, 1.58, 3.56, 100, '2018-07-16 09:08:48', '2018-07-16 09:08:48'),
 (4, 2015, 93.27, 86.18, 7.07, 1.69, 1.58, 3.46, 100, '2018-07-16 09:08:48', '2018-07-16 09:08:48'),
 (5, 2016, 93.47, 86.57, 6.9, 1.52, 1.66, 3.35, 100, '2018-07-16 09:08:48', '2018-07-16 09:08:48');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `debt_management1s`
---
-
-DROP TABLE IF EXISTS `debt_management1s`;
-CREATE TABLE `debt_management1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `debt_management1s`
@@ -3422,26 +2371,6 @@ INSERT INTO `debt_management1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`
 (7, 'Total', 19029, 22677, 24485, 27749, 32531, 30281, 'Other Liabilities', '2018-09-10 05:10:38', '2018-09-10 05:10:38'),
 (8, 'Total (Public Debt plus Other Liabilities)', 76503, 86939, 99056, 116578, 138722, 155537, 'Other Liabilities', '2018-09-10 05:10:38', '2018-09-10 05:10:38'),
 (9, 'Outstanding Liability as Percentage of GSDP', 27.1, 27.4, 28.9, 30.6, 31.7, 33.4, 'Other Liabilities', '2018-09-10 05:10:38', '2018-09-10 05:10:38');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `debt_management2s`
---
-
-DROP TABLE IF EXISTS `debt_management2s`;
-CREATE TABLE `debt_management2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `31_03_2016` float DEFAULT NULL,
-  `31_03_2017` float DEFAULT NULL,
-  `2017_from_2016` float DEFAULT NULL,
-  `31_03_17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `debt_management2s`
@@ -3462,22 +2391,6 @@ INSERT INTO `debt_management2s` (`id`, `Sector`, `2015-16`, `2016-17`, `31_03_20
 (12, 'Loans for Centrally Sponsored Plan Schemes', 0, 0, 1, 1, 0, 0, '2018-09-17 06:30:28', '2018-09-17 06:30:28'),
 (13, 'Other Loans', 0, 0, 47, 47, 0, 0, '2018-09-17 06:30:28', '2018-09-17 06:30:28'),
 (14, 'Total (A+B)', 18384, 21577, 88829, 106191, 19.5, 100, '2018-09-17 06:30:28', '2018-09-17 06:30:28');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `debt_management3s`
---
-
-DROP TABLE IF EXISTS `debt_management3s`;
-CREATE TABLE `debt_management3s` (
-  `id` bigint(20) NOT NULL,
-  `Public_Debt_Repayment_Liabilities` varchar(255) DEFAULT NULL,
-  `Amounts` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `debt_management3s`
@@ -3521,26 +2434,6 @@ INSERT INTO `debt_management3s` (`id`, `Public_Debt_Repayment_Liabilities`, `Amo
 (35, 'Total Interest Payment', 9591, '2017-18_BE', '2018-08-20 08:09:38', '2018-08-20 08:09:38'),
 (36, 'Total Debt Service Burden', 46316, '2017-18_BE', '2018-08-20 08:09:38', '2018-08-20 08:09:38');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `debt_management4s`
---
-
-DROP TABLE IF EXISTS `debt_management4s`;
-CREATE TABLE `debt_management4s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `debt_management4s`
 --
@@ -3555,23 +2448,6 @@ INSERT INTO `debt_management4s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`
 (7, 'Repayment of Debt ', 3070, 3120, 3609, 4125, 4215, 4797, '2018-09-10 07:24:07', '2018-09-10 07:24:07'),
 (8, 'Net Public Debt Received', 2248, 1613, 6018, 7763, 10135, 10111, '2018-09-10 07:24:07', '2018-09-10 07:24:07'),
 (9, 'Net Debt Received as percentage of total borrowing', 23.5, 16.3, 43.2, 42.2, 47, 42.4, '2018-09-10 07:24:07', '2018-09-10 07:24:07');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `deficit_management1s`
---
-
-DROP TABLE IF EXISTS `deficit_management1s`;
-CREATE TABLE `deficit_management1s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `Revenue_Deficit_Surplus` float DEFAULT NULL,
-  `Conventional_Deficit_Surplus` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `deficit_management1s`
@@ -3630,22 +2506,6 @@ INSERT INTO `deficit_management1s` (`id`, `State`, `Revenue_Deficit_Surplus`, `C
 (50, 'Himachal Pradesh', 3143, 4062, '2017_BE', '2018-08-20 06:52:26', '2018-08-20 06:52:26'),
 (51, 'Chhatisgarh', -4781, 580, '2017_BE', '2018-08-20 06:52:26', '2018-08-20 06:52:26');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `deficit_management2s`
---
-
-DROP TABLE IF EXISTS `deficit_management2s`;
-CREATE TABLE `deficit_management2s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `Gross_Fiscal_Deficit` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `deficit_management2s`
 --
@@ -3703,22 +2563,6 @@ INSERT INTO `deficit_management2s` (`id`, `State`, `Gross_Fiscal_Deficit`, `Year
 (50, 'Himachal Pradesh', 7103, '2017_BE', '2018-08-20 07:05:52', '2018-08-20 07:05:52'),
 (51, 'Chhatisgarh', 9647, '2017_BE', '2018-08-20 07:05:52', '2018-08-20 07:05:52');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `deficit_management3s`
---
-
-DROP TABLE IF EXISTS `deficit_management3s`;
-CREATE TABLE `deficit_management3s` (
-  `id` bigint(20) NOT NULL,
-  `Gross_Fiscal_Deficit` varchar(255) DEFAULT NULL,
-  `Amount` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `deficit_management3s`
 --
@@ -3761,27 +2605,6 @@ INSERT INTO `deficit_management3s` (`id`, `Gross_Fiscal_Deficit`, `Amount`, `Yea
 (35, 'GSDP', 466365, 2017, '2018-08-20 07:20:06', '2018-08-20 07:20:06'),
 (36, 'GFD: GSDP ratio (%)', 3.9, 2017, '2018-08-20 07:20:06', '2018-08-20 07:20:06');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `deficit_management4s`
---
-
-DROP TABLE IF EXISTS `deficit_management4s`;
-CREATE TABLE `deficit_management4s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `deficit_management4s`
 --
@@ -3794,23 +2617,6 @@ INSERT INTO `deficit_management4s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-
 (5, 'Net Borrowing', 99.1, 81.3, 92.2, 118.2, 105.4, 105.3, 'Percentage Composition', '2018-09-09 16:32:07', '2018-09-09 16:32:07'),
 (6, 'Net Public Account', 5.2, 19.2, 4.9, -16.4, -5.4, -11.6, 'Percentage Composition', '2018-09-09 16:32:07', '2018-09-09 16:32:07'),
 (7, 'Net Decrease in Cash Balance', -4.3, -0.5, 2.9, -1.8, 0.1, 6.3, 'Percentage Composition', '2018-09-09 16:32:07', '2018-09-09 16:32:07');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `demographic_profile1s`
---
-
-DROP TABLE IF EXISTS `demographic_profile1s`;
-CREATE TABLE `demographic_profile1s` (
-  `id` bigint(20) NOT NULL,
-  `Demographic_Indicator` varchar(255) DEFAULT NULL,
-  `Bihar` float DEFAULT NULL,
-  `India` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `demographic_profile1s`
@@ -3837,28 +2643,6 @@ INSERT INTO `demographic_profile1s` (`id`, `Demographic_Indicator`, `Bihar`, `In
 (18, 'No. of CD blocks', 534, 5924, 2011, '2018-08-17 08:43:10', '2018-08-17 08:43:10'),
 (19, 'No. of Towns (statutory/census)', 199, 7935, 2011, '2018-08-17 08:43:10', '2018-08-17 08:43:10'),
 (20, 'No. of Villages', 39073, 597369, 2011, '2018-08-17 08:43:10', '2018-08-17 08:43:10');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `demographic_profile2s`
---
-
-DROP TABLE IF EXISTS `demographic_profile2s`;
-CREATE TABLE `demographic_profile2s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Population` float DEFAULT NULL,
-  `Sex_Ratio_Overall` float DEFAULT NULL,
-  `Sex_Ratio_Child` float DEFAULT NULL,
-  `Density` float DEFAULT NULL,
-  `Urbanisation` float DEFAULT NULL,
-  `Decadal_Growth` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Percentage_Population` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `demographic_profile2s`
@@ -3943,23 +2727,6 @@ INSERT INTO `demographic_profile2s` (`id`, `Districts`, `Population`, `Sex_Ratio
 (76, 'Araria', 28.1, 921, 957, 992, 6, 30.2, 2011, 2.7, '2018-08-17 09:26:20', '2018-08-17 09:26:20'),
 (77, 'Katihar', 30.7, 919, 961, 1004, 8.9, 28.4, 2011, 2.9, '2018-08-17 09:26:20', '2018-08-17 09:26:20'),
 (78, 'Bihar', 1041, 918, 935, 1106, 11, 25.4, 2011, 100, '2018-08-17 09:26:20', '2018-08-17 09:26:20');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `deposites_and_credits1s`
---
-
-DROP TABLE IF EXISTS `deposites_and_credits1s`;
-CREATE TABLE `deposites_and_credits1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `deposites_and_credits1s`
@@ -4052,23 +2819,6 @@ INSERT INTO `deposites_and_credits1s` (`id`, `Sector`, `2014-15`, `2015-16`, `In
 (84, 'WestBengal', 4.7, 4.5, 'Share of Credits', '2018-11-28 10:03:12', '2018-11-28 10:03:12'),
 (85, 'India', 100, 100, 'Share of Credits', '2018-11-28 10:03:12', '2018-11-28 10:03:12');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `deposites_and_credits2s`
---
-
-DROP TABLE IF EXISTS `deposites_and_credits2s`;
-CREATE TABLE `deposites_and_credits2s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Deposit` float DEFAULT NULL,
-  `Credit` float DEFAULT NULL,
-  `CD_Ratio` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `deposites_and_credits2s`
 --
@@ -4080,26 +2830,6 @@ INSERT INTO `deposites_and_credits2s` (`id`, `Year`, `Deposit`, `Credit`, `CD_Ra
 (4, '2015-16', 240288, 103238, 43, '2018-11-27 05:47:46', '2018-11-27 05:47:46'),
 (5, '2016-17', 280370, 129969, 46.4, '2018-11-27 05:47:46', '2018-11-27 05:47:46'),
 (6, '2017-18 (upto Sep 2017)', 289017, 128904, 44.6, '2018-11-27 05:47:46', '2018-11-27 05:47:46');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `deposites_and_credits3s`
---
-
-DROP TABLE IF EXISTS `deposites_and_credits3s`;
-CREATE TABLE `deposites_and_credits3s` (
-  `id` bigint(20) NOT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `Area` varchar(255) DEFAULT NULL,
-  `Deposits` float DEFAULT NULL,
-  `Credits` float DEFAULT NULL,
-  `CD_Ratio` float DEFAULT NULL,
-  `Investment` float DEFAULT NULL,
-  `ICD_Ratio` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `deposites_and_credits3s`
@@ -4122,23 +2852,6 @@ INSERT INTO `deposites_and_credits3s` (`id`, `Indicator`, `Area`, `Deposits`, `C
 (14, 'All Banks', 'Semi-Urban', 70975, 24827, 35, NULL, NULL, '2018-11-28 11:06:40', '2018-11-28 11:06:40'),
 (15, 'All Banks', 'Urban  ', 143154, 48527, 33.9, NULL, NULL, '2018-11-28 11:06:40', '2018-11-28 11:06:40'),
 (16, 'All Banks', 'Total ', 280370, 104945, 37.4, 6778, 39.8, '2018-11-28 11:06:40', '2018-11-28 11:06:40');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `deposites_and_credits4s`
---
-
-DROP TABLE IF EXISTS `deposites_and_credits4s`;
-CREATE TABLE `deposites_and_credits4s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `As_per_Sanction` float DEFAULT NULL,
-  `As_per_Utilization` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `deposites_and_credits4s`
@@ -4199,22 +2912,6 @@ INSERT INTO `deposites_and_credits4s` (`id`, `State`, `As_per_Sanction`, `As_per
 (52, 'Uttarakhand', 34.9, 35.8, '2016', '2018-11-27 07:13:14', '2018-11-27 07:13:14'),
 (53, 'West Bengal', 55.1, 57.3, '2016', '2018-11-27 07:13:14', '2018-11-27 07:13:14'),
 (54, 'India', 78.4, 78.4, '2016', '2018-11-27 07:13:14', '2018-11-27 07:13:14');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `deposites_and_credits5s`
---
-
-DROP TABLE IF EXISTS `deposites_and_credits5s`;
-CREATE TABLE `deposites_and_credits5s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `CD_Ratio` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `deposites_and_credits5s`
@@ -4300,27 +2997,6 @@ INSERT INTO `deposites_and_credits5s` (`id`, `Districts`, `CD_Ratio`, `Year`, `c
 (77, 'Katihar', 41.4, '2017-18_Upto_Sep_17', '2018-11-27 08:24:13', '2018-11-27 08:24:13'),
 (78, 'Bihar', 44.6, '2017-18_Upto_Sep_17', '2018-11-27 08:24:13', '2018-11-27 08:24:13');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `deposites_and_credits6s`
---
-
-DROP TABLE IF EXISTS `deposites_and_credits6s`;
-CREATE TABLE `deposites_and_credits6s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Number_of_Branches` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017_18_upto_Sep_2017` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `deposites_and_credits6s`
 --
@@ -4347,25 +3023,6 @@ INSERT INTO `deposites_and_credits6s` (`id`, `Sector`, `Number_of_Branches`, `20
 (19, 'United Bank of India', 92, 53.9, 52.1, 50.4, 50.9, 48.1, 'Other Banks', '2018-11-27 10:22:16', '2018-11-27 10:22:16'),
 (20, 'Vijaya Bank', 37, 29.2, 41.4, 44.6, 47.4, 59.1, 'Other Banks', '2018-11-27 10:22:16', '2018-11-27 10:22:16'),
 (21, 'All Banks ', 4501, 41.9, 43, 41.7, 39.9, 38.8, 'Other Banks', '2018-11-27 10:22:16', '2018-11-27 10:22:16');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `deposites_and_credits7s`
---
-
-DROP TABLE IF EXISTS `deposites_and_credits7s`;
-CREATE TABLE `deposites_and_credits7s` (
-  `id` bigint(20) NOT NULL,
-  `Banks` varchar(255) DEFAULT NULL,
-  `Number_of_branches` float DEFAULT NULL,
-  `Deposit` float DEFAULT NULL,
-  `Advance` float DEFAULT NULL,
-  `CD_Ratio` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `deposites_and_credits7s`
@@ -4409,25 +3066,6 @@ INSERT INTO `deposites_and_credits7s` (`id`, `Banks`, `Number_of_branches`, `Dep
 (35, 'Bandhan Bank', 81, 119987, 263075, 219.2, 'Total', '2018-11-29 05:33:02', '2018-11-29 05:33:02'),
 (36, 'All Private Bank', 408, 2085260, 1159240, 55.6, 'Total', '2018-11-29 05:33:02', '2018-11-29 05:33:02');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `deposites_and_credits8s`
---
-
-DROP TABLE IF EXISTS `deposites_and_credits8s`;
-CREATE TABLE `deposites_and_credits8s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017_18_Sep_17` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `deposites_and_credits8s`
 --
@@ -4441,26 +3079,6 @@ INSERT INTO `deposites_and_credits8s` (`id`, `Sector`, `2014-15`, `2015-16`, `20
 (6, 'Bihar KGB', 83.5, 79.6, 75.1, 74.9, 'ICD Ratio', '2018-11-27 10:53:17', '2018-11-27 10:53:17'),
 (7, 'Uttar Bihar KGB', 56.8, 57.8, 52.2, 51.5, 'ICD Ratio', '2018-11-27 10:53:17', '2018-11-27 10:53:17'),
 (8, 'All RRBs', 56.2, 55.2, 51.6, 51.8, 'ICD Ratio', '2018-11-27 10:53:17', '2018-11-27 10:53:17');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `disaster_management1s`
---
-
-DROP TABLE IF EXISTS `disaster_management1s`;
-CREATE TABLE `disaster_management1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `disaster_management1s`
@@ -4483,37 +3101,6 @@ INSERT INTO `disaster_management1s` (`id`, `Sector`, `2011-12`, `2012-13`, `2013
 (14, 'Assistance for Natural Calamity Accidents (except flood)', NULL, NULL, NULL, NULL, 831.1, 16320.6, '2018-11-15 11:01:32', '2018-11-15 11:01:32'),
 (15, 'Total', 17107.2, 6017.5, 66337.1, 31657, 128886, 170163, '2018-11-15 11:01:32', '2018-11-15 11:01:32');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `distributions`
---
-
-DROP TABLE IF EXISTS `distributions`;
-CREATE TABLE `distributions` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Domestic_Consumer` float DEFAULT NULL,
-  `Commercial_Consumer` float DEFAULT NULL,
-  `Industrial_LT_Consumer` float DEFAULT NULL,
-  `Industrial_HT_Consumer` float DEFAULT NULL,
-  `Public_Lighting_Consumer` float DEFAULT NULL,
-  `Traction_Consumer` float DEFAULT NULL,
-  `Agriculture_Consumer` float DEFAULT NULL,
-  `Public_Water_Works_Consumer` float DEFAULT NULL,
-  `Total_Consumer` float DEFAULT NULL,
-  `Percentage_of_Domestic_Consumer` float DEFAULT NULL,
-  `Percentage_of_Commercial_Consumer` float DEFAULT NULL,
-  `Percentage_of_Industrial_LT_Consumer` float DEFAULT NULL,
-  `Percentage_of_Industrial_HT_Consumer` float DEFAULT NULL,
-  `Percentage_of_Public_Lighting_Consumer` float DEFAULT NULL,
-  `Percentage_of_Agriculture_Consumer` float DEFAULT NULL,
-  `Percentage_of_Public_Water_Works_Consumer` float DEFAULT NULL,
-  `Percentage_of_Total_Consumer` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `distributions`
 --
@@ -4525,32 +3112,6 @@ INSERT INTO `distributions` (`id`, `Year`, `Domestic_Consumer`, `Commercial_Cons
 (4, '2015-16', 7407610, 488690, 31405, 1922, 1237, 19, 75087, 1760, 8007730, 92.5, 6.1, 0.4, 0.03, 0.02, 0.9, 0.02, 100, '2018-11-09 06:03:30', '2018-11-09 06:03:30'),
 (5, '2016-17', 9499940, 616512, 57433, 2050, 679, 22, 162188, 2030, 10340900, 91.87, 5.96, 0.56, 0.02, 0.01, 1.57, 0.02, 100, '2018-11-09 06:03:30', '2018-11-09 06:03:30');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `distribution_of_homestead_land1s`
---
-
-DROP TABLE IF EXISTS `distribution_of_homestead_land1s`;
-CREATE TABLE `distribution_of_homestead_land1s` (
-  `id` bigint(20) NOT NULL,
-  `Item` varchar(255) DEFAULT NULL,
-  `Mahadalit` float DEFAULT NULL,
-  `SC` float DEFAULT NULL,
-  `ST` float DEFAULT NULL,
-  `BC_Schedule_1` float DEFAULT NULL,
-  `BC_Schedule_2` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Percentage_of_Mahadalit` float DEFAULT NULL,
-  `Percentage_of_SC` float DEFAULT NULL,
-  `Percentage_of_ST` float DEFAULT NULL,
-  `Percentage_of_BC_Schedule_1` float DEFAULT NULL,
-  `Percentage_of_BC_Schedule_2` float DEFAULT NULL,
-  `Total_Percentage` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `distribution_of_homestead_land1s`
 --
@@ -4559,23 +3120,6 @@ INSERT INTO `distribution_of_homestead_land1s` (`id`, `Item`, `Mahadalit`, `SC`,
 (1, 'No. of surveyed landless Families', 66949, 12852, 3937, 17204, 10096, 111038, 60.3, 11.6, 3.5, 15.5, 9.1, 100, '2018-11-16 05:56:48', '2018-11-16 05:56:48'),
 (2, 'No. of Families provided with land', 41591, 6295, 2134, 10200, 5244, 65464, 63.5, 9.6, 3.3, 15.6, 8, 100, '2018-11-16 05:56:48', '2018-11-16 05:56:48'),
 (3, 'No. of remaining Landless Families', 25358, 6557, 1803, 7004, 4852, 45574, 55.6, 14.4, 4, 15.4, 10.6, 100, '2018-11-16 05:56:48', '2018-11-16 05:56:48');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `distribution_of_homestead_land2s`
---
-
-DROP TABLE IF EXISTS `distribution_of_homestead_land2s`;
-CREATE TABLE `distribution_of_homestead_land2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2005-06` float DEFAULT NULL,
-  `2010-11` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `distribution_of_homestead_land2s`
@@ -4600,26 +3144,6 @@ INSERT INTO `distribution_of_homestead_land2s` (`id`, `Sector`, `2005-06`, `2010
 (16, 'Medium', 5.21, 5.12, 'Average Size of Operational Holdings (hectares)', '2018-11-15 10:46:47', '2018-11-15 10:46:47'),
 (17, 'Large', 18.5, 11.25, 'Average Size of Operational Holdings (hectares)', '2018-11-15 10:46:47', '2018-11-15 10:46:47'),
 (18, 'Total', 0.43, 0.39, 'Average Size of Operational Holdings (hectares)', '2018-11-15 10:46:47', '2018-11-15 10:46:47');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `district_wise_section1s`
---
-
-DROP TABLE IF EXISTS `district_wise_section1s`;
-CREATE TABLE `district_wise_section1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Population_Share` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `district_wise_section1s`
@@ -4705,24 +3229,6 @@ INSERT INTO `district_wise_section1s` (`id`, `Sector`, `Population_Share`, `2013
 (77, 'Katihar', 3, 4.3, 2.4, 2.6, 4.3, 'Percentage', '2018-12-12 09:22:51', '2018-12-12 09:22:51'),
 (78, 'Bihar', 100, 100, 100, 100, 100, 'Percentage', '2018-12-12 09:22:51', '2018-12-12 09:22:51');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `district_wise_section2s`
---
-
-DROP TABLE IF EXISTS `district_wise_section2s`;
-CREATE TABLE `district_wise_section2s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Primary1` float DEFAULT NULL,
-  `Upper_Primary` float DEFAULT NULL,
-  `Total` varchar(255) DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `district_wise_section2s`
 --
@@ -4806,24 +3312,6 @@ INSERT INTO `district_wise_section2s` (`id`, `Districts`, `Primary1`, `Upper_Pri
 (76, 'Araria', 2.76, 2.74, '5.5', '2015-16 ', '2018-11-30 10:13:23', '2018-11-30 10:13:23'),
 (77, 'Katihar', 5.51, 2.37, '7.89', '2015-16 ', '2018-11-30 10:13:23', '2018-11-30 10:13:23'),
 (78, 'Bihar', 163.36, 72.32, '235.68', '2015-16 ', '2018-11-30 10:13:23', '2018-11-30 10:13:23');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `district_wise_section3s`
---
-
-DROP TABLE IF EXISTS `district_wise_section3s`;
-CREATE TABLE `district_wise_section3s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Primary1` float DEFAULT NULL,
-  `Upper_Primary` float DEFAULT NULL,
-  `Total` varchar(255) DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `district_wise_section3s`
@@ -4909,24 +3397,6 @@ INSERT INTO `district_wise_section3s` (`id`, `Districts`, `Primary1`, `Upper_Pri
 (77, 'Katihar', 1.05, 0.45, '1.49', '2015-16', '2018-11-30 10:29:02', '2018-11-30 10:29:02'),
 (78, 'Bihar', 30.81, 12.39, '43.2', '2015-16', '2018-11-30 10:29:02', '2018-11-30 10:29:02');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `district_wise_section4s`
---
-
-DROP TABLE IF EXISTS `district_wise_section4s`;
-CREATE TABLE `district_wise_section4s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Primary1` float DEFAULT NULL,
-  `Upper_Primary` float DEFAULT NULL,
-  `Total` varchar(255) DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `district_wise_section4s`
 --
@@ -5011,23 +3481,6 @@ INSERT INTO `district_wise_section4s` (`id`, `Districts`, `Primary1`, `Upper_Pri
 (77, 'Katihar', 0.54, 0.18, '0.72', '2015-16', '2018-11-30 10:40:15', '2018-11-30 10:40:15'),
 (78, 'Bihar', 3.31, 1.36, '4.67', '2015-16', '2018-11-30 10:40:15', '2018-11-30 10:40:15');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `district_wise_section5s`
---
-
-DROP TABLE IF EXISTS `district_wise_section5s`;
-CREATE TABLE `district_wise_section5s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Primary_Schools` float DEFAULT NULL,
-  `Upper_Primary_Schools` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `district_wise_section5s`
 --
@@ -5072,24 +3525,6 @@ INSERT INTO `district_wise_section5s` (`id`, `Districts`, `Primary_Schools`, `Up
 (37, 'Araria', 1327, 562, 1889, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
 (38, 'Katihar', 1195, 719, 1914, '2018-12-06 07:08:01', '2018-12-06 07:08:01'),
 (39, 'Bihar', 42664, 29866, 72530, '2018-12-06 07:08:01', '2018-12-06 07:08:01');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `district_wise_section6s`
---
-
-DROP TABLE IF EXISTS `district_wise_section6s`;
-CREATE TABLE `district_wise_section6s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Total_Enrolment` float DEFAULT NULL,
-  `Number_of_Children_Availing_MDM_per_day` float DEFAULT NULL,
-  `Coverage_in_percentage` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `district_wise_section6s`
@@ -5214,24 +3649,6 @@ INSERT INTO `district_wise_section6s` (`id`, `Districts`, `Total_Enrolment`, `Nu
 (116, 'Katihar', 4.74, 2.79, 58.91, '2016-17', '2018-11-30 11:02:35', '2018-11-30 11:02:35'),
 (117, 'Bihar ', 141.7, 89.7, 63.3, '2016-17', '2018-11-30 11:02:35', '2018-11-30 11:02:35');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `district_wise_section7s`
---
-
-DROP TABLE IF EXISTS `district_wise_section7s`;
-CREATE TABLE `district_wise_section7s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Total_Enrolment` float DEFAULT NULL,
-  `Number_of_Children_Availing_MDM_per_day` float DEFAULT NULL,
-  `Coverage_in_percentage` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `district_wise_section7s`
 --
@@ -5354,23 +3771,6 @@ INSERT INTO `district_wise_section7s` (`id`, `Districts`, `Total_Enrolment`, `Nu
 (115, 'Araria', 1.44, 0.68, 47.18, '2016-17', '2018-11-30 11:13:27', '2018-11-30 11:13:27'),
 (116, 'Katihar', 2.01, 0.99, 49.56, '2016-17', '2018-11-30 11:13:27', '2018-11-30 11:13:27'),
 (117, 'Bihar', 66.27, 37.8, 57.04, '2016-17', '2018-11-30 11:13:27', '2018-11-30 11:13:27');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `district_wise_section8s`
---
-
-DROP TABLE IF EXISTS `district_wise_section8s`;
-CREATE TABLE `district_wise_section8s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Affiliated_College` float DEFAULT NULL,
-  `Constituent_College` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `district_wise_section8s`
@@ -5534,29 +3934,6 @@ INSERT INTO `district_wise_section8s` (`id`, `Districts`, `Affiliated_College`, 
 (155, 'Katihar', 11, 4, '2016-17', '2018-11-30 11:22:06', '2018-11-30 11:22:06'),
 (156, 'Bihar', 478, 276, '2016-17', '2018-11-30 11:22:06', '2018-11-30 11:22:06');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `district_wise_section9s`
---
-
-DROP TABLE IF EXISTS `district_wise_section9s`;
-CREATE TABLE `district_wise_section9s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Affiliated_College` float NOT NULL,
-  `Constituent_College` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Science_Arts_Commerce_College` float DEFAULT NULL,
-  `Engineering` float DEFAULT NULL,
-  `Medical` float DEFAULT NULL,
-  `B_Ed` float DEFAULT NULL,
-  `Others` float DEFAULT NULL,
-  `All_Colleges` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `district_wise_section9s`
 --
@@ -5601,23 +3978,6 @@ INSERT INTO `district_wise_section9s` (`id`, `Districts`, `Affiliated_College`, 
 (37, 'Araria', 8, 2, 10, 8, 1, 0, 0, 1, 10, '2018-11-30 11:43:56', '2018-11-30 11:43:56'),
 (38, 'Katihar', 11, 4, 15, 9, 1, 1, 1, 3, 15, '2018-11-30 11:43:56', '2018-11-30 11:43:56'),
 (39, 'Bihar', 478, 276, 754, 430, 28, 18, 82, 196, 754, '2018-11-30 11:43:56', '2018-11-30 11:43:56');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `district_wise_sections`
---
-
-DROP TABLE IF EXISTS `district_wise_sections`;
-CREATE TABLE `district_wise_sections` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Number_of_Handpumps_Installed` float DEFAULT NULL,
-  `Slipped_back_Habitations_or_Water_quality_Problems_Covered` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `district_wise_sections`
@@ -5820,25 +4180,6 @@ INSERT INTO `district_wise_sections` (`id`, `Districts`, `Number_of_Handpumps_In
 (194, 'Katihar', 200, 61, '2016-17', '2018-11-30 09:35:08', '2018-11-30 09:35:08'),
 (195, 'Bihar ', 6373, 1289, '2016-17', '2018-11-30 09:35:08', '2018-11-30 09:35:08');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `drinking_water_supply_and_sanitation1s`
---
-
-DROP TABLE IF EXISTS `drinking_water_supply_and_sanitation1s`;
-CREATE TABLE `drinking_water_supply_and_sanitation1s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Handpumps_Installed` float DEFAULT NULL,
-  `Slipped_back_Habitations_or_Water_quality_problems_covered` float DEFAULT NULL,
-  `IHHL_constructed_under_APL` float DEFAULT NULL,
-  `IHHL_constructed_under_BPL` float DEFAULT NULL,
-  `Total_IHHL_constructed` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `drinking_water_supply_and_sanitation1s`
 --
@@ -5850,23 +4191,6 @@ INSERT INTO `drinking_water_supply_and_sanitation1s` (`id`, `Year`, `Handpumps_I
 (4, '2014-15', 24287, 12236, 47056, 118401, 165457, '2018-11-30 05:22:07', '2018-11-30 05:22:07'),
 (5, '2015-16 ', 26691, 7189, 145766, 281268, 427034, '2018-11-30 05:22:07', '2018-11-30 05:22:07'),
 (6, '2016-17', 6373, 1289, 551999, 320332, 872332, '2018-11-30 05:22:07', '2018-11-30 05:22:07');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `drinking_water_supply_and_sanitation2s`
---
-
-DROP TABLE IF EXISTS `drinking_water_supply_and_sanitation2s`;
-CREATE TABLE `drinking_water_supply_and_sanitation2s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Outlay` float DEFAULT NULL,
-  `Expenditure` float DEFAULT NULL,
-  `Percentage_of_Utilisation` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `drinking_water_supply_and_sanitation2s`
@@ -5880,23 +4204,6 @@ INSERT INTO `drinking_water_supply_and_sanitation2s` (`id`, `Year`, `Outlay`, `E
 (5, '2015-16', 296, 269, 90.9, '2018-11-30 05:38:50', '2018-11-30 05:38:50'),
 (6, '2016-17', 338, 287, 84.9, '2018-11-30 05:38:50', '2018-11-30 05:38:50');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `drinking_water_supply_and_sanitation3s`
---
-
-DROP TABLE IF EXISTS `drinking_water_supply_and_sanitation3s`;
-CREATE TABLE `drinking_water_supply_and_sanitation3s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Outlay` float DEFAULT NULL,
-  `Expenditure` float DEFAULT NULL,
-  `Outlay_as_Percent_of_Expenditure` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `drinking_water_supply_and_sanitation3s`
 --
@@ -5907,24 +4214,6 @@ INSERT INTO `drinking_water_supply_and_sanitation3s` (`id`, `Year`, `Outlay`, `E
 (3, '2014-15 ', 793.7, 604.9, 76.2, '2018-11-30 05:46:08', '2018-11-30 05:46:08'),
 (4, '2015-16', 679.8, 574.2, 84.5, '2018-11-30 05:46:08', '2018-11-30 05:46:08'),
 (5, '2016-17', 844.9, 825, 97.6, '2018-11-30 05:46:08', '2018-11-30 05:46:08');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `drinking_water_supply_and_sanitation4s`
---
-
-DROP TABLE IF EXISTS `drinking_water_supply_and_sanitation4s`;
-CREATE TABLE `drinking_water_supply_and_sanitation4s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Achievement` float DEFAULT NULL,
-  `Achievement_Percentage` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `drinking_water_supply_and_sanitation4s`
@@ -5946,25 +4235,6 @@ INSERT INTO `drinking_water_supply_and_sanitation4s` (`id`, `Sector`, `Target`, 
 (13, 'Rural Piped Water Supply Scheme', 11, 2, 18.2, '2016-17', '2018-11-30 06:42:14', '2018-11-30 06:42:14'),
 (14, 'Installation of New instead of Old Hand Pumps', 72012, 33820, 47, '2016-17', '2018-11-30 06:42:14', '2018-11-30 06:42:14'),
 (15, 'Uncovered Tolas', 7777, 1289, 16.6, '2016-17', '2018-11-30 06:42:14', '2018-11-30 06:42:14');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `education_art_culture1s`
---
-
-DROP TABLE IF EXISTS `education_art_culture1s`;
-CREATE TABLE `education_art_culture1s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Male` float DEFAULT NULL,
-  `Female` float DEFAULT NULL,
-  `Persons` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `Indicator1` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `education_art_culture1s`
@@ -5993,28 +4263,6 @@ INSERT INTO `education_art_culture1s` (`id`, `Year`, `Male`, `Female`, `Persons`
 (20, '1981-91', 8.7, 7.1, 5.2, 'Decadal Increase', 'Bihar', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
 (21, '1991-01', 7.8, 10.7, 9.5, 'Decadal Increase', 'Bihar', '2018-12-03 08:30:54', '2018-12-03 08:30:54'),
 (22, '2001-11', 10.9, 17.9, 14.8, 'Decadal Increase', 'Bihar', '2018-12-03 08:30:54', '2018-12-03 08:30:54');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `education_art_culture2s`
---
-
-DROP TABLE IF EXISTS `education_art_culture2s`;
-CREATE TABLE `education_art_culture2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `CAGR` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `Indicator1` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `education_art_culture2s`
@@ -6049,26 +4297,6 @@ INSERT INTO `education_art_culture2s` (`id`, `Sector`, `2011-12`, `2012-13`, `20
 (26, 'Boys plus Girls', 37.02, 36.75, 41.01, 41.56, 43.2, 4.4, 'Total', 'SC', '2018-12-03 10:41:51', '2018-12-03 10:41:51'),
 (27, 'Boys plus Girls', 3.14, 3.93, 4.08, 4.26, 4.67, 9.1, 'Total', 'ST', '2018-12-03 10:41:51', '2018-12-03 10:41:51');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `education_art_culture3s`
---
-
-DROP TABLE IF EXISTS `education_art_culture3s`;
-CREATE TABLE `education_art_culture3s` (
-  `id` bigint(20) NOT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `education_art_culture3s`
 --
@@ -6086,25 +4314,6 @@ INSERT INTO `education_art_culture3s` (`id`, `Indicator`, `Sector`, `2011-12`, `
 (10, 'Higher Secondary', 'Girls', 64.7, NULL, NULL, NULL, NULL, '2018-12-04 06:39:53', '2018-12-04 06:39:53'),
 (11, 'Higher Secondary', 'Boys', 68.4, NULL, NULL, NULL, NULL, '2018-12-04 06:39:53', '2018-12-04 06:39:53'),
 (12, 'Higher Secondary', 'Combined', 67, NULL, NULL, NULL, NULL, '2018-12-04 06:39:53', '2018-12-04 06:39:53');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `education_art_culture4s`
---
-
-DROP TABLE IF EXISTS `education_art_culture4s`;
-CREATE TABLE `education_art_culture4s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Girls` float DEFAULT NULL,
-  `Boys` float DEFAULT NULL,
-  `Combined` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `Indicator1` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `education_art_culture4s`
@@ -6145,26 +4354,6 @@ INSERT INTO `education_art_culture4s` (`id`, `Year`, `Girls`, `Boys`, `Combined`
 (32, '2014-15', 31.8, 45.7, 40.5, 'Scheduled Tribe', 'Secondary', '2018-12-03 09:29:24', '2018-12-03 09:29:24'),
 (33, '2015-16', 22.7, 41.1, 34.1, 'Scheduled Tribe', 'Secondary', '2018-12-03 09:29:24', '2018-12-03 09:29:24');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `education_art_culture5s`
---
-
-DROP TABLE IF EXISTS `education_art_culture5s`;
-CREATE TABLE `education_art_culture5s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Primary1` float DEFAULT NULL,
-  `Secondary` float DEFAULT NULL,
-  `Higher` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Total_Budget` float DEFAULT NULL,
-  `Social_Services` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `education_art_culture5s`
 --
@@ -6174,26 +4363,6 @@ INSERT INTO `education_art_culture5s` (`id`, `Year`, `Primary1`, `Secondary`, `H
 (2, '2014-15', 12140, 3368, 2325, 17833, 18.8, 53.4, '2018-12-10 06:01:04', '2018-12-10 06:01:04'),
 (3, '2015-16', 13327, 3677, 2382, 19386, 17.3, 50.1, '2018-12-10 06:01:04', '2018-12-10 06:01:04'),
 (4, '2016-17', 13880, 3507, 2326, 19713, 15.6, 44.5, '2018-12-10 06:01:04', '2018-12-10 06:01:04');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `education_art_culture6s`
---
-
-DROP TABLE IF EXISTS `education_art_culture6s`;
-CREATE TABLE `education_art_culture6s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `education_art_culture6s`
@@ -6206,27 +4375,6 @@ INSERT INTO `education_art_culture6s` (`id`, `Sector`, `2012-13`, `2013-14`, `20
 (4, 'Total Enrolment (in lakhs)', 52.87, 57.57, 60.58, 62.67, 66.27, 'Class VI-VIII', '2018-12-03 11:15:40', '2018-12-03 11:15:40'),
 (5, 'No. of Children Availing MDMs (per day) (in lakhs)', 30.32, 38.57, 36.99, 40.02, 37.8, 'Class VI-VIII', '2018-12-03 11:15:40', '2018-12-03 11:15:40'),
 (6, 'Coverage Percentage', 57.3, 67, 61, 63.9, 57, 'Class VI-VIII', '2018-12-03 11:15:40', '2018-12-03 11:15:40');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `education_art_culture7s`
---
-
-DROP TABLE IF EXISTS `education_art_culture7s`;
-CREATE TABLE `education_art_culture7s` (
-  `id` bigint(20) NOT NULL,
-  `Programmes` varchar(255) DEFAULT NULL,
-  `APPROVED_AWP_and_B` float DEFAULT NULL,
-  `Fund_Released_by_GOI` float DEFAULT NULL,
-  `Fund_Released_by_GOB` float DEFAULT NULL,
-  `Total_Fund_Released` float DEFAULT NULL,
-  `Total_Expenditure` float DEFAULT NULL,
-  `Expenditure_as_Percentage_of_AWP_and_B` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `education_art_culture7s`
@@ -6243,25 +4391,6 @@ INSERT INTO `education_art_culture7s` (`id`, `Programmes`, `APPROVED_AWP_and_B`,
 (8, 'SSA', 9445.1, 2649.1, 3866.8, 6515.9, 6504.5, 68.9, '2016-17', '2018-12-03 06:21:48', '2018-12-03 06:21:48'),
 (9, 'KGBV', 220.2, 57.8, 37.8, 95.6, 78, 35.5, '2016-17', '2018-12-03 06:21:48', '2018-12-03 06:21:48'),
 (10, 'Total', 11308.4, 2914.1, 4032.3, 6946.4, 6764.9, 60.4, '2016-17', '2018-12-03 06:21:48', '2018-12-03 06:21:48');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `education_art_culture9s`
---
-
-DROP TABLE IF EXISTS `education_art_culture9s`;
-CREATE TABLE `education_art_culture9s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2013` float DEFAULT NULL,
-  `2014` float DEFAULT NULL,
-  `2015` float DEFAULT NULL,
-  `2016` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `education_art_culture9s`
@@ -6285,26 +4414,6 @@ INSERT INTO `education_art_culture9s` (`id`, `Sector`, `2013`, `2014`, `2015`, `
 (15, 'Engineering College', 10, 24, 23, 28, 'Teacher Training Centre / Engineering Colleges', '2018-12-03 08:23:08', '2018-12-03 08:23:08'),
 (16, 'Total Teacher Training Centre / Engineering Colleges', 52, 67, 83, 88, 'Teacher Training Centre / Engineering Colleges', '2018-12-03 08:23:08', '2018-12-03 08:23:08');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `expenditure_management1s`
---
-
-DROP TABLE IF EXISTS `expenditure_management1s`;
-CREATE TABLE `expenditure_management1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `expenditure_management1s`
 --
@@ -6317,26 +4426,6 @@ INSERT INTO `expenditure_management1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2
 (5, 'Discharge of Public Debt ', 4.4, 3.9, 3.8, 3.7, 3.3, 3, '2018-09-11 09:18:18', '2018-09-11 09:18:18'),
 (6, 'Loans and Advances ', 3, 1, 0.4, 0.6, 0.1, 0.3, '2018-09-11 09:18:18', '2018-09-11 09:18:18'),
 (7, 'Total', 100, 100, 100, 100, 100, 100, '2018-09-11 09:18:18', '2018-09-11 09:18:18');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `expenditure_management2s`
---
-
-DROP TABLE IF EXISTS `expenditure_management2s`;
-CREATE TABLE `expenditure_management2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `expenditure_management2s`
@@ -6361,27 +4450,6 @@ INSERT INTO `expenditure_management2s` (`id`, `Sector`, `2012-13`, `2013-14`, `2
 (16, 'Total Developmental Expenditure', 68.3, 68.1, 67.9, 69.5, 71.9, 70.6, '2018-09-11 10:47:20', '2018-09-11 10:47:20'),
 (17, 'Total Expenditure ', 100, 100, 100, 100, 100, 100, '2018-09-11 10:47:20', '2018-09-11 10:47:20');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `expenditure_management3s`
---
-
-DROP TABLE IF EXISTS `expenditure_management3s`;
-CREATE TABLE `expenditure_management3s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `2012-17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `expenditure_management3s`
 --
@@ -6394,26 +4462,6 @@ INSERT INTO `expenditure_management3s` (`id`, `Sector`, `2012-13`, `2013-14`, `2
 (5, 'Discharge of Public Debt', 5, 1.6, 15.7, 14.3, 2.2, 13.8, 8.2, '2018-09-11 11:17:16', '2018-09-11 11:17:16'),
 (6, 'Loans and Advances ', 9.4, -61.3, -54.3, 68.5, -81.7, 330.1, -51.7, '2018-09-11 11:17:16', '2018-09-11 11:17:16'),
 (7, 'Total ', 15, 16.2, 17.8, 18.6, 12.4, 26.7, 16.2, '2018-09-11 11:17:16', '2018-09-11 11:17:16');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `expenditure_managements`
---
-
-DROP TABLE IF EXISTS `expenditure_managements`;
-CREATE TABLE `expenditure_managements` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `expenditure_managements`
@@ -6428,26 +4476,6 @@ INSERT INTO `expenditure_managements` (`id`, `Sector`, `2012-13`, `2013-14`, `20
 (6, 'Discharge of Public Debt ', 3070, 3120, 3609, 4125, 4215, 4797, '2018-09-10 15:36:23', '2018-09-10 15:36:23'),
 (7, 'Loans and Advances by State', 2086, 807, 369, 621, 114, 490, '2018-09-10 15:36:23', '2018-09-10 15:36:23'),
 (8, 'Total  ', 69207, 80405, 94698, 112328, 126302, 160086, '2018-09-10 15:36:23', '2018-09-10 15:36:23');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `expenditure_on_salary_and_pensions`
---
-
-DROP TABLE IF EXISTS `expenditure_on_salary_and_pensions`;
-CREATE TABLE `expenditure_on_salary_and_pensions` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `expenditure_on_salary_and_pensions`
@@ -6470,24 +4498,6 @@ INSERT INTO `expenditure_on_salary_and_pensions` (`id`, `Sector`, `2012-13`, `20
 (14, 'Total as percentage of RR', 36.8, 34.1, 33.1, 27.9, 26.8, 28.1, '2018-09-11 13:26:16', '2018-09-11 13:26:16'),
 (15, 'Total as percentage of RE', 40.2, 37.6, 35.8, 32, 29.9, 31.4, '2018-09-11 13:26:16', '2018-09-11 13:26:16');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `expenditure_on_urban_developments`
---
-
-DROP TABLE IF EXISTS `expenditure_on_urban_developments`;
-CREATE TABLE `expenditure_on_urban_developments` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Housing` float DEFAULT NULL,
-  `Urban_Development` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `expenditure_on_urban_developments`
 --
@@ -6508,24 +4518,6 @@ INSERT INTO `expenditure_on_urban_developments` (`id`, `Year`, `Housing`, `Urban
 (13, '2015-16', 1486, 1649, 3134, 'Actual Expenditure', '2018-11-20 10:57:36', '2018-11-20 10:57:36'),
 (14, 'CAGR', 16.3, 28.9, 21.9, 'Actual Expenditure', '2018-11-20 10:57:36', '2018-11-20 10:57:36');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `financial_institutions1s`
---
-
-DROP TABLE IF EXISTS `financial_institutions1s`;
-CREATE TABLE `financial_institutions1s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Crop_Loan_Refinance` float DEFAULT NULL,
-  `Investment_Credit_Refinancing` float DEFAULT NULL,
-  `RIDF_plus_WIF_plus_FPF_Loan_sanctioned` float DEFAULT NULL,
-  `Total_Financial_Support` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `financial_institutions1s`
 --
@@ -6539,27 +4531,6 @@ INSERT INTO `financial_institutions1s` (`id`, `Year`, `Crop_Loan_Refinance`, `In
 (6, '2015-16', 2377.6, 3219.7, 1181, 6778.3, '2018-11-27 08:57:26', '2018-11-27 08:57:26'),
 (7, '2016-17', 1720.7, 2194.7, 1533.5, 5448.9, '2018-11-27 08:57:26', '2018-11-27 08:57:26');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `financial_institutions2s`
---
-
-DROP TABLE IF EXISTS `financial_institutions2s`;
-CREATE TABLE `financial_institutions2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2010-11` float DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `financial_institutions2s`
 --
@@ -6572,27 +4543,6 @@ INSERT INTO `financial_institutions2s` (`id`, `Sector`, `2010-11`, `2011-12`, `2
 (5, 'Non-Farm Sector', 22.84, 97.8, 53.56, 21.26, 298.06, 67.88, 99.51, '2018-11-27 08:00:17', '2018-11-27 08:00:17'),
 (6, 'Others', 8.72, 33.98, 170.46, 169.73, 1319.3, 2517.75, 1095.16, '2018-11-27 08:00:17', '2018-11-27 08:00:17'),
 (7, 'Total', 285.99, 376.54, 521.43, 370.64, 2157.36, 3219.66, 2194.68, '2018-11-27 08:00:17', '2018-11-27 08:00:17');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `financial_position1s`
---
-
-DROP TABLE IF EXISTS `financial_position1s`;
-CREATE TABLE `financial_position1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `financial_position1s`
@@ -6657,29 +4607,6 @@ INSERT INTO `financial_position1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-
 (56, 'Repayment of Public Debt', 1.1, 1, 1.1, 1.1, 1, 1, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21'),
 (57, 'Debt Outstanding', 27.1, 27.4, 28.9, 30.6, 31.7, 33.4, 'As percentage of GSDP', '2018-09-14 09:11:21', '2018-09-14 09:11:21');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `fiscal_performance1s`
---
-
-DROP TABLE IF EXISTS `fiscal_performance1s`;
-CREATE TABLE `fiscal_performance1s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `Revenue_Deficit_GFD_Percentage` float DEFAULT NULL,
-  `Capital_Outlay_GFD_Percentage` float DEFAULT NULL,
-  `Non_Dev_Exp_Agg_Disbursements_Percentage` float DEFAULT NULL,
-  `Non_Dev_Exp_Revenue_Receipts_Percentage` float DEFAULT NULL,
-  `Interest_Payments_Revenue_Exp_Percentage` float DEFAULT NULL,
-  `State_Own_Revenue_Revenue_Exp_Percentage` float DEFAULT NULL,
-  `Gross_Transfers_Aggregate_Disbursements_Percentage` float DEFAULT NULL,
-  `Debt_Servicing_Gross_Transfers_Percentage` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `fiscal_performance1s`
 --
@@ -6737,27 +4664,6 @@ INSERT INTO `fiscal_performance1s` (`id`, `State`, `Revenue_Deficit_GFD_Percenta
 (50, 'Himachal Pradesh', 44.3, 49.7, 29.6, 40.6, 11.3, 30.9, 48, 36.2, '2017_BE', '2018-09-17 05:41:52', '2018-09-17 05:41:52'),
 (51, 'Chhatisgarh', -49.6, 149.8, 20.6, 24.3, 5.3, 50.8, 45.6, 14.5, '2017_BE', '2018-09-17 05:41:52', '2018-09-17 05:41:52');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `fiscal_performance2s`
---
-
-DROP TABLE IF EXISTS `fiscal_performance2s`;
-CREATE TABLE `fiscal_performance2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `Sub_Sector` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `fiscal_performance2s`
 --
@@ -6783,28 +4689,6 @@ INSERT INTO `fiscal_performance2s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-
 (18, 'Primary Deficit / Fiscal Deficit (Percentage)', 32.3, 34.6, 45.2, 41.2, 50.3, 47, 'C. Vulnerability', '2018-09-09 14:07:27', '2018-09-09 14:07:27'),
 (19, 'Revenue Deficit / Fiscal Deficit (Percentage)', -77.9, -77.1, -52.3, -103.7, -65.7, -80.4, 'C. Vulnerability', '2018-09-09 14:07:27', '2018-09-09 14:07:27');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `generation1s`
---
-
-DROP TABLE IF EXISTS `generation1s`;
-CREATE TABLE `generation1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Thermal_Coal` float DEFAULT NULL,
-  `Thermal_Gas` float DEFAULT NULL,
-  `Thermal_Diesel` float DEFAULT NULL,
-  `Thermal_Total` float DEFAULT NULL,
-  `Nuclear` float DEFAULT NULL,
-  `Hydro_Renewable` float DEFAULT NULL,
-  `RES_MNRE` float DEFAULT NULL,
-  `Grand_Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `generation1s`
 --
@@ -6814,26 +4698,6 @@ INSERT INTO `generation1s` (`id`, `Sector`, `Thermal_Coal`, `Thermal_Gas`, `Ther
 (2, 'Private/ IPPs', 460, 0, 0, 460, 0, 0, 138, 598, '2018-11-09 12:15:02', '2018-11-09 12:15:02'),
 (3, 'Central', 2627, 0, 0, 2627, 0, 315, 10, 2952, '2018-11-09 12:15:02', '2018-11-09 12:15:02'),
 (4, 'Total ', 3307, 0, 0, 3307, 0, 370, 148, 3825, '2018-11-09 12:15:02', '2018-11-09 12:15:02');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `generation2s`
---
-
-DROP TABLE IF EXISTS `generation2s`;
-CREATE TABLE `generation2s` (
-  `id` bigint(20) NOT NULL,
-  `Thermal_Plan` varchar(255) DEFAULT NULL,
-  `2015-16` varchar(255) DEFAULT NULL,
-  `2016-17` varchar(255) DEFAULT NULL,
-  `Under_Progress_2017_18` varchar(255) DEFAULT NULL,
-  `2018-19` varchar(255) DEFAULT NULL,
-  `By_2022_Upcoming_Projects` varchar(255) DEFAULT NULL,
-  `Beyond_2022` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `generation2s`
@@ -6847,28 +4711,6 @@ INSERT INTO `generation2s` (`id`, `Thermal_Plan`, `2015-16`, `2016-17`, `Under_P
 (6, 'BANKA UMPP(4000 MW)', NULL, NULL, NULL, NULL, NULL, '4000 MW', '2018-11-09 12:00:12', '2018-11-09 12:00:12'),
 (7, 'Total Installed Capacity', '220 MW', '525 MW', '1330 MW', '2650 MW', '4630 MW', '8,630 MW', '2018-11-09 12:00:12', '2018-11-09 12:00:12');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `health1s`
---
-
-DROP TABLE IF EXISTS `health1s`;
-CREATE TABLE `health1s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Total_Expense_on_Social_Services_India` float DEFAULT NULL,
-  `Total_Expense_on_Social_Services_Bihar` float DEFAULT NULL,
-  `Total_Expense_India` float DEFAULT NULL,
-  `Total_Expense_Bihar` float DEFAULT NULL,
-  `Percentage_share_of_Social_Services_in_Total_Expenditure_India` float DEFAULT NULL,
-  `Percentage_share_of_Social_Services_in_Total_Expenditure_Bihar` float DEFAULT NULL,
-  `Per_Capita_Expenditure_on_Social_Services_India` float DEFAULT NULL,
-  `Per_Capita_Expenditure_on_Social_Services_Bihar` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `health1s`
 --
@@ -6881,24 +4723,6 @@ INSERT INTO `health1s` (`id`, `Year`, `Total_Expense_on_Social_Services_India`, 
 (5, 2015, 900746, 38684, 2371350, 112328, 38, 34.4, 6959, 3370, '2018-08-06 10:39:46', '2018-08-06 10:39:46'),
 (6, 2016, 1007780, 44329, 2680280, 126302, 37.6, 35.1, 7656, 3767, '2018-08-06 10:39:46', '2018-08-06 10:39:46');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `health2s`
---
-
-DROP TABLE IF EXISTS `health2s`;
-CREATE TABLE `health2s` (
-  `id` bigint(20) NOT NULL,
-  `Region` varchar(255) DEFAULT NULL,
-  `Male` float DEFAULT NULL,
-  `Female` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `health2s`
 --
@@ -6908,29 +4732,6 @@ INSERT INTO `health2s` (`id`, `Region`, `Male`, `Female`, `Total`, `Year`, `crea
 (2, 'India', 63.1, 65.6, 64.3, '2001-05', '2018-08-09 06:12:33', '2018-08-09 06:12:33'),
 (3, 'Bihar', 68.5, 68.3, 68.4, '2011-15', '2018-08-09 06:12:33', '2018-08-09 06:12:33'),
 (4, 'India', 66.9, 70, 68.3, '2011-15', '2018-08-09 06:12:33', '2018-08-09 06:12:33');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `health3s`
---
-
-DROP TABLE IF EXISTS `health3s`;
-CREATE TABLE `health3s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Area` varchar(255) DEFAULT NULL,
-  `Crude_Birth_Rate` float DEFAULT NULL,
-  `Infant_Mortality_Rate` float DEFAULT NULL,
-  `Child_Mortality_Rate` float DEFAULT NULL,
-  `Under_Five_Mortality_Rate` float DEFAULT NULL,
-  `Neo_Natal_Mortality_Rate` float DEFAULT NULL,
-  `Total_Fertility_Rate` float DEFAULT NULL,
-  `Total_Marital_Fertility_Rate` float DEFAULT NULL,
-  `Region` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `health3s`
@@ -6962,22 +4763,6 @@ INSERT INTO `health3s` (`id`, `Year`, `Area`, `Crude_Birth_Rate`, `Infant_Mortal
 (23, 2012, 'Rural', 28.4, 44, 12, 58, 29, 3.6, 5.5, 'Bihar', '2018-08-09 08:56:39', '2018-08-09 08:56:39'),
 (24, 2012, 'Urban', 21.6, 34, 8, 39, 12, 2.5, 4.6, 'Bihar', '2018-08-09 08:56:39', '2018-08-09 08:56:39');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `health4s`
---
-
-DROP TABLE IF EXISTS `health4s`;
-CREATE TABLE `health4s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Number_of_patients_visiting_government_hospitals_per_month` float DEFAULT NULL,
-  `Percentage_growth` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `health4s`
 --
@@ -6989,28 +4774,6 @@ INSERT INTO `health4s` (`id`, `Year`, `Number_of_patients_visiting_government_ho
 (4, 2015, 9778, -0.00942154, '2018-08-09 05:45:40', '2018-08-09 05:45:40'),
 (5, 2016, 10294, 0.0527715, '2018-08-09 05:45:40', '2018-08-09 05:45:40'),
 (6, 2017, 10496, 0.0196231, '2018-08-09 05:45:40', '2018-08-09 05:45:40');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `health5s`
---
-
-DROP TABLE IF EXISTS `health5s`;
-CREATE TABLE `health5s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `District_Hospital` float DEFAULT NULL,
-  `Referral_Hospital` float DEFAULT NULL,
-  `Sub_Divisional_Hospital` float DEFAULT NULL,
-  `PHC` float DEFAULT NULL,
-  `Sub_Centre` float DEFAULT NULL,
-  `APHC` float DEFAULT NULL,
-  `Total_Health_Centre` float DEFAULT NULL,
-  `Health_centres_per_lakh_of_population` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `health5s`
@@ -7024,23 +4787,6 @@ INSERT INTO `health5s` (`id`, `Year`, `District_Hospital`, `Referral_Hospital`, 
 (5, 2015, 36, 70, 55, 533, 9729, 1350, 11612, 11, '2018-08-07 07:04:51', '2018-08-07 07:04:51'),
 (6, 2016, 36, 70, 55, 533, 9729, 1350, 11612, 11, '2018-08-07 07:04:51', '2018-08-07 07:04:51'),
 (7, 2017, 36, 70, 55, 533, 9949, 1366, 11848, 11, '2018-08-07 07:04:51', '2018-08-07 07:04:51');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `health6s`
---
-
-DROP TABLE IF EXISTS `health6s`;
-CREATE TABLE `health6s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Average_number_of_Outpatient_visits_per_day` float DEFAULT NULL,
-  `Inpatient_Bed_Occupancy_Rate` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `health6s`
@@ -7165,25 +4911,6 @@ INSERT INTO `health6s` (`id`, `Districts`, `Average_number_of_Outpatient_visits_
 (116, 'Katihar', 354, 70, 2017, '2018-08-07 11:16:19', '2018-08-07 11:16:19'),
 (117, 'Bihar', 335, 57, 2017, '2018-08-07 11:16:19', '2018-08-07 11:16:19');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `health7s`
---
-
-DROP TABLE IF EXISTS `health7s`;
-CREATE TABLE `health7s` (
-  `id` bigint(20) NOT NULL,
-  `Name_of_the_Post` varchar(255) DEFAULT NULL,
-  `Regular_Total_Sanctioned_Posts` float DEFAULT NULL,
-  `Regular_Working` float DEFAULT NULL,
-  `Contractual_Sanctioned_Posts` float DEFAULT NULL,
-  `Contractual_Working` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `health7s`
 --
@@ -7202,21 +4929,6 @@ INSERT INTO `health7s` (`id`, `Name_of_the_Post`, `Regular_Total_Sanctioned_Post
 (11, 'ANM', 21859, 12134, 12659, 5758, 2017, '2018-08-07 11:20:57', '2018-08-07 11:20:57'),
 (12, 'ASHA', 0, 0, 93687, 86893, 2017, '2018-08-07 11:20:57', '2018-08-07 11:20:57');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `health8s`
---
-
-DROP TABLE IF EXISTS `health8s`;
-CREATE TABLE `health8s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Institutional_Delivery` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `health8s`
 --
@@ -7227,24 +4939,6 @@ INSERT INTO `health8s` (`id`, `Year`, `Institutional_Delivery`, `created_at`, `u
 (3, 2014, 14.94, '2018-08-07 11:50:20', '2018-08-07 11:50:20'),
 (4, 2015, 15.33, '2018-08-07 11:50:20', '2018-08-07 11:50:20'),
 (5, 2016, 15.45, '2018-08-07 11:50:20', '2018-08-07 11:50:20');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `health9s`
---
-
-DROP TABLE IF EXISTS `health9s`;
-CREATE TABLE `health9s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Percentage_of_children_fully_immunized_NFHS_3_2005_06` float DEFAULT NULL,
-  `Percentage_of_children_fully_immunized_NFHS_4_2015_16` float DEFAULT NULL,
-  `Percentage_Point_Increase` float DEFAULT NULL,
-  `Rank_by_percentage_increase` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `health9s`
@@ -7264,23 +4958,6 @@ INSERT INTO `health9s` (`id`, `Districts`, `Percentage_of_children_fully_immuniz
 (11, 'Uttarakhand', 60, 57.7, -2.3, 10, '2018-08-07 12:03:24', '2018-08-07 12:03:24'),
 (12, 'West Bengal', 64.3, 84.4, 20.1, 5, '2018-08-07 12:03:24', '2018-08-07 12:03:24'),
 (13, 'India', 43.5, 62, 18.5, NULL, '2018-08-07 12:03:24', '2018-08-07 12:03:24');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `health10s`
---
-
-DROP TABLE IF EXISTS `health10s`;
-CREATE TABLE `health10s` (
-  `id` bigint(20) NOT NULL,
-  `Antigenname` varchar(255) DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Achievement` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `health10s`
@@ -7327,22 +5004,6 @@ INSERT INTO `health10s` (`id`, `Antigenname`, `Target`, `Achievement`, `Year`, `
 (38, 'PENTA-3', 1579, 1241, 2017, '2018-08-08 05:24:17', '2018-08-08 05:24:17'),
 (39, 'Measles', 1579, 1338, 2017, '2018-08-08 05:24:17', '2018-08-08 05:24:17');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `health11s`
---
-
-DROP TABLE IF EXISTS `health11s`;
-CREATE TABLE `health11s` (
-  `id` bigint(20) NOT NULL,
-  `Diseases` varchar(255) DEFAULT NULL,
-  `Number_of_Patients` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `health11s`
 --
@@ -7384,22 +5045,6 @@ INSERT INTO `health11s` (`id`, `Diseases`, `Number_of_Patients`, `Year`, `create
 (34, 'Any other State Specific disease', 0.2, 2016, '2018-08-08 06:14:47', '2018-08-08 06:14:47'),
 (35, 'Unusual Syndromes not captured above', 0.2, 2016, '2018-08-08 06:14:47', '2018-08-08 06:14:47'),
 (36, 'Total', 20.4, 2016, '2018-08-08 06:14:47', '2018-08-08 06:14:47');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `health12s`
---
-
-DROP TABLE IF EXISTS `health12s`;
-CREATE TABLE `health12s` (
-  `id` bigint(20) NOT NULL,
-  `NRHM` varchar(255) DEFAULT NULL,
-  `Fund_Disbursed` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `health12s`
@@ -7455,24 +5100,6 @@ INSERT INTO `health12s` (`id`, `NRHM`, `Fund_Disbursed`, `Year`, `created_at`, `
 (47, 'NRHM-G', 834.4, 2016, '2018-08-08 06:36:46', '2018-08-08 06:36:46'),
 (48, 'Total', 133363, 2016, '2018-08-08 06:36:46', '2018-08-08 06:36:46');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `health13s`
---
-
-DROP TABLE IF EXISTS `health13s`;
-CREATE TABLE `health13s` (
-  `id` bigint(20) NOT NULL,
-  `Posts` varchar(255) DEFAULT NULL,
-  `No_of_Sanctioned_Posts` float DEFAULT NULL,
-  `Working` float DEFAULT NULL,
-  `Percentage_of_Vacant_Post` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `health13s`
 --
@@ -7499,25 +5126,6 @@ INSERT INTO `health13s` (`id`, `Posts`, `No_of_Sanctioned_Posts`, `Working`, `Pe
 (19, 'Anganwadi Worker', 91677, 86800, 5.3, 2016, '2018-08-08 07:05:24', '2018-08-08 07:05:24'),
 (20, 'Anganwadi Helper', 86337, 80373, 6.9, 2016, '2018-08-08 07:05:24', '2018-08-08 07:05:24');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `health14s`
---
-
-DROP TABLE IF EXISTS `health14s`;
-CREATE TABLE `health14s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Budget_for_ICDS_Bihar` float DEFAULT NULL,
-  `Funds_Released_by_GOI` float DEFAULT NULL,
-  `Expenditure` float DEFAULT NULL,
-  `Fund_Released_as_Percentage_of_Budget` float DEFAULT NULL,
-  `Expenditure_as_Percentage_of_Fund_Released` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `health14s`
 --
@@ -7528,28 +5136,6 @@ INSERT INTO `health14s` (`id`, `Year`, `Budget_for_ICDS_Bihar`, `Funds_Released_
 (3, 2014, 2238.3, 1281.5, 1236.4, 57.3, 96.5, '2018-08-08 07:30:19', '2018-08-08 07:30:19'),
 (4, 2015, 1409.7, 1062.2, 983.4, 75.3, 92.6, '2018-08-08 07:30:19', '2018-08-08 07:30:19'),
 (5, 2016, 1494.1, 987.3, 893.5, 66.1, 90.5, '2018-08-08 07:30:19', '2018-08-08 07:30:19');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `health15s`
---
-
-DROP TABLE IF EXISTS `health15s`;
-CREATE TABLE `health15s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `District_Hospital` float DEFAULT NULL,
-  `Referral_Hospital` float DEFAULT NULL,
-  `SDH` float DEFAULT NULL,
-  `PHC` float DEFAULT NULL,
-  `Health_SubCentre` float DEFAULT NULL,
-  `APHC` float DEFAULT NULL,
-  `DH_RH_SDH_PHC_HSC_APHC` float DEFAULT NULL,
-  `Population_Health_Institution` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `health15s`
@@ -7595,26 +5181,6 @@ INSERT INTO `health15s` (`id`, `Districts`, `District_Hospital`, `Referral_Hospi
 (37, 'Araria', 1, 2, 1, 9, 242, 29, 284, 9900, '2018-08-08 08:48:32', '2018-08-08 08:48:32'),
 (38, 'Katihar', 1, 2, 2, 16, 327, 41, 388, 7915, '2018-08-08 08:48:32', '2018-08-08 08:48:32'),
 (39, 'Bihar', 36, 70, 55, 533, 9949, 1366, 11997, 8677, '2018-08-08 08:48:32', '2018-08-08 08:48:32');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `health16s`
---
-
-DROP TABLE IF EXISTS `health16s`;
-CREATE TABLE `health16s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Regular_Post_sanctioned` float DEFAULT NULL,
-  `Contractual_Post_sanctioned` float DEFAULT NULL,
-  `Regular_Doctor_Employed` float DEFAULT NULL,
-  `Contractual_Doctor_Employed` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Number_of_doctors_per_lakh_population` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `health16s`
@@ -7699,26 +5265,6 @@ INSERT INTO `health16s` (`id`, `Districts`, `Regular_Post_sanctioned`, `Contract
 (76, 'Araria', 179, 36, 56, 4, 2017, 2, '2018-08-08 10:39:51', '2018-08-08 10:39:51'),
 (77, 'Katihar', 192, 78, 93, 16, 2017, 3, '2018-08-08 10:39:51', '2018-08-08 10:39:51'),
 (78, 'Bihar', 7249, 2479, 3146, 709, 2017, 3, '2018-08-08 10:39:51', '2018-08-08 10:39:51');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `health17s`
---
-
-DROP TABLE IF EXISTS `health17s`;
-CREATE TABLE `health17s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Regular_Post_sanctioned` float DEFAULT NULL,
-  `Contractual_Post_sanctioned` float DEFAULT NULL,
-  `Regular_Grade_A_Nurses_Employed` float DEFAULT NULL,
-  `Contractual_Grade_A_Nurses_Employed` float DEFAULT NULL,
-  `Number_of_Grade_A_Nurses_per_lakh_population` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `health17s`
@@ -7843,26 +5389,6 @@ INSERT INTO `health17s` (`id`, `Districts`, `Regular_Post_sanctioned`, `Contract
 (116, 'Katihar', 250, 104, 49, 6, 2, 2017, '2018-08-08 11:26:10', '2018-08-08 11:26:10'),
 (117, 'Bihar', 4704, 2550, 2096, 166, 2, 2017, '2018-08-08 11:26:10', '2018-08-08 11:26:10');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `health18s`
---
-
-DROP TABLE IF EXISTS `health18s`;
-CREATE TABLE `health18s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Regular_Post_sanctioned` float DEFAULT NULL,
-  `Contractual_Post_sanctioned` float DEFAULT NULL,
-  `Regular_ANM_Employed` float DEFAULT NULL,
-  `Contractual_ANM_Employed` float DEFAULT NULL,
-  `Number_of_ANM_per_lakh_population` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `health18s`
 --
@@ -7985,23 +5511,6 @@ INSERT INTO `health18s` (`id`, `Districts`, `Regular_Post_sanctioned`, `Contract
 (115, 'Araria', 561, 290, 150, 157, 5, 2017, '2018-08-08 12:32:27', '2018-08-08 12:32:27'),
 (116, 'Katihar', 614, 345, 311, 210, 10, 2017, '2018-08-08 12:32:27', '2018-08-08 12:32:27'),
 (117, 'Bihar', 21859, 12659, 12134, 5758, 12, 2017, '2018-08-08 12:32:27', '2018-08-08 12:32:27');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `health19s`
---
-
-DROP TABLE IF EXISTS `health19s`;
-CREATE TABLE `health19s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Selection` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `health19s`
@@ -8164,22 +5673,6 @@ INSERT INTO `health19s` (`id`, `Districts`, `Target`, `Selection`, `Year`, `crea
 (154, 'Araria', 2637, 2284, 2016, '2018-08-08 12:42:21', '2018-08-08 12:42:21'),
 (155, 'Katihar', 2795, 2770, 2016, '2018-08-08 12:42:21', '2018-08-08 12:42:21'),
 (156, 'Bihar', 93687, 85708, 2016, '2018-08-08 12:42:21', '2018-08-08 12:42:21');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `health20s`
---
-
-DROP TABLE IF EXISTS `health20s`;
-CREATE TABLE `health20s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Institutional_Deliveries` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `health20s`
@@ -8382,31 +5875,6 @@ INSERT INTO `health20s` (`id`, `Districts`, `Institutional_Deliveries`, `Year`, 
 (194, 'Katihar', 32, 2017, '2018-08-08 12:52:05', '2018-08-08 12:52:05'),
 (195, 'Bihar', 801, 2017, '2018-08-08 12:52:05', '2018-08-08 12:52:05');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `health21s`
---
-
-DROP TABLE IF EXISTS `health21s`;
-CREATE TABLE `health21s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Acute_Diarrheal_Disease` float DEFAULT NULL,
-  `Bacillary_Dysentery` float DEFAULT NULL,
-  `Viral_Hepatitis` float DEFAULT NULL,
-  `Enteric_Fever` float DEFAULT NULL,
-  `Malaria` float DEFAULT NULL,
-  `PUO` float DEFAULT NULL,
-  `Acute_Respiratory_Infection` float DEFAULT NULL,
-  `Pneumonia` float DEFAULT NULL,
-  `Dogbite` float DEFAULT NULL,
-  `Other_State_Specific_Disease` float DEFAULT NULL,
-  `Unusual_Syndromes_Not_Captured` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `health21s`
 --
@@ -8451,22 +5919,6 @@ INSERT INTO `health21s` (`id`, `Districts`, `Acute_Diarrheal_Disease`, `Bacillar
 (37, 'Araria', 10995, 11935, 0, 1010, 1538, 2610, 3714, 162, 1124, 863, 303, '2018-08-08 13:02:54', '2018-08-08 13:02:54'),
 (38, 'Katihar', 11719, 6396, 0, 2333, 1344, 7283, 16676, 140, 1771, 122, 1747, '2018-08-08 13:02:54', '2018-08-08 13:02:54'),
 (39, 'Bihar', 270383, 143345, 17760, 134925, 17730, 507112, 691297, 19499, 193836, 17993, 23386, '2018-08-08 13:02:54', '2018-08-08 13:02:54');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `health22s`
---
-
-DROP TABLE IF EXISTS `health22s`;
-CREATE TABLE `health22s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `NRHM_Total` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `health22s`
@@ -8630,38 +6082,6 @@ INSERT INTO `health22s` (`id`, `Districts`, `NRHM_Total`, `Year`, `created_at`, 
 (155, 'Katihar', 4530.91, 2016, '2018-08-08 13:18:30', '2018-08-08 13:18:30'),
 (156, 'Bihar', 127296, 2016, '2018-08-08 13:18:30', '2018-08-08 13:18:30');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `hhs`
---
-
-DROP TABLE IF EXISTS `hhs`;
-CREATE TABLE `hhs` (
-  `id` bigint(20) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `ict2s`
---
-
-DROP TABLE IF EXISTS `ict2s`;
-CREATE TABLE `ict2s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `Rural` float DEFAULT NULL,
-  `Urban` float DEFAULT NULL,
-  `All` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `ict2s`
 --
@@ -8758,22 +6178,6 @@ INSERT INTO `ict2s` (`id`, `State`, `Rural`, `Urban`, `All`, `Year`, `created_at
 (89, 'West Bengal', 61.9, 168.8, 92.7, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32'),
 (90, 'All-India', 56.9, 171.8, 93, '2017', '2018-11-06 07:56:32', '2018-11-06 07:56:32');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `ict3s`
---
-
-DROP TABLE IF EXISTS `ict3s`;
-CREATE TABLE `ict3s` (
-  `id` bigint(20) NOT NULL,
-  `Item` varchar(255) DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Coverage_in_percentage` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `ict3s`
 --
@@ -8788,27 +6192,6 @@ INSERT INTO `ict3s` (`id`, `Item`, `Total`, `Coverage_in_percentage`, `created_a
 (7, 'National Highway (km)', 3734, 100, '2018-10-30 08:27:58', '2018-10-30 08:27:58'),
 (8, 'State Highway (km)', 4857, 100, '2018-10-30 08:27:58', '2018-10-30 08:27:58'),
 (9, 'Total Railway Route (km)', 3515, 100, '2018-10-30 08:27:58', '2018-10-30 08:27:58');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `ict4s`
---
-
-DROP TABLE IF EXISTS `ict4s`;
-CREATE TABLE `ict4s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `Rural` float DEFAULT NULL,
-  `Urban` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Rural_Percentage` float DEFAULT NULL,
-  `Urban_Percentage` float DEFAULT NULL,
-  `Share_in_all_India` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ict4s`
@@ -8850,28 +6233,6 @@ INSERT INTO `ict4s` (`id`, `State`, `Rural`, `Urban`, `Total`, `Rural_Percentage
 (33, 'West Bengal', 4416, 22615, 27031, 16.3, 83.7, 5.4, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03'),
 (34, 'All States', 79890, 418411, 498301, 16, 84, 100, 'Letter Box', '2018-11-05 09:30:03', '2018-11-05 09:30:03');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `ict5s`
---
-
-DROP TABLE IF EXISTS `ict5s`;
-CREATE TABLE `ict5s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `Rural` float DEFAULT NULL,
-  `Deposits` float DEFAULT NULL,
-  `Investment` float DEFAULT NULL,
-  `MIS` float DEFAULT NULL,
-  `Sukanya_Samridhi_Account` float DEFAULT NULL,
-  `MG_NREGA` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `ict5s`
 --
@@ -8911,24 +6272,6 @@ INSERT INTO `ict5s` (`id`, `State`, `Rural`, `Deposits`, `Investment`, `MIS`, `S
 (32, 'Uttar Pradesh', NULL, 28380, 4525, 16986, 621, NULL, 50512, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
 (33, 'West Bengal', NULL, 27998, 3320, 47665, 277, NULL, 79259, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35'),
 (34, 'Total', NULL, 224805, 61225, 193806, 6426, NULL, 486262, 'Outstanding Balance', '2018-11-05 11:37:35', '2018-11-05 11:37:35');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `inflation_rates`
---
-
-DROP TABLE IF EXISTS `inflation_rates`;
-CREATE TABLE `inflation_rates` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Oct_16_Index_Final` float DEFAULT NULL,
-  `Oct_17_Index_Provisional` float DEFAULT NULL,
-  `Inflation_Rate_in_percentage` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `inflation_rates`
@@ -8987,31 +6330,6 @@ INSERT INTO `inflation_rates` (`id`, `State`, `Sector`, `Oct_16_Index_Final`, `O
 (50, 'West Bengal', 'Combined', 132.2, 135.9, 2.8, '2018-09-07 12:14:45', '2018-09-07 12:14:45'),
 (51, 'All India', 'Combined', 131.4, 136.1, 3.6, '2018-09-07 12:14:45', '2018-09-07 12:14:45');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `institutional_structure_of_power_sectors`
---
-
-DROP TABLE IF EXISTS `institutional_structure_of_power_sectors`;
-CREATE TABLE `institutional_structure_of_power_sectors` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `BRGF` float DEFAULT NULL,
-  `State_Plan_BSPHCL` float DEFAULT NULL,
-  `State_Plan_Generation` float DEFAULT NULL,
-  `State_Plan_Transmission` float DEFAULT NULL,
-  `State_Plan_Distribution` float DEFAULT NULL,
-  `State_Plan_BREDA` float DEFAULT NULL,
-  `State_Plan_BSHPC` float DEFAULT NULL,
-  `BSHPC_RIDF` float DEFAULT NULL,
-  `EAP` float DEFAULT NULL,
-  `Mukhya_Mantri_Vidyut_Sambandh_Nishchay_Yojna` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `institutional_structure_of_power_sectors`
 --
@@ -9023,23 +6341,6 @@ INSERT INTO `institutional_structure_of_power_sectors` (`id`, `Year`, `BRGF`, `S
 (4, '2016-17', 1329.4, 127.51, 1155, 700, 3126.65, 150, 10, 67.8, 260.91, 587.38, 7514.64, '2018-11-09 05:35:07', '2018-11-09 05:35:07'),
 (5, '2017-18', 2600, 1576.1, 592.5, 510, 1680, 249.9, 10, 67.8, 235.29, 750, 8271.59, '2018-11-09 05:35:07', '2018-11-09 05:35:07');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `irrigation1s`
---
-
-DROP TABLE IF EXISTS `irrigation1s`;
-CREATE TABLE `irrigation1s` (
-  `id` bigint(20) NOT NULL,
-  `TypeofIrrigationPotential` varchar(255) DEFAULT NULL,
-  `Ultimate_Potential` float DEFAULT NULL,
-  `Created_Potential` float DEFAULT NULL,
-  `Utilised_Potential` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `irrigation1s`
 --
@@ -9050,21 +6351,6 @@ INSERT INTO `irrigation1s` (`id`, `TypeofIrrigationPotential`, `Ultimate_Potenti
 (3, 'SurfaceIrrigation', 15.44, 8.14, 7.32, '2018-08-03 05:36:08', '2018-08-03 05:36:08'),
 (4, 'GroundWater', 48.57, 32.65, 29.38, '2018-08-03 05:36:08', '2018-08-03 05:36:08'),
 (5, 'Total', 117.54, 70.48, 63.42, '2018-08-03 05:36:08', '2018-08-03 05:36:08');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `irrigation2s`
---
-
-DROP TABLE IF EXISTS `irrigation2s`;
-CREATE TABLE `irrigation2s` (
-  `id` bigint(20) NOT NULL,
-  `Name_of_Scheme` varchar(255) DEFAULT NULL,
-  `Created_Irrigation_Potential` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `irrigation2s`
@@ -9081,29 +6367,6 @@ INSERT INTO `irrigation2s` (`id`, `Name_of_Scheme`, `Created_Irrigation_Potentia
 (8, 'Eastern Gandak Canal Phase II', 4920, '2018-08-03 07:41:29', '2018-08-03 07:41:29'),
 (9, 'Total', 22740, '2018-08-03 07:41:29', '2018-08-03 07:41:29');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `irrigation3s`
---
-
-DROP TABLE IF EXISTS `irrigation3s`;
-CREATE TABLE `irrigation3s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Created_Irrigation_Potential` float DEFAULT NULL,
-  `Kharif_Target` float DEFAULT NULL,
-  `Kharif_Irrigation` float DEFAULT NULL,
-  `Rabi_Target` float DEFAULT NULL,
-  `Rabi_Irrigation` float DEFAULT NULL,
-  `Hot_Weather_Target` float DEFAULT NULL,
-  `Hot_Weather_Irrigation` float DEFAULT NULL,
-  `Total_Utilised_Irrigation_Potential` float DEFAULT NULL,
-  `Utilisation_Efficiency` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `irrigation3s`
 --
@@ -9115,48 +6378,12 @@ INSERT INTO `irrigation3s` (`id`, `Year`, `Created_Irrigation_Potential`, `Khari
 (4, 2015, 2946, 1918, 1718, 485, 382, 28, 26, 2125, 72.1, '2018-07-18 04:33:13', '2018-07-18 04:33:13'),
 (5, 2016, 2969, 1982, 1931, 802, 714, 29, 28, 2672, 90, '2018-07-18 04:33:13', '2018-07-18 04:33:13');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `irrigation4s`
---
-
-DROP TABLE IF EXISTS `irrigation4s`;
-CREATE TABLE `irrigation4s` (
-  `id` bigint(20) NOT NULL,
-  `Status` varchar(255) DEFAULT NULL,
-  `Management_of_irrigation_System_Transferred` float DEFAULT NULL,
-  `Societies_ready_for_transfer_of_system` float DEFAULT NULL,
-  `Applied_for_Registration` float DEFAULT NULL,
-  `Under_the_process_of_motivation` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `irrigation4s`
 --
 
 INSERT INTO `irrigation4s` (`id`, `Status`, `Management_of_irrigation_System_Transferred`, `Societies_ready_for_transfer_of_system`, `Applied_for_Registration`, `Under_the_process_of_motivation`, `Total`, `created_at`, `updated_at`) VALUES
 (1, 'Number', 54, 27, 30, 511, 622, '2018-08-03 07:59:58', '2018-08-03 07:59:58');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `irrigation5s`
---
-
-DROP TABLE IF EXISTS `irrigation5s`;
-CREATE TABLE `irrigation5s` (
-  `id` bigint(20) NOT NULL,
-  `Irrigation_Sources` varchar(255) DEFAULT NULL,
-  `Ultimate_Potential` float DEFAULT NULL,
-  `Created_Potential` float DEFAULT NULL,
-  `Utilized_Potential` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `irrigation5s`
@@ -9172,25 +6399,6 @@ INSERT INTO `irrigation5s` (`id`, `Irrigation_Sources`, `Ultimate_Potential`, `C
 (7, ' Private Tubewells', 0, 24.28, 21.84, '2018-08-03 07:28:57', '2018-08-03 07:28:57'),
 (8, 'Total', 64.01, 40.79, 36.7, '2018-08-03 07:28:57', '2018-08-03 07:28:57');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `irrigation6s`
---
-
-DROP TABLE IF EXISTS `irrigation6s`;
-CREATE TABLE `irrigation6s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Surface_Canal` float DEFAULT NULL,
-  `Tanks_including_Ahars_Pynes` float DEFAULT NULL,
-  `Tubewells_Private_and_State` float DEFAULT NULL,
-  `Other_Sources_Lift_Irrigation_and_Barge_Lift_Irrigation` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `irrigation6s`
 --
@@ -9202,23 +6410,6 @@ INSERT INTO `irrigation6s` (`id`, `Year`, `Surface_Canal`, `Tanks_including_Ahar
 (4, 2015, 0, 28631, 38440, 5055, 72126, '2018-07-18 05:58:17', '2018-07-18 05:58:17'),
 (5, 2016, 2600, 20500, 86200, 18000, 127300, '2018-07-18 05:58:17', '2018-07-18 05:58:17');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `irrigation7s`
---
-
-DROP TABLE IF EXISTS `irrigation7s`;
-CREATE TABLE `irrigation7s` (
-  `id` bigint(20) NOT NULL,
-  `Scheme` varchar(255) DEFAULT NULL,
-  `Financial_Requirement_in_Rs_crores` float DEFAULT NULL,
-  `Creation_of_Additional_Irrigation_Potential_in_lakh_ha` float DEFAULT NULL,
-  `Restoration_of_Lost_irrigation_Potential_in_lakh_ha` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `irrigation7s`
 --
@@ -9227,26 +6418,6 @@ INSERT INTO `irrigation7s` (`id`, `Scheme`, `Financial_Requirement_in_Rs_crores`
 (1, 'Kosi Mechi Link Canal Scheme for transfer of Kosi river water to Mahananda Basin', 4900, 2.1, NULL, '2018-10-22 08:24:33', '2018-10-22 08:24:33'),
 (3, 'Baksoti Barrage Canal Scheme on Sakri river and linking of Sakri river with Nata River', 1300, 0.2, 0.48, '2018-10-22 08:24:33', '2018-10-22 08:24:33'),
 (5, 'Total', 6200, 2.3, 0.48, '2018-10-22 08:24:33', '2018-10-22 08:24:33');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `labour_resource_and_welfare1s`
---
-
-DROP TABLE IF EXISTS `labour_resource_and_welfare1s`;
-CREATE TABLE `labour_resource_and_welfare1s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `Total_Number_of_Workers` float DEFAULT NULL,
-  `Cultivators` float DEFAULT NULL,
-  `Agricultural_Labourers` float DEFAULT NULL,
-  `Household_Industry_Workers` float DEFAULT NULL,
-  `Other_Workers` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `labour_resource_and_welfare1s`
@@ -9272,23 +6443,6 @@ INSERT INTO `labour_resource_and_welfare1s` (`id`, `State`, `Total_Number_of_Wor
 (17, 'West Bengal', 256.9, 16.4, 22.9, 5.9, 54.9, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34'),
 (18, 'India', 3624.5, 26.4, 23.8, 3.4, 46.4, 100, '2018-12-06 06:20:34', '2018-12-06 06:20:34');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `labour_resource_and_welfare2s`
---
-
-DROP TABLE IF EXISTS `labour_resource_and_welfare2s`;
-CREATE TABLE `labour_resource_and_welfare2s` (
-  `id` bigint(20) NOT NULL,
-  `Programme` varchar(255) DEFAULT NULL,
-  `Budget_outlay` float DEFAULT NULL,
-  `Financial_Achievement` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `labour_resource_and_welfare2s`
 --
@@ -9311,35 +6465,6 @@ INSERT INTO `labour_resource_and_welfare2s` (`id`, `Programme`, `Budget_outlay`,
 (15, 'Construction of combined labour buildings', 1000, 84.2, '2016-17', '2018-12-06 06:50:13', '2018-12-06 06:50:13'),
 (16, 'Total', 1840, 360.5, '2016-17', '2018-12-06 06:50:13', '2018-12-06 06:50:13');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `land1s`
---
-
-DROP TABLE IF EXISTS `land1s`;
-CREATE TABLE `land1s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Geographical_Area` float DEFAULT NULL,
-  `Forests` float DEFAULT NULL,
-  `Barren_Unculturable_Land` float DEFAULT NULL,
-  `Land_put_to_Non_agricultural_use` float DEFAULT NULL,
-  `Land_Area` float DEFAULT NULL,
-  `Water_Area` float DEFAULT NULL,
-  `Culturable_Waste` float DEFAULT NULL,
-  `Permanent_Pastures` float DEFAULT NULL,
-  `Land_under_Tree_Crops` float DEFAULT NULL,
-  `Fallow_Land_excl_Current_Fallow` float DEFAULT NULL,
-  `Current_Fallow` float DEFAULT NULL,
-  `Total_Unculturable_Land` float DEFAULT NULL,
-  `Net_Sown_Area` float DEFAULT NULL,
-  `Gross_Sown_Area` float DEFAULT NULL,
-  `Cropping_Intensity` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `land1s`
 --
@@ -9350,47 +6475,6 @@ INSERT INTO `land1s` (`id`, `Year`, `Geographical_Area`, `Forests`, `Barren_Uncu
 (3, 2012, 9359.57, 621.64, 431.72, 1708.38, 1352.89, 355.48, 45.02, 15.6, 246.34, 121.79, 766.7, 3957.17, 5402.39, 7777.52, 1.44, '2018-07-12 10:57:40', '2018-07-12 10:57:40'),
 (4, 2013, 9359.57, 621.64, 431.72, 1712.28, 1356.8, 355.49, 44.89, 15.47, 247.36, 120.49, 913.49, 4107.32, 5252.25, 7580.14, 1.44, '2018-07-12 10:57:40', '2018-07-12 10:57:40'),
 (5, 2014, 9359.57, 621.64, 431.72, 1712.1, 1359.77, 352.33, 44.67, 15.33, 247.81, 119.41, 888.59, 4081.25, 5278.32, 7672.95, 1.45, '2018-07-12 10:57:40', '2018-07-12 10:57:40');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `lands`
---
-
-DROP TABLE IF EXISTS `lands`;
-CREATE TABLE `lands` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Geographical_area` float DEFAULT NULL,
-  `Forest` float DEFAULT NULL,
-  `Barren_unculturable_land` float DEFAULT NULL,
-  `Non_Agriculture_Land_area` float DEFAULT NULL,
-  `Non_Agriculture_Perennial_Water_Area` float DEFAULT NULL,
-  `Non_Agriculture_Temporary_Water_Area` float DEFAULT NULL,
-  `Culturable_Waste_Land` float DEFAULT NULL,
-  `Permanent_Pastures` float DEFAULT NULL,
-  `Tree_Crops` float DEFAULT NULL,
-  `Fallow_land` float DEFAULT NULL,
-  `Current_Fallow` float DEFAULT NULL,
-  `Total_Uncultivable_Land` float DEFAULT NULL,
-  `Net_Area_Sown` float DEFAULT NULL,
-  `Gross_Crop_Area` float DEFAULT NULL,
-  `Cropping_Intensity` float DEFAULT NULL,
-  `Percentage_Geographical_area` float DEFAULT NULL,
-  `Percentage_Forest` float DEFAULT NULL,
-  `Percentage_Barren_unculturable_land` float DEFAULT NULL,
-  `Percentage_Non_Agriculture_Land_area` float DEFAULT NULL,
-  `Percentage_Non_Agriculture_Perennial_Water_Area` float DEFAULT NULL,
-  `Percentage_Culturable_Waste_Land` float DEFAULT NULL,
-  `Percentage_Permanent_Pastures` float DEFAULT NULL,
-  `Percentage_Tree_Crops` float DEFAULT NULL,
-  `Percentage_Fallow_land` float DEFAULT NULL,
-  `Percentage_Current_Fallow` float DEFAULT NULL,
-  `Percentage_Total_Uncultivable_Land` float DEFAULT NULL,
-  `Percentage_Net_Area_Sown` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `lands`
@@ -9437,23 +6521,6 @@ INSERT INTO `lands` (`id`, `Districts`, `Geographical_area`, `Forest`, `Barren_u
 (38, 'Vaishali', 201.4, 0, 24.1, 30.5, 5.8, 1, 0.1, 0.32, 9.79, 0.27, 0.23, 73.14, 128.3, 185.1, 1.84, 100, 0, 12, 15.1, 2.9, 0.1, 0.2, 4.9, 0.1, 0.1, 36.3, 63.7, '2018-08-16 07:03:21', '2018-08-16 07:03:21'),
 (39, 'WestChamparan', 484.3, 91.8, 2.9, 71.1, 15.2, 1.8, 1.3, 1.13, 6.5, 2.2, 22.41, 223.2, 261.1, 423, 1.62, 100, 18.9, 0.6, 14.7, 3.1, 0.3, 0.2, 1.3, 0.5, 4.6, 46.1, 53.9, '2018-08-16 07:03:21', '2018-08-16 07:03:21');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `level_of_urbanisation1s`
---
-
-DROP TABLE IF EXISTS `level_of_urbanisation1s`;
-CREATE TABLE `level_of_urbanisation1s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `India` float DEFAULT NULL,
-  `Bihar` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `level_of_urbanisation1s`
 --
@@ -9472,25 +6539,6 @@ INSERT INTO `level_of_urbanisation1s` (`id`, `Year`, `India`, `Bihar`, `Indicato
 (11, '2001', 27.8, 10.5, 'Level of Urbanisation', '2018-11-20 08:44:41', '2018-11-20 08:44:41'),
 (12, '2011', 31.2, 11.3, 'Level of Urbanisation', '2018-11-20 08:44:41', '2018-11-20 08:44:41');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `level_of_urbanisation2s`
---
-
-DROP TABLE IF EXISTS `level_of_urbanisation2s`;
-CREATE TABLE `level_of_urbanisation2s` (
-  `id` bigint(20) NOT NULL,
-  `Size_Class` varchar(255) DEFAULT NULL,
-  `Number_2001` float DEFAULT NULL,
-  `Number_2011` float DEFAULT NULL,
-  `Population_million_2001` float DEFAULT NULL,
-  `Population_million_2011` float DEFAULT NULL,
-  `Growth_Rate_of_Population` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `level_of_urbanisation2s`
 --
@@ -9504,22 +6552,6 @@ INSERT INTO `level_of_urbanisation2s` (`id`, `Size_Class`, `Number_2001`, `Numbe
 (6, '5,000 - 10,000', 6, 38, 0.04, 0.26, 18.2, '2018-11-26 05:51:37', '2018-11-26 05:51:37'),
 (7, '< 5,000', 0, 9, 0, 0.03, 0, '2018-11-26 05:51:37', '2018-11-26 05:51:37'),
 (8, 'Total', 130, 199, 8.68, 11.76, 3.06, '2018-11-26 05:51:37', '2018-11-26 05:51:37');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `level_of_urbanisation3s`
---
-
-DROP TABLE IF EXISTS `level_of_urbanisation3s`;
-CREATE TABLE `level_of_urbanisation3s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Urbanisation` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `level_of_urbanisation3s`
@@ -9605,23 +6637,6 @@ INSERT INTO `level_of_urbanisation3s` (`id`, `Districts`, `Urbanisation`, `Year`
 (77, 'Vaishali ', 6.7, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58'),
 (78, 'Bihar', 11.3, '2011', '2018-11-20 07:16:58', '2018-11-20 07:16:58');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `level_of_urbanisation4s`
---
-
-DROP TABLE IF EXISTS `level_of_urbanisation4s`;
-CREATE TABLE `level_of_urbanisation4s` (
-  `id` bigint(20) NOT NULL,
-  `City_Size` varchar(255) DEFAULT NULL,
-  `Households_with_tap_water_within_premises` float DEFAULT NULL,
-  `Households_with_access_to_piped_sewer_connected_to_latrines` float DEFAULT NULL,
-  `Households_connected_to_covered_drainage` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `level_of_urbanisation4s`
 --
@@ -9636,24 +6651,6 @@ INSERT INTO `level_of_urbanisation4s` (`id`, `City_Size`, `Households_with_tap_w
 (7, '<5000', 5.1, 2.1, 12.9, '2018-11-20 08:18:00', '2018-11-20 08:18:00'),
 (8, 'Bihar Urban', 16.7, 7.2, 29.9, '2018-11-20 08:18:00', '2018-11-20 08:18:00');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `level_of_urbanisation5s`
---
-
-DROP TABLE IF EXISTS `level_of_urbanisation5s`;
-CREATE TABLE `level_of_urbanisation5s` (
-  `id` bigint(20) NOT NULL,
-  `Particulars` varchar(255) DEFAULT NULL,
-  `Municipal_Corporations` float DEFAULT NULL,
-  `Municipal_Councils` float DEFAULT NULL,
-  `Nagar_Panchayats` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `level_of_urbanisation5s`
 --
@@ -9662,25 +6659,6 @@ INSERT INTO `level_of_urbanisation5s` (`id`, `Particulars`, `Municipal_Corporati
 (1, 'No. of households surveyed (thousand)', 727.2, 652.4, 528.6, 1908.2, '2018-11-20 08:32:11', '2018-11-20 08:32:11'),
 (2, 'Percentage of households with piped water', 33.7, 10.9, 3.8, 17.6, '2018-11-20 08:32:11', '2018-11-20 08:32:11'),
 (3, 'Percentage of households with toilets', 76.7, 57.8, 34.1, 58.4, '2018-11-20 08:32:11', '2018-11-20 08:32:11');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `level_of_urbanisation6s`
---
-
-DROP TABLE IF EXISTS `level_of_urbanisation6s`;
-CREATE TABLE `level_of_urbanisation6s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Municipal_Corporations` float DEFAULT NULL,
-  `Municipal_Councils` float DEFAULT NULL,
-  `Nagar_Panchayats` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `level_of_urbanisation6s`
@@ -9699,21 +6677,6 @@ INSERT INTO `level_of_urbanisation6s` (`id`, `Year`, `Municipal_Corporations`, `
 (10, 'Pucca drain ', 67.4, 41.4, 25.9, 54.4, 'Percentage Distribution of Roads by Existence of Drains', '2018-11-20 09:48:55', '2018-11-20 09:48:55'),
 (11, 'Hume pipe', 1.7, 0.5, 0.2, 1.2, 'Percentage Distribution of Roads by Existence of Drains', '2018-11-20 09:48:55', '2018-11-20 09:48:55'),
 (12, 'Total', 100, 100, 100, 100, 'Percentage Distribution of Roads by Existence of Drains', '2018-11-20 09:48:55', '2018-11-20 09:48:55');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `mapbihars`
---
-
-DROP TABLE IF EXISTS `mapbihars`;
-CREATE TABLE `mapbihars` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Indicator` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `mapbihars`
@@ -9760,23 +6723,6 @@ INSERT INTO `mapbihars` (`id`, `Districts`, `Indicator`, `created_at`, `updated_
 (38, 'Katihar', 52.2378, '2018-12-21 10:52:49', '2018-12-21 10:52:49'),
 (39, 'Total', 61.7952, '2018-12-21 10:52:49', '2018-12-21 10:52:49');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `micro_finance1s`
---
-
-DROP TABLE IF EXISTS `micro_finance1s`;
-CREATE TABLE `micro_finance1s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Number_of_SHGs_with_Bank_Linkage` float DEFAULT NULL,
-  `Savings_of_SHGs_with_Banks` float DEFAULT NULL,
-  `Bank_loans_disbursed_during_the_year` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `micro_finance1s`
 --
@@ -9802,24 +6748,6 @@ INSERT INTO `micro_finance1s` (`id`, `Districts`, `Number_of_SHGs_with_Bank_Link
 (18, 'West Bengal', 945, 1952.7, 2335.8, '2018-11-27 06:58:42', '2018-11-27 06:58:42'),
 (19, 'Total', 8577, 16114.2, 38781.2, '2018-11-27 06:58:42', '2018-11-27 06:58:42');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `micro_finance2s`
---
-
-DROP TABLE IF EXISTS `micro_finance2s`;
-CREATE TABLE `micro_finance2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Mar-14` float DEFAULT NULL,
-  `Mar-15` float DEFAULT NULL,
-  `Mar-16` float DEFAULT NULL,
-  `Mar-17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `micro_finance2s`
 --
@@ -9838,23 +6766,6 @@ INSERT INTO `micro_finance2s` (`id`, `Sector`, `Mar-14`, `Mar-15`, `Mar-16`, `Ma
 (11, 'Gross NPA (Rs. lakh)', 7058, 7130, 13280, 20700, '2018-11-29 06:46:27', '2018-11-29 06:46:27'),
 (12, 'Percentage of gross NPA to total outstanding in Bihar', 7.86, 6.94, 13.25, 13.06, '2018-11-29 06:46:27', '2018-11-29 06:46:27');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `mininngs`
---
-
-DROP TABLE IF EXISTS `mininngs`;
-CREATE TABLE `mininngs` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `mininngs`
 --
@@ -9872,23 +6783,6 @@ INSERT INTO `mininngs` (`id`, `Sector`, `2014-15`, `2015-16`, `2016-17`, `create
 (10, '(viii) Others', 278.7, 626.2, 1564.9, '2018-09-27 07:27:32', '2018-09-27 07:27:32'),
 (11, '3.  Arrears', 443.3, 1392.9, 383.7, '2018-09-27 07:27:32', '2018-09-27 07:27:32'),
 (12, 'Total', 85935, 97100, 99410.2, '2018-09-27 07:27:32', '2018-09-27 07:27:32');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `municipal_finances`
---
-
-DROP TABLE IF EXISTS `municipal_finances`;
-CREATE TABLE `municipal_finances` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `municipal_finances`
@@ -9912,26 +6806,6 @@ INSERT INTO `municipal_finances` (`id`, `Sector`, `2014-15`, `2015-16`, `Indicat
 (15, 'Capital Grants', 32216.6, 34418.3, 'Revenue Expenditure', '2018-11-22 06:19:21', '2018-11-22 06:19:21'),
 (16, 'Self-Generated Income/ Revenue Income (Percentage)', 10.83, 15.12, 'Key Indicator\'s', '2018-11-22 06:19:21', '2018-11-22 06:19:21'),
 (17, 'Self-Generated Income/ Establishment Expenditure (Percentage)', 36.18, 41.36, 'Key Indicator\'s', '2018-11-22 06:19:21', '2018-11-22 06:19:21');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `newrices`
---
-
-DROP TABLE IF EXISTS `newrices`;
-CREATE TABLE `newrices` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Area` float DEFAULT NULL,
-  `Production` float DEFAULT NULL,
-  `Productivity` float DEFAULT NULL,
-  `Year` float DEFAULT NULL,
-  `Percentage_Area` float DEFAULT NULL,
-  `Percentage_Production` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `newrices`
@@ -10017,21 +6891,6 @@ INSERT INTO `newrices` (`id`, `Districts`, `Area`, `Production`, `Productivity`,
 (77, 'Vaishali', 39.62, 85.9, 2168, 2016, 1.2, 1, '2018-08-14 10:22:52', '2018-08-14 10:22:52'),
 (78, 'WestChamparan', 148.49, 290.9, 1959, 2016, 4.4, 3.5, '2018-08-14 10:22:52', '2018-08-14 10:22:52');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `non_agro_based_industries1s`
---
-
-DROP TABLE IF EXISTS `non_agro_based_industries1s`;
-CREATE TABLE `non_agro_based_industries1s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Products` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `non_agro_based_industries1s`
 --
@@ -10047,23 +6906,6 @@ INSERT INTO `non_agro_based_industries1s` (`id`, `Districts`, `Products`, `creat
 (8, 'Kaimur', 'Woolen Carpet, Banarasi Sari', '2018-10-09 09:57:58', '2018-10-09 09:57:58'),
 (9, 'Patna, Siwan', 'Cotton cloth and Furnishing Cloth', '2018-10-09 09:57:58', '2018-10-09 09:57:58'),
 (10, 'Purnea, Katihar', 'Jute bags, Jute-blended material, Interior decorative material', '2018-10-09 09:57:58', '2018-10-09 09:57:58');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `non_agro_based_industries2s`
---
-
-DROP TABLE IF EXISTS `non_agro_based_industries2s`;
-CREATE TABLE `non_agro_based_industries2s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Sanctioned_amount_in_Rs_lakh` float DEFAULT NULL,
-  `Handlooms_on_which_UID_No_has_been_engraved` float DEFAULT NULL,
-  `Pati_looms_on_which_UID_No_has_been_engraved` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `non_agro_based_industries2s`
@@ -10089,23 +6931,6 @@ INSERT INTO `non_agro_based_industries2s` (`id`, `Districts`, `Sanctioned_amount
 (17, 'W. Champaran', 0.1, 51, NULL, '2018-10-09 11:23:22', '2018-10-09 11:23:22'),
 (18, 'Total', 24, 4882, 1618, '2018-10-09 11:23:22', '2018-10-09 11:23:22');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `non_agro_based_industries3s`
---
-
-DROP TABLE IF EXISTS `non_agro_based_industries3s`;
-CREATE TABLE `non_agro_based_industries3s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Achievement` float DEFAULT NULL,
-  `Achievement_Percentage` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `non_agro_based_industries3s`
 --
@@ -10116,24 +6941,6 @@ INSERT INTO `non_agro_based_industries3s` (`id`, `Year`, `Target`, `Achievement`
 (3, '2015-16', 204, 167, 81.9, '2018-09-09 09:00:45', '2018-09-09 09:00:45'),
 (4, '2016-17', 204, 169, 82.8, '2018-09-09 09:00:45', '2018-09-09 09:00:45'),
 (5, '2017-18', 204, 156, 76.4, '2018-09-09 09:00:45', '2018-09-09 09:00:45');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `non_agro_based_industries4s`
---
-
-DROP TABLE IF EXISTS `non_agro_based_industries4s`;
-CREATE TABLE `non_agro_based_industries4s` (
-  `id` bigint(20) NOT NULL,
-  `Sericulture_Sector` varchar(255) DEFAULT NULL,
-  `Mulberry` float DEFAULT NULL,
-  `Tasar` float DEFAULT NULL,
-  `Castor` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `non_agro_based_industries4s`
@@ -10148,30 +6955,6 @@ INSERT INTO `non_agro_based_industries4s` (`id`, `Sericulture_Sector`, `Mulberry
 (6, 'DFLs Rearing (lakh)', 5.07, 7.1, 0.81, '2014-15', '2018-10-12 06:48:06', '2018-10-12 06:48:06'),
 (7, 'Total Cocoon Production', 122.73, 386.94, 6.5, '2014-15', '2018-10-12 06:48:06', '2018-10-12 06:48:06'),
 (8, 'Raw Silk (Tonnes)', 15.08, 37.89, 5.2, '2014-15', '2018-10-12 06:48:06', '2018-10-12 06:48:06');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `non_agro_based_industries5s`
---
-
-DROP TABLE IF EXISTS `non_agro_based_industries5s`;
-CREATE TABLE `non_agro_based_industries5s` (
-  `id` bigint(20) NOT NULL,
-  `Agencies` varchar(255) DEFAULT NULL,
-  `Indicators` varchar(255) DEFAULT NULL,
-  `KVIC` float DEFAULT NULL,
-  `KVI_Board` float DEFAULT NULL,
-  `DIC` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `KVIC_Percentage` float DEFAULT NULL,
-  `KVI_Board_Percentage` float DEFAULT NULL,
-  `DIC_Percentage` float DEFAULT NULL,
-  `Total_Percentage` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `non_agro_based_industries5s`
@@ -10190,23 +6973,6 @@ INSERT INTO `non_agro_based_industries5s` (`id`, `Agencies`, `Indicators`, `KVIC
 (10, 'Target/Margin Money', 'Financial (Rs. lakh)', 2244, 2248, 3008, 7500, '2016-17', 29.4, 30, 40.1, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
 (11, 'Margin Money disbursed by Nodal banks', 'Physical (Nos.)', 532, 313, 2389, 3234, '2016-17', 16.5, 9.7, 73.9, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11'),
 (12, 'Margin Money disbursed by Nodal banks', 'Financial (Rs. lakh)', 810.33, 995.34, 6530.83, 8336.5, '2016-17', 9.7, 11.9, 78.3, 100, '2018-10-09 11:25:11', '2018-10-09 11:25:11');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `operational_and_financial_status1s`
---
-
-DROP TABLE IF EXISTS `operational_and_financial_status1s`;
-CREATE TABLE `operational_and_financial_status1s` (
-  `id` bigint(20) NOT NULL,
-  `Item` varchar(255) DEFAULT NULL,
-  `NBPDCL` float DEFAULT NULL,
-  `SBPDCL` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `operational_and_financial_status1s`
@@ -10250,49 +7016,12 @@ INSERT INTO `operational_and_financial_status1s` (`id`, `Item`, `NBPDCL`, `SBPDC
 (35, 'Cost Coverage (Total Income/Total cost) (Percentage)', 90, 88, '2016-17', '2018-11-09 07:40:41', '2018-11-09 07:40:41'),
 (36, 'Financial Loss (Percentage)', 10, 12, '2016-17', '2018-11-09 07:40:41', '2018-11-09 07:40:41');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `operational_and_financial_status2s`
---
-
-DROP TABLE IF EXISTS `operational_and_financial_status2s`;
-CREATE TABLE `operational_and_financial_status2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `operational_and_financial_status2s`
 --
 
 INSERT INTO `operational_and_financial_status2s` (`id`, `Sector`, `2011-12`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `created_at`, `updated_at`) VALUES
 (1, 'AT and C Loss', 52.9, 54.6, 46.3, 43.8, 43.5, 40.6, '2018-11-09 08:41:38', '2018-11-09 08:41:38');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `panchayati_raj1s`
---
-
-DROP TABLE IF EXISTS `panchayati_raj1s`;
-CREATE TABLE `panchayati_raj1s` (
-  `id` bigint(20) NOT NULL,
-  `Item` varchar(255) DEFAULT NULL,
-  `Number` float DEFAULT NULL,
-  `Number_of_Members_or_Functionaries` float DEFAULT NULL,
-  `Average_Number_of_Members_per_Panchayat` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `panchayati_raj1s`
@@ -10307,25 +7036,6 @@ INSERT INTO `panchayati_raj1s` (`id`, `Item`, `Number`, `Number_of_Members_or_Fu
 (6, 'Gram Kachahari Secretary', NULL, 7474, NULL, '2018-11-16 05:50:38', '2018-11-16 05:50:38'),
 (7, 'Zila Panchayati Raj Officers', NULL, 38, NULL, '2018-11-16 05:50:38', '2018-11-16 05:50:38'),
 (8, 'Block Panchayti Raj Officers', NULL, 528, NULL, '2018-11-16 05:50:38', '2018-11-16 05:50:38');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `panchayati_raj2s`
---
-
-DROP TABLE IF EXISTS `panchayati_raj2s`;
-CREATE TABLE `panchayati_raj2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2013_14_Actual` float DEFAULT NULL,
-  `2014_15_Actual` float DEFAULT NULL,
-  `2015_16_Actual` float DEFAULT NULL,
-  `2016_17_BE` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `panchayati_raj2s`
@@ -10358,28 +7068,6 @@ INSERT INTO `panchayati_raj2s` (`id`, `Sector`, `2013_14_Actual`, `2014_15_Actua
 (24, 'Total', 23148, 24719, 11436, 52957, 'Zila Parishad', '2018-11-15 10:24:54', '2018-11-15 10:24:54'),
 (25, 'Grand Total', 421941, 253532, 386887, 738504, 'Zila Parishad', '2018-11-15 10:24:54', '2018-11-15 10:24:54');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `poverty1s`
---
-
-DROP TABLE IF EXISTS `poverty1s`;
-CREATE TABLE `poverty1s` (
-  `id` bigint(20) NOT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `1993-94` float DEFAULT NULL,
-  `1999-00` float DEFAULT NULL,
-  `2004-05` float DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `Reduction_in_Poverty_between_2004_05_and_2011_12` float DEFAULT NULL,
-  `Poverty_Line_2004_05` float DEFAULT NULL,
-  `Poverty_Line_2011_12` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `poverty1s`
 --
@@ -10392,23 +7080,6 @@ INSERT INTO `poverty1s` (`id`, `Indicator`, `Sector`, `1993-94`, `1999-00`, `200
 (5, 'India', 'Urban', 32.1, 23.6, 25.7, 13.7, 12, 579, 1000, '2018-11-15 08:08:10', '2018-11-15 08:08:10'),
 (6, 'India', 'Total ', 36, 26.1, 37.2, 21.9, 15.3, NULL, NULL, '2018-11-15 08:08:10', '2018-11-15 08:08:10');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `poverty2s`
---
-
-DROP TABLE IF EXISTS `poverty2s`;
-CREATE TABLE `poverty2s` (
-  `id` bigint(20) NOT NULL,
-  `Population_below_poverty_line_in_Percentages` varchar(255) DEFAULT NULL,
-  `Rural_poverty` varchar(255) DEFAULT NULL,
-  `Urban_poverty` varchar(255) DEFAULT NULL,
-  `Total_poverty` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `poverty2s`
 --
@@ -10419,24 +7090,6 @@ INSERT INTO `poverty2s` (`id`, `Population_below_poverty_line_in_Percentages`, `
 (3, '20 to 30', 'Gujarat, West Bengal, Maharashtra, Karnataka', 'Arunachal Pradesh, Assam, Madhya Pradesh, Chhattisgarh, Jharkhand, Uttar Pradesh', 'Mizoram, Karnataka, Uttar Pradesh', '2018-11-16 06:17:16', '2018-11-16 06:17:16'),
 (4, '30 to 40', 'Arunachal Pradesh, Manipur, Madhya Pradesh, Assam, Uttar Pradesh, Bihar, Odisha, Mizoram', 'Bihar, Manipur', 'Madhya Pradesh, Assam, Odisha, Bihar, Arunachal Pradesh, Manipur, Jharkhand, Chhattisgarh', '2018-11-16 06:17:16', '2018-11-16 06:17:16'),
 (5, 'Above 40', 'Jharkhand, Chhattisgarh', NULL, NULL, '2018-11-16 06:17:16', '2018-11-16 06:17:16');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `production_and_productivity_of_rices`
---
-
-DROP TABLE IF EXISTS `production_and_productivity_of_rices`;
-CREATE TABLE `production_and_productivity_of_rices` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Area` float DEFAULT NULL,
-  `Production` float DEFAULT NULL,
-  `Productivity` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `production_and_productivity_of_rices`
@@ -10522,63 +7175,6 @@ INSERT INTO `production_and_productivity_of_rices` (`id`, `Districts`, `Area`, `
 (77, 'Katihar', 109.9, 242.53, 2207, 2016, '2018-07-10 10:49:06', '2018-07-10 10:49:06'),
 (78, 'Bihar', 3339.78, 8238.77, 2467, 2016, '2018-07-10 10:49:06', '2018-07-10 10:49:06');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `production_productivity1s`
---
-
-DROP TABLE IF EXISTS `production_productivity1s`;
-CREATE TABLE `production_productivity1s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Total_Cereals` float DEFAULT NULL,
-  `Total_Rice` float DEFAULT NULL,
-  `Autumn_Rice` float DEFAULT NULL,
-  `Aghani_Rice` float DEFAULT NULL,
-  `Summer_Rice` float DEFAULT NULL,
-  `Wheat` float DEFAULT NULL,
-  `Total_Maize` float DEFAULT NULL,
-  `Kharif_Maize` float DEFAULT NULL,
-  `Rabi_Maize` float DEFAULT NULL,
-  `Summer_Maize` float DEFAULT NULL,
-  `Total_Coarse_Cereals` float DEFAULT NULL,
-  `Barley` float DEFAULT NULL,
-  `Jowar` float DEFAULT NULL,
-  `Bajra` float DEFAULT NULL,
-  `Ragi` float DEFAULT NULL,
-  `Small_Millets` float DEFAULT NULL,
-  `Total_Pulses` float DEFAULT NULL,
-  `Total_Kharif_Pulses` float DEFAULT NULL,
-  `Urad` float DEFAULT NULL,
-  `Bhadai_Moong` float DEFAULT NULL,
-  `Kulthi` float DEFAULT NULL,
-  `Ghagra` float DEFAULT NULL,
-  `Other_Kharif_Pulses` float DEFAULT NULL,
-  `Total_Rabi_Pulses` float DEFAULT NULL,
-  `Arhar_Tur` float DEFAULT NULL,
-  `Gram` float DEFAULT NULL,
-  `Lentil` float DEFAULT NULL,
-  `Pea` float DEFAULT NULL,
-  `Khesari` float DEFAULT NULL,
-  `Summer_Moong` float DEFAULT NULL,
-  `Other_Rabi_Pulses` float DEFAULT NULL,
-  `Total_Oilseeds` float DEFAULT NULL,
-  `Castor_seed` float DEFAULT NULL,
-  `Safflower_Kusum` float DEFAULT NULL,
-  `Sesamum` float DEFAULT NULL,
-  `Sunflower` float DEFAULT NULL,
-  `Mustard` float DEFAULT NULL,
-  `Linseed` float DEFAULT NULL,
-  `Ground_Nut` float DEFAULT NULL,
-  `Total_Fibre_Crops` float DEFAULT NULL,
-  `Jute` float DEFAULT NULL,
-  `Mesta` float DEFAULT NULL,
-  `Sugarcane` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `production_productivity1s`
 --
@@ -10591,63 +7187,6 @@ INSERT INTO `production_productivity1s` (`id`, `Year`, `Total_Cereals`, `Total_R
 (5, 2015, 14087.2, 6802.22, 725.21, 5876.03, 200.98, 4736.45, 2517.1, 692.7, 1105.14, 719.26, 2548.58, 13.9, 1.71, 4.64, 9.89, 1.34, 420.78, 28.98, 12.05, 8.34, 7.21, 0.49, 0.89, 391.8, 37.13, 58.55, 140.44, 17.94, 50.99, 86.02, 0.73, 126.52, 0.04, 0.09, 2.39, 16.2, 94.39, 12.91, 0.5, 1630.6, 1308.64, 322, 18175.6, '2018-07-16 10:51:18', '2018-07-16 10:51:18'),
 (6, 2016, 18099.1, 8238.77, 949.37, 7065.07, 224.33, 5985.84, 3845.7, 624.3, 2131.51, 1089.89, 3874.5, 16.29, 1.91, 4.05, 3.46, 3.1, 461.67, 29.3, 11.49, 8.33, 7.63, 0.43, 1.43, 332.69, 33.17, 66.5, 146.88, 16.74, 55.18, 111.55, 2.35, 125.86, 0.07, 0.09, 1.78, 14.69, 97.68, 10.56, 0.99, 1571, 1356, 215, 18239.9, '2018-07-16 10:51:18', '2018-07-16 10:51:18');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `production_productivity2s`
---
-
-DROP TABLE IF EXISTS `production_productivity2s`;
-CREATE TABLE `production_productivity2s` (
-  `id` bigint(20) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Total_Cereals` float DEFAULT NULL,
-  `Total_Rice` float DEFAULT NULL,
-  `Autumn_Rice` float DEFAULT NULL,
-  `Aghani_Rice` float DEFAULT NULL,
-  `Summer_Rice` float DEFAULT NULL,
-  `Wheat` float DEFAULT NULL,
-  `Total_Maize` float DEFAULT NULL,
-  `Kharif_Maize` float DEFAULT NULL,
-  `Rabi_Maize` float DEFAULT NULL,
-  `Summer_Maize` float DEFAULT NULL,
-  `Total_Coarse_Cereals` float DEFAULT NULL,
-  `Barley` float DEFAULT NULL,
-  `Jowar` float DEFAULT NULL,
-  `Bajra` float DEFAULT NULL,
-  `Ragi` float DEFAULT NULL,
-  `Small_Millets` float DEFAULT NULL,
-  `Total_Pulses` float DEFAULT NULL,
-  `Total_Kharif_Pulses` float DEFAULT NULL,
-  `Urad` float DEFAULT NULL,
-  `Bhadai_Moong` float DEFAULT NULL,
-  `Kulthi` float DEFAULT NULL,
-  `Ghagra` float DEFAULT NULL,
-  `Other_Kharif_Pulses` float DEFAULT NULL,
-  `Total_Rabi_Pulses` float DEFAULT NULL,
-  `Arhar_Tur` float DEFAULT NULL,
-  `Gram` float DEFAULT NULL,
-  `Lentil` float DEFAULT NULL,
-  `Pea` float DEFAULT NULL,
-  `Khesari` float DEFAULT NULL,
-  `Summer_Moong` float DEFAULT NULL,
-  `Other_Rabi_Pulses` float DEFAULT NULL,
-  `Total_Oilseeds` float DEFAULT NULL,
-  `Castor_seed` float DEFAULT NULL,
-  `Safflower_Kusum` float DEFAULT NULL,
-  `Sesamum` float DEFAULT NULL,
-  `Sunflower` float DEFAULT NULL,
-  `Mustard` float DEFAULT NULL,
-  `Linseed` float DEFAULT NULL,
-  `Ground_Nut` float DEFAULT NULL,
-  `Total_Fibre_Crops` float DEFAULT NULL,
-  `Jute` float DEFAULT NULL,
-  `Mesta` float DEFAULT NULL,
-  `Sugarcane` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `production_productivity2s`
 --
@@ -10659,23 +7198,6 @@ INSERT INTO `production_productivity2s` (`id`, `Year`, `Total_Cereals`, `Total_R
 (4, 2014, 14321.1, 8241.62, 1010.34, 7049.73, 181.56, 3570.21, 2478.75, 825.15, 913.78, 739.82, 2509.28, 13.43, 1.55, 3.73, 9.84, 1.98, 428.93, 33.69, 14.36, 9.23, 7.96, 0.43, 1.71, 395.24, 28.54, 57.49, 140.06, 17.31, 60.06, 90.73, 1.05, 127.01, 0.09, 0.08, 2.56, 16.64, 92.89, 14.16, 0.59, 1637.12, 1418.71, 218.41, 21117.4, '2018-07-16 11:35:25', '2018-07-16 11:35:25'),
 (5, 2015, 14087.2, 6802.22, 725.21, 5876.03, 200.98, 4736.45, 2517.1, 692.7, 1105.14, 719.26, 2548.58, 13.9, 1.71, 4.64, 9.89, 1.34, 420.78, 28.98, 12.05, 8.34, 7.21, 0.49, 0.89, 391.8, 37.13, 58.55, 140.44, 17.94, 50.99, 86.02, 0.73, 126.52, 0.04, 0.09, 2.39, 16.2, 94.39, 12.91, 0.5, 1630.6, 1308.64, 322, 18175.6, '2018-07-16 11:35:25', '2018-07-16 11:35:25'),
 (6, 2016, 18099.1, 8238.77, 949.37, 7065.07, 224.33, 5985.84, 3845.7, 624.3, 2131.51, 1089.89, 3874.5, 16.29, 1.91, 4.05, 3.46, 3.1, 461.67, 29.3, 11.49, 8.33, 7.63, 0.43, 1.43, 332.69, 33.17, 66.5, 146.88, 16.74, 55.18, 111.55, 2.35, 125.86, 0.07, 0.09, 1.78, 14.69, 97.68, 10.56, 0.99, 1571, 1356, 215, 18239.9, '2018-07-16 11:35:25', '2018-07-16 11:35:25');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `production_productivity4s`
---
-
-DROP TABLE IF EXISTS `production_productivity4s`;
-CREATE TABLE `production_productivity4s` (
-  `id` bigint(20) NOT NULL,
-  `Fruits` varchar(255) DEFAULT NULL,
-  `Area` float DEFAULT NULL,
-  `Production` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `production_productivity4s`
@@ -10738,23 +7260,6 @@ INSERT INTO `production_productivity4s` (`id`, `Fruits`, `Area`, `Production`, `
 (54, 'Others', 32.4, 311, 2016, '2018-07-17 14:22:21', '2018-07-17 14:22:21'),
 (55, 'Total', 288.9, 4097.5, 2016, '2018-07-17 14:22:21', '2018-07-17 14:22:21');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `production_productivity5s`
---
-
-DROP TABLE IF EXISTS `production_productivity5s`;
-CREATE TABLE `production_productivity5s` (
-  `id` bigint(20) NOT NULL,
-  `Vegetables` varchar(255) DEFAULT NULL,
-  `Area` float DEFAULT NULL,
-  `Production` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `production_productivity5s`
 --
@@ -10814,26 +7319,6 @@ INSERT INTO `production_productivity5s` (`id`, `Vegetables`, `Area`, `Production
 (52, 'Sweet_Potato', 0.9, 8.4, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
 (53, 'Others', 29.18, 397.79, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11'),
 (54, 'Total', 823.75, 14362.2, 2016, '2018-07-18 06:23:11', '2018-07-18 06:23:11');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `production_productivity7s`
---
-
-DROP TABLE IF EXISTS `production_productivity7s`;
-CREATE TABLE `production_productivity7s` (
-  `id` bigint(20) NOT NULL,
-  `Area` float DEFAULT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Production` float DEFAULT NULL,
-  `Productivity` float DEFAULT NULL,
-  `Year` float DEFAULT NULL,
-  `Percentage_Area` float DEFAULT NULL,
-  `Percentage_Production` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `production_productivity7s`
@@ -10919,26 +7404,6 @@ INSERT INTO `production_productivity7s` (`id`, `Area`, `Districts`, `Production`
 (77, 43.14, 'Vaishali', 143.46, 3326, 2016, 2, 2.4, '2018-08-14 10:41:47', '2018-08-14 10:41:47'),
 (78, 69.57, 'WestChamparan', 154.24, 2217, 2016, 3.3, 2.6, '2018-08-14 10:41:47', '2018-08-14 10:41:47');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `production_productivity8s`
---
-
-DROP TABLE IF EXISTS `production_productivity8s`;
-CREATE TABLE `production_productivity8s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Area` float DEFAULT NULL,
-  `Production` float DEFAULT NULL,
-  `Productivity` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Percentage_Area` float DEFAULT NULL,
-  `Percentage_Production` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `production_productivity8s`
 --
@@ -11022,26 +7487,6 @@ INSERT INTO `production_productivity8s` (`id`, `Districts`, `Area`, `Production`
 (76, 'Supaul', 15.26, 83.79, 5491, 2016, 2.1, 2.2, '2018-08-14 11:05:24', '2018-08-14 11:05:24'),
 (77, 'Vaishali', 32.39, 123.48, 3813, 2016, 4.5, 3.2, '2018-08-14 11:05:24', '2018-08-14 11:05:24'),
 (78, 'WestChamparan', 5.37, 18.39, 3423, 2016, 0.7, 0.5, '2018-08-14 11:05:24', '2018-08-14 11:05:24');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `production_productivity9s`
---
-
-DROP TABLE IF EXISTS `production_productivity9s`;
-CREATE TABLE `production_productivity9s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Area` float DEFAULT NULL,
-  `Production` float DEFAULT NULL,
-  `Productivity` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Percentage_Area` float DEFAULT NULL,
-  `Percentage_Production` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `production_productivity9s`
@@ -11127,38 +7572,6 @@ INSERT INTO `production_productivity9s` (`id`, `Districts`, `Area`, `Production`
 (77, 'Vaishali', 8.71, 4.99, 574, 2016, 1.8, 1.1, '2018-08-14 11:26:03', '2018-08-14 11:26:03'),
 (78, 'WestChamparan', 9.83, 11.21, 1140, 2016, 2, 2.4, '2018-08-14 11:26:03', '2018-08-14 11:26:03');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `production_productivity10s`
---
-
-DROP TABLE IF EXISTS `production_productivity10s`;
-CREATE TABLE `production_productivity10s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Area` float DEFAULT NULL,
-  `Mango_Area` float DEFAULT NULL,
-  `Mango_Production` float DEFAULT NULL,
-  `Guava_Area` float DEFAULT NULL,
-  `Guava_Production` float DEFAULT NULL,
-  `Litchi_Area` float DEFAULT NULL,
-  `Litchi_Production` float DEFAULT NULL,
-  `Banana_Area` float DEFAULT NULL,
-  `Banana_Production` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Percentage_Mango_Area` float DEFAULT NULL,
-  `Percentage_Mango_Production` float DEFAULT NULL,
-  `Percentage_Guava_Area` float DEFAULT NULL,
-  `Percentage_Guava_Production` float DEFAULT NULL,
-  `Percentage_Litchi_Area` float DEFAULT NULL,
-  `Percentage_Litchi_Production` float DEFAULT NULL,
-  `Percentage_Banana_Area` float DEFAULT NULL,
-  `Percentage_Banana_Production` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `production_productivity10s`
 --
@@ -11242,37 +7655,6 @@ INSERT INTO `production_productivity10s` (`id`, `Districts`, `Area`, `Mango_Area
 (76, 'Supaul', NULL, 1.3, 13.1, 0.4, 3.3, 0.1, 0.7, 0.7, 24, 2016, 0.9, 0.9, 1.4, 0.9, 0.3, 0.4, 2, 1.6, '2018-08-14 11:37:57', '2018-08-14 11:37:57'),
 (77, 'Vaishali', NULL, 8.5, 85.9, 1.5, 11.2, 3.7, 21.7, 3.4, 142.1, 2016, 5.6, 5.8, 5.1, 3, 11.5, 10.9, 9.7, 9.3, '2018-08-14 11:37:57', '2018-08-14 11:37:57'),
 (78, 'WestChamparan', NULL, 7.3, 72.5, 1.6, 13.8, 2.1, 11.5, 1.1, 51, 2016, 4.9, 4.9, 5.4, 3.7, 6.5, 5.8, 3.1, 3.3, '2018-08-14 11:37:57', '2018-08-14 11:37:57');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `production_productivity11s`
---
-
-DROP TABLE IF EXISTS `production_productivity11s`;
-CREATE TABLE `production_productivity11s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Potato_Area` float DEFAULT NULL,
-  `Potato_Production` float DEFAULT NULL,
-  `Onion_Area` float DEFAULT NULL,
-  `Onion_Production` float DEFAULT NULL,
-  `Cauliflower_Area` float DEFAULT NULL,
-  `Cauliflower_Production` float DEFAULT NULL,
-  `Brinjal_Area` float DEFAULT NULL,
-  `Brinjal_Production` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Percentage_Potato_Area` float DEFAULT NULL,
-  `Percentage_Potato_Production` float DEFAULT NULL,
-  `Percentage_Onion_Area` float DEFAULT NULL,
-  `Percentage_Onion_Production` float DEFAULT NULL,
-  `Percentage_Cauliflower_Area` float DEFAULT NULL,
-  `Percentage_Cauliflower_Production` float DEFAULT NULL,
-  `Percentage_Brinjal_Area` float DEFAULT NULL,
-  `Percentage_Brinjal_Production` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `production_productivity11s`
@@ -11358,26 +7740,6 @@ INSERT INTO `production_productivity11s` (`id`, `Districts`, `Potato_Area`, `Pot
 (77, 'Vaishali', 9.9, 290.3, 1.8, 44, 6, 99.9, 3.2, 69, 2016, 3.1, 4.6, 3.3, 3.5, 9.1, 10, 5.5, 6, '2018-08-14 12:11:42', '2018-08-14 12:11:42'),
 (78, 'WestChamparan', 9.3, 250.8, 2.4, 61.9, 3, 55.2, 2, 43.9, 2016, 2.9, 3.9, 4.4, 5, 4.5, 5.5, 3.4, 3.8, '2018-08-14 12:11:42', '2018-08-14 12:11:42');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `production_productivity12s`
---
-
-DROP TABLE IF EXISTS `production_productivity12s`;
-CREATE TABLE `production_productivity12s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Area` float DEFAULT NULL,
-  `Production` float DEFAULT NULL,
-  `Yield` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Percentage_Sugarcane_Area` float DEFAULT NULL,
-  `Percentage_Sugarcane_Production` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `production_productivity12s`
 --
@@ -11462,22 +7824,6 @@ INSERT INTO `production_productivity12s` (`id`, `Districts`, `Area`, `Production
 (77, 'Vaishali', 1.23, 80.18, 65.27, 2016, 0.5, 0.4, '2018-08-14 12:37:03', '2018-08-14 12:37:03'),
 (78, 'WestChamparan', 132.86, 9252.17, 69.64, 2016, 50.3, 50.7, '2018-08-14 12:37:03', '2018-08-14 12:37:03');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `programmes_for_electrification1s`
---
-
-DROP TABLE IF EXISTS `programmes_for_electrification1s`;
-CREATE TABLE `programmes_for_electrification1s` (
-  `id` bigint(20) NOT NULL,
-  `Project_Component_under_R_APDRP` varchar(255) DEFAULT NULL,
-  `Outlay` float DEFAULT NULL,
-  `Expenditure_incurred` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `programmes_for_electrification1s`
 --
@@ -11487,29 +7833,6 @@ INSERT INTO `programmes_for_electrification1s` (`id`, `Project_Component_under_R
 (2, 'R-APDRP - Part B', 1155.21, 995.94, '2018-11-09 10:01:45', '2018-11-09 10:01:45'),
 (3, 'R-APDRP - SCADA', 38, 9.59, '2018-11-09 10:01:45', '2018-11-09 10:01:45'),
 (4, 'Total', 1446.89, 1108.64, '2018-11-09 10:01:45', '2018-11-09 10:01:45');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `programmes_for_electrification2s`
---
-
-DROP TABLE IF EXISTS `programmes_for_electrification2s`;
-CREATE TABLE `programmes_for_electrification2s` (
-  `id` bigint(20) NOT NULL,
-  `Agencies` varchar(255) DEFAULT NULL,
-  `Tenth_Plan` float DEFAULT NULL,
-  `Eleventh_Plan` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Eleventh_Plan_Phase_II` float DEFAULT NULL,
-  `Twelfth_Plan` float DEFAULT NULL,
-  `Under_DDG` float DEFAULT NULL,
-  `DDG_converted_into_UEV` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `Indicator1` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `programmes_for_electrification2s`
@@ -11529,22 +7852,6 @@ INSERT INTO `programmes_for_electrification2s` (`id`, `Agencies`, `Tenth_Plan`, 
 (11, 'SBPDCL', NULL, 106, 10859, 7321, 3538, 0, 0, 'Intensive Electrification of Partially Electrified Villages (PEV)', 'Achievement', '2018-11-12 08:37:57', '2018-11-12 08:37:57'),
 (12, 'Total', NULL, 6075, 24215, 10488, 13727, 0, 0, 'Intensive Electrification of Partially Electrified Villages (PEV)', 'Achievement', '2018-11-12 08:37:57', '2018-11-12 08:37:57');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `projection_of_power_requirement1s`
---
-
-DROP TABLE IF EXISTS `projection_of_power_requirement1s`;
-CREATE TABLE `projection_of_power_requirement1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2017-18` float DEFAULT NULL,
-  `2018-19` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `projection_of_power_requirement1s`
 --
@@ -11557,22 +7864,6 @@ INSERT INTO `projection_of_power_requirement1s` (`id`, `Sector`, `2017-18`, `201
 (5, 'New Agricultural  Connections', 1242, 30, '2018-11-08 08:16:13', '2018-11-08 08:16:13'),
 (6, 'Total', 19446, 22151, '2018-11-08 08:16:13', '2018-11-08 08:16:13');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `projection_of_power_requirement2s`
---
-
-DROP TABLE IF EXISTS `projection_of_power_requirement2s`;
-CREATE TABLE `projection_of_power_requirement2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2017-18` float DEFAULT NULL,
-  `2018-19` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `projection_of_power_requirement2s`
 --
@@ -11584,24 +7875,6 @@ INSERT INTO `projection_of_power_requirement2s` (`id`, `Sector`, `2017-18`, `201
 (4, 'Energy requirement at state periphery (MU)', 26809, 28069, '2018-11-08 11:06:11', '2018-11-08 11:06:11'),
 (5, 'Peak demand at 0.734 Load Factor (MW)', 4733, 5200, '2018-11-08 11:06:11', '2018-11-08 11:06:11'),
 (6, 'Peak demand at 0.734 Load Factor (MW) (Including Agricultural load upto 50 percent only) (MW)', 4268, 4689, '2018-11-08 11:06:11', '2018-11-08 11:06:11');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `projection_of_power_requirement3s`
---
-
-DROP TABLE IF EXISTS `projection_of_power_requirement3s`;
-CREATE TABLE `projection_of_power_requirement3s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Mar-17` float DEFAULT NULL,
-  `2017-18` float DEFAULT NULL,
-  `2018-19` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `projection_of_power_requirement3s`
@@ -11617,23 +7890,6 @@ INSERT INTO `projection_of_power_requirement3s` (`id`, `Sector`, `Mar-17`, `2017
 (7, 'NCE / RNES', 194, 224, 446, 'Central Generating Stations Share', '2018-11-09 09:41:51', '2018-11-09 09:41:51'),
 (8, 'Total', 3904, 4358, 5563, 'Central Generating Stations Share', '2018-11-09 09:41:51', '2018-11-09 09:41:51');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `projection_of_power_requirement4s`
---
-
-DROP TABLE IF EXISTS `projection_of_power_requirement4s`;
-CREATE TABLE `projection_of_power_requirement4s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Total_Capacity_MW` float DEFAULT NULL,
-  `Estimated_Peak_Availability_at_State_Periphery_MW` float DEFAULT NULL,
-  `Estimated_Energy_Availability_at_State_Periphery_MU` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `projection_of_power_requirement4s`
 --
@@ -11642,23 +7898,6 @@ INSERT INTO `projection_of_power_requirement4s` (`id`, `Year`, `Total_Capacity_M
 (1, '2017-18', 4358, 4134, 26384, '2018-11-09 11:09:50', '2018-11-09 11:09:50'),
 (2, '2018-19', 5563, 5117, 30173, '2018-11-09 11:09:50', '2018-11-09 11:09:50'),
 (3, '2019-20', 6766, 5646, 35908, '2018-11-09 11:09:50', '2018-11-09 11:09:50');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `projection_of_power_requirement5s`
---
-
-DROP TABLE IF EXISTS `projection_of_power_requirement5s`;
-CREATE TABLE `projection_of_power_requirement5s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2017-18` float DEFAULT NULL,
-  `2018-19` float DEFAULT NULL,
-  `2019-20` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `projection_of_power_requirement5s`
@@ -11673,26 +7912,6 @@ INSERT INTO `projection_of_power_requirement5s` (`id`, `Sector`, `2017-18`, `201
 (6, 'Estimated Energy Availability at State Periphery as per  State generation Plan (MU)', 26384, 30173, 35908, '2018-11-09 11:37:46', '2018-11-09 11:37:46'),
 (7, 'Energy Surplus(Plus) / Deficit(Minus) (MU)', -425, 2104, 5507, '2018-11-09 11:37:46', '2018-11-09 11:37:46'),
 (8, 'Energy Surplus (Plus)/ Deficit (Minus) (Percentage) ', 1.58, 7.49, 18, '2018-11-09 11:37:46', '2018-11-09 11:37:46');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `qualityofexpenditures`
---
-
-DROP TABLE IF EXISTS `qualityofexpenditures`;
-CREATE TABLE `qualityofexpenditures` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `qualityofexpenditures`
@@ -11710,26 +7929,6 @@ INSERT INTO `qualityofexpenditures` (`id`, `Sector`, `2012-13`, `2013-14`, `2014
 (9, 'Revenue Expenditure / Total Expenditure (Percentage)', 78.7, 77.7, 76.6, 74.4, 75, 76.6, '2018-09-12 06:55:27', '2018-09-12 06:55:27'),
 (10, 'Revenue Expenditure /GSDP (Percentage)', 19.3, 19.7, 21.2, 21.9, 21.6, 26.3, '2018-09-12 06:55:27', '2018-09-12 06:55:27'),
 (11, 'Capital Outlay /GSDP (Percentage)', 3.4, 4.4, 5.3, 6.3, 6.2, 6.9, '2018-09-12 06:55:27', '2018-09-12 06:55:27');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `railways`
---
-
-DROP TABLE IF EXISTS `railways`;
-CREATE TABLE `railways` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Total_Rail_Route` float DEFAULT NULL,
-  `Total_Rail_Track` float DEFAULT NULL,
-  `Total_Rail_Route_Per_1000_sq_km` float DEFAULT NULL,
-  `Total_Rail_Route_Per_lakh_Population` float DEFAULT NULL,
-  `Total_Rail_Track_Per_1000_sq_km` float DEFAULT NULL,
-  `Total_Rail_Track_Per_lakh_Population` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `railways`
@@ -11754,25 +7953,6 @@ INSERT INTO `railways` (`id`, `Districts`, `Total_Rail_Route`, `Total_Rail_Track
 (16, 'West Bengal', 4135, 10604, 46.6, 7.9, 119.5, 11.6, '2018-10-30 07:24:20', '2018-10-30 07:24:20'),
 (17, 'India', 66687, 119630, 20.3, 7.6, 36.4, 9.9, '2018-10-30 07:24:20', '2018-10-30 07:24:20');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `rainfall1s`
---
-
-DROP TABLE IF EXISTS `rainfall1s`;
-CREATE TABLE `rainfall1s` (
-  `id` bigint(20) NOT NULL,
-  `Winter_Rain` float DEFAULT NULL,
-  `Hot_Weather_Rain` float DEFAULT NULL,
-  `Southwest_Monsoon` float DEFAULT NULL,
-  `Northwest_Monsoon` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `rainfall1s`
 --
@@ -11795,26 +7975,6 @@ INSERT INTO `rainfall1s` (`id`, `Winter_Rain`, `Hot_Weather_Rain`, `Southwest_Mo
 (15, 11.7, 89.3, 690.7, 4.3, 796, 2015, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
 (16, 7.5, 72.6, 937, 54.5, 1071.6, 2016, '2018-07-13 06:55:14', '2018-07-13 06:55:14'),
 (17, 0.4, 103.1, 843.2, 0, 946.8, 2017, '2018-07-13 06:55:14', '2018-07-13 06:55:14');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `rainfall2s`
---
-
-DROP TABLE IF EXISTS `rainfall2s`;
-CREATE TABLE `rainfall2s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Winter_Rain` float DEFAULT NULL,
-  `Hot_Weather_Rain` float DEFAULT NULL,
-  `South_West_Monsoon` float DEFAULT NULL,
-  `North_West_Monsoon` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `rainfall2s`
@@ -11900,26 +8060,6 @@ INSERT INTO `rainfall2s` (`id`, `Districts`, `Winter_Rain`, `Hot_Weather_Rain`, 
 (77, 'Vaishali', 0, 109.2, 880.8, 200.4, 990, 2017, '2018-08-24 07:02:42', '2018-08-24 07:02:42'),
 (78, 'WestChamparan', 9, 114.3, 1107.3, 109.2, 1230.7, 2017, '2018-08-24 07:02:42', '2018-08-24 07:02:42');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `rainfalls`
---
-
-DROP TABLE IF EXISTS `rainfalls`;
-CREATE TABLE `rainfalls` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `WinterRain` float DEFAULT NULL,
-  `HotWeatherRain` float DEFAULT NULL,
-  `SouthWestMonsoonRain` float DEFAULT NULL,
-  `NorthWestMonsoonRain` float DEFAULT NULL,
-  `TotalRainfall` float DEFAULT NULL,
-  `year` int(11) NOT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `rainfalls`
 --
@@ -12004,22 +8144,6 @@ INSERT INTO `rainfalls` (`id`, `Districts`, `WinterRain`, `HotWeatherRain`, `Sou
 (77, 'Katihar', 0, 141.8, 933.4, 1075.2, 0, 2017, '2018-07-10 04:42:09', '2018-07-10 04:42:09'),
 (78, 'Bihar', 0.4, 103.1, 843.2, 946.8, 0, 2017, '2018-07-10 04:42:09', '2018-07-10 04:42:09');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `regional_disparities`
---
-
-DROP TABLE IF EXISTS `regional_disparities`;
-CREATE TABLE `regional_disparities` (
-  `id` bigint(20) NOT NULL,
-  `Criteria` varchar(255) DEFAULT NULL,
-  `Top_3_District` varchar(255) DEFAULT NULL,
-  `Bottom_3_District` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `regional_disparities`
 --
@@ -12030,26 +8154,6 @@ INSERT INTO `regional_disparities` (`id`, `Criteria`, `Top_3_District`, `Bottom_
 (3, 'Diesel Consumption', 'Patna, Muzaffarpur, East Champaran', 'Sheohar, Arwal, Sheikhpura', '2018-08-31 05:51:16', '2018-08-31 05:51:16'),
 (4, 'LPG Consumption', 'Patna, Muzaffarpur, East Champaran', 'Sheohar, Arwal, Sheikhpura', '2018-08-31 05:51:16', '2018-08-31 05:51:16'),
 (5, 'Small Savings', 'Patna, Saran , Nalanda', 'Kishanganj, Araria, Khagaria', '2018-08-31 05:51:16', '2018-08-31 05:51:16');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `resource_management1s`
---
-
-DROP TABLE IF EXISTS `resource_management1s`;
-CREATE TABLE `resource_management1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `resource_management1s`
@@ -12064,22 +8168,6 @@ INSERT INTO `resource_management1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014
 (6, '(b) Grants-in-aid', 10278, 12584, 19146, 19566, 20559, 36956, '2018-09-10 10:41:39', '2018-09-10 10:41:39'),
 (7, 'III. Total Revenue Receipts', 59567, 68919, 78418, 96123, 105585, 137158, '2018-09-10 10:41:39', '2018-09-10 10:41:39'),
 (8, 'State’s Own Revenue as Percentage of Total Receipts', 29.2, 31.2, 28.4, 28.7, 24.8, 25.4, '2018-09-10 10:41:39', '2018-09-10 10:41:39');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `resource_management2s`
---
-
-DROP TABLE IF EXISTS `resource_management2s`;
-CREATE TABLE `resource_management2s` (
-  `id` bigint(20) NOT NULL,
-  `Sources_of_Revenue` varchar(255) DEFAULT NULL,
-  `Amount` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `resource_management2s`
@@ -12147,22 +8235,6 @@ INSERT INTO `resource_management2s` (`id`, `Sources_of_Revenue`, `Amount`, `Year
 (59, 'Other taxes on Income and Expenditure', 100, '2017-18_BE', '2018-08-21 12:09:36', '2018-08-21 12:09:36'),
 (60, 'Total', 32001, '2017-18_BE', '2018-08-21 12:09:36', '2018-08-21 12:09:36');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `resource_management3s`
---
-
-DROP TABLE IF EXISTS `resource_management3s`;
-CREATE TABLE `resource_management3s` (
-  `id` bigint(20) NOT NULL,
-  `Sources_of_Revenue` varchar(255) DEFAULT NULL,
-  `Percentage` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `resource_management3s`
 --
@@ -12216,22 +8288,6 @@ INSERT INTO `resource_management3s` (`id`, `Sources_of_Revenue`, `Percentage`, `
 (46, 'Land Revenue', 1.9, '2017-18_BE', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
 (47, 'Taxes and Duties on Electricity', 1.6, '2017-18_BE', '2018-09-05 12:06:31', '2018-09-05 12:06:31'),
 (48, 'Total', 100, '2017-18_BE', '2018-09-05 12:06:31', '2018-09-05 12:06:31');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `resource_management4s`
---
-
-DROP TABLE IF EXISTS `resource_management4s`;
-CREATE TABLE `resource_management4s` (
-  `id` bigint(20) NOT NULL,
-  `Sources_of_Revenue` varchar(255) DEFAULT NULL,
-  `Percentage_Growth_Over_Previous_Year` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `resource_management4s`
@@ -12293,22 +8349,6 @@ INSERT INTO `resource_management4s` (`id`, `Sources_of_Revenue`, `Percentage_Gro
 (53, 'Other Taxes and Duties  ', 10.1, 'CAGR_2012_to_18', '2018-09-06 05:39:20', '2018-09-06 05:39:20'),
 (54, 'Total', 12.5, 'CAGR_2012_to_18', '2018-09-06 05:39:20', '2018-09-06 05:39:20');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `resource_management5s`
---
-
-DROP TABLE IF EXISTS `resource_management5s`;
-CREATE TABLE `resource_management5s` (
-  `id` bigint(20) NOT NULL,
-  `Source` varchar(255) DEFAULT NULL,
-  `Percentage` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `resource_management5s`
 --
@@ -12332,22 +8372,6 @@ INSERT INTO `resource_management5s` (`id`, `Source`, `Percentage`, `Year`, `crea
 (16, 'Share of Indirect Taxes in State’s Own Tax Revenue in percentage', 76.2, '2017-18_BE', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
 (17, 'Share of Direct Taxes in State’s Own Tax Revenue in percentage', 23.8, '2017-18_BE', '2018-09-05 12:39:28', '2018-09-05 12:39:28'),
 (18, 'Total ', 100, '2017-18_BE', '2018-09-05 12:39:28', '2018-09-05 12:39:28');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `resource_management6s`
---
-
-DROP TABLE IF EXISTS `resource_management6s`;
-CREATE TABLE `resource_management6s` (
-  `id` bigint(20) NOT NULL,
-  `Sources_of_Revenue` varchar(255) DEFAULT NULL,
-  `Amount` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `resource_management6s`
@@ -12433,22 +8457,6 @@ INSERT INTO `resource_management6s` (`id`, `Sources_of_Revenue`, `Amount`, `Year
 (77, 'Others', 395, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08'),
 (78, 'Total', 2875, '2017-18_BE', '2018-09-05 13:02:08', '2018-09-05 13:02:08');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `resource_management7s`
---
-
-DROP TABLE IF EXISTS `resource_management7s`;
-CREATE TABLE `resource_management7s` (
-  `id` bigint(20) NOT NULL,
-  `Revenue_Sources` varchar(255) DEFAULT NULL,
-  `Percentage` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `resource_management7s`
 --
@@ -12490,22 +8498,6 @@ INSERT INTO `resource_management7s` (`id`, `Revenue_Sources`, `Percentage`, `Yea
 (34, 'Other Administrative Services', 8.9, '2017-18_BE', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
 (35, 'Other non-Tax Revenues', 22.6, '2017-18_BE', '2018-09-05 13:18:53', '2018-09-05 13:18:53'),
 (36, 'Total', 100, '2017-18_BE', '2018-09-05 13:18:53', '2018-09-05 13:18:53');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `resource_management8s`
---
-
-DROP TABLE IF EXISTS `resource_management8s`;
-CREATE TABLE `resource_management8s` (
-  `id` bigint(20) NOT NULL,
-  `Revenue_Sources` varchar(255) DEFAULT NULL,
-  `Yearly_Growth_Rates` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `resource_management8s`
@@ -12555,24 +8547,6 @@ INSERT INTO `resource_management8s` (`id`, `Revenue_Sources`, `Yearly_Growth_Rat
 (41, 'Other non-Tax Revenues', 2.1, 'CAGR_2012_to_18', '2018-09-06 06:22:31', '2018-09-06 06:22:31'),
 (42, 'Total', 19.8, 'CAGR_2012_to_18', '2018-09-06 06:22:31', '2018-09-06 06:22:31');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `resource_management9s`
---
-
-DROP TABLE IF EXISTS `resource_management9s`;
-CREATE TABLE `resource_management9s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Budget_Estimate` float DEFAULT NULL,
-  `Actual_Receipts` float DEFAULT NULL,
-  `Variation_Excess_or_Shortfall_in_Amount` float DEFAULT NULL,
-  `Variation_Excess_or_Shortfall_in_Percentage` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `resource_management9s`
 --
@@ -12604,24 +8578,6 @@ INSERT INTO `resource_management9s` (`id`, `Sector`, `Budget_Estimate`, `Actual_
 (24, 'Total', 2358, 2403, -45, -1.9, '2018-09-16 18:07:19', '2018-09-16 18:07:19'),
 (25, 'Grant Total (Tax + Non-Tax)', 32088, 26145, 5943, 22.7, '2018-09-16 18:07:19', '2018-09-16 18:07:19');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `resource_management10s`
---
-
-DROP TABLE IF EXISTS `resource_management10s`;
-CREATE TABLE `resource_management10s` (
-  `id` bigint(20) NOT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `Collection` float DEFAULT NULL,
-  `Expenditure_on_collection` float DEFAULT NULL,
-  `Cost_as_Percentage_of_Collection` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `resource_management10s`
 --
@@ -12651,22 +8607,6 @@ INSERT INTO `resource_management10s` (`id`, `Indicator`, `Collection`, `Expendit
 (22, 'Taxes on Vehicles', 1081, 40, 3.7, '2015-16', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
 (23, 'Taxes on Vehicles', 1257, 46, 3.7, '2016-17', '2018-09-17 07:55:24', '2018-09-17 07:55:24'),
 (24, 'Taxes on Vehicles', 1800, 47, 2.6, '2017-18 BE', '2018-09-17 07:55:24', '2018-09-17 07:55:24');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `resource_management11s`
---
-
-DROP TABLE IF EXISTS `resource_management11s`;
-CREATE TABLE `resource_management11s` (
-  `id` bigint(20) NOT NULL,
-  `Indicators` varchar(255) DEFAULT NULL,
-  `Percentage` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `resource_management11s`
@@ -12703,22 +8643,6 @@ INSERT INTO `resource_management11s` (`id`, `Indicators`, `Percentage`, `Year`, 
 (28, 'Total Revenue as percentage of GSDP', 29.4, '2017-18_BE', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (29, 'Buoyancy  of Total Revenue w.r.t. GSDP (Ratio)', 4.6, '2017-18_BE', '2018-09-06 06:43:08', '2018-09-06 06:43:08'),
 (30, 'Buoyancy of State’s Own Taxes w.r.t. GSDP(Ratio)', 5.4, '2017-18_BE', '2018-09-06 06:43:08', '2018-09-06 06:43:08');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `resource_management12s`
---
-
-DROP TABLE IF EXISTS `resource_management12s`;
-CREATE TABLE `resource_management12s` (
-  `id` bigint(20) NOT NULL,
-  `Revenue_Sources` varchar(255) DEFAULT NULL,
-  `Buoyancy_Ratio` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `resource_management12s`
@@ -12792,22 +8716,6 @@ INSERT INTO `resource_management12s` (`id`, `Revenue_Sources`, `Buoyancy_Ratio`,
 (65, 'Interest Receipts', -5.3, '2017-18_BE', '2018-09-06 07:09:44', '2018-09-06 07:09:44'),
 (66, 'Total Non Tax Revenue', 3, '2017-18_BE', '2018-09-06 07:09:44', '2018-09-06 07:09:44');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `resource_management13s`
---
-
-DROP TABLE IF EXISTS `resource_management13s`;
-CREATE TABLE `resource_management13s` (
-  `id` bigint(20) NOT NULL,
-  `Sources` varchar(255) DEFAULT NULL,
-  `Amount` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `resource_management13s`
 --
@@ -12850,22 +8758,6 @@ INSERT INTO `resource_management13s` (`id`, `Sources`, `Amount`, `Year`, `create
 (35, 'Total Grants', 36956, '2017-18_BE', '2018-09-06 07:28:52', '2018-09-06 07:28:52'),
 (36, 'BCR', 31320, '2017-18_BE', '2018-09-06 07:28:52', '2018-09-06 07:28:52');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `resource_management14s`
---
-
-DROP TABLE IF EXISTS `resource_management14s`;
-CREATE TABLE `resource_management14s` (
-  `id` bigint(20) NOT NULL,
-  `Agency` varchar(255) DEFAULT NULL,
-  `GoI_Scheme` varchar(255) DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `resource_management14s`
 --
@@ -12892,22 +8784,6 @@ INSERT INTO `resource_management14s` (`id`, `Agency`, `GoI_Scheme`, `2016-17`, `
 (19, 'Upendra Maharathi Shilp Anusandhan Sansthan', 'Comprehensive Cluster Development Programme', 11.3, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
 (20, 'Security and Intelligence Services (India) Ltd.', 'ASI', 8.94, '2018-09-16 18:52:27', '2018-09-16 18:52:27'),
 (21, 'Total', NULL, 2953.51, '2018-09-16 18:52:27', '2018-09-16 18:52:27');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `revenue_account1s`
---
-
-DROP TABLE IF EXISTS `revenue_account1s`;
-CREATE TABLE `revenue_account1s` (
-  `id` bigint(20) NOT NULL,
-  `Revenue_Account` varchar(255) DEFAULT NULL,
-  `Amount` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `revenue_account1s`
@@ -12963,22 +8839,6 @@ INSERT INTO `revenue_account1s` (`id`, `Revenue_Account`, `Amount`, `Year`, `cre
 (47, 'Central Grants as percentage of its total revenue', 26.9, '2017-18_BE', '2018-08-21 06:30:17', '2018-08-21 06:30:17'),
 (48, 'State’s own revenue as percentage of revenue expenditure', 28.4, '2017-18_BE', '2018-08-21 06:30:17', '2018-08-21 06:30:17');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `revenue_account2s`
---
-
-DROP TABLE IF EXISTS `revenue_account2s`;
-CREATE TABLE `revenue_account2s` (
-  `id` bigint(20) NOT NULL,
-  `Expenditure_Pattern` varchar(255) DEFAULT NULL,
-  `Amount` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `revenue_account2s`
 --
@@ -13009,22 +8869,6 @@ INSERT INTO `revenue_account2s` (`id`, `Expenditure_Pattern`, `Amount`, `Year`, 
 (23, 'Total Expenditure', 160086, '2017-18_BE', '2018-08-21 08:00:24', '2018-08-21 08:00:24'),
 (24, 'Development Expenditure as percentage of Total Expenditure', 70.6, '2017-18_BE', '2018-08-21 08:00:24', '2018-08-21 08:00:24');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `revenue_account3s`
---
-
-DROP TABLE IF EXISTS `revenue_account3s`;
-CREATE TABLE `revenue_account3s` (
-  `id` bigint(20) NOT NULL,
-  `Interest_Payment_and_Receipt` varchar(255) DEFAULT NULL,
-  `Amount` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `revenue_account3s`
 --
@@ -13042,22 +8886,6 @@ INSERT INTO `revenue_account3s` (`id`, `Interest_Payment_and_Receipt`, `Amount`,
 (10, 'Net Interest Payment', 7251, '2016-17', '2018-08-21 08:11:35', '2018-08-21 08:11:35'),
 (11, 'Gross Interest Payment', 9591, '2017-18_BE', '2018-08-21 08:11:35', '2018-08-21 08:11:35'),
 (12, 'Net Interest Payment', 8972, '2017-18_BE', '2018-08-21 08:11:35', '2018-08-21 08:11:35');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `revenue_account4s`
---
-
-DROP TABLE IF EXISTS `revenue_account4s`;
-CREATE TABLE `revenue_account4s` (
-  `id` bigint(20) NOT NULL,
-  `Revenue` varchar(255) DEFAULT NULL,
-  `Amount` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `revenue_account4s`
@@ -13100,22 +8928,6 @@ INSERT INTO `revenue_account4s` (`id`, `Revenue`, `Amount`, `Year`, `created_at`
 (34, 'Own Tax plus Non tax Revenue', 34876, '2017-18_BE', '2018-08-21 09:00:13', '2018-08-21 09:00:13'),
 (35, 'Capital Outlay', 32196, '2017-18_BE', '2018-08-21 09:00:14', '2018-08-21 09:00:14'),
 (36, 'Capital Outlay as percentage of Total Expenditure', 20.11, '2017-18_BE', '2018-08-21 09:00:14', '2018-08-21 09:00:14');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `revenue_account5s`
---
-
-DROP TABLE IF EXISTS `revenue_account5s`;
-CREATE TABLE `revenue_account5s` (
-  `id` bigint(20) NOT NULL,
-  `Transfer_of_Resources` varchar(255) DEFAULT NULL,
-  `Amount` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `revenue_account5s`
@@ -13171,26 +8983,6 @@ INSERT INTO `revenue_account5s` (`id`, `Transfer_of_Resources`, `Amount`, `Year`
 (47, 'Net Transfer of Resources', 103491, '2017-18_BE', '2018-08-21 11:57:05', '2018-08-21 11:57:05'),
 (48, 'Own Tax plus Non tax Revenue', 34876, '2017-18_BE', '2018-08-21 11:57:05', '2018-08-21 11:57:05');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `revenue_expenditures`
---
-
-DROP TABLE IF EXISTS `revenue_expenditures`;
-CREATE TABLE `revenue_expenditures` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `revenue_expenditures`
 --
@@ -13216,27 +9008,6 @@ INSERT INTO `revenue_expenditures` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-
 (18, 'Buoyancy of RE w.r.t. GSDP', 1.2, 1.2, 1.98, 1.35, 0.9, 4.54, '2018-09-11 12:51:57', '2018-09-11 12:51:57'),
 (19, 'Buoyancy of RE w.r.t. RR', 1.07, 0.94, 1.17, 0.67, 1.35, 0.98, '2018-09-11 12:51:57', '2018-09-11 12:51:57');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `roads1s`
---
-
-DROP TABLE IF EXISTS `roads1s`;
-CREATE TABLE `roads1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16_P` float DEFAULT NULL,
-  `2016-17_Q` float DEFAULT NULL,
-  `CAGR_2011-16` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `roads1s`
 --
@@ -13248,30 +9019,6 @@ INSERT INTO `roads1s` (`id`, `Sector`, `2011-12`, `2012-13`, `2013-14`, `2014-15
 (4, 'Water Transport', 0.02, 0.01, 0.01, 0.01, 0, 0, -25.4, '2018-11-01 05:45:47', '2018-11-01 05:45:47'),
 (5, 'Air Transport', 0.01, 0.02, 0.01, 0.02, 0.04, 0.05, 34.2, '2018-11-01 05:45:47', '2018-11-01 05:45:47'),
 (6, 'Communication', 2.21, 2.33, 2.61, 2.89, 3.18, 3.2, 14.6, '2018-11-01 05:45:47', '2018-11-01 05:45:47');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `roads2s`
---
-
-DROP TABLE IF EXISTS `roads2s`;
-CREATE TABLE `roads2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2007-08` float DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18` float DEFAULT NULL,
-  `CAGR_2014-18` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `roads2s`
@@ -13289,25 +9036,6 @@ INSERT INTO `roads2s` (`id`, `Sector`, `2007-08`, `2011-12`, `2012-13`, `2013-14
 (9, 'Development Expenditure', 13.2, 12.9, 9.1, 10, 8, 7.7, 6.8, 6.6, NULL, 'Public Investment in Road and Bridges as percentage', '2018-11-01 06:16:27', '2018-11-01 06:16:27'),
 (10, 'Total Budget', 8.5, 8, 5.9, 6.8, 5.5, 5.4, 5, 4.7, NULL, 'Public Investment in Road and Bridges as percentage', '2018-11-01 06:16:27', '2018-11-01 06:16:27'),
 (11, 'GSDP', 2.4, 2, 1.5, 1.7, 1.5, 1.6, 1.8, 1.5, NULL, 'Public Investment in Road and Bridges as percentage', '2018-11-01 06:16:27', '2018-11-01 06:16:27');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `roads3s`
---
-
-DROP TABLE IF EXISTS `roads3s`;
-CREATE TABLE `roads3s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `NH` float DEFAULT NULL,
-  `SH` float DEFAULT NULL,
-  `Other` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `roads3s`
@@ -13349,25 +9077,6 @@ INSERT INTO `roads3s` (`id`, `State`, `NH`, `SH`, `Other`, `Total`, `Indicator`,
 (33, 'West Bengal', 3.3, 4.2, 326.1, 333.5, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36'),
 (34, 'All-India', 3, 5.1, 131, 139.1, 'Road Density (km per 100 Square km)', '2018-11-01 07:11:36', '2018-11-01 07:11:36');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `roads4s`
---
-
-DROP TABLE IF EXISTS `roads4s`;
-CREATE TABLE `roads4s` (
-  `id` bigint(20) NOT NULL,
-  `Type_of_Road` varchar(255) DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Paved` float DEFAULT NULL,
-  `Percent_of_Total` float DEFAULT NULL,
-  `Percent_of_paved` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `roads4s`
 --
@@ -13395,23 +9104,6 @@ INSERT INTO `roads4s` (`id`, `Type_of_Road`, `Total`, `Paved`, `Percent_of_Total
 (20, 'Project Road', 2559, 508, 1.2, 0.5, '2015', '2018-10-25 06:30:39', '2018-10-25 06:30:39'),
 (21, 'Total', 206010, 108256, 100, 100, '2015', '2018-10-25 06:30:39', '2018-10-25 06:30:39');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `roads5s`
---
-
-DROP TABLE IF EXISTS `roads5s`;
-CREATE TABLE `roads5s` (
-  `id` bigint(20) NOT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `Length` float DEFAULT NULL,
-  `Percentage` float DEFAULT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `roads5s`
 --
@@ -13436,25 +9128,6 @@ INSERT INTO `roads5s` (`id`, `Indicator`, `Length`, `Percentage`, `Sector`, `cre
 (17, 'Missing Link', 0, 0, 'Major District Roads', '2018-10-25 07:43:10', '2018-10-25 07:43:10'),
 (18, 'Total', 11145.3, 100, 'Major District Roads', '2018-10-25 07:43:10', '2018-10-25 07:43:10');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `roads6s`
---
-
-DROP TABLE IF EXISTS `roads6s`;
-CREATE TABLE `roads6s` (
-  `id` bigint(20) NOT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `NH_in_kms` float DEFAULT NULL,
-  `Expenditure_on_NH_Development` float DEFAULT NULL,
-  `Expenditure_on_NH_Maintenance` float DEFAULT NULL,
-  `Total_Expenditure_on_NH` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `roads6s`
 --
@@ -13466,22 +9139,6 @@ INSERT INTO `roads6s` (`id`, `Indicator`, `NH_in_kms`, `Expenditure_on_NH_Develo
 (4, 'Bihar', 4913, 708, 107, 815, '2015-16', '2018-10-29 05:55:06', '2018-10-29 05:55:06'),
 (5, 'India', 101009, 40317, 2525, 42842, '2015-16', '2018-10-29 05:55:06', '2018-10-29 05:55:06'),
 (6, 'Bihar’s share in India', 4.9, 1.8, 4.2, 1.9, '2015-16', '2018-10-29 05:55:06', '2018-10-29 05:55:06');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `roads7s`
---
-
-DROP TABLE IF EXISTS `roads7s`;
-CREATE TABLE `roads7s` (
-  `id` bigint(20) NOT NULL,
-  `Project` varchar(255) DEFAULT NULL,
-  `Length_in_kms` float DEFAULT NULL,
-  `Remarks` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `roads7s`
@@ -13501,22 +9158,6 @@ INSERT INTO `roads7s` (`id`, `Project`, `Length_in_kms`, `Remarks`, `created_at`
 (11, 'LWE Road Development Scheme (2-lane)', 32, 'Work Completed (Bridge under progress)', '2018-10-22 09:00:41', '2018-10-22 09:00:41'),
 (12, 'Under Public-Private Partnership (4-lane)', 190, 'Rs. 5840.5 crore', '2018-10-22 09:00:41', '2018-10-22 09:00:41');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `roads8s`
---
-
-DROP TABLE IF EXISTS `roads8s`;
-CREATE TABLE `roads8s` (
-  `id` bigint(20) NOT NULL,
-  `Agency_wise_Road_Bridge` varchar(255) DEFAULT NULL,
-  `Length_in_kms` varchar(255) DEFAULT NULL,
-  `Remarks` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `roads8s`
 --
@@ -13532,23 +9173,6 @@ INSERT INTO `roads8s` (`id`, `Agency_wise_Road_Bridge`, `Length_in_kms`, `Remark
 (8, 'PPP Mode (Greenfield Bridge on River Ganga -Bakhtiyarpur on NH31 to Tajpur  NH28)', 'Bridge (5.5 kms) and Road (40.2 kms)', 'cost of Rs. 1602.74 crore (40 % work completed)', '2018-10-25 05:36:46', '2018-10-25 05:36:46'),
 (9, 'HUDCO (Road) ', 'Ganga Path (21.5 kms) elevated corridor (7.6 kms)', 'cost of Rs. 3160.00 crore (work under progress) ', '2018-10-25 05:36:46', '2018-10-25 05:36:46');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `roads9s`
---
-
-DROP TABLE IF EXISTS `roads9s`;
-CREATE TABLE `roads9s` (
-  `id` bigint(20) NOT NULL,
-  `Name_of_the_Scheme` varchar(255) DEFAULT NULL,
-  `Road_Constructed` float DEFAULT NULL,
-  `Bridge_Constructed` float DEFAULT NULL,
-  `Expenditure` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `roads9s`
 --
@@ -13561,25 +9185,6 @@ INSERT INTO `roads9s` (`id`, `Name_of_the_Scheme`, `Road_Constructed`, `Bridge_C
 (5, 'Mukhya Mantri Gram Sampark Yojana', 6837, NULL, 4665, '2018-10-29 07:16:57', '2018-10-29 07:16:57'),
 (6, 'Other State Plan Schemes (Discontinued)', 13242, 39, 5674, '2018-10-29 07:16:57', '2018-10-29 07:16:57'),
 (7, 'Total', 68948, 358, 34169, '2018-10-29 07:16:57', '2018-10-29 07:16:57');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `roads10s`
---
-
-DROP TABLE IF EXISTS `roads10s`;
-CREATE TABLE `roads10s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `NH` float DEFAULT NULL,
-  `SH` float DEFAULT NULL,
-  `MDR` float DEFAULT NULL,
-  `Rural_Road` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `roads10s`
@@ -13665,24 +9270,6 @@ INSERT INTO `roads10s` (`id`, `Districts`, `NH`, `SH`, `MDR`, `Rural_Road`, `Yea
 (77, 'Katihar', 158, 103, 275, 4531, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02'),
 (78, 'Total', 4917, 4006, 11145, 129473, '2017 upto Sept', '2018-10-30 10:30:02', '2018-10-30 10:30:02');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `road_transport1_part1s`
---
-
-DROP TABLE IF EXISTS `road_transport1_part1s`;
-CREATE TABLE `road_transport1_part1s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `Two_Wheeler` float DEFAULT NULL,
-  `Cars` float DEFAULT NULL,
-  `Jeeps` float DEFAULT NULL,
-  `Miscellaneous` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `road_transport1_part1s`
 --
@@ -13705,24 +9292,6 @@ INSERT INTO `road_transport1_part1s` (`id`, `State`, `Two_Wheeler`, `Cars`, `Jee
 (15, 'UttarPradesh', 17398, 1572, 491, 1259, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
 (16, 'WestBengal', 5280, 1002, 10, 349, '2018-11-06 06:45:40', '2018-11-06 06:45:40'),
 (17, 'All-India', 154298, 23808, 2547, 10475, '2018-11-06 06:45:40', '2018-11-06 06:45:40');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `road_transport1_part2s`
---
-
-DROP TABLE IF EXISTS `road_transport1_part2s`;
-CREATE TABLE `road_transport1_part2s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `Buses` float DEFAULT NULL,
-  `Taxis` float DEFAULT NULL,
-  `Light_Motor_Vehicles_Passengers` float DEFAULT NULL,
-  `Goods_Carrier_Vehicles` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `road_transport1_part2s`
@@ -13747,27 +9316,6 @@ INSERT INTO `road_transport1_part2s` (`id`, `State`, `Buses`, `Taxis`, `Light_Mo
 (16, 'WestBengal', 57, 125, 84, 496, '2018-11-06 07:04:39', '2018-11-06 07:04:39'),
 (17, 'All-India', 1527, 2257, 5028, 9344, '2018-11-06 07:04:39', '2018-11-06 07:04:39');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `road_transport2s`
---
-
-DROP TABLE IF EXISTS `road_transport2s`;
-CREATE TABLE `road_transport2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `CAGR_2011-17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `road_transport2s`
 --
@@ -13786,26 +9334,6 @@ INSERT INTO `road_transport2s` (`id`, `Sector`, `2011-12`, `2012-13`, `2013-14`,
 (11, 'Total', 439, 496, 553, 615, 704, 764, 11.9, '2018-11-05 06:48:10', '2018-11-05 06:48:10'),
 (12, 'Revenue Collection (Rs. crore)', 558, 669, 835, 967, 1071, 1250, 17.3, '2018-11-05 06:48:10', '2018-11-05 06:48:10');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `road_transport3s`
---
-
-DROP TABLE IF EXISTS `road_transport3s`;
-CREATE TABLE `road_transport3s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `CAGR` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `road_transport3s`
 --
@@ -13813,31 +9341,6 @@ CREATE TABLE `road_transport3s` (
 INSERT INTO `road_transport3s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`, `2015-16`, `2016-17`, `CAGR`, `created_at`, `updated_at`) VALUES
 (1, 'Revenue Collection ', 26, 21.1, 21.6, 24.9, 61.4, 20.7, '2018-10-29 08:50:22', '2018-10-29 08:50:22'),
 (2, 'No. of Passengers Carried', 146.6, 152.3, 110.6, 126.6, 184.5, 2.8, '2018-10-29 08:50:22', '2018-10-29 08:50:22');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `road_transport4s`
---
-
-DROP TABLE IF EXISTS `road_transport4s`;
-CREATE TABLE `road_transport4s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Truck` float DEFAULT NULL,
-  `Bus` float DEFAULT NULL,
-  `Car` float DEFAULT NULL,
-  `Taxi` float DEFAULT NULL,
-  `Jeep` float DEFAULT NULL,
-  `Three_Wheeler` float DEFAULT NULL,
-  `Two_Wheeler` float DEFAULT NULL,
-  `Tractor` float DEFAULT NULL,
-  `Trailor` float DEFAULT NULL,
-  `Other` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `road_transport4s`
@@ -13884,22 +9387,6 @@ INSERT INTO `road_transport4s` (`id`, `Districts`, `Truck`, `Bus`, `Car`, `Taxi`
 (38, 'Katihar', 42, 3, 265, 43, 4, 415, 21871, 1124, 575, NULL, 24342, '2018-10-30 11:06:18', '2018-10-30 11:06:18'),
 (39, 'Total', 19646, 2676, 33570, 5033, 8750, 41877, 592745, 38076, 20224, 1021, 763618, '2018-10-30 11:06:18', '2018-10-30 11:06:18');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `rural_development_programmes1s`
---
-
-DROP TABLE IF EXISTS `rural_development_programmes1s`;
-CREATE TABLE `rural_development_programmes1s` (
-  `id` bigint(20) NOT NULL,
-  `Items` varchar(255) DEFAULT NULL,
-  `Progress` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `rural_development_programmes1s`
 --
@@ -13936,26 +9423,6 @@ INSERT INTO `rural_development_programmes1s` (`id`, `Items`, `Progress`, `Year`,
 (29, 'Number of SHGs Credit Linked with Bank', 454532, '2017-18_till_Sept_17', '2018-11-15 07:14:57', '2018-11-15 07:14:57'),
 (30, 'Bank Credit (Rs.crore)', 3729, '2017-18_till_Sept_17', '2018-11-15 07:14:57', '2018-11-15 07:14:57');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `rural_development_programmes2s`
---
-
-DROP TABLE IF EXISTS `rural_development_programmes2s`;
-CREATE TABLE `rural_development_programmes2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `rural_development_programmes2s`
 --
@@ -13970,24 +9437,6 @@ INSERT INTO `rural_development_programmes2s` (`id`, `Sector`, `2011-12`, `2012-1
 (7, 'Number of completed works', 54589, 64846, 104832, 1155060, 109394, 72693, '2018-11-15 10:08:29', '2018-11-15 10:08:29'),
 (8, 'Fund utilized (percentage)', 65, 82.9, 81.8, 60.8, 82, 88.4, '2018-11-15 10:08:29', '2018-11-15 10:08:29'),
 (9, 'No. of  accounts opened (in lakh)', 107.6, 110.7, 111, 49.3, 34.2, 45.1, '2018-11-15 10:08:29', '2018-11-15 10:08:29');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `rural_development_programmes3s`
---
-
-DROP TABLE IF EXISTS `rural_development_programmes3s`;
-CREATE TABLE `rural_development_programmes3s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `rural_development_programmes3s`
@@ -14015,24 +9464,6 @@ INSERT INTO `rural_development_programmes3s` (`id`, `Sector`, `2014-15`, `2015-1
 (19, 'Any other activity ', 46.8, 22.1, 13.1, 'Percentage Share', '2018-11-15 10:01:17', '2018-11-15 10:01:17'),
 (20, 'Total Works Completed', 100, 100, 100, 'Percentage Share', '2018-11-15 10:01:17', '2018-11-15 10:01:17');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `rural_development_programmes4s`
---
-
-DROP TABLE IF EXISTS `rural_development_programmes4s`;
-CREATE TABLE `rural_development_programmes4s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Annual_Physical_Target` float DEFAULT NULL,
-  `Total_Houses_Completed` float DEFAULT NULL,
-  `Houses_Completed_for_SC_and_ST` float DEFAULT NULL,
-  `Percentage_of_Fund_Utilisation` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `rural_development_programmes4s`
 --
@@ -14044,23 +9475,6 @@ INSERT INTO `rural_development_programmes4s` (`id`, `Year`, `Annual_Physical_Tar
 (4, '2014-15', 2.75, 4.99, 2.48, 66.2, '2018-11-15 11:04:49', '2018-11-15 11:04:49'),
 (5, '2015-16', 2.33, 1.06, 0.29, 54.6, '2018-11-15 11:04:49', '2018-11-15 11:04:49'),
 (6, '2016-17', 6.37, 5.67, NULL, NULL, '2018-11-15 11:04:49', '2018-11-15 11:04:49');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `rural_development_programmes5s`
---
-
-DROP TABLE IF EXISTS `rural_development_programmes5s`;
-CREATE TABLE `rural_development_programmes5s` (
-  `id` bigint(20) NOT NULL,
-  `Social_Background_of_PDS_Dealers` varchar(255) DEFAULT NULL,
-  `No_of_PDS_Outlets` float DEFAULT NULL,
-  `Percentage_Share` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `rural_development_programmes5s`
@@ -14116,24 +9530,6 @@ INSERT INTO `rural_development_programmes5s` (`id`, `Social_Background_of_PDS_De
 (47, 'General Castes ', 8301, 20, '2017', '2018-11-15 11:10:29', '2018-11-15 11:10:29'),
 (48, 'Total', 41483, 100, '2017', '2018-11-15 11:10:29', '2018-11-15 11:10:29');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `rural_development_programmes6s`
---
-
-DROP TABLE IF EXISTS `rural_development_programmes6s`;
-CREATE TABLE `rural_development_programmes6s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Allotment` float DEFAULT NULL,
-  `Lifting` float DEFAULT NULL,
-  `Lifting_Percentage` float DEFAULT NULL,
-  `Crop` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `rural_development_programmes6s`
 --
@@ -14147,24 +9543,6 @@ INSERT INTO `rural_development_programmes6s` (`id`, `Year`, `Allotment`, `Liftin
 (6, '2014-15', 29489, 27919, 94.7, 'Rice', '2018-11-16 08:44:12', '2018-11-16 08:44:12'),
 (7, '2015-16', 31446, 29704, 94.5, 'Rice', '2018-11-16 08:44:12', '2018-11-16 08:44:12'),
 (8, '2016-17', 32465, 30685, 94.5, 'Rice', '2018-11-16 08:44:12', '2018-11-16 08:44:12');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `rural_development_programmes7s`
---
-
-DROP TABLE IF EXISTS `rural_development_programmes7s`;
-CREATE TABLE `rural_development_programmes7s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `rural_development_programmes7s`
@@ -14406,24 +9784,6 @@ INSERT INTO `rural_development_programmes7s` (`id`, `Sector`, `2014-15`, `2015-1
 (233, 'Katihar', 39.47, 45.73, 48.06, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58'),
 (234, 'Bihar', 37.32, 40.84, 43.89, 'Percentage share of women in total employment generated', '2018-11-15 11:23:58', '2018-11-15 11:23:58');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `rural_development_programmes8s`
---
-
-DROP TABLE IF EXISTS `rural_development_programmes8s`;
-CREATE TABLE `rural_development_programmes8s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Fund_available` float DEFAULT NULL,
-  `Fund_utilised` float DEFAULT NULL,
-  `Percentage_of_utilisation` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `rural_development_programmes8s`
 --
@@ -14550,29 +9910,6 @@ INSERT INTO `rural_development_programmes8s` (`id`, `Districts`, `Fund_available
 (119, 'State Fund', 4275.1, 569.44, 13.32, '2016-17', '2018-11-16 06:33:15', '2018-11-16 06:33:15'),
 (120, 'Bihar', 248035, 219211, 88.39, '2016-17', '2018-11-16 06:33:16', '2018-11-16 06:33:16');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `rural_development_programmes9s`
---
-
-DROP TABLE IF EXISTS `rural_development_programmes9s`;
-CREATE TABLE `rural_development_programmes9s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Number_of_Dealers` float DEFAULT NULL,
-  `Dealers_belonging_to_SC_or_ST` float DEFAULT NULL,
-  `Dealers_belonging_to_BC_or_EBC` float DEFAULT NULL,
-  `Dealers_belonging_to_Minority` float DEFAULT NULL,
-  `Dealers_belonging_to_Women` float DEFAULT NULL,
-  `Dealers_belonging_to_Women_or_Other_SHG` float DEFAULT NULL,
-  `Dealers_from_Helper_Samiti_or_PACS_or_Samiti_of_ExArmy_Personnel` float DEFAULT NULL,
-  `Dealers_belonging_to_General` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `rural_development_programmes9s`
 --
@@ -14617,24 +9954,6 @@ INSERT INTO `rural_development_programmes9s` (`id`, `Districts`, `Number_of_Deal
 (37, 'Araria', 1230, 14.5, 31.6, 23.4, 15.1, 0, 7.2, 8.1, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
 (38, 'Katihar', 1022, 18.5, 38.3, 10.7, 3.6, 0, 13.1, 15.9, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15'),
 (39, 'Bihar', 41483, 17.1, 36.7, 6.4, 8.1, 0.7, 11, 20, 100, '2018-11-16 07:06:15', '2018-11-16 07:06:15');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `rural_development_programmes10s`
---
-
-DROP TABLE IF EXISTS `rural_development_programmes10s`;
-CREATE TABLE `rural_development_programmes10s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Allotment` float DEFAULT NULL,
-  `Lifting` float DEFAULT NULL,
-  `Lifting_Percentage` float DEFAULT NULL,
-  `Crops` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `rural_development_programmes10s`
@@ -14720,22 +10039,6 @@ INSERT INTO `rural_development_programmes10s` (`id`, `Districts`, `Allotment`, `
 (77, 'Katihar', 103877, 103877, 100, 'Rice', '2018-11-19 06:54:50', '2018-11-19 06:54:50'),
 (78, 'Bihar', 3246460, 3068540, 94.5, 'Rice', '2018-11-19 06:54:50', '2018-11-19 06:54:50');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `rural_development_programmes11s`
---
-
-DROP TABLE IF EXISTS `rural_development_programmes11s`;
-CREATE TABLE `rural_development_programmes11s` (
-  `id` bigint(20) NOT NULL,
-  `Programme` varchar(255) DEFAULT NULL,
-  `Trained` float DEFAULT NULL,
-  `Placed` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `rural_development_programmes11s`
 --
@@ -14745,23 +10048,6 @@ INSERT INTO `rural_development_programmes11s` (`id`, `Programme`, `Trained`, `Pl
 (2, 'RSETI', 131838, 65580, '2018-11-15 09:06:20', '2018-11-15 09:06:20'),
 (3, 'Others', NULL, 98554, '2018-11-15 09:06:20', '2018-11-15 09:06:20'),
 (4, 'Total', 170446, 187386, '2018-11-15 09:06:20', '2018-11-15 09:06:20');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `rural_infrastructure_development_funds`
---
-
-DROP TABLE IF EXISTS `rural_infrastructure_development_funds`;
-CREATE TABLE `rural_infrastructure_development_funds` (
-  `id` bigint(20) NOT NULL,
-  `RIDF_Tranche` varchar(255) DEFAULT NULL,
-  `Sanction` float DEFAULT NULL,
-  `Disbursement` float DEFAULT NULL,
-  `Disbursement_Percentage` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `rural_infrastructure_development_funds`
@@ -14785,17 +10071,6 @@ INSERT INTO `rural_infrastructure_development_funds` (`id`, `RIDF_Tranche`, `San
 (15, 'Total till March 2015', 9756, 6418, 65.8, '2018-11-27 07:39:00', '2018-11-27 07:39:00'),
 (16, 'Total till March 2016', 11781, 7599, 64.5, '2018-11-27 07:39:00', '2018-11-27 07:39:00'),
 (17, 'Total till March 2017', 13596, 8834, 65, '2018-11-27 07:39:00', '2018-11-27 07:39:00');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `schema_migrations`
---
-
-DROP TABLE IF EXISTS `schema_migrations`;
-CREATE TABLE `schema_migrations` (
-  `version` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `schema_migrations`
@@ -15204,27 +10479,6 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20181212091006'),
 ('20181221104804');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_expenditure1s`
---
-
-DROP TABLE IF EXISTS `sectoral_expenditure1s`;
-CREATE TABLE `sectoral_expenditure1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `sectoral_expenditure1s`
 --
@@ -15267,27 +10521,6 @@ INSERT INTO `sectoral_expenditure1s` (`id`, `Sector`, `2012-13`, `2013-14`, `201
 (35, 'Capital Outlay (Rs. crore)', 7536, 10811, 14728, 17609, 21526, 23643, 'Total (Economic Services)', '2018-09-13 10:14:49', '2018-09-13 10:14:49'),
 (36, 'Capital Outlay (Percentage)', 37.2, 43.5, 50.5, 47.2, 47.9, 46.1, 'Total (Economic Services)', '2018-09-13 10:14:49', '2018-09-13 10:14:49');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_expenditure2s`
---
-
-DROP TABLE IF EXISTS `sectoral_expenditure2s`;
-CREATE TABLE `sectoral_expenditure2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `sectoral_expenditure2s`
 --
@@ -15308,27 +10541,6 @@ INSERT INTO `sectoral_expenditure2s` (`id`, `Sector`, `2012-13`, `2013-14`, `201
 (13, 'Economic Services', 1903, 2286, 2621, 3276, 3859, 4309, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
 (14, 'Capital Outlay ', 901, 1287, 1631, 2105, 2336, 2702, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58'),
 (15, 'General Services', 1820, 2146, 2530, 2774, 2807, 3775, 'Per Capita Expenditure (Rs.)', '2018-09-13 11:54:58', '2018-09-13 11:54:58');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_expenditures`
---
-
-DROP TABLE IF EXISTS `sectoral_expenditures`;
-CREATE TABLE `sectoral_expenditures` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `sectoral_expenditures`
@@ -15360,25 +10572,6 @@ INSERT INTO `sectoral_expenditures` (`id`, `Sector`, `2012-13`, `2013-14`, `2014
 (23, 'Capital Outlay (Rs. crore)', 1331, 1858, 1674, 2740, 3592, 5186, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24'),
 (24, 'Capital Outlay (Percentage)', 5.4, 6.6, 5, 7.1, 8.1, 8.9, 'Total (Social Services)', '2018-09-13 09:39:24', '2018-09-13 09:39:24');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_share1s`
---
-
-DROP TABLE IF EXISTS `sectoral_share1s`;
-CREATE TABLE `sectoral_share1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `ACP_Target` float DEFAULT NULL,
-  `Achievement` float DEFAULT NULL,
-  `Achievement_Percentage` float DEFAULT NULL,
-  `Percentage_of_Share_in_Advances` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `sectoral_share1s`
 --
@@ -15397,23 +10590,6 @@ INSERT INTO `sectoral_share1s` (`id`, `Sector`, `ACP_Target`, `Achievement`, `Ac
 (11, 'Non Priority Sector Advances', 25000, 23002, 92, 25, '2016-17', '2018-11-27 10:51:36', '2018-11-27 10:51:36'),
 (12, 'Total', 100000, 87909, 87.9, 100, '2016-17', '2018-11-27 10:51:36', '2018-11-27 10:51:36');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_share2s`
---
-
-DROP TABLE IF EXISTS `sectoral_share2s`;
-CREATE TABLE `sectoral_share2s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Achievement` float DEFAULT NULL,
-  `Achievement_Percentage` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `sectoral_share2s`
 --
@@ -15425,24 +10601,6 @@ INSERT INTO `sectoral_share2s` (`id`, `Year`, `Target`, `Achievement`, `Achievem
 (4, '2014-15', 74000, 68797, 93, '2018-11-27 10:29:27', '2018-11-27 10:29:27'),
 (5, '2015-16', 83999, 80084, 95.3, '2018-11-27 10:29:27', '2018-11-27 10:29:27'),
 (6, '2016-17', 100000, 87909, 87.9, '2018-11-27 10:29:27', '2018-11-27 10:29:27');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_share3s`
---
-
-DROP TABLE IF EXISTS `sectoral_share3s`;
-CREATE TABLE `sectoral_share3s` (
-  `id` bigint(20) NOT NULL,
-  `Agencies` varchar(255) DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Achievement` float DEFAULT NULL,
-  `Achievement_Percentage` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `sectoral_share3s`
@@ -15457,24 +10615,6 @@ INSERT INTO `sectoral_share3s` (`id`, `Agencies`, `Target`, `Achievement`, `Achi
 (6, 'Regional Rural Bank', 22460, 17452, 77.7, '2016-17', '2018-11-27 09:46:19', '2018-11-27 09:46:19'),
 (7, 'Cooperative Banks', 1000, 1825, 182.5, '2016-17', '2018-11-27 09:46:19', '2018-11-27 09:46:19'),
 (8, 'Total', 100000, 87909, 87.9, '2016-17', '2018-11-27 09:46:19', '2018-11-27 09:46:19');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_share4s`
---
-
-DROP TABLE IF EXISTS `sectoral_share4s`;
-CREATE TABLE `sectoral_share4s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Achievement` float DEFAULT NULL,
-  `Achievement_Percentage` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `sectoral_share4s`
@@ -15506,25 +10646,6 @@ INSERT INTO `sectoral_share4s` (`id`, `Year`, `Target`, `Achievement`, `Achievem
 (23, '2015-16', 42500, 41350, 97.3, 'Total', '2018-11-28 08:43:20', '2018-11-28 08:43:20'),
 (24, '2016-17', 48000, 41076, 85.6, 'Total', '2018-11-28 08:43:20', '2018-11-28 08:43:20');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_share5s`
---
-
-DROP TABLE IF EXISTS `sectoral_share5s`;
-CREATE TABLE `sectoral_share5s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Commercial_Banks` float DEFAULT NULL,
-  `RRBs` float DEFAULT NULL,
-  `Cooperative_and_LDBs` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Annual_Growth_Rate` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `sectoral_share5s`
 --
@@ -15536,29 +10657,6 @@ INSERT INTO `sectoral_share5s` (`id`, `Year`, `Commercial_Banks`, `RRBs`, `Coope
 (4, '2014-15', 23130, 6311, 1212, 30652, 20.8, '2018-11-28 07:51:32', '2018-11-28 07:51:32'),
 (5, '2015-16', 25281, 8856, 1536, 35673, 16.4, '2018-11-28 07:51:32', '2018-11-28 07:51:32'),
 (6, '2016-17', 27256, 10938, 3636, 41830, 17.3, '2018-11-28 07:51:32', '2018-11-28 07:51:32');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_share6s`
---
-
-DROP TABLE IF EXISTS `sectoral_share6s`;
-CREATE TABLE `sectoral_share6s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `No_of_PACS` float DEFAULT NULL,
-  `Deposits_Rs_crore` float DEFAULT NULL,
-  `Borrowings_Rs_crore` float DEFAULT NULL,
-  `Loans_and_Advances_Outstanding_for_Agriculture_Rs_crore` float DEFAULT NULL,
-  `Loans_and_Advances_Outstanding_for_Non_Agriculture_Rs_crore` float DEFAULT NULL,
-  `No_of_Societies_in_Profit` float DEFAULT NULL,
-  `Amount_of_Societies_in_Profit_Rs_lakh` float DEFAULT NULL,
-  `No_of_Societies_in_Loss` float DEFAULT NULL,
-  `Amount_of_Societies_in_Loss_Rs_lakh` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `sectoral_share6s`
@@ -15583,24 +10681,6 @@ INSERT INTO `sectoral_share6s` (`id`, `Districts`, `No_of_PACS`, `Deposits_Rs_cr
 (16, 'Uttarakhand', 759, 849, 828, 611, 123, 604, 1248, 146, 411, '2018-11-28 05:36:55', '2018-11-28 05:36:55'),
 (17, 'West Bengal', 7402, 1891, 1799, 1387, 530, 2344, 2040, 4036, 1445, '2018-11-28 05:36:55', '2018-11-28 05:36:55'),
 (18, 'India', 93367, 101065, 112690, 75211, 83289, 45241, 405165, 36695, 645213, '2018-11-28 05:36:55', '2018-11-28 05:36:55');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_share7s`
---
-
-DROP TABLE IF EXISTS `sectoral_share7s`;
-CREATE TABLE `sectoral_share7s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `sectoral_share7s`
@@ -15659,24 +10739,6 @@ INSERT INTO `sectoral_share7s` (`id`, `Sector`, `2013-14`, `2014-15`, `2015-16`,
 (50, 'West Bengal', 94.8, 0.5, 0.7, 'Collection as percent of Loans Outstanding', '2018-11-29 05:06:26', '2018-11-29 05:06:26'),
 (51, 'India', 53.3, 0.8, 53.4, 'Collection as percent of Loans Outstanding', '2018-11-29 05:06:26', '2018-11-29 05:06:26');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_share8s`
---
-
-DROP TABLE IF EXISTS `sectoral_share8s`;
-CREATE TABLE `sectoral_share8s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Branches_as_on_March_30_2016` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `sectoral_share8s`
 --
@@ -15731,24 +10793,6 @@ INSERT INTO `sectoral_share8s` (`id`, `Sector`, `Branches_as_on_March_30_2016`, 
 (47, 'West Bengal', NULL, 57.21, 38.14, 'Recovery percentage to demand', '2018-11-29 06:06:12', '2018-11-29 06:06:12'),
 (48, 'All India ', NULL, 46.73, 56.04, 'Recovery percentage to demand', '2018-11-29 06:06:12', '2018-11-29 06:06:12');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_share9s`
---
-
-DROP TABLE IF EXISTS `sectoral_share9s`;
-CREATE TABLE `sectoral_share9s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Achievement` float DEFAULT NULL,
-  `Achievement_Percentage` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `sectoral_share9s`
 --
@@ -15778,30 +10822,6 @@ INSERT INTO `sectoral_share9s` (`id`, `Year`, `Target`, `Achievement`, `Achievem
 (22, '2014-15', 1500000, 995268, 66.4, 'Total', '2018-11-28 09:07:15', '2018-11-28 09:07:15'),
 (23, '2015-16', 1500000, 763683, 51, 'Total', '2018-11-28 09:07:15', '2018-11-28 09:07:15'),
 (24, '2016-17', 1500000, 580447, 38.7, 'Total', '2018-11-28 09:07:15', '2018-11-28 09:07:15');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_share10s`
---
-
-DROP TABLE IF EXISTS `sectoral_share10s`;
-CREATE TABLE `sectoral_share10s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2007-08` float DEFAULT NULL,
-  `2008-09` float DEFAULT NULL,
-  `2009-10` float DEFAULT NULL,
-  `2010-11` float DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `sectoral_share10s`
@@ -15847,24 +10867,6 @@ INSERT INTO `sectoral_share10s` (`id`, `Sector`, `2007-08`, `2008-09`, `2009-10`
 (37, 'Araria', 8.56, 16.38, 20.23, 29.47, 47.76, 54.05, 82.37, 53.92, 60.22, 42.71, '2018-11-27 06:01:53', '2018-11-27 06:01:53'),
 (38, 'Katihar', 12.21, 19.83, 29.76, 31.62, 48.62, 45.51, 53.03, 49.92, 60.84, 41.77, '2018-11-27 06:01:53', '2018-11-27 06:01:53'),
 (39, 'Bihar', 466.54, 897.25, 1339.54, 1402.83, 1847.44, 2231.79, 2514.76, 2471.35, 2814.83, 2524.66, '2018-11-27 06:01:53', '2018-11-27 06:01:53');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_share11s`
---
-
-DROP TABLE IF EXISTS `sectoral_share11s`;
-CREATE TABLE `sectoral_share11s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Achievement` float DEFAULT NULL,
-  `Achievement_Percentage` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `sectoral_share11s`
@@ -16028,24 +11030,6 @@ INSERT INTO `sectoral_share11s` (`id`, `Districts`, `Target`, `Achievement`, `Ac
 (155, 'Katihar', 1672, 1402, 83.9, 'Total Priority Sector', '2018-11-28 10:04:11', '2018-11-28 10:04:11'),
 (156, 'Bihar', 75000, 64907, 86.5, 'Total Priority Sector', '2018-11-28 10:04:11', '2018-11-28 10:04:11');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `sectoral_share12s`
---
-
-DROP TABLE IF EXISTS `sectoral_share12s`;
-CREATE TABLE `sectoral_share12s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Achievement` float DEFAULT NULL,
-  `Achievement_Percentage` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `sectoral_share12s`
 --
@@ -16130,24 +11114,6 @@ INSERT INTO `sectoral_share12s` (`id`, `Districts`, `Target`, `Achievement`, `Ac
 (77, 'Katihar', 2319, 1958, 84.4, 'Grand total', '2018-11-28 10:25:42', '2018-11-28 10:25:42'),
 (78, 'Bihar', 100000, 87909, 87.9, 'Grand total', '2018-11-28 10:25:42', '2018-11-28 10:25:42');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `sixth_economic_census1s`
---
-
-DROP TABLE IF EXISTS `sixth_economic_census1s`;
-CREATE TABLE `sixth_economic_census1s` (
-  `id` bigint(20) NOT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Number_2005` float DEFAULT NULL,
-  `Number_2013` float DEFAULT NULL,
-  `Percentage_Increase` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `sixth_economic_census1s`
 --
@@ -16171,25 +11137,6 @@ INSERT INTO `sixth_economic_census1s` (`id`, `Indicator`, `Sector`, `Number_2005
 (16, 'No. of Persons Employed', 'Rural', 1405, 2171, 54.6, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
 (17, 'No. of Persons Employed', 'Urban', 865, 1073, 24, '2018-10-08 11:08:21', '2018-10-08 11:08:21'),
 (18, 'No. of Persons Employed', 'Total', 2270, 3244, 42.9, '2018-10-08 11:08:21', '2018-10-08 11:08:21');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sixth_economic_census2s`
---
-
-DROP TABLE IF EXISTS `sixth_economic_census2s`;
-CREATE TABLE `sixth_economic_census2s` (
-  `id` bigint(20) NOT NULL,
-  `District` varchar(255) DEFAULT NULL,
-  `Number_of_Establishments_Rural` float DEFAULT NULL,
-  `Number_of_Establishments_Urban` float DEFAULT NULL,
-  `Total_Number_of_Establishments` float DEFAULT NULL,
-  `Percentage_Share_Establishments` float DEFAULT NULL,
-  `Percentage_Share_Population` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `sixth_economic_census2s`
@@ -16236,24 +11183,6 @@ INSERT INTO `sixth_economic_census2s` (`id`, `District`, `Number_of_Establishmen
 (38, 'Katihar', 37090, 12316, 49406, 2.9, 3, '2018-09-09 05:28:55', '2018-09-09 05:28:55'),
 (39, 'Bihar', 1200510, 506889, 1707400, 100, 100, '2018-09-09 05:28:55', '2018-09-09 05:28:55');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `social_security_for_old_and_disableds`
---
-
-DROP TABLE IF EXISTS `social_security_for_old_and_disableds`;
-CREATE TABLE `social_security_for_old_and_disableds` (
-  `id` bigint(20) NOT NULL,
-  `Name_of_the_Scheme` varchar(255) DEFAULT NULL,
-  `Budget_Outlay` float DEFAULT NULL,
-  `Expenditure` float DEFAULT NULL,
-  `Physical_Achievement` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `social_security_for_old_and_disableds`
 --
@@ -16292,26 +11221,6 @@ INSERT INTO `social_security_for_old_and_disableds` (`id`, `Name_of_the_Scheme`,
 (31, 'Chief Minister Disabled Marriage Grant Scheme', 50, 50, 0, '2016-17', '2018-12-10 08:39:54', '2018-12-10 08:39:54'),
 (32, 'Total', 331549, 280672, 5604, '2016-17', '2018-12-10 08:39:54', '2018-12-10 08:39:54');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `social_welfare1s`
---
-
-DROP TABLE IF EXISTS `social_welfare1s`;
-CREATE TABLE `social_welfare1s` (
-  `id` bigint(20) NOT NULL,
-  `Scheme` varchar(255) DEFAULT NULL,
-  `Number_of_Beneficiaries` float DEFAULT NULL,
-  `Term_Loan` float DEFAULT NULL,
-  `Bank_Loan` float DEFAULT NULL,
-  `Margin_Money` float DEFAULT NULL,
-  `Subsidy` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `social_welfare1s`
 --
@@ -16328,24 +11237,6 @@ INSERT INTO `social_welfare1s` (`id`, `Scheme`, `Number_of_Beneficiaries`, `Term
 (9, 'Subsidy Scheme (executed through Bank)', 2827, NULL, 537.75, NULL, 282.7, 820.45, '2018-12-03 09:43:00', '2018-12-03 09:43:00'),
 (10, 'Total', 3356, 116.34, 537.75, 0.46, 335.6, 990.15, '2018-12-03 09:43:00', '2018-12-03 09:43:00');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `social_welfare2s`
---
-
-DROP TABLE IF EXISTS `social_welfare2s`;
-CREATE TABLE `social_welfare2s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Total_Outlay` float DEFAULT NULL,
-  `Total_Approved_Amount` float DEFAULT NULL,
-  `Total_Expenditure` float DEFAULT NULL,
-  `Utilisation_percentage` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `social_welfare2s`
 --
@@ -16356,23 +11247,6 @@ INSERT INTO `social_welfare2s` (`id`, `Year`, `Total_Outlay`, `Total_Approved_Am
 (3, '2014-15', 1477.97, 1477.97, 1445.4, 97.8, '2018-12-03 10:24:10', '2018-12-03 10:24:10'),
 (4, '2015-16', 2975.3, 2781.45, 2695.07, 90.6, '2018-12-03 10:24:10', '2018-12-03 10:24:10'),
 (5, '2016-17', 1927.8, 1680, 1459.6, 75.7, '2018-12-03 10:24:10', '2018-12-03 10:24:10');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `social_welfare3s`
---
-
-DROP TABLE IF EXISTS `social_welfare3s`;
-CREATE TABLE `social_welfare3s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Number_of_Beneficiaries` float DEFAULT NULL,
-  `Fund_Allocation` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `social_welfare3s`
@@ -16416,24 +11290,6 @@ INSERT INTO `social_welfare3s` (`id`, `Year`, `Number_of_Beneficiaries`, `Fund_A
 (35, '2015-16', NULL, 500, 'Construction of 38 Jannayak Karpuri Thakur Hostels for EBC Students', '2018-12-03 10:45:13', '2018-12-03 10:45:13'),
 (36, '2016-17', NULL, 1000, 'Construction of 38 Jannayak Karpuri Thakur Hostels for EBC Students', '2018-12-03 10:45:13', '2018-12-03 10:45:13');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `social_welfares`
---
-
-DROP TABLE IF EXISTS `social_welfares`;
-CREATE TABLE `social_welfares` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Budget` float DEFAULT NULL,
-  `Actual_Expenditure` float DEFAULT NULL,
-  `Utilisation_Percentage` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `social_welfares`
 --
@@ -16451,24 +11307,6 @@ INSERT INTO `social_welfares` (`id`, `Sector`, `Budget`, `Actual_Expenditure`, `
 (10, 'Capital Outlay on Cooperatives', 9.89, 9.89, 100, '2016-17', '2018-11-30 08:00:37', '2018-11-30 08:00:37'),
 (11, 'Other Administrative Service', 0.05, 0, 0, '2016-17', '2018-11-30 08:00:37', '2018-11-30 08:00:37'),
 (12, ' Total', 1743.88, 1288.7, 73.9, '2016-17', '2018-11-30 08:00:37', '2018-11-30 08:00:37');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `state_domestic_product1s`
---
-
-DROP TABLE IF EXISTS `state_domestic_product1s`;
-CREATE TABLE `state_domestic_product1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2011-12_to_2015-16` float DEFAULT NULL,
-  `Reference` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `state_domestic_product1s`
@@ -16537,22 +11375,6 @@ INSERT INTO `state_domestic_product1s` (`id`, `Sector`, `2015-16`, `2016-17`, `2
 (60, 'Taxes on Products', 21.9, 21.9, 17.4, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
 (61, 'Subsidies on products', 22.2, 22.2, 13.5, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23'),
 (62, 'Gross State Domestic Product', 7.5, 10.3, 4.9, 'Constant Prices', '2018-09-09 10:09:23', '2018-09-09 10:09:23');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `state_domestic_product2s`
---
-
-DROP TABLE IF EXISTS `state_domestic_product2s`;
-CREATE TABLE `state_domestic_product2s` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `Per_Capita_Income` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `state_domestic_product2s`
@@ -16656,25 +11478,6 @@ INSERT INTO `state_domestic_product2s` (`id`, `State`, `Per_Capita_Income`, `Yea
 (95, 'Uttar Pradesh', 39028, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17'),
 (96, 'India', 82269, 2016, '2018-08-17 10:54:17', '2018-08-17 10:54:17');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `state_domestic_product4s`
---
-
-DROP TABLE IF EXISTS `state_domestic_product4s`;
-CREATE TABLE `state_domestic_product4s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `GSDP` float DEFAULT NULL,
-  `NSDP` float DEFAULT NULL,
-  `Per_Capita_GSDP` float DEFAULT NULL,
-  `Reference` varchar(255) DEFAULT NULL,
-  `Factor_Cost` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `state_domestic_product4s`
 --
@@ -16719,27 +11522,6 @@ INSERT INTO `state_domestic_product4s` (`id`, `Year`, `GSDP`, `NSDP`, `Per_Capit
 (37, '2016-17 (Q)', 331572, 303333, 29178, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04'),
 (38, 'CAGR (2011-17)', 5.8, 5.6, 4.2, 'At constant (2004-05) prices', 'Base Year 2011-12 at Market Price', '2018-09-07 10:51:04', '2018-09-07 10:51:04');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `state_domestic_product5s`
---
-
-DROP TABLE IF EXISTS `state_domestic_product5s`;
-CREATE TABLE `state_domestic_product5s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2011-16` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `state_domestic_product5s`
 --
@@ -16778,27 +11560,6 @@ INSERT INTO `state_domestic_product5s` (`id`, `Sector`, `2011-12`, `2012-13`, `2
 (31, 'Gross State Domestic Product', 247144, 282368, 317101, 342951, 381501, 438030, 11.2, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
 (32, 'Population (crore)', 10.5, 10.6, 10.8, 11, 11.1, 11.4, 1.6, '2018-08-29 05:40:34', '2018-08-29 05:40:34'),
 (33, 'Per Capita GSDP (Rs.)', 23525, 26459, 29251, 31142, 34103, 38546, 9.5, '2018-08-29 05:40:34', '2018-08-29 05:40:34');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `state_domestic_product6s`
---
-
-DROP TABLE IF EXISTS `state_domestic_product6s`;
-CREATE TABLE `state_domestic_product6s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2011-16` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `state_domestic_product6s`
@@ -16839,27 +11600,6 @@ INSERT INTO `state_domestic_product6s` (`id`, `Sector`, `2011-12`, `2012-13`, `2
 (32, 'Population (crore)', 10.5, 10.6, 10.8, 11, 11.1, 11.4, 1.6, '2018-08-29 07:12:10', '2018-08-29 07:12:10'),
 (33, 'Per Capita GSDP (Rs.)', 23525, 24068, 24874, 25379, 26868, 29178, 3.2, '2018-08-29 07:12:10', '2018-08-29 07:12:10');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `state_domestic_product7s`
---
-
-DROP TABLE IF EXISTS `state_domestic_product7s`;
-CREATE TABLE `state_domestic_product7s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2011-16` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `state_domestic_product7s`
 --
@@ -16899,27 +11639,6 @@ INSERT INTO `state_domestic_product7s` (`id`, `Sector`, `2011-12`, `2012-13`, `2
 (32, 'Population (crore)', 10.5, 10.6, 10.8, 11, 11.1, 11.4, 1.6, '2018-08-29 07:16:23', '2018-08-29 07:16:23'),
 (33, 'Per Capita NSDP (Rs.)', 21750, 24487, 26948, 28671, 31454, 35590, 9.4, '2018-08-29 07:16:23', '2018-08-29 07:16:23');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `state_domestic_product8s`
---
-
-DROP TABLE IF EXISTS `state_domestic_product8s`;
-CREATE TABLE `state_domestic_product8s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2011-12` float DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2011-16` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `state_domestic_product8s`
 --
@@ -16958,22 +11677,6 @@ INSERT INTO `state_domestic_product8s` (`id`, `Sector`, `2011-12`, `2012-13`, `2
 (31, 'Net State Domestic Product', 228497, 236933, 246915, 255739, 274882, 303333, 4.6, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
 (32, 'Population (crore)', 10.5, 10.6, 10.8, 11, 11.1, 11.4, 1.6, '2018-08-29 07:22:02', '2018-08-29 07:22:02'),
 (33, 'Per Capita NSDP (Rs.)', 21750, 22201, 22776, 23223, 24572, 26693, 2.9, '2018-08-29 07:22:02', '2018-08-29 07:22:02');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `state_domestic_product9s`
---
-
-DROP TABLE IF EXISTS `state_domestic_product9s`;
-CREATE TABLE `state_domestic_product9s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Per_Capita_GDP` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `state_domestic_product9s`
@@ -17176,28 +11879,6 @@ INSERT INTO `state_domestic_product9s` (`id`, `Districts`, `Per_Capita_GDP`, `Ye
 (194, 'Katihar', 11278, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19'),
 (195, 'Bihar', 14574, 2011, '2018-10-16 08:07:19', '2018-10-16 08:07:19');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `state_domestic_product10s`
---
-
-DROP TABLE IF EXISTS `state_domestic_product10s`;
-CREATE TABLE `state_domestic_product10s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Share_of_Population` float DEFAULT NULL,
-  `Petrol` float DEFAULT NULL,
-  `Diesel` float DEFAULT NULL,
-  `LPG` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Percentage_Share_of_Petrol` float DEFAULT NULL,
-  `Percentage_Share_of_Diesel` float DEFAULT NULL,
-  `Percentage_Share_of_LPG` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `state_domestic_product10s`
 --
@@ -17320,23 +12001,6 @@ INSERT INTO `state_domestic_product10s` (`id`, `Districts`, `Share_of_Population
 (115, 'Araria', 2.7, 16789, 56782, 11543, 'Avg of 2015-17', 2.9, 2.6, 1.3, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
 (116, 'Katihar', 3, 12640, 69503, 14849, 'Avg of 2015-17', 2.2, 3.1, 1.7, '2018-08-31 08:22:01', '2018-08-31 08:22:01'),
 (117, 'Bihar', 100, 577748, 2218030, 856393, 'Avg of 2015-17', 100, 100, 100, '2018-08-31 08:22:01', '2018-08-31 08:22:01');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `state_domestic_product11s`
---
-
-DROP TABLE IF EXISTS `state_domestic_product11s`;
-CREATE TABLE `state_domestic_product11s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Achievement` float DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `state_domestic_product11s`
@@ -17500,27 +12164,6 @@ INSERT INTO `state_domestic_product11s` (`id`, `Districts`, `Target`, `Achieveme
 (155, 'Katihar', 35, 41.57, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42'),
 (156, 'Bihar', 3300, 3073.05, 2016, '2018-08-17 11:55:42', '2018-08-17 11:55:42');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `state_public_sector1s`
---
-
-DROP TABLE IF EXISTS `state_public_sector1s`;
-CREATE TABLE `state_public_sector1s` (
-  `id` bigint(20) NOT NULL,
-  `Year_as_on_31st_March` varchar(255) DEFAULT NULL,
-  `Number_of_Working_PSUs` float DEFAULT NULL,
-  `Number_of_Non_Working_PSUs` float DEFAULT NULL,
-  `Statutory_Corporations` float DEFAULT NULL,
-  `Public_Sector_Companies` varchar(255) DEFAULT NULL,
-  `Equity` float DEFAULT NULL,
-  `Loans` float DEFAULT NULL,
-  `Investment` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `state_public_sector1s`
 --
@@ -17532,27 +12175,6 @@ INSERT INTO `state_public_sector1s` (`id`, `Year_as_on_31st_March`, `Number_of_W
 (4, '2015', 30, 40, 3, '73.0', 21542, 12242, 33783, '2018-09-26 07:57:47', '2018-09-26 07:57:47'),
 (5, '2016', 31, 40, 3, '74.0', 31394, 15299, 46694, '2018-09-26 07:57:47', '2018-09-26 07:57:47');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `state_public_sector2s`
---
-
-DROP TABLE IF EXISTS `state_public_sector2s`;
-CREATE TABLE `state_public_sector2s` (
-  `id` bigint(20) NOT NULL,
-  `Type_of_Company_or_corporation` varchar(255) DEFAULT NULL,
-  `Government_Companies_Capital` float DEFAULT NULL,
-  `Government_Companies_Long_Term_Loans` float DEFAULT NULL,
-  `Total_Government_Companies` float DEFAULT NULL,
-  `Statutory_Corporations_Capital` float DEFAULT NULL,
-  `Statutory_Corporations_Long_Term_Loans` float DEFAULT NULL,
-  `Total_Statutory_Corporations` float DEFAULT NULL,
-  `Grand_Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `state_public_sector2s`
 --
@@ -17561,23 +12183,6 @@ INSERT INTO `state_public_sector2s` (`id`, `Type_of_Company_or_corporation`, `Go
 (1, 'Working', 31028, 13657, 44685, 186, 1095, 1280, 45965, '2018-09-12 12:20:36', '2018-09-12 12:20:36'),
 (2, 'Non-Working', 181, 548, 729, NULL, NULL, NULL, 729, '2018-09-12 12:20:36', '2018-09-12 12:20:36'),
 (3, 'Total', 31209, 14205, 45414, 186, 1095, 1280, 46694, '2018-09-12 12:20:36', '2018-09-12 12:20:36');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `state_public_sector3s`
---
-
-DROP TABLE IF EXISTS `state_public_sector3s`;
-CREATE TABLE `state_public_sector3s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Number_of_Statutory_Corporations` float DEFAULT NULL,
-  `Number_of_Working_Companies` float DEFAULT NULL,
-  `Number_of_NonWorking_Companies` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `state_public_sector3s`
@@ -17593,26 +12198,6 @@ INSERT INTO `state_public_sector3s` (`id`, `Sector`, `Number_of_Statutory_Corpor
 (7, 'Others', 0, 3, 10, '2018-09-13 09:54:53', '2018-09-13 09:54:53'),
 (8, 'Total', 3, 31, 40, '2018-09-13 09:54:53', '2018-09-13 09:54:53');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `support_institutions1s`
---
-
-DROP TABLE IF EXISTS `support_institutions1s`;
-CREATE TABLE `support_institutions1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `CAGR` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `support_institutions1s`
 --
@@ -17624,24 +12209,6 @@ INSERT INTO `support_institutions1s` (`id`, `Sector`, `2012-13`, `2013-14`, `201
 (4, '(c)  Total', 583, 1115, 564, 1230, 1116, 15, '2018-10-12 12:05:20', '2018-10-12 12:05:20'),
 (5, 'Expenditure on Economic Services', 20246, 24871, 29173, 37305, 44943, 22.1, '2018-10-12 12:05:20', '2018-10-12 12:05:20'),
 (6, 'Expenditure on Industries as a percentage of Expenditure on Economic Services', 2.9, 4.5, 1.9, 3.3, 2.5, NULL, '2018-10-12 12:05:20', '2018-10-12 12:05:20');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `support_institutions2s`
---
-
-DROP TABLE IF EXISTS `support_institutions2s`;
-CREATE TABLE `support_institutions2s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Amount_Allotted_Rs_lakh` float DEFAULT NULL,
-  `Amount_spent_Rs_lakh` float DEFAULT NULL,
-  `Number_of_Entrepreneurs_benefited` float DEFAULT NULL,
-  `Amount_Spent_in_Percentage` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `support_institutions2s`
@@ -17655,25 +12222,6 @@ INSERT INTO `support_institutions2s` (`id`, `Year`, `Amount_Allotted_Rs_lakh`, `
 (5, '2015-16', 110.29, 92.37, 906, 83.8, '2018-09-09 09:21:11', '2018-09-09 09:21:11'),
 (6, '2016-17', 110, 110, 1098, 100, '2018-09-09 09:21:11', '2018-09-09 09:21:11');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `support_institutions3s`
---
-
-DROP TABLE IF EXISTS `support_institutions3s`;
-CREATE TABLE `support_institutions3s` (
-  `id` bigint(20) NOT NULL,
-  `Regional_Office` varchar(255) DEFAULT NULL,
-  `Number_of_Working_Units` float DEFAULT NULL,
-  `Number_of_Working_Units_under_Construction` float DEFAULT NULL,
-  `Number_of_Units_which_have_not_started_Construction` float DEFAULT NULL,
-  `Number_of_Units_Closed_in_Cancellation_Process` float DEFAULT NULL,
-  `Total_existing_Units` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `support_institutions3s`
 --
@@ -17684,28 +12232,6 @@ INSERT INTO `support_institutions3s` (`id`, `Regional_Office`, `Number_of_Workin
 (3, 'Dharbhanga', 292, 34, 4, 49, 379, '2018-10-25 05:15:32', '2018-10-25 05:15:32'),
 (4, 'Muzaffarpur', 364, 75, 19, 104, 562, '2018-10-25 05:15:32', '2018-10-25 05:15:32'),
 (5, 'Total', 1606, 302, 67, 522, 2497, '2018-10-25 05:15:32', '2018-10-25 05:15:32');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `support_institutions4s`
---
-
-DROP TABLE IF EXISTS `support_institutions4s`;
-CREATE TABLE `support_institutions4s` (
-  `id` bigint(20) NOT NULL,
-  `Regional_Office` varchar(255) DEFAULT NULL,
-  `Total_Acquired_Land` float DEFAULT NULL,
-  `Total_Acquired_Constructed_Sheds` float DEFAULT NULL,
-  `Land_Reserved_for_Infrastructure_Administrative_Blocks_Roads_etc` float DEFAULT NULL,
-  `Total_Allotted_Land` float DEFAULT NULL,
-  `Total_Allotted_Constructed_Sheds` float DEFAULT NULL,
-  `Litigated_land` float DEFAULT NULL,
-  `Total_Vacant_Land_Allottable` float DEFAULT NULL,
-  `Total_Vacant_Constructed_Sheds_Allottable` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `support_institutions4s`
@@ -17718,29 +12244,6 @@ INSERT INTO `support_institutions4s` (`id`, `Regional_Office`, `Total_Acquired_L
 (4, 'Muzaffarpur', 411.96, 144, 55.16, 327.23, 131, 49.94, 29.51, 13, '2018-10-12 10:02:22', '2018-10-12 10:02:22'),
 (5, 'Total', 5185.24, 680, 587.08, 3438, 622, 1028.56, 141.51, 56, '2018-10-12 10:02:22', '2018-10-12 10:02:22');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `tax_department1s`
---
-
-DROP TABLE IF EXISTS `tax_department1s`;
-CREATE TABLE `tax_department1s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `BST/VAT` float DEFAULT NULL,
-  `CST` float DEFAULT NULL,
-  `ENT` float DEFAULT NULL,
-  `ED` float DEFAULT NULL,
-  `ADV` float DEFAULT NULL,
-  `HLT` float DEFAULT NULL,
-  `ET` float DEFAULT NULL,
-  `PT` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `tax_department1s`
 --
@@ -17752,26 +12255,6 @@ INSERT INTO `tax_department1s` (`id`, `Year`, `BST/VAT`, `CST`, `ENT`, `ED`, `AD
 (4, '2015', 10726, 60, 55, 297, 1, 11, 6162, 66, 17378, '2018-09-06 12:23:21', '2018-09-06 12:23:21'),
 (5, '2016', 11908, 70, 70, 226, 1, 11, 6389, 77, 18751, '2018-09-06 12:23:21', '2018-09-06 12:23:21');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `tax_department2s`
---
-
-DROP TABLE IF EXISTS `tax_department2s`;
-CREATE TABLE `tax_department2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18_BE` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `tax_department2s`
 --
@@ -17782,23 +12265,6 @@ INSERT INTO `tax_department2s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`,
 (3, 'Revenue from Commercial Taxes (Rs. crore)', 10911, 13156, 13758, 17378, 18751, 25000, '2018-09-10 11:50:44', '2018-09-10 11:50:44'),
 (4, 'Share of Commercial Taxes in Total Revenue (Percentage)', 18.3, 19.1, 17.5, 18.1, 17.8, 18.2, '2018-09-10 11:50:44', '2018-09-10 11:50:44'),
 (5, 'Share of Commercial Taxes in State’s Own Taxes (Percentage)', 67.1, 65.9, 66.3, 68.3, 79, 78.1, '2018-09-10 11:50:44', '2018-09-10 11:50:44');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tax_department3s`
---
-
-DROP TABLE IF EXISTS `tax_department3s`;
-CREATE TABLE `tax_department3s` (
-  `id` bigint(20) NOT NULL,
-  `Name_of_Commodity` varchar(255) DEFAULT NULL,
-  `Collection` float DEFAULT NULL,
-  `Rate_of_Growth` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tax_department3s`
@@ -17866,25 +12332,6 @@ INSERT INTO `tax_department3s` (`id`, `Name_of_Commodity`, `Collection`, `Rate_o
 (59, 'Others', 5974, -2.6, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59'),
 (60, 'Total', 18751, 7.9, '2016-17', '2018-09-06 07:51:59', '2018-09-06 07:51:59');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `tax_department4s`
---
-
-DROP TABLE IF EXISTS `tax_department4s`;
-CREATE TABLE `tax_department4s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `tax_department4s`
 --
@@ -17904,25 +12351,6 @@ INSERT INTO `tax_department4s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-15`,
 (12, 'Fee from certified copies', 3, 2, 2, 2, 2, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
 (13, 'Sub-Total', 558, 711, 688, 787, 772, '2018-09-14 12:40:05', '2018-09-14 12:40:05'),
 (14, 'Total', 2319, 2968, 2855, 3296, 3257, '2018-09-14 12:40:05', '2018-09-14 12:40:05');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tax_department5s`
---
-
-DROP TABLE IF EXISTS `tax_department5s`;
-CREATE TABLE `tax_department5s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Number_of_Document` float DEFAULT NULL,
-  `Total_Receipt` float DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Percentage_receipt_against_target` float DEFAULT NULL,
-  `Receipt_per_Document` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tax_department5s`
@@ -17968,26 +12396,6 @@ INSERT INTO `tax_department5s` (`id`, `Districts`, `Number_of_Document`, `Total_
 (37, 'Araria', 17379, 28.72, 35.17, 81.7, 16526, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
 (38, 'Katihar', 17449, 37.53, 43.68, 85.9, 21508, '2018-09-07 05:53:46', '2018-09-07 05:53:46'),
 (39, 'Total', 558797, 1702.14, 2024.75, 84.1, 30461, '2018-09-07 05:53:46', '2018-09-07 05:53:46');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tax_department6s`
---
-
-DROP TABLE IF EXISTS `tax_department6s`;
-CREATE TABLE `tax_department6s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Number_of_Document` float DEFAULT NULL,
-  `Registration_Fees` float DEFAULT NULL,
-  `Stamp_Fee` float DEFAULT NULL,
-  `Total_Receipt` float DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tax_department6s`
@@ -18072,32 +12480,6 @@ INSERT INTO `tax_department6s` (`id`, `Districts`, `Number_of_Document`, `Regist
 (76, 'Araria', 29243, 13, 38, 52, 69, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
 (77, 'Katihar', 31550, 17, 50.75, 68, 82, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48'),
 (78, 'Total', 945901, 773, 2321, 3145, 3800, '2016', '2018-09-13 11:23:48', '2018-09-13 11:23:48');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tax_department7s`
---
-
-DROP TABLE IF EXISTS `tax_department7s`;
-CREATE TABLE `tax_department7s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `VAT` float DEFAULT NULL,
-  `CST` float DEFAULT NULL,
-  `ENT_Tax` float DEFAULT NULL,
-  `ED` float DEFAULT NULL,
-  `ADV_Tax` float DEFAULT NULL,
-  `LUX_Tax` float DEFAULT NULL,
-  `Entry_Tax` float DEFAULT NULL,
-  `Professional_Tax` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Target` float DEFAULT NULL,
-  `Indicator` varchar(255) NOT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tax_department7s`
@@ -18223,26 +12605,6 @@ INSERT INTO `tax_department7s` (`id`, `Districts`, `VAT`, `CST`, `ENT_Tax`, `ED`
 (117, 'Bhagalpur Division', 24923, 154, 57, 73, 0, 30, 32392, 740, 58368, 73956, 'Bhagalpur Division', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09'),
 (118, 'State', 1190800, 7029, 7009, 22553, 67, 1109, 638908, 7656, 1875130, 2200000, 'State', 2016, '2018-09-16 06:19:09', '2018-09-16 06:19:09');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `tax_gsdp_ratios`
---
-
-DROP TABLE IF EXISTS `tax_gsdp_ratios`;
-CREATE TABLE `tax_gsdp_ratios` (
-  `id` bigint(20) NOT NULL,
-  `State` varchar(255) DEFAULT NULL,
-  `Revenue_Receipts` float DEFAULT NULL,
-  `States_Own_Tax` float DEFAULT NULL,
-  `GSDP` float DEFAULT NULL,
-  `Ratio_of_SOT_and_RR` float DEFAULT NULL,
-  `Ratio_of_SOT_and_GSDP` float DEFAULT NULL,
-  `Ratio_of_Total_Revenue_and_GSDP` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `tax_gsdp_ratios`
 --
@@ -18266,36 +12628,6 @@ INSERT INTO `tax_gsdp_ratios` (`id`, `State`, `Revenue_Receipts`, `States_Own_Ta
 (16, 'Himachal Pradesh', 23440, 6699, 112852, 28.6, 5.9, 20.8, '2018-08-20 10:07:22', '2018-08-20 10:07:22'),
 (17, 'Chhatisgarh', 46068, 17084, 260776, 37.1, 6.6, 17.7, '2018-08-20 10:07:22', '2018-08-20 10:07:22');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `test1s`
---
-
-DROP TABLE IF EXISTS `test1s`;
-CREATE TABLE `test1s` (
-  `id` bigint(20) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `testies`
---
-
-DROP TABLE IF EXISTS `testies`;
-CREATE TABLE `testies` (
-  `id` bigint(20) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `number` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `testies`
 --
@@ -18306,38 +12638,6 @@ INSERT INTO `testies` (`id`, `name`, `number`, `created_at`, `updated_at`) VALUE
 (3, 'dd', 2, '2018-08-13 05:22:43', '2018-08-13 05:22:43'),
 (4, 'ww', 0, '2018-08-13 05:22:43', '2018-08-13 05:22:43'),
 (5, 'dd', NULL, '2018-08-13 05:22:43', '2018-08-13 05:22:43');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tests`
---
-
-DROP TABLE IF EXISTS `tests`;
-CREATE TABLE `tests` (
-  `id` bigint(20) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `number` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tourism1s`
---
-
-DROP TABLE IF EXISTS `tourism1s`;
-CREATE TABLE `tourism1s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Budget_Estimate` float DEFAULT NULL,
-  `Expenditure` float DEFAULT NULL,
-  `Expenditure_as_percentage_of_Budget` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tourism1s`
@@ -18350,23 +12650,6 @@ INSERT INTO `tourism1s` (`id`, `Year`, `Budget_Estimate`, `Expenditure`, `Expend
 (4, '2014-15', 152.41, 84, 55.1, '2018-10-12 08:06:59', '2018-10-12 08:06:59'),
 (5, '2015-16', 57.01, 61.57, 108, '2018-10-12 08:06:59', '2018-10-12 08:06:59'),
 (6, '2016-17', 67.02, 143.05, 213.4, '2018-10-12 08:06:59', '2018-10-12 08:06:59');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tourism2s`
---
-
-DROP TABLE IF EXISTS `tourism2s`;
-CREATE TABLE `tourism2s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Domestic_tourists` float DEFAULT NULL,
-  `Foreign_tourists` float DEFAULT NULL,
-  `Total_tourists` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tourism2s`
@@ -18381,27 +12664,6 @@ INSERT INTO `tourism2s` (`id`, `Year`, `Domestic_tourists`, `Foreign_tourists`, 
 (6, '2016', 28516, 1011, 29527, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
 (7, '2017', 32414, 1083, 33497, '2018-10-12 09:17:39', '2018-10-12 09:17:39'),
 (8, 'CAGR', 9.5, 1.3, 9.1, '2018-10-12 09:17:39', '2018-10-12 09:17:39');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tourism3s`
---
-
-DROP TABLE IF EXISTS `tourism3s`;
-CREATE TABLE `tourism3s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `2012` float DEFAULT NULL,
-  `2013` float DEFAULT NULL,
-  `2014` float DEFAULT NULL,
-  `2015` float DEFAULT NULL,
-  `2016` float DEFAULT NULL,
-  `2017` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tourism3s`
@@ -18440,23 +12702,6 @@ INSERT INTO `tourism3s` (`id`, `Sector`, `Indicator`, `2012`, `2013`, `2014`, `2
 (30, 'Total', 'Foreign', 1097, 767, 748, 924, 1010, 1083, '2018-10-16 06:37:49', '2018-10-16 06:37:49'),
 (31, 'Grand Total', NULL, 22543, 22354, 18460, 28953, 29372, 33497, '2018-10-16 06:37:49', '2018-10-16 06:37:49');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `transmission1s`
---
-
-DROP TABLE IF EXISTS `transmission1s`;
-CREATE TABLE `transmission1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2017-18` float DEFAULT NULL,
-  `2018-19` float DEFAULT NULL,
-  `2019-20` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `transmission1s`
 --
@@ -18466,22 +12711,6 @@ INSERT INTO `transmission1s` (`id`, `Sector`, `2017-18`, `2018-19`, `2019-20`, `
 (2, 'Transformation  Capacity needed to meet Peak Demand (MW)', 8874, 9195, 9953, '2018-11-09 10:35:06', '2018-11-09 10:35:06'),
 (3, 'Available Capacity MVA at 220/132 KV level', 9370, 11090, 14510, '2018-11-09 10:35:06', '2018-11-09 10:35:06'),
 (4, 'Available Capacity MVA at  132/33 KV level', 12540, 14450, 15290, '2018-11-09 10:35:06', '2018-11-09 10:35:06');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `transmission2s`
---
-
-DROP TABLE IF EXISTS `transmission2s`;
-CREATE TABLE `transmission2s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Nos_of_New_Grid_Sub_Stations` varchar(255) DEFAULT NULL,
-  `New_Transmission_Lines_Circuit_km` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `transmission2s`
@@ -18499,22 +12728,6 @@ INSERT INTO `transmission2s` (`id`, `Year`, `Nos_of_New_Grid_Sub_Stations`, `New
 (9, '2019-20', '§  400/220/132/33kv – 02 Nos.', '§  220 kv-500', '2018-11-12 10:05:34', '2018-11-12 10:05:34'),
 (10, '2019-20', '§  220/132/33 kv-3 Nos.', '§  132 kv-231', '2018-11-12 10:05:34', '2018-11-12 10:05:34'),
 (11, '2019-20', '§  132/33 kv - 5 Nos.', NULL, '2018-11-12 10:05:34', '2018-11-12 10:05:34');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_jointly_funded1s`
---
-
-DROP TABLE IF EXISTS `udp_jointly_funded1s`;
-CREATE TABLE `udp_jointly_funded1s` (
-  `id` bigint(20) NOT NULL,
-  `Components_Categories` varchar(255) DEFAULT NULL,
-  `SubProject_cost_sanctioned` float DEFAULT NULL,
-  `Total_Expenditure_till_Nov_2017` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `udp_jointly_funded1s`
@@ -18544,22 +12757,6 @@ INSERT INTO `udp_jointly_funded1s` (`id`, `Components_Categories`, `SubProject_c
 (21, 'Kankarbagh Sewerage Project', 57889, NULL, '2018-11-22 06:08:20', '2018-11-22 06:08:20'),
 (22, 'Total', 514728, 54468.4, '2018-11-22 06:08:20', '2018-11-22 06:08:20');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_jointly_funded2s`
---
-
-DROP TABLE IF EXISTS `udp_jointly_funded2s`;
-CREATE TABLE `udp_jointly_funded2s` (
-  `id` bigint(20) NOT NULL,
-  `Program_Monitoring_Parameter` varchar(255) DEFAULT NULL,
-  `Annual_Target` float DEFAULT NULL,
-  `Achievement` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `udp_jointly_funded2s`
 --
@@ -18571,23 +12768,6 @@ INSERT INTO `udp_jointly_funded2s` (`id`, `Program_Monitoring_Parameter`, `Annua
 (4, 'No. of City-Level Federations formed under NULM', 30, 21, '2018-11-22 07:00:22', '2018-11-22 07:00:22'),
 (5, 'Revolving Fund (RF) Support', 4400, 2247, '2018-11-22 07:00:22', '2018-11-22 07:00:22');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_jointly_funded3s`
---
-
-DROP TABLE IF EXISTS `udp_jointly_funded3s`;
-CREATE TABLE `udp_jointly_funded3s` (
-  `id` bigint(20) NOT NULL,
-  `Category` varchar(255) DEFAULT NULL,
-  `Annual_Target` float DEFAULT NULL,
-  `Number_of_Persons_Undergoing_Training` float DEFAULT NULL,
-  `Number_of_Persons_Completed_Training` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `udp_jointly_funded3s`
 --
@@ -18598,22 +12778,6 @@ INSERT INTO `udp_jointly_funded3s` (`id`, `Category`, `Annual_Target`, `Number_o
 (3, 'Others', 62064, 1253, 11299, '2018-11-22 07:07:11', '2018-11-22 07:07:11'),
 (4, 'Total', 69000, 1590, 14310, '2018-11-22 07:07:11', '2018-11-22 07:07:11');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_jointly_funded4s`
---
-
-DROP TABLE IF EXISTS `udp_jointly_funded4s`;
-CREATE TABLE `udp_jointly_funded4s` (
-  `id` bigint(20) NOT NULL,
-  `Program_Monitoring_Parameter` varchar(255) DEFAULT NULL,
-  `Annual_Target` float DEFAULT NULL,
-  `Achievement` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `udp_jointly_funded4s`
 --
@@ -18623,23 +12787,6 @@ INSERT INTO `udp_jointly_funded4s` (`id`, `Program_Monitoring_Parameter`, `Annua
 (2, 'SEP- Group', 500, 10, '2018-11-22 07:27:21', '2018-11-22 07:27:21'),
 (3, 'SHG Credit Linkage', 1000, 238, '2018-11-22 07:27:21', '2018-11-22 07:27:21'),
 (4, 'Total', 11500, 1477, '2018-11-22 07:27:21', '2018-11-22 07:27:21');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_jointly_funded5s`
---
-
-DROP TABLE IF EXISTS `udp_jointly_funded5s`;
-CREATE TABLE `udp_jointly_funded5s` (
-  `id` bigint(20) NOT NULL,
-  `Program_or_Monitoring_Parameter` varchar(255) DEFAULT NULL,
-  `Annual_Target` float DEFAULT NULL,
-  `Progress` float DEFAULT NULL,
-  `Indicator` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `udp_jointly_funded5s`
@@ -18658,23 +12805,6 @@ INSERT INTO `udp_jointly_funded5s` (`id`, `Program_or_Monitoring_Parameter`, `An
 (10, 'No. of Credit Cards issued to Street Vendors', 10000, 6, 'Others', '2018-11-21 10:02:32', '2018-11-21 10:02:32'),
 (11, 'No of Street Vendors link to insurance scheme', 5000, 1600, 'Others', '2018-11-21 10:02:32', '2018-11-21 10:02:32');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_jointly_funded6s`
---
-
-DROP TABLE IF EXISTS `udp_jointly_funded6s`;
-CREATE TABLE `udp_jointly_funded6s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `DAY_NULM` float DEFAULT NULL,
-  `State_Plan_Head_Nagrik_Suvidha` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `udp_jointly_funded6s`
 --
@@ -18685,23 +12815,6 @@ INSERT INTO `udp_jointly_funded6s` (`id`, `Year`, `DAY_NULM`, `State_Plan_Head_N
 (3, '2016-17', 0, 0, 0, '2018-11-22 07:45:12', '2018-11-22 07:45:12'),
 (4, '2017-18', 2.99, 0, 2.99, '2018-11-22 07:45:12', '2018-11-22 07:45:12');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_jointly_funded7s`
---
-
-DROP TABLE IF EXISTS `udp_jointly_funded7s`;
-CREATE TABLE `udp_jointly_funded7s` (
-  `id` bigint(20) NOT NULL,
-  `Shelters_Sanctioned_Planned` varchar(255) DEFAULT NULL,
-  `Operational` float DEFAULT NULL,
-  `Already_constructed_refurbished_and_under_process` float DEFAULT NULL,
-  `Under_process_of_construction_refurbishment` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `udp_jointly_funded7s`
 --
@@ -18711,22 +12824,6 @@ INSERT INTO `udp_jointly_funded7s` (`id`, `Shelters_Sanctioned_Planned`, `Operat
 (2, '66 (Refurbishment along with O and M)', 31, 13, 22, '2018-11-21 08:17:31', '2018-11-21 08:17:31'),
 (3, 'Total (114)', 32, 31, 51, '2018-11-21 08:17:31', '2018-11-21 08:17:31');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_jointly_funded8s`
---
-
-DROP TABLE IF EXISTS `udp_jointly_funded8s`;
-CREATE TABLE `udp_jointly_funded8s` (
-  `id` bigint(20) NOT NULL,
-  `Particulars` varchar(255) DEFAULT NULL,
-  `Constructed` float DEFAULT NULL,
-  `Under_Construction` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `udp_jointly_funded8s`
 --
@@ -18735,21 +12832,6 @@ INSERT INTO `udp_jointly_funded8s` (`id`, `Particulars`, `Constructed`, `Under_C
 (1, 'Individual Toilet', 145995, 156521, '2018-11-22 07:33:52', '2018-11-22 07:33:52'),
 (2, 'Community toilets', 672, 1140, '2018-11-22 07:33:52', '2018-11-22 07:33:52'),
 (3, 'Public toilets', 75, 22, '2018-11-22 07:33:52', '2018-11-22 07:33:52');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_jointly_funded9s`
---
-
-DROP TABLE IF EXISTS `udp_jointly_funded9s`;
-CREATE TABLE `udp_jointly_funded9s` (
-  `id` bigint(20) NOT NULL,
-  `Indicators` varchar(255) DEFAULT NULL,
-  `Number_Amount` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `udp_jointly_funded9s`
@@ -18768,23 +12850,6 @@ INSERT INTO `udp_jointly_funded9s` (`id`, `Indicators`, `Number_Amount`, `create
 (10, 'State Share Released', 13156.3, '2018-11-21 10:32:12', '2018-11-21 10:32:12'),
 (11, 'Total Expenditure Till Nov 2017', 29379, '2018-11-21 10:32:12', '2018-11-21 10:32:12');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_jointly_funded11s`
---
-
-DROP TABLE IF EXISTS `udp_jointly_funded11s`;
-CREATE TABLE `udp_jointly_funded11s` (
-  `id` bigint(20) NOT NULL,
-  `Description` varchar(255) DEFAULT NULL,
-  `No_of_Projects` float DEFAULT NULL,
-  `Amount` float DEFAULT NULL,
-  `Remarks` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `udp_jointly_funded11s`
 --
@@ -18800,24 +12865,6 @@ INSERT INTO `udp_jointly_funded11s` (`id`, `Description`, `No_of_Projects`, `Amo
 (8, 'DPR under preparation not under SAAP', 1, NULL, 'Purnea – Phase - II', '2018-11-21 11:08:53', '2018-11-21 11:08:53'),
 (9, 'Projects not required but approved under SAAP', 3, 200.7, 'Dehri, Bettiah & Darbhanga', '2018-11-21 11:08:53', '2018-11-21 11:08:53');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_jointly_funded12s`
---
-
-DROP TABLE IF EXISTS `udp_jointly_funded12s`;
-CREATE TABLE `udp_jointly_funded12s` (
-  `id` bigint(20) NOT NULL,
-  `Name_of_the_Project` varchar(255) DEFAULT NULL,
-  `Activities` varchar(255) DEFAULT NULL,
-  `Approved_Project_Cost` float DEFAULT NULL,
-  `Amount_released` float DEFAULT NULL,
-  `Status` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `udp_jointly_funded12s`
 --
@@ -18829,21 +12876,6 @@ INSERT INTO `udp_jointly_funded12s` (`id`, `Name_of_the_Project`, `Activities`, 
 (4, 'Development of Akshay Vat Complex (Zone 2) ', 'Landscaping, Toilet Blocks, Drinking water point, Signage Shoe rack and Gate ', 161.72, 64.69, 'Work is in progress ', '2018-11-21 11:30:37', '2018-11-21 11:30:37'),
 (5, 'Development of Connecting pathway- Dungeshwari hill to Mahabodhi temple (Zone-6) at Bodh Gaya ', 'Flooring, Horticulture Pathways and Bridge, Information Kiosk, Food Stall, Signage ', 1842.1, 736.83, 'Retendered. Tender has been received on December, 2017 for evaluation ', '2018-11-21 11:30:37', '2018-11-21 11:30:37'),
 (6, 'Total ', NULL, 3468.13, 1270.18, NULL, '2018-11-21 11:30:37', '2018-11-21 11:30:37');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_state_plan1s`
---
-
-DROP TABLE IF EXISTS `udp_state_plan1s`;
-CREATE TABLE `udp_state_plan1s` (
-  `id` bigint(20) NOT NULL,
-  `Indicators` varchar(255) DEFAULT NULL,
-  `No_of_households` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `udp_state_plan1s`
@@ -18860,26 +12892,6 @@ INSERT INTO `udp_state_plan1s` (`id`, `Indicators`, `No_of_households`, `created
 (8, 'No. of wards in which tenders floated ', '1176 out of 3377 wards', '2018-11-21 06:29:58', '2018-11-21 06:29:58'),
 (9, 'No. of wards in which work started', '760.0', '2018-11-21 06:29:58', '2018-11-21 06:29:58'),
 (10, 'No. of HH connections provided', '64461.0', '2018-11-21 06:29:58', '2018-11-21 06:29:58');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_state_plan2s`
---
-
-DROP TABLE IF EXISTS `udp_state_plan2s`;
-CREATE TABLE `udp_state_plan2s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Total_Number_of_Urban_Ward` float DEFAULT NULL,
-  `Total_Number_of_Urban_Households` float DEFAULT NULL,
-  `Number_of_Households_Having_Piped_Water_Supply` float DEFAULT NULL,
-  `Number_of_Households_Having_Access_to_Tap_Water_2016_17` float DEFAULT NULL,
-  `Number_of_Households_Having_Access_to_Tap_Water_2017_18` float DEFAULT NULL,
-  `Number_of_Households_Having_Access_to_Tap_Water_2016_18` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `udp_state_plan2s`
@@ -18926,25 +12938,6 @@ INSERT INTO `udp_state_plan2s` (`id`, `Districts`, `Total_Number_of_Urban_Ward`,
 (38, 'Katihar', 77, 41375, 0, 0, 0, 0, '2018-11-20 10:45:34', '2018-11-20 10:45:34'),
 (39, 'Bihar', 3396, 1908160, 336521, 43513, 34920, 78433, '2018-11-20 10:45:34', '2018-11-20 10:45:34');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_state_plan3s`
---
-
-DROP TABLE IF EXISTS `udp_state_plan3s`;
-CREATE TABLE `udp_state_plan3s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `2017-18` float DEFAULT NULL,
-  `2018-19` float DEFAULT NULL,
-  `2019-20` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `udp_state_plan3s`
 --
@@ -18952,21 +12945,6 @@ CREATE TABLE `udp_state_plan3s` (
 INSERT INTO `udp_state_plan3s` (`id`, `Sector`, `2016-17`, `2017-18`, `2018-19`, `2019-20`, `Total`, `created_at`, `updated_at`) VALUES
 (1, 'Target (No. of households)', 73098, 109647, 109647, 73098, 365490, '2018-11-20 11:11:34', '2018-11-20 11:11:34'),
 (2, 'Target Percentage', 20, 30, 30, 20, 100, '2018-11-20 11:11:34', '2018-11-20 11:11:34');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_state_plan4s`
---
-
-DROP TABLE IF EXISTS `udp_state_plan4s`;
-CREATE TABLE `udp_state_plan4s` (
-  `id` bigint(20) NOT NULL,
-  `Indicators` varchar(255) DEFAULT NULL,
-  `No_of_households` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `udp_state_plan4s`
@@ -18983,24 +12961,6 @@ INSERT INTO `udp_state_plan4s` (`id`, `Indicators`, `No_of_households`, `created
 (8, 'No. of schemes completed', '1786.0', '2018-11-21 06:45:32', '2018-11-21 06:45:32'),
 (9, 'Length of Gali completed', '423.040 (Km.) ', '2018-11-21 06:45:32', '2018-11-21 06:45:32'),
 (10, 'Length of Nali completed', '323.501 (Km.)', '2018-11-21 06:45:32', '2018-11-21 06:45:32');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `udp_state_plan5s`
---
-
-DROP TABLE IF EXISTS `udp_state_plan5s`;
-CREATE TABLE `udp_state_plan5s` (
-  `id` bigint(20) NOT NULL,
-  `Districts` varchar(255) DEFAULT NULL,
-  `Total_Number_of_Urban_Households` float DEFAULT NULL,
-  `Total_Number_of_Urban_Wards` float DEFAULT NULL,
-  `Number_of_Households_to_be_covered` float DEFAULT NULL,
-  `Number_of_Household_covered` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `udp_state_plan5s`
@@ -19047,25 +13007,6 @@ INSERT INTO `udp_state_plan5s` (`id`, `Districts`, `Total_Number_of_Urban_Househ
 (38, 'Katihar', 41375, 77, 5276, 897, '2018-11-20 11:36:32', '2018-11-20 11:36:32'),
 (39, 'Bihar', 1908160, 3396, 360938, 109845, '2018-11-20 11:36:32', '2018-11-20 11:36:32');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `women_empowerment1s`
---
-
-DROP TABLE IF EXISTS `women_empowerment1s`;
-CREATE TABLE `women_empowerment1s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `2012-13` float DEFAULT NULL,
-  `2013-14` float DEFAULT NULL,
-  `2014-15` float DEFAULT NULL,
-  `2015-16` float DEFAULT NULL,
-  `2016-17` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `women_empowerment1s`
 --
@@ -19080,25 +13021,6 @@ INSERT INTO `women_empowerment1s` (`id`, `Sector`, `2012-13`, `2013-14`, `2014-1
 (7, 'Share of outlays in the state budget (percent)', 11.3, 12.1, 13.3, 9.9, 11.9, '2018-12-03 11:02:10', '2018-12-03 11:02:10'),
 (8, 'GSDP', 282368, 317101, 342951, 381501, 438030, '2018-12-03 11:02:10', '2018-12-03 11:02:10'),
 (9, 'Outlays for women as percent of GSDP ', 2.8, 3.1, 3.7, 2.9, 3.4, '2018-12-03 11:02:10', '2018-12-03 11:02:10');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `women_empowerment2s`
---
-
-DROP TABLE IF EXISTS `women_empowerment2s`;
-CREATE TABLE `women_empowerment2s` (
-  `id` bigint(20) NOT NULL,
-  `Sector` varchar(255) DEFAULT NULL,
-  `Total_Budget` float DEFAULT NULL,
-  `Under_Category_I` float DEFAULT NULL,
-  `Under_Category_II` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `women_empowerment2s`
@@ -19146,25 +13068,6 @@ INSERT INTO `women_empowerment2s` (`id`, `Sector`, `Total_Budget`, `Under_Catego
 (39, 'Tourism Department', 71.47, 0, 21.44, 21.44, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13'),
 (40, 'Total', 42852.4, 8338.1, 11658.7, 19996.8, '2017-18 (BE)', '2018-12-04 09:35:13', '2018-12-04 09:35:13');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `women_empowerment3s`
---
-
-DROP TABLE IF EXISTS `women_empowerment3s`;
-CREATE TABLE `women_empowerment3s` (
-  `id` bigint(20) NOT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `Lakshmibai_Social_Security_Pension_Scheme` float DEFAULT NULL,
-  `Nari_Shakti_Yojana` float DEFAULT NULL,
-  `Mukhyamantri_Kanya_Vivah_Yojana` float DEFAULT NULL,
-  `Mukhyamantri_Kanya_Suraksha_Yojana` float DEFAULT NULL,
-  `Total` float DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 --
 -- Dumping data for table `women_empowerment3s`
 --
@@ -19176,24 +13079,6 @@ INSERT INTO `women_empowerment3s` (`id`, `Year`, `Lakshmibai_Social_Security_Pen
 (4, '2014-15', 39.9, 0, 134.91, 89.99, 264.8, '2018-12-03 11:34:41', '2018-12-03 11:34:41'),
 (5, '2015-16', 85.48, 0, 18.88, 0, 104.36, '2018-12-03 11:34:41', '2018-12-03 11:34:41'),
 (6, '2016-17 (BE)', 30, 14, 20.19, 6.15, 70.34, '2018-12-03 11:34:41', '2018-12-03 11:34:41');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `women_empowerment4s`
---
-
-DROP TABLE IF EXISTS `women_empowerment4s`;
-CREATE TABLE `women_empowerment4s` (
-  `id` bigint(20) NOT NULL,
-  `Types_of_Cases` varchar(255) DEFAULT NULL,
-  `Registered` float DEFAULT NULL,
-  `Disposed` float DEFAULT NULL,
-  `Percentage_of_Case_Disposed` float DEFAULT NULL,
-  `Year` varchar(255) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `women_empowerment4s`
@@ -19218,2898 +13103,3 @@ INSERT INTO `women_empowerment4s` (`id`, `Types_of_Cases`, `Registered`, `Dispos
 (16, 'Sexual abuse at  office or other places', 98, 72, 73.5, '2016-17', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
 (17, 'Others', 1339, 1152, 86, '2016-17', '2018-12-03 11:48:02', '2018-12-03 11:48:02'),
 (18, 'Total Cases', 6183, 5115, 82.7, '2016-17', '2018-12-03 11:48:02', '2018-12-03 11:48:02');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `agricultural_credit1s`
---
-ALTER TABLE `agricultural_credit1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agricultural_credit2s`
---
-ALTER TABLE `agricultural_credit2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agricultural_inputs1_part1s`
---
-ALTER TABLE `agricultural_inputs1_part1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agricultural_inputs1_part2s`
---
-ALTER TABLE `agricultural_inputs1_part2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agricultural_inputs2s`
---
-ALTER TABLE `agricultural_inputs2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agricultural_inputs3s`
---
-ALTER TABLE `agricultural_inputs3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agricultural_inputs4s`
---
-ALTER TABLE `agricultural_inputs4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agricultural_inputs5s`
---
-ALTER TABLE `agricultural_inputs5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agricultural_inputs6s`
---
-ALTER TABLE `agricultural_inputs6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agricultural_inputs7s`
---
-ALTER TABLE `agricultural_inputs7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agricultural_inputs8s`
---
-ALTER TABLE `agricultural_inputs8s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agro_based_industries1s`
---
-ALTER TABLE `agro_based_industries1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agro_based_industries2s`
---
-ALTER TABLE `agro_based_industries2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agro_based_industries3s`
---
-ALTER TABLE `agro_based_industries3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agro_based_industries4s`
---
-ALTER TABLE `agro_based_industries4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agro_based_industries5s`
---
-ALTER TABLE `agro_based_industries5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `agro_based_industries6s`
---
-ALTER TABLE `agro_based_industries6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `airways`
---
-ALTER TABLE `airways`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `animal_husbandry1s`
---
-ALTER TABLE `animal_husbandry1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `animal_husbandry2s`
---
-ALTER TABLE `animal_husbandry2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `animal_husbandry3s`
---
-ALTER TABLE `animal_husbandry3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `animal_husbandry4s`
---
-ALTER TABLE `animal_husbandry4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `animal_husbandry5s`
---
-ALTER TABLE `animal_husbandry5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `animal_husbandry6s`
---
-ALTER TABLE `animal_husbandry6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `annual_rainfalls`
---
-ALTER TABLE `annual_rainfalls`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `annual_state_domestic_product3s`
---
-ALTER TABLE `annual_state_domestic_product3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `annual_survey1s`
---
-ALTER TABLE `annual_survey1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `annual_survey2s`
---
-ALTER TABLE `annual_survey2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `annual_survey3s`
---
-ALTER TABLE `annual_survey3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `annual_survey4s`
---
-ALTER TABLE `annual_survey4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `annual_survey5s`
---
-ALTER TABLE `annual_survey5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `annual_survey6s`
---
-ALTER TABLE `annual_survey6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `annual_survey7s`
---
-ALTER TABLE `annual_survey7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `ar_internal_metadata`
---
-ALTER TABLE `ar_internal_metadata`
-  ADD PRIMARY KEY (`key`);
-
---
--- Indexes for table `availablility_of_power1s`
---
-ALTER TABLE `availablility_of_power1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `availablility_of_power2s`
---
-ALTER TABLE `availablility_of_power2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `banking_infrastructure1s`
---
-ALTER TABLE `banking_infrastructure1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `banking_infrastructure2s`
---
-ALTER TABLE `banking_infrastructure2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `banking_infrastructure3s`
---
-ALTER TABLE `banking_infrastructure3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `banking_infrastructure4s`
---
-ALTER TABLE `banking_infrastructure4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `banking_infrastructure5s`
---
-ALTER TABLE `banking_infrastructure5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `banking_infrastructure6s`
---
-ALTER TABLE `banking_infrastructure6s`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `State` (`id`);
-
---
--- Indexes for table `bihar_industrial_investment1s`
---
-ALTER TABLE `bihar_industrial_investment1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `bihar_industrial_investment2s`
---
-ALTER TABLE `bihar_industrial_investment2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `bihar_renewable_energies`
---
-ALTER TABLE `bihar_renewable_energies`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `bihar_start_up_policies`
---
-ALTER TABLE `bihar_start_up_policies`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `bridge_sector1s`
---
-ALTER TABLE `bridge_sector1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `bridge_sector2s`
---
-ALTER TABLE `bridge_sector2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `comparison_of_budget1s`
---
-ALTER TABLE `comparison_of_budget1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `comparison_of_budgets`
---
-ALTER TABLE `comparison_of_budgets`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `cropping_patterns`
---
-ALTER TABLE `cropping_patterns`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `debt_management1s`
---
-ALTER TABLE `debt_management1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `debt_management2s`
---
-ALTER TABLE `debt_management2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `debt_management3s`
---
-ALTER TABLE `debt_management3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `debt_management4s`
---
-ALTER TABLE `debt_management4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `deficit_management1s`
---
-ALTER TABLE `deficit_management1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `deficit_management2s`
---
-ALTER TABLE `deficit_management2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `deficit_management3s`
---
-ALTER TABLE `deficit_management3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `deficit_management4s`
---
-ALTER TABLE `deficit_management4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `demographic_profile1s`
---
-ALTER TABLE `demographic_profile1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `demographic_profile2s`
---
-ALTER TABLE `demographic_profile2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `deposites_and_credits1s`
---
-ALTER TABLE `deposites_and_credits1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `deposites_and_credits2s`
---
-ALTER TABLE `deposites_and_credits2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `deposites_and_credits3s`
---
-ALTER TABLE `deposites_and_credits3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `deposites_and_credits4s`
---
-ALTER TABLE `deposites_and_credits4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `deposites_and_credits5s`
---
-ALTER TABLE `deposites_and_credits5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `deposites_and_credits6s`
---
-ALTER TABLE `deposites_and_credits6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `deposites_and_credits7s`
---
-ALTER TABLE `deposites_and_credits7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `deposites_and_credits8s`
---
-ALTER TABLE `deposites_and_credits8s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `disaster_management1s`
---
-ALTER TABLE `disaster_management1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `distributions`
---
-ALTER TABLE `distributions`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `distribution_of_homestead_land1s`
---
-ALTER TABLE `distribution_of_homestead_land1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `distribution_of_homestead_land2s`
---
-ALTER TABLE `distribution_of_homestead_land2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `district_wise_section1s`
---
-ALTER TABLE `district_wise_section1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `district_wise_section2s`
---
-ALTER TABLE `district_wise_section2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `district_wise_section3s`
---
-ALTER TABLE `district_wise_section3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `district_wise_section4s`
---
-ALTER TABLE `district_wise_section4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `district_wise_section5s`
---
-ALTER TABLE `district_wise_section5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `district_wise_section6s`
---
-ALTER TABLE `district_wise_section6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `district_wise_section7s`
---
-ALTER TABLE `district_wise_section7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `district_wise_section8s`
---
-ALTER TABLE `district_wise_section8s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `district_wise_section9s`
---
-ALTER TABLE `district_wise_section9s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `district_wise_sections`
---
-ALTER TABLE `district_wise_sections`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `drinking_water_supply_and_sanitation1s`
---
-ALTER TABLE `drinking_water_supply_and_sanitation1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `drinking_water_supply_and_sanitation2s`
---
-ALTER TABLE `drinking_water_supply_and_sanitation2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `drinking_water_supply_and_sanitation3s`
---
-ALTER TABLE `drinking_water_supply_and_sanitation3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `drinking_water_supply_and_sanitation4s`
---
-ALTER TABLE `drinking_water_supply_and_sanitation4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `education_art_culture1s`
---
-ALTER TABLE `education_art_culture1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `education_art_culture2s`
---
-ALTER TABLE `education_art_culture2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `education_art_culture3s`
---
-ALTER TABLE `education_art_culture3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `education_art_culture4s`
---
-ALTER TABLE `education_art_culture4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `education_art_culture5s`
---
-ALTER TABLE `education_art_culture5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `education_art_culture6s`
---
-ALTER TABLE `education_art_culture6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `education_art_culture7s`
---
-ALTER TABLE `education_art_culture7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `education_art_culture9s`
---
-ALTER TABLE `education_art_culture9s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `expenditure_management1s`
---
-ALTER TABLE `expenditure_management1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `expenditure_management2s`
---
-ALTER TABLE `expenditure_management2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `expenditure_management3s`
---
-ALTER TABLE `expenditure_management3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `expenditure_managements`
---
-ALTER TABLE `expenditure_managements`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `expenditure_on_salary_and_pensions`
---
-ALTER TABLE `expenditure_on_salary_and_pensions`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `expenditure_on_urban_developments`
---
-ALTER TABLE `expenditure_on_urban_developments`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `financial_institutions1s`
---
-ALTER TABLE `financial_institutions1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `financial_institutions2s`
---
-ALTER TABLE `financial_institutions2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `financial_position1s`
---
-ALTER TABLE `financial_position1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `fiscal_performance1s`
---
-ALTER TABLE `fiscal_performance1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `fiscal_performance2s`
---
-ALTER TABLE `fiscal_performance2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `generation1s`
---
-ALTER TABLE `generation1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `generation2s`
---
-ALTER TABLE `generation2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health1s`
---
-ALTER TABLE `health1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health2s`
---
-ALTER TABLE `health2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health3s`
---
-ALTER TABLE `health3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health4s`
---
-ALTER TABLE `health4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health5s`
---
-ALTER TABLE `health5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health6s`
---
-ALTER TABLE `health6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health7s`
---
-ALTER TABLE `health7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health8s`
---
-ALTER TABLE `health8s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health9s`
---
-ALTER TABLE `health9s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health10s`
---
-ALTER TABLE `health10s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health11s`
---
-ALTER TABLE `health11s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health12s`
---
-ALTER TABLE `health12s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health13s`
---
-ALTER TABLE `health13s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health14s`
---
-ALTER TABLE `health14s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health15s`
---
-ALTER TABLE `health15s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health16s`
---
-ALTER TABLE `health16s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health17s`
---
-ALTER TABLE `health17s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health18s`
---
-ALTER TABLE `health18s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health19s`
---
-ALTER TABLE `health19s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health20s`
---
-ALTER TABLE `health20s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health21s`
---
-ALTER TABLE `health21s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `health22s`
---
-ALTER TABLE `health22s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `hhs`
---
-ALTER TABLE `hhs`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `ict2s`
---
-ALTER TABLE `ict2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `ict3s`
---
-ALTER TABLE `ict3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `ict4s`
---
-ALTER TABLE `ict4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `ict5s`
---
-ALTER TABLE `ict5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `inflation_rates`
---
-ALTER TABLE `inflation_rates`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `institutional_structure_of_power_sectors`
---
-ALTER TABLE `institutional_structure_of_power_sectors`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `irrigation1s`
---
-ALTER TABLE `irrigation1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `irrigation2s`
---
-ALTER TABLE `irrigation2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `irrigation3s`
---
-ALTER TABLE `irrigation3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `irrigation4s`
---
-ALTER TABLE `irrigation4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `irrigation5s`
---
-ALTER TABLE `irrigation5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `irrigation6s`
---
-ALTER TABLE `irrigation6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `irrigation7s`
---
-ALTER TABLE `irrigation7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `labour_resource_and_welfare1s`
---
-ALTER TABLE `labour_resource_and_welfare1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `labour_resource_and_welfare2s`
---
-ALTER TABLE `labour_resource_and_welfare2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `land1s`
---
-ALTER TABLE `land1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `lands`
---
-ALTER TABLE `lands`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `level_of_urbanisation1s`
---
-ALTER TABLE `level_of_urbanisation1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `level_of_urbanisation2s`
---
-ALTER TABLE `level_of_urbanisation2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `level_of_urbanisation3s`
---
-ALTER TABLE `level_of_urbanisation3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `level_of_urbanisation4s`
---
-ALTER TABLE `level_of_urbanisation4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `level_of_urbanisation5s`
---
-ALTER TABLE `level_of_urbanisation5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `level_of_urbanisation6s`
---
-ALTER TABLE `level_of_urbanisation6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `mapbihars`
---
-ALTER TABLE `mapbihars`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `micro_finance1s`
---
-ALTER TABLE `micro_finance1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `micro_finance2s`
---
-ALTER TABLE `micro_finance2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `mininngs`
---
-ALTER TABLE `mininngs`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `municipal_finances`
---
-ALTER TABLE `municipal_finances`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `newrices`
---
-ALTER TABLE `newrices`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `non_agro_based_industries1s`
---
-ALTER TABLE `non_agro_based_industries1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `non_agro_based_industries2s`
---
-ALTER TABLE `non_agro_based_industries2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `non_agro_based_industries3s`
---
-ALTER TABLE `non_agro_based_industries3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `non_agro_based_industries4s`
---
-ALTER TABLE `non_agro_based_industries4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `non_agro_based_industries5s`
---
-ALTER TABLE `non_agro_based_industries5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `operational_and_financial_status1s`
---
-ALTER TABLE `operational_and_financial_status1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `operational_and_financial_status2s`
---
-ALTER TABLE `operational_and_financial_status2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `panchayati_raj1s`
---
-ALTER TABLE `panchayati_raj1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `panchayati_raj2s`
---
-ALTER TABLE `panchayati_raj2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `poverty1s`
---
-ALTER TABLE `poverty1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `poverty2s`
---
-ALTER TABLE `poverty2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `production_and_productivity_of_rices`
---
-ALTER TABLE `production_and_productivity_of_rices`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `production_productivity1s`
---
-ALTER TABLE `production_productivity1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `production_productivity2s`
---
-ALTER TABLE `production_productivity2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `production_productivity4s`
---
-ALTER TABLE `production_productivity4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `production_productivity5s`
---
-ALTER TABLE `production_productivity5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `production_productivity7s`
---
-ALTER TABLE `production_productivity7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `production_productivity8s`
---
-ALTER TABLE `production_productivity8s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `production_productivity9s`
---
-ALTER TABLE `production_productivity9s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `production_productivity10s`
---
-ALTER TABLE `production_productivity10s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `production_productivity11s`
---
-ALTER TABLE `production_productivity11s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `production_productivity12s`
---
-ALTER TABLE `production_productivity12s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `programmes_for_electrification1s`
---
-ALTER TABLE `programmes_for_electrification1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `programmes_for_electrification2s`
---
-ALTER TABLE `programmes_for_electrification2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `projection_of_power_requirement1s`
---
-ALTER TABLE `projection_of_power_requirement1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `projection_of_power_requirement2s`
---
-ALTER TABLE `projection_of_power_requirement2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `projection_of_power_requirement3s`
---
-ALTER TABLE `projection_of_power_requirement3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `projection_of_power_requirement4s`
---
-ALTER TABLE `projection_of_power_requirement4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `projection_of_power_requirement5s`
---
-ALTER TABLE `projection_of_power_requirement5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `qualityofexpenditures`
---
-ALTER TABLE `qualityofexpenditures`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `railways`
---
-ALTER TABLE `railways`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rainfall1s`
---
-ALTER TABLE `rainfall1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rainfall2s`
---
-ALTER TABLE `rainfall2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rainfalls`
---
-ALTER TABLE `rainfalls`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `regional_disparities`
---
-ALTER TABLE `regional_disparities`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `resource_management1s`
---
-ALTER TABLE `resource_management1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `resource_management2s`
---
-ALTER TABLE `resource_management2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `resource_management3s`
---
-ALTER TABLE `resource_management3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `resource_management4s`
---
-ALTER TABLE `resource_management4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `resource_management5s`
---
-ALTER TABLE `resource_management5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `resource_management6s`
---
-ALTER TABLE `resource_management6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `resource_management7s`
---
-ALTER TABLE `resource_management7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `resource_management8s`
---
-ALTER TABLE `resource_management8s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `resource_management9s`
---
-ALTER TABLE `resource_management9s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `resource_management10s`
---
-ALTER TABLE `resource_management10s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `resource_management11s`
---
-ALTER TABLE `resource_management11s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `resource_management12s`
---
-ALTER TABLE `resource_management12s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `resource_management13s`
---
-ALTER TABLE `resource_management13s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `resource_management14s`
---
-ALTER TABLE `resource_management14s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `revenue_account1s`
---
-ALTER TABLE `revenue_account1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `revenue_account2s`
---
-ALTER TABLE `revenue_account2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `revenue_account3s`
---
-ALTER TABLE `revenue_account3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `revenue_account4s`
---
-ALTER TABLE `revenue_account4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `revenue_account5s`
---
-ALTER TABLE `revenue_account5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `revenue_expenditures`
---
-ALTER TABLE `revenue_expenditures`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `roads1s`
---
-ALTER TABLE `roads1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `roads2s`
---
-ALTER TABLE `roads2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `roads3s`
---
-ALTER TABLE `roads3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `roads4s`
---
-ALTER TABLE `roads4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `roads5s`
---
-ALTER TABLE `roads5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `roads6s`
---
-ALTER TABLE `roads6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `roads7s`
---
-ALTER TABLE `roads7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `roads8s`
---
-ALTER TABLE `roads8s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `roads9s`
---
-ALTER TABLE `roads9s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `roads10s`
---
-ALTER TABLE `roads10s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `road_transport1_part1s`
---
-ALTER TABLE `road_transport1_part1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `road_transport1_part2s`
---
-ALTER TABLE `road_transport1_part2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `road_transport2s`
---
-ALTER TABLE `road_transport2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `road_transport3s`
---
-ALTER TABLE `road_transport3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `road_transport4s`
---
-ALTER TABLE `road_transport4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rural_development_programmes1s`
---
-ALTER TABLE `rural_development_programmes1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rural_development_programmes2s`
---
-ALTER TABLE `rural_development_programmes2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rural_development_programmes3s`
---
-ALTER TABLE `rural_development_programmes3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rural_development_programmes4s`
---
-ALTER TABLE `rural_development_programmes4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rural_development_programmes5s`
---
-ALTER TABLE `rural_development_programmes5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rural_development_programmes6s`
---
-ALTER TABLE `rural_development_programmes6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rural_development_programmes7s`
---
-ALTER TABLE `rural_development_programmes7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rural_development_programmes8s`
---
-ALTER TABLE `rural_development_programmes8s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rural_development_programmes9s`
---
-ALTER TABLE `rural_development_programmes9s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rural_development_programmes10s`
---
-ALTER TABLE `rural_development_programmes10s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rural_development_programmes11s`
---
-ALTER TABLE `rural_development_programmes11s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `rural_infrastructure_development_funds`
---
-ALTER TABLE `rural_infrastructure_development_funds`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `schema_migrations`
---
-ALTER TABLE `schema_migrations`
-  ADD PRIMARY KEY (`version`);
-
---
--- Indexes for table `sectoral_expenditure1s`
---
-ALTER TABLE `sectoral_expenditure1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sectoral_expenditure2s`
---
-ALTER TABLE `sectoral_expenditure2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sectoral_expenditures`
---
-ALTER TABLE `sectoral_expenditures`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sectoral_share1s`
---
-ALTER TABLE `sectoral_share1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sectoral_share2s`
---
-ALTER TABLE `sectoral_share2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sectoral_share3s`
---
-ALTER TABLE `sectoral_share3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sectoral_share4s`
---
-ALTER TABLE `sectoral_share4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sectoral_share5s`
---
-ALTER TABLE `sectoral_share5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sectoral_share6s`
---
-ALTER TABLE `sectoral_share6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sectoral_share7s`
---
-ALTER TABLE `sectoral_share7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sectoral_share8s`
---
-ALTER TABLE `sectoral_share8s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sectoral_share9s`
---
-ALTER TABLE `sectoral_share9s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sectoral_share10s`
---
-ALTER TABLE `sectoral_share10s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sectoral_share11s`
---
-ALTER TABLE `sectoral_share11s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sectoral_share12s`
---
-ALTER TABLE `sectoral_share12s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sixth_economic_census1s`
---
-ALTER TABLE `sixth_economic_census1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sixth_economic_census2s`
---
-ALTER TABLE `sixth_economic_census2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `social_security_for_old_and_disableds`
---
-ALTER TABLE `social_security_for_old_and_disableds`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `social_welfare1s`
---
-ALTER TABLE `social_welfare1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `social_welfare2s`
---
-ALTER TABLE `social_welfare2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `social_welfare3s`
---
-ALTER TABLE `social_welfare3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `social_welfares`
---
-ALTER TABLE `social_welfares`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `state_domestic_product1s`
---
-ALTER TABLE `state_domestic_product1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `state_domestic_product2s`
---
-ALTER TABLE `state_domestic_product2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `state_domestic_product4s`
---
-ALTER TABLE `state_domestic_product4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `state_domestic_product5s`
---
-ALTER TABLE `state_domestic_product5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `state_domestic_product6s`
---
-ALTER TABLE `state_domestic_product6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `state_domestic_product7s`
---
-ALTER TABLE `state_domestic_product7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `state_domestic_product8s`
---
-ALTER TABLE `state_domestic_product8s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `state_domestic_product9s`
---
-ALTER TABLE `state_domestic_product9s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `state_domestic_product10s`
---
-ALTER TABLE `state_domestic_product10s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `state_domestic_product11s`
---
-ALTER TABLE `state_domestic_product11s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `state_public_sector1s`
---
-ALTER TABLE `state_public_sector1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `state_public_sector2s`
---
-ALTER TABLE `state_public_sector2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `state_public_sector3s`
---
-ALTER TABLE `state_public_sector3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `support_institutions1s`
---
-ALTER TABLE `support_institutions1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `support_institutions2s`
---
-ALTER TABLE `support_institutions2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `support_institutions3s`
---
-ALTER TABLE `support_institutions3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `support_institutions4s`
---
-ALTER TABLE `support_institutions4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tax_department1s`
---
-ALTER TABLE `tax_department1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tax_department2s`
---
-ALTER TABLE `tax_department2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tax_department3s`
---
-ALTER TABLE `tax_department3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tax_department4s`
---
-ALTER TABLE `tax_department4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tax_department5s`
---
-ALTER TABLE `tax_department5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tax_department6s`
---
-ALTER TABLE `tax_department6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tax_department7s`
---
-ALTER TABLE `tax_department7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tax_gsdp_ratios`
---
-ALTER TABLE `tax_gsdp_ratios`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `test1s`
---
-ALTER TABLE `test1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `testies`
---
-ALTER TABLE `testies`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tests`
---
-ALTER TABLE `tests`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tourism1s`
---
-ALTER TABLE `tourism1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tourism2s`
---
-ALTER TABLE `tourism2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tourism3s`
---
-ALTER TABLE `tourism3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `transmission1s`
---
-ALTER TABLE `transmission1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `transmission2s`
---
-ALTER TABLE `transmission2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_jointly_funded1s`
---
-ALTER TABLE `udp_jointly_funded1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_jointly_funded2s`
---
-ALTER TABLE `udp_jointly_funded2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_jointly_funded3s`
---
-ALTER TABLE `udp_jointly_funded3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_jointly_funded4s`
---
-ALTER TABLE `udp_jointly_funded4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_jointly_funded5s`
---
-ALTER TABLE `udp_jointly_funded5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_jointly_funded6s`
---
-ALTER TABLE `udp_jointly_funded6s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_jointly_funded7s`
---
-ALTER TABLE `udp_jointly_funded7s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_jointly_funded8s`
---
-ALTER TABLE `udp_jointly_funded8s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_jointly_funded9s`
---
-ALTER TABLE `udp_jointly_funded9s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_jointly_funded11s`
---
-ALTER TABLE `udp_jointly_funded11s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_jointly_funded12s`
---
-ALTER TABLE `udp_jointly_funded12s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_state_plan1s`
---
-ALTER TABLE `udp_state_plan1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_state_plan2s`
---
-ALTER TABLE `udp_state_plan2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_state_plan3s`
---
-ALTER TABLE `udp_state_plan3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_state_plan4s`
---
-ALTER TABLE `udp_state_plan4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `udp_state_plan5s`
---
-ALTER TABLE `udp_state_plan5s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `women_empowerment1s`
---
-ALTER TABLE `women_empowerment1s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `women_empowerment2s`
---
-ALTER TABLE `women_empowerment2s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `women_empowerment3s`
---
-ALTER TABLE `women_empowerment3s`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `women_empowerment4s`
---
-ALTER TABLE `women_empowerment4s`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `agricultural_credit1s`
---
-ALTER TABLE `agricultural_credit1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `agro_based_industries6s`
---
-ALTER TABLE `agro_based_industries6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
-
---
--- AUTO_INCREMENT for table `airways`
---
-ALTER TABLE `airways`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `annual_survey3s`
---
-ALTER TABLE `annual_survey3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
-
---
--- AUTO_INCREMENT for table `annual_survey7s`
---
-ALTER TABLE `annual_survey7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
-
---
--- AUTO_INCREMENT for table `availablility_of_power1s`
---
-ALTER TABLE `availablility_of_power1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT for table `availablility_of_power2s`
---
-ALTER TABLE `availablility_of_power2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `banking_infrastructure1s`
---
-ALTER TABLE `banking_infrastructure1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `banking_infrastructure2s`
---
-ALTER TABLE `banking_infrastructure2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
---
--- AUTO_INCREMENT for table `banking_infrastructure3s`
---
-ALTER TABLE `banking_infrastructure3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
-
---
--- AUTO_INCREMENT for table `banking_infrastructure4s`
---
-ALTER TABLE `banking_infrastructure4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `banking_infrastructure5s`
---
-ALTER TABLE `banking_infrastructure5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
---
--- AUTO_INCREMENT for table `banking_infrastructure6s`
---
-ALTER TABLE `banking_infrastructure6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
---
--- AUTO_INCREMENT for table `bihar_renewable_energies`
---
-ALTER TABLE `bihar_renewable_energies`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `bridge_sector1s`
---
-ALTER TABLE `bridge_sector1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `bridge_sector2s`
---
-ALTER TABLE `bridge_sector2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `deposites_and_credits1s`
---
-ALTER TABLE `deposites_and_credits1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
-
---
--- AUTO_INCREMENT for table `deposites_and_credits2s`
---
-ALTER TABLE `deposites_and_credits2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `deposites_and_credits3s`
---
-ALTER TABLE `deposites_and_credits3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-
---
--- AUTO_INCREMENT for table `deposites_and_credits4s`
---
-ALTER TABLE `deposites_and_credits4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
-
---
--- AUTO_INCREMENT for table `deposites_and_credits5s`
---
-ALTER TABLE `deposites_and_credits5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `deposites_and_credits6s`
---
-ALTER TABLE `deposites_and_credits6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
---
--- AUTO_INCREMENT for table `deposites_and_credits7s`
---
-ALTER TABLE `deposites_and_credits7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
-
---
--- AUTO_INCREMENT for table `deposites_and_credits8s`
---
-ALTER TABLE `deposites_and_credits8s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `disaster_management1s`
---
-ALTER TABLE `disaster_management1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `distributions`
---
-ALTER TABLE `distributions`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `distribution_of_homestead_land1s`
---
-ALTER TABLE `distribution_of_homestead_land1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `distribution_of_homestead_land2s`
---
-ALTER TABLE `distribution_of_homestead_land2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT for table `district_wise_section1s`
---
-ALTER TABLE `district_wise_section1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `district_wise_section2s`
---
-ALTER TABLE `district_wise_section2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `district_wise_section3s`
---
-ALTER TABLE `district_wise_section3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `district_wise_section4s`
---
-ALTER TABLE `district_wise_section4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `district_wise_section5s`
---
-ALTER TABLE `district_wise_section5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `district_wise_section6s`
---
-ALTER TABLE `district_wise_section6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
-
---
--- AUTO_INCREMENT for table `district_wise_section7s`
---
-ALTER TABLE `district_wise_section7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
-
---
--- AUTO_INCREMENT for table `district_wise_section8s`
---
-ALTER TABLE `district_wise_section8s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
-
---
--- AUTO_INCREMENT for table `district_wise_section9s`
---
-ALTER TABLE `district_wise_section9s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `district_wise_sections`
---
-ALTER TABLE `district_wise_sections`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=196;
-
---
--- AUTO_INCREMENT for table `drinking_water_supply_and_sanitation1s`
---
-ALTER TABLE `drinking_water_supply_and_sanitation1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `drinking_water_supply_and_sanitation2s`
---
-ALTER TABLE `drinking_water_supply_and_sanitation2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `drinking_water_supply_and_sanitation3s`
---
-ALTER TABLE `drinking_water_supply_and_sanitation3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `drinking_water_supply_and_sanitation4s`
---
-ALTER TABLE `drinking_water_supply_and_sanitation4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `education_art_culture1s`
---
-ALTER TABLE `education_art_culture1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
-
---
--- AUTO_INCREMENT for table `education_art_culture2s`
---
-ALTER TABLE `education_art_culture2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
-
---
--- AUTO_INCREMENT for table `education_art_culture3s`
---
-ALTER TABLE `education_art_culture3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `education_art_culture4s`
---
-ALTER TABLE `education_art_culture4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
---
--- AUTO_INCREMENT for table `education_art_culture5s`
---
-ALTER TABLE `education_art_culture5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `education_art_culture6s`
---
-ALTER TABLE `education_art_culture6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `education_art_culture7s`
---
-ALTER TABLE `education_art_culture7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `education_art_culture9s`
---
-ALTER TABLE `education_art_culture9s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-
---
--- AUTO_INCREMENT for table `expenditure_on_urban_developments`
---
-ALTER TABLE `expenditure_on_urban_developments`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `financial_institutions1s`
---
-ALTER TABLE `financial_institutions1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `financial_institutions2s`
---
-ALTER TABLE `financial_institutions2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `generation1s`
---
-ALTER TABLE `generation1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `generation2s`
---
-ALTER TABLE `generation2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `ict2s`
---
-ALTER TABLE `ict2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
-
---
--- AUTO_INCREMENT for table `ict3s`
---
-ALTER TABLE `ict3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `ict4s`
---
-ALTER TABLE `ict4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
-
---
--- AUTO_INCREMENT for table `ict5s`
---
-ALTER TABLE `ict5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
-
---
--- AUTO_INCREMENT for table `institutional_structure_of_power_sectors`
---
-ALTER TABLE `institutional_structure_of_power_sectors`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `irrigation7s`
---
-ALTER TABLE `irrigation7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `labour_resource_and_welfare1s`
---
-ALTER TABLE `labour_resource_and_welfare1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT for table `labour_resource_and_welfare2s`
---
-ALTER TABLE `labour_resource_and_welfare2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-
---
--- AUTO_INCREMENT for table `level_of_urbanisation1s`
---
-ALTER TABLE `level_of_urbanisation1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `level_of_urbanisation2s`
---
-ALTER TABLE `level_of_urbanisation2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `level_of_urbanisation3s`
---
-ALTER TABLE `level_of_urbanisation3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `level_of_urbanisation4s`
---
-ALTER TABLE `level_of_urbanisation4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `level_of_urbanisation5s`
---
-ALTER TABLE `level_of_urbanisation5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `level_of_urbanisation6s`
---
-ALTER TABLE `level_of_urbanisation6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `mapbihars`
---
-ALTER TABLE `mapbihars`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `micro_finance1s`
---
-ALTER TABLE `micro_finance1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
---
--- AUTO_INCREMENT for table `micro_finance2s`
---
-ALTER TABLE `micro_finance2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `municipal_finances`
---
-ALTER TABLE `municipal_finances`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `non_agro_based_industries1s`
---
-ALTER TABLE `non_agro_based_industries1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `non_agro_based_industries2s`
---
-ALTER TABLE `non_agro_based_industries2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT for table `non_agro_based_industries4s`
---
-ALTER TABLE `non_agro_based_industries4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `operational_and_financial_status1s`
---
-ALTER TABLE `operational_and_financial_status1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
-
---
--- AUTO_INCREMENT for table `operational_and_financial_status2s`
---
-ALTER TABLE `operational_and_financial_status2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `panchayati_raj1s`
---
-ALTER TABLE `panchayati_raj1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `panchayati_raj2s`
---
-ALTER TABLE `panchayati_raj2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-
---
--- AUTO_INCREMENT for table `poverty1s`
---
-ALTER TABLE `poverty1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `poverty2s`
---
-ALTER TABLE `poverty2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `programmes_for_electrification1s`
---
-ALTER TABLE `programmes_for_electrification1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `programmes_for_electrification2s`
---
-ALTER TABLE `programmes_for_electrification2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `projection_of_power_requirement1s`
---
-ALTER TABLE `projection_of_power_requirement1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `projection_of_power_requirement2s`
---
-ALTER TABLE `projection_of_power_requirement2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `projection_of_power_requirement3s`
---
-ALTER TABLE `projection_of_power_requirement3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `projection_of_power_requirement4s`
---
-ALTER TABLE `projection_of_power_requirement4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `projection_of_power_requirement5s`
---
-ALTER TABLE `projection_of_power_requirement5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `railways`
---
-ALTER TABLE `railways`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `roads1s`
---
-ALTER TABLE `roads1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `roads2s`
---
-ALTER TABLE `roads2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- AUTO_INCREMENT for table `roads3s`
---
-ALTER TABLE `roads3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
-
---
--- AUTO_INCREMENT for table `roads4s`
---
-ALTER TABLE `roads4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
---
--- AUTO_INCREMENT for table `roads5s`
---
-ALTER TABLE `roads5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT for table `roads6s`
---
-ALTER TABLE `roads6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `roads7s`
---
-ALTER TABLE `roads7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `roads8s`
---
-ALTER TABLE `roads8s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `roads9s`
---
-ALTER TABLE `roads9s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `roads10s`
---
-ALTER TABLE `roads10s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `road_transport1_part1s`
---
-ALTER TABLE `road_transport1_part1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `road_transport1_part2s`
---
-ALTER TABLE `road_transport1_part2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `road_transport2s`
---
-ALTER TABLE `road_transport2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `road_transport3s`
---
-ALTER TABLE `road_transport3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `road_transport4s`
---
-ALTER TABLE `road_transport4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `rural_development_programmes1s`
---
-ALTER TABLE `rural_development_programmes1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
---
--- AUTO_INCREMENT for table `rural_development_programmes2s`
---
-ALTER TABLE `rural_development_programmes2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `rural_development_programmes3s`
---
-ALTER TABLE `rural_development_programmes3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- AUTO_INCREMENT for table `rural_development_programmes4s`
---
-ALTER TABLE `rural_development_programmes4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `rural_development_programmes5s`
---
-ALTER TABLE `rural_development_programmes5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
-
---
--- AUTO_INCREMENT for table `rural_development_programmes6s`
---
-ALTER TABLE `rural_development_programmes6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `rural_development_programmes7s`
---
-ALTER TABLE `rural_development_programmes7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=235;
-
---
--- AUTO_INCREMENT for table `rural_development_programmes8s`
---
-ALTER TABLE `rural_development_programmes8s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
-
---
--- AUTO_INCREMENT for table `rural_development_programmes9s`
---
-ALTER TABLE `rural_development_programmes9s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `rural_development_programmes10s`
---
-ALTER TABLE `rural_development_programmes10s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `rural_development_programmes11s`
---
-ALTER TABLE `rural_development_programmes11s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `rural_infrastructure_development_funds`
---
-ALTER TABLE `rural_infrastructure_development_funds`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT for table `sectoral_share1s`
---
-ALTER TABLE `sectoral_share1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `sectoral_share2s`
---
-ALTER TABLE `sectoral_share2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `sectoral_share3s`
---
-ALTER TABLE `sectoral_share3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `sectoral_share4s`
---
-ALTER TABLE `sectoral_share4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
---
--- AUTO_INCREMENT for table `sectoral_share5s`
---
-ALTER TABLE `sectoral_share5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `sectoral_share6s`
---
-ALTER TABLE `sectoral_share6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT for table `sectoral_share7s`
---
-ALTER TABLE `sectoral_share7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
-
---
--- AUTO_INCREMENT for table `sectoral_share8s`
---
-ALTER TABLE `sectoral_share8s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
-
---
--- AUTO_INCREMENT for table `sectoral_share9s`
---
-ALTER TABLE `sectoral_share9s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
---
--- AUTO_INCREMENT for table `sectoral_share10s`
---
-ALTER TABLE `sectoral_share10s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `sectoral_share11s`
---
-ALTER TABLE `sectoral_share11s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
-
---
--- AUTO_INCREMENT for table `sectoral_share12s`
---
-ALTER TABLE `sectoral_share12s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT for table `social_security_for_old_and_disableds`
---
-ALTER TABLE `social_security_for_old_and_disableds`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
-
---
--- AUTO_INCREMENT for table `social_welfare1s`
---
-ALTER TABLE `social_welfare1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `social_welfare2s`
---
-ALTER TABLE `social_welfare2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `social_welfare3s`
---
-ALTER TABLE `social_welfare3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
-
---
--- AUTO_INCREMENT for table `social_welfares`
---
-ALTER TABLE `social_welfares`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `state_domestic_product9s`
---
-ALTER TABLE `state_domestic_product9s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=196;
-
---
--- AUTO_INCREMENT for table `support_institutions1s`
---
-ALTER TABLE `support_institutions1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `support_institutions3s`
---
-ALTER TABLE `support_institutions3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `support_institutions4s`
---
-ALTER TABLE `support_institutions4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `tourism1s`
---
-ALTER TABLE `tourism1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `tourism2s`
---
-ALTER TABLE `tourism2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `tourism3s`
---
-ALTER TABLE `tourism3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
-
---
--- AUTO_INCREMENT for table `transmission1s`
---
-ALTER TABLE `transmission1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `transmission2s`
---
-ALTER TABLE `transmission2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- AUTO_INCREMENT for table `udp_jointly_funded1s`
---
-ALTER TABLE `udp_jointly_funded1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
-
---
--- AUTO_INCREMENT for table `udp_jointly_funded2s`
---
-ALTER TABLE `udp_jointly_funded2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `udp_jointly_funded3s`
---
-ALTER TABLE `udp_jointly_funded3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `udp_jointly_funded4s`
---
-ALTER TABLE `udp_jointly_funded4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `udp_jointly_funded5s`
---
-ALTER TABLE `udp_jointly_funded5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- AUTO_INCREMENT for table `udp_jointly_funded6s`
---
-ALTER TABLE `udp_jointly_funded6s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `udp_jointly_funded7s`
---
-ALTER TABLE `udp_jointly_funded7s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `udp_jointly_funded8s`
---
-ALTER TABLE `udp_jointly_funded8s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `udp_jointly_funded9s`
---
-ALTER TABLE `udp_jointly_funded9s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- AUTO_INCREMENT for table `udp_jointly_funded11s`
---
-ALTER TABLE `udp_jointly_funded11s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `udp_jointly_funded12s`
---
-ALTER TABLE `udp_jointly_funded12s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `udp_state_plan1s`
---
-ALTER TABLE `udp_state_plan1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `udp_state_plan2s`
---
-ALTER TABLE `udp_state_plan2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `udp_state_plan3s`
---
-ALTER TABLE `udp_state_plan3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `udp_state_plan4s`
---
-ALTER TABLE `udp_state_plan4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `udp_state_plan5s`
---
-ALTER TABLE `udp_state_plan5s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `women_empowerment1s`
---
-ALTER TABLE `women_empowerment1s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `women_empowerment2s`
---
-ALTER TABLE `women_empowerment2s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
-
---
--- AUTO_INCREMENT for table `women_empowerment3s`
---
-ALTER TABLE `women_empowerment3s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `women_empowerment4s`
---
-ALTER TABLE `women_empowerment4s`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
