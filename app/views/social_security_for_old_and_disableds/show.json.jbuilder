@@ -1,0 +1,1 @@
+json.partial! "social_security_for_old_and_disableds/social_security_for_old_and_disabled", social_security_for_old_and_disabled: @social_security_for_old_and_disabled

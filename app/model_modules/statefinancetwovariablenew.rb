@@ -106,7 +106,7 @@ module Statefinancetwovariablenew
 
       else
         [
-          { title: 'Sector', field: 'Sector', headerFilter: true },
+          { title: legend, field: 'Sector', headerFilter: true },
           { title: years, field: _year }
         ]
       end
@@ -125,13 +125,13 @@ module Statefinancetwovariablenew
               else
                 hash_data = if compare == 'None'
                   [
-                    { title: 'Sector', field: 'Sector', headerFilter: true },
+                    { title: legend, field: 'Sector', headerFilter: true },
                     { title: years, field: _year }
                   ]
                 else
                   [
                     # {title:compare, field:compare, sorter:"string", },
-                    { title: 'Sector', field: 'Sector', headerFilter: true },
+                    { title: legend, field: 'Sector', headerFilter: true },
                     { title: years, field: _year }
                   ]
                 end

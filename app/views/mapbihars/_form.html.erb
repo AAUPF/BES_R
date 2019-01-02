@@ -1,0 +1,27 @@
+<%= form_with(model: mapbihar, local: true) do |form| %>
+  <% if mapbihar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mapbihar.errors.count, "error") %> prohibited this mapbihar from being saved:</h2>
+
+      <ul>
+      <% mapbihar.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :indicator %>
+    <%= form.text_field :indicator %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

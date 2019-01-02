@@ -1,1 +1,1 @@
-rails g scaffold Women_Empowerment2   Sector:string	Total_Budget:float	Under_Category_I:float	Under_Category_II:float	Total:float	Year:string
+rails g scaffold DistrictWiseSection1   Sector:string	Population_Share:float	2013-14:float	2014-15:float	2015-16:float	2016-17:float	Indicator:string

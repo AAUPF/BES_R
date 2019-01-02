@@ -36,7 +36,6 @@ def test
     end
     
    end
-
   if rain_fall_type || views
 
       if views == "Map View"

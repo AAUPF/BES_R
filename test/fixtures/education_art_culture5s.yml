@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Primary: 1.5
+  Secondary: 1.5
+  Higher: 1.5
+  Total: 1.5
+  Total_Budget: 1.5
+  Social_Services: 1.5
+
+two:
+  Year: MyString
+  Primary: 1.5
+  Secondary: 1.5
+  Higher: 1.5
+  Total: 1.5
+  Total_Budget: 1.5
+  Social_Services: 1.5

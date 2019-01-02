@@ -15,43 +15,7 @@ class DrinkingWaterSupplyAndSanitation4sController < ApplicationController
     @drinking_water_supply_and_sanitation4 = DrinkingWaterSupplyAndSanitation4.new
   end
 
-# def test
-#   ji = [:Sector, :Target, :Achievement, :Achievement_Percentage, :Year]
-#   rain_fall_type = params[:rain_fall_type]
-#    views  = params[:views]
-#    year  = params[:year]
-#    compare = params[:compare]
 
-#   if rain_fall_type || views
-
-#       if views == "Map View"
-#         l =  rain_fall_type.gsub(" ","")           
-#          if rain_fall_type  ==  "All"
-#           b = DrinkingWaterSupplyAndSanitation4.map_search("All",compare,year,rain_fall_type)
-#           u = "Total"
-#           a = DrinkingWaterSupplyAndSanitation4.map(b,params[:year],rain_fall_type,views)
-#          else
-#           b = DrinkingWaterSupplyAndSanitation4.map_search(params[:search],compare,year,rain_fall_type)
-#           a = DrinkingWaterSupplyAndSanitation4.map(b,rain_fall_type,year,ji)
-#          end
-#       elsif views == "Table"  
-#         b = DrinkingWaterSupplyAndSanitation4.search(params[:search],compare,year,rain_fall_type)
-#         a = DrinkingWaterSupplyAndSanitation4.table(b,rain_fall_type,year,ji1,compare)
-#       else
-#         @DrinkingWaterSupplyAndSanitation4s = DrinkingWaterSupplyAndSanitation4.search(params[:search],compare,year,rain_fall_type)
-#         a = DrinkingWaterSupplyAndSanitation4.query(@DrinkingWaterSupplyAndSanitation4s,params[:year],rain_fall_type,views,ji,compare)
-#       end
-#       respond_to do |format|
-#         format.html { render json:a }
-#     end
-
-#   else
-#     respond_to do |format|
-#       format.html { render json: "error"}
-#   end
-#   end
-
-# end
 
 
 def test

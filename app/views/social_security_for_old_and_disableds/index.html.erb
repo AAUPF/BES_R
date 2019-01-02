@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Social Security For Old And Disableds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name of the scheme</th>
+      <th>Budget outlay</th>
+      <th>Expenditure</th>
+      <th>Physical achievement</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @social_security_for_old_and_disableds.each do |social_security_for_old_and_disabled| %>
+      <tr>
+        <td><%= social_security_for_old_and_disabled.Name_of_the_Scheme %></td>
+        <td><%= social_security_for_old_and_disabled.Budget_Outlay %></td>
+        <td><%= social_security_for_old_and_disabled.Expenditure %></td>
+        <td><%= social_security_for_old_and_disabled.Physical_Achievement %></td>
+        <td><%= social_security_for_old_and_disabled.Year %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Social Security For Old And Disabled', new_social_security_for_old_and_disabled_path %>

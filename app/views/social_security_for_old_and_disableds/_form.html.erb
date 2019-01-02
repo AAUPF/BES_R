@@ -1,0 +1,42 @@
+<%= form_with(model: social_security_for_old_and_disabled, local: true) do |form| %>
+  <% if social_security_for_old_and_disabled.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(social_security_for_old_and_disabled.errors.count, "error") %> prohibited this social_security_for_old_and_disabled from being saved:</h2>
+
+      <ul>
+      <% social_security_for_old_and_disabled.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Name_of_the_Scheme %>
+    <%= form.text_field :Name_of_the_Scheme %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Budget_Outlay %>
+    <%= form.text_field :Budget_Outlay %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Expenditure %>
+    <%= form.text_field :Expenditure %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Physical_Achievement %>
+    <%= form.text_field :Physical_Achievement %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

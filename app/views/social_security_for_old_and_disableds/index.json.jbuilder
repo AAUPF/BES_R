@@ -1,0 +1,1 @@
+json.array! @social_security_for_old_and_disableds, partial: 'social_security_for_old_and_disableds/social_security_for_old_and_disabled', as: :social_security_for_old_and_disabled
