@@ -1,4 +1,4 @@
 class SocialSecurityForOldAndDisabled < ApplicationRecord
-  extend Generaldata  
+  extend Generaldata
 
       end
