@@ -1,4 +1,6 @@
 class Mapbihar < ApplicationRecord
-  extend Biharmap  
+   extend Biharmap  
+  # extend Rainfallnewmap
+  
 
 end
