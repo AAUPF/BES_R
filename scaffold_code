@@ -1,1 +1,1 @@
-rails g scaffold DistrictWiseSection1   Sector:string	Population_Share:float	2013-14:float	2014-15:float	2015-16:float	2016-17:float	Indicator:string
+rails g scaffold DistrictWiseSection5 Districts:string Primary_Schools:float Upper_Primary_Schools:float Total:float
