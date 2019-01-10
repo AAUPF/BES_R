@@ -239,6 +239,7 @@ module Generaldata
           else
               if _year == "All"
                   grouped_data = b.reject{|x| x["#{legend}"]== "#{remove}"}.group_by{ |data| data["#{legend}"]}
+                  grouped_data_not_reject = b.group_by{ |data| data["#{legend}"]}
                   if search == "All"
                     # abort("ok")
                       hash_data = grouped_data.map{ |vegetable, values| 
@@ -258,7 +259,7 @@ module Generaldata
   
   
                           if compare != "None"
-                              hash_data = grouped_data.map{ |vegetable, values| 
+                              hash_data = grouped_data_not_reject.map{ |vegetable, values| 
                                   dataset = vegetable.to_s.gsub("_"," ")
                                   {
                                   type: views,
@@ -274,7 +275,7 @@ module Generaldata
                           else
                             if views != "column" && views != "line" && views != "bubble"
                               hash_data =[]
-                                 grouped_data.map{ |vegetable, values| 
+                              grouped_data_not_reject.map{ |vegetable, values| 
                                   values.map do |value|
                                     hash_data.push(
                                       {
@@ -292,7 +293,7 @@ module Generaldata
                                 
                               else
                             
-                                hash_data = grouped_data.map{ |vegetable, values| 
+                                hash_data = grouped_data_not_reject.map{ |vegetable, values| 
                                   dataset = vegetable.to_s.gsub("_"," ")
                                   {
                                   type: views,
