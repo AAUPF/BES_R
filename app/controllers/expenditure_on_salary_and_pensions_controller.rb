@@ -30,14 +30,14 @@ class ExpenditureOnSalaryAndPensionsController < ApplicationController
     ji1 = %i[Sector 2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE]
     compare = "None"
 
-    if search == 'Expenditure on Salaries  '
+    if search == 'Expenditure on Salaries'
       if rain_fall_type == "None"
         data = [
-          'Expenditure on Salaries  '
+          'Expenditure on Salaries'
         ]
       else
         data = [
-          'Expenditure on Salaries  ',
+          'Expenditure on Salaries',
           "Non-Plan Head",
           "Plan Head",
           "Salary as percentage of GSDP",
@@ -80,7 +80,7 @@ class ExpenditureOnSalaryAndPensionsController < ApplicationController
 
     elsif search == 'All'
       data = [
-          'Expenditure on Salaries  ',
+          'Expenditure on Salaries',
           "Non-Plan Head",
           "Plan Head",
           "Salary as percentage of GSDP",

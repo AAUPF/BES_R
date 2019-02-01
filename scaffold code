@@ -1,1 +1,1 @@
-rails g scaffold Generation2 Thermal_Plan:string '2015-16':string '2016-17':string '2017-18_Under_Progress':string '2018-19':string 'By_2022_Upcoming_Projects':string 'Beyond_2022':string
+rails g scaffold Women-Empowerment1 Details:string '2012-13':float '2013-14':float '2014-15':float '2015-16':float '2016-17':float
