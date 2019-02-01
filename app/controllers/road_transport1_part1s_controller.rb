@@ -17,6 +17,7 @@ class RoadTransport1Part1sController < ApplicationController
 
 def test
 
+
   year  = params[:year]
 
 
@@ -29,6 +30,7 @@ if year == 'Non-Transport'
    views  = params[:views]
    compare = params[:compare]
    ji1 = [:State, :Two_Wheeler, :Cars, :Jeeps, :Miscellaneous]
+   search = params[:search]
 
    nt = RoadTransport1Part1.search(params[:search],compare,year,rain_fall_type)
    nt1 = RoadTransport1Part1.search(params[:search],compare,year,rain_fall_type)
@@ -38,6 +40,7 @@ else
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    compare = params[:compare]
+   search = params[:search]
    ji1 = [:State, :Buses, :Taxis, :Light_Motor_Vehicles_Passengers, :Goods_Carrier_Vehicles]
 
    nt = RoadTransport1Part2.search(params[:search],compare,year,rain_fall_type)
@@ -66,7 +69,7 @@ end
         a = RoadTransport1Part1.table(b,rain_fall_type,year,ji1,compare)
       else
         @RoadTransport1Part1s = nt
-        a = RoadTransport1Part1.query(@RoadTransport1Part1s,params[:year],rain_fall_type,views,ji,compare)
+        a = RoadTransport1Part1.query(@RoadTransport1Part1s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

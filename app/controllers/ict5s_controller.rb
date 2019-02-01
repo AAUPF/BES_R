@@ -16,13 +16,18 @@ class Ict5sController < ApplicationController
   end
 
 def test
-  ji = [:Rural, :Deposits, :Investment, :MIS, :Sukanya_Samridhi_Account, :MG_NREGA]
+  year  = params[:year]
+  if year == "Number of Accounts"
+    ji = [:Deposits, :Investment, :MIS, :Sukanya_Samridhi_Account, :MG_NREGA]
+  else
+    ji = [:Deposits, :Investment, :MIS, :Sukanya_Samridhi_Account]
+  end
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
-   year  = params[:year]
+   
    compare = params[:compare]
-
-   ji1 = [:State, :Rural, :Deposits, :Investment, :MIS, :Sukanya_Samridhi_Account, :MG_NREGA, :Total, :Indicator]
+   search = params[:search]
+   ji1 = [:State, :Deposits, :Investment, :MIS, :Sukanya_Samridhi_Account, :MG_NREGA, :Total, :Indicator]
 
   if rain_fall_type || views
 
@@ -41,7 +46,7 @@ def test
         a = Ict5.table(b,rain_fall_type,year,ji1,compare)
       else
         @Ict5s = Ict5.search(params[:search],compare,year,rain_fall_type)
-        a = Ict5.query(@Ict5s,params[:year],rain_fall_type,views,ji,compare)
+        a = Ict5.query(@Ict5s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

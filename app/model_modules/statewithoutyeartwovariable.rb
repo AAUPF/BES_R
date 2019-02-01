@@ -78,9 +78,10 @@ module Statewithoutyeartwovariable
       end
     end
   
-    def query(b, _year, rain_fall_type, views, ji, compare)
+    def query(b, _year, rain_fall_type, views, ji, compare,search)
       d = 'State'
       color  = "#4f81bc"
+      legend = "State"
       if rain_fall_type == 'All'
         if views
           hash_data = ji.map do |column_name|
@@ -104,7 +105,7 @@ module Statewithoutyeartwovariable
                 name:dataset,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.reject { |x| x['State'] == 'India' }.map do |el|
+                dataPoints: b.reject { |x| x['State'] == 'India' || x['State'] == 'All-India' || x['State'] == 'All States' || x['State'] == 'Total' }.map do |el|
                               { y: el[column_name], z: el[column_name], label: el[d] }
                             end
               }
@@ -116,18 +117,28 @@ module Statewithoutyeartwovariable
         if compare == 'Bihar vs State'
           dataset = rain_fall_type.tr('_', ' ')
   
-          hash_data =
-            [{
+          # hash_data =
+          #   [{
+          #     type: views,
+          #     toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+          #     name:dataset,
+          #     color: color,
+          #     legendText: dataset,
+          #     showInLegend: true,
+          #     dataPoints: b.map do |el|
+          #                   { y: el[rain_fall_type], label: el['State'] }
+          #                 end
+          #   }]
+          hash_data = b.map do |el|
+            {
               type: views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-              name:dataset,
-              color: color,
-              legendText: dataset,
+              toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
+              name: (el[legend.to_s]).to_s,
+              legendText: (el[legend.to_s]).to_s,
               showInLegend: true,
-              dataPoints: b.map do |el|
-                            { y: el[rain_fall_type], label: el['State'] }
-                          end
-            }]
+              dataPoints: [{ y: el[rain_fall_type], label: dataset }]
+            }
+          end
         else
           # dataset = rain_fall_type.tr('_', ' ')
           # hash_data =
@@ -142,8 +153,9 @@ module Statewithoutyeartwovariable
           #                   { y: el[rain_fall_type], label: el['State'] }
           #                 end
           #   }]
+          
 
-          legend = ""
+          
 
           if views == 'line' || views == 'bubble' || views == 'column'
             dataset = rain_fall_type.tr('_', ' ')
@@ -155,13 +167,13 @@ module Statewithoutyeartwovariable
                 color: color,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.reject { |x| x[legend.to_s] == 'Total' }.map do |el|
+                dataPoints: b.reject { |x| x[legend.to_s] == 'India' ||x[legend.to_s] == 'All-India' || x[legend.to_s] == 'All States' || x[legend.to_s] == 'Total' }.map do |el|
                               { y: el[rain_fall_type], label: el[legend.to_s] }
                             end
               }]
           else
             dataset = rain_fall_type.tr('_', ' ')
-            hash_data = b.reject { |x| x[legend.to_s] == 'Total' }.map do |el|
+            hash_data = b.reject { |x| x[legend.to_s] == 'India' ||x[legend.to_s] == 'All-India' || x[legend.to_s] == 'All States' || x[legend.to_s] == 'Total' }.map do |el|
               {
                 type: views,
                 toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
@@ -178,7 +190,7 @@ module Statewithoutyeartwovariable
 
 
       end
-      if views == "stackedBar" || views == "stackedBar100"
+      if views == "stackedBar" || views == "stackedBar100" || (search !="All" || rain_fall_type!="All")
         title = {
           animationEnabled: true,
           exportEnabled: true,

@@ -471,7 +471,7 @@ module Statefinanceyear
                   hash_data = Newmodulefunctions.no_year(b, rain_fall_type, _year, color, views, compare)
                 end
               end
-              Newmodulefunctions.title_return(views, search, hash_data, compare)
+              Newmodulefunctions.title_return(views, search, hash_data, compare,_year,rain_fall_type)
             end
     
 end

@@ -24,10 +24,11 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
    jip = [:'2007-08', :'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17', :'2017-18']
 
-
-   data = [
+if search == "Public Investment in Road and Bridges"
+  data = [
     "Total Expenditure on Road and Bridges",
     "Revenue Expenditure on Road and Bridges",
     "Capital Expenditure on Road and Bridges",
@@ -36,7 +37,16 @@ def test
     "Total Budget",
     "GSDP",
   ]
-  legend = "Districts"
+else
+  data = [
+    "Economic Services",
+    "Development Expenditure",
+    "Total Budget",
+    "GSDP",
+  ]
+end
+   
+  legend = "Sector"
 
 search = rain_fall_type
 

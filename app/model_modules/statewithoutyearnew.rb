@@ -78,9 +78,14 @@ module Statewithoutyearnew
       end
     end
   
-    def query(b, _year, rain_fall_type, views, ji, compare)
+    def query(b, _year, rain_fall_type, views, ji, compare,search)
       d = 'State'
       color  = "#4f81bc"
+          if compare == "None"
+            name =  "#{rain_fall_type.to_s.gsub("_"," ")}"
+          else
+              name =  "#{search.to_s.gsub("_"," ")} vs. Bihar"
+          end
       if rain_fall_type == 'All'
         if views
           hash_data = ji.map do |column_name|
@@ -98,25 +103,39 @@ module Statewithoutyearnew
               }
             else
               dataset = column_name.to_s.tr('_', ' ')
-              {
-                type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:dataset,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: b.reject { |x| x['State'] == 'India' }.map do |el|
-                              { y: el[column_name], z: el[column_name], label: el[d] }
-                            end
-              }
+              if search == "All"
+                {
+                  type: views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: b.reject { |x| x['State'] == 'India' || x['State'] == 'All-India' }.map do |el|
+                                { y: el[column_name], z: el[column_name], label: el[d] }
+                              end
+                }
+              else
+                {
+                  type: views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: b.map do |el|
+                                { y: el[column_name], z: el[column_name], label: el[d] }
+                              end
+                }
+              end
+              
             end
           end
         end
-        if views == "stackedBar" || views == "stackedBar100"
+        if views == "stackedBar" || views == "stackedBar100"  || views == "stackedColumn100"  || views == "stackedColumn" || search != "All"
           title = {
             animationEnabled: true,
             exportEnabled: true,
             title: {
-              text: rain_fall_type.to_s.tr('_', ' ').to_s
+              text: name
             },
             data: hash_data
           }
@@ -125,7 +144,7 @@ module Statewithoutyearnew
             animationEnabled: true,
             exportEnabled: true,
             title: {
-              text: rain_fall_type.to_s.tr('_', ' ').to_s
+              text: name
             },
             axisX: {
               interval:1,
@@ -140,21 +159,42 @@ module Statewithoutyearnew
       else
         if compare == 'Bihar vs State'
           dataset = rain_fall_type.tr('_', ' ')
-  
-          hash_data =
-            [{
+          # hash_data =
+          #   [{
+          #     type: views,
+          #     toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+          #     name:dataset,
+          #     color: color,
+          #     legendText: dataset,
+          #     showInLegend: true,
+          #     dataPoints: b.map do |el|
+          #                   { y: el[rain_fall_type], label: el['State'] }
+          #                 end
+          #   }]
+          hash_data = b.map do |el|
+            {
               type: views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-              name:dataset,
-              color: color,
-              legendText: dataset,
+              toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
+              name: (el['State']),
+              legendText: (el['State']),
               showInLegend: true,
-              dataPoints: b.map do |el|
-                            { y: el[rain_fall_type], label: el['State'] }
-                          end
-            }]
+              dataPoints: [{ y: el[rain_fall_type], label: dataset }]
+            }
+          end
         else
-          dataset = rain_fall_type.tr('_', ' ')
+          if views != "column" && views != "line"
+            hash_data = b.reject{ |x| x['State'] == 'India' || x['State'] == 'All-India' }.map do |col|
+              {
+                type:views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:col['State'],
+                legendText: col['State'],
+                showInLegend: true,
+                dataPoints: [{ y: col[rain_fall_type], label: search }]
+              }
+            end
+          else
+            dataset = rain_fall_type.tr('_', ' ')
           hash_data =
             [{
               type: views,
@@ -163,19 +203,19 @@ module Statewithoutyearnew
               color: color,
               legendText: dataset,
               showInLegend: true,
-              dataPoints: b.reject { |x| x['State'] == 'India' }.map do |el|
+              dataPoints: b.reject { |x| x['State'] == 'India' || x['State'] == 'All-India' }.map do |el|
                             { y: el[rain_fall_type], label: el['State'] }
                           end
             }]
-
-          
+          end
         end
-        if views == "stackedBar" || views == "stackedBar100"
+        
+        if views == "stackedBar" || views == "stackedBar100"  || views == "stackedColumn100"  || views == "stackedColumn" || search != "All"
           title = {
             animationEnabled: true,
             exportEnabled: true,
             title: {
-              text: rain_fall_type.to_s.tr('_', ' ').to_s
+              text: name
             },
             data: hash_data
           }
@@ -184,7 +224,7 @@ module Statewithoutyearnew
             animationEnabled: true,
             exportEnabled: true,
             title: {
-              text: rain_fall_type.to_s.tr('_', ' ').to_s
+              text: name
             },
             axisX: {
               interval:1,

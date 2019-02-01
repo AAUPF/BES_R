@@ -3,30 +3,28 @@ module Newmodulefunctions
 
     result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
     if views != "column"
-    hash_data = result.reject{|x| x["Sector"].include? "Total"}.map do |col|
-      {
-        type:views,
-        toolTipContent: "{label}<br/>{name}: <strong>{y}</strong>",
-        name:col[:Sector],
-        legendText: col[:Sector],
-        showInLegend: true,
-        dataPoints: [{ y: col[_year], label: _year }]
-      }
-    end
-      
+      hash_data = result.reject{|x| x["Sector"]== "Total"}.map do |col|
+        {
+          type:views,
+          toolTipContent: "{label}<br/>{name}: <strong>{y}</strong>",
+          name:col[:Sector],
+          legendText: col[:Sector],
+          showInLegend: true,
+          dataPoints: [{ y: col[_year], label: _year }]
+        }
+      end
     else
-
-
-          hash_data = [{
-      type: views,
-      color: color,
-      legendText: search,
-      showInLegend: true,
-      dataPoints: result.reject{|x| x["Sector"].include? "Total"}.map do |hash|
-                    { y: hash[_year], label: hash[:Sector] }
-                  end
-    }]
-      
+      hash_data = [{
+        type: views,
+        toolTipContent: "{label}<br/>{name}: <strong>{y}</strong>",
+        name:_year,
+        color: color,
+        legendText: search,
+        showInLegend: true,
+        dataPoints: result.reject{|x| x["Sector"]== "Total"}.map do |hash|
+                      { y: hash[_year], label: hash[:Sector] }
+                    end
+      }]
     end
 
   end
@@ -51,7 +49,7 @@ module Newmodulefunctions
       def self.year_all(b,data,views,_year,jip)
         result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
 
-        hash_data = result.reject{|x| x["Sector"].include? "Total"}.map do |col|
+        hash_data = result.reject{|x| x["Sector"]== "Total"}.map do |col|
           {
             type:views,
             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
@@ -81,9 +79,11 @@ def self.no_year(b,rain_fall_type,_year,color,views,compare)
 
           {
             type: views,
+            toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+            name:el[:Sector],
             legendText: el['Sector'],
             showInLegend: true,
-            dataPoints: [{ y: el[_year], label: el['Sector'] }]
+            dataPoints: [{ y: el[_year], label: _year }]
           }
 
         end
@@ -94,6 +94,8 @@ def self.no_year(b,rain_fall_type,_year,color,views,compare)
       hash_data =
         [{
           type: views,
+          toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+          name:_year,
           color: color,
           legendText: _year,
           showInLegend: true,
@@ -112,6 +114,8 @@ def self.no_year(b,rain_fall_type,_year,color,views,compare)
     hash_data =
       [{
         type: views,
+        toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+        name:_year,
         color: color,
         legendText: _year,
         showInLegend: true,
@@ -198,6 +202,8 @@ def self.year_to_stack(b,rain_fall_type,_year,views,color,jip)
         hash_data.push(
           {
             type:views,
+            toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+            name:el,
             legendText: el,
             showInLegend: true,
             dataPoints: [{ y: col[el], label: rain_fall_type }]
@@ -213,6 +219,8 @@ def self.year_to_stack(b,rain_fall_type,_year,views,color,jip)
        hash_data = [
               {
               type:views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:rain_fall_type,
               color: color,
               legendText: rain_fall_type,
               showInLegend: true,
@@ -238,16 +246,23 @@ def self.year_to_stack(b,rain_fall_type,_year,views,color,jip)
     
   end
 
-def self.title_return(views,search,hash_data,compare)
+def self.title_return(views,search,hash_data,compare,year,rain_fall_type)
 
   if compare != "None"
     newname = "#{search} vs #{compare}"
   else
     newname = search
   end
+  if year != "All" && rain_fall_type == "All"
+    labelAngle = 0
+    labelMaxWidth = 0
+  else
+    labelAngle = 90
+    labelMaxWidth = 180
+  end
 
 
-    title = if (views == 'stackedBar100' || views == 'stackedBar' || views == 'stackedColumn' || views == 'stackedColumn100' || views == 'stackedArea')
+    title = if (views == 'stackedBar100' || views == 'stackedBar' || views == 'stackedColumn' || views == 'stackedColumn100' || views == 'stackedArea' || (year != "All" && rain_fall_type != "All"))
       {
         animationEnabled: true,
         exportEnabled: true,
@@ -266,8 +281,8 @@ def self.title_return(views,search,hash_data,compare)
         },
         axisX: {
           interval:1,
-          labelMaxWidth: 180,
-          labelAngle: 90,
+          labelMaxWidth: labelMaxWidth,
+          labelAngle: labelAngle,
           labelFontFamily:"verdana0"
           },
         data: hash_data
@@ -399,6 +414,8 @@ return title
         {
           type:views,
           legendText: col,
+          toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+          name:col,
           showInLegend: true,
           dataPoints: b.map  do |el|
             {y: el[col], label: el[:Sector]}
@@ -409,6 +426,8 @@ return title
         hash_data =  b.map do |col|
           {
             type:views,
+            toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+            name:col[:Sector],
             legendText: col[:Sector],
             showInLegend: true,
             dataPoints: jip.map  do |el|

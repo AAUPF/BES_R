@@ -49,11 +49,8 @@ def test
       "Tractor",
       "Trailer",
       "Others",
-      "Total",
-      "Revenue Collection (Rs. crore)",
-
-  
-    ]
+      "Total"
+     ]
 
     
   else
@@ -69,7 +66,7 @@ def test
       "Tractor",
       "Trailer",
       "Others",
-    
+      "Revenue Collection (Rs. crore)",
     ]
 
     

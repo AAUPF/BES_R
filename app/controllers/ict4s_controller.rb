@@ -21,6 +21,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
 
    ji1 = [:State, :Rural, :Urban, :Total, :Rural_Percentage, :Urban_Percentage, :Share_in_all_India, :Indicator]
 
@@ -42,7 +43,7 @@ def test
         a = Ict4.table(b,rain_fall_type,year,ji1,compare)
       else
         @Ict4s = Ict4.search(params[:search],compare,year,rain_fall_type)
-        a = Ict4.query(@Ict4s,params[:year],rain_fall_type,views,ji,compare)
+        a = Ict4.query(@Ict4s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

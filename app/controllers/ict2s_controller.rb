@@ -15,82 +15,37 @@ class Ict2sController < ApplicationController
     @ict2 = Ict2.new
   end
 
-# def test
-#   ji = [:State, :Rural, :Urban, :All, :Year]
-#   rain_fall_type = params[:rain_fall_type]
-#    views  = params[:views]
-#    year  = params[:year]
-#    compare = params[:compare]
-
-#   if rain_fall_type || views
-
-#       if views == "Map View"
-#         l =  rain_fall_type.gsub(" ","")           
-#          if rain_fall_type  ==  "All"
-#           b = Ict2.map_search("All",compare,year,rain_fall_type)
-#           u = "Total"
-#           a = Ict2.map(b,params[:year],rain_fall_type,views)
-#          else
-#           b = Ict2.map_search(params[:search],compare,year,rain_fall_type)
-#           a = Ict2.map(b,rain_fall_type,year,ji)
-#          end
-#       elsif views == "Table"  
-#         b = Ict2.search(params[:search],compare,year,rain_fall_type)
-#         a = Ict2.table(b,rain_fall_type,year,ji1,compare)
-#       else
-#         @Ict2s = Ict2.search(params[:search],compare,year,rain_fall_type)
-#         a = Ict2.query(@Ict2s,params[:year],rain_fall_type,views,ji,compare)
-#       end
-#       respond_to do |format|
-#         format.html { render json:a }
-#     end
-
-#   else
-#     respond_to do |format|
-#       format.html { render json: "error"}
-#   end
-#   end
-
-# end
-
 
 def test
+  
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
+   if year == "2016" || year == "2017"
+    ji = [ :Rural, :Urban, :Total]
+   else
+    ji = [ :Total]
+   end
    compare = params[:compare]
    search = params[:search]
    legend = "State"
    remove = ""
    if year == "All"
-    ji1 = [:State,:"2005",:"2010",:"2015"]
-   else
+    ji1 = [:State,:"2001",:"2005", :"2010",:"2015",:"2016",:"2017"]
+   elsif year == "2016" || year == "2017"
+    ji1 = [ :State,:Rural, :Urban, :Total,:Year]
     if rain_fall_type != "All"
       ji1 = [:State, "#{rain_fall_type}", :Year]
-      
     else
-      ji1 = [:State, :Rural, :Urban, :All, :Year]
+      ji1 = [ :State,:Rural, :Urban, :Total,:Year]
     end
+   else
+    ji1 = [:State, :Total, :Year]
     
    end
 
 
-   if year == "2016" || year == "2017"
-    ji = [ :Rural, :Urban, :All]
-    # ji1 = [:State, :Rural, :Urban, :All, :Year]
-    if rain_fall_type != "All"
-      ji1 = [:State, "#{rain_fall_type}", :Year]
-      
-    else
-      ji1 = [:State, :Rural, :Urban, :All, :Year]
-    end
-   else
-    ji = [:All]
-    ji1 = [:State,:All, :Year]
-
-     
-   end
-
+   
   if rain_fall_type || views
 
       if views == "Map View"
@@ -107,8 +62,8 @@ def test
         b = Ict2.search(params[:search],compare,year,rain_fall_type,legend)
         a = Ict2.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @Roads4s = Ict2.search(params[:search],compare,year,rain_fall_type,legend)
-        a = Ict2.query(@Roads4s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
+        @Ict2s = Ict2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Ict2.query(@Ict2s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

@@ -196,7 +196,7 @@ module Statefinancetwovariable
           color = '#4f81bc'
           if rain_fall_type == 'All'
             hash_data = if _year == 'All'
-                          Newmodulefunctions.year_all(b, data, views, _year, jip)
+                           Newmodulefunctions.year_all(b, data, views, _year, jip)
                         else
                           Newmodulefunctions.eov_year(b,data,views,_year,color,search)
                         end
@@ -212,7 +212,7 @@ module Statefinancetwovariable
               hash_data = Newmodulefunctions.no_year(b, rain_fall_type, _year, color, views, compare)
             end
           end
-          Newmodulefunctions.title_return(views, search, hash_data, compare)
+          Newmodulefunctions.title_return(views, search, hash_data, compare,_year,rain_fall_type)
         end
 
 end

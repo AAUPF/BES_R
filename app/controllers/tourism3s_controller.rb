@@ -18,7 +18,7 @@ class Tourism3sController < ApplicationController
     @tourism3 = Tourism3.new
   end
   def test
-    ji = [:"2012", :"2013", :"2014", :"2015", :"2016"]
+    ji = [:"2012", :"2013", :"2014", :"2015", :"2016",:"2017"]
     rain_fall_type = params[:rain_fall_type]
      views  = params[:views]
      year  = params[:year]
@@ -43,8 +43,8 @@ class Tourism3sController < ApplicationController
   
    search = rain_fall_type
   
-   jip = [:"2012", :"2013", :"2014", :"2015", :"2016"]
-   ji1 = [:Sector, :"2012", :"2013", :"2014", :"2015", :"2016"]
+   jip = [:"2012", :"2013", :"2014", :"2015", :"2016",:"2017"]
+   ji1 = [:Sector, :"2012", :"2013", :"2014", :"2015", :"2016",:"2017"]
 
    legend = "Districts"
     if rain_fall_type || views

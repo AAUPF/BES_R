@@ -189,7 +189,7 @@ module Sectorwihoutyeartwovariable
           end
         end
       end
-      Newmodulefunctions.title_return(views, search, hash_data, compare)
+      Newmodulefunctions.title_return(views, search, hash_data, compare,_year,rain_fall_type)
   
     end
       end

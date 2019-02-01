@@ -82,6 +82,7 @@ def test
       "Energy Availability (MU) ",
       "Energy Deficit/ Surplus (MU) (Minus/Plus)",
       "Energy Deficit/ Surplus (Percentage) (Minus/Plus) ",
+      "Consumption (kwh)"
      ]
    else
      data = [
@@ -93,6 +94,7 @@ def test
       "Energy Availability (MU) ",
       "Energy Deficit/ Surplus (MU) (Minus/Plus)",
       "Energy Deficit/ Surplus (Percentage) (Minus/Plus) ",
+      "Consumption (kwh)"
      ]
  
      

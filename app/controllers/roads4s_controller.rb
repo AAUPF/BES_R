@@ -16,7 +16,7 @@ class Roads4sController < ApplicationController
   end
 
 def test
-  ji = [:Total, :Paved, :Percent_of_Total, :Percent_of_paved, :Year]
+  ji = [:Total, :Paved, :Percent_of_Total, :Percent_of_paved]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]

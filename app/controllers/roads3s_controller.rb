@@ -16,12 +16,12 @@ class Roads3sController < ApplicationController
   end
 
 def test
-  ji = [:State, :NH, :SH, :Other, :Total, :Indicator]
+  ji = [:NH, :SH, :Other, :Total]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-
+  search = params[:search]
    ji1 = [:State, :NH, :SH, :Other, :Total, :Indicator]
 
 
@@ -42,7 +42,7 @@ def test
         a = Roads3.table(b,rain_fall_type,year,ji1,compare)
       else
         @Roads3s = Roads3.search(params[:search],compare,year,rain_fall_type)
-        a = Roads3.query(@Roads3s,params[:year],rain_fall_type,views,ji,compare)
+        a = Roads3.query(@Roads3s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

@@ -16,7 +16,7 @@ class Roads6sController < ApplicationController
   end
 
 def test
-  ji = [:Indicator, :NH_in_kms, :Expenditure_on_NH_Development, :Expenditure_on_NH_Maintenance, :Total_Expenditure_on_NH]
+  ji = [:NH_in_kms, :Expenditure_on_NH_Development, :Expenditure_on_NH_Maintenance, :Total_Expenditure_on_NH]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
