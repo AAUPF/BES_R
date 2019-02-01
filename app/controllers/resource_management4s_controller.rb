@@ -28,6 +28,8 @@ if year == "All"
  else
   ji1 = [:Sources_of_Revenue, :Percentage_Growth_Over_Previous_Year, :Year]
  end
+ legend = "Sources_of_Revenue"
+
   if rain_fall_type || views
 
       if views == "Map View"
@@ -41,11 +43,11 @@ if year == "All"
           a = ResourceManagement4.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = ResourceManagement4.search(params[:search],compare,year,rain_fall_type)
-        a = ResourceManagement4.table(b,rain_fall_type,year,ji1,compare)
+        b = ResourceManagement4.search(params[:search],compare,year,rain_fall_type,legend)
+        a = ResourceManagement4.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @ResourceManagement4s = ResourceManagement4.search(params[:search],compare,year,rain_fall_type)
-        a = ResourceManagement4.query(@ResourceManagement4s,params[:year],rain_fall_type,views,ji,compare,search)
+        @ResourceManagement4s = ResourceManagement4.search(params[:search],compare,year,rain_fall_type,legend)
+        a = ResourceManagement4.query(@ResourceManagement4s,params[:year],rain_fall_type,views,ji,compare,search,legend)
       end
       respond_to do |format|
         format.html { render json:a }

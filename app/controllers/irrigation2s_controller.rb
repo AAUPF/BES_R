@@ -15,13 +15,55 @@ class Irrigation2sController < ApplicationController
     @irrigation2 = Irrigation2.new
   end
 
+# def test
+#   ji = [:Created_Irrigation_Potential]
+#   rain_fall_type = params[:rain_fall_type]
+#    views  = params[:views]
+#    year  = params[:year]
+#    compare = params[:compare]
+#    ji1 = [:Name_of_Scheme, :Created_Irrigation_Potential]
+#   if rain_fall_type || views
+
+#       if views == "Map View"
+#         l =  rain_fall_type.gsub(" ","")           
+#          if rain_fall_type  ==  "All"
+#           b = Irrigation2.map_search("All",compare,year,rain_fall_type)
+#           u = "Total"
+#           a = Irrigation2.map(b,params[:year],rain_fall_type,views)
+#          else
+#           b = Irrigation2.map_search(params[:search],compare,year,rain_fall_type)
+#           a = Irrigation2.map(b,rain_fall_type,year,ji,unit1)
+#          end
+#       elsif views == "Table"  
+#         b = Irrigation2.search(params[:search],compare,year,rain_fall_type)
+#         a = Irrigation2.table(b,rain_fall_type,year,ji1,compare)
+#       else
+#         @Irrigation2s = Irrigation2.search(params[:search],compare,year,rain_fall_type)
+#         a = Irrigation2.query(@Irrigation2s,params[:year],rain_fall_type,views,ji,compare)
+#       end
+#       respond_to do |format|
+#         format.html { render json:a }
+#     end
+
+#   else
+#     respond_to do |format|
+#       format.html { render json: "error"}
+#   end
+#   end
+
+# end
+
+
 def test
   ji = [:Created_Irrigation_Potential]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
    ji1 = [:Name_of_Scheme, :Created_Irrigation_Potential]
+    legend = "Name_of_Scheme"
+
   if rain_fall_type || views
 
       if views == "Map View"
@@ -32,14 +74,14 @@ def test
           a = Irrigation2.map(b,params[:year],rain_fall_type,views)
          else
           b = Irrigation2.map_search(params[:search],compare,year,rain_fall_type)
-          a = Irrigation2.map(b,rain_fall_type,year,ji,unit1)
+          a = Irrigation2.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = Irrigation2.search(params[:search],compare,year,rain_fall_type)
-        a = Irrigation2.table(b,rain_fall_type,year,ji1,compare)
+        b = Irrigation2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Irrigation2.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @Irrigation2s = Irrigation2.search(params[:search],compare,year,rain_fall_type)
-        a = Irrigation2.query(@Irrigation2s,params[:year],rain_fall_type,views,ji,compare)
+        @Irrigation2s = Irrigation2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Irrigation2.query(@Irrigation2s,params[:year],rain_fall_type,views,ji,compare,search,legend)
       end
       respond_to do |format|
         format.html { render json:a }

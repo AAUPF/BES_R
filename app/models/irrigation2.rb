@@ -1,4 +1,4 @@
 class Irrigation2 < ApplicationRecord
-  extend Irrigation2data  
-
-      end
+  # extend Irrigation2data  
+  extend Sectorwithoutyear  
+end

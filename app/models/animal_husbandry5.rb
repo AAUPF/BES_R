@@ -1,4 +1,4 @@
 class AnimalHusbandry5 < ApplicationRecord
-  extend Test  
-
-      end
+  # extend Test  
+  extend Generaldata  
+ end

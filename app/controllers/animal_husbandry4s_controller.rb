@@ -23,6 +23,8 @@ def test
    compare = params[:compare]
    unit1 = ""
    ranges = ""
+   search = params[:search]
+
 ji1 = [:Districts, :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry, :Percentage_Cow, :Percentage_Buffalo, :Percentage_Pig, :Percentage_Sheep, :Percentage_Goat, :Percentage_Poultry]
   if rain_fall_type || views
 
@@ -41,7 +43,7 @@ ji1 = [:Districts, :Cow, :Buffalo, :Pig, :Sheep, :Goat, :Poultry, :Percentage_Co
         a = AnimalHusbandry4.table(b,rain_fall_type,year,ji1,compare)
       else
         @AnimalHusbandry4s = AnimalHusbandry4.search(params[:search],compare,year,rain_fall_type)
-        a = AnimalHusbandry4.query(@AnimalHusbandry4s,params[:year],rain_fall_type,views,ji,compare)
+        a = AnimalHusbandry4.query(@AnimalHusbandry4s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

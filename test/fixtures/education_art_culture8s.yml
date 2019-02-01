@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Year: MyString
+  Type_of_School: MyString
+  Reading_Std._II_Level_Textn_in_Bihar: 1.5
+  Reading_Std._II_Level_Textn_in_India: 1.5
+  Simple_Subtraction_Bihar: 1.5
+  Simple_Subtraction_India: 1.5
+  Indiactor: MyString
+
+two:
+  Year: MyString
+  Type_of_School: MyString
+  Reading_Std._II_Level_Textn_in_Bihar: 1.5
+  Reading_Std._II_Level_Textn_in_India: 1.5
+  Simple_Subtraction_Bihar: 1.5
+  Simple_Subtraction_India: 1.5
+  Indiactor: MyString

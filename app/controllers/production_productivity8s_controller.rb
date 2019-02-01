@@ -21,38 +21,52 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
+   legend = "Districts"
+   remove = "Bihar"
+ 
 
-   ji1 = [:Districts, :Area, :Production, :Productivity, :Year, :Percentage_Area, :Percentage_Production]
 
 
+   if year == "All"
+    ji1 = [:Districts, :"2015", :"2016"]   
+  else
+    if rain_fall_type != "All"
+      ji1 = [:Districts, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:Districts, :Area, :Production, :Productivity, :Percentage_Area, :Percentage_Production, :Year]
+    end
+    
+   end
   if rain_fall_type || views
 
-      if views == "Map View"
-        l =  rain_fall_type.gsub(" ","")           
-         if rain_fall_type  ==  "All"
-          b = ProductionProductivity8.map_search("All",compare,year,rain_fall_type)
-          u = "Total"
-          a = ProductionProductivity8.map(b,params[:year],rain_fall_type,views)
-         else
-          b = ProductionProductivity8.map_search(params[:search],compare,year,rain_fall_type)
-          a = ProductionProductivity8.map(b,rain_fall_type,year,ji)
-         end
-      elsif views == "Table"  
-        b = ProductionProductivity8.search(params[:search],compare,year,rain_fall_type)
-        a = ProductionProductivity8.table(b,rain_fall_type,year,ji1,compare)
-      else
-        @ProductionProductivity8s = ProductionProductivity8.search(params[:search],compare,year,rain_fall_type)
-        a = ProductionProductivity8.query(@ProductionProductivity8s,params[:year],rain_fall_type,views,ji,compare)
-      end
-      respond_to do |format|
-        format.html { render json:a }
+    if views == "Map View"
+      l =  rain_fall_type.gsub(" ","")           
+       if rain_fall_type  ==  "All"
+        b = ProductionProductivity8.map_search("All",compare,year,rain_fall_type)
+        u = "Total"
+        a = ProductionProductivity8.map(b,params[:year],rain_fall_type,views)
+       else
+        b = ProductionProductivity8.map_search(params[:search],compare,year,rain_fall_type)
+        a = ProductionProductivity8.map(b,rain_fall_type,year,ji)
+       end
+    elsif views == "Table"  
+      b = ProductionProductivity8.search(params[:search],compare,year,rain_fall_type,legend)
+      a = ProductionProductivity8.table(b,rain_fall_type,year,ji1,compare,legend)
+    else
+      @ProductionProductivity8s = ProductionProductivity8.search(params[:search],compare,year,rain_fall_type,legend)
+      a = ProductionProductivity8.query(@ProductionProductivity8s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
     end
-
-  else
     respond_to do |format|
-      format.html { render json: "error"}
+      format.html { render json:a }
   end
-  end
+
+else
+  respond_to do |format|
+    format.html { render json: "error"}
+end
+end
 
 end
 

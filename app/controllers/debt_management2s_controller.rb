@@ -44,7 +44,7 @@ def test
     "Loans for State Plan Schemes",
     "Loans for Centrally Sponsored Plan Schemes",
     "Other Loans",
-    "Total (A+B)",
+    "Total A plus B",
    ]
 
   if rain_fall_type || views

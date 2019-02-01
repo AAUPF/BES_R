@@ -1,4 +1,4 @@
 class ProductionProductivity10 < ApplicationRecord
-  extend Test  
-
-      end
+  # extend Test  
+  extend Generaldata
+end

@@ -21,9 +21,9 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-
-
+   search = params[:search]
    ji1 = [:TypeofIrrigationPotential, :Ultimate_Potential, :Created_Potential, :Utilised_Potential]
+    legend = "TypeofIrrigationPotential"
 
   if rain_fall_type || views
 
@@ -35,14 +35,14 @@ def test
           a = Irrigation1.map(b,params[:year],rain_fall_type,views)
          else
           b = Irrigation1.map_search(params[:search],compare,year,rain_fall_type)
-          a = Irrigation1.map(b,rain_fall_type,year,ji,unit1)
+          a = Irrigation1.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = Irrigation1.search(params[:search],compare,year,rain_fall_type)
-        a = Irrigation1.table(b,rain_fall_type,year,ji1,compare)
+        b = Irrigation1.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Irrigation1.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @Irrigation1s = Irrigation1.search(params[:search],compare,year,rain_fall_type)
-        a = Irrigation1.query(@Irrigation1s,params[:year],rain_fall_type,views,ji,compare)
+        @Irrigation1s = Irrigation1.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Irrigation1.query(@Irrigation1s,params[:year],rain_fall_type,views,ji,compare,search,legend)
       end
       respond_to do |format|
         format.html { render json:a }
@@ -55,7 +55,6 @@ def test
   end
 
 end
-
 
   def import
     # Module1.import(params[:file])

@@ -15,6 +15,69 @@ class DemographicProfile2sController < ApplicationController
     @demographic_profile2 = DemographicProfile2.new
   end
 
+# def test
+#   ji = [:Population, :Sex_Ratio_Overall, :Sex_Ratio_Child, :Density, :Urbanisation, :Decadal_Growth, :Percentage_Population]
+#   rain_fall_type = params[:rain_fall_type]
+#    views  = params[:views]
+#    year  = params[:year]
+#    compare = params[:compare]
+#    search = params[:search]
+# ji1 = [:Districts, :Population, :Sex_Ratio_Overall, :Sex_Ratio_Child, :Density, :Urbanisation, :Decadal_Growth, :Year, :Percentage_Population]
+# if year == "All"
+#   ji1 = [:Districts, :"2001", :"2011"]
+# else
+#   if rain_fall_type == "Population"
+#     ji1 = [:Districts, :Population, :Year]
+#   elsif rain_fall_type == "Sex_Ratio_Overall"
+#     ji1 = [:Districts, :Sex_Ratio_Overall, :Year]
+#   elsif rain_fall_type == "Sex_Ratio_Child"
+#     ji1 = [:Districts, :Sex_Ratio_Child, :Year]
+#   elsif rain_fall_type == "Density"
+#     ji1 = [:Districts, :Density, :Year]
+#   elsif rain_fall_type == "Urbanisation"
+#     ji1 = [:Districts, :Urbanisation, :Year]
+#   elsif rain_fall_type == "Decadal_Growth"
+#     ji1 = [:Districts, :Decadal_Growth, :Year]
+#   elsif rain_fall_type == "Percentage_Population"
+#     ji1 = [:Districts, :Percentage_Population, :Year]
+#   else
+#     ji1 = [:Districts, :Population, :Sex_Ratio_Overall, :Sex_Ratio_Child, :Density, :Urbanisation, :Decadal_Growth, :Year, :Percentage_Population]
+#   end
+# end
+
+#   if rain_fall_type || views
+
+#       if views == "Map View"
+#         l =  rain_fall_type.gsub(" ","")           
+#          if rain_fall_type  ==  "All"
+#           b = DemographicProfile2.map_search("All",compare,year,rain_fall_type)
+#           u = "Total"
+#           a = DemographicProfile2.map(b,params[:year],rain_fall_type,views)
+#          else
+#           b = DemographicProfile2.map_search(params[:search],compare,year,rain_fall_type)
+#           a = DemographicProfile2.map(b,rain_fall_type,year,ji)
+#          end
+#       elsif views == "Table"  
+#         b = DemographicProfile2.search(params[:search],compare,year,rain_fall_type)
+#         a = DemographicProfile2.table(b,rain_fall_type,year,ji1,compare)
+#       else
+#         @DemographicProfile2s = DemographicProfile2.search(params[:search],compare,year,rain_fall_type)
+#         a = DemographicProfile2.query(@DemographicProfile2s,params[:year],rain_fall_type,views,ji,compare,search)
+#       end
+#       respond_to do |format|
+#         format.html { render json:a }
+#     end
+
+#   else
+#     respond_to do |format|
+#       format.html { render json: "error"}
+#   end
+#   end
+
+# end
+
+
+
 def test
   ji = [:Population, :Sex_Ratio_Overall, :Sex_Ratio_Child, :Density, :Urbanisation, :Decadal_Growth, :Percentage_Population]
   rain_fall_type = params[:rain_fall_type]
@@ -22,28 +85,20 @@ def test
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
-ji1 = [:Districts, :Population, :Sex_Ratio_Overall, :Sex_Ratio_Child, :Density, :Urbanisation, :Decadal_Growth, :Year, :Percentage_Population]
-if year == "All"
-  ji1 = [:Districts, :"2001", :"2011"]
-else
-  if rain_fall_type == "Population"
-    ji1 = [:Districts, :Population, :Year]
-  elsif rain_fall_type == "Sex_Ratio_Overall"
-    ji1 = [:Districts, :Sex_Ratio_Overall, :Year]
-  elsif rain_fall_type == "Sex_Ratio_Child"
-    ji1 = [:Districts, :Sex_Ratio_Child, :Year]
-  elsif rain_fall_type == "Density"
-    ji1 = [:Districts, :Density, :Year]
-  elsif rain_fall_type == "Urbanisation"
-    ji1 = [:Districts, :Urbanisation, :Year]
-  elsif rain_fall_type == "Decadal_Growth"
-    ji1 = [:Districts, :Decadal_Growth, :Year]
-  elsif rain_fall_type == "Percentage_Population"
-    ji1 = [:Districts, :Percentage_Population, :Year]
-  else
-    ji1 = [:Districts, :Population, :Sex_Ratio_Overall, :Sex_Ratio_Child, :Density, :Urbanisation, :Decadal_Growth, :Year, :Percentage_Population]
-  end
-end
+   legend = "Districts"
+   remove = "Bihar"
+  #  ji1 = [:Characteristics, :India, :Bihar, :Year]
+   if year == "All"
+    ji1 = [:Districts, :"2001", :"2011"]
+   else
+    if rain_fall_type != "All"
+      ji1 = [:Districts, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:Districts, :Population, :Sex_Ratio_Overall, :Sex_Ratio_Child, :Density, :Urbanisation, :Decadal_Growth, :Year, :Percentage_Population]
+    end
+    
+   end
 
   if rain_fall_type || views
 
@@ -58,11 +113,11 @@ end
           a = DemographicProfile2.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = DemographicProfile2.search(params[:search],compare,year,rain_fall_type)
-        a = DemographicProfile2.table(b,rain_fall_type,year,ji1,compare)
+        b = DemographicProfile2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = DemographicProfile2.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @DemographicProfile2s = DemographicProfile2.search(params[:search],compare,year,rain_fall_type)
-        a = DemographicProfile2.query(@DemographicProfile2s,params[:year],rain_fall_type,views,ji,compare,search)
+        @DemographicProfile2s = DemographicProfile2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = DemographicProfile2.query(@DemographicProfile2s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

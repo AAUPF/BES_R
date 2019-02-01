@@ -21,7 +21,21 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-   ji1 = [:Districts, :Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :Total, :N, :P, :K, :Total_NPK, :Grand_Total,  :Percentage_Urea, :Percentage_DAP, :Percentage_SSP, :Percentage_MOP, :Percentage_Ammonium_Sulphate, :Percentage_Complex, :Percentage_Total_NPK,:Year]
+   search = params[:search]
+   legend = "Districts"
+   remove = "Bihar"
+  #  ji1 = [:Characteristics, :India, :Bihar, :Year]
+   if year == "All"
+    ji1 = [:Districts, :"2014", :"2015", :"2016"]
+   else
+    if rain_fall_type != "All"
+      ji1 = [:Districts, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:Districts, :Urea, :DAP, :SSP, :MOP, :Ammonium_Sulphate, :Complex, :Total, :N, :P, :K, :Total_NPK, :Grand_Total,  :Percentage_Urea, :Percentage_DAP, :Percentage_SSP, :Percentage_MOP, :Percentage_Ammonium_Sulphate, :Percentage_Complex, :Percentage_Total_NPK,:Year]
+    end
+    
+   end
 
   if rain_fall_type || views
 
@@ -36,11 +50,11 @@ def test
           a = AgriculturalInputs4.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = AgriculturalInputs4.search(params[:search],compare,year,rain_fall_type)
-        a = AgriculturalInputs4.table(b,rain_fall_type,year,ji1,compare)
+        b = AgriculturalInputs4.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AgriculturalInputs4.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @AgriculturalInputs4s = AgriculturalInputs4.search(params[:search],compare,year,rain_fall_type)
-        a = AgriculturalInputs4.query(@AgriculturalInputs4s,params[:year],rain_fall_type,views,ji,compare)
+        @AgriculturalInputs4s = AgriculturalInputs4.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AgriculturalInputs4.query(@AgriculturalInputs4s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }
@@ -53,7 +67,6 @@ def test
   end
 
 end
-
 
   def import
     # Module1.import(params[:file])

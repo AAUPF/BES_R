@@ -1,6 +1,5 @@
 class TaxDepartment7 < ApplicationRecord
-
-  include     Newmodulefunctions
+  include   Newmodulefunctions
 
   def self.import1(file)
     spreadsheet = Roo::Spreadsheet.open(file.path)

@@ -21,6 +21,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
 
 
   ji1 = [:Districts, :Target_Physical, :Target_Financial, :Achievement_Physical, :Achievement_Financial]
@@ -69,7 +70,7 @@ end
         a = AgriculturalInputs6.table(b,rain_fall_type,year,ji1,compare)
       else
         @AgriculturalInputs6s = AgriculturalInputs6.search(params[:search],compare,year,rain_fall_type)
-        a = AgriculturalInputs6.query(@AgriculturalInputs6s,params[:year],rain_fall_type,views,ji,compare)
+        a = AgriculturalInputs6.query(@AgriculturalInputs6s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

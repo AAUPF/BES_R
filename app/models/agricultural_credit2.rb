@@ -1,3 +1,3 @@
 class AgriculturalCredit2 < ApplicationRecord
-  extend Test  
+  extend Generaldata  
 end

@@ -15,56 +15,111 @@ class AgriculturalInputs7sController < ApplicationController
     @agricultural_inputs7 = AgriculturalInputs7.new
   end
 
-def test
-  ji = [ :Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher]
+# def test
+#   ji = [ :Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher]
 
+#   rain_fall_type = params[:rain_fall_type]
+#    views  = params[:views]
+#    year  = params[:year]
+#    compare = params[:compare]
+
+#    ji1 = [:Districts, :Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher]
+
+#    unit1 =  "000"
+
+
+
+#    if year == '2015'
+
+#     if rain_fall_type == 'Tractor'
+#       ranges = NewricesHelper.ranges1(270,250,200,150,100,50,0)
+#     elsif rain_fall_type == 'Combine_Harvestor'
+#       ranges =  NewricesHelper.ranges1(40,17,11,8,5,3,0)
+#     elsif rain_fall_type == 'Zero_Tillage'
+#       ranges =  NewricesHelper.ranges1(250,170,130,100,70,40,0)
+#     elsif rain_fall_type == 'Pumpset'
+#       ranges =  NewricesHelper.ranges1(330,290,240,200,150,100,0)
+#     elsif rain_fall_type == 'Power_Tiller'
+#       ranges =  NewricesHelper.ranges1(440,320,150,70,30,10,0)
+#     elsif rain_fall_type == 'Manually_Operated_Tools'
+#       ranges =  NewricesHelper.ranges1(7200,3600,2800,1500,1000,500,0)
+#     elsif rain_fall_type == 'Thresher'
+#       ranges =  NewricesHelper.ranges1(200,160,140,100,50,20,0)
+#     end
+
+#   elsif year == '2016'
+#     if rain_fall_type == 'Tractor'
+#       ranges = NewricesHelper.ranges1(270,250,200,150,100,50,0)
+#     elsif rain_fall_type == 'Combine_Harvestor'
+#       ranges =  NewricesHelper.ranges1(31,17,11,8,5,3,0)
+#     elsif rain_fall_type == 'Zero_Tillage'
+#       ranges =  NewricesHelper.ranges1(158,94,45,30,20,10,0)
+#     elsif rain_fall_type == 'Pumpset'
+#       ranges =  NewricesHelper.ranges1(360,339,240,200,150,100,0)
+#     elsif rain_fall_type == 'Power_Tiller'
+#       ranges =  NewricesHelper.ranges1(280,190,70,50,30,10,0)
+#     elsif rain_fall_type == 'Manually_Operated_Tools'
+#       ranges =  NewricesHelper.ranges1(1500,1000,900,700,500,300,0)
+#     elsif rain_fall_type == 'Thresher'
+#       ranges =  NewricesHelper.ranges1(200,160,140,100,50,20,0)
+#     end
+
+#   end
+
+#   if rain_fall_type || views
+
+#       if views == "Map View"
+#         l =  rain_fall_type.gsub(" ","")           
+#          if rain_fall_type  ==  "All"
+#           b = AgriculturalInputs7.map_search("All",compare,year,rain_fall_type)
+#           u = "Total"
+#           a = AgriculturalInputs7.map(b,params[:year],rain_fall_type,views)
+#          else
+#           b = AgriculturalInputs7.map_search(params[:search],compare,year,rain_fall_type)
+#           a = AgriculturalInputs7.map(b,rain_fall_type,year,ji)
+#          end
+#       elsif views == "Table"  
+#         b = AgriculturalInputs7.search(params[:search],compare,year,rain_fall_type)
+#         a = AgriculturalInputs7.table(b,rain_fall_type,year,ji1,compare)
+#       else
+#         @AgriculturalInputs7s = AgriculturalInputs7.search(params[:search],compare,year,rain_fall_type)
+#         a = AgriculturalInputs7.query(@AgriculturalInputs7s,params[:year],rain_fall_type,views,ji,compare)
+#       end
+#       respond_to do |format|
+#         format.html { render json:a }
+#     end
+
+#   else
+#     respond_to do |format|
+#       format.html { render json: "error"}
+#   end
+#   end
+
+# end
+
+
+
+def test
+  ji = [:Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-
-   ji1 = [:Districts, :Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher]
-
-   unit1 =  "000"
-
-
-
-   if year == '2015'
-
-    if rain_fall_type == 'Tractor'
-      ranges = NewricesHelper.ranges1(270,250,200,150,100,50,0)
-    elsif rain_fall_type == 'Combine_Harvestor'
-      ranges =  NewricesHelper.ranges1(40,17,11,8,5,3,0)
-    elsif rain_fall_type == 'Zero_Tillage'
-      ranges =  NewricesHelper.ranges1(250,170,130,100,70,40,0)
-    elsif rain_fall_type == 'Pumpset'
-      ranges =  NewricesHelper.ranges1(330,290,240,200,150,100,0)
-    elsif rain_fall_type == 'Power_Tiller'
-      ranges =  NewricesHelper.ranges1(440,320,150,70,30,10,0)
-    elsif rain_fall_type == 'Manually_Operated_Tools'
-      ranges =  NewricesHelper.ranges1(7200,3600,2800,1500,1000,500,0)
-    elsif rain_fall_type == 'Thresher'
-      ranges =  NewricesHelper.ranges1(200,160,140,100,50,20,0)
+   search = params[:search]
+   legend = "Districts"
+   remove = "Bihar"
+  #  ji1 = [:Characteristics, :India, :Bihar, :Year]
+   if year == "All"
+    ji1 = [:Districts,:"2015", :"2016"]
+   else
+    if rain_fall_type != "All"
+      ji1 = [:Districts, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:Districts, :Tractor, :Combine_Harvestor, :Zero_Tillage, :Pumpset, :Power_Tiller, :Manually_Operated_Tools, :Thresher]
     end
-
-  elsif year == '2016'
-    if rain_fall_type == 'Tractor'
-      ranges = NewricesHelper.ranges1(270,250,200,150,100,50,0)
-    elsif rain_fall_type == 'Combine_Harvestor'
-      ranges =  NewricesHelper.ranges1(31,17,11,8,5,3,0)
-    elsif rain_fall_type == 'Zero_Tillage'
-      ranges =  NewricesHelper.ranges1(158,94,45,30,20,10,0)
-    elsif rain_fall_type == 'Pumpset'
-      ranges =  NewricesHelper.ranges1(360,339,240,200,150,100,0)
-    elsif rain_fall_type == 'Power_Tiller'
-      ranges =  NewricesHelper.ranges1(280,190,70,50,30,10,0)
-    elsif rain_fall_type == 'Manually_Operated_Tools'
-      ranges =  NewricesHelper.ranges1(1500,1000,900,700,500,300,0)
-    elsif rain_fall_type == 'Thresher'
-      ranges =  NewricesHelper.ranges1(200,160,140,100,50,20,0)
-    end
-
-  end
+    
+   end
 
   if rain_fall_type || views
 
@@ -79,11 +134,11 @@ def test
           a = AgriculturalInputs7.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = AgriculturalInputs7.search(params[:search],compare,year,rain_fall_type)
-        a = AgriculturalInputs7.table(b,rain_fall_type,year,ji1,compare)
+        b = AgriculturalInputs7.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AgriculturalInputs7.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @AgriculturalInputs7s = AgriculturalInputs7.search(params[:search],compare,year,rain_fall_type)
-        a = AgriculturalInputs7.query(@AgriculturalInputs7s,params[:year],rain_fall_type,views,ji,compare)
+        @AgriculturalInputs7s = AgriculturalInputs7.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AgriculturalInputs7.query(@AgriculturalInputs7s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }
@@ -96,6 +151,7 @@ def test
   end
 
 end
+
 
 
   def import

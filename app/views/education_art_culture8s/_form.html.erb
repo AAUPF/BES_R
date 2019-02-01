@@ -1,0 +1,52 @@
+<%= form_with(model: education_art_culture8, local: true) do |form| %>
+  <% if education_art_culture8.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(education_art_culture8.errors.count, "error") %> prohibited this education_art_culture8 from being saved:</h2>
+
+      <ul>
+      <% education_art_culture8.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Year %>
+    <%= form.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Type_of_School %>
+    <%= form.text_field :Type_of_School %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Reading_Std._II_Level_Textn_in_Bihar %>
+    <%= form.text_field :Reading_Std._II_Level_Textn_in_Bihar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Reading_Std._II_Level_Textn_in_India %>
+    <%= form.text_field :Reading_Std._II_Level_Textn_in_India %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Simple_Subtraction_Bihar %>
+    <%= form.text_field :Simple_Subtraction_Bihar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Simple_Subtraction_India %>
+    <%= form.text_field :Simple_Subtraction_India %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indiactor %>
+    <%= form.text_field :Indiactor %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -23,7 +23,7 @@ def test
    compare = params[:compare]
    search = params[:search]
    ji1 = [:Incubators, :Number_of_Startups]
-legend = "Incubators"
+    legend = "Incubators"
 
   if rain_fall_type || views
 
@@ -39,7 +39,7 @@ legend = "Incubators"
          end
       elsif views == "Table"  
         b = BiharStartUpPolicy.search(params[:search],compare,year,rain_fall_type,legend)
-        a = BiharStartUpPolicy.table(b,rain_fall_type,year,ji1,compare,search,legend)
+        a = BiharStartUpPolicy.table(b,rain_fall_type,year,ji1,compare,legend)
       else
         @BiharStartUpPolicys = BiharStartUpPolicy.search(params[:search],compare,year,rain_fall_type,legend)
         a = BiharStartUpPolicy.query(@BiharStartUpPolicys,params[:year],rain_fall_type,views,ji,compare,search,legend)

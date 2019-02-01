@@ -78,39 +78,85 @@ module Newdistrictwithoutyear
     end
   end
 
-  def query(b, _year, rain_fall_type, views, ji, compare)
+  def query(b, _year, rain_fall_type, views, ji, compare,search)
     d = 'Districts'
     color  = "#4f81bc"
     if rain_fall_type == 'All'
       if views
-        hash_data = ji.map do |column_name|
+      
           if compare == 'Bihar vs District'
-            dataset = column_name.to_s.tr('_', ' ')
-            {
-              type: views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-              name:dataset,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.map do |el|
-                            { y: el[column_name], z: el[column_name], label: el[d] }
-                          end
-            }
+            hash_data = ji.map do |column_name|
+              dataset = column_name.to_s.tr('_', ' ')
+              {
+                type: views,
+                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                name:dataset,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: b.map do |el|
+                              { y: el[column_name], z: el[column_name], label: el[d] }
+                            end
+              }
+            end
           else
-            dataset = column_name.to_s.tr('_', ' ')
-            {
-              type: views,
-              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-              name:dataset,
-              legendText: dataset,
-              showInLegend: true,
-              dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
-                            { y: el[column_name], z: el[column_name], label: el[d] }
-                          end
-            }
+
+            if search == "All"
+                hash_data = ji.map do |column_name|
+                  dataset = column_name.to_s.tr('_', ' ')
+                  {
+                    type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:dataset,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: b.map do |el|
+                                  { y: el[column_name], z: el[column_name], label: el[d] }
+                                end
+                  }
+                end
+            else
+              if views != "column" && views != "line" && views != "bubble"
+                dataset = rain_fall_type.tr('_', ' ')
+                hash_data = ji.map do |column_name|
+                  dataset = column_name.to_s.tr('_', ' ')
+                  {
+                    type: views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:dataset,
+                    legendText: dataset,
+                    showInLegend: true,
+                    dataPoints: b.map do |el|
+                                  { y: el[column_name], z: el[column_name], label: el[d] }
+                                end
+                  }
+                end
+              else
+                u1 = []
+              hash_data =
+                [{
+                  type: views,
+                  color: color,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:search,
+                  legendText: search,
+                  showInLegend: true,
+                  dataPoints: u1
+                }]
+  
+                ji.each do |el|
+                  b.reject { |x| x['Districts'] == 'Bihar' }.each do |el1|
+                   u1.push({ y: el1[el], label: el.to_s.tr('_', ' ') })
+                  end
+                end
+              end
+              
+            end
+
+
+
           end
         end
-      end
+      
       if views == "stackedBar" || views == "stackedBar100"|| views == "stackedColumn100" || views == "stackedColumn"
         title = {
           animationEnabled: true,
@@ -154,7 +200,6 @@ module Newdistrictwithoutyear
                         end
           }]
       else
-
         if views != "column" && views != "line" && views != "bubble"
           dataset = rain_fall_type.tr('_', ' ')
           hash_data =  b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|

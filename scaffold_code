@@ -1,1 +1,1 @@
-rails g scaffold DistrictWiseSection1   Sector:string	Population_Share:float	2013-14:float	2014-15:float	2015-16:float	2016-17:float	Indicator:string
+rails g scaffold Education_Art_Culture8   Year:string	Type_of_School:string	Reading_Std._II_Level_Textn_in_Bihar:float	Reading_Std._II_Level_Textn_in_India:float	Simple_Subtraction_Bihar:float	Simple_Subtraction_India:float	Indiactor:string

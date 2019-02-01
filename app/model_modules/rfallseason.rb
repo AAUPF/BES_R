@@ -185,9 +185,6 @@ end
 
         elsif year == "All"
 
-
-
-
           if compare != "None"
           ji1 = [rain_fall_type,compare]
             hash_data = ji1.map do |col|

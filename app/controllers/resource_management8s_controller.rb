@@ -28,6 +28,7 @@ def test
    else
     ji1 = [:Revenue_Sources, :Yearly_Growth_Rates, :Year]
    end
+   legend = "Revenue_Sources"
   if rain_fall_type || views
 
       if views == "Map View"
@@ -41,11 +42,11 @@ def test
           a = ResourceManagement8.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = ResourceManagement8.search(params[:search],compare,year,rain_fall_type)
-        a = ResourceManagement8.table(b,rain_fall_type,year,ji1,compare)
+        b = ResourceManagement8.search(params[:search],compare,year,rain_fall_type,legend)
+        a = ResourceManagement8.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @ResourceManagement8s = ResourceManagement8.search(params[:search],compare,year,rain_fall_type)
-        a = ResourceManagement8.query(@ResourceManagement8s,params[:year],rain_fall_type,views,ji,compare,search)
+        @ResourceManagement8s = ResourceManagement8.search(params[:search],compare,year,rain_fall_type,legend)
+        a = ResourceManagement8.query(@ResourceManagement8s,params[:year],rain_fall_type,views,ji,compare,search,legend)
       end
       respond_to do |format|
         format.html { render json:a }

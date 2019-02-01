@@ -15,42 +15,98 @@ class ProductionProductivity10sController < ApplicationController
     @production_productivity10 = ProductionProductivity10.new
   end
 
+# def test
+#   ji = [ :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production]
+#   rain_fall_type = params[:rain_fall_type]
+#    views  = params[:views]
+#    year  = params[:year]
+#    compare = params[:compare]
+#    ji1 = [:Districts, :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production,  :Percentage_Mango_Area, :Percentage_Mango_Production, :Percentage_Guava_Area, :Percentage_Guava_Production, :Percentage_Litchi_Area, :Percentage_Litchi_Production, :Percentage_Banana_Area, :Percentage_Banana_Production,:Year]
+
+#   if rain_fall_type || views
+
+#       if views == "Map View"
+#         l =  rain_fall_type.gsub(" ","")           
+#          if rain_fall_type  ==  "All"
+#           b = ProductionProductivity10.map_search("All",compare,year,rain_fall_type)
+#           u = "Total"
+#           a = ProductionProductivity10.map(b,params[:year],rain_fall_type,views)
+#          else
+#           b = ProductionProductivity10.map_search(params[:search],compare,year,rain_fall_type)
+#           a = ProductionProductivity10.map(b,rain_fall_type,year,ji)
+#          end
+#       elsif views == "Table"  
+#         b = ProductionProductivity10.search(params[:search],compare,year,rain_fall_type)
+#         a = ProductionProductivity10.table(b,rain_fall_type,year,ji1,compare)
+#       else
+#         @ProductionProductivity10s = ProductionProductivity10.search(params[:search],compare,year,rain_fall_type)
+#         a = ProductionProductivity10.query(@ProductionProductivity10s,params[:year],rain_fall_type,views,ji,compare)
+#       end
+#       respond_to do |format|
+#         format.html { render json:a }
+#     end
+
+#   else
+#     respond_to do |format|
+#       format.html { render json: "error"}
+#   end
+#   end
+
+# end
+
+
 def test
   ji = [ :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-   ji1 = [:Districts, :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production,  :Percentage_Mango_Area, :Percentage_Mango_Production, :Percentage_Guava_Area, :Percentage_Guava_Production, :Percentage_Litchi_Area, :Percentage_Litchi_Production, :Percentage_Banana_Area, :Percentage_Banana_Production,:Year]
+   search = params[:search]
+   legend = "Districts"
+   remove = "Bihar"
+
+
+
+   if year == "All"
+    ji1 = [:Districts, :"2015", :"2016"]
+   else
+    if rain_fall_type != "All"
+      ji1 = [:Districts, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:Districts, :Mango_Area, :Mango_Production, :Guava_Area, :Guava_Production, :Litchi_Area, :Litchi_Production, :Banana_Area, :Banana_Production,  :Percentage_Mango_Area, :Percentage_Mango_Production, :Percentage_Guava_Area, :Percentage_Guava_Production, :Percentage_Litchi_Area, :Percentage_Litchi_Production, :Percentage_Banana_Area, :Percentage_Banana_Production,:Year]
+    end
+    
+   end
 
   if rain_fall_type || views
 
-      if views == "Map View"
-        l =  rain_fall_type.gsub(" ","")           
-         if rain_fall_type  ==  "All"
-          b = ProductionProductivity10.map_search("All",compare,year,rain_fall_type)
-          u = "Total"
-          a = ProductionProductivity10.map(b,params[:year],rain_fall_type,views)
-         else
-          b = ProductionProductivity10.map_search(params[:search],compare,year,rain_fall_type)
-          a = ProductionProductivity10.map(b,rain_fall_type,year,ji)
-         end
-      elsif views == "Table"  
-        b = ProductionProductivity10.search(params[:search],compare,year,rain_fall_type)
-        a = ProductionProductivity10.table(b,rain_fall_type,year,ji1,compare)
-      else
-        @ProductionProductivity10s = ProductionProductivity10.search(params[:search],compare,year,rain_fall_type)
-        a = ProductionProductivity10.query(@ProductionProductivity10s,params[:year],rain_fall_type,views,ji,compare)
-      end
-      respond_to do |format|
-        format.html { render json:a }
+    if views == "Map View"
+      l =  rain_fall_type.gsub(" ","")           
+       if rain_fall_type  ==  "All"
+        b = ProductionProductivity10.map_search("All",compare,year,rain_fall_type)
+        u = "Total"
+        a = ProductionProductivity10.map(b,params[:year],rain_fall_type,views)
+       else
+        b = ProductionProductivity10.map_search(params[:search],compare,year,rain_fall_type)
+        a = ProductionProductivity10.map(b,rain_fall_type,year,ji)
+       end
+    elsif views == "Table"  
+      b = ProductionProductivity10.search(params[:search],compare,year,rain_fall_type,legend)
+      a = ProductionProductivity10.table(b,rain_fall_type,year,ji1,compare,legend)
+    else
+      @ProductionProductivity10 = ProductionProductivity10.search(params[:search],compare,year,rain_fall_type,legend)
+      a = ProductionProductivity10.query(@ProductionProductivity10,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
     end
-
-  else
     respond_to do |format|
-      format.html { render json: "error"}
+      format.html { render json:a }
   end
-  end
+
+else
+  respond_to do |format|
+    format.html { render json: "error"}
+end
+end
 
 end
 

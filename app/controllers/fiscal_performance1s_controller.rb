@@ -24,7 +24,7 @@ def test
    search = params[:search]
 # ji1 = [:State, :Revenue_Deficit_GFD_Percentage, :Capital_Outlay_GFD_Percentage, :Non_Dev_Exp_Agg_Disbursements_Percentage, :Non_Dev_Exp_Revenue_Receipts_Percentage, :Interest_Payments_Revenue_Exp_Percentage, :State_Own_Revenue_Revenue_Exp_Percentage, :Gross_Transfers_Aggregate_Disbursements_Percentage, :Debt_Servicing_Gross_Transfers_Percentage, :Year]
 if year == "All"
-  ji1 = [:State, :"2015", :"2016_RE", :"2017_RE"]
+  ji1 = [:State, :"2015", :"2016_RE", :"2017_BE"]
 else
   if rain_fall_type == "Revenue_Deficit_GFD_Percentage"
     ji1 = [:State, :Revenue_Deficit_GFD_Percentage, :Year]

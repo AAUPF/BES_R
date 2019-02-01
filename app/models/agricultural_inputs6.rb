@@ -1,4 +1,3 @@
 class AgriculturalInputs6 < ApplicationRecord
-  extend Newdistrictwithoutyear  
-
-      end
+  extend Newdistrictwithoutyear
+end

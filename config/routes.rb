@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :education_art_culture8s do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
 scope except: [:edit, :destroy] do
 resources :mapbihars do 
             collection { post :import }

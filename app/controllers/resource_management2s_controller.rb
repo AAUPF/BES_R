@@ -28,6 +28,7 @@ if year == "All"
  else
   ji1 = [:Sources_of_Revenue, :Amount, :Year]
  end
+ legend = "Sources_of_Revenue"
   if rain_fall_type || views
 
       if views == "Map View"
@@ -41,11 +42,11 @@ if year == "All"
           a = ResourceManagement2.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = ResourceManagement2.search(params[:search],compare,year,rain_fall_type)
-        a = ResourceManagement2.table(b,rain_fall_type,year,ji1,compare)
+        b = ResourceManagement2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = ResourceManagement2.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @ResourceManagement2s = ResourceManagement2.search(params[:search],compare,year,rain_fall_type)
-        a = ResourceManagement2.query(@ResourceManagement2s,params[:year],rain_fall_type,views,ji,compare,search)
+        @ResourceManagement2s = ResourceManagement2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = ResourceManagement2.query(@ResourceManagement2s,params[:year],rain_fall_type,views,ji,compare,search,legend)
       end
       respond_to do |format|
         format.html { render json:a }
@@ -58,6 +59,9 @@ if year == "All"
   end
 
 end
+
+
+# 
 
 
   def import

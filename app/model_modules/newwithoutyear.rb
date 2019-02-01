@@ -187,8 +187,7 @@ module Newwithoutyear
           end
         }]
       else
-
-          dataset = rain_fall_type.gsub("_"," ")
+        dataset = rain_fall_type.gsub("_"," ")
         hash_data =
         [{
           type:views,

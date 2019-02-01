@@ -15,55 +15,60 @@ class AnimalHusbandry5sController < ApplicationController
     @animal_husbandry5 = AnimalHusbandry5.new
   end
 
+
+
 def test
-  ji = [:Districts, :Fish_Production, :Fish_Seeds]
+  ji = [:Fish_Production, :Fish_Seeds]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
+   legend = "Districts"
+   remove = "Bihar"
+ 
 
-   unit1 =  "000"
 
 
-   if rain_fall_type == 'Fish_Production'
-    ranges = NewricesHelper.ranges1(42,35,20,10,5,2.5,0)
-  elsif rain_fall_type == 'Fish_Seeds'
-    ranges =  NewricesHelper.ranges1(2000,1300,1000,100,50,25,0)
-  
+   if year == "All"
+    ji1 = [:Districts, :"2014", :"2015",:"2016"]   
   else
- end
-
-
-   ji1 = [:Fish_Production, :Fish_Seeds, :Year]
-
+    if rain_fall_type != "All"
+      ji1 = [:Districts, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:Fish_Production, :Fish_Seeds, :Year]
+    end
+    
+   end
   if rain_fall_type || views
 
-      if views == "Map View"
-        l =  rain_fall_type.gsub(" ","")           
-         if rain_fall_type  ==  "All"
-          b = AnimalHusbandry5.map_search("All",compare,year,rain_fall_type)
-          u = "Total"
-          a = AnimalHusbandry5.map(b,params[:year],rain_fall_type,views)
-         else
-          b = AnimalHusbandry5.map_search(params[:search],compare,year,rain_fall_type)
-          a = AnimalHusbandry5.map(b,rain_fall_type,year,ji1)
-         end
-      elsif views == "Table"  
-        b = AnimalHusbandry5.search(params[:search],compare,year,rain_fall_type)
-        a = AnimalHusbandry5.table(b,rain_fall_type,year,ji1,compare)
-      else
-        @AnimalHusbandry5s = AnimalHusbandry5.search(params[:search],compare,year,rain_fall_type)
-        a = AnimalHusbandry5.query(@AnimalHusbandry5s,params[:year],rain_fall_type,views,ji,compare)
-      end
-      respond_to do |format|
-        format.html { render json:a }
+    if views == "Map View"
+      l =  rain_fall_type.gsub(" ","")           
+       if rain_fall_type  ==  "All"
+        b = AnimalHusbandry5.map_search("All",compare,year,rain_fall_type)
+        u = "Total"
+        a = AnimalHusbandry5.map(b,params[:year],rain_fall_type,views)
+       else
+        b = AnimalHusbandry5.map_search(params[:search],compare,year,rain_fall_type)
+        a = AnimalHusbandry5.map(b,rain_fall_type,year,ji)
+       end
+    elsif views == "Table"  
+      b = AnimalHusbandry5.search(params[:search],compare,year,rain_fall_type,legend)
+      a = AnimalHusbandry5.table(b,rain_fall_type,year,ji1,compare,legend)
+    else
+      @AnimalHusbandry5s = AnimalHusbandry5.search(params[:search],compare,year,rain_fall_type,legend)
+      a = AnimalHusbandry5.query(@AnimalHusbandry5s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
     end
-
-  else
     respond_to do |format|
-      format.html { render json: "error"}
+      format.html { render json:a }
   end
-  end
+
+else
+  respond_to do |format|
+    format.html { render json: "error"}
+end
+end
 
 end
 

@@ -127,14 +127,11 @@ module Kharif
     # l =  rain_fall_type.gsub(" ","")
     # abort(rain_fall_type)
     d = 'Districts'
-
     color = if views == 'pie'
-
               'none'
             else
               '#4f81bc'
             end
-
     if year == 'All' && rain_fall_type == 'All'
       hash_data = ji.map do |column_name|
         dataset = column_name.to_s.tr('_', ' ')
@@ -171,13 +168,10 @@ module Kharif
       return title
 
     elsif year == 'All'
-
       if compare != 'None'
-
         ji1 = [rain_fall_type, compare]
         hash_data = ji1.map do |col|
           dataset = col.to_s.tr('_', ' ')
-
           {
             type: views,
             legendText: dataset,
@@ -187,21 +181,36 @@ module Kharif
                         end
           }
         end
-
       else
-
         dataset = rain_fall_type.tr('_', ' ')
+        if views == 'line' || views == 'bubble' || views == 'column'
+          dataset = rain_fall_type.tr('_', ' ')
+          hash_data =
+            [{
+              type: views,
+              toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
+              name: dataset,
+              color: color,
+              legendText: dataset,
+              showInLegend: true,
+              dataPoints: b.map do |el|
+                            { y: el[rain_fall_type], label: el['Year']  }
+                          end
+            }]
+        else
+          dataset = rain_fall_type.tr('_', ' ')
+          hash_data = b.map do |el|
+            {
+              type: views,
+              toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
+              name: (el['Year'] ).to_s,
+              legendText: (el['Year'] ).to_s,
+              showInLegend: true,
+              dataPoints: [{ y: el[rain_fall_type], label:el['Year']  }]
+            }
+          end
+        end
 
-        hash_data =
-          [{
-            type: views,
-            color: color,
-            legendText: dataset,
-            showInLegend: true,
-            dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
-                          { y: el[rain_fall_type], label: el['Year'] }
-                        end
-          }]
       end
       name = if compare == 'None'
                rain_fall_type.to_s.tr('_', ' ').to_s
@@ -220,9 +229,7 @@ module Kharif
       return title
     else
       array = []
-
       if compare
-
         if rain_fall_type == 'All'
           # ji = [rain_fall_type,compare]
           hash_data = ji.map do |col|
@@ -246,13 +253,6 @@ module Kharif
           return title
 
         else
-          # b.each do |element|
-          #   hash1 = {:y => element[rain_fall_type] ,:label => rain_fall_type}
-          #   hash2 = {:y => element[compare] ,:label => compare}
-          #   array.push(hash1)
-          #   array.push(hash2)
-          # end
-          # return array
           if compare == 'None'
             ji1 = [rain_fall_type]
             hash_data = ji1.map do |col|
@@ -266,9 +266,7 @@ module Kharif
               }
             end
           else
-
             ji1 = [rain_fall_type, compare]
-
             hash_data = ji1.map do |col|
               {
                 type: views,
@@ -279,7 +277,6 @@ module Kharif
                             end
               }
             end
-
           end
           title = {
             animationEnabled: true,
@@ -291,30 +288,24 @@ module Kharif
           }
           return title
         end
-
       else
-
         b.each do |element|
           hash1 = { y: element[rain_fall_type], label: element['Year'] }
           array.push(hash1)
         end
         return array
       end
-
     end
   end
 
   # query starts here
   def query1(b, year, rain_fall_type, views, ji, compare)
     d = 'Districts'
-
     color = if views == 'pie'
-
               'none'
             else
               '#4f81bc'
             end
-
     if year == 'All' && rain_fall_type == 'All'
       hash_data = ji.map do |column_name|
         dataset = column_name.to_s.tr('_', ' ')

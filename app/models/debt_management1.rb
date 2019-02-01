@@ -1,3 +1,3 @@
 class DebtManagement1 < ApplicationRecord
-  extend Statefinanceyear  
+  extend Sectoryearnew  
  end

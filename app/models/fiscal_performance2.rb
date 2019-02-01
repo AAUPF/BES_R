@@ -25,11 +25,11 @@ class FiscalPerformance2 < ApplicationRecord
         else
           if rain_fall_type == "All"
             order("#{year} ")
-
           elsif rain_fall_type == "None"
             where('Sector = ? OR Sector = ? OR Sector = ?', "Primary", 'Secondary', 'Tertiary').order('id')
            else
-            where(Sector: rain_fall_type).order("#{year} ")
+           
+            where(Sector: rain_fall_type).order(:id)
            end
         end
         # where(Year: year).order("#{rain_fall_type} ")
@@ -53,7 +53,6 @@ class FiscalPerformance2 < ApplicationRecord
             where('Sector = ? ', rain_fall_type).order('id')
           end
         else
-
           if rain_fall_type == "None"
 
             if search == "All"

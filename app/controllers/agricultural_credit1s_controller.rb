@@ -23,7 +23,7 @@ class AgriculturalCredit1sController < ApplicationController
     else
       ji = [:Commercial_Bank_Target, :Commercial_Bank_Achievement, :RRBs_Target, :RRBs_Achievement, :CCBs_Target, :CCBs_Achievement, :Total_Target, :Total_Achievement]
     end
-    ji1 = [:Commercial_Bank_Target, :Commercial_Bank_Achievement, :RRBs_Target, :RRBs_Achievement, :CCBs_Target, :CCBs_Achievement, :Total_Target, :Total_Achievement]
+    ji1 = [:Year,:Commercial_Bank_Target, :Commercial_Bank_Achievement, :RRBs_Target, :RRBs_Achievement, :CCBs_Target, :CCBs_Achievement, :Total_Target, :Total_Achievement]
     views = params[:views]
     year = params[:year]
     compare = params[:compare]

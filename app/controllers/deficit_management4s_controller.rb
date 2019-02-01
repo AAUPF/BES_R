@@ -25,51 +25,33 @@ def test
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
-
-
    ji1 = [:Sector, :"2012-13", :"2013-14", :"2014-15", :"2015-16", :"2016-17", :"2017-18_BE", :Indicator]
-
    jip = [:"2012-13", :"2013-14", :"2014-15", :"2015-16", :"2016-17", :"2017-18_BE"]
 
-
    if search == "Amount"
-
     data = [
-
       "Net Borrowing",
       "Net Public Account",
       "Net Decrease in Cash Balance (Opening - Closing Balance)",
       "GFD",
-  
      ]
-
      elsif search == "Percentage Composition"
-
       data = [
         "Net Borrowing",
         "Net Public Account",
         "Net Decrease in Cash Balance (Opening - Closing Balance)",
-       
-    
        ]
-
-
    else
-
     data = [
-      # "Balance from Current Revenue (Rs. crore)",
-      "Net Borrowing",
-      "Net Public Account",
-      "Net Decrease in Cash Balance (Opening - Closing Balance)",
-      "GFD",
-      "Net Borrowing",
-      "Net Public Account",
-      "Net Decrease in Cash Balance (Opening - Closing Balance)",
+        "Net Borrowing",
+        "Net Public Account",
+        "Net Decrease in Cash Balance (Opening - Closing Balance)",
+        "GFD",
+        "Net Borrowing",
+        "Net Public Account",
+        "Net Decrease in Cash Balance (Opening - Closing Balance)",
     ]
-     
    end
-
-   
 
   if rain_fall_type || views
 

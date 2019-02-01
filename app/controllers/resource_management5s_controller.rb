@@ -28,6 +28,7 @@ if year == "All"
  else
   ji1 = [:Source, :Percentage, :Year]
  end
+ legend = "Source"
   if rain_fall_type || views
 
       if views == "Map View"
@@ -41,11 +42,11 @@ if year == "All"
           a = ResourceManagement5.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = ResourceManagement5.search(params[:search],compare,year,rain_fall_type)
-        a = ResourceManagement5.table(b,rain_fall_type,year,ji1,compare)
+        b = ResourceManagement5.search(params[:search],compare,year,rain_fall_type,legend)
+        a = ResourceManagement5.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @ResourceManagement5s = ResourceManagement5.search(params[:search],compare,year,rain_fall_type)
-        a = ResourceManagement5.query(@ResourceManagement5s,params[:year],rain_fall_type,views,ji,compare,search)
+        @ResourceManagement5s = ResourceManagement5.search(params[:search],compare,year,rain_fall_type,legend)
+        a = ResourceManagement5.query(@ResourceManagement5s,params[:year],rain_fall_type,views,ji,compare,search,legend)
       end
       respond_to do |format|
         format.html { render json:a }

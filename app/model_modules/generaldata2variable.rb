@@ -21,7 +21,7 @@ module Generaldata2variable
           end
       else
         if year == 'All'
-          all.order('id')
+          where(Indicators: compare).order('id')
         else
           where(Year: year).where(Indicators: compare).order("#{rain_fall_type} ")
         end

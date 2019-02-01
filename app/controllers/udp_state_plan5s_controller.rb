@@ -22,6 +22,7 @@ def test
    year  = params[:year]
    compare = params[:compare]
    ji1 = [:Districts, :Total_Number_of_Urban_Households, :Total_Number_of_Urban_Wards, :Number_of_Households_to_be_covered, :Number_of_Household_covered]
+   search = params[:search]
 
   if rain_fall_type || views
 
@@ -40,7 +41,7 @@ def test
         a = UdpStatePlan5.table(b,rain_fall_type,year,ji1,compare)
       else
         @UdpStatePlan5s = UdpStatePlan5.search(params[:search],compare,year,rain_fall_type)
-        a = UdpStatePlan5.query(@UdpStatePlan5s,params[:year],rain_fall_type,views,ji,compare)
+        a = UdpStatePlan5.query(@UdpStatePlan5s,params[:year],rain_fall_type,views,ji,compare,search)
       end
       respond_to do |format|
         format.html { render json:a }

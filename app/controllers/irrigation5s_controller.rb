@@ -15,16 +15,58 @@ class Irrigation5sController < ApplicationController
     @irrigation5 = Irrigation5.new
   end
 
+# def test
+#   ji = [:Ultimate_Potential, :Created_Potential, :Utilized_Potential]
+#   rain_fall_type = params[:rain_fall_type]
+#    views  = params[:views]
+#    year  = params[:year]
+#    compare = params[:compare]
+
+
+
+#    ji1 = [:Irrigation_Sources, :Ultimate_Potential, :Created_Potential, :Utilized_Potential]
+
+#   if rain_fall_type || views
+
+#       if views == "Map View"
+#         l =  rain_fall_type.gsub(" ","")           
+#          if rain_fall_type  ==  "All"
+#           b = Irrigation5.map_search("All",compare,year,rain_fall_type)
+#           u = "Total"
+#           a = Irrigation5.map(b,params[:year],rain_fall_type,views)
+#          else
+#           b = Irrigation5.map_search(params[:search],compare,year,rain_fall_type)
+#           a = Irrigation5.map(b,rain_fall_type,year,ji,unit1)
+#          end
+#       elsif views == "Table"  
+#         b = Irrigation5.search(params[:search],compare,year,rain_fall_type)
+#         a = Irrigation5.table(b,rain_fall_type,year,ji1,compare)
+#       else
+#         @Irrigation5s = Irrigation5.search(params[:search],compare,year,rain_fall_type)
+#         a = Irrigation5.query(@Irrigation5s,params[:year],rain_fall_type,views,ji,compare)
+#       end
+#       respond_to do |format|
+#         format.html { render json:a }
+#     end
+
+#   else
+#     respond_to do |format|
+#       format.html { render json: "error"}
+#   end
+#   end
+
+# end
+
+
 def test
-  ji = [:Ultimate_Potential, :Created_Potential, :Utilized_Potential]
+  ji = [:Ultimate_Potential, :Created_Potential, :Utilised_Potential]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-
-
-
+   search = params[:search]
    ji1 = [:Irrigation_Sources, :Ultimate_Potential, :Created_Potential, :Utilized_Potential]
+    legend = "Irrigation_Sources"
 
   if rain_fall_type || views
 
@@ -36,14 +78,14 @@ def test
           a = Irrigation5.map(b,params[:year],rain_fall_type,views)
          else
           b = Irrigation5.map_search(params[:search],compare,year,rain_fall_type)
-          a = Irrigation5.map(b,rain_fall_type,year,ji,unit1)
+          a = Irrigation5.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = Irrigation5.search(params[:search],compare,year,rain_fall_type)
-        a = Irrigation5.table(b,rain_fall_type,year,ji1,compare)
+        b = Irrigation5.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Irrigation5.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @Irrigation5s = Irrigation5.search(params[:search],compare,year,rain_fall_type)
-        a = Irrigation5.query(@Irrigation5s,params[:year],rain_fall_type,views,ji,compare)
+        @Irrigation5s = Irrigation5.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Irrigation5.query(@Irrigation5s,params[:year],rain_fall_type,views,ji,compare,search,legend)
       end
       respond_to do |format|
         format.html { render json:a }

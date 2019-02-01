@@ -24,7 +24,20 @@ def test
    search = params[:search]
    legend = "Districts"
    remove = "Bihar"
-   ji1 = [:Districts, :Area, :Production, :Productivity, :Year, :Percentage_Area, :Percentage_Production]
+  #  ji1 = [:Districts, :Area, :Production, :Productivity, :Year, :Percentage_Area, :Percentage_Production]
+
+
+   if year == "All"
+    ji1 = [:Districts, :"2015", :"2016"]
+   else
+    if rain_fall_type != "All"
+      ji1 = [:Districts, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:Districts, :Area, :Production, :Productivity, :Percentage_Area, :Percentage_Production, :Year]
+    end
+    
+   end
 
   if rain_fall_type || views
 

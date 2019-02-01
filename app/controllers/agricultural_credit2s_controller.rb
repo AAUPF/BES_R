@@ -16,12 +16,26 @@ class AgriculturalCredit2sController < ApplicationController
   end
 
 def test
-  ji = [:Target, :Achievement]
+  ji = [:Target, :Achievement,:Percentage_Target, :Percentage_Achievement,]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-   ji1 = [:Districts, :Target, :Achievement,:Percentage_Target, :Percentage_Achievement, :Year]
+   search = params[:search]
+   legend = "Districts"
+   remove = "Bihar"
+  #  ji1 = [:Characteristics, :India, :Bihar, :Year]
+   if year == "All"
+    ji1 = [:Districts, :"2014", :"2015", :"2016"]
+   else
+    if rain_fall_type != "All"
+      ji1 = [:Districts, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:Districts, :Target, :Achievement,:Percentage_Target, :Percentage_Achievement, :Year]
+    end
+    
+   end
 
   if rain_fall_type || views
 
@@ -36,11 +50,11 @@ def test
           a = AgriculturalCredit2.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = AgriculturalCredit2.search(params[:search],compare,year,rain_fall_type)
-        a = AgriculturalCredit2.table(b,rain_fall_type,year,ji1,compare)
+        b = AgriculturalCredit2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AgriculturalCredit2.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @AgriculturalCredit2s = AgriculturalCredit2.search(params[:search],compare,year,rain_fall_type)
-        a = AgriculturalCredit2.query(@AgriculturalCredit2s,params[:year],rain_fall_type,views,ji,compare)
+        @AgriculturalCredit2s = AgriculturalCredit2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = AgriculturalCredit2.query(@AgriculturalCredit2s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }
@@ -53,7 +67,6 @@ def test
   end
 
 end
-
 
   def import
     # Module1.import(params[:file])

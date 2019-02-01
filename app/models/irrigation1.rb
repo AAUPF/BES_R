@@ -1,4 +1,3 @@
 class Irrigation1 < ApplicationRecord
-  extend Newwithoutyear  
-
+   extend Sectorwithoutyear
 end

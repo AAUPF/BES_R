@@ -473,7 +473,7 @@ module Biharmap
         above_max = []
         extreme = []
         above_extreme = []
-        hu = {below_min: {min: 700, max: 1500},min: {min: 1500, max: 3000}, blow_max:{min: 3001, max: 4000}, max:{min: 4001, max: 5000},above_max:{min: 5001, max: 6000},extreme:{min: 6001, max: 7000},above_extreme:{min: 7000, max: 20000}}
+        hu = {below_min: {min: 7000, max: 8000},min: {min: 8000, max: 9000}, blow_max:{min: 9000, max: 10000}, max:{min: 10000, max: 11000},above_max:{min: 11000, max: 12000},extreme:{min: 12000, max: 13000},above_extreme:{min: 13000, max: 14000}}
         if year == "2016"
     
          unit =  "mm"

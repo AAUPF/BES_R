@@ -23,6 +23,8 @@ class AgriculturalInputs5sController < ApplicationController
     views = params[:views]
     year = params[:year]
     compare = params[:compare]
+    search = params[:search]
+
 
     units = [{Target_Physical: "Hectare" },{Target_Financial: "Lakh" },{Achievement_Physical: "Hectare" },{Achievement_Financial: "Lakh" }]
 
@@ -79,7 +81,7 @@ class AgriculturalInputs5sController < ApplicationController
         a = AgriculturalInputs5.table(b, rain_fall_type, year)
       else
         @Agricultural_Inputs5s = AgriculturalInputs5.search(params[:search], compare, year, rain_fall_type)
-        a = AgriculturalInputs5.query(@AgriculturalInputs5s, params[:year], rain_fall_type, views, ji, compare)
+        a = AgriculturalInputs5.query(@AgriculturalInputs5s, params[:year], rain_fall_type, views, ji, compare,search)
       end
       respond_to do |format|
         format.html { render json: a }

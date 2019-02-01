@@ -16,24 +16,27 @@ class StateDomesticProduct11sController < ApplicationController
   end
 
 def test
-  ji = [:Target, :Achievement]
+  ji = [ :Number_of_Handpumps_Installed, :Slipped_back_Habitations_or_Water_quality_Problems_Covered]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-   search  = params[:search]
-# ji1 = [:Districts, :Target, :Achievement, :Year]
-if year == "All"
-  ji1 = [:Districts, :"2013", :"2014", :"2015", :"2016"]
-else
-  if rain_fall_type == "Target"
-    ji1 = [:Districts, :Target, :Year]
-  elsif rain_fall_type == "Achievement"
-    ji1 = [:Districts, :Achievement, :Year]
-  else
-    ji1 = [:Districts, :Target, :Achievement, :Year]
-  end
-end
+   search = params[:search]
+   legend = "Districts"
+   remove = "Bihar "
+  #  ji1 = [:Characteristics, :India, :Bihar, :Year]
+   if year == "All"
+    ji1 = [:Districts,:"2013", :"2014", :"2015", :"2016"]
+   else
+    if rain_fall_type != "All"
+      ji1 = [:Districts, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:Districts, :Target, :Achievement, :Year]
+    end
+    
+   end
+
   if rain_fall_type || views
 
       if views == "Map View"
@@ -47,11 +50,11 @@ end
           a = StateDomesticProduct11.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = StateDomesticProduct11.search(params[:search],compare,year,rain_fall_type)
-        a = StateDomesticProduct11.table(b,rain_fall_type,year,ji1,compare)
+        b = StateDomesticProduct11.search(params[:search],compare,year,rain_fall_type,legend)
+        a = StateDomesticProduct11.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @StateDomesticProduct11s = StateDomesticProduct11.search(params[:search],compare,year,rain_fall_type)
-        a = StateDomesticProduct11.query(@StateDomesticProduct11s,params[:year],rain_fall_type,views,ji,compare,search)
+        @StateDomesticProduct11s = StateDomesticProduct11.search(params[:search],compare,year,rain_fall_type,legend)
+        a = StateDomesticProduct11.query(@StateDomesticProduct11s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }

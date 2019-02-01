@@ -1,8 +1,3 @@
 class DeficitManagement4 < ApplicationRecord
-extend Statefinanceyear
-
-
-
-
-
+    extend Sectoryearnew
 end

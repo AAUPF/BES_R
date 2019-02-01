@@ -1,4 +1,3 @@
 class AgriculturalInputs4 < ApplicationRecord
-  extend Test  
-
-      end
+  extend Generaldata  
+end
