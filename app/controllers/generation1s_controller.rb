@@ -40,7 +40,7 @@ legend = "Sector"
          end
       elsif views == "Table"  
         b = Generation1.search(params[:search],compare,year,rain_fall_type,legend)
-        a = Generation1.table(b,rain_fall_type,year,ji1,compare,search,legend)
+        a = Generation1.table(b,rain_fall_type,year,ji1,compare,legend)
       else
         @Generation1s = Generation1.search(params[:search],compare,year,rain_fall_type,legend)
         a = Generation1.query(@Generation1s,params[:year],rain_fall_type,views,ji,compare,search,legend)

@@ -99,13 +99,18 @@ module Sectorwithoutyear
             }
           else
             dataset = column_name.to_s.tr('_', ' ')
+            if search == "All"
+              dataPoints = b.reject { |x| x["#{legend}"] == 'Total' }
+            else
+              dataPoints = b
+            end
             {
               type: views,
               toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
               name: dataset,
               legendText: dataset,
               showInLegend: true,
-              dataPoints: b.reject { |x| x["#{legend}"] == 'Total' }.map do |el|
+              dataPoints: dataPoints.map do |el|
                             { y: el[column_name], z: el[column_name], label: el[d] }
                           end
             }
@@ -181,7 +186,7 @@ module Sectorwithoutyear
               color: color,
               legendText: dataset,
               showInLegend: true,
-              dataPoints: b.reject { |x| x[legend.to_s] == 'Total' }.map do |el|
+              dataPoints: b.map do |el|
                             { y: el[rain_fall_type], label: el[legend.to_s] }
                           end
             }]

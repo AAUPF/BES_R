@@ -78,7 +78,7 @@ module Statewithoutyearthreevariable
       end
     end
   
-    def query(b, _year, rain_fall_type, views, ji, compare,legend)
+    def query(b, _year, rain_fall_type, views, ji, compare,legend,search)
       d = "#{legend}"
       color  = "#4f81bc"
 
@@ -156,14 +156,14 @@ module Statewithoutyearthreevariable
                 color: color,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.reject { |x| x[legend.to_s] == 'Total' }.map do |el|
+                dataPoints: b.map do |el|
                               { y: el[rain_fall_type], label: el[legend.to_s] }
                             end
               }]
           else
 
             dataset = rain_fall_type.tr('_', ' ')
-            hash_data = b.reject { |x| x[legend.to_s] == 'Total' }.map do |el|
+            hash_data = b.map do |el|
               {
                 type: views,
                 toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
@@ -180,7 +180,7 @@ module Statewithoutyearthreevariable
 
 
       end
-      if views == "stackedBar" || views == "stackedBar100"
+      if views == "stackedBar" || views == "stackedBar100" || views == "stackedColumn100" || views == "stackedColumn" || search != "All"
         title = {
           animationEnabled: true,
           exportEnabled: true,

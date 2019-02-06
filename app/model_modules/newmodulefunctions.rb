@@ -10,16 +10,16 @@ module Newmodulefunctions
           name:col[:Sector],
           legendText: col[:Sector],
           showInLegend: true,
-          dataPoints: [{ y: col[_year], label: _year }]
+          dataPoints: [{ y: col[_year], label: _year.to_s.tr('_', ' ').to_s }]
         }
       end
     else
       hash_data = [{
         type: views,
         toolTipContent: "{label}<br/>{name}: <strong>{y}</strong>",
-        name:_year,
+        name:_year.to_s.tr('_', ' ').to_s,
         color: color,
-        legendText: search,
+        legendText: search.to_s.tr('_', ' ').to_s,
         showInLegend: true,
         dataPoints: result.reject{|x| x["Sector"]== "Total"}.map do |hash|
                       { y: hash[_year], label: hash[:Sector] }
