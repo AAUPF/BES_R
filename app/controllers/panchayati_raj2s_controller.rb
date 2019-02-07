@@ -37,7 +37,7 @@ def test
 
    compare = "None"
 
-if search = "Gram Panchayat"
+if search == "Gram Panchayat"
 
   data = [
     "BRGF",
@@ -52,14 +52,14 @@ if search = "Gram Panchayat"
     "Total",
   ]
   
-elsif  search = "Panchayat Samiti"
+elsif  search == "Panchayat Samiti"
 
   data = [
     "BRGF",
     "RGPSA",
     "Union Finance Commission Grants",
     "State Finance Commission Grants",
-    "Allowance to PS  members",
+    "Allowance to PS members",
     "Mukhya Mantri Saat Nishchay Yojana",
     "Total",
   ]

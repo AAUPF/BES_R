@@ -21,6 +21,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
    legend  = "Indicator"
    remove = "Bihar"
    ji1 = [:Districts, :Target, :Achievement, :Achievement_Percentage, :Indicator]
@@ -42,7 +43,7 @@ def test
         a = SectoralShare11.table(b,rain_fall_type,year,ji1,compare)
       else
         @SectoralShare11s = SectoralShare11.search(params[:search],compare,year,rain_fall_type,legend)
-        a = SectoralShare11.query(@SectoralShare11s,params[:year],rain_fall_type,views,ji,compare,remove)
+        a = SectoralShare11.query(@SectoralShare11s,params[:year],rain_fall_type,views,ji,compare,remove,search)
       end
       respond_to do |format|
         format.html { render json:a }

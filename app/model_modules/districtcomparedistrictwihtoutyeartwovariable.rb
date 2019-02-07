@@ -79,13 +79,13 @@ module Districtcomparedistrictwihtoutyeartwovariable
         end
       end
     
-      def query(b, _year, rain_fall_type, views, ji, compare,remove)
+      def query(b, _year, rain_fall_type, views, ji, compare,remove,search)
         d = 'Districts'
         color  = "#4f81bc"
         if rain_fall_type == 'All'
           if views
             hash_data = ji.map do |column_name|
-              if compare == 'Bihar vs District'
+              if compare != 'None'
                 dataset = column_name.to_s.tr('_', ' ')
                 {
                   type: views,
@@ -112,15 +112,15 @@ module Districtcomparedistrictwihtoutyeartwovariable
               end
             end
           end
-          if views == "stackedBar" || views == "stackedBar100"
+          if views == "stackedBar" || views == "stackedBar100" || search !="All"
             title = {
-              animationEnabled: true,
-              exportEnabled: true,
-              title: {
-                text: rain_fall_type.to_s.tr('_', ' ').to_s
-              },
-              data: hash_data
-            }
+                  animationEnabled: true,
+                  exportEnabled: true,
+                  title: {
+                    text: rain_fall_type.to_s.tr('_', ' ').to_s
+                  },
+                  data: hash_data
+              }
           else
             title = {
               animationEnabled: true,
@@ -155,21 +155,67 @@ module Districtcomparedistrictwihtoutyeartwovariable
                             end
               }]
           else
+            # dataset = rain_fall_type.tr('_', ' ')
+            # hash_data =
+            #   [{
+            #     type: views,
+            #     toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+            #     name:dataset,
+            #     color: color,
+            #     legendText: dataset,
+            #     showInLegend: true,
+            #     dataPoints: b.reject { |x| x['Districts'] == "#{remove}" }.map do |el|
+            #                   { y: el[rain_fall_type], label: el['Districts'] }
+            #                 end
+            #   }]
+            if search == "All"
+                    
+              if views != "column" && views != "line" && views != "bubble"
+                
+                hash_data = b.reject { |x| x['Districts'] == 'Total'  || x['Districts'] == 'Bihar' }.map do |col|
+                  {
+                    type:views,
+                    toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                    name:col["Districts"],
+                    legendText: col["Districts"],
+                    showInLegend: true,
+                    dataPoints: [{ y: col[rain_fall_type], label: search }]
+                  }
+                end
+                  
+                else
+                  dataset = rain_fall_type.tr('_', ' ')
+                  hash_data =
+                  [{
+                  type: views,
+                  toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                  name:dataset,
+                  color: color,
+                  legendText: dataset,
+                  showInLegend: true,
+                  dataPoints: b.reject { |x| x['Districts'] == 'Total'  || x['Districts'] == 'Bihar' }.map do |el|
+                    { y: el[rain_fall_type], label: el['Districts'] }
+                              end
+                  }]
+                end           
+            else
+            
             dataset = rain_fall_type.tr('_', ' ')
-            hash_data =
-              [{
-                type: views,
-                toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
-                name:dataset,
-                color: color,
-                legendText: dataset,
-                showInLegend: true,
-                dataPoints: b.reject { |x| x['Districts'] == "#{remove}" }.map do |el|
-                              { y: el[rain_fall_type], label: el['Districts'] }
-                            end
-              }]
+                  hash_data =  b.map do |el|
+                    {
+                      type:views,
+                      toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+                      name:"#{el["Districts"]}",
+                      legendText:"#{el["Districts"]}",
+                      showInLegend: true,
+                      dataPoints: [{ y: el[rain_fall_type], label:  dataset }]
+                  }
+      
+                  end
+
+            end
           end
-          if views == "stackedBar" || views == "stackedBar100"
+          if views == "stackedBar" || views == "stackedBar100" || views == "stackedColumn100" || views == "stackedColumn" || search != "All"
             title = {
               animationEnabled: true,
               exportEnabled: true,
