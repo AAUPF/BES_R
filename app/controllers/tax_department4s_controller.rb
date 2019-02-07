@@ -180,6 +180,23 @@ def test
   if views != "Table"
 
     data = [
+
+      "From Printed Non-judicial stamps",
+      "From Non-judicial stamp duty deposited through Bank challan",
+      "Non-Judicial adhesive stamps",
+      "Non Judicial special adhesive stamp –  through  Franking machines",
+      "Revenue Stamps",
+      "Judicial Stamps",
+      "Fees on registration of instruments",
+      "Landlord’s Registration fee",
+      "Landlord’s Process fee",
+      "Fee from searches of records and Non-Encumbrances",
+      "Fee from certified copies",
+    ]
+
+  else
+
+    data = [
       "From Printed Non-judicial stamps",
       "From Non-judicial stamp duty deposited through Bank challan",
       "Non-Judicial adhesive stamps",
@@ -194,22 +211,7 @@ def test
       "Fee from certified copies",
       "Sub-Total",
       "Total",
-    ]
 
-  else
-
-    data = [
-      "From Printed Non-judicial stamps",
-      "From Non-judicial stamp duty deposited through Bank challan",
-      "Non-Judicial adhesive stamps",
-      "Non Judicial special adhesive stamp –  through  Franking machines",
-      "Revenue Stamps",
-      "Judicial Stamps",
-      "Fees on registration of instruments",
-      "Landlord’s Registration fee",
-      "Landlord’s Process fee",
-      "Fee from searches of records and Non-Encumbrances",
-      "Fee from certified copies",
     ]
   end
    
