@@ -65,6 +65,7 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
 ji1 = [:Districts, :Allotment, :Lifting, :Lifting_Percentage, :Crops]
 
 legend  = "Crops"
@@ -87,7 +88,7 @@ remove = "Bihar"
         a = RuralDevelopmentProgrammes10.table(b,rain_fall_type,year,ji1,compare)
       else
         @RuralDevelopmentProgrammes10s = RuralDevelopmentProgrammes10.search(params[:search],compare,year,rain_fall_type,legend)
-        a = RuralDevelopmentProgrammes10.query(@RuralDevelopmentProgrammes10s,params[:year],rain_fall_type,views,ji,compare,remove)
+        a = RuralDevelopmentProgrammes10.query(@RuralDevelopmentProgrammes10s,params[:year],rain_fall_type,views,ji,compare,remove,search)
       end
       respond_to do |format|
         format.html { render json:a }

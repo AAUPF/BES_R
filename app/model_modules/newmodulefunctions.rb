@@ -3,7 +3,7 @@ module Newmodulefunctions
 
     result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
     if views != "column"
-      hash_data = result.reject{|x| x["Sector"]== "Total"}.map do |col|
+      hash_data = result.reject{|x| x["Sector"]== "Total" || x["Sector"]== "Grand Total"}.map do |col|
         {
           type:views,
           toolTipContent: "{label}<br/>{name}: <strong>{y}</strong>",
@@ -21,7 +21,7 @@ module Newmodulefunctions
         color: color,
         legendText: search.to_s.tr('_', ' ').to_s,
         showInLegend: true,
-        dataPoints: result.reject{|x| x["Sector"]== "Total"}.map do |hash|
+        dataPoints: result.reject{|x| x["Sector"]== "Total" || x["Sector"]== "Grand Total"}.map do |hash|
                       { y: hash[_year], label: hash[:Sector] }
                     end
       }]
@@ -49,7 +49,7 @@ module Newmodulefunctions
       def self.year_all(b,data,views,_year,jip)
         result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
 
-        hash_data = result.reject{|x| x["Sector"]== "Total"}.map do |col|
+        hash_data = result.reject{|x| x["Sector"]== "Total" || x["Sector"]== "Grand Total"}.map do |col|
           {
             type:views,
             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
