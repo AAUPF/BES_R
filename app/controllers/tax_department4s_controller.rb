@@ -203,7 +203,7 @@ def test
       "Non Judicial special adhesive stamp –  through  Franking machines",
       "Revenue Stamps",
       "Judicial Stamps",
-      "Sub-Total",
+
       "Fees on registration of instruments",
       "Landlord’s Registration fee",
       "Landlord’s Process fee",
