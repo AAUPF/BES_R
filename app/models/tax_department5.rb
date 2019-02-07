@@ -1,3 +1,3 @@
 class TaxDepartment5 < ApplicationRecord
-extend  Districtcomparedistrictwithoutyear
+ extend  Districtcomparedistrictwithoutyear
 end

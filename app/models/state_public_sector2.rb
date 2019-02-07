@@ -1,6 +1,5 @@
 class StatePublicSector2 < ApplicationRecord
   include Newmodulefunctions
-
         def self.import1(file)
           spreadsheet = Roo::Spreadsheet.open(file.path)
           header = spreadsheet.row(1)

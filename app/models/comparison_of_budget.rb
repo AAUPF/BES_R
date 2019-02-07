@@ -1,4 +1,4 @@
 class ComparisonOfBudget < ApplicationRecord
   extend Eovsharednew  
-
-      end
+  # extend Statefinanceyearsector
+end

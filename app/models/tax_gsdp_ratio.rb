@@ -1,3 +1,5 @@
 class TaxGsdpRatio < ApplicationRecord
-  extend Taxdata  
+  # extend Taxdata  
+  extend Sectorwithoutyear
+
 end

@@ -31,35 +31,45 @@ def test
   ji1 = %i[Sector 2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE]
 
 
-  if views != "Table"
+  # if views != "Table"
 
 
-    data = [
-      "Transport",
-      "Railways",
-      "Road Transport",
-      "Water Transport",
-      "Air Transport",
-      "Communication",
-
-  
-    ]
-
-    
-  else
-
-    data = [
-      "Transport",
-      "Railways",
-      "Road Transport",
-      "Water Transport",
-      "Air Transport",
-      "Communication",
-    ]
+  #   data = [
+  #     "General Services",
+  #     "Social Services",
+  #     "Economic Services",
+  #     "Capital Outlay",
+  #     "Discharge of Public Debt",
+  #     "Loans and Advances",
+  #     "Total",
+  #   ]
 
     
-  end
+  # else
 
+  #   data = [
+  #     "General Services",
+  #     "Social Services",
+  #     "Economic Services",
+  #     "Capital Outlay",
+  #     "Discharge of Public Debt",
+  #     "Loans and Advances",
+  #     "Total",
+  #   ]
+
+    
+  # end
+
+
+  data = [
+    "General Services",
+    "Social Services",
+    "Economic Services",
+    "Capital Outlay",
+    "Discharge of Public Debt",
+    "Loans and Advances",
+    "Total",
+  ]
 
 
 

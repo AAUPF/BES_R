@@ -15,6 +15,11 @@ class ResourceManagement9sController < ApplicationController
     @resource_management9 = ResourceManagement9.new
   end
 
+
+
+
+
+
 def test
   ji = [:Budget_Estimate, :Actual_Receipts, :Variation_Excess_or_Shortfall_in_Amount, :Variation_Excess_or_Shortfall_in_Percentage]
   rain_fall_type = params[:rain_fall_type]
@@ -22,82 +27,12 @@ def test
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
-   jip = [:Budget_Estimate, :Actual_Receipts, :Variation_Excess_or_Shortfall_in_Amount, :Variation_Excess_or_Shortfall_in_Percentage]
-    ji1 = [:Sector, :Budget_Estimate, :Actual_Receipts, :Variation_Excess_or_Shortfall_in_Amount, :Variation_Excess_or_Shortfall_in_Percentage]
-    compare = "None"
-    if search == "Own Tax Revenue"
-      if rain_fall_type == "None"
-        data = [
-          'Own Tax Revenue'
-        ]
-      else
-        data = [
-          "Taxes on Sales, Trade",
-          "Taxes on Goods and Passengers",
-          "State Excise",
-          "Stamp and Registration Fees",
-          "Taxes on Vehicles",
-          "Land Revenue",
-          "Taxes & Duties on Electricity",
-          "Other Taxes and Duties on Commodities and Services",
-          # "Total"
-        ]
-      end
-  
-
-    elsif search == 'Non Tax Revenue'
-
-      if rain_fall_type == "None"
-        data = [
-          'Non Tax Revenue'
-        ]
-      else
-        data = [
-          "Non-Ferrous Mining and Metallurgical Industries",
-          "Interest Receipts",
-          "Miscellaneous General Services",
-          "Other Administrative Services",
-          "Police",
-          "Major Irrigation",
-          "Education, Sports, Arts and Culture",
-          "Roads and Bridges",
-          "Medical and Public Health",
-          "Other Rural Development Programmes",
-          "Social Security and Welfare",
-          "Others",
-          # "Total"
-        ]
-      end
-    
-    elsif search == 'All'
-      data = [
-        "Taxes on Sales, Trade",
-          "Taxes on Goods and Passengers",
-          "State Excise",
-          "Stamp and Registration Fees",
-          "Taxes on Vehicles",
-          "Land Revenue",
-          "Taxes & Duties on Electricity",
-          "Other Taxes and Duties on Commodities and Services",
-          "Non-Ferrous Mining and Metallurgical Industries",
-          "Interest Receipts",
-          "Miscellaneous General Services",
-          "Other Administrative Services",
-          "Police",
-          "Major Irrigation",
-          "Education, Sports, Arts and Culture",
-          "Roads and Bridges",
-          "Medical and Public Health",
-          "Other Rural Development Programmes",
-          "Social Security and Welfare",
-          "Others",
-      ]
-    end
-
+   legend = "Sector"
+ji1 = [:Sector, :Budget_Estimate, :Actual_Receipts, :Variation_Excess_or_Shortfall_in_Amount, :Variation_Excess_or_Shortfall_in_Percentage]
   if rain_fall_type || views
 
       if views == "Map View"
-        l =  rain_fall_type.gsub(" ","") 
+        l =  rain_fall_type.gsub(" ","")           
          if rain_fall_type  ==  "All"
           b = ResourceManagement9.map_search("All",compare,year,rain_fall_type)
           u = "Total"
@@ -107,11 +42,11 @@ def test
           a = ResourceManagement9.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = ResourceManagement9.search(params[:search],compare,year,rain_fall_type)
-        a = ResourceManagement9.table(b, rain_fall_type, year, ji1, compare, search, data)
+        b = ResourceManagement9.search(params[:search],compare,year,rain_fall_type,legend)
+        a = ResourceManagement9.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @ResourceManagement9s = ResourceManagement9.search(params[:search],compare,year,rain_fall_type)
-        a = ResourceManagement9.query(@ResourceManagement9s,params[:year],rain_fall_type,views,ji, compare, search, data, jip)
+        @ResourceManagement9s = ResourceManagement9.search(params[:search],compare,year,rain_fall_type,legend)
+        a = ResourceManagement9.query(@ResourceManagement9s,params[:year],rain_fall_type,views,ji,compare,search,legend)
       end
       respond_to do |format|
         format.html { render json:a }
@@ -124,6 +59,115 @@ def test
   end
 
 end
+# def test
+#   ji = [:Budget_Estimate, :Actual_Receipts, :Variation_Excess_or_Shortfall_in_Amount, :Variation_Excess_or_Shortfall_in_Percentage]
+#   rain_fall_type = params[:rain_fall_type]
+#    views  = params[:views]
+#    year  = params[:year]
+#    compare = params[:compare]
+#    search = params[:search]
+#    jip = [:Budget_Estimate, :Actual_Receipts, :Variation_Excess_or_Shortfall_in_Amount, :Variation_Excess_or_Shortfall_in_Percentage]
+#     ji1 = [:Sector, :Budget_Estimate, :Actual_Receipts, :Variation_Excess_or_Shortfall_in_Amount, :Variation_Excess_or_Shortfall_in_Percentage]
+#     compare = "None"
+#     if search == "Own Tax Revenue"
+#       if rain_fall_type == "None"
+#         data = [
+#           'Own Tax Revenue'
+#         ]
+#       else
+#         data = [
+#           "Taxes on Sales, Trade",
+#           "Taxes on Goods and Passengers",
+#           "State Excise",
+#           "Stamp and Registration Fees",
+#           "Taxes on Vehicles",
+#           "Land Revenue",
+#           "Taxes & Duties on Electricity",
+#           "Other Taxes and Duties on Commodities and Services",
+#           # "Total"
+#         ]
+#       end
+  
+
+#     elsif search == 'Non Tax Revenue'
+
+#       if rain_fall_type == "None"
+#         data = [
+#           'Non Tax Revenue'
+#         ]
+#       else
+#         data = [
+#           "Non-Ferrous Mining and Metallurgical Industries",
+#           "Interest Receipts",
+#           "Miscellaneous General Services",
+#           "Other Administrative Services",
+#           "Police",
+#           "Major Irrigation",
+#           "Education, Sports, Arts and Culture",
+#           "Roads and Bridges",
+#           "Medical and Public Health",
+#           "Other Rural Development Programmes",
+#           "Social Security and Welfare",
+#           "Others",
+#           # "Total"
+#         ]
+#       end
+    
+#     elsif search == 'All'
+#       data = [
+#         "Taxes on Sales, Trade",
+#           "Taxes on Goods and Passengers",
+#           "State Excise",
+#           "Stamp and Registration Fees",
+#           "Taxes on Vehicles",
+#           "Land Revenue",
+#           "Taxes & Duties on Electricity",
+#           "Other Taxes and Duties on Commodities and Services",
+#           "Non-Ferrous Mining and Metallurgical Industries",
+#           "Interest Receipts",
+#           "Miscellaneous General Services",
+#           "Other Administrative Services",
+#           "Police",
+#           "Major Irrigation",
+#           "Education, Sports, Arts and Culture",
+#           "Roads and Bridges",
+#           "Medical and Public Health",
+#           "Other Rural Development Programmes",
+#           "Social Security and Welfare",
+#           "Others",
+#       ]
+#     end
+
+#   if rain_fall_type || views
+
+#       if views == "Map View"
+#         l =  rain_fall_type.gsub(" ","") 
+#          if rain_fall_type  ==  "All"
+#           b = ResourceManagement9.map_search("All",compare,year,rain_fall_type)
+#           u = "Total"
+#           a = ResourceManagement9.map(b,params[:year],rain_fall_type,views)
+#          else
+#           b = ResourceManagement9.map_search(params[:search],compare,year,rain_fall_type)
+#           a = ResourceManagement9.map(b,rain_fall_type,year,ji)
+#          end
+#       elsif views == "Table"  
+#         b = ResourceManagement9.search(params[:search],compare,year,rain_fall_type)
+#         a = ResourceManagement9.table(b, rain_fall_type, year, ji1, compare, search, data)
+#       else
+#         @ResourceManagement9s = ResourceManagement9.search(params[:search],compare,year,rain_fall_type)
+#         a = ResourceManagement9.query(@ResourceManagement9s,params[:year],rain_fall_type,views,ji, compare, search, data, jip)
+#       end
+#       respond_to do |format|
+#         format.html { render json:a }
+#     end
+
+#   else
+#     respond_to do |format|
+#       format.html { render json: "error"}
+#   end
+#   end
+
+# end
 
 
   def import

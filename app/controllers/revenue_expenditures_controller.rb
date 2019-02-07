@@ -41,7 +41,6 @@ class RevenueExpendituresController < ApplicationController
         "Capital A/c",
         "Plan Expenditure",
         "Revenue A/c (PRE)",
-        "Capital A/c",
         "Rate of growth of NPRE (Percentage)",
         "Rate of growth of PRE (Percentage)",
         "RE/TE(Percentage)",

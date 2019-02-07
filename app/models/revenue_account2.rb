@@ -1,4 +1,4 @@
 class RevenueAccount2 < ApplicationRecord
-  extend Revenueaccount2data  
-
-      end
+  # extend Revenueaccount2data
+  extend Generaldata  
+end

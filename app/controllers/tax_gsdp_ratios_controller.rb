@@ -15,6 +15,46 @@ class TaxGsdpRatiosController < ApplicationController
     @tax_gsdp_ratio = TaxGsdpRatio.new
   end
 
+# def test
+#   ji = [:Revenue_Receipts, :States_Own_Tax, :GSDP, :Ratio_of_SOT_and_RR, :Ratio_of_SOT_and_GSDP, :Ratio_of_Total_Revenue_and_GSDP]
+#   rain_fall_type = params[:rain_fall_type]
+#    views  = params[:views]
+#    year  = params[:year]
+#    compare = params[:compare]
+#    search = params[:search]
+# ji1  = [:State, :Revenue_Receipts, :States_Own_Tax, :GSDP, :Ratio_of_SOT_and_RR, :Ratio_of_SOT_and_GSDP, :Ratio_of_Total_Revenue_and_GSDP]
+#   if rain_fall_type || views
+
+#       if views == "Map View"
+#         l =  rain_fall_type.gsub(" ","")           
+#          if rain_fall_type  ==  "All"
+#           b = TaxGsdpRatio.map_search("All",compare,year,rain_fall_type)
+#           u = "Total"
+#           a = TaxGsdpRatio.map(b,params[:year],rain_fall_type,views)
+#          else
+#           b = TaxGsdpRatio.map_search(params[:search],compare,year,rain_fall_type)
+#           a = TaxGsdpRatio.map(b,rain_fall_type,year,ji)
+#          end
+#       elsif views == "Table"  
+#         b = TaxGsdpRatio.search(params[:search],compare,year,rain_fall_type)
+#         a = TaxGsdpRatio.table(b,rain_fall_type,year,ji1,compare)
+#       else
+#         @TaxGsdpRatios = TaxGsdpRatio.search(params[:search],compare,year,rain_fall_type)
+#         a = TaxGsdpRatio.query(@TaxGsdpRatios,params[:year],rain_fall_type,views,ji,compare,search)
+#       end
+#       respond_to do |format|
+#         format.html { render json:a }
+#     end
+
+#   else
+#     respond_to do |format|
+#       format.html { render json: "error"}
+#   end
+#   end
+
+# end
+
+
 def test
   ji = [:Revenue_Receipts, :States_Own_Tax, :GSDP, :Ratio_of_SOT_and_RR, :Ratio_of_SOT_and_GSDP, :Ratio_of_Total_Revenue_and_GSDP]
   rain_fall_type = params[:rain_fall_type]
@@ -22,7 +62,8 @@ def test
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
-ji1  = [:State, :Revenue_Receipts, :States_Own_Tax, :GSDP, :Ratio_of_SOT_and_RR, :Ratio_of_SOT_and_GSDP, :Ratio_of_Total_Revenue_and_GSDP]
+   legend = "State"
+ji1 = [:State, :Revenue_Receipts, :States_Own_Tax, :GSDP, :Ratio_of_SOT_and_RR, :Ratio_of_SOT_and_GSDP, :Ratio_of_Total_Revenue_and_GSDP]
   if rain_fall_type || views
 
       if views == "Map View"
@@ -36,11 +77,11 @@ ji1  = [:State, :Revenue_Receipts, :States_Own_Tax, :GSDP, :Ratio_of_SOT_and_RR,
           a = TaxGsdpRatio.map(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
-        b = TaxGsdpRatio.search(params[:search],compare,year,rain_fall_type)
-        a = TaxGsdpRatio.table(b,rain_fall_type,year,ji1,compare)
+        b = TaxGsdpRatio.search(params[:search],compare,year,rain_fall_type,legend)
+        a = TaxGsdpRatio.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @TaxGsdpRatios = TaxGsdpRatio.search(params[:search],compare,year,rain_fall_type)
-        a = TaxGsdpRatio.query(@TaxGsdpRatios,params[:year],rain_fall_type,views,ji,compare,search)
+        @TaxGsdpRatios = TaxGsdpRatio.search(params[:search],compare,year,rain_fall_type,legend)
+        a = TaxGsdpRatio.query(@TaxGsdpRatios,params[:year],rain_fall_type,views,ji,compare,search,legend)
       end
       respond_to do |format|
         format.html { render json:a }

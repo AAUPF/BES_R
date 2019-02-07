@@ -15,6 +15,52 @@ class RevenueAccount2sController < ApplicationController
     @revenue_account2 = RevenueAccount2.new
   end
 
+# def test
+#   ji = [:Amount]
+#   rain_fall_type = params[:rain_fall_type]
+#    views  = params[:views]
+#    year  = params[:year]
+#    compare = params[:compare]
+#    search = params[:search]
+#    if year == "All"
+#     ji1 = [:Expenditure_Pattern, :"2012-13", :"2013-14",:"2014-15",:"2015-16",:"2016-17",:"2017-18_BE"]
+#    else
+#     ji1 = [:Expenditure_Pattern,:Amount,:Year]
+#    end
+# # ji1 = [:Expenditure_Pattern, :Amount, :Year]
+#   if rain_fall_type || views
+
+#       if views == "Map View"
+#         l =  rain_fall_type.gsub(" ","")           
+#          if rain_fall_type  ==  "All"
+#           b = RevenueAccount2.map_search("All",compare,year,rain_fall_type)
+#           u = "Total"
+#           a = RevenueAccount2.map(b,params[:year],rain_fall_type,views)
+#          else
+#           b = RevenueAccount2.map_search(params[:search],compare,year,rain_fall_type)
+#           a = RevenueAccount2.map(b,rain_fall_type,year,ji)
+#          end
+#       elsif views == "Table"  
+#         b = RevenueAccount2.search(params[:search],compare,year,rain_fall_type)
+#         a = RevenueAccount2.table(b,rain_fall_type,year,ji1,compare)
+#       else
+#         @RevenueAccount2s = RevenueAccount2.search(params[:search],compare,year,rain_fall_type)
+#         a = RevenueAccount2.query(@RevenueAccount2s,params[:year],rain_fall_type,views,ji,compare,search)
+#       end
+#       respond_to do |format|
+#         format.html { render json:a }
+#     end
+
+#   else
+#     respond_to do |format|
+#       format.html { render json: "error"}
+#   end
+#   end
+
+# end
+
+
+
 def test
   ji = [:Amount]
   rain_fall_type = params[:rain_fall_type]
@@ -22,43 +68,51 @@ def test
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
+   legend = "Expenditure_Pattern"
+   remove = "Bihar"
+
    if year == "All"
     ji1 = [:Expenditure_Pattern, :"2012-13", :"2013-14",:"2014-15",:"2015-16",:"2016-17",:"2017-18_BE"]
    else
-    ji1 = [:Expenditure_Pattern,:Amount,:Year]
+    if rain_fall_type != "All"
+      ji1 = [:Expenditure_Pattern, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:Expenditure_Pattern, :Amount, :Year]
+    end
+    
    end
-# ji1 = [:Expenditure_Pattern, :Amount, :Year]
+
   if rain_fall_type || views
 
-      if views == "Map View"
-        l =  rain_fall_type.gsub(" ","")           
-         if rain_fall_type  ==  "All"
-          b = RevenueAccount2.map_search("All",compare,year,rain_fall_type)
-          u = "Total"
-          a = RevenueAccount2.map(b,params[:year],rain_fall_type,views)
-         else
-          b = RevenueAccount2.map_search(params[:search],compare,year,rain_fall_type)
-          a = RevenueAccount2.map(b,rain_fall_type,year,ji)
-         end
-      elsif views == "Table"  
-        b = RevenueAccount2.search(params[:search],compare,year,rain_fall_type)
-        a = RevenueAccount2.table(b,rain_fall_type,year,ji1,compare)
-      else
-        @RevenueAccount2s = RevenueAccount2.search(params[:search],compare,year,rain_fall_type)
-        a = RevenueAccount2.query(@RevenueAccount2s,params[:year],rain_fall_type,views,ji,compare,search)
-      end
-      respond_to do |format|
-        format.html { render json:a }
+    if views == "Map View"
+      l =  rain_fall_type.gsub(" ","")           
+       if rain_fall_type  ==  "All"
+        b = RevenueAccount2.map_search("All",compare,year,rain_fall_type)
+        u = "Total"
+        a = RevenueAccount2.map(b,params[:year],rain_fall_type,views)
+       else
+        b = RevenueAccount2.map_search(params[:search],compare,year,rain_fall_type)
+        a = RevenueAccount2.map(b,rain_fall_type,year,ji)
+       end
+    elsif views == "Table"  
+      b = RevenueAccount2.search(params[:search],compare,year,rain_fall_type,legend)
+      a = RevenueAccount2.table(b,rain_fall_type,year,ji1,compare,legend)
+    else
+      @RevenueAccount2s = RevenueAccount2.search(params[:search],compare,year,rain_fall_type,legend)
+      a = RevenueAccount2.query(@RevenueAccount2s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
     end
-
-  else
     respond_to do |format|
-      format.html { render json: "error"}
-  end
+      format.html { render json:a }
   end
 
+else
+  respond_to do |format|
+    format.html { render json: "error"}
+end
 end
 
+end
 
   def import
     # Module1.import(params[:file])

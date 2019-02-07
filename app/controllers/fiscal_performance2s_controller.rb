@@ -32,21 +32,33 @@ def test
 
    if search == "A. Sustainability"
 
-    data = [
+    if views == "Table"
+      data = [
+        "Balance from Current Revenue (Rs. crore)",
+        "Interest Ratio (Percentage)",
+        "Buoyancy of Own Tax Receipts w.r.t. GSDP ",
+        "Buoyancy of Non-Tax Receipts w.r.t. GSDP ",
+        "Growth in outstanding debt (Percentage)",
+        "Growth in total revenue receipts (Percentage)",
+        "Growth in state’s own revenue receipts (Percentage)",
+        "Growth in GSDP (Percentage)",
+       ]
+    else
+      data = [
+        # "Balance from Current Revenue (Rs. crore)",
+        "Interest Ratio (Percentage)",
+        "Buoyancy of Own Tax Receipts w.r.t. GSDP ",
+        "Buoyancy of Non-Tax Receipts w.r.t. GSDP ",
+        "Growth in outstanding debt (Percentage)",
+        "Growth in total revenue receipts (Percentage)",
+        "Growth in state’s own revenue receipts (Percentage)",
+        "Growth in GSDP (Percentage)",
+       ]
+    end
 
-      # "Balance from Current Revenue (Rs. crore)",
-      "Interest Ratio (Percentage)",
-      "Buoyancy of Own Tax Receipts w.r.t. GSDP ",
-      "Buoyancy of Non-Tax Receipts w.r.t. GSDP ",
-      "Growth in outstanding debt (Percentage)",
-      "Growth in total revenue receipts (Percentage)",
-      "Growth in state’s own revenue receipts (Percentage)",
-      "Growth in GSDP (Percentage)",
-  
-     ]
+
 
      elsif search == "B. Flexibility"
-
       data = [
   
         "Capital Repayment / Capital Borrowings (Percentage)",
@@ -71,6 +83,32 @@ def test
      
    else
 
+    if views == "Table"
+      
+    data = [
+      "Balance from Current Revenue (Rs. crore)",
+      "Interest Ratio (Percentage)",
+      "Buoyancy of Own Tax Receipts w.r.t. GSDP ",
+      "Buoyancy of Non-Tax Receipts w.r.t. GSDP ",
+      "Growth in outstanding debt (Percentage)",
+      "Growth in total revenue receipts (Percentage)",
+      "Growth in state’s own revenue receipts (Percentage)",
+      "Growth in GSDP (Percentage)",
+      "Capital Repayment / Capital Borrowings (Percentage)",
+      "Total Tax Receipts / GSDP (Percentage)",
+      "Capital Outlay / Capital Receipts (Percentage)",
+      "State’s Own Tax Receipts / GSDP (Percentage)",
+      "State’s Own Non-Tax Receipts / GSDP (Percentage)",
+      "Debt Outstanding / GSDP (Percentage)",
+      "Revenue Deficit (Rs. crore)",
+      "Fiscal Deficit (Rs. crore)",
+      "Primary Deficit (Rs. crore)",
+      "Primary Deficit / Fiscal Deficit (Percentage)",
+      "Revenue Deficit / Fiscal Deficit (Percentage)"
+
+    ]
+    else
+
     data = [
       # "Balance from Current Revenue (Rs. crore)",
       "Interest Ratio (Percentage)",
@@ -91,6 +129,9 @@ def test
       "Primary Deficit (Rs. crore)",
       "Primary Deficit / Fiscal Deficit (Percentage)",
     ]
+      
+    end
+
      
    end
 

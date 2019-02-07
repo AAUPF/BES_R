@@ -12,24 +12,6 @@ class StateDomesticProduct4 < ApplicationRecord
   end
 
   def self.search(search, compare, year, rain_fall_type)
-    # if search == "All"
-    #   if fuel == "All"
-    #     where(Year: year).order('id ')
-    #   else
-    #     where(Year: year).order("#{fuel} ")
-    #   end
-    # elsif compare == "Share_of_Population"
-    #   where("Districts = ? OR Districts = ?", search, "Share_of_Population").where("year = ?", year).order(:id)
-    # else
-    #   if rain_fall_type == "All"
-    #     where("Districts = ? ", search).where("year = ?", year).order(:id)
-    #   else
-    #     where("Districts = ? ", search).where("year = ?", year).order(fuel)
-    #   end
-    # end
-
-
-
     if search == 'All'
       if rain_fall_type == 'All'
           if year == "All"

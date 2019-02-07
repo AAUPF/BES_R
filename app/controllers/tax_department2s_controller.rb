@@ -83,7 +83,7 @@ class TaxDepartment2sController < ApplicationController
         format.html { render json: 'error' }
       end
     end
-      end
+  end
 
 
   def import
