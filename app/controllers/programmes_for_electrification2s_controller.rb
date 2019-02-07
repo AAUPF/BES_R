@@ -21,10 +21,11 @@ def test
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
 
    legend = "Agencies"
 
-   ji1 = [:Agencies, :Tenth_Plan, :Eleventh_Plan, :Total, :Eleventh_Plan_Phase_II, :Twelfth_Plan, :Under_DDG, :DDG_converted_into_UEV, :Total, :Indicator, :Indicator1]
+   ji1 = [:Agencies, :Tenth_Plan, :Eleventh_Plan, :Eleventh_Plan_Phase_II, :Twelfth_Plan, :Under_DDG, :DDG_converted_into_UEV, :Total, :Indicator, :Indicator1]
 
 
   if rain_fall_type || views
@@ -44,7 +45,7 @@ def test
         a = ProgrammesForElectrification2.table(b,rain_fall_type,year,ji1,compare,legend)
       else
         @ProgrammesForElectrification2s = ProgrammesForElectrification2.search(params[:search],compare,year,rain_fall_type,legend)
-        a = ProgrammesForElectrification2.query(@ProgrammesForElectrification2s,params[:year],rain_fall_type,views,ji,compare,legend)
+        a = ProgrammesForElectrification2.query(@ProgrammesForElectrification2s,params[:year],rain_fall_type,views,ji,compare,legend,search)
       end
       respond_to do |format|
         format.html { render json:a }
