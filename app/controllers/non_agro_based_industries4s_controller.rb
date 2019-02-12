@@ -25,7 +25,7 @@ def test
    legend  = "Sericulture_Sector"
    remove = ""
    if year == "All"
-    ji1 = [:Sericulture_Sector,:"2013-14",:"2014-15"]
+    ji1 = [:Sericulture_Sector,:"2013-14",:"2014-15",:"2015-16",:"2016-17",:"2017-18"]
    else
     if rain_fall_type != "All"
       ji1 = [:Sericulture_Sector, "#{rain_fall_type}", :Year]
