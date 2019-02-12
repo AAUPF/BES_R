@@ -24,7 +24,7 @@ def test
    search = params[:search]
   #  ji1 = [:Revenue_Sources, :Yearly_Growth_Rates, :Year]
   if year == "All"
-    ji1 = [:Revenue_Sources, :"2013-14",:"2014-15",:"2015-16",:"2016-17",:"2017-18_BE",:"CAGR_2012_to_18"]
+    ji1 = [:Revenue_Sources, :"2012-13",:"2013-14",:"2014-15",:"2015-16",:"2016-17",:"2017-18_BE",:"CAGR_2012_to_18"]
    else
     ji1 = [:Revenue_Sources, :Yearly_Growth_Rates, :Year]
    end

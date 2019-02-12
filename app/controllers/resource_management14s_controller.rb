@@ -25,10 +25,8 @@ def test
    legend = "Agency"
 ji1 = [:Agency, :GoI_Scheme, :"2016-17"]
   if rain_fall_type || views
-
        b = ResourceManagement14.search(params[:search],compare,year,rain_fall_type,legend)
         a = ResourceManagement14.table(b,rain_fall_type,year,ji1,compare,legend)
-     
       respond_to do |format|
         format.html { render json:a }
     end

@@ -178,9 +178,7 @@ def test
   ji1 = [:Sector, :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
 
   if views != "Table"
-
     data = [
-
       "From Printed Non-judicial stamps",
       "From Non-judicial stamp duty deposited through Bank challan",
       "Non-Judicial adhesive stamps",
@@ -193,9 +191,7 @@ def test
       "Fee from searches of records and Non-Encumbrances",
       "Fee from certified copies",
     ]
-
   else
-
     data = [
       "From Printed Non-judicial stamps",
       "From Non-judicial stamp duty deposited through Bank challan",
@@ -203,7 +199,6 @@ def test
       "Non Judicial special adhesive stamp –  through  Franking machines",
       "Revenue Stamps",
       "Judicial Stamps",
-
       "Fees on registration of instruments",
       "Landlord’s Registration fee",
       "Landlord’s Process fee",
@@ -211,7 +206,6 @@ def test
       "Fee from certified copies",
       "Sub-Total",
       "Total",
-
     ]
   end
    

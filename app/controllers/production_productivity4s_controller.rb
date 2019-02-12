@@ -70,13 +70,13 @@ def test
    remove = ""
   #  ji1 = [:Characteristics, :India, :Bihar, :Year]
    if year == "All"
-    ji1 = [:Indicator,"2012","2013","2014","2015","2016"]
+    ji1 = [:Fruits,"2012","2013","2014","2015","2016"]
    else
     if rain_fall_type != "All"
-      ji1 = [:Indicator, "#{rain_fall_type}", :Year]
+      ji1 = [:Fruits, "#{rain_fall_type}", :Year]
       
     else
-      ji1 = [:Indicator, :Area, :Production, :Year]
+      ji1 = [:Fruits, :Area, :Production, :Year]
     end
     
    end

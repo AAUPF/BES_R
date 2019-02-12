@@ -16,7 +16,7 @@ class OperationalAndFinancialStatus2sController < ApplicationController
   end
 
 def test
-  ji = [:Losses, :"2011-12", :"2012-13", :"2013-14", :"2014-15", :"2015-16", :"2016-17"]
+  ji = [:Sector, :"2011-12", :"2012-13", :"2013-14", :"2014-15", :"2015-16", :"2016-17"]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
@@ -26,10 +26,10 @@ def test
    search = rain_fall_type
  
    jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
-   ji1 = [:Losses, :'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
+   ji1 = [:Sector, :'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']
    compare = "None"
  data = [
-    "AT&C Loss"
+    "AT and C Loss"
 ]
 
   if rain_fall_type || views

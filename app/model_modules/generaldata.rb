@@ -94,17 +94,12 @@ module Generaldata
   
        if _year == "All"
         grouped = {}
-        
             b.each do |x|
                 grouped[x["#{legend}"]] ||= {}
                 grouped[x["#{legend}"]]["#{legend}"] = x["#{legend}"]
                 grouped[x["#{legend}"]][x[:Year]] = x["#{rain_fall_type}"]
               end
-        
-          
-  
         data = { column: hash_data, data: grouped.values }
-         
        else
         data = { column: hash_data, data: j }
        end
