@@ -49,7 +49,7 @@ module Newmodulefunctions
       def self.year_all(b,data,views,_year,jip)
         result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
 
-        hash_data = result.reject{|x| x["Sector"]== "Total" || x["Sector"]== "Grand Total"}.map do |col|
+        hash_data = result.reject{|x| x["Sector"]== "Total" || x["Sector"]== "Grand Total" || x["Sector"]== "Bihar"}.map do |col|
           {
             type:views,
             toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
