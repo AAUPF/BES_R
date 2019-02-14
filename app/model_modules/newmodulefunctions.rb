@@ -481,7 +481,7 @@ return title
   end
 
   def eov(b,rain_fall_type,data,jip,views) 
-    color = "Blue"
+    color = "#4f81bc"
 
     result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
     # jip = [:'2011-12', :'2012-13', :'2013-14', :'2014-15', :'2015-16', :'2016-17']

@@ -68,10 +68,6 @@ module Eovsharednew
           end
         end
       end
-
-
-
-
       def new_search(search, compare, year, rain_fall_type,price)
         if search == 'All'
           if rain_fall_type == 'All'
@@ -128,8 +124,6 @@ module Eovsharednew
           end
         end
       end
-
-
       def sf_search(search, compare, year, rain_fall_type)
         if search == 'All'
           if rain_fall_type == 'All'
@@ -158,8 +152,6 @@ module Eovsharednew
             else
               where('Sector = ? ', compare).order(:id)
             end
-            
-             
           end
         end
       end
@@ -225,8 +217,6 @@ module Eovsharednew
       # Logic to generate table starts
       def table(b, rain_fall_type, _year, ji, compare,search,data)
         dataset = rain_fall_type.tr('_', ' ')
-    
-
         if _year == "2011-16"
           years = "CAGR(2011-16)"
         else
@@ -238,16 +228,12 @@ module Eovsharednew
               puts el
               if el.to_s == 'Sector'
                 { title: 'Sector', field: el, headerFilter: true }
-    
               elsif el.to_s == '2011-16'
                 { title: "CAGR(2011-16)", field: el }
               else
-                
                 { title: el.to_s.tr('_', ' '), field: el }
-                
               end
             end
-    
           else
             [
               { title: 'Sector', field: 'Sector', headerFilter: true },
@@ -255,16 +241,13 @@ module Eovsharednew
             ]
           end
              else
-           
                   if _year == "All"
                     hash_data = ji.map do |el|
-    
                       if el.to_s == '2011-16'
                         { title: "CAGR(2011-16)", field: el }
                       else
                         { title: el, field: el}
                       end
-                     
                     end
                   else
                     hash_data = if compare == 'None'
@@ -273,9 +256,6 @@ module Eovsharednew
                         { title: years, field: _year }
                       ]
                     else
-    
-                
-    
                       [
                         # {title:compare, field:compare, sorter:"string", },
                         { title: 'Sector', field: 'Sector', headerFilter: true },
@@ -284,7 +264,6 @@ module Eovsharednew
                     end
                   end  
           end
-          
         j = if compare == 'All'
                 ji1 = []
                 b.each do |el|
@@ -294,10 +273,8 @@ module Eovsharednew
                        end
                       end
                     end
-    
              data = { column: hash_data, data:  ji1 }
                 elsif rain_fall_type == 'All'
-
                     ji1 = []
                     b.each do |el|
                           data.each do |el1|
@@ -306,17 +283,10 @@ module Eovsharednew
                            end
                           end
                         end
-        
                  data = { column: hash_data, data:  ji1 }
-
-
             else
               data = { column: hash_data, data: b }
             end  
-    
-    
-       
-       
       end
       # Logic to generate table end
     
