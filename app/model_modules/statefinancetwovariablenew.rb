@@ -212,7 +212,7 @@ module Statefinancetwovariablenew
               hash_data = Newmodulefunctions.no_year(b, rain_fall_type, _year, color, views, compare)
             end
           end
-          Newmodulefunctions.title_return_new(views, search, hash_data, compare,_year,rain_fall_type)
+          Newmodulefunctions.title_return_all(views, search, hash_data, compare,_year,rain_fall_type)
         end
 
 end

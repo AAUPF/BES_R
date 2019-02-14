@@ -16,7 +16,7 @@ class ProgrammesForElectrification2sController < ApplicationController
   end
 
 def test
-  ji = [:Tenth_Plan, :Eleventh_Plan, :Total, :Eleventh_Plan_Phase_II, :Twelfth_Plan, :Under_DDG, :DDG_converted_into_UEV]
+  ji = [:Tenth_Plan, :Eleventh_Plan, :Total_A, :Eleventh_Plan_Phase_II, :Twelfth_Plan, :Under_DDG, :DDG_converted_into_UEV, :Total_B]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
@@ -25,7 +25,7 @@ def test
 
    legend = "Agencies"
 
-   ji1 = [:Agencies, :Tenth_Plan, :Eleventh_Plan, :Eleventh_Plan_Phase_II, :Twelfth_Plan, :Under_DDG, :DDG_converted_into_UEV, :Total, :Indicator, :Indicator1]
+   ji1 = [:Agencies, :Tenth_Plan, :Eleventh_Plan, :Total_A, :Eleventh_Plan_Phase_II, :Twelfth_Plan, :Under_DDG, :DDG_converted_into_UEV, :Total_B, :Indicator, :Indicator1]
 
 
   if rain_fall_type || views
@@ -104,6 +104,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def programmes_for_electrification2_params
-      params.require(:programmes_for_electrification2).permit(:Agencies, :Tenth_Plan, :Eleventh_Plan, :Total, :Eleventh_Plan_Phase_II, :Twelfth_Plan, :Under_DDG, :DDG_converted_into_UEV, :Total, :Indicator, :Indicator1)
+      params.require(:programmes_for_electrification2).permit(:Agencies, :Tenth_Plan, :Eleventh_Plan, :Total_A, :Eleventh_Plan_Phase_II, :Twelfth_Plan, :Under_DDG, :DDG_converted_into_UEV, :Total_B, :Indicator, :Indicator1)
     end
 end

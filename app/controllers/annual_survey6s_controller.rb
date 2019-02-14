@@ -16,14 +16,14 @@ class AnnualSurvey6sController < ApplicationController
   end
 
 def test
-  ji = [:Number_of_Factories_in_Operation, :Gross_Value_of_Output_GVO_Rs_crore, :Gross_Value_Added_GVA_Rs_crore, :GVA_Percentage_Share_in_India, :GVA_as_Percentage_of_GVO, :Number_of_Persons_Engaged, :Percentage_Share_in_India, :Employment_per_Factory, :Wages_Salaries_and_Bonus_per_Person_annually_Rs]
+  ji = [:Number_of_Factories_in_Operation, :GVO, :GVA, :GVA_Percentage_Share_in_total, :GVA_as_Percentage_of_GVO, :Number_of_Persons_Engaged, :Persons_engaged_as_Percentage_Share_in_total, :Persons_engaged_as_Employment_per_Factory, :Wages_Salaries_and_Bonus_per_Person_annually_in_Rs]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
 
-   ji1 = [:Districts, :Number_of_Factories_in_Operation, :Gross_Value_of_Output_GVO_Rs_crore, :Gross_Value_Added_GVA_Rs_crore, :GVA_Percentage_Share_in_India, :GVA_as_Percentage_of_GVO, :Number_of_Persons_Engaged, :Percentage_Share_in_India, :Employment_per_Factory, :Wages_Salaries_and_Bonus_per_Person_annually_Rs]
+   ji1 = [:Districts, :Number_of_Factories_in_Operation, :GVO, :GVA, :GVA_Percentage_Share_in_total, :GVA_as_Percentage_of_GVO, :Number_of_Persons_Engaged, :Persons_engaged_as_Percentage_Share_in_total, :Persons_engaged_as_Employment_per_Factory, :Wages_Salaries_and_Bonus_per_Person_annually_in_Rs]
 
   if rain_fall_type || views
 
@@ -101,6 +101,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def annual_survey6_params
-      params.require(:annual_survey6).permit(:Districts, :Number_of_Factories_in_Operation, :Gross_Value_of_Output_GVO_Rs_crore, :Gross_Value_Added_GVA_Rs_crore, :GVA_Percentage_Share_in_India, :GVA_as_Percentage_of_GVO, :Number_of_Persons_Engaged, :Percentage_Share_in_India, :Employment_per_Factory, :Wages_Salaries_and_Bonus_per_Person_annually_Rs)
+      params.require(:annual_survey6).permit(:Districts, :Number_of_Factories_in_Operation, :GVO, :GVA, :GVA_Percentage_Share_in_total, :GVA_as_Percentage_of_GVO, :Number_of_Persons_Engaged, :Persons_engaged_as_Percentage_Share_in_total, :Persons_engaged_as_Employment_per_Factory, :Wages_Salaries_and_Bonus_per_Person_annually_in_Rs)
     end
 end

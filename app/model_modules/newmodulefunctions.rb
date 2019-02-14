@@ -3,7 +3,7 @@ module Newmodulefunctions
 
     result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
     if views != "column"
-      hash_data = result.reject{|x| x["Sector"]== "Total" || x["Sector"]== "Grand Total"}.map do |col|
+      hash_data = result.reject{|x| x["Sector"]== "Total" || x["Sector"]== "Grand Total"|| x["Sector"]== "Bihar"}.map do |col|
         {
           type:views,
           toolTipContent: "{label}<br/>{name}: <strong>{y}</strong>",
@@ -21,7 +21,7 @@ module Newmodulefunctions
         color: color,
         legendText: search.to_s.tr('_', ' ').to_s,
         showInLegend: true,
-        dataPoints: result.reject{|x| x["Sector"]== "Total" || x["Sector"]== "Grand Total"}.map do |hash|
+        dataPoints: result.reject{|x| x["Sector"]== "Total" || x["Sector"]== "Grand Total"|| x["Sector"]== "Bihar"}.map do |hash|
                       { y: hash[_year], label: hash[:Sector] }
                     end
       }]
@@ -312,6 +312,45 @@ return title
         }
   
       
+  return title
+
+  end
+
+  def title_return_all(views,search,hash_data,compare,_year,legend)
+    if compare != "None"
+      newname = "#{search} vs #{compare}"
+    else
+      newname = search
+    end
+    if (views == 'stackedBar100' || views == 'stackedBar' || views == 'stackedColumn' || views == 'stackedColumn100' || views == 'stackedArea')
+      title = 
+        {
+          animationEnabled: true,
+          exportEnabled: true,
+          title: {
+            text: newname.to_s.tr('_', ' ').to_s
+        },
+          data: hash_data
+        }
+    else
+      title = 
+        {
+          animationEnabled: true,
+          exportEnabled: true,
+          title: {
+            text: newname.to_s.tr('_', ' ').to_s
+        },
+          axisX: {
+            interval:1,
+            labelMaxWidth: 180,
+            labelAngle: 90,
+            labelFontFamily:"verdana0"
+            },
+          data: hash_data
+        }
+      
+    end
+    
   return title
 
   end

@@ -16,7 +16,7 @@ class UdpJointlyFunded9sController < ApplicationController
   end
 
 def test
-  ji = [ :Number_Amount]
+  ji = [ :"Number_Amount"]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
@@ -27,7 +27,7 @@ def test
 if rain_fall_type != "All"
   ji1 = [:Indicators, "#{rain_fall_type}"]
 else
-  ji1 = [:Indicators, :Number_Amount]
+  ji1 = [:Indicators, :"Number_Amount"]
 end
 
   if rain_fall_type || views

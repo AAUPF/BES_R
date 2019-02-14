@@ -24,11 +24,11 @@ module Districtwithyearwithonerainfalltype
             end
             
           end
-        elsif compare == 'Bihar vs District'
+        elsif compare != 'None'
           if year == "All"
-            where('Districts = ? OR Districts = ?', search, 'Bihar').order(:id)
+            where('Districts = ? OR Districts = ?', search, compare).order(:id)
           else
-            where('Districts = ? OR Districts = ?', search, 'Bihar').where('year = ?', year).order(:id)
+            where('Districts = ? OR Districts = ?', search, compare).where('year = ?', year).order(:id)
           end
          
         else
@@ -122,7 +122,7 @@ module Districtwithyearwithonerainfalltype
         if rain_fall_type == 'All'
           if views
             hash_data = ji.map do |column_name|
-              if compare == 'Bihar vs District'
+              if compare != 'None'
                 dataset = column_name.to_s.tr('_', ' ')
                 {
                   type: views,
@@ -183,7 +183,7 @@ module Districtwithyearwithonerainfalltype
           end
           return title
         else
-          if compare == 'Bihar vs District'
+          if compare != 'None'
             grouped_data = b.group_by{ |data| data[:Districts]}
             hash_data  = grouped_data.map{ |vegetable, values| 
               dataset = vegetable.to_s.gsub("_"," ")
@@ -291,7 +291,7 @@ module Districtwithyearwithonerainfalltype
                 end 
             end
           end
-          if views != "column"
+          if views != "column" || search !="All"
             title = {
               animationEnabled: true,
               exportEnabled: true,

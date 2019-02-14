@@ -20,7 +20,7 @@ class ExpenditureManagement3sController < ApplicationController
   end
 
   def test
-    ji = %i[Sector 2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE 2012-17]
+    ji = %i[Sector 2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE CAGR_2012-17]
     rain_fall_type = params[:rain_fall_type]
     views = params[:views]
     year = params[:year]
@@ -29,8 +29,8 @@ class ExpenditureManagement3sController < ApplicationController
 
     search = rain_fall_type
 
-    jip = %i[2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE 2012-17]
-    ji1 = %i[Sector 2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE 2012-17]
+    jip = %i[2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE CAGR_2012-17]
+    ji1 = %i[Sector 2012-13 2013-14 2014-15 2015-16 2016-17 2017-18_BE CAGR_2012-17]
 
       data = [
         "General Services",
