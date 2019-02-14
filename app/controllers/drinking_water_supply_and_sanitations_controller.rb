@@ -25,7 +25,7 @@ class DrinkingWaterSupplyAndSanitationsController < ApplicationController
      legend = "Contaminants"
   
   if rain_fall_type != "All"
-    ji1 = [:Criteria, "#{rain_fall_type}"]
+    ji1 = [:Contaminants, "#{rain_fall_type}"]
   else
     ji1 = [:Contaminants, :Affected_Districts]
   end
