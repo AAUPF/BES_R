@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :drinking_water_supply_and_sanitations do 
+                      collection { post :import }
+                      collection { get :dropdown }
+                      collection { get :test }
+                      end 
   resources :education_art_culture8s do 
                       collection { post :import }
                       collection { get :dropdown }

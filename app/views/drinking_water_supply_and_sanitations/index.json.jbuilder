@@ -1,0 +1,1 @@
+json.array! @drinking_water_supply_and_sanitations, partial: 'drinking_water_supply_and_sanitations/drinking_water_supply_and_sanitation', as: :drinking_water_supply_and_sanitation

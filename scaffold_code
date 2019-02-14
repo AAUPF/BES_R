@@ -1,1 +1,1 @@
-rails g scaffold DistrictWiseSection5 Districts:string Primary_Schools:float Upper_Primary_Schools:float Total:float
+rails g scaffold DrinkingWaterSupplyAndSanitation Contaminants:string Affected_Districts:string

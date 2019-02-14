@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contaminants:</strong>
+  <%= @drinking_water_supply_and_sanitation.Contaminants %>
+</p>
+
+<p>
+  <strong>Affected districts:</strong>
+  <%= @drinking_water_supply_and_sanitation.Affected_Districts %>
+</p>
+
+<%= link_to 'Edit', edit_drinking_water_supply_and_sanitation_path(@drinking_water_supply_and_sanitation) %> |
+<%= link_to 'Back', drinking_water_supply_and_sanitations_path %>

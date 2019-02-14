@@ -32,7 +32,7 @@ def test
    if compare == "Total"
     ji1 = [:Year,:Winter_Rain, :Hot_Weather_Rain, :Southwest_Monsoon, :Northwest_Monsoon, :Total]
   else
-    ji1 = [:Year,:Winter_Rain, :Hot_Weather_Rain, :Southwest_Monsoon, :Northwest_Monsoon]
+    ji1 = [:Year,:Winter_Rain, :Hot_Weather_Rain, :Southwest_Monsoon, :Northwest_Monsoon, :Total]
     end
 
   if rain_fall_type || views

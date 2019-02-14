@@ -1,4 +1,3 @@
 class Rainfall1 < ApplicationRecord
-  extend Rfallseason  
-
+  extend Rfallseason 
 end

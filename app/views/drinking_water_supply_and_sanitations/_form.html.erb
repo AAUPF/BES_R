@@ -1,0 +1,27 @@
+<%= form_with(model: drinking_water_supply_and_sanitation, local: true) do |form| %>
+  <% if drinking_water_supply_and_sanitation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(drinking_water_supply_and_sanitation.errors.count, "error") %> prohibited this drinking_water_supply_and_sanitation from being saved:</h2>
+
+      <ul>
+      <% drinking_water_supply_and_sanitation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Contaminants %>
+    <%= form.text_field :Contaminants %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Affected_Districts %>
+    <%= form.text_field :Affected_Districts %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

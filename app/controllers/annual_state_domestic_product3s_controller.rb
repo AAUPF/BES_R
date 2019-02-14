@@ -47,7 +47,6 @@ def test
               "Fishing and Aquaculture",
             ]
           else
-            # #search = "None"
             rain_fall_type = compare
           end
 
