@@ -1,3 +1,3 @@
 class Rainfall2 < ApplicationRecord
-  extend Rainfallnewmap  
+  extend Generaldata
  end

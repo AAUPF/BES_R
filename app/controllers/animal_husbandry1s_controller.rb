@@ -19,16 +19,16 @@ def test
   rain_fall_type = params[:rain_fall_type]
   #ji = [:Cattle, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Buffalo, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Sheep, :Goats, :Pigs, :Horses_Ponies, :Others, :Total_Livestock, :Total_Poultry]
   if rain_fall_type == "All"
-    ji = [:Cattle, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Buffalo, :Sheep, :Goats, :Pigs, :Horses_Ponies, :Others]
+    ji = [:Cattle, :Cattle_Males_over_3_years, :Cattle_Females_over_3_years, :Cattle_Young_stock, :Buffalo, :Buffalo_Males_over_3_years, :Buffalo_Females_over_3_years, :Buffalo_Young_stock, :Sheep, :Goats, :Pigs, :Horses_Ponies, :Others]
 
   else
-    ji = [:Cattle, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Buffalo, :Sheep, :Goats, :Pigs, :Horses_Ponies, :Others, :Total_Livestock, :Total_Poultry]
-
+    # ji = [:Cattle, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Buffalo, :Sheep, :Goats, :Pigs, :Horses_Ponies, :Others, :Total_Livestock, :Total_Poultry]
+ji = [:Cattle, :Cattle_Males_over_3_years, :Cattle_Females_over_3_years, :Cattle_Young_stock, :Buffalo, :Buffalo_Males_over_3_years, :Buffalo_Females_over_3_years, :Buffalo_Young_stock, :Sheep, :Goats, :Pigs, :Horses_Ponies, :Others, :Total_Livestock, :Total_Poultry]
   end
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
-   ji1 = [:Year, :Cattle, :Males_over_3_years, :Females_over_3_years, :Young_stock, :Buffalo, :Sheep, :Goats, :Pigs, :Horses_Ponies, :Others, :Total_Livestock, :Total_Poultry]
+   ji1 = [:Year, :Cattle, :Cattle_Males_over_3_years, :Cattle_Females_over_3_years, :Cattle_Young_stock, :Buffalo, :Buffalo_Males_over_3_years, :Buffalo_Females_over_3_years, :Buffalo_Young_stock, :Sheep, :Goats, :Pigs, :Horses_Ponies, :Others, :Total_Livestock, :Total_Poultry]
 
   if rain_fall_type || views
 

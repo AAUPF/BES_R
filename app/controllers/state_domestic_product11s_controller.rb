@@ -16,14 +16,14 @@ class StateDomesticProduct11sController < ApplicationController
   end
 
 def test
-  ji = [ :Number_of_Handpumps_Installed, :Slipped_back_Habitations_or_Water_quality_Problems_Covered]
+  ji = [ :Target, :Achievement]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
    legend = "Districts"
-   remove = "Bihar "
+   remove = "Bihar"
   #  ji1 = [:Characteristics, :India, :Bihar, :Year]
    if year == "All"
     ji1 = [:Districts,:"2013", :"2014", :"2015", :"2016"]

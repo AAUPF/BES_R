@@ -356,11 +356,22 @@ module Generaldata
             end
           
         end
-        if compare == "None"
+# Important logic needs modification
+        if compare 
+          if compare == "None"
+            name =  "#{rain_fall_type.to_s.gsub("_"," ")}"
+        else
+            name =  "#{search.to_s.gsub("_"," ")} vs. #{compare.to_s.gsub("_"," ")}"
+        end
+          
+        else
           name =  "#{rain_fall_type.to_s.gsub("_"," ")}"
-      else
-          name =  "#{search.to_s.gsub("_"," ")} vs. #{compare.to_s.gsub("_"," ")}"
-      end
+          
+        end
+
+ # Important logic needs modification
+
+
         if views == "stackedBar100" or views == "stackedBar" or views == "stackedColumn" or views == "stackedColumn100"
           title = {
             animationEnabled: true,
@@ -661,35 +672,39 @@ module Generaldata
       b.map.with_index do |el,i|
   
           dist = el["Districts"]
-  
+            if el[rain_fall_type] == 0.0
+              data_rain = 0
+            else
+              data_rain = el[rain_fall_type]
+            end
         if (0..6) === i
-          hash1 = { y: el[rain_fall_type], label: dist, color: "Red" }
+          hash1 = { y: data_rain, label: dist, color: "Red" }
           below_min.push(hash1)
         elsif (6..12) === i
-          hash1 = { y: el[rain_fall_type], label: dist, color: "Orange" }
+          hash1 = { y:data_rain, label: dist, color: "Orange" }
           # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
           min.push(hash1)
         elsif (12..18) === i
-          hash1 = { y: el[rain_fall_type], label: dist, color: "Dark_Yellow" }
+          hash1 = { y: data_rain, label: dist, color: "Dark_Yellow" }
           # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
           blow_max.push(hash1)
         elsif (18..24) === i
-          hash1 = { y: el[rain_fall_type], label: dist, color: "Yellow" }
+          hash1 = { y: data_rain, label: dist, color: "Yellow" }
           # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
           max.push(hash1)
   
         elsif (24..30) === i
-          hash1 = { y: el[rain_fall_type], label: dist, color: "Light_Green" }
+          hash1 = { y: data_rain, label: dist, color: "Light_Green" }
           # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
           above_max.push(hash1)
   
         elsif (30..36) === i
-          hash1 = { y: el[rain_fall_type], label: dist, color: "Green" }
+          hash1 = { y: data_rain, label: dist, color: "Green" }
           # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
           extreme.push(hash1)
   
         elsif (36..40) === i
-          hash1 = { y: el[rain_fall_type], label: dist, color: "Dark_Green" }
+          hash1 = { y: data_rain, label: dist, color: "Dark_Green" }
           # hash1 = { y: el[rain_fall_type], label: el["Characteristics"] }
           above_extreme.push(hash1)
         else
