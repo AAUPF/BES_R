@@ -79,18 +79,12 @@ def test
         "Manufacturing",
         "Electricity and Utilitiy Services",
         "Construction",
-       
       ]
-      
     end
-
-
   elsif search == 'Tertiary'
     if rain_fall_type == "Trade and Hospitality"
-
       if compare == "None"
         # #search = "None"
-
         rain_fall_type
       elsif compare == "All"
         rain_fall_type = compare
@@ -98,7 +92,6 @@ def test
           "Trade and Repair Services",
           "Hotels and Restaurants",
         ]
-
       else
         #search = "None"
         rain_fall_type = compare
@@ -106,11 +99,8 @@ def test
           "Trade and Repair Services",
           "Hotels and Restaurants",
         ]
-
       end
-
     elsif rain_fall_type == "Transport and Communication"
-
       if compare == "None"
         rain_fall_type
       elsif compare == "All"
@@ -124,11 +114,9 @@ def test
           "Storage",
           "Communication and Broadcasting",
         ]
-
       else
         rain_fall_type = compare
       end
-
     elsif rain_fall_type == "None"
       rain_fall_type
 
@@ -146,13 +134,10 @@ def test
         "Other Services",
       ]
     end
-
-
   elsif search == 'All'
     if rain_fall_type == "Agriculture, Forestry and Fishing"
       if compare == "None"
-        #search = "None"
-
+        #search = "None
         rain_fall_type
       elsif compare == "All"
         rain_fall_type = compare
@@ -162,16 +147,13 @@ def test
           "Forestry and Logging",
           "Fishing and Aquaculture",
         ]
-
         elsif rain_fall_type == "None"
           rain_fall_type
-    
           data = [
             "Tertiary",
             "Secondary",
             "Primary"
           ]
-
       else
         #search = "None"
         rain_fall_type = compare
@@ -192,10 +174,8 @@ def test
         ]
       end
     elsif rain_fall_type == "Trade and Hospitality"
-
       if compare == "None"
         #search = "None"
-
         rain_fall_type
       elsif compare == "All"
         rain_fall_type = compare
@@ -203,8 +183,6 @@ def test
           "Trade and Repair Services",
           "Hotels and Restaurants",
         ]
-
-
       else
         #search = "None"
         rain_fall_type = compare

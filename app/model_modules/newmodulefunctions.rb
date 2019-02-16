@@ -475,9 +475,7 @@ return title
           }
         end
       end
-
       return hash_data
-    
   end
 
   def eov(b,rain_fall_type,data,jip,views) 
@@ -502,9 +500,7 @@ return title
           }  
            )
             end
-           
           end
-            
           else
              hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
             {
@@ -513,7 +509,6 @@ return title
               color: color,
               showInLegend: true,
               dataPoints: jip.map do |el|
-
                 if el.to_s == "2011-16"
                   years = "CAGR(2011-16)"
                 else
@@ -523,10 +518,7 @@ return title
               end
             }
           end
-            
           end
-    
-          
         else
 
           hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
@@ -583,10 +575,8 @@ return title
 
   end
 
-  def self.controller_code(rain_fall_type,search)
-
+  def self.controller_code(rain_fall_type,search,compare)
     if search == "Total Receipts Revenue Account"
-
       if rain_fall_type == "All"
         data = [
           "Tax Revenue",
@@ -599,12 +589,11 @@ return title
           "Total Receipts Revenue Account"
         ]    
       end
-  
     elsif search == "Total Exp. Revenue Account"
-  
       if rain_fall_type == "All"
         data = [
           "General Services, of which",
+          "Interset Payments",
           "Social Services",
           "Economic Services",
           "Grants-in-aid",

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Districts: MyString
+  2012-13: 9.99
+  2013-14: 9.99
+  2014-15: 9.99
+  2015-16: 9.99
+  2016-17: 9.99
+  Indicator: MyString
+  Indicator1: MyString
+
+two:
+  Districts: MyString
+  2012-13: 9.99
+  2013-14: 9.99
+  2014-15: 9.99
+  2015-16: 9.99
+  2016-17: 9.99
+  Indicator: MyString
+  Indicator1: MyString

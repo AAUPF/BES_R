@@ -358,12 +358,12 @@ module Statefinanceyearsectornew
                   title:{
                     text: "#{l.to_s.gsub("_"," ")}"
                         },
-                        axisX: {
-                          interval:1,
-                          labelMaxWidth: 120,
-                          labelAngle: 0,
-                          labelFontFamily:"verdana0"
-                          },
+                        # axisX: {
+                        #   interval:1,
+                        #   labelMaxWidth: 120,
+                        #   labelAngle: 0,
+                        #   labelFontFamily:"verdana0"
+                        #   },
                   data: hash_data
               }
               else

@@ -1,3 +1,4 @@
 class FinancialPosition1 < ApplicationRecord
-  extend Eovsharednew  
+  # extend Eovsharednew  
+  extend Statefinancetwovariable
  end
