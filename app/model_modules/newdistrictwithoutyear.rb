@@ -109,7 +109,7 @@ module Newdistrictwithoutyear
                     name:dataset,
                     legendText: dataset,
                     showInLegend: true,
-                    dataPoints: b.map do |el|
+                    dataPoints: b.reject { |x| x['Districts'] == 'Bihar' }.map do |el|
                                   { y: el[column_name], z: el[column_name], label: el[d] }
                                 end
                   }
@@ -157,7 +157,7 @@ module Newdistrictwithoutyear
           end
         end
       
-      if views == "stackedBar" || views == "stackedBar100"|| views == "stackedColumn100" || views == "stackedColumn"
+      if views == "stackedBar" || views == "stackedBar100" || search != "All"
         title = {
           animationEnabled: true,
           exportEnabled: true,

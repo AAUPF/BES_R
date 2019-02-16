@@ -273,7 +273,7 @@ module Rfallseasontwovariableremove
                     name:col.to_s.gsub("_"," "),
                     legendText: col.to_s.gsub("_"," "),
                     showInLegend: true,
-                    dataPoints: b.reject{|x| x["Year"]== "Total"}.map do |el|
+                    dataPoints: b.map do |el|
                          { y: el[col], label: el["Year"] }
                     end
                   }

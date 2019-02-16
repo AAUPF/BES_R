@@ -219,7 +219,6 @@ class StateDomesticProduct1 < ApplicationRecord
         if search == "All"
           if _year == "All"
 
-            # abort("error")
             result = b.select { |hash| hash[:Sector] =~ Regexp.union(data) }
 
             hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
@@ -230,7 +229,7 @@ class StateDomesticProduct1 < ApplicationRecord
                 legendText: col[:Sector],
                 showInLegend: true,
                 dataPoints: jip.map do |el|
-                     { y: col[el], label: el }
+                     { y: col[el], label: el.to_s.tr('_', ' ').to_s }
                 end
               }
             end
@@ -263,20 +262,6 @@ class StateDomesticProduct1 < ApplicationRecord
             }]
               
             end
-
-            # grouped_data = b.group_by { |data| data[:Year] }
-            # hash_data = grouped_data.map do |vegetable, values|
-            #   dataset = vegetable.to_s.tr('_', ' ')
-            #   {
-            #     type: views,
-            #     color: color,
-            #     legendText: _year,
-            #     showInLegend: true,
-            #     dataPoints: values.map do |value|
-            #                   { y: value[_year], label: value[:Sector] }
-            #                 end
-            #   }
-            # end
           end
         else
 
@@ -309,6 +294,8 @@ class StateDomesticProduct1 < ApplicationRecord
                   hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
                     {
                       type:views,
+                      toolTipContent: "{label}<br/>{name}: <strong>{y}</strong>",
+                      name:col[:Sector],
                       legendText: col[:Sector],
                       showInLegend: true,
                       dataPoints: jip.map do |el|
@@ -318,7 +305,7 @@ class StateDomesticProduct1 < ApplicationRecord
                         else
                           years = el
                         end
-                          { y: col[el], label: years }
+                          { y: col[el], label: years.to_s.tr('_', ' ').to_s }
                       end
                     }
                   end
@@ -361,12 +348,8 @@ class StateDomesticProduct1 < ApplicationRecord
 
         if rain_fall_type == "None" or rain_fall_type == "All"
           new_type = search
-
         else
-          
-
           new_type = rain_fall_type
-
         end
 
       end
@@ -380,8 +363,6 @@ class StateDomesticProduct1 < ApplicationRecord
                   data: hash_data
                 }
              elsif _year != "All"
-
-
               {
                 animationEnabled: true,
                 exportEnabled: true,
@@ -398,12 +379,12 @@ class StateDomesticProduct1 < ApplicationRecord
                   title: {
                     text: new_type.to_s.tr('_', ' ').to_s
                   },
-                  axisX: {
-                    interval:1,
-                    labelMaxWidth: 180,
-                    labelAngle: 100,
-                    labelFontFamily:"verdana0"
-                    },
+                  # axisX: {
+                  #   interval:1,
+                  #   labelMaxWidth: 180,
+                  #   labelAngle: 100,
+                  #   labelFontFamily:"verdana0"
+                  #   },
                   data: hash_data
                 }
               end

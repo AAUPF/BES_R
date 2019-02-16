@@ -15,41 +15,95 @@ class Rainfall2sController < ApplicationController
     @rainfall2 = Rainfall2.new
   end
 
+# def test
+#   ji = [:Winter_Rain, :Hot_Weather_Rain, :South_West_Monsoon, :North_West_Monsoon]
+#   rain_fall_type = params[:rain_fall_type]
+#    views  = params[:views]
+#    year  = params[:year]
+#    compare = params[:compare]
+
+ 
+#    ji1 = [:Districts,:Winter_Rain, :Hot_Weather_Rain, :South_West_Monsoon, :North_West_Monsoon,:Total]
+#   if rain_fall_type || views
+#       if views == "Map View"
+       
+#          if rain_fall_type  ==  "All"
+#           b = Rainfall2.map_search("All",compare,year,rain_fall_type)
+#           u = "Total"
+#           a = Rainfall2.map(b,params[:year],rain_fall_type,views)
+#          else
+#           b = Rainfall2.map_search(params[:search],compare,year,rain_fall_type)
+#           a = Rainfall2.map(b,params[:year],rain_fall_type,views)
+#          end
+#         elsif views == "Table"  
+#           b = Rainfall2.search(params[:search],compare,year,rain_fall_type)
+#           a = Rainfall2.table(b,rain_fall_type,year,ji1,compare)
+#       else
+#         @Rainfall2s = Rainfall2.search(params[:search],compare,year,rain_fall_type)
+#         a = Rainfall2.query(@Rainfall2s,params[:year],rain_fall_type,views,ji,compare)
+#       end
+#       respond_to do |format|
+#         format.html { render json:a }
+#     end
+#     else
+#       respond_to do |format|
+#         format.html { render json: "error"}
+#     end
+#   end
+# end
+
+
 def test
   ji = [:Winter_Rain, :Hot_Weather_Rain, :South_West_Monsoon, :North_West_Monsoon]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
+   search = params[:search]
+   legend = "Districts"
+   remove = ""
+  #  ji1 = [:Characteristics, :India, :Bihar, :Year]
+   if year == "All"
+    ji1 = [:Districts,:"2016", :"2017"]
+   else
+    if rain_fall_type != "All"
+      ji1 = [:Districts, "#{rain_fall_type}", :Year]
+      
+    else
+      ji1 = [:Districts, :Winter_Rain, :Hot_Weather_Rain, :South_West_Monsoon, :North_West_Monsoon, :Year]
+    end
+    
+   end
 
- 
-   ji1 = [:Districts,:Winter_Rain, :Hot_Weather_Rain, :South_West_Monsoon, :North_West_Monsoon,:Total]
   if rain_fall_type || views
+
       if views == "Map View"
-       
+        l =  rain_fall_type.gsub(" ","")           
          if rain_fall_type  ==  "All"
           b = Rainfall2.map_search("All",compare,year,rain_fall_type)
           u = "Total"
           a = Rainfall2.map(b,params[:year],rain_fall_type,views)
          else
           b = Rainfall2.map_search(params[:search],compare,year,rain_fall_type)
-          a = Rainfall2.map(b,params[:year],rain_fall_type,views)
+          a = Rainfall2.map(b,rain_fall_type,year,ji)
          end
-        elsif views == "Table"  
-          b = Rainfall2.search(params[:search],compare,year,rain_fall_type)
-          a = Rainfall2.table(b,rain_fall_type,year,ji1,compare)
+      elsif views == "Table"  
+        b = Rainfall2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Rainfall2.table(b,rain_fall_type,year,ji1,compare,legend)
       else
-        @Rainfall2s = Rainfall2.search(params[:search],compare,year,rain_fall_type)
-        a = Rainfall2.query(@Rainfall2s,params[:year],rain_fall_type,views,ji,compare)
+        @Rainfall2s = Rainfall2.search(params[:search],compare,year,rain_fall_type,legend)
+        a = Rainfall2.query(@Rainfall2s,params[:year],rain_fall_type,views,ji,compare,search,legend,remove)
       end
       respond_to do |format|
         format.html { render json:a }
     end
-    else
-      respond_to do |format|
-        format.html { render json: "error"}
-    end
+
+  else
+    respond_to do |format|
+      format.html { render json: "error"}
   end
+  end
+
 end
 
 
