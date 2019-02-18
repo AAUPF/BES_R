@@ -16,14 +16,14 @@ class ProductionProductivity2sController < ApplicationController
   end
 
 def test
-  ji = [ :Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi, :Ghagra, :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar_Tur, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower_Kusum, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Total_Fibre_Crops, :Jute, :Mesta, :Sugarcane]
+  ji = [ :Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi,  :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Jute, :Mesta]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
 
 
-   ji1 = [:Year, :Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi, :Ghagra, :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar_Tur, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower_Kusum, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Total_Fibre_Crops, :Jute, :Mesta, :Sugarcane]
+   ji1 = [:Year, :Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi, :Ghagra, :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar_Tur, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Jute, :Mesta, :Sugarcane]
 
   if rain_fall_type || views
 
@@ -101,6 +101,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def production_productivity2_params
-      params.require(:production_productivity2).permit(:Year, :Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi, :Ghagra, :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar_Tur, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower_Kusum, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Total_Fibre_Crops, :Jute, :Mesta, :Sugarcane)
+      params.require(:production_productivity2).permit(:Year, :Total_Cereals, :Total_Rice, :Autumn_Rice, :Aghani_Rice, :Summer_Rice, :Wheat, :Total_Maize, :Kharif_Maize, :Rabi_Maize, :Summer_Maize, :Total_Coarse_Cereals, :Barley, :Jowar, :Bajra, :Ragi, :Small_Millets, :Total_Pulses, :Total_Kharif_Pulses, :Urad, :Bhadai_Moong, :Kulthi, :Ghagra, :Other_Kharif_Pulses, :Total_Rabi_Pulses, :Arhar, :Gram, :Lentil, :Pea, :Khesari, :Summer_Moong, :Other_Rabi_Pulses, :Total_Oilseeds, :Castor_seed, :Safflower, :Sesamum, :Sunflower, :Mustard, :Linseed, :Ground_Nut, :Total_Fibre_Crops, :Jute, :Mesta, :Sugarcane)
     end
 end
