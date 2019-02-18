@@ -38,10 +38,12 @@ def test
 
    if search == 'Total Primary Sector'
     if rain_fall_type == "Agriculture, Forestry and Fishing"
-
       if compare == "None"
         # #search = "None"
         rain_fall_type
+        data = [
+          rain_fall_type
+        ]
       elsif compare == "All"
         rain_fall_type = compare
         data = [
@@ -52,6 +54,9 @@ def test
         ]
       else
         # #search = "None"
+        data = [
+          compare
+        ]
         rain_fall_type = compare
       end
 
@@ -97,6 +102,9 @@ if rain_fall_type == "Trade and Hospitality"
     # #search = "None"
 
     rain_fall_type
+    data = [
+      rain_fall_type
+    ]
   elsif compare == "All"
     rain_fall_type = compare
     data = [
@@ -108,16 +116,17 @@ if rain_fall_type == "Trade and Hospitality"
     #search = "None"
     rain_fall_type = compare
     data = [
-      "Trade and Repair Services",
-      "Hotels and Restaurants",
+      compare
     ]
-
   end
 
 elsif rain_fall_type == "Transport and Communication"
 
   if compare == "None"
     rain_fall_type
+    data = [
+      rain_fall_type
+    ]
   elsif compare == "All"
     rain_fall_type = compare
     data = [
@@ -132,6 +141,9 @@ elsif rain_fall_type == "Transport and Communication"
 
   else
     rain_fall_type = compare
+    data = [
+      compare
+    ]
   end
 
 elsif rain_fall_type == "None"
@@ -157,8 +169,10 @@ elsif search == 'All'
 if rain_fall_type == "Agriculture, Forestry and Fishing"
   if compare == "None"
     #search = "None"
-
-    rain_fall_type
+    data = [
+      rain_fall_type
+    ]
+    
   elsif compare == "All"
     rain_fall_type = compare
     data = [
@@ -180,6 +194,7 @@ if rain_fall_type == "Agriculture, Forestry and Fishing"
   else
     #search = "None"
     rain_fall_type = compare
+
     data = [
       "Agriculture, Forestry and Fishing",
       "Mining and Quarrying",
@@ -195,13 +210,18 @@ if rain_fall_type == "Agriculture, Forestry and Fishing"
       "Tertiary",
       "Total GSVA at basic prices",
     ]
+    data = [
+      compare
+    ]
   end
 elsif rain_fall_type == "Trade and Hospitality"
 
   if compare == "None"
     #search = "None"
-
     rain_fall_type
+    data = [
+      rain_fall_type
+    ]
   elsif compare == "All"
     rain_fall_type = compare
     data = [
@@ -214,8 +234,7 @@ elsif rain_fall_type == "Trade and Hospitality"
     #search = "None"
     rain_fall_type = compare
     data = [
-      "Trade and Repair Services",
-      "Hotels and Restaurants",
+      compare
     ]
 
   end
@@ -224,6 +243,9 @@ elsif rain_fall_type == "Transport and Communication"
 
   if compare == "None"
     rain_fall_type
+    data = [
+      rain_fall_type
+    ]
   elsif compare == "All"
     rain_fall_type = compare
     data = [
@@ -238,6 +260,9 @@ elsif rain_fall_type == "Transport and Communication"
 
   else
     rain_fall_type = compare
+    data = [
+      compare
+    ]
   end
 
 

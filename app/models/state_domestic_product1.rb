@@ -147,6 +147,7 @@ class StateDomesticProduct1 < ApplicationRecord
         end
         if search == 'Total Primary Sector'
          ji1 = []
+
            b.each do |el|
                  data.each do |el1|
                   if el.Sector ==el1
