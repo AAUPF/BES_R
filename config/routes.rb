@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  scope except: [:edit, :destroy, :new,:index] do
   resources :district_wise_section10s do 
                       collection { post :import }
                       collection { get :dropdown }
@@ -1624,5 +1625,5 @@ end
  get 'static_pages/home'
  get 'static_pages/help'
  root 'static_pages#home'
-
+end
 end
