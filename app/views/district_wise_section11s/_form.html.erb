@@ -1,0 +1,47 @@
+<%= form_with(model: district_wise_section11, local: true) do |form| %>
+  <% if district_wise_section11.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(district_wise_section11.errors.count, "error") %> prohibited this district_wise_section11 from being saved:</h2>
+
+      <ul>
+      <% district_wise_section11.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Districts %>
+    <%= form.text_field :Districts %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2014-15 %>
+    <%= form.text_field :2014-15 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2015-16 %>
+    <%= form.text_field :2015-16 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :2016-17 %>
+    <%= form.text_field :2016-17 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator %>
+    <%= form.text_field :Indicator %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Indicator1 %>
+    <%= form.text_field :Indicator1 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
