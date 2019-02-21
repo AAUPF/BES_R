@@ -30,52 +30,14 @@ def test
    ji1 = [:Sector, :"2012-13", :"2013-14", :"2014-15", :"2015-16", :"2016-17", :"2017-18_BE"]
 
 
-   if search == "Total Expenditure (Rs. crore)"
+   if search == "Estimated Population (crore)"
 
     data = [
-
-      # "Balance from Current Revenue (Rs. crore)",
-      "Education, Sports & Culture",
-      "Medical and Public Health",
-      "Water Supply and Sanitation",
-      "Social Services",
-      "Economic Services",
-      "Capital Outlay ",
-      "General Services",
+      "Estimated Population (crore)",
      ]
-
-     elsif search == "Per Capita Expenditure (Rs.)"
-
+    else
       data = [
-  
-        "Education, Sports & Culture",
-        "Medical and Public Health",
-        "Water Supply and Sanitation",
-        "Social Services",
-        "Economic Services",
-        "Capital Outlay ",
-        "General Services",
-    
-       ]
-
-
-      elsif search == "C. Vulnerability"
-
-        data = [
-          "Education, Sports & Culture",
-          "Medical and Public Health",
-          "Water Supply and Sanitation",
-          "Social Services",
-          "Economic Services",
-          "Capital Outlay ",
-          "General Services",  
-         ]
-     
-   else
-
-    data = [
-      # "Balance from Current Revenue (Rs. crore)",
-      "Education, Sports & Culture",
+      "Education, Sports and Culture",
       "Medical and Public Health",
       "Water Supply and Sanitation",
       "Social Services",

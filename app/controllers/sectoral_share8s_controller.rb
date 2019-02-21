@@ -16,12 +16,25 @@ class SectoralShare8sController < ApplicationController
   end
 
 def test
-  ji = [:Branches_as_on_March_30_2016, :'2014-15', :'2015-16']
+  # ji = [:Branches_as_on_March_30_2016, :'2014-15', :'2015-16']
+  
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
+   search = params[:search]
    year  = params[:year]
    compare = params[:compare]
-   jip = [ :Branches_as_on_March_30_2016, :'2014-15', :'2015-16']
+  #  jip = [ :Branches_as_on_March_30_2016, :'2014-15', :'2015-16']
+   if search == "Branches as on March 30 2016"
+    ji = [:Branches_as_on_March_30_2016]
+    jip = [ :Branches_as_on_March_30_2016]
+    ji1 = [:Sector, :Branches_as_on_March_30_2016,:Indicator]
+
+   else
+    ji = [:'2014-15', :'2015-16']
+    jip = [:'2014-15', :'2015-16']
+    ji1 = [:Sector,:'2014-15', :'2015-16', :Indicator]
+
+   end
 
 
    data = [
@@ -46,7 +59,7 @@ def test
 
 search = rain_fall_type
 
-   ji1 = [:Sector, :Branches_as_on_March_30_2016, :'2014-15', :'2015-16', :Indicator]
+  #  ji1 = [:Sector, :Branches_as_on_March_30_2016, :'2014-15', :'2015-16', :Indicator]
 
   if rain_fall_type || views
 

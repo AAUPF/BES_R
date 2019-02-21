@@ -505,6 +505,8 @@ return title
              hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
             {
               type:views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:col[:Sector],
               legendText: col[:Sector],
               color: color,
               showInLegend: true,
@@ -524,6 +526,8 @@ return title
           hash_data = result.reject{|x| x["Sector"]== "Total GSVA at basic prices"}.map do |col|
             {
               type:views,
+              toolTipContent: "{label}<br/>{name}, <strong>{y}</strong>",
+              name:col[:Sector],
               legendText: col[:Sector],
               showInLegend: true,
               dataPoints: jip.map do |el|

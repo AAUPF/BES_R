@@ -22,7 +22,7 @@ def test
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
-ji1 = [:Year_as_on_31st_March, :Number_of_Working_PSUs, :Number_of_Non_Working_PSUs, :Statutory_Corporations, :Public_Sector_Companies, :Equity, :Loans, :Investment]
+ji1 = [:Year, :Number_of_Working_PSUs, :Number_of_Non_Working_PSUs, :Statutory_Corporations, :Public_Sector_Companies, :Equity, :Loans, :Investment]
   if rain_fall_type || views
 
       if views == "Map View"

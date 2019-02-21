@@ -47,19 +47,23 @@ class SectoralExpenditure1sController < ApplicationController
         '(a) Salary component (Percentage)',
         '(b) Non-salary component (Percentage)'
         ]
-   
-    else
-      data = [
-        "Total Expenditure (Rs. crore)",
-        "Revenue Expenditure (Rs. crore)",
-        "Capital Outlay (Rs. crore)",
-        "Capital Outlay (Percentage)",
-      ]
+   else
+      if views != "Table"
+        data = [
+          "Total Expenditure (Rs. crore)",
+          "Revenue Expenditure (Rs. crore)",
+          "Capital Outlay (Rs. crore)",
+        ]
+      else
+        data = [
+          "Total Expenditure (Rs. crore)",
+          "Revenue Expenditure (Rs. crore)",
+          "Capital Outlay (Rs. crore)",
+          "Capital Outlay (Percentage)",
+        ]
+      end
 
     end
-
-
-
 
     if rain_fall_type || views
 

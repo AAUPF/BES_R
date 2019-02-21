@@ -36,14 +36,23 @@ class ExpenditureOnSalaryAndPensionsController < ApplicationController
           'Expenditure on Salaries'
         ]
       else
-        data = [
-          'Expenditure on Salaries',
-          "Non-Plan Head",
-          "Plan Head",
-          "Salary as percentage of GSDP",
-          "Salary as percentage of RR",
-          "Salary as percentage of RE",
-        ]
+        if views != "Table"
+          data = [
+            "Salary as percentage of GSDP",
+            "Salary as percentage of RR",
+            "Salary as percentage of RE",
+          ]
+        else
+          data = [
+            'Expenditure on Salaries',
+            "Non-Plan Head",
+            "Plan Head",
+            "Salary as percentage of GSDP",
+            "Salary as percentage of RR",
+            "Salary as percentage of RE",
+          ]
+        end
+        
       end
   
 
@@ -54,13 +63,23 @@ class ExpenditureOnSalaryAndPensionsController < ApplicationController
           'Expenditure on Pensions'
         ]
       else
-        data = [
-          'Expenditure on Pensions',
-          "Rate of Growth",
-          "Pension as percentage of GSDP",
-          "Pension as percentage of RR",
-          "Pension as percentage of RE",
-        ]
+        if views != "Table"
+          data = [
+            "Rate of Growth",
+            "Pension as percentage of GSDP",
+            "Pension as percentage of RR",
+            "Pension as percentage of RE",
+          ]
+        else
+          data = [
+            'Expenditure on Pensions',
+            "Rate of Growth",
+            "Pension as percentage of GSDP",
+            "Pension as percentage of RR",
+            "Pension as percentage of RE",
+          ]
+        end
+        
       end
     elsif search == 'Total expenditure on Salary and Pension'
 
@@ -69,12 +88,21 @@ class ExpenditureOnSalaryAndPensionsController < ApplicationController
           'Total expenditure on Salary and Pension'
         ]
       else
-        data = [
-          'Total expenditure on Salary and Pension',
-          "Total as percentage of GSDP",
-          "Total as percentage of RR",
-          "Total as percentage of RE",
-        ]
+        if views != "Table"
+          data = [
+            "Total as percentage of GSDP",
+            "Total as percentage of RR",
+            "Total as percentage of RE",
+          ]
+        else
+          data = [
+            'Total expenditure on Salary and Pension',
+            "Total as percentage of GSDP",
+            "Total as percentage of RR",
+            "Total as percentage of RE",
+          ]
+        end
+        
       end
       
 
