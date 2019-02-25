@@ -72,7 +72,7 @@ def test
       ji1 = [:State, "#{rain_fall_type}", :Year]
       
     else
-      ji1 = [:State, :As_per_Sanction, :As_per_Utilization, :Total, :Year]
+      ji1 = [:State, :As_per_Sanction, :As_per_Utilization, :Year]
     end
     
    end
