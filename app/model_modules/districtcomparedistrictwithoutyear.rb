@@ -85,7 +85,13 @@ module Districtcomparedistrictwithoutyear
         if compare == "None"
             name =  "#{rain_fall_type.to_s.gsub("_"," ")}"
         else
+          if compare
             name =  "#{search.to_s.gsub("_"," ")} vs. #{compare.to_s.gsub("_"," ")}"
+          else
+            name =  "#{search.to_s.gsub("_"," ")}"
+
+          end
+            
         end
         if rain_fall_type == 'All'
           if views
@@ -117,8 +123,6 @@ module Districtcomparedistrictwithoutyear
               end
             end
           end
-                
-
                 if views == "stackedBar100" or views == "stackedBar"
                   title = {
                     animationEnabled: true,
@@ -155,7 +159,6 @@ module Districtcomparedistrictwithoutyear
                       data: hash_data
                   }
                   end
-                  
                 end
           return title
         else
@@ -206,7 +209,6 @@ module Districtcomparedistrictwithoutyear
                   }]
                 end           
             else
-            
             dataset = rain_fall_type.tr('_', ' ')
                   hash_data =  b.map do |el|
                     {
@@ -217,9 +219,7 @@ module Districtcomparedistrictwithoutyear
                       showInLegend: true,
                       dataPoints: [{ y: el[rain_fall_type], label:  dataset }]
                   }
-      
                   end
-
             end
 
           end
