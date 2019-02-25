@@ -72,28 +72,28 @@ def test
       ji1 = [:State, "#{rain_fall_type}", :Year]
       
     else
-      ji1 = [:State, :State_Cooperative_Banks, :District_Central_Cooperative_Banks, :Total, :Year]
+      ji1 = [:State, :As_per_Sanction, :As_per_Utilization, :Total, :Year]
     end
     
    end
 
 
-   if year == "2016" || year == "2017"
-    ji = [ :Rural, :Urban, :All]
-    # ji1 = [:State, :Rural, :Urban, :All, :Year]
-    if rain_fall_type != "All"
-      ji1 = [:State, "#{rain_fall_type}", :Year]
+  #  if year == "2016" || year == "2017"
+  #   ji = [:As_per_Sanction, :As_per_Utilization,]
+  #   # ji1 = [:State, :Rural, :Urban, :All, :Year]
+  #   if rain_fall_type != "All"
+  #     ji1 = [:State, "#{rain_fall_type}", :Year]
       
-    else
-      ji1 =[:State, :As_per_Sanction, :As_per_Utilization, :Year]
-    end
-   else
-    ji = [ :State_Cooperative_Banks, :District_Central_Cooperative_Banks, :Total]
-    ji1 =[:State, :As_per_Sanction, :As_per_Utilization, :Year]
+  #   else
+  #     ji1 =[::As_per_Sanction, :As_per_Utilization, :Year]
+  #   end
+  #  else
+  #   ji = [ :As_per_Sanction, :As_per_Utilization,]
+  #   ji1 =[:State,:As_per_Sanction, :As_per_Utilization, :Year]
 
      
-   end
-   ji = [:As_per_Sanction, :As_per_Utilization]
+  #  end
+  ji = [:As_per_Sanction, :As_per_Utilization]
   if rain_fall_type || views
 
       if views == "Map View"
