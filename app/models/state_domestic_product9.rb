@@ -752,6 +752,7 @@ class StateDomesticProduct9 < ApplicationRecord
 
      unit =  "mm"
 
+
       if rain_fall_type == "All"
         hu = {below_min: {min:  "500 #{unit}", max: 800},min: {min: 800, max: 1000}, blow_max:{min: 1000, max: 1200}, max:{min: 1200, max: 1300},above_max:{min: 1300, max: 1600},extreme:{min: 1600, max: 2000},above_extreme:{max: 2000}}
       elsif rain_fall_type == "Winter_Rain"
@@ -783,8 +784,129 @@ class StateDomesticProduct9 < ApplicationRecord
       
     else
     end
-    hu = {below_min: {min: 400, max: 600},min: {min: 600, max: 800}, blow_max:{min: 800, max: 1100}, max:{min: 1100, max: 1300},above_max:{min: 1300, max: 1600},extreme:{min: 1600, max: 2000},above_extreme:{max: 2000}}
+    hu = {below_min: {min:  "5000 #{unit}", max: 6000},min: {min: 6000, max: 8000}, blow_max:{min: 8000, max: 10000}, max:{min: 10000, max: 12000},above_max:{min: 12000, max: 14000},extreme:{min: 14000, max: 16000},above_extreme:{min:16000, max: 16000}}
 
+    b.map.with_index do |el,i|
+        dist = el["Districts"]
+
+      if el[u] >=  hu[:below_min][:min].to_i and el[u] <= hu[:below_min][:max].to_i
+     
+      hash1 = { y: el[u], label: dist, color: "Red" }
+      below_min.push(hash1)
+     elsif el[u] > hu[:min][:min].to_i and el[u] <= hu[:min][:max].to_i
+      
+       hash1 = { y: el[u], label: dist, color: "Orange" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
+        min.push(hash1)
+
+    elsif el[u] > hu[:blow_max][:min].to_i and el[u] <= hu[:blow_max][:max]
+     
+         hash1 = { y: el[u], label: dist, color: "Dark_Yellow" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
+        blow_max.push(hash1)
+
+    elsif el[u] > hu[:max][:min].to_i and el[u] <= hu[:max][:max].to_i
+     
+         hash1 = { y: el[u], label: dist, color: "Yellow" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
+        max.push(hash1)
+
+    elsif el[u] > hu[:above_max][:min].to_i and el[u] <= hu[:above_max][:max].to_i
+     
+
+         hash1 = { y: el[u], label: dist, color: "Light_Green" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
+        above_max.push(hash1)
+
+    elsif el[u] > hu[:extreme][:min].to_i and el[u] <= hu[:extreme][:max].to_i
+     
+         hash1 = { y: el[u], label: dist, color: "Green" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
+        extreme.push(hash1)
+    elsif el[u] > hu[:above_extreme][:min].to_i
+     
+         hash1 = { y: el[u], label: dist, color: "Dark_Green" }
+        # hash1 = { y: el[rain_fall_type], label: el["Districts"] }
+        above_extreme.push(hash1)
+      end
+
+      # array.push(a)
+    end
+    a.push({"below_min": below_min})
+    a.push({"min": min})
+    a.push({"blow_max": blow_max})
+    a.push({"max": max})
+    a.push({"above_max": above_max})
+    a.push({"extreme": extreme})
+    a.push({"above_extreme": above_extreme})
+    # array = [{name: "array"}]
+    # sleep 1
+    
+    a.push({"data": hu})
+    return a
+  end
+
+
+  def self.map_manual_range(b,year,rain_fall_type,views)
+    array = []
+    # a = []
+    l =  rain_fall_type.gsub(" ","")
+
+  #    abort(rain_fall_type)
+
+    if rain_fall_type == "All"
+        u = "Total"
+    else
+        u = rain_fall_type
+          # abort(u)
+    end
+
+  #  abort(rain_fall_type)
+    a = []
+    below_min = []
+    min = []
+    blow_max = []
+    max = []
+    above_max = []
+    extreme = []
+    above_extreme = []
+    hu = {below_min: {min: 7000, max: 8000},min: {min: 8000, max: 9000}, blow_max:{min: 9000, max: 10000}, max:{min: 10000, max: 11000},above_max:{min: 11000, max: 12000},extreme:{min: 12000, max: 13000},above_extreme:{min: 13000, max: 14000}}
+    if year == "2016"
+
+     unit =  "mm"
+
+      if rain_fall_type == "All"
+        hu = {below_min: {min:  "500 #{unit}", max: 800},min: {min: 800, max: 1000}, blow_max:{min: 1000, max: 1200}, max:{min: 1200, max: 1300},above_max:{min: 1300, max: 1600},extreme:{min: 1600, max: 2000},above_extreme:{max: 2000}}
+      elsif rain_fall_type == "Winter_Rain"
+        hu = {below_min: {min: 0, max: 2.5},min: {min: 2.5, max: 5}, blow_max:{min: 5, max: 10}, max:{min: 10, max: 15},above_max:{min: 15, max: 20},extreme:{min: 20, max: 39},above_extreme:{max: 39}}
+      elsif rain_fall_type == "Hot_Weather_Rain"
+        hu = {below_min: {min: 0, max: "25 #{unit}"},min: {min: 25, max: 50}, blow_max:{min: 50, max: 80}, max:{min: 80, max: 110},above_max:{min: 110, max: 160},extreme:{min: 160, max: 250},above_extreme:{max: 250}}
+
+      elsif rain_fall_type == "South_West_Monsoon"
+        hu = {below_min: {min: 500, max: 600},min: {min: 600, max: 700}, blow_max:{min: 700, max: 900}, max:{min: 900, max: 1100},above_max:{min: 1100, max: 1400},extreme:{min: 1400, max: 1800},above_extreme:{max: 1800}}
+      elsif rain_fall_type == "North_West_Monsoon"
+        hu = {below_min: {min: 0, max: 10},min: {min: 10, max: 20}, blow_max:{min: 20, max: 40}, max:{min: 40, max: 60},above_max:{min: 60, max: 80},extreme:{min: 80, max: 120},above_extreme:{max: 120}}
+      else        
+      end
+
+    elsif year == "2017"
+      if rain_fall_type == "All"
+        hu = {below_min: {min: 400, max: 600},min: {min: 600, max: 800}, blow_max:{min: 800, max: 1100}, max:{min: 1100, max: 1300},above_max:{min: 1300, max: 1600},extreme:{min: 1600, max: 2000},above_extreme:{max: 2000}}
+      elsif rain_fall_type == "Winter_Rain"
+        hu = {below_min: {min: 0, max: 0.5},min: {min: 0.5, max: 1}, blow_max:{min: 1, max: 3}, max:{min: 3, max: 5},above_max:{min: 5, max: 7},extreme:{min: 7, max: 9},above_extreme:{max: 9}}
+      elsif rain_fall_type == "Hot_Weather_Rain"
+        hu = {below_min: {min: 0, max: 25},min: {min: 25, max: 50}, blow_max:{min: 50, max: 80}, max:{min: 80, max: 110},above_max:{min: 110, max: 160},extreme:{min: 160, max: 250},above_extreme:{max: 250}}
+
+      elsif rain_fall_type == "South_West_Monsoon"
+        hu = {below_min: {min: 500, max: 600},min: {min: 600, max: 700}, blow_max:{min: 700, max: 900}, max:{min: 900, max: 1100},above_max:{min: 1100, max: 1400},extreme:{min: 1400, max: 1800},above_extreme:{max: 1800}}
+      elsif rain_fall_type == "North_West_Monsoon"
+        hu = {below_min: {min: 0, max: 10},min: {min: 10, max: 20}, blow_max:{min: 20, max: 40}, max:{min: 40, max: 60},above_max:{min: 60, max: 80},extreme:{min: 80, max: 120},above_extreme:{max: 120}}
+      else
+      end
+      
+    else
+    end
+     u = "Districts"
     b.map.with_index do |el,i|
         dist = el["Districts"]
 

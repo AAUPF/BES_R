@@ -35,10 +35,10 @@ end
          if rain_fall_type  ==  "All"
           b = StateDomesticProduct9.map_search("All",compare,year,rain_fall_type)
           u = "Total"
-          a = StateDomesticProduct9.map(b,params[:year],rain_fall_type,views)
+          a = StateDomesticProduct9.map_ranges_manually(b,params[:year],rain_fall_type,views)
          else
           b = StateDomesticProduct9.map_search(params[:search],compare,year,rain_fall_type)
-          a = StateDomesticProduct9.map(b,rain_fall_type,year,ji)
+          a = StateDomesticProduct9.map_ranges_manually(b,rain_fall_type,year,ji)
          end
       elsif views == "Table"  
         b = StateDomesticProduct9.search(params[:search],compare,year,rain_fall_type)
