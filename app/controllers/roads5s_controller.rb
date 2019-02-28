@@ -24,7 +24,7 @@ def test
    search = params[:search]
 
    data = []
-   ji1 = [:Category_of_Road, :Length, :Percentage, :Indicator]
+   ji1 = [:Indicator, :Length, :Percentage, :Sector]
 
    jip = [:Length, :Percentage]
 

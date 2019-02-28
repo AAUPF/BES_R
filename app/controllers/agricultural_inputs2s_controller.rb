@@ -28,7 +28,7 @@ class AgriculturalInputs2sController < ApplicationController
     compare = params[:compare]
 
     if rain_fall_type == 'All'
-      ji1 = %i[Year Type_of_Fertilizer Urea DAP SSP MOP Ammonium_Sulphate Complex N P K Total_NPK]
+      ji1 = %i[Year Type_of_Fertilizer Urea DAP SSP MOP Ammonium_Sulphate Complex N P K Total_NPK Grand_Total Consumption_of_Fertilizer]
     else
       ji1 = %i[Year Type_of_Fertilizer Urea DAP SSP MOP Ammonium_Sulphate Complex N P K Total_NPK Grand_Total Consumption_of_Fertilizer]
     end

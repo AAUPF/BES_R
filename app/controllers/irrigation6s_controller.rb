@@ -22,7 +22,7 @@ def test
    year  = params[:year]
    compare = params[:compare]
 
-   ji1 = [:Year,:Surface_Canal, :Tanks_including_Ahars_Pynes, :Tubewells_Private_and_State, :Other_Sources_Lift_Irrigation_and_Barge_Lift_Irrigation]
+   ji1 = [:Year,:Surface_Canal, :Tanks_including_Ahars_Pynes, :Tubewells_Private_and_State, :Other_Sources_Lift_Irrigation_and_Barge_Lift_Irrigation,:Total]
 
   if rain_fall_type || views
 

@@ -37,7 +37,7 @@ def test
  search = rain_fall_type
 
  jip = [:"2012-13", :"2013-14", :"2014-15", :"2015-16", :"2016-17"]
- ji1 = [:Expenditure, :"2012-13", :"2013-14", :"2014-15", :"2015-16", :"2016-17", :CAGR]
+ ji1 = [:Sector, :"2012-13", :"2013-14", :"2014-15", :"2015-16", :"2016-17", :CAGR]
   if rain_fall_type || views
 
       if views == "Map View"

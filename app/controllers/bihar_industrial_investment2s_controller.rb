@@ -26,7 +26,6 @@ def test
 
    legend = "Sectors"
   if rain_fall_type || views
-
       if views == "Map View"
         l =  rain_fall_type.gsub(" ","")           
          if rain_fall_type  ==  "All"
@@ -39,7 +38,7 @@ def test
          end
       elsif views == "Table"  
         b = BiharIndustrialInvestment2.search(params[:search],compare,year,rain_fall_type,legend)
-        a = BiharIndustrialInvestment2.table(b,rain_fall_type,year,ji1,compare,search,legend)
+        a = BiharIndustrialInvestment2.table(b,rain_fall_type,year,ji1,compare,legend)
       else
         @BiharIndustrialInvestment2s = BiharIndustrialInvestment2.search(params[:search],compare,year,rain_fall_type,legend)
         a = BiharIndustrialInvestment2.query(@BiharIndustrialInvestment2s,params[:year],rain_fall_type,views,ji,compare,search,legend)

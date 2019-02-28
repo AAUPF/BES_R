@@ -51,7 +51,7 @@ if year == "All"
       respond_to do |format|
         format.html { render json:a }
     end
-
+ 
   else
     respond_to do |format|
       format.html { render json: "error"}

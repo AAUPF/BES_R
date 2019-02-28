@@ -63,9 +63,9 @@ def test
    year  = params[:year]
    compare = params[:compare]
 search = params[:search]
-   ji1 = [:State, :Number_of_Branches, :Percentage_share_in_all_India_branches, :Percentage_share_in_all_India_population]
+   ji1 = [:States, :Number_of_Branches, :Percentage_share_in_all_India_branches, :Percentage_share_in_all_India_population]
 
-   legend = "State"
+   legend = "States"
   if rain_fall_type || views
 
       if views == "Map View"
