@@ -7,7 +7,7 @@ class CreateDepositesAndCredits6s < ActiveRecord::Migration[5.2]
       t.float :'2014-15'
       t.float :'2015-16'
       t.float :'2016-17'
-      t.float :'2017_18_upto_Sep_2017'
+      t.float :'2017-18'
       t.string :Indicator
 
       t.timestamps

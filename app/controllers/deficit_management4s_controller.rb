@@ -39,7 +39,7 @@ def test
       data = [
         "Net Borrowing",
         "Net Public Account",
-        "Net Decrease in Cash Balance (Opening - Closing Balance)",
+        "Net Decrease in Cash Balance",
        ]
    else
     data = [
@@ -49,7 +49,7 @@ def test
         "GFD",
         "Net Borrowing",
         "Net Public Account",
-        "Net Decrease in Cash Balance (Opening - Closing Balance)",
+        "Net Decrease in Cash Balance",
     ]
    end
 

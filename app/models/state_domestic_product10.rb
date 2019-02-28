@@ -70,84 +70,57 @@ class StateDomesticProduct10 < ApplicationRecord
   end
 
   # Logic to generate table starts
-  def self.table (b, rain_fall_type, year, ji, compare,fuel)
 
 
-    rain_fall_type = fuel
+  def self.table(b, rain_fall_type, _year, ji, compare,legend)
+    dataset = rain_fall_type.tr('_', ' ')
+    if rain_fall_type 
 
-    if rain_fall_type == "All"
       hash_data = ji.map do |el|
         if el.to_s == "Districts"
-          {title: "District", field: el, sorter: "string", headerFilter: true}
+          { title: "Districts", field: el, headerFilter: true }
         else
-          {title: el.to_s.gsub("_"," "), field: el, sorter: "string"}
+          { title: el.to_s.tr('_', ' '), field: el }
         end
-
       end
     else
-      if compare == "None"
+      if compare == 'None'
         hash_data = [
-            
-           
-            {title: "District", field: "Districts", sorter: "string",  headerFilter: true},
-            {title: rain_fall_type.to_s.gsub("_"," "), field: rain_fall_type, sorter: "string", },
-            {title: "Year", field: "Year", sorter: "string"}
+          { title: "Districts", field: "Districts", headerFilter: true },
+          { title: dataset, field: rain_fall_type }
         ]
-
-      elsif compare == "undefined"
-        hash_data = [
-            
-          
-          {title: "District", field: "Districts", sorter: "string",  headerFilter: true},
-          {title: rain_fall_type.to_s.gsub("_"," "), field: rain_fall_type, sorter: "string", },
-          {title: "Year", field: "Year", sorter: "string"}
-      ]
-
       else
+
         hash_data = [
-            # {title:compare, field:compare, sorter:"string", },
-            {title: "District", field: "Districts", sorter: "string", headerFilter: true },
-            {title: rain_fall_type.to_s.gsub("_"," "), field: rain_fall_type, sorter: "string", },
-            {title: compare.to_s.gsub("_"," "), field: compare, sorter: "string", },
-            {title: "Year", field: "Year", sorter: "string", }
+          # {title:compare, field:compare, sorter:"string", },
+          { title: "Districts", field: "Districts", headerFilter: true },
+
+          { title: dataset, field: rain_fall_type }
         ]
       end
     end
-    if year == "All"
 
 
-      hash_data1 = ji.map do |el|
-        if el.to_s == "Districts"
-          {title: "District", field: el, sorter: "string", headerFilter: true}
-        else
-          {title: el.to_s.gsub("_"," "), field: el, sorter: "string"}
-        end
+   if rain_fall_type == "Productivity"
+    j = b.each { |item| item[:Productivity] = item[:Productivity]/100}
 
-      end
-      grouped = {}
-      if rain_fall_type == "Bihar"
-          b.each do |x|
-              grouped[x[:Districts]] ||= {}
-              grouped[x[:Districts]][:Districts] = x[:Districts]
-              grouped[x[:Districts]][x[:Year]] = x[:Bihar]
-            end
-      else
-          b.each do |x|
-              grouped[x[:Districts]] ||= {}
-              grouped[x[:Districts]][:Districts] = x[:Districts]
-              grouped[x[:Districts]][x[:Year]] = x[rain_fall_type]
-            end
-      end
-        
+   else
+     j = b
+   end
 
-      data = { column: hash_data1, data: grouped.values }
-       
-     else
-      data = { column: hash_data, data: b }
-     end
-
-    # data = {column: hash_data, data: b}
-    return data
+   if _year == "All"
+    grouped = {}
+        b.each do |x|
+            grouped[x["Districts"]] ||= {}
+            grouped[x["Districts"]]["Districts"] = x["Districts"]
+            grouped[x["Districts"]][x[:Year]] = x["#{rain_fall_type}"]
+          end
+    data = { column: hash_data, data: grouped.values }
+   else
+    data = { column: hash_data, data: j }
+   end
+    
+    data
   end
 
   # Logic to generate table end

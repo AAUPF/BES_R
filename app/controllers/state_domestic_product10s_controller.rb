@@ -32,7 +32,12 @@ def test
      if year == "All"
       ji1 = [:Districts, "2015-16", "2016-17", "Avg of 2015-17"]
      else
-      ji1 = [:Districts, :Petrol, :Diesel, :LPG, :Year]
+      if fuel == "All"
+        ji1 = [:Districts, :Petrol, :Diesel, :LPG, :Year]
+      else
+        ji1 = [:Districts, :"#{fuel}", :Year]
+      end
+      
      end
    
    else
@@ -40,7 +45,11 @@ def test
     if year == "All"
       ji1 = [:Districts, "2015-16", "2016-17", "Avg of 2015-17"]
      else
-      ji1 = [:Districts, :Percentage_Share_of_Petrol, :Percentage_Share_of_Diesel, :Percentage_Share_of_LPG,:Share_of_Population , :Year]
+      if fuel == "All"
+        ji1 = [:Districts, :Percentage_Share_of_Petrol, :Percentage_Share_of_Diesel, :Percentage_Share_of_LPG,:Share_of_Population , :Year]
+      else
+        ji1 = [:Districts, :"#{fuel}", :Year]
+      end
      end
    end
 

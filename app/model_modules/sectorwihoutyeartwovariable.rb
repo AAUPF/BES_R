@@ -97,17 +97,32 @@ module Sectorwihoutyeartwovariable
                             end
               }
             else
-              dataset = column_name.to_s.tr('_', ' ')
+              if search == "All"
+                dataset = column_name.to_s.tr('_', ' ')
               {
                 type: views,
                 toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
                 name: dataset,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.reject { |x| x["#{legend}"] == 'Total' }.map do |el|
+                dataPoints: b.reject { |x| x["#{legend}"] == 'Total' || x["#{legend}"] == 'All Private Bank' }.map do |el|
                               { y: el[column_name], z: el[column_name], label: el[d] }
                             end
               }
+              else
+                dataset = column_name.to_s.tr('_', ' ')
+              {
+                type: views,
+                toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',
+                name: dataset,
+                legendText: dataset,
+                showInLegend: true,
+                dataPoints: b.map do |el|
+                              { y: el[column_name], z: el[column_name], label: el[d] }
+                            end
+              }
+              end
+              
             end
           end
         end
@@ -189,7 +204,7 @@ module Sectorwihoutyeartwovariable
           end
         end
       end
-      Newmodulefunctions.title_return(views, search, hash_data, compare,_year,rain_fall_type)
+      Newmodulefunctions.title_return_new(views, search, hash_data, compare,_year,rain_fall_type)
   
     end
       end

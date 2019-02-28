@@ -56,7 +56,7 @@ class TaxGsdpRatiosController < ApplicationController
 
 
 def test
-  ji = [:Revenue_Receipts, :States_Own_Tax, :GSDP, :Ratio_of_SOT_and_RR, :Ratio_of_SOT_and_GSDP, :Ratio_of_Total_Revenue_and_GSDP]
+  ji = [:Revenue_Receipts, :States_Own_Tax, :GSDP]
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]

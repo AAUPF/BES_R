@@ -19,16 +19,21 @@ class DebtManagement2sController < ApplicationController
   end
 
 def test
-  ji = [:Sector, :'2015-16', :'2016-17', :'31_03_2016', :'31_03_2017', :'2017_from_2016', :'31_03_17']
+  ji = [:Sector, :'2015-16', :'2016-17', :'31_03_2016', :'31_03_2017', :'Percentage_increase_over_2017_from_2016', :'Percentage_composition_of_outstanding_balance_as_on_31_03_17']
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
    compare = params[:compare]
    search = params[:search]
 
-   ji1 = [:Sector, :'2015-16', :'2016-17', :'31_03_2016', :'31_03_2017', :'2017_from_2016', :'31_03_17']
-   jip = [:'2015-16', :'2016-17', :'31_03_2016', :'31_03_2017', :'2017_from_2016', :'31_03_17']
+   ji1 = [:Sector, :'2015-16', :'2016-17', :'31_03_2016', :'31_03_2017', :'Percentage_increase_over_2017_from_2016', :'Percentage_composition_of_outstanding_balance_as_on_31_03_17']
+   jip = [:'2015-16', :'2016-17', :'31_03_2016', :'31_03_2017']
    search = rain_fall_type
+  #  if rain_fall_type == "All"
+  #   jip = [:'2015-16', :'2016-17', :'31_03_2016', :'31_03_2017']
+  #  else
+  #   jip = [:'2015-16', :'2016-17', :'31_03_2016', :'31_03_2017']
+  #  end
 
    data = [
     "A. Internal Debt ",
@@ -123,6 +128,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def debt_management2_params
-      params.require(:debt_management2).permit(:Sector, :'2015-16', :'2016-17', :'31_03_2016', :'31_03_2017', :'2017_from_2016', :'31_03_17')
+      params.require(:debt_management2).permit(:Sector, :'2015-16', :'2016-17', :'31_03_2016', :'31_03_2017', :'Percentage_increase_over_2017_from_2016', :'Percentage_composition_of_outstanding_balance_as_on_31_03_17')
     end
 end

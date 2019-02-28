@@ -250,7 +250,6 @@ module Annualstatedomesticproduct3data
 
     b.map.with_index do |el, _i|
       dist = el['Sector']
-
       colour = "#{rain_fall_type}_Colour"
       if el[colour] == 'Red'
         hash1 = { y: el[rain_fall_type], label: dist, color: 'Red' }

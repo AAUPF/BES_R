@@ -317,7 +317,6 @@ elsif search == 'All'
       rain_fall_type = compare
     end
 
-
   elsif  rain_fall_type == "None"
     rain_fall_type
 

@@ -61,7 +61,7 @@ class DepositesAndCredits6sController < ApplicationController
 
 
 def test
-  ji = [:'2013-14', :'2014-15', :'2015-16', :'2016-17', :'2017_18_upto_Sep_2017']
+  ji = [:'2013-14', :'2014-15', :'2015-16', :'2016-17', :'2017-18']
   rain_fall_type = params[:rain_fall_type]
    views  = params[:views]
    year  = params[:year]
@@ -69,7 +69,7 @@ def test
 
    search = params[:search]
 
-   jip = [:'2013-14', :'2014-15', :'2015-16', :'2016-17', :'2017_18_upto_Sep_2017']
+   jip = [:'2013-14', :'2014-15', :'2015-16', :'2016-17', :'2017-18']
 
    compare = "None"
 
@@ -142,7 +142,7 @@ def test
 
 search = rain_fall_type
 
-   ji1 = [:Sector, :Number_of_Branches, :'2013-14', :'2014-15', :'2015-16', :'2016-17', :'2017_18_upto_Sep_2017', :Indicator]
+   ji1 = [:Sector, :Number_of_Branches, :'2013-14', :'2014-15', :'2015-16', :'2016-17', :'2017-18', :Indicator]
 
   if rain_fall_type || views
 
@@ -220,6 +220,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def deposites_and_credits6_params
-      params.require(:deposites_and_credits6).permit([:Sector, :Number_of_Branches, :'2013-14', :'2014-15', :'2015-16', :'2016-17', :'2017_18_upto_Sep_2017', :Indicator])
+      params.require(:deposites_and_credits6).permit([:Sector, :Number_of_Branches, :'2013-14', :'2014-15', :'2015-16', :'2016-17', :'2017-18', :Indicator])
     end
 end

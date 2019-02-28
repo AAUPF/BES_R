@@ -72,34 +72,6 @@ module Statefinanceyearsector
     end
   end
 
-  # def search(search, compare, year, rain_fall_type)
-  #   @search = search
-  #   @compare = compare
-  #   @year = year
-  #   @rain_fall_type = rain_fall_type
-  #   @query = all
-  #   @query = @query.where(Sector: sectors_to_use) if sectors_to_use
-  #   @query = @query.order(order_to_use) if order_to_use
-  #   @query
-  # end
-
-  # def sectors_to_use
-  #   return [@rain_fall_type, @compare] if @search != 'All' && @compare != 'None'
-  #   unless @rain_fall_type == 'All'
-  #     if @rain_fall_type == 'None'
-  #       @search == 'All' ? %w[Primary Secondary Tertiary] : [@search]
-  #     else
-  #       [@rain_fall_type]
-  #     end
-  #   end
-  # end
-
-  # def order_to_use
-  #   return nil if (@search == 'All') && (@rain_fall_type == 'All')
-  #   return @year if (@search == 'All') && @year != 'All'
-  #   :id
-  # end
-
   # Logic to generate table starts
   def table(b, rain_fall_type, _year, ji, compare, search, data)
     dataset = rain_fall_type.tr('_', ' ')
@@ -337,6 +309,6 @@ module Statefinanceyearsector
         hash_data = Newmodulefunctions.no_year(b, rain_fall_type, _year, color, views, compare)
       end
     end
-    Newmodulefunctions.title_return(views, search, hash_data, compare,_year,rain_fall_type)
+    Newmodulefunctions.title_return_new(views, search, hash_data, compare,_year,rain_fall_type)
   end
 end

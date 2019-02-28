@@ -100,7 +100,7 @@ module Sectorwithoutyear
           else
             dataset = column_name.to_s.tr('_', ' ')
             if search == "All"
-              dataPoints = b.reject { |x| x["#{legend}"] == 'Total' }
+              dataPoints = b.reject { |x| x["#{legend}"] == 'Total' ||  x["#{legend}"] == 'Grant Total (Tax + Non-Tax)' }
             else
               dataPoints = b
             end
@@ -159,13 +159,13 @@ module Sectorwithoutyear
                 color: color,
                 legendText: dataset,
                 showInLegend: true,
-                dataPoints: b.reject { |x| x[legend.to_s] == 'Total' }.map do |el|
+                dataPoints: b.reject { |x| x[legend.to_s] == 'Total' || x[legend.to_s] == 'Grant Total (Tax + Non-Tax)' }.map do |el|
                               { y: el[rain_fall_type], label: el[legend.to_s] }
                             end
               }]
           else
             dataset = rain_fall_type.tr('_', ' ')
-            hash_data = b.reject { |x| x[legend.to_s] == 'Total' }.map do |el|
+            hash_data = b.reject { |x| x[legend.to_s] == 'Total' || x[legend.to_s] == 'Grant Total (Tax + Non-Tax)' }.map do |el|
               {
                 type: views,
                 toolTipContent: '{label}<br/>{name}, <strong>{y}</strong>',

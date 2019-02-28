@@ -23,9 +23,9 @@ module Revenueaccount1data
         else
           if year == "All"
             # all.order("id")
-            where('Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ?', "Revenue Receipt", 'Revenue Expenditure', 'Revenue Surplus',"State's own tax plus non tax revenue").order('id')
+            where('Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ?', "Revenue Receipt", 'Revenue Expenditure', 'Revenue Deficit',"State's own tax plus non tax revenue").order('id')
           else
-            where('Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ?', "Revenue Receipt", 'Revenue Expenditure', 'Revenue Surplus',"State's own tax plus non tax revenue").where(Year: year).order("#{rain_fall_type} ")
+            where('Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ? OR Revenue_Account = ?', "Revenue Receipt", 'Revenue Expenditure', 'Revenue Deficit',"State's own tax plus non tax revenue").where(Year: year).order("#{rain_fall_type} ")
           end
           # where(Year: year).order("#{rain_fall_type} ")
         end
