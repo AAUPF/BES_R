@@ -16,7 +16,7 @@ class BankingInfrastructure2sController < ApplicationController
   end
 
 # def test
-#   ji = [:States, :Number_of_Branches, :Percentage_share_in_all_India_branches, :Percentage_share_in_all_India_population]
+#   ji = [:, :Number_of_Branches, :Percentage_share_in_all_India_branches, :Percentage_share_in_all_India_population]
 #   rain_fall_type = params[:rain_fall_type]
 #    views  = params[:views]
 #    year  = params[:year]
@@ -63,9 +63,9 @@ def test
    year  = params[:year]
    compare = params[:compare]
 search = params[:search]
-   ji1 = [:States, :Number_of_Branches, :Percentage_share_in_all_India_branches, :Percentage_share_in_all_India_population]
+   ji1 = [:State, :Number_of_Branches, :Percentage_share_in_all_India_branches, :Percentage_share_in_all_India_population]
 
-   legend = "States"
+   legend = "State"
   if rain_fall_type || views
 
       if views == "Map View"
@@ -146,6 +146,6 @@ end
 
     # Only allow a trusted parameter "white list" through.
     def banking_infrastructure2_params
-      params.require(:banking_infrastructure2).permit(:States, :Number_of_Branches, :Percentage_share_in_all_India_branches, :Percentage_share_in_all_India_population)
+      params.require(:banking_infrastructure2).permit(:State, :Number_of_Branches, :Percentage_share_in_all_India_branches, :Percentage_share_in_all_India_population)
     end
 end
