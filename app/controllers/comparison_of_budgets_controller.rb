@@ -114,7 +114,7 @@ def test
       "Total Capital Receipts (Expenditure)",
       "Capital Outlay",
       "Public Debt (Total Capital Receipts)",
-      "Loans & advances",
+      "Loans and advances",
       "Total Capital Expenditure ",
       "Deficit Capital Account",
       "Consolidated Fund Expenditure",
